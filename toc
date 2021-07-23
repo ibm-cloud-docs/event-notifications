@@ -13,71 +13,41 @@ Event Notifications
 
     {: .topicgroup}
     Basic steps
-        ac-create-appconfig-instance.md
-        ac-environments.md
-        ac-collections.md
-        ac-feature-flags.md
-        ac-properties.md
-        ac-segments.md
-        ac-integrate-sdk.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    ac-monitor.md
-    ac-ff-prop-env.md
-    [Target feature flags to segments](/app-configuration/app-configuration-ac-feature-flags#targeting-segment-with-feature-flag)
-    [Target properties to segments](/app-configuration/app-configuration-ac-properties#targeting-segment-with-properties)
-    ac-toolchain.md
-
+    en-monitor.md
 
     {: .topicgroup}
     SDKs
-        ac-integrate-sdk-node.md
-        ac-integrate-sdk-python.md
-        ac-integrate-sdk-go.md
-        ac-integrate-sdk-java.md
-        ac-integrate-sdk-android.md
-        [App Configuration admin SDK for Go](https://{DomainName}/apidocs/app-configuration?code=go)
-    ac-razee.md
 
     {: .topicgroup}
     Tutorials
-        ac-tutorial.md
+        en-tutorial.md
 
     {: .topicgroup}
     Enhancing security
-        ac-iam.md
-        ac-securing-data.md
+        en-iam.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     {: .topicgroup}
     CLI reference
-        /app-configuration-cli-plugin/app-configuration-cli-plugin-app-configuration-cli
-        ac-cli-changelog.md
 
     {: .topicgroup}
     High availability and disaster recovery
-        ac-high-availability.md
-    ac-service-credentials.md
-    ac-responsibilities.md
-    ac-regions-endpoints.md
-    ac-sample-apps.md
-    [API Explorer](https://{DomainName}/apidocs/app-configuration)
+        en-high-availability.md
+    en-service-credentials.md
+    en-responsibilities.md
+    en-regions-endpoints.md
+
+    [API Explorer](https://test.cloud.ibm.com/apidocs/event-notifications)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     faq.md
-    faqts.md
-    ac-videos.md
 
     {: .topicgroup}
     Troubleshooting
-        ac-getting-support.md
-        ac-ts-ff.md
-        ac-ts-ff-eval.md
-        ac-ts-ff-eval-def.md
-        ac-ts-ff-toggle.md
-        ac-ts-ff-zero-env.md
-        ac-ts-ff-del.md
+
     {: .navgroup-end}
