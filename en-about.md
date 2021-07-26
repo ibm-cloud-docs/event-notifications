@@ -2,11 +2,11 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-03-29"
+lastupdated: "2021-07-23"
 
-keywords: app-configuration, app configuration, about app configuration
+keywords: event-notifications, event notifications, about event notifications
 
-subcollection: app-configuration
+subcollection: event-notifications
 
 ---
 
@@ -19,10 +19,10 @@ subcollection: app-configuration
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# What is {{site.data.keyword.appconfig_short}}?
+# What is Event Notifications?
 {: #ac-about}
 
-{{site.data.keyword.appconfig_notm}} is a centralized feature management and configuration service for use with web and mobile applications, microservices, and distributed environments.
+ is a centralized feature management and configuration service for use with web and mobile applications, microservices, and distributed environments.
 {:shortdesc}
 
 Instrument your applications with {{site.data.keyword.appconfig_short}} SDKs, and use the {{site.data.keyword.appconfig_short}} dashboard or {{site.data.keyword.appconfig_short}} administrator API to define features flags, which are organized into collections and targeted to segments. Change feature flag states in the cloud to activate or deactivate features in your application or environment, often without restarting. You can also manage the properties for distributed applications centrally.
