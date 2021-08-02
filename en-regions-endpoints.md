@@ -2,11 +2,11 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-03-29"
+lastupdated: "2021-08-02"
 
-keywords: app-configuration, app configuration, regions, endpoints
+keywords: event-notifications, event notifications, regions, endpoints
 
-subcollection: app-configuration
+subcollection: event-notifications
 
 ---
 
@@ -22,30 +22,30 @@ subcollection: app-configuration
 {:support: data-reuse='support'}
 
 # Regions and endpoints
-{: #ac-regions-endpoints}
+{: #en-regions-endpoints}
 
-Review region and connectivity options for interacting with {{site.data.keyword.cloud_notm}} {{site.data.keyword.appconfig_notm}}.
+Review region and connectivity options for interacting with {{site.data.keyword.en_full_notm}}.
 {:shortdesc}
 
 ## Available regions
-{: #ac-regions}
+{: #en-regions}
 
-{{site.data.keyword.appconfig_notm}} is available in the following regions: 
+{{site.data.keyword.appconfig_notm}} is available in the following regions:
 
 - Dallas
 - London
 - Sydney
 
-You can create {{site.data.keyword.appconfig_notm}} resources in one of the supported {{site.data.keyword.cloud_notm}} regions.
+You can create {{site.data.keyword.en_full_notm}} resources in one of the supported {{site.data.keyword.cloud_notm}} regions.
 
 ## Service endpoints
-{: #ac-endpoints}
+{: #en-endpoints}
 
-The following table contains the base URLs for the {{site.data.keyword.appconfig_notm}} API endpoints. When you call the API, use the URL that corresponds to the region where your service instance is deployed. Add the path for each method to form the complete API endpoint for your requests.
+The following table contains the base URLs for the {{site.data.keyword.en_full_notm}} API endpoints. When you call the API, use the URL that corresponds to the region where your service instance is deployed. Add the path for each method to form the complete API endpoint for your requests.
 
 |Location     |Endpoint URL      |
 |-------------|------------------|
-|Dallas |`https://us-south.apprapp.cloud.ibm.com/apprapp/feature/v1/instances/{instanceid}` |
+|Dallas |`https://us-south.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{instanceid}` |
 |London |`https://eu-gb.apprapp.cloud.ibm.com/apprapp/feature/v1/instances/{instanceid}` |
 |Sydney |`https://au-syd.apprapp.cloud.ibm.com/apprapp/feature/v1/instances/{instanceid}` |
 {:caption="Table 3. Service endpoints" caption-side="top"}

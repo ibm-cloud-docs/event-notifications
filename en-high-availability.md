@@ -2,31 +2,68 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-03-19"
+lastupdated: "2021-08-02"
 
-keywords: app-configuration, app configuration, data model, high availability, ha
+keywords: HA for _service-name_, high availability for _service-name_
 
-subcollection: app-configuration
+subcollection: _your-subcollection_
 
 ---
 
-{:codeblock: .codeblock}
-{:external: target="_blank" .external}
-{:important: .important}
-{:note: .note}
-{:pre: .pre}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
+{:pre: .pre}
+{:table: .aria-labeledby="caption"}
+{:codeblock: .codeblock}
 {:tip: .tip}
+{:download: .download}
+{:term: .term}
 
-# High availability
-{: #ac-ha}
+<!--Name your file `ha.md` and include it in the **Reference** nav group in your `toc` file.-->
 
-<!-- All IBM Cloud® general availability (GA) services have a Service Level Agreement of 99.99% availability.  -->
+# Understanding high availability for _service-name_
+{: #ha}
 
-{{site.data.keyword.IBM_notm}} {{site.data.keyword.appconfig_short}} is a service that is offered in the<!-- five --> regions: Dallas, London, and Sydney. Every region supported, has its own IBM Cloud Kubernetes Service cluster with several worker nodes. Each worker node runs several instances of {{site.data.keyword.appconfig_short}} service components. Each region is fronted by a global load balancer and a web application firewall.  
+<!-- The title of your H1 should be Understanding high availability for _service-name_, where _service-name_ is the non-trademarked short version conref. Include your service name as a search keyword at the top of your Markdown file. See the example keywords above. -->
+
+<!-- The short description should be a single, concise paragraph that contains one or two sentences and no more than 50 words. Summarize your offering's strategy for HA. The following is a suggested short description._
+{: shortdesc} -->
+
+[High availability](#x2284708){: term} (HA) is a core discipline in an IT infrastructure to keep your apps up and running, even after a partial or full site failure. The main purpose of high availability is to eliminate potential points of failures in an IT infrastructure.
 {: shortdesc}
 
-{{site.data.keyword.appconfig_short}} service persists tenant data in highly available database. A single regional database is used to store the data of all tenants in that particular region. The data is stored across multiple zones in each region for high availability. Data that is stored is encrypted and persisted in a database cluster that is spread across availability zones. All databases connections use TLS/SSL encryption for data in transit.
+## Responsibilities
+{: #ha-responsibilities}
 
-{{site.data.keyword.appconfig_short}} service is a regional service. It does not provide automated cross-regional failover or cross-regional disaster recovery. If a regional disaster occurs, all data might not be recovered. However, a location recovery is possible and all data can be restored. If there is a need for regional disaster recovery, it is recommended that you create and maintain backup instances in other regions. To synchronize a service instance in one region with an instance in a different region, you can use the APIs mentioned [here](https://cloud.ibm.com/apidocs/app-configuration).
+<!-- If there is specific responsibility documentation for the product , comment the next paragraph-->
+To find out more about responsibility ownership for using {{site.data.keyword.cloud}} products between {{site.data.keyword.IBM_notm}} and the customer, see [Shared responsibilities for {{site.data.keyword.cloud_notm}} products](/docs/overview?topic=overview-shared-responsibilities).
+
+<!-- If there is specific responsability documentation available for the product, provide a linked reference on the following paragraph or elaborate on the current document-->
+
+<!-- See [Your responsabilities with using {{site.data.keyword._service-name_notm}}](/docs/_service-name_?topic=yourproduct-full-conref-responsibilities).-->
+
+## What level of availability do I need?
+{: #ha-level}
+
+You can achieve high availability on different levels in your IT infrastructure and within different components of your cluster. The level of availability that is right for you depends on several factors, such as your business requirements, the service level agreements (SLAs) that you have with your customers, and the resources that you want to expend.
+
+## What level of availability does {{site.data.keyword.cloud_notm}} offer?
+{: #ha-service}
+
+The level of availability that you set up for your cluster impacts your coverage under the {{site.data.keyword.cloud_notm}} high availability service level agreement terms.
+
+Service level objectives (SLOs) describe the design points that the {{site.data.keyword.cloud_notm}} services are engineered to meet. _service-name_ is designed to achieve the following availability target.
+
+| Availability target | Target Value   |
+|---|---|
+|  Availability % |   |
+{: caption="Table 1. SLO for _service-name_" caption-side="top"}
+
+The SLO is not a warranty and {{site.data.keyword.IBM_notm}} will not issue credits for failure to meet an objective. Refer to the SLAs for commitments and credits that are issued for failure to meet any committed SLAs. For a summary of all SLOs, see [{{site.data.keyword.cloud_notm}} service level objectives](/docs/overview?topic=overview-slo).
+
+
+## Locations
+{: #ha-locations}
+
+For more information about service availability within regions and data centers, see [Service and infrastructure availability by location](/docs/overview?topic=overview-services_region).
