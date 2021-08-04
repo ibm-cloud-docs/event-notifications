@@ -46,6 +46,6 @@ The following table contains the base URLs for the {{site.data.keyword.en_full_n
 |Location     |Endpoint URL      |
 |-------------|------------------|
 |Dallas |`https://us-south.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{instanceid}` |
-|London |`https://eu-gb.apprapp.cloud.ibm.com/apprapp/feature/v1/instances/{instanceid}` |
-|Sydney |`https://au-syd.apprapp.cloud.ibm.com/apprapp/feature/v1/instances/{instanceid}` |
+|London |`https://eu-gb.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{instanceid}` |
+|Sydney |`https://au-syd.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{instanceid}` |
 {:caption="Table 3. Service endpoints" caption-side="top"}
