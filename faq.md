@@ -13,7 +13,7 @@ subcollection: app-configuration
 {:codeblock: .codeblock}
 {:external: target="_blank" .external}
 {:important: .important}
-{:note .note}
+{: note .note}
 {:pre: .pre}
 {:screen: .screen}
 {:shortdesc: .shortdesc}
@@ -30,14 +30,14 @@ FAQs for {{site.data.keyword.appconfig_short}} provides answers to common questi
 {: #faq-ac-instance}
 {: faq}
 
-1. Log in to your {{site.data.keyword.cloud_notm}} account.
-1. In the {{site.data.keyword.cloud_notm}} catalog, search *{{site.data.keyword.appconfig_short}}* and select **{{site.data.keyword.appconfig_short}}**. The service configuration screen opens.
-1. Select a <uicontrol>Region</uicontrol>.
-1. Select a <uicontrol>Pricing plan</uicontrol>.
-1. Configure your resource with <uicontrol>Service name</uicontrol>, or use the preset name.
-1. Select a <uicontrol>Resource group</uicontrol>.
-1. <step importance="optional"><cmd>Define </cmd> <uicontrol>Tags</uicontrol> that are needed to identify this service instance. If your tags are billing related, consider writing tags as key: value pairs to help group-related tags, such as costctr: 124.
-1. Click <uicontrol>Create</uicontrol>. A new service instance is created and the {{site.data.keyword.appconfig_short}} service console displayed.
+ 1. Log in to your {{site.data.keyword.cloud_notm}} account.
+ 1. In the {{site.data.keyword.cloud_notm}} catalog, search *{{site.data.keyword.appconfig_short}}* and select **{{site.data.keyword.appconfig_short}}**. The service configuration screen opens.
+ 1. Select a <uicontrol>Region</uicontrol>.
+ 1. Select a <uicontrol>Pricing plan</uicontrol>.
+ 1. Configure your resource with <uicontrol>Service name</uicontrol>, or use the preset name.
+ 1. Select a <uicontrol>Resource group</uicontrol>.
+ 1. <step importance="optional"><cmd>Define </cmd> <uicontrol>Tags</uicontrol> that are needed to identify this service instance. If your tags are billing related, consider writing tags as key: value pairs to help group-related tags, such as costctr: 124.
+ 1. Click <uicontrol>Create</uicontrol>. A new service instance is created and the {{site.data.keyword.appconfig_short}} service console displayed.
 
 ## What pricing plans are available with {{site.data.keyword.appconfig_short}}?
 {: #faq-ac-pricing}
@@ -120,7 +120,7 @@ Net API Calls:  0 (all included)  = $0</br></br>
 TOTAL COST: $500 + $0 + $0 = $500 per month</br>
 
 You might use the same instance of {{site.data.keyword.appconfig_short}} for both scenarios for a total cost of just over $1600 per month.
-{:note .note}
+{: note .note}
 
 ## What are the capabilities, quotas, and limits for various aspects of the {{site.data.keyword.appconfig_short}} plans?
 {: #faq-ac-capabilities}
