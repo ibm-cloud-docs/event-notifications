@@ -53,9 +53,9 @@ subcollection: app-configuration
 {:javascript: .ph data-hd-programlang='javascript'}
 {:javascript: data-hd-programlang="javascript"}
 {:new_window: target="_blank"}
-{:note .note}
+{: note .note}
 {:note: .note}
-{:objectc data-hd-programlang="objectc"}
+{: objectc data-hd-programlang="objectc"}
 {:org_name: data-hd-keyref="org_name"}
 {:php: data-hd-programlang="php"}
 {:pre: .pre}
@@ -105,7 +105,7 @@ subcollection: app-configuration
 <!-- All IBM Cloud® general availability (GA) services have a Service Level Agreement of 99.99% availability.  -->
 
 Use {{site.data.keyword.mon_full_notm}} to gain operational visibility into the performance and health of your applications, services, and platforms. It offers administrators, DevOps teams, and developers full stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards.
-{:shortdesc}
+{: shortdesc}
 
 ## Set up your {{site.data.keyword.mon_full_notm}} service instance
 {: #setup-monitor}
@@ -122,7 +122,7 @@ Currently, {{site.data.keyword.mon_full_notm}} integration is available for {{si
 | Sydney| Sydney|
 
 Before you can start using {{site.data.keyword.appconfig_short}} monitoring metrics, you must first opt in and [enable platform metrics](https://cloud.ibm.com/docs/monitoring?topic=monitoring-platform_metrics_enabling)
-{:note .note}
+{: note .note}
 
 You can configure only one instance of the {{site.data.keyword.mon_full_notm}} service per region to collect platform metrics.
  - To configure the {{site.data.keyword.mon_full_notm}} instance, you must turn on the platform metrics configuration setting.

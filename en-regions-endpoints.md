@@ -25,7 +25,7 @@ subcollection: event-notifications
 {: #en-regions-endpoints}
 
 Review region and connectivity options for interacting with {{site.data.keyword.en_full_notm}}.
-{:shortdesc}
+{: shortdesc}
 
 ## Available regions
 {: #en-regions}

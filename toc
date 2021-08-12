@@ -17,6 +17,7 @@ Event Notifications
 
     {: .navgroup id="howto"}
     en-monitor.md
+    en-iam.md
 
     {: .topicgroup}
     SDKs
