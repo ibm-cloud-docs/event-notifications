@@ -103,7 +103,7 @@ The actions are customized and defined by the {{site.data.keyword.Bluemix_notm}}
 | `event-notifications.topics.read` | `GET /event-notifications/v1/instances/{instanceID}/topics/{topicID}`| Manager, Reader, Writer, Administrator, Channel-Editor |Get Topic for Event Notifications instance |
 | `event-notifications.topics.update`| `PUT /event-notifications/v1/instances/{instanceID}/topic/{topicID}`| Manager, Writer, Administrator |Update Topic for Event Notifications instance  |
 | `event-notifications.topics.delete` | `DELETE /event-notifications/v1/instances/{instanceID}/topic/{topicID}`| Manager, Administrator | Delete Topic from Event Notifications instance |
-| `event-notifications.topics.list` | `GET /event-notifications/v1/instances/{instanceID}/topics| Manager, Reader, Writer, Administrator, Channel-Editor | Get All topics for Event Notifications instance |
+| `event-notifications.topics.list` | `GET /event-notifications/v1/instances/{instanceID}/topics`| Manager, Reader, Writer, Administrator, Channel-Editor | Get All topics for Event Notifications instance |
 | `event-notifications.rules.create` | `POST /event-notifications/v1/instances/{instanceID}/rules`| Manager, Writer, Administrator | Create Rule for Event Notifications instance  |
 | `event-notifications.rules.read` | `GET /event-notifications/v1/instances/{instanceID}/rules/{ruleID}`| Manager, Reader, Writer, Administrator, Channel-Editor | Get Rule for Event Notifications instance |
 | `event-notifications.rules.update | `PUT /event-notifications/v1/instances/{instanceID}/rules/{ruleID}`| Manager, Writer, Administrator | Update Rule for Event Notifications instance |
