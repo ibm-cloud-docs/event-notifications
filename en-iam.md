@@ -76,6 +76,7 @@ The following table details actions that are mapped to service access roles. Ser
 |---------------|---------------|---------------|
 | Reader | View {{site.data.keyword.en_short}} instance data | View details of the service instance such as sources, rules, topics and channels |
 | Writer | View and edit an {{site.data.keyword.en_short}} instance | <ul><li>Perform all Reader actions</li> <li>Edit the service instance data, such as sources, rules, topics and channels</li></ul> |
+| Channel Editor| View, create and delete {{site.data.keyword.en_short}} subscriptions| View, create, update, and delete {{site.data.keyword.en_short}} subscriptions |
 | Manager | View, edit and delete data in an {{site.data.keyword.en_short}} instance |<ul><li>Perform all Writer actions</li> <li> Delete service instance data such as sources, rules, topics, channels</li></ul>|
 | Service Configuration Reader| Read services configuration for Governance management | View services configurations |
 | Event Source Manager | Source integration with{{site.data.keyword.en_short}} using service to service authorization | <ul><li>Perform service to service registration, of source</li><li>View, edit and delete sources and events</li><li>Send notifications</li></ul> |
