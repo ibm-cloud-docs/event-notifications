@@ -106,7 +106,7 @@ The actions are customized and defined by the {{site.data.keyword.Bluemix_notm}}
 | `event-notifications.topics.list` | `GET /event-notifications/v1/instances/{instanceID}/topics`| Manager, Reader, Writer, Administrator, Channel-Editor | Get All topics for Event Notifications instance |
 | `event-notifications.rules.create` | `POST /event-notifications/v1/instances/{instanceID}/rules`| Manager, Writer, Administrator | Create Rule for Event Notifications instance  |
 | `event-notifications.rules.read` | `GET /event-notifications/v1/instances/{instanceID}/rules/{ruleID}`| Manager, Reader, Writer, Administrator, Channel-Editor | Get Rule for Event Notifications instance |
-| `event-notifications.rules.update | `PUT /event-notifications/v1/instances/{instanceID}/rules/{ruleID}`| Manager, Writer, Administrator | Update Rule for Event Notifications instance |
+| `event-notifications.rules.update` | `PUT /event-notifications/v1/instances/{instanceID}/rules/{ruleID}`| Manager, Writer, Administrator | Update Rule for Event Notifications instance |
 | `event-notifications.rules.delete` | `DELETE /event-notifications/v1/instances/{instanceID}/rules/{ruleID}`| Manager, Administrator | Delete Rule from Event Notifications instance |
 | `event-notifications.rules.list` | `GET /event-notifications/v1/instances/{instanceID}/rules`| Manager, Reader, Writer, Administrator, Channel-Editor |Get All Rules for Event Notifications instance  |
 | `event-notifications.destinations.create` | `POST /event-notifications/v1/instances/{instanceID}/destinations`| Manager, Writer, Administrator | Create Destination for Event Notifications instance |
