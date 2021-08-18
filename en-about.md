@@ -23,7 +23,7 @@ subcollection: event-notifications
 {: #ac-about}
 
  Place holder for short decp.
-{:shortdesc}
+{: shortdesc}
 
 Detailed descp. about Event Notifications
 
