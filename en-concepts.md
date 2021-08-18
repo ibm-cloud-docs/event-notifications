@@ -30,9 +30,10 @@ This document lists the standard terms and their definitions used in the  {{site
 ## Source
 {: #en-source}
  {{site.data.keyword.en_short}} originate from sources. A source a registered entity in an {{site.data.keyword.en_short}} service instance which publishes notifications. At present sources are limited to those categorized as IBM Source.
-    - IBM Source
-      An IBM Source is a source in {{site.data.keyword.en_short}} where notifications are published from an {{site.data.keyword.Bluemix_notm}} service. There are several services on {{site.data.keyword.Bluemix_notm}} which are integrated to sent notifications to {{site.data.keyword.en_short}}. Examples include {{site.data.keyword.compliance_short}}, {{site.data.keyword.prf_hubshort}}, and {{site.data.keyword.secrets-manager_short}}.
-    - Service to Service Authorization
+
+     - IBM Source
+      An IBM Source is a source in {{site.data.keyword.en_short}} where notifications are published from an {{site.data.keyword.Bluemix_notm}} service. There are several services on {{site.data.keyword.Bluemix_notm}} which are integrated to sent notifications to {{site.data.keyword.en_short}}. Examples include {{site.data.keyword.compliance_short}}, {{site.data.keyword.prf_hubshort}}, and {{site.data.keyword.secrets-manager_short}}.  
+     - Service to Service Authorization
     Service to Service Authorization is used to enable an IBM Service to publish notifications to the {{site.data.keyword.en_short}} service. A customer who is interested in notifications from an IBM service has to authorize such a source service to publish to an instance of the {{site.data.keyword.en_short}} service.      
 
 ## Topics
