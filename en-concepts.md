@@ -31,9 +31,8 @@ This document lists the standard terms and their definitions used in the  {{site
 {: #en-source}
  {{site.data.keyword.en_short}} originate from sources. A source a registered entity in an {{site.data.keyword.en_short}} service instance which publishes notifications. At present sources are limited to those categorized as IBM Source.
 
-- IBM Source
-
-   An IBM Source is a source in {{site.data.keyword.en_short}} where notifications are published from an {{site.data.keyword.Bluemix_notm}} service. There are several services on {{site.data.keyword.Bluemix_notm}} which are integrated to sent notifications to {{site.data.keyword.en_short}}. Examples include {{site.data.keyword.compliance_short}}, {{site.data.keyword.prf_hubshort}}, and {{site.data.keyword.secrets-manager_short}}.  
+### IBM Source
+An IBM Source is a source in {{site.data.keyword.en_short}} where notifications are published from an {{site.data.keyword.Bluemix_notm}} service. There are several services on {{site.data.keyword.Bluemix_notm}} which are integrated to sent notifications to {{site.data.keyword.en_short}}. Examples include {{site.data.keyword.compliance_short}}, {{site.data.keyword.prf_hubshort}}, and {{site.data.keyword.secrets-manager_short}}.  
 
 **Service to Service Authorization** is used to enable an IBM Service to publish notifications to the {{site.data.keyword.en_short}} service. A customer who is interested in notifications from an IBM service has to authorize such a source service to publish to an instance of the {{site.data.keyword.en_short}} service.      
 
@@ -56,8 +55,8 @@ A filter is a conditional statement, which connects a Source to a Topic. Filters
 ## Destinations
 {: #en-destinations}
 Destinations represent locations to which notifications are to be delivered. Destinations can be categorized as human or an app.
-   -Examples of human destinations include SMS, Email, Push Notifications, Slack
-   -Examples of Application/Service destinations include Webhooks, Event Streams(Kafka), Elastic Search
+   - Examples of human destinations include SMS, Email, Push Notifications, Slack
+   - Examples of Application/Service destinations include Webhooks, Event Streams(Kafka), Elastic Search
 
 {{site.data.keyword.en_short}} supports the following destinations:
    - Email: Email is a pre-defined destination, with SendGrid as the email provider. All emails from {{site.data.keyword.en_short}} service will be from a fixed IBM email-id.
