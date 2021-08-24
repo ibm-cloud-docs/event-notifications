@@ -40,12 +40,12 @@ subcollection: mobilepush
 # Managing service access
 {: #service-access-management}
 
-With {{site.data.keyword.en_short}} and {{site.data.keyword.iamlong}} (IAM) account owners can manage user access in your account.
+With {{site.data.keyword.en_short}} and {{site.data.keyword.iamlong}}, (IAM) account owners can manage user access in your account.
 {: shortdesc}
 
 As an account owner, you can set policies within your account to create different levels of access for different users. For example, certain users can have **Read only** access to one instance, but **Write** access to another. You can decide who is allowed to create, update, and delete instances of {{site.data.keyword.en_short}}.
 
-As the {{site.data.keyword.en_short}} service has adopted IAM, the App secret will not be generated for the new instances. You must use the [API keys instead](https://cloud.ibm.com/docs/account?topic=account-manapikey).
+As the {{site.data.keyword.en_short}} service has adopted IAM, the App secret is not generated for new instances. You must use the [API keys instead](https://cloud.ibm.com/docs/account?topic=account-manapikey).
 {: note}
 
 ## User roles
