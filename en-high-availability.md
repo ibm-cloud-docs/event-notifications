@@ -38,7 +38,7 @@ In each supported multizone region, every zone has its own {{site.data.keyword.B
 
 {{site.data.keyword.en_short}} service is a regional service. It does not provide automated cross-regional failover or cross-regional disaster recovery. If a regional disaster occurs, all data might not be recovered. However, a location recovery is possible and all data can be restored. 
 
-For regional disaster recovery, it is recommended that you create and maintain backup instances in other regions. To synchronize a service instance in one region with an instance in a different region, you can use the APIs mentioned here.
+For regional disaster recovery, it is recommended that you create and maintain backup instances in other regions. To synchronize a service instance in one region with an instance in a different region, use the APIs.
 
 Review the [API documentation](/apidocs/event-notifications) and decide the data that you want backed up and restored, in case of an eventuality.
 
