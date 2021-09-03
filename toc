@@ -27,8 +27,12 @@ Event Notifications
         en-tutorial.md
 
     {: .topicgroup}
+    Logging and Monitoring
+        en-logs.md     
+
+    {: .topicgroup}
     Enhancing security
-        en-audit.md  
+        en-audit.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
