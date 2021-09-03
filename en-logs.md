@@ -78,9 +78,9 @@ Each log record has:
 - documentURL
 
 
-| Type of log                                     | InstanceId| SourceId | NotificationId |
-|------------------------------------------------|---------------------|-------------------------|
-| New incoming notification              | 57dd1fef-e4fb-4479-ba1f-648319b88927| c6fd66fd-c75b-4bc4-87a1--5aa917435173:api|3ac4259c-b1dd-4101-b62f-4914191a7194 |                                |                                    |  
+| Type of log     | InstanceId  | SourceId | NotificationId |
+|-----------------|-------------|----------|----------------|
+| New incoming notification              | 57dd1fef-e4fb-4479-ba1f-648319b88927| c6fd66fd-c75b-4bc4-87a1--5aa917435173:api|3ac4259c-b1dd-4101-b62f-4914191a7194 |                                 
 {: caption="Table 1. Incoming notifications" caption-side="top"}
 {: #en-logs-table-1}
 {: tab-title="Incoming notifications"}
@@ -88,8 +88,8 @@ Each log record has:
 {: class="simple-tab-table"}
 {: row-headers}
 
-| Type of log                                     | InstanceId| SourceId | NotificationId |
-|------------------------------------------------|---------------------|-------------------------|
+| Type of log     | InstanceId | SourceId | NotificationId |
+|-----------------|------------|----------|----------------|
 | New SMTP-IBM Notification ingested            | 493e4a05-2b70-46cd-a27e-7057141951e9| 2b094423-fd19-4b95-8bb1-5731e71b9f9a:api|c1dcb2a8-d218-413c-a10f-be5a64c620f4|
 | New SMS-IBM Notification Ingested           | 4493e4a05-2b70-46cd-a27e-7057141951e9| 2b094423-fd19-4b95-8bb1-5731e71b9f9a:api|1ec35fd9-f7b5-496a-86e7-2170b9ae68b4|
 | New WEBHOOK Notification Ingested          |493e4a05-2b70-46cd-a27e-7057141951e9 | 2b094423-fd19-4b95-8bb1-5731e71b9f9a:api|1c1dcb2a8-d218-413c-a10f-be5a64c620f4|                             
