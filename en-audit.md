@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-09-01"
+lastupdated: "2021-09-06"
 
 keywords: event notifications activity tracker events, event notifications events, event notifications audit, event notifications audit events, event notifications audit logs
 
@@ -55,10 +55,6 @@ The following list of {{site.data.keyword.en_short}} data events are sent to {{s
 | `event-notifications.subscriptions.create` | Created a subscription or failed to create|
 | `event-notifications.subscriptions.list` | Retrieved the list of subscriptions or failed to list subscriptions|
 | `event-notifications.subscriptions.update` | Updated a subscription or failed to update|
-| `event-notifications.rules.read` | Retrieved rules or failed to read|
-| `event-notifications.rules.create` | Created a rule or failed to create|
-| `event-notifications.rules.list` | Retrieved the list of rules or failed to list rules|
-| `event-notifications.rules.update`|Updated a rule or failed to update|
 | `event-notifications.event_categories.read`| Retrieved an event or failed to read|
 | `event-notifications.event_categories.create` | Created an event or failed to create|
 | `event-notifications.event_categories.list` | Retrieved the list of events or failed to list|
