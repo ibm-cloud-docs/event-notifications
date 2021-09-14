@@ -67,4 +67,4 @@ If you no longer need an instance of {{site.data.keyword.en_short}}, you can del
 ### Restoring deleted data for {{site.data.keyword.en_short}}
 {: #en-data-restore}
 
-To restore a deleted instance or to delete the instance permanently, you can use Resource Reclamations. Refer to [Using Resource Reclamations]((https://cloud.ibm.com/docs/account?topic=account-resource-reclamation)) to know more on the resource reclamation.
+To restore a deleted instance or to delete the instance permanently, you can use Resource Reclamations. Refer to [Using Resource Reclamations](/docs/account?topic=account-resource-reclamation) to know more on the resource reclamation.
