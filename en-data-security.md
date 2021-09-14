@@ -39,7 +39,7 @@ To ensure that you can securely manage your data when you use {{site.data.keywor
 ## Protecting your sensitive data in {{site.data.keyword.en_short}}
 {: #en-data-encryption}
 
-The data that you store in the {{site.data.keyword.en_short}} instance is encrypted at rest by using a randomly generated key, which is protected by using Key Protect managed by {{site.data.keyword.en_short}} service.
+The data that you store in the {{site.data.keyword.en_short}} instance is encrypted at rest by using a randomly generated key, which is in turn protected by Key Protect, managed by {{site.data.keyword.en_short}} service.
 
 <!-- Some other examples that support both Key Protect and Hyper Protect Crypto Services:
 Event Streams: https://test.cloud.ibm.com/docs/EventStreams?topic=EventStreams-managing_encryption
@@ -56,12 +56,12 @@ The {{site.data.keyword.en_short}} data retention policy describes how long your
 1. Log in to your {{site.data.keyword.Bluemix_notm}} account by using {{site.data.keyword.Bluemix_notm}} CLI form terminal.
 2. `ibmcloud resource reclamations` lists your deleted instance along with reclamation ID for it.  
 3. Use `ibmcloud resource reclamation-delete <reclamation_id_for_instance` to permanently delete data that is related to deleted instance.  
-4. All related data will be deleted after data retention period by itself if instance is not restored.
+4. If an instance is not restored, all related data will be autonomously deleted after the data retention period.
 
 ### Deleting Event Notifications instances
 {: #en-delete}
 
-If you no longer need an instance of {{site.data.keyword.en_short}}, you can delete the service instance by using {{site.data.keyword.Bluemix_notm}} CLI. You can also choose to delete your service instance by using the console. Any data that is stored related to that instance is also be deleted.
+If you no longer need an instance of {{site.data.keyword.en_short}}, you can delete the service instance by using {{site.data.keyword.Bluemix_notm}} CLI. You can also choose to delete your service instance by using the console. Any data that is stored related to that instance is also deleted.
 
 
 ### Restoring deleted data for {{site.data.keyword.en_short}}
