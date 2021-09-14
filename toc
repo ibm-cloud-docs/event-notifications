@@ -28,11 +28,12 @@ Event Notifications
 
     {: .topicgroup}
     Logging and Monitoring
-        en-logs.md     
+        en-logs.md
 
     {: .topicgroup}
     Enhancing security
         en-audit.md
+        en-data-security.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
