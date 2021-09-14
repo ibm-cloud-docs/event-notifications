@@ -49,13 +49,13 @@ https://test.cloud.ibm.com/docs/appid?topic=appid-mng-data -->
 ## Deleting your data in {{site.data.keyword.en_short}}
 {: #en-data-delete}
 
-The {{site.data.keyword.en_short}} data retention policy describes how long your data is stored after you delete the service. The data retention policy is included in the {{site.data.keyword.en_short}} service description, which you can find in the [{{site.data.keyword.en_short}} Terms and Notices](/docs/overview?topic=overview-terms).
+The {{site.data.keyword.en_short}} data retention policy describes how long your data is stored after you delete the service. As per {{site.data.keyword.Bluemix_notm}} data retention policy you can [restore](/docs/account?topic=account-resource-reclamation&interface=cli#restore-resource-cli) a resource within 7 days after you delete it.
 
 #### Command to delete data
 
 1. Log in to your {{site.data.keyword.Bluemix_notm}} account by using {{site.data.keyword.Bluemix_notm}} CLI form terminal.
 2. `ibmcloud resource reclamations` lists your deleted instance along with reclamation ID for it.  
-3. Use `ibmcloud resource reclaamtion-delete <reclamation_id_for_instance>` to permanently delete data that is related to deleted instance.  
+3. Use `ibmcloud resource reclamation-delete <reclamation_id_for_instance` to permanently delete data that is related to deleted instance.  
 4. All related data will be deleted after data retention period by itself if instance is not restored.
 
 ### Deleting Event Notifications instances
