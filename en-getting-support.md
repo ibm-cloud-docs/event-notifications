@@ -33,7 +33,7 @@ By default, account users don't have access to create, update, search, or view c
 ## Creating a cloud support case
 {: #en-cloud-support-case}
 
-For information on how to create a cloud support case, refer [here](/docs/get-support?topic=get-support-using-avatar){: external}.
+Refer [here](/docs/get-support?topic=get-support-using-avatar){: external}.
 
 ### Creating a support case for UI issue
 {: #ac-ui-support-case}
@@ -61,7 +61,6 @@ Collecting the following information can help a faster support case resolution f
 - guid
 - sourceName
 - region of the instance
-- environment_id
 - topicName (if the issue is related to a topic)
 - channelName (if the issue is related to a channel)
 - subscriptionName (if the issue is related to subscriptions)
