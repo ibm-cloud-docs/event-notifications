@@ -56,5 +56,4 @@ Event Notifications
     {: .topicgroup}
     Troubleshooting
        en-getting-support.md
-
     {: .navgroup-end}
