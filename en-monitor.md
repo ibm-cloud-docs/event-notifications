@@ -2,11 +2,11 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-05-25"
+lastupdated: "2021-09-15"
 
-keywords: app-configuration, app configuration, high availability, ha, monitoring, metrics, monitor apps
+keywords: event-notification, event notification, high availability, ha, monitoring, metrics, monitor apps
 
-subcollection: app-configuration
+subcollection: event-notifications
 
 ---
 
@@ -99,8 +99,8 @@ subcollection: app-configuration
 {:vbnet: .ph data-hd-programlang='vb.net'}
 {:video: .video}
 
-# Monitor {{site.data.keyword.appconfig_short}} service metrics with {{site.data.keyword.mon_full_notm}}
-{: #ac-monitoring}
+# Monitor {{site.data.keyword.en_short}} service metrics with {{site.data.keyword.mon_full_notm}}
+{: #en-monitoring}
 
 <!-- All IBM Cloud® general availability (GA) services have a Service Level Agreement of 99.99% availability.  -->
 
@@ -108,12 +108,12 @@ Use {{site.data.keyword.mon_full_notm}} to gain operational visibility into the 
 {: shortdesc}
 
 ## Set up your {{site.data.keyword.mon_full_notm}} service instance
-{: #setup-monitor}
+{: #en-setup-monitor}
 
-To get started, you need to [provision IBM Cloud Monitoring ](https://cloud.ibm.com/catalog/services/ibm-cloud-monitoring?callback=/observe/monitoring/create) instance on your {{site.data.keyword.IBM}} account. For more information, see [here. ](https://cloud.ibm.com/docs/monitoring?topic=monitoring-provision)
+To get started, you need to [provision {{site.data.keyword.Bluemix_notm}} Monitoring ](https://cloud.ibm.com/catalog/services/ibm-cloud-monitoring?callback=/observe/monitoring/create) instance on your {{site.data.keyword.IBM}} account. For more information, see [here. ](https://cloud.ibm.com/docs/monitoring?topic=monitoring-provision)
 
 
-Currently, {{site.data.keyword.mon_full_notm}} integration is available for {{site.data.keyword.appconfig_short}} service deployments in the following regions:
+Currently, {{site.data.keyword.mon_full_notm}} integration is available for {{site.data.keyword.en_short}} service deployments in the following regions:
 
 | Deployment region    | Monitoring region |
 |-------------|-------------|
@@ -121,7 +121,7 @@ Currently, {{site.data.keyword.mon_full_notm}} integration is available for {{si
 | London| London|
 | Sydney| Sydney|
 
-Before you can start using {{site.data.keyword.appconfig_short}} monitoring metrics, you must first opt in and [enable platform metrics](https://cloud.ibm.com/docs/monitoring?topic=monitoring-platform_metrics_enabling)
+Before you can start using {{site.data.keyword.en_short}} monitoring metrics, you must first opt in and [enable platform metrics](https://cloud.ibm.com/docs/monitoring?topic=monitoring-platform_metrics_enabling)
 {: note .note}
 
 You can configure only one instance of the {{site.data.keyword.mon_full_notm}} service per region to collect platform metrics.
@@ -134,30 +134,108 @@ You can configure only one instance of the {{site.data.keyword.mon_full_notm}} s
 
 
  ## Access your {{site.data.keyword.mon_full_notm}} metrics
- {: #access-monitor}
+ {: #en-access-monitor}
 
  1. Launch the [{{site.data.keyword.mon_full_notm}} web UI](https://cloud.ibm.com/docs/monitoring?topic=monitoring-launch) from the <wintitle>Observability</wintitle> page
  2. Click DASHBOARDS
  3. In the Default Dashboards section, expand IBM
- 4. Choose the {{site.data.keyword.appconfig_short}} dashboard from the list
+ 4. Choose the {{site.data.keyword.en_short}} dashboard from the list
  Access your deployment's monitoring dashboard from {{site.data.keyword.mon_full_notm}}, it's in the sidebar, under IBM.
- Next, change the scope or make a copy of the default dashboard to monitor an {{site.data.keyword.appconfig_short}} service instance.
+ Next, change the scope or make a copy of the default dashboard to monitor an {{site.data.keyword.en_short}} service instance.
 
 ## Metrics available by Service Plan
- {: metrics-by-plan}
+ {: #en-metrics-by-plan}
 
  | Metric Name |
  | ------------|
- | [ibm_apprapp_instance_evaluation](#ibm_apprapp_instance_evaluation)|
+ | [ibm_eventnotifications_total_ingested_notifications](#ibm_eventnotifications_total_ingested_notifications)|
+ | [ibm_eventnotifications_sms_total](#ibm_eventnotifications_sms_total)|
+ | [ibm_eventnotifications_sms_failure](#ibm_eventnotifications_sms_failure)|
+ | [ibm_eventnotifications_email_total](#ibm_eventnotifications_email_total)|
+ | [ibm_eventnotifications_email_failure](#ibm_eventnotifications_email_failure)|
+ | [ibm_eventnotifications_webhook_total](#ibm_eventnotifications_webhook_total)|
+ | [ibm_eventnotifications_webhook_failure](#ibm_eventnotifications_webhook_failure)|
 
- ### ibm_apprapp_instance_evaluation
- {: ibm_apprapp_instance_evaluation}
+### ibm_eventnotifications_total_ingested_notifications
+{: ibm_eventnotifications_total_ingested_notifications}
 
-Evaluation count per instance: Count of feature or property evaluations in the SDK.
+Total number of notifications that are ingested. Ingested notifications are events from a source that has at least one condition that is defined on them for filtering.
 
 | Metadata   | Description |
 |-------------|-------------|
-| `Metric Name` | `ibm_apprapp_instance_evaluation` |
+| `Metric Name` | `ibm_eventnotifications_total_ingested_notifications` |
 | `Metric Type` | `gauge`|
 | `Value Type` | `none`|
-| `Segment By` | `ibm_ctype`, `ibm_service_name`, `ibm_location`, `ibm_scope`, `ibm_service_instance`, `ibm_apprapp_instance_id` |
+| `Segment By` | `ibm_scope`, `ibm_ctype`, `ibm_location`,  `ibm_service_name`, `ibm_eventnotifications_source_id`, `ibm_eventnotifications_subscription_id`, `ibm_eventnotifications_destination_id`, `ibm_service_instance`,  |
+
+### ibm_eventnotifications_sms_total
+{: ibm_eventnotifications_sms_total}
+
+Total number of SMS units sent. That is, the number for which the user will be charged.
+
+| Metadata   | Description |
+|-------------|-------------|
+| `Metric Name` | `ibm_eventnotifications_sms_total` |
+| `Metric Type` | `gauge`|
+| `Value Type` | `none`|
+| `Segment By` | `ibm_scope`, `ibm_ctype`, `ibm_location`,  `ibm_service_name`, `ibm_eventnotifications_source_id`, `ibm_eventnotifications_subscription_id`, `ibm_eventnotifications_destination_id`, `ibm_service_instance`,  |
+
+### ibm_eventnotifications_sms_failure
+{: ibm_eventnotifications_sms_failure}
+
+Number of SMS units that failed.
+
+| Metadata   | Description |
+|-------------|-------------|
+| `Metric Name` | `ibm_eventnotifications_sms_failure` |
+| `Metric Type` | `gauge`|
+| `Value Type` | `none`|
+| `Segment By` | `ibm_scope`, `ibm_ctype`, `ibm_location`,  `ibm_service_name`, `ibm_eventnotifications_source_id`, `ibm_eventnotifications_subscription_id`, `ibm_eventnotifications_destination_id`, `ibm_service_instance`,  |
+
+### ibm_eventnotifications_email_total
+{: ibm_eventnotifications_email_total}
+
+Total number of email units attempted.
+
+| Metadata   | Description |
+|-------------|-------------|
+| `Metric Name` | `ibm_eventnotifications_email_total` |
+| `Metric Type` | `gauge`|
+| `Value Type` | `none`|
+| `Segment By` | `ibm_scope`, `ibm_ctype`, `ibm_location`,  `ibm_service_name`, `ibm_eventnotifications_source_id`, `ibm_eventnotifications_subscription_id`, `ibm_eventnotifications_destination_id`, `ibm_service_instance`,  |
+
+### ibm_eventnotifications_email_failure
+{: ibm_eventnotifications_email_failure}
+
+Total number of emails that are not sent.
+
+| Metadata   | Description |
+|-------------|-------------|
+| `Metric Name` | `ibm_eventnotifications_email_failure` |
+| `Metric Type` | `gauge`|
+| `Value Type` | `none`|
+| `Segment By` | `ibm_scope`, `ibm_ctype`, `ibm_location`,  `ibm_service_name`, `ibm_eventnotifications_source_id`, `ibm_eventnotifications_subscription_id`, `ibm_eventnotifications_destination_id`, `ibm_service_instance`,  |
+
+### ibm_eventnotifications_webhook_total
+{: ibm_eventnotifications_webhook_total}
+
+Total number of webhook (HTTP) events.
+
+| Metadata   | Description |
+|-------------|-------------|
+| `Metric Name` | `ibm_eventnotifications_webhook_total` |
+| `Metric Type` | `gauge`|
+| `Value Type` | `none`|
+| `Segment By` | `ibm_scope`, `ibm_ctype`, `ibm_location`,  `ibm_service_name`, `ibm_eventnotifications_source_id`, `ibm_eventnotifications_subscription_id`, `ibm_eventnotifications_destination_id`, `ibm_service_instance`,  |
+
+### ibm_eventnotifications_webhook_failure
+{: ibm_eventnotifications_webhook_failure}
+
+Number of webhook events that returned with error codes.
+
+| Metadata   | Description |
+|-------------|-------------|
+| `Metric Name` | `ibm_eventnotifications_webhook_failure` |
+| `Metric Type` | `gauge`|
+| `Value Type` | `none`|
+| `Segment By` | `ibm_scope`, `ibm_ctype`, `ibm_location`,  `ibm_service_name`, `ibm_eventnotifications_source_id`, `ibm_eventnotifications_subscription_id`, `ibm_eventnotifications_destination_id`, `ibm_service_instance`,  |
