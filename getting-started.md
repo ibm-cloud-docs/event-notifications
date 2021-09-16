@@ -18,6 +18,7 @@ subcollection: event-notifications
 {:screen: .screen}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
+{:step: data-tutorial-type='step'}
 
 # Getting started with {{site.data.keyword.en_short}}
 {: #getting-started}
@@ -100,7 +101,7 @@ Optionally, define Tags that are required to identify this service instance.
 
 Click Create. A new service instance is created and the {{site.data.keyword.en_short}} console displayed.
 
-![Event Notifications console](images/en-console.png "Console"){: caption="Figure 1. {{site.data.keyword.en_short}} console" caption-side="bottom"}
+![Event Notifications console](images/en-console.png "Console"){: caption="Figure 2. {{site.data.keyword.en_short}} console" caption-side="bottom"}
 
 
 
