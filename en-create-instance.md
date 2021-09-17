@@ -14,6 +14,7 @@ account-plan: lite <!-- Specify 'lite' if tutorial can be completed using only L
 completion-time: 10m <!-- Estimated time to complete the steps in this tutorial. Minute values are supported up to 90 minutes. Whole hours are also supported; for example: 2h -->
 
 ---
+
 {{site.data.keyword.attribute-definition-list}}
 
 # Create an {{site.data.keyword.en_short}} service instance

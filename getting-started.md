@@ -2,11 +2,11 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-09-17"
+lastupdated: "2020-11-12"
 
-keywords: event notifications, event-notifications, tutorials
+keywords:
 
-subcollection: event-notifications
+subcollection:
 
 content-type: tutorial
 services: <!-- Getting started tutorials tend to be only for the service, so leave empty. -->
@@ -14,7 +14,11 @@ account-plan: lite <!-- Specify 'lite' if tutorial can be completed using only L
 completion-time: 10m <!-- Estimated time to complete the steps in this tutorial. Minute values are supported up to 90 minutes. Whole hours are also supported; for example: 2h -->
 
 ---
+
 {{site.data.keyword.attribute-definition-list}}
+
+<!-- Name your file `getting-started.md` and include it in the Get started nav group in your toc file. -->
+
 
 # Getting started with {{site.data.keyword.en_short}}
 {: #getting-started}
@@ -52,8 +56,9 @@ Uses {{site.data.keyword.Bluemix_notm}} provided SMS function to send text notif
 Send events from supported {{site.data.keyword.Bluemix_notm}} Services to Webhook destinations of your choice.
 
 The basic steps that get you started:
--1 [Create an {{site.data.keyword.en_short}} service instance](/docs/event-notifications?topic=en-create-en-instance)
--1 Create a topic
--1 Define rules for a topic
--1 Select a destination
--1 Create a subscription by associating a destination with the topic
+
+1. [Create an {{site.data.keyword.en_short}} service instance](/docs/event-notifications?topic=event-notifications-en-create-en-instance)
+1. Create a topic
+1. Define rules for a topic
+1. Select a destination
+1. Create a subscription by associating a destination with the topic
