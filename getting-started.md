@@ -15,15 +15,6 @@ completion-time: 10m <!-- Estimated time to complete the steps in this tutorial.
 
 ---
 {{site.data.keyword.attribute-definition-list}}
-{:codeblock: .codeblock}
-{:external: target="_blank" .external}
-{:important: .important}
-{:note: .note}
-{:pre: .pre}
-{:screen: .screen}
-{:shortdesc: .shortdesc}
-{:tip: .tip}
-{:step: .data-tutorial-type='step'}
 
 # Getting started with {{site.data.keyword.en_short}}
 {: #getting-started}
