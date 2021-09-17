@@ -18,7 +18,7 @@ subcollection: event-notifications
 {:screen: .screen}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
-{:step: data-tutorial-type='step'}
+{:step: .data-tutorial-type='step'}
 
 # Getting started with {{site.data.keyword.en_short}}
 {: #getting-started}
