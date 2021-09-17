@@ -13,10 +13,13 @@ Event Notifications
 
     {: .topicgroup}
     Basic steps
+    {: .topicgroup}
+    Basic steps
+
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    en-monitor.md
+    en-create-instance.md
     en-iam.md
 
     {: .topicgroup}
@@ -29,6 +32,7 @@ Event Notifications
     {: .topicgroup}
     Logging and Monitoring
         en-logs.md
+        en-monitor.md
 
     {: .topicgroup}
     Enhancing security
