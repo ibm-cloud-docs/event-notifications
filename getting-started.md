@@ -9,9 +9,9 @@ keywords:
 subcollection:
 
 content-type: tutorial
-services: <!-- Getting started tutorials tend to be only for the service, so leave empty. -->
-account-plan: lite <!-- Specify 'lite' if tutorial can be completed using only Lite plan of your service; otherwise, specify 'paid' -->
-completion-time: 10m <!-- Estimated time to complete the steps in this tutorial. Minute values are supported up to 90 minutes. Whole hours are also supported; for example: 2h -->
+services:
+account-plan: lite
+completion-time: 10m 
 
 ---
 
