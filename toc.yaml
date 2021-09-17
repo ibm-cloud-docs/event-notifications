@@ -1,0 +1,76 @@
+---
+toc:
+  properties:
+    subcollection: event-notifications
+    category: dev_ops
+    audience: service
+    href: /docs/event-notifications?topic=event-notifications-getting-started
+    console-page: /catalog/services/event-notifications#about
+    product-page: https://ibm.com/cloud/product-value
+    path: event-notifications
+    label: Event notifications
+
+#  List your getting started tutorial (getting-started.md) as the first item in the Get started nav group. See https://test.cloud.ibm.com/docs/writing?topic=writing-navigation for more details on the toc design.
+  entries:
+  - navgroup:
+      id: learn
+      topics:
+      - getting-started.md
+      - en-about.md
+      - en-concepts.md
+      - en-release-notes.md
+
+  - navgroup:
+      id: tutorial
+      topics:
+      - en-create-instance.md
+      - topic-2.md
+
+
+  - navgroup:
+      id: howto
+      topics:
+      - en-iam.md
+      - topicgroup:
+          label: Logging and Monitoring
+          topics:
+          - en-logs.md
+          - en-monitor.md
+      - topicgroup:
+          label: Enhancing security
+          topics:
+          - en-audit.md
+          - en-data-security.md
+
+#  Links to your REST API docs should be included in the Reference navigation group. For details on publishing API docs, see https://test.cloud.ibm.com/docs/api-docs.
+#  Links to your command line reference docs should be included in the Reference navigation group.
+  - navgroup:
+      id: reference
+      topics:
+      - topicgroup:
+          label: API Reference
+          links:
+          - link:
+              label: API Explorer
+              href: https://test.cloud.ibm.com/apidocs/event-notifications
+      - topicgroup:
+          label: High availability and disaster recovery
+          topics:
+          - en-high-availability.md
+          - en-service-credentials.md
+          - en-responsibilities.md
+          - en-regions-endpoints.md
+
+
+  - navgroup:
+      id: help
+      topics:
+      - en-getting-support.md
+      - topicgroup:
+          label: FAQs
+          topics:
+          - faq.md
+      - topicgroup:
+          label: Troubleshooting
+          topics:
+      - en-release-notes.md
