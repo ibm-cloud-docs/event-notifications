@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-11-12"
+lastupdated: "2020-09-20"
 
 keywords:
 
@@ -11,20 +11,17 @@ subcollection:
 content-type: tutorial
 services:
 account-plan: lite
-completion-time: 10m 
+completion-time: 10m
 
 ---
 
 {{site.data.keyword.attribute-definition-list}}
 
-<!-- Name your file `getting-started.md` and include it in the Get started nav group in your toc file. -->
-
-
 # Getting started with {{site.data.keyword.en_short}}
 {: #getting-started}
-{: toc-content-type="tutorial"} <!-- Always use this value -->
-{: toc-services=""} <!-- Use same value from services metadata above - that is, in most cases, leave empty. -->
-{: toc-completion-time="10m"} <!-- Use same value from completion-time metadata above -->
+{: toc-content-type="tutorial"}
+{: toc-services=""}
+{: toc-completion-time="10m"}
 
 {{site.data.keyword.en_full}} is a centralized alerts management service that notifies and alerts you to events occurring in your {{site.data.keyword.Bluemix_notm}} account. You can, in turn send a filtered notification to a set of your users.
 You can create subscriptions to associate destinations to topics and write rules to filter specific notifications to the topic.
