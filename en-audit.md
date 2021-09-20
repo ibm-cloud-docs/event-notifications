@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-09-06"
+lastupdated: "2021-09-20"
 
 keywords: event notifications activity tracker events, event notifications events, event notifications audit, event notifications audit events, event notifications audit logs
 
@@ -39,26 +39,31 @@ The following list of {{site.data.keyword.en_short}} data events are sent to {{s
 
 | Action             | Description      |
 | -------------------| -----------------|
-| `event-notifications.topics.read` | Retrieved a topic or failed to read|
-| `event-notifications.topics.create` | Created a topic or failed to create |
-| `event-notifications.topics.list` | Retrieved the list of topics or failed to list topics|
-| `event-notifications.topics.update` | Updated a topic or failed to update|
-| `event-notifications.destinations.read` | Retrieved a destination or failed to retrieve|
-| `event-notifications.destinations.create` | Created a destination or failed to create  |
-| `event-notifications.destinations.list` | Retrieved the list of destinations or failed to list|
-| `event-notifications.destinations.update` | Updated a destination or failed to update|
-| `event-notifications.sources.read` | Retrieved a source or failed to read |
-| `event-notifications.sources.create`|Created a source or failed to create|
-| `event-notifications.sources.list`| Retrieved the list of sources or failed to list sources|
-| `event-notifications.sources.update` | Updated a source or failed to update |
-| `event-notifications.subscriptions.read` | Retrieved a subscription or failed to read|
-| `event-notifications.subscriptions.create` | Created a subscription or failed to create|
-| `event-notifications.subscriptions.list` | Retrieved the list of subscriptions or failed to list subscriptions|
-| `event-notifications.subscriptions.update` | Updated a subscription or failed to update|
-| `event-notifications.event_categories.read`| Retrieved an event or failed to read|
-| `event-notifications.event_categories.create` | Created an event or failed to create|
-| `event-notifications.event_categories.list` | Retrieved the list of events or failed to list|
-| `event-notifications.event_categories.update`|Updated an event or failed to update|
+| `event-notifications.topics.read` | An event is generated when a topic is retrieved.|
+| `event-notifications.topics.create` | An event is generated when a topic is created. |
+| `event-notifications.topics.list` | An event is generated when you retrieve a list of topics.|
+| `event-notifications.topics.update` | An event is generated when you update a topic.|
+| `event-notifications.topics.delete` | An event is generated  when you delete a topic.|
+| `event-notifications.destinations.read` | An event is generated when you retrieve a destination.|
+| `event-notifications.destinations.create` | An event is generated when you create a destination.|
+| `event-notifications.destinations.list` | An event is generated when you retrieve the list of destinations.|
+| `event-notifications.destinations.update` | An event is generated when you update a destination.|
+| `event-notifications.destinations.delete` | An event is generated when you delete a destination.|
+| `event-notifications.sources.read` |An event is generated when you retrieve a source. |
+| `event-notifications.sources.create`|An event is generated when you create a source.|
+| `event-notifications.sources.list`| An event is generated when you retrieve the list of sources. |
+| `event-notifications.sources.update` |An event is generated  when you update a source.|
+| `event-notifications.sources.delete` | An event is generated when you delete a source. |
+| `event-notifications.subscriptions.read` | An event is generated when you retrieve a subscription. |
+| `event-notifications.subscriptions.create` | An event is generated when you create a subscription.|
+| `event-notifications.subscriptions.list` | An event is generated when you retrieved the list of subscriptions.|
+| `event-notifications.subscriptions.update` | An event is generated when you update a subscription.|
+| `event-notifications.subscriptions.delete` | An event is generated when you delete a subscription.|
+| `event-notifications.event_categories.read`| An event is generated when an event category is retrieved for a source.|
+| `event-notifications.event_categories.create` |An event is generated when an event category is created for a source.|
+| `event-notifications.event_categories.list` | An event is generated when an event category list is retrieved for a source. |
+| `event-notifications.event_categories.update`|An event is generated when an event category is updated for a source.|
+| `event-notifications.event_categories.delete`|An event is generated when an event category is deleted for a source. |
 
 {: caption="Table 1. Overview of {{site.data.keyword.en_short}} actions that generate {{site.data.keyword.at_full_notm}} events" caption-side="top"}
 
