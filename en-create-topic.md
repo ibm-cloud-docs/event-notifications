@@ -45,7 +45,7 @@ completion-time: 10m
 {: #en-topic-rules  }
 {: step}
 
-You can create a topic with steps 1 and 2. Step 3 is for provisioning custom rules for the topic, which are optional.
+You can create a topic with steps 1. Step 2 is for provisioning custom rules for the topic, which are optional.
 {: note}
 
 - Event type; select event type from the dropdown list.
