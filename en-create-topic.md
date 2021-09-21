@@ -34,7 +34,7 @@ completion-time: 10m
 ![Create a topic](images/en-topic1.png "Topic"){: caption="Figure 1. Create a topic" caption-side="bottom"}
 
 
-- Click on `Create`, and enter the topic details
+- Click on `Create`, and enter the topic details.
 - Name; name of the topic.
 - Description; add a description for the topic (optional).
 - Source; select a source from the dropdown list.
@@ -70,7 +70,7 @@ If you do not select any rules, a default rule gets added, which means all notif
 {: #en-topic-create}
 {: step}
 
-- Click `Create` in the topic wizard
+- Click `Create` in the topic wizard.
 
 ![Click Create to finish](images/en-topic5.png "Create"){: caption="Figure 5. Finish creating a topic" caption-side="bottom"}
 
