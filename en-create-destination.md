@@ -17,17 +17,17 @@ completion-time: 10m
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Select an {{site.data.keyword.en_short}} destination
+# Create a {{site.data.keyword.en_short}} destination
 {: #en-create-en-destination}
 
 Destinations are custom protocols, which are either services or user reachable entities.
-Currently, {{site.data.keyword.en_short}} supports three destination types:
-- email-ibm 
-- email-sms 
-- webhook 
+Presently, {{site.data.keyword.en_short}} supports three destination types:
+- email-ibm
+- email-sms
+- webhook
 {: shortdesc}
 
-Of these, email-ibm and email-sms are supported out of the box. 
+Of these, email-ibm and email-sms are supported out of the box.
 
 
 ## Create a destination
@@ -50,7 +50,7 @@ Of these, email-ibm and email-sms are supported out of the box.
 
 ![Add destination details](images/en-dest2.png "Destination details"){: caption="Figure 2. Add destination details" caption-side="bottom"} 
 
-## Finish creating the destination
+## Add the destination
 {: #en-destination-finish}
 {: step}
 
