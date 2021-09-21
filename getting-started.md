@@ -28,7 +28,7 @@ You can create subscriptions to associate destinations to topics and write rules
 In this tutorial, we'll take you through the steps to get started.
 {: shortdesc}
 
-#### Pricing plans
+## Pricing plans
 
 Currently, two pricing plans are on offer: **Lite**, and **Standard**
 

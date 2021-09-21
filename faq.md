@@ -42,6 +42,7 @@ FAQs for {{site.data.keyword.appconfig_short}} provides answers to common questi
 ## What pricing plans are available with {{site.data.keyword.appconfig_short}}?
 {: #faq-ac-pricing}
 {: faq}
+
  {{site.data.keyword.appconfig_short}} has three pricing plans:
 
 | Plan  | Inclusions| Capabilities|Price|
@@ -53,6 +54,7 @@ FAQs for {{site.data.keyword.appconfig_short}} provides answers to common questi
 ## What are the charges to use {{site.data.keyword.appconfig_short}}?
 {: #faq-ac-charges}
 {: faq}
+
 The fundamental pricing metrics for {{site.data.keyword.appconfig_short}} are Application Instance, Active Entity ID, and API Call.  
 
 **Application Instance**- An Application Instance is a uniquely named copy of {{site.data.keyword.appconfig_short}} created by you but managed by {{site.data.keyword.IBM_notm}}. Multiple instances of {{site.data.keyword.appconfig_short}} within a single environment are all considered separate application instances, as are individual {{site.data.keyword.appconfig_short}}instances in multiple environments (such as test, development, staging, or production). 
@@ -68,11 +70,13 @@ An API call also occurs on startup to the retrieve the initial configuration sta
 ## How to view usage metrics for {{site.data.keyword.appconfig_short}}?
 {: #faq-ac-metrics}
 {: faq}
+
 View basic historical {{site.data.keyword.appconfig_short}} usage metrics on the {{site.data.keyword.IBM_notm}} platform [Billing and Usage dashboard](https://cloud.ibm.com/billing/usage). If you need more sophisticated monitoring, create an {{site.data.keyword.monitoringlong_notm}} instance from the [Observability](https://cloud.ibm.com/observe) section of the {{site.data.keyword.Bluemix_notm}} console.
 
 ## How to predict {{site.data.keyword.appconfig_short}} cost?
 {: #faq-ac-cost}
 {: faq}
+
 The simplest way to estimate cost for any {{site.data.keyword.Bluemix_notm}} managed service is to use the [{{site.data.keyword.Bluemix_notm}} Cost Estimator tool](https://cloud.ibm.com/docs/billing-usage?topic=billing-usage-cost).
 
 </br>
@@ -92,6 +96,7 @@ If your pricing plan includes a free allotment of API calls, then you are not ch
 ## Can you give some example pricing scenarios?
 {: #faq-ac-sample}
 {: faq}
+
 ### Pricing Scenario 1: Mobile App with Feature Flags
 Assume you have a mobile app and you want feature flags and targeted segments to roll out features incrementally to different sets of users. Your historical metrics show 200,000 users but only about 50% are active in a month. An average active user opens the app or brings it to the foreground once every day. You expect to roll out a new feature twice per month.</br></br>
 You need the {{site.data.keyword.appconfig_short}} Enterprise plan to support both feature flags and segmentation.</br> 
@@ -163,21 +168,25 @@ You might use the same instance of {{site.data.keyword.appconfig_short}} for bot
 ## How do I audit {{site.data.keyword.appconfig_short}} activity?
 {: #faq-ac-audit}
 {: faq}
+
 If you need strict governance and accountability within your {{site.data.keyword.appconfig_short}} instance, create an instance of {{site.data.keyword.Bluemix_notm}} Activity Tracker from the [Observability]( https://cloud.ibm.com/observe) section of the {{site.data.keyword.Bluemix_notm}} console. Use that to record and audit {{site.data.keyword.appconfig_short}} activity.
 
 ## How do I archive {{site.data.keyword.appconfig_short}} activity data?
 {: #faq-ac-archive}
 {: faq}
+
 If you would like to retain a long-term record of activity within your {{site.data.keyword.appconfig_short}} instance, either for audit purposes or for post-processing and data analysis, including application of machine learning models, create an instance of {{site.data.keyword.Bluemix_notm}} Activity Tracker from the [Observability]( https://cloud.ibm.com/observe) section of the {{site.data.keyword.Bluemix_notm}} console. Then archive events from an {{site.data.keyword.Bluemix_notm}} Activity Tracker instance into a bucket in an {{site.data.keyword.Bluemix_notm}} Object Storage (COS) instance. [Learn more](https://cloud.ibm.com/docs/activity-tracker?topic=activity-tracker-archiving )
 
 ## In what regions is {{site.data.keyword.appconfig_short}} available?
 {: #faq-ac-regions}
 {: faq}
+
 To see a list of {{site.data.keyword.Bluemix_notm}} regions where you can provision instances of {{site.data.keyword.appconfig_short}}, see the [{{site.data.keyword.appconfig_short}} About](https://cloud.ibm.com/catalog/services/app-configuration#about ) page in the {{site.data.keyword.Bluemix_notm}} catalog.
 
 ## Is {{site.data.keyword.appconfig_short}} a highly available service?
 {: #faq-ac-available}
 {: faq}
+
 Yes. {{site.data.keyword.appconfig_short}}is designed as a high availability service designed for enterprise workloads, and conforming to the [{{site.data.keyword.appconfig_short}} Service Description](https://www.ibm.com/support/customer/csol/terms/?id=i126-8986#detail-documentand) and the [{{site.data.keyword.Bluemix_notm}} Service Level Agreement]( https://cloud.ibm.com/docs/overview?topic=overview-slas) for availability. Within a single region, {{site.data.keyword.appconfig_short}} is deployed across a multi-zone cluster. 
 
 ## Is {{site.data.keyword.appconfig_short}} secure?

@@ -23,7 +23,6 @@ subcollection: Enhance security
 
 # Securing your data in {{site.data.keyword.en_short}}
 {: #en-mng-data}
-<!-- The title of your H1 should be Securing your data in _service-name_, where _service-name_ is the non-trademarked short version conref, but the trademarked version is used in the first occurrence in this topic. Include your service name as a search keyword at the top of your Markdown file. See the example keywords above. -->
 
 To ensure that you can securely manage your data when you use {{site.data.keyword.en_full}}, it is important to know exactly what data is stored and encrypted and how you can delete any stored data.   
 {: shortdesc}
@@ -51,7 +50,7 @@ https://test.cloud.ibm.com/docs/appid?topic=appid-mng-data -->
 
 The {{site.data.keyword.en_short}} data retention policy describes how long your data is stored after you delete the service. As per {{site.data.keyword.Bluemix_notm}} data retention policy you can [restore](/docs/account?topic=account-resource-reclamation&interface=cli#restore-resource-cli) a resource within 7 days after you delete it.
 
-#### Command to delete data
+### Command to delete data
 
 1. Log in to your {{site.data.keyword.Bluemix_notm}} account by using {{site.data.keyword.Bluemix_notm}} CLI form terminal.
 2. `ibmcloud resource reclamations` lists your deleted instance along with reclamation ID for it.  

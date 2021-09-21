@@ -29,6 +29,7 @@ This document lists the standard terms and their definitions that are used in th
 
 ## Source
 {: #en-source}
+
  {{site.data.keyword.en_short}} originate from sources. A source is a registered entity in an {{site.data.keyword.en_short}} service instance that publishes notifications. In the current release, sources are limited to those entities categorized as IBM Source.
 
 ### IBM Source
@@ -38,11 +39,13 @@ An IBM Source is a source in {{site.data.keyword.en_short}} where notifications 
 
 ## Topic
 {: #en-topics}
+
 A logical entity, which connects one or more sources to destinations, a topic logically groups multiple sources based on pre-defined filters, and targets notifications from such a group to multiple destinations.
 Topics help decouple sources and destinations. A source for a notification does not need to be aware of all the destinations that it will target to.
 
 ## Filter
 {: #en-filters}
+
 A filter is a conditional statement, which connects a source to a topic. Filters are written to route notifications of interest to a particular topic. Notifications passing the conditional statement of the filter continues through the {{site.data.keyword.en_short}} system and be delivered to all the destinations that are subscribed to the same topic.
 
    - More details on [JSONPath](https://jsonpath.com/) and [JSON with JSONPath](https://restfulapi.net/json-jsonpath/)
@@ -54,6 +57,7 @@ A filter is a conditional statement, which connects a source to a topic. Filters
 
 ## Destination
 {: #en-destinations}
+
 Destinations represent locations to which notifications are to be delivered. Destinations can be categorized as human or an app.
    - Examples of human destinations include SMS, email, Push Notifications, and Slack
    - Examples of Application or Service destinations include Webhooks, Event Streams(Kafka), Elastic Search
@@ -66,15 +70,18 @@ Destinations represent locations to which notifications are to be delivered. Des
 
 ## Subscriptions
 {: #en-subscriptions}  
+
 Destinations subscribe to topics. Multiple destinations can subscribe to a single topic.
 An email subscription is a list of all emails IDs, and an SMS subscription is a list of all phone numbers that a notification is routed to. A webhook subscription links a webhook destination to a topic.
 
 
 ## Notifications
 {: #en-notifications}
+
 Whenever an event occurs in a registered source, a notification is sent to the {{site.data.keyword.en_short}} service. Based on the filters or conditions defined on such a registered source, this incoming notification is targeted to one or several topics. The notification is then delivered to all destinations subscribed to these targeted topics. A notification sent to {{site.data.keyword.en_short}} must be of a pre-defined format, as defined here. (link)
 
 ## Event Category
 {: #en-categories}
+
 When a source is registered into {{site.data.keyword.en_short}}, one can additionally (and optimally) define an Event Category for the source, which identifies notifications from a particular source that might be of interest. Event Category hierarchy reads in the order, Event Category, Event Type, and Severity.
 The benefit of defining event categories is that, the {{site.data.keyword.en_short}} UI displays these categories in the <wintitle>topics </wintitle> page where filters are created. The customer can easily select common categories from such a drop-down, while advanced filters can be handwritten in JSONPath format.
