@@ -63,7 +63,7 @@ The following list of {{site.data.keyword.en_short}} data events are sent to {{s
 | `event-notifications.event_categories.create` |An event is generated when an event category is created for a source.|
 | `event-notifications.event_categories.list` | An event is generated when an event category list is retrieved for a source. |
 | `event-notifications.event_categories.update`|An event is generated when an event category is updated for a source.|
-| `event-notifications.event_categories.delete`|An event is generated when an event category is deleted for a source. |
+| `event-notifications.event_categories.delete`|An event is generated when event categories are deleted for a source. |
 
 {: caption="Table 1. Overview of {{site.data.keyword.en_short}} actions that generate {{site.data.keyword.at_full_notm}} events" caption-side="top"}
 
