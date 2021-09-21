@@ -27,13 +27,13 @@ completion-time: 10m
 - Each topic can have its own set of rules, which routes the incoming payload to the respective topic.
 
 
-## In the {{site.data.keyword.en_short}} console, click **topics**.
+## Select topics in the {{site.data.keyword.en_short}} console.
 {: #en-create-topic}
 {: step}
 
 ![Create a topic](images/en-topic1.png "Topic"){: caption="Figure 1. Create a topic" caption-side="bottom"}
 
-## Click Create, and enter the topic details:
+## Click on `Create`, and enter the topic details
 {: #en-topic-details}
 {: step}
 
@@ -57,7 +57,7 @@ You can create a topic with steps 1 and 2. Step 3 is for provisioning custom rul
 
 ![Add rules](images/en-topic3.png "Rules"){: caption="Figure 3. Add rules to topic" caption-side="bottom"}
 
-## To add rules to your topic, click **Add a condition**.
+## To finish adding rules to your topic, click on `Add a condition`.
 {: #en-topic-condition}
 {: step}
 
@@ -66,9 +66,9 @@ If you do not select any rules, a default rule gets added, which means all notif
 
 ![Add condition](images/en-topic4.png "Condition"){: caption="Figure 4. Add a condition" caption-side="bottom"}
 
-## Click Create in the topic wizard.
+## Click `Create` in the topic wizard.
 {: #en-topic-create}
 {: step}
 
-![Click Create to finish](images/en-topic5.png "Create"){: caption="Figure 4. Finish creating a topic" caption-side="bottom"}
+![Click Create to finish](images/en-topic5.png "Create"){: caption="Figure 5. Finish creating a topic" caption-side="bottom"}
 
