@@ -17,7 +17,7 @@ completion-time: 10m
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Create a {{site.data.keyword.en_short}} subscription
+# Create an {{site.data.keyword.en_short}} subscription
 {: #en-create-en-subscription}
 
 Destinations subscribe to topics. Multiple destinations can subscribe to a single topic. An email subscription is a list of all emails IDs, and an SMS subscription is a list of all phone numbers that a notification is routed to. A webhook subscription links a webhook destination to a topic.
@@ -30,7 +30,7 @@ Of these, email-ibm and email-sms are supported out of the box.
 {: #en-create-subscription}
 {: step}
 
-- Click subscriptions in the {{site.data.keyword.en_short}} console. 
+- Click subscriptions in the {{site.data.keyword.en_short}} console.
 
 ![Create a subscription](images/en-subscription1.png "Create a subscription"){: caption="Figure 1. Create a subscription" caption-side="bottom"}
 
@@ -47,7 +47,7 @@ Of these, email-ibm and email-sms are supported out of the box.
 - Destination type; select type under Destination.
 
 
-![Add subscription details](images/en-subscription2.png "Subscription details"){: caption="Figure 2. Add subscription details" caption-side="bottom"} 
+![Add subscription details](images/en-subscription2.png "Subscription details"){: caption="Figure 2. Add subscription details" caption-side="bottom"}
 
 ## Enable the subscription
 {: #en-subscription-finish}
@@ -56,5 +56,3 @@ Of these, email-ibm and email-sms are supported out of the box.
 - Click `Create` in the subscription wizard.
 
 ![Enable the subscription](images/en-subscription3.png "Finish adding a destination"){: caption="Figure 4. Add a destination" caption-side="bottom"}
-
-

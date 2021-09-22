@@ -55,7 +55,7 @@ Send events from supported {{site.data.keyword.Bluemix_notm}} Services to Webhoo
 The basic steps that get you started:
 
 1. [Create an {{site.data.keyword.en_short}} service instance](/docs/event-notifications?topic=event-notifications-en-create-en-instance)
-1. Create a topic
-1. Define rules for a topic
-1. Select a destination
-1. Create a subscription by associating a destination with the topic
+1. [Create a topic](/docs/event-notifications?topic=event-notifications-en-create-en-topic)
+1. [Define rules for a topic](/docs/event-notifications?topic=event-notifications-en-create-en-topic#en-topic-rules)
+1. [Select a destination](/docs/event-notifications?topic=event-notifications-en-create-en-destination)
+1. [Create a subscription by associating a destination with the topic](/docs/event-notifications?topic=event-notifications-en-create-en-subscription)
