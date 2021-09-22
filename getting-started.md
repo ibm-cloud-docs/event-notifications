@@ -58,4 +58,4 @@ The basic steps that get you started:
 1. [Create a topic](/docs/event-notifications?topic=event-notifications-en-create-en-topic)
 1. [Define rules for a topic](/docs/event-notifications?topic=event-notifications-en-create-en-topic#en-topic-rules)
 1. [Select a destination](/docs/event-notifications?topic=event-notifications-en-create-en-destination)
-1. [Create a subscription by associating a destination with the topic](/docs/event-notifications?topic=event-notifications-en-create-en-subscription)
+1. [Create a subscription by associating a destination with a topic](/docs/event-notifications?topic=event-notifications-en-create-en-subscription)
