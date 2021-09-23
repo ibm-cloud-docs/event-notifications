@@ -40,18 +40,18 @@ subcollection: mobilepush
 # Managing service access
 {: #service-access-management}
 
-With {{site.data.keyword.en_short}} and {{site.data.keyword.iamlong}}, (IAM) account owners can manage user access in your account.
+With {{site.data.keyword.en_short}} and {{site.data.keyword.iamlong}}, IAM account owners can manage user access in your account.
 {: shortdesc}
 
 As an account owner, you can set policies within your account to create different levels of access for different users. For example, certain users can have **Read only** access to one instance, but **Write** access to another. You can decide who is allowed to create, update, and delete instances of {{site.data.keyword.en_short}}.
 
-As the {{site.data.keyword.en_short}} service has adopted IAM, the App secret is not generated for new instances. You must use the [API keys instead](https://cloud.ibm.com/docs/account?topic=account-manapikey).
+{{site.data.keyword.en_short}} service has adopted IAM and App secret is not generated for new instances. You must use the [API keys instead](https://cloud.ibm.com/docs/account?topic=account-manapikey).
 {: note}
 
 ## User roles
 {: #roles}
 
-The scope of an access policy is based on a user's assigned role.
+The scope of an access policy is based on an user's assigned role.
 
 Policies enable access to be granted at different levels. Some of the options include:
 
@@ -60,7 +60,7 @@ Policies enable access to be granted at different levels. Some of the options in
 - Access to a specific resource within an instance
 - Access to all IAM-enabled services in your account
 
-Platform management roles enable users to perform tasks on service resources at the platform level. For example, roles can be assigned to determine who can create or delete IDs, create instances, and bind instances to apps. The following table details the actions as they correlate to platform management roles.
+Platform management roles enable users to perform tasks on service resources at the platform level. For example, roles can be assigned to determine who can create or delete IDs, create instances, and bind instances to apps. The following table classifies actions as they are assigned to platform management roles.
 
 | Platform role | Permissions | Example actions |
 |---------------|---------------|---------------|
@@ -74,12 +74,12 @@ The following table details actions that are mapped to service access roles. Ser
 
 | Service role  | Permissions | Example actions |
 |---------------|---------------|---------------|
-| Reader | View {{site.data.keyword.en_short}} instance data | View details of the service instance such as sources, rules, topics and channels |
-| Writer | View and edit an {{site.data.keyword.en_short}} instance | <ul><li>Perform all Reader actions</li> <li>Edit the service instance data, such as sources, rules, topics and channels</li></ul> |
-| Channel Editor| View, create and delete {{site.data.keyword.en_short}} subscriptions| View, create, update, and delete {{site.data.keyword.en_short}} subscriptions |
-| Manager | View, edit and delete data in an {{site.data.keyword.en_short}} instance |<ul><li>Perform all Writer actions</li> <li> Delete service instance data such as sources, rules, topics, channels</li></ul>|
+| Reader | View {{site.data.keyword.en_short}} instance data | View details of the service instance such as sources, rules, topics, and channels |
+| Writer | View and edit an {{site.data.keyword.en_short}} instance | <ul><li>Perform all Reader actions</li> <li>Edit the service instance data, such as sources, rules, topics, and channels</li></ul> |
+| Channel Editor| View, create, and delete {{site.data.keyword.en_short}} subscriptions| View, create, update, and delete {{site.data.keyword.en_short}} subscriptions |
+| Manager | View, edit, and delete data in an {{site.data.keyword.en_short}} instance |<ul><li>Perform all Writer actions</li> <li> Delete service instance data such as sources, rules, topics, channels</li></ul>|
 | Service Configuration Reader| Read services configuration for Governance management | View services configurations |
-| Event Source Manager | Source integration with{{site.data.keyword.en_short}} using service to service authorization | <ul><li>Perform service to service registration, of source</li><li>View, edit and delete sources and events</li><li>Send notifications</li></ul> |
+| Event Source Manager | Source integration with{{site.data.keyword.en_short}} using service to service authorization | <ul><li>Perform service to service registration, of source</li><li>View, edit, and delete sources and events</li><li>Send notifications</li></ul> |
 | {{site.data.keyword.en_short}} Publisher | Create notification and view notifications count | Send notifications and view notifications count |
 {: caption="Table 2. Actions mapping to service access roles" caption-side="top"}
 
@@ -91,7 +91,7 @@ For more information about assigning user roles in the UI, see [Managing IAM acc
 Every user who accesses the {{site.data.keyword.en_short}} service in your account must be assigned an access policy with an IAM user role defined. That policy determines what actions the user can perform within the context of the service or instance you select.
 {: shortdesc}
 
-The actions are customized and defined by the {{site.data.keyword.Bluemix_notm}} service as operations that are allowed to be performed in the service. The actions are then mapped to IAM user roles. Some of the actions taken you can track with the {{site.data.keyword.cloudaccesstrailshort}} service. In the following table, the actions and required permissions for {{site.data.keyword.en_short}} are mapped.
+The actions are customized and defined by the {{site.data.keyword.Bluemix_notm}} service as operations that are permitted in the service. The actions are then mapped to IAM user roles. Some of the actions taken you can track with the {{site.data.keyword.cloudaccesstrailshort}} service. In the following table, the actions and required permissions for {{site.data.keyword.en_short}} are mapped.
 
 | Service action | Display name| Role| Description|
 |----------------|-------------|------------------|-----------------|

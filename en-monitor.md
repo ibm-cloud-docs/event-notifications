@@ -121,7 +121,7 @@ Currently, {{site.data.keyword.mon_full_notm}} integration is available for {{si
 | London| London|
 | Sydney| Sydney|
 
-Before you can start using {{site.data.keyword.en_short}} monitoring metrics, you must first opt in and [enable platform metrics](https://cloud.ibm.com/docs/monitoring?topic=monitoring-platform_metrics_enabling)
+Before you can start with {{site.data.keyword.en_short}} monitoring metrics, you must first opt in and [enable platform metrics](https://cloud.ibm.com/docs/monitoring?topic=monitoring-platform_metrics_enabling)
 {: note .note}
 
 You can configure only one instance of the {{site.data.keyword.mon_full_notm}} service per region to collect platform metrics.
@@ -139,7 +139,7 @@ You can configure only one instance of the {{site.data.keyword.mon_full_notm}} s
  1. Launch the [{{site.data.keyword.mon_full_notm}} web UI](https://cloud.ibm.com/docs/monitoring?topic=monitoring-launch) from the <wintitle>Observability</wintitle> page
  2. Click DASHBOARDS
  3. In the Default Dashboards section, expand IBM
- 4. Choose the {{site.data.keyword.en_short}} dashboard from the list
+ 4. Choose the {{site.data.keyword.en_short}} dashboard from the list.
  Access your deployment's monitoring dashboard from {{site.data.keyword.mon_full_notm}}, it's in the sidebar, under IBM.
  Next, change the scope or make a copy of the default dashboard to monitor an {{site.data.keyword.en_short}} service instance.
 
@@ -171,7 +171,7 @@ Total number of notifications that are ingested. Ingested notifications are even
 ### ibm_eventnotifications_sms_total
 {: ibm_eventnotifications_sms_total}
 
-Total number of SMS units sent. That is, the number for which the user will be charged.
+Total number of SMS units sent. That is, the number for which the user is charged.
 
 | Metadata   | Description |
 |-------------|-------------|

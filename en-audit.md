@@ -34,7 +34,7 @@ As a security officer, auditor, or manager, you can use the {{site.data.keyword.
 ## List of events
 {: #en-events}
 
-The following list of {{site.data.keyword.en_short}} data events are sent to {{site.data.keyword.at_full_notm}}.
+The following list of {{site.data.keyword.en_short}} data events is sent to {{site.data.keyword.at_full_notm}}.
 
 
 | Action             | Description      |
@@ -43,7 +43,7 @@ The following list of {{site.data.keyword.en_short}} data events are sent to {{s
 | `event-notifications.topics.create` | An event is generated when a topic is created. |
 | `event-notifications.topics.list` | An event is generated when you retrieve a list of topics.|
 | `event-notifications.topics.update` | An event is generated when you update a topic.|
-| `event-notifications.topics.delete` | An event is generated  when you delete a topic.|
+| `event-notifications.topics.delete` | An event is generated when you delete a topic.|
 | `event-notifications.destinations.read` | An event is generated when you retrieve a destination.|
 | `event-notifications.destinations.create` | An event is generated when you create a destination.|
 | `event-notifications.destinations.list` | An event is generated when you retrieve the list of destinations.|
@@ -52,7 +52,7 @@ The following list of {{site.data.keyword.en_short}} data events are sent to {{s
 | `event-notifications.sources.read` |An event is generated when you retrieve a source. |
 | `event-notifications.sources.create`|An event is generated when you create a source.|
 | `event-notifications.sources.list`| An event is generated when you retrieve the list of sources. |
-| `event-notifications.sources.update` |An event is generated  when you update a source.|
+| `event-notifications.sources.update` |An event is generated when you update a source.|
 | `event-notifications.sources.delete` | An event is generated when you delete a source. |
 | `event-notifications.subscriptions.read` | An event is generated when you retrieve a subscription. |
 | `event-notifications.subscriptions.create` | An event is generated when you create a subscription.|

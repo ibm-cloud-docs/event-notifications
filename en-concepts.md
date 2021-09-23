@@ -41,7 +41,7 @@ An IBM Source is a source in {{site.data.keyword.en_short}} where notifications 
 {: #en-topics}
 
 A logical entity, which connects one or more sources to destinations, a topic logically groups multiple sources based on pre-defined filters, and targets notifications from such a group to multiple destinations.
-Topics help decouple sources and destinations. A source for a notification does not need to be aware of all the destinations that it will target to.
+Topics help decouple sources and destinations. A source for a notification does not need to be aware of all the destinations that it targets to.
 
 ## Filter
 {: #en-filters}
@@ -65,23 +65,23 @@ Destinations represent locations to which notifications are to be delivered. Des
 {{site.data.keyword.en_short}} supports the following destinations:
    - Email: Email is a pre-defined destination, with SendGrid as the email provider. All emails from {{site.data.keyword.en_short}} service are sent from a fixed IBM email-id.
    - SMS: SMS is a pre-defined destination. An IBM-owned number and Twilio the service platform is used to support text messaging.
-   - Webhook: Customers can use webhook destinations to process notifications from the {{site.data.keyword.en_short}} service. Customers can also write their own custom applications to receive notifications from {{site.data.keyword.en_short}} service. Such an application is defined as webhooks destinations.
-   Webhook signing: {{site.data.keyword.en_short}} provides an option for users to enable signing of the notification payload. This option enables the webhook to validate that the incoming notification is from a trusted source - that is, {{site.data.keyword.en_short}} service.
+   - Webhooks: Customers can use webhook destinations to process notifications from the {{site.data.keyword.en_short}} service. Customers can also write their own custom applications to receive notifications from {{site.data.keyword.en_short}} service. Such an application is defined as a webhook destination.
+   Webhook signing: {{site.data.keyword.en_short}} provides an option for users to authenticate the notification payload. This option enables the webhook to validate that the incoming notification is from a trusted source - that is, {{site.data.keyword.en_short}} service.
 
-## Subscriptions
-{: #en-subscriptions}  
+## Subscription
+{: #en-subscriptions}
 
 Destinations subscribe to topics. Multiple destinations can subscribe to a single topic.
 An email subscription is a list of all emails IDs, and an SMS subscription is a list of all phone numbers that a notification is routed to. A webhook subscription links a webhook destination to a topic.
 
 
-## Notifications
+## Notification
 {: #en-notifications}
 
-Whenever an event occurs in a registered source, a notification is sent to the {{site.data.keyword.en_short}} service. Based on the filters or conditions defined on such a registered source, this incoming notification is targeted to one or several topics. The notification is then delivered to all destinations subscribed to these targeted topics. A notification sent to {{site.data.keyword.en_short}} must be of a pre-defined format, as defined here. (link)
+Whenever an event occurs in a registered source, a notification is sent to the {{site.data.keyword.en_short}} service. Based on the filters or conditions that are defined on such a registered source, this incoming notification is targeted to one or several topics. The notification is then delivered to all destinations subscribed to these targeted topics. A notification sent to {{site.data.keyword.en_short}} must be of a pre-defined format, as defined here. (link)
 
 ## Event Category
 {: #en-categories}
 
 When a source is registered into {{site.data.keyword.en_short}}, one can additionally (and optimally) define an Event Category for the source, which identifies notifications from a particular source that might be of interest. Event Category hierarchy reads in the order, Event Category, Event Type, and Severity.
-The benefit of defining event categories is that, the {{site.data.keyword.en_short}} UI displays these categories in the <wintitle>topics </wintitle> page where filters are created. The customer can easily select common categories from such a drop-down, while advanced filters can be handwritten in JSONPath format.
+The benefit of defining event categories is that the {{site.data.keyword.en_short}} UI displays these categories in the <wintitle>topics </wintitle> page where filters are created. The customer can easily select common categories from such a dropdown, while advanced filters can be handwritten in JSONPath format.

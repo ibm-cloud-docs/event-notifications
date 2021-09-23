@@ -22,10 +22,8 @@ subcollection: event-notifications
 # Getting help and support
 {: #en-getting-help-and-support}
 
-{{site.data.keyword.en_full}} provides troubleshooting information to isolate and resolve problems. {{site.data.keyword.en_short}} also provides several avenues for troubleshooting problems and getting support. If you are unable to resolve your issue with the troubleshooting guide, open an IBM support case.
+{{site.data.keyword.en_full}} provides troubleshooting information to isolate and resolve problems, and also offers  support. If you are unable to resolve your issue with the troubleshooting guide, open an IBM support case.
 {: shortdesc}
-
-When you have problems while you are working with {{site.data.keyword.en_short}}, consider these options for getting help.
 
 By default, account users don't have access to create, update, search, or view cases. The account owner must provide users access by assigning an {{site.data.keyword.iamlong}} (IAM) access policy. For more information, see [Assigning user access for working with support cases](/docs/get-support?topic=get-support-access#access){: external}.
 {: tip}
