@@ -23,7 +23,7 @@ completion-time: 10m
 Destinations subscribe to topics. Multiple destinations can subscribe to a single topic. An email subscription is a list of all emails IDs, and an SMS subscription is a list of all phone numbers that a notification is routed to. A webhook subscription links a webhook destination to a topic.
 {: shortdesc}
 
-Of these, email-ibm and email-sms are supported out of the box.
+Of these, SMTP_IBM and SMS_IBM are supported out of the box.
 
 
 ## Create a subscription

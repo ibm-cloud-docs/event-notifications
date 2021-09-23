@@ -22,9 +22,9 @@ completion-time: 10m
 
 Destinations are custom protocols, which are either services or user reachable entities.
 Presently, {{site.data.keyword.en_short}} supports three destination types:
-- email-ibm
-- email-sms
-- webhook
+- SMTP_IBM
+- SMS_IBM
+- Webhook
 {: shortdesc}
 
 Of these, email-ibm and email-sms are supported out of the box.
