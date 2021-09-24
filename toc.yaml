@@ -75,4 +75,5 @@ toc:
       - topicgroup:
           label: Troubleshooting
           topics:
+          - en-ts-per-de.md  
       - en-release-notes.md
