@@ -56,8 +56,9 @@ If you are using static events (event type, event subtype and severity)
 {: codeblock}
 
 - Event type, event subtype and severity are termed as event conditions. Additionally, user can provide advanced conditions.
+
 Remember, if both event conditions and advanced conditions are provided, then both condition types need to be satisfied for a notification to be routed to a topic.
-{: note}
+{:note: .note}
 
 
 
