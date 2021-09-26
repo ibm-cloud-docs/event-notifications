@@ -75,5 +75,9 @@ toc:
       - topicgroup:
           label: Troubleshooting
           topics:
-          - en-ts-per-de.md  
+          - en-ts-per-de.md
+          - en-ts-per-de2.md
+          - en-ts-email.md
+          - en-ts-rules.md
+          - en-ts-notification.md 
       - en-release-notes.md
