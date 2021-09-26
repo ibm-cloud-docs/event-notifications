@@ -24,7 +24,7 @@ content-type: troubleshoot
 {: troubleshoot}
 {: support} 
 
-Denied permission while integrating an {site.data.keyword.en_short}} service instance with an IBM Managed Service.
+Denied permission while integrating an {{site.data.keyword.en_short}} service instance with an IBM Managed Service.
 {: shortdesc}
 
 
