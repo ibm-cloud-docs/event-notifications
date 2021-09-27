@@ -33,11 +33,11 @@ You see a message, 'No sources available to configure conditions'.
 {{site.data.keyword.en_short}} service is not integrated with IBM Managed Service (for example: {{site.data.keyword.compliance_short}})
 {: tsCauses}
 
+
 Provide service to service authorization between IBM Managed service and {{site.data.keyword.en_short}}.
 Integrate {{site.data.keyword.en_short}} service with IBM Managed service, which registers IBM Managed service (for example, {{site.data.keyword.compliance_short}}) as source with {{site.data.keyword.en_short}} service instance.
-
-Once the source is registered with {{site.data.keyword.en_short}} service, you are all set to add conditions (rules) to the topic.
 {: tsResolve}
 
 ![Add conditions](images/en-ts-rules2.png "Add conditions for the topic"){: caption="Figure 2.  Add conditions for the topic)" caption-side="bottom"}
 
+Once the source is registered with {{site.data.keyword.en_short}} service, you are all set to add conditions (rules) to the topic.
