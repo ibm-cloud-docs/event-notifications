@@ -17,7 +17,7 @@ content-type: troubleshoot
 
 
 # Why is notification absent 
-{: #troubleshoot-rules-topic}
+{: #troubleshoot-notification-topic}
 {: troubleshoot}
 {: support}
 
