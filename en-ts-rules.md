@@ -39,5 +39,5 @@ Integrate {{site.data.keyword.en_short}} service with IBM Managed service, which
 Once the source is registered with {{site.data.keyword.en_short}} service, you are all set to add conditions (rules) to the topic.
 {: tsResolve}
 
-![Add conditions](images/en-ts-rules2.png " Add conditions for the topic){: caption="Figure 2.  Add conditions for the topic)" caption-side="bottom"}
+![Add conditions](images/en-ts-rules2.png "Add conditions for the topic"){: caption="Figure 2.  Add conditions for the topic)" caption-side="bottom"}
 
