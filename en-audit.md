@@ -59,11 +59,7 @@ The following list of {{site.data.keyword.en_short}} data events is sent to {{si
 | `event-notifications.subscriptions.list` | An event is generated when you retrieved the list of subscriptions.|
 | `event-notifications.subscriptions.update` | An event is generated when you update a subscription.|
 | `event-notifications.subscriptions.delete` | An event is generated when you delete a subscription.|
-| `event-notifications.event_categories.read`| An event is generated when an event category is retrieved for a source.|
-| `event-notifications.event_categories.create` |An event is generated when an event category is created for a source.|
-| `event-notifications.event_categories.list` | An event is generated when an event category list is retrieved for a source. |
-| `event-notifications.event_categories.update`|An event is generated when an event category is updated for a source.|
-| `event-notifications.event_categories.delete`|An event is generated when event categories are deleted for a source. |
+
 
 {: caption="Table 1. Overview of {{site.data.keyword.en_short}} actions that generate {{site.data.keyword.at_full_notm}} events" caption-side="top"}
 
