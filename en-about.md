@@ -27,6 +27,8 @@ subcollection: event-notifications
 
 You can also create subscriptions to associate destinations to topics and write rules to filter specific notifications to a topic.
 
+![Event notifications schema](images/en-schema.png "Event notifications schema"){: caption="Figure 1. {{site.data.keyword.en_short}} schema" caption-side="bottom"}
+
 ## Features
 {: #en-features}
 

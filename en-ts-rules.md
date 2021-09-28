@@ -30,7 +30,7 @@ You see a message, 'No sources available to configure conditions'.
 
 ![Unable to create rules](images/en-ts-rules.png "Unable to add conditions for the topic"){: caption="Figure 1. Unable to add conditions for the topic" caption-side="bottom"}
 
-- {{site.data.keyword.en_short}} service is not integrated with IBM Managed Service (for example: {{site.data.keyword.compliance_short}})
+- {{site.data.keyword.en_short}} service is not integrated with IBM Managed Service (for example: {{site.data.keyword.compliance_short}}).
 {: tsCauses}
 
 - {{site.data.keyword.en_short}} service is integrated with IBM Managed service but source service is not added and authorized.
