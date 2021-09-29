@@ -25,7 +25,7 @@ subcollection: event-notifications
  {{site.data.keyword.en_full}} is an event notification routing service that notifies you to critical events that occur in your {{site.data.keyword.Bluemix_notm}} account or triggers automated actions by using webhooks. You can filter and route event notifications from {{site.data.keyword.Bluemix_notm}} services like Monitoring, Security and Compliance Center, and Secrets Manager to email, SMS, and webhooks.
 {: shortdesc}
 
-        ![Event notifications schema](images/en-schema.png "Event notifications schema"){: caption="Figure 1. {{site.data.keyword.en_short}} schema" caption-side="bottom" }
+![Event notifications schema](images/en-schema.png "Event notifications schema"){: caption="Figure 1. {{site.data.keyword.en_short}} schema" caption-side="bottom" }
 
 ## Features
 {: #en-features}
