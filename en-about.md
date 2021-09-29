@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-07-23"
+lastupdated: "2021-11-29"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -19,13 +19,11 @@ subcollection: event-notifications
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# What is Event Notifications?
-{: #ac-about}
+# What is {{site.data.keyword.en_short}}? 
+{: #en-about}
 
- {{site.data.keyword.en_full}} is a centralized alerts management service that notifies and alerts you to critical events that occur in your {{site.data.keyword.Bluemix_notm}} account or triggers automated actions by using webhooks. You can filter and route event notifications from {{site.data.keyword.Bluemix_notm}} services like Monitoring, Security and Compliance Center, and Secrets Manager to email, SMS, and webhooks.
+ {{site.data.keyword.en_full}} is an event notification routing service that notifies you to critical events that occur in your {{site.data.keyword.Bluemix_notm}} account or triggers automated actions by using webhooks. You can filter and route event notifications from {{site.data.keyword.Bluemix_notm}} services like Monitoring, Security and Compliance Center, and Secrets Manager to email, SMS, and webhooks.
 {: shortdesc}
-
-You can also create subscriptions to associate destinations to topics and write rules to filter specific notifications to a topic.
 
 ![Event notifications schema](images/en-schema.png "Event notifications schema"){: caption="Figure 1. {{site.data.keyword.en_short}} schema" caption-side="bottom"}
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-08-18"
+lastupdated: "2021-11-29"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -20,68 +20,108 @@ subcollection: event-notifications
 {:tip: .tip}
 
 
-#  {{site.data.keyword.en_short}} terms
+# {{site.data.keyword.en_short}} terms and use cases
 {: #en-overview}
 
-This document lists the standard terms and their definitions that are used in the {{site.data.keyword.en_short}} services.
 
-<!-- ![Overview](images/en-overview.png "Overview diagram"){: caption="Figure 1.{{site.data.keyword.en_short}} overview" caption-side="bottom"} -->
 
-## Source
+## Event
+{: #en-event}
+An occurrence of something of interest that is associated with {{site.data.keyword.Bluemix_notm}} platform or services and apps that run on it.  
+
+## Event notification
+{: #en-eventn}
+A digitized message that is triggered when an event has occurred. Event notifications come in to the {{site.data.keyword.en_short}} service from event sources. Sometimes "event notification" is shortened to "event" or "notification" in the context of the {{site.data.keyword.en_short}} service.
+
+## Event source
 {: #en-source}
 
- {{site.data.keyword.en_short}} originate from sources. A source is a registered entity in an {{site.data.keyword.en_short}} service instance that publishes notifications. In the current release, sources are limited to those entities categorized as IBM Source.
-
-### IBM Source
-An IBM Source is a source in {{site.data.keyword.en_short}} where notifications are published from an {{site.data.keyword.Bluemix_notm}} service. Several services on {{site.data.keyword.Bluemix_notm}} are integrated to sent notifications to {{site.data.keyword.en_short}}. Examples include {{site.data.keyword.compliance_short}}, {{site.data.keyword.prf_hubshort}}, and {{site.data.keyword.secrets-manager_short}}.  
-
-**Service to Service Authorization** is used to enable an IBM Service to publish notifications to the {{site.data.keyword.en_short}} service. A customer who is interested in notifications from an IBM service must authorize such a source service to publish to an instance of the {{site.data.keyword.en_short}} service.      
-
-## Topic
-{: #en-topics}
-
-A logical entity, which connects one or more sources to destinations, a topic logically groups multiple sources based on pre-defined filters, and targets notifications from such a group to multiple destinations.
-Topics help decouple sources and destinations. A source for a notification does not need to be aware of all the destinations that it targets to.
+A service or application on {{site.data.keyword.Bluemix_notm}} that emits event notifications and publishes them to a topic within the {{site.data.keyword.en_short}} service. A source is a registered entity in an {{site.data.keyword.en_short}} service instance. Several services on {{site.data.keyword.Bluemix_notm}} are integrated to send notifications to {{site.data.keyword.en_short}}.
+Examples include {{site.data.keyword.compliance_long}}, IBM Monitoring, and {{site.data.keyword.secrets-manager_full_notm}}. A source can publish to multiple topics. In other contexts sources can also be identified as producers or publishers.
 
 ## Filter
 {: #en-filters}
 
-A filter is a conditional statement, which connects a source to a topic. Filters are written to route notifications of interest to a particular topic. Notifications passing the conditional statement of the filter continues through the {{site.data.keyword.en_short}} system and be delivered to all the destinations that are subscribed to the same topic.
+A mechanism for selectively passing event notifications from a source into a topic.  A topic has an independent filter for each source connected to it. 
 
-   - More details on [JSONPath](https://jsonpath.com/) and [JSON with JSONPath](https://restfulapi.net/json-jsonpath/)
+### Condition
+{: #en-conditions}
 
-   Multiple sources can route to a topic by defining a filter for each such source - topic connection.
-   A source can also route to multiple topics.
+One of many criteria used for filtering. {{site.data.keyword.en_short}} whose attributes match a condition are passed through to a topic. {{site.data.keyword.en_short}} whose attributes do not match a condition are dropped.
 
+## Ingested event notification
+{: #en-ingested}
 
+- An event notification that is evaluated by a filter.  Ingested events is a primary billing metric. The price for ingested events is the same for all sources. If no filter is defined for a given source, none of the events from that source are ingested. 
+
+- If a filter is defined for a given source but no event notifications are passed through, the number of notifications which bounced are still considered "ingested" because they were analyzed by a filter. 
+
+## Topic
+{: #en-topics}
+
+- A landing place for filtered events. Topics hold a set of incoming event notifications of interest.  Each source is connected to a topic through a user-defined filter. Notifications that pass into a topic are pushed to all subscribed destinations. A topic can connect to multiple sources. 
+
+-  Event notifications that end up in a topic are routed to destinations. A topic can be connected to multiple sources. Although topics are innately coupled to sources (via filters), they are not innately coupled to destinations. That coupling happens through subscriptions.
 
 ## Destination
 {: #en-destinations}
 
-Destinations represent locations to which notifications are to be delivered. Destinations can be categorized as human or an app.
-   - Examples of human destinations include SMS, email, Push Notifications, and Slack
-   - Examples of Application or Service destinations include Webhooks, Event Streams(Kafka), Elastic Search
+A delivery target for event notifications.  In other contexts, destinations may be known as channels, sinks, consumers, or subscribers.
 
-{{site.data.keyword.en_short}} supports the following destinations:
-   - Email: Email is a pre-defined destination, with SendGrid as the email provider. All emails from {{site.data.keyword.en_short}} service are sent from a fixed IBM email-id.
-   - SMS: SMS is a pre-defined destination. An IBM-owned number and Twilio the service platform is used to support text messaging.
-   - Webhooks: Customers can use webhook destinations to process notifications from the {{site.data.keyword.en_short}} service. Customers can also write their own custom applications to receive notifications from {{site.data.keyword.en_short}} service. Such an application is defined as a webhook destination.
-   Webhook signing: {{site.data.keyword.en_short}} provides an option for users to authenticate the notification payload. This option enables the webhook to validate that the incoming notification is from a trusted source - that is, {{site.data.keyword.en_short}} service.
+   - Human destination: A device, server, or application presents notifications for human consumption.  Examples of human destinations are email servers, SMS text providers, and push notification services. 
+
+   Specific email addresses, phone numbers, and device IDs may be part of a subscription to a destination, but they are not part of the destination itself.
+   {:note: .note}
+   - Service destinations: A cloud service or an application where notifications are consumed programmatically. A webhook to a backend microservice is an example of a service destination.
+
+### Service-to-service 
+{: #en-destinations-s2s}
+
+A way to describe a notification that travels from a cloud service to a service destination. In other contexts, service-to-service may be known as app-to-app.
+
+### Service-to-human
+{: #en-destinations-s2h}
+
+A way to describe a notification that travels from a cloud service to a human destination.  In other contexts, service-to-human may be known as app-to-person.
 
 ## Subscription
 {: #en-subscriptions}
 
-Destinations subscribe to topics. Multiple destinations can subscribe to a single topic.
-An email subscription is a list of all emails IDs, and an SMS subscription is a list of all phone numbers that a notification is routed to. A webhook subscription links a webhook destination to a topic.
+An association of one topic to one destination.  If a destination requires additional information to operate correctly (e.g. email addresses for an email destination), then that information is included in the subscription.
 
+## Subscriber
+{: #en-subscriber}
 
-## Notification
-{: #en-notifications}
+An entity that is targeted by a subscription. For webhooks, the webhook host is the subscriber. For human destinations, email addresses and phone numbers (or the people who own them) are subscribers.
 
-Whenever an event occurs in a registered source, a notification is sent to the {{site.data.keyword.en_short}} service. Based on the filters or conditions that are defined on such a registered source, this incoming notification is targeted to one or several topics. The notification is then delivered to all destinations subscribed to these targeted topics. A notification sent to {{site.data.keyword.en_short}} must be of a pre-defined format, as defined here. (link)
+One subscription can only have one destination, but it may have many subscribers within that destination. 
+{:note: .note}
 
-## Event Category
-{: #en-categories}
+## Outbound digital message
+{: #en-outbound}
 
-When a source is registered into {{site.data.keyword.en_short}}, one can additionally (and optimally) define an Event Category for the source, which identifies notifications from a particular source that might be of interest. Event Category hierarchy reads in the order, Event Category, Event Type, and Severity.
-The benefit of defining event categories is that the {{site.data.keyword.en_short}} UI displays these categories in the <wintitle>topics </wintitle> page where filters are created. The customer can easily select common categories from such a dropdown, while advanced filters can be handwritten in JSONPath format.
+An event notification send from the Event Notifications service to a subscriber. Outbound digital messages is a primary billing metric for the {{site.data.keyword.en_short}} service. The price for outbound digital messages varies by destination (e.g. outbound digital messages to SMS are priced differently than outbound digital messages to email).In most cases a dispatch (attempt to deliver) is considered an outbound digital message, regardless of whether or not the delivery was successfully.
+
+## Digital message origin
+{: #en-outbound-origin}
+
+The originating phone number or origin ID for a text message, and the originating domain or IP address for email.  In most countries the sender is obligated by law to be transparent about the origin of a digital message. If you select the IBM SMS Service or IBM Email Service as a destination for your subscriptions, the text messages the end user will receive will have an origin owned by IBM.   
+
+Abide by [{{site.data.keyword.en_short}} digital messaging policies](TODO link) to protect the reputation of IBM origins with downstream SMS and email providers.
+{:important: .important}
+
+## SMS message
+{: #en-sms}
+
+A text message in **Simple Messaging Service** format.
+
+### SMS message segment
+{: #en-sms-segemnt}
+
+A group of 160 characters within an SMS text message.  A single message may contain many segments. Each message segment counts as one outbound digital message for billing purposes.
+
+### SMS unit
+{: #en-sms-unit}
+
+A pricing unit for SMS text messages.
+
