@@ -70,8 +70,8 @@ A delivery target for event notifications.  In other contexts, destinations may
 
 - Human destination: A device, server, or application presents notifications for human consumption.  Examples of human destinations are email servers, SMS text providers, and push notification services. 
 
-Specific email addresses, phone numbers, and device IDs may be part of a subscription to a destination, but they are not part of the destination itself.
-{:note: .note}
+   Specific email addresses, phone numbers, and device IDs may be part of a subscription to a destination, but they are not part of the destination itself.
+   {:note: .note}
 - Service destinations: A cloud service or an application where notifications are consumed programmatically. A webhook to a backend microservice is an example of a service destination.
 
 ### Service-to-service 
