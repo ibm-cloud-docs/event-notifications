@@ -68,11 +68,11 @@ One of many criteria used for filtering. {{site.data.keyword.en_short}} whose a
 
 A delivery target for event notifications.  In other contexts, destinations may be known as channels, sinks, consumers, or subscribers.
 
-   - Human destination: A device, server, or application presents notifications for human consumption.  Examples of human destinations are email servers, SMS text providers, and push notification services. 
+  - Human destination: A device, server, or application presents notifications for human consumption.  Examples of human destinations are email servers, SMS text providers, and push notification services. 
 
    Specific email addresses, phone numbers, and device IDs may be part of a subscription to a destination, but they are not part of the destination itself.
    {:note: .note}
-   - Service destinations: A cloud service or an application where notifications are consumed programmatically. A webhook to a backend microservice is an example of a service destination.
+  - Service destinations: A cloud service or an application where notifications are consumed programmatically. A webhook to a backend microservice is an example of a service destination.
 
 ### Service-to-service 
 {: #en-destinations-s2s}
