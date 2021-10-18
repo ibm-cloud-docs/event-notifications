@@ -80,7 +80,7 @@ Each log record has:
 
 | Log sample    |  SourceId  | Verbatim|
 |---------------|------------|-------------|
-| New incoming notification| | c6fd66fd-c75b-4bc4-87a1--5aa917435173:api|  indicates that a notification was triggered| 
+| New incoming notification| c6fd66fd-c75b-4bc4-87a1--5aa917435173:api| Indicates that a notification was triggered| 
 {: caption="Table 1. Types of logs" caption-side="top"}
 {: #en-logs-table-1}
 {: tab-title="Incoming notifications"}
@@ -110,7 +110,7 @@ Each log record has:
 
 | Log sample   | SourceId | NotificationId |  Verbatim| Resolution | Helpdocs|
 |--------------|----------|----------------|--------------|---------------|------------|
-| SMS notification status | <Source_CRN_HERE> | <NOTIFICATION_ID>| Successfully sent SMS to 8 out of 10 phone numbers. Each message was segmented into 3 parts|   |   |
+| SMS notification status | <Source_CRN_HERE> | <NOTIFICATION_ID>| Successfully sent SMS to 8 out of 10 phone numbers. Each message was segmented into 3 parts| N/A  |  N/A |
 | SMS failed status | <Source_CRN_HERE> | <NOTIFICATION_ID>| Failed to deliver to the following phone numbers: +91946******, +91976*****| Verify the phone numbers provided in the subscription are valid and from supported countries |  Link to our docs section   |
 {: caption="Table 1. Types of logs " caption-side="top"}
 {: #en-logs-table-2}
@@ -121,8 +121,7 @@ Each log record has:
 
 | Log sample   | SourceId | NotificationId |  Verbatim| Resolution | Helpdocs|
 |--------------|----------|----------------|----------|------------| ------- |
-| Webhook notification status (warning) | <Source_CRN_HERE> | <NOTIFICATION_ID>|Failed to send the notification to webhook with the status code : 400 and response : 400 Bad Request https://webhook.site/dba0967b-0115-45d0-845c-e226bdf19555 | Please check the configured URL for the webhook as well as the headers provided."
-documentURL: "Link to our docs section  |  Link to our docs section  |
+| Webhook notification status (warning) | <Source_CRN_HERE> | <NOTIFICATION_ID>|Failed to send the notification to webhook with the status code : 400 and response : 400 Bad Request https://webhook.site/dba0967b-0115-45d0-845c-e226bdf19555 | Please check the configured URL for the webhook as well as the headers provided|  Link to our docs section  |
 | Webhook notification status | <Source_CRN_HERE> | <NOTIFICATION_ID>| Successfully sent the notification to the Webhook | N/A |  N/A  |
 {: caption="Table 1. Types of logs " caption-side="top"}
 {: #en-logs-table-2}
