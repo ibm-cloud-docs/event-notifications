@@ -201,9 +201,9 @@ A string in the following format, Destination name ({Destination_id}
 | Metadata   | Description |
 |-------------|-------------|
 | `Metric Name` | `ibm_eventnotifications_destination` |
-| `Metric Type` | `gauge`|
+| `Metric Type` | `tag`|
 | `Value Type` | `none`|
-| `Segment By` | `ibm_scope`, `ibm_ctype`, `ibm_location`,  `ibm_service_name`, `ibm_service_instance`, `ibm_eventnotifications_destination`, `ibm_eventnotifications_source`, `ibm_eventnotifications_type`,  |
+
 
 ### ibm_eventnotifications_source
 {: ibm_eventnotifications_source}
@@ -213,9 +213,9 @@ A string in the following format, Destination name ({Destination_id}
 | Metadata   | Description |
 |-------------|-------------|
 | `Metric Name` | `ibm_eventnotifications_source` |
-| `Metric Type` | `gauge`|
+| `Metric Type` | `tag`|
 | `Value Type` | `none`|
-| `Segment By` | `ibm_scope`, `ibm_ctype`, `ibm_location`,  `ibm_service_name`, `ibm_service_instance`, `ibm_eventnotifications_destination`, `ibm_eventnotifications_source`, `ibm_eventnotifications_type`,  |
+
 
 ### ibm_eventnotifications_type
 {: ibm_eventnotifications_type}
@@ -224,8 +224,8 @@ Can have values like email/sms/webhook
 
 | Metadata   | Description |
 |-------------|-------------|
-| `Metric Name` | `ibm_eventnotifications_type |
-| `Metric Type` | `gauge`|
+| `Metric Name` | `ibm_eventnotifications_type` |
+| `Metric Type` | `tag`|
 | `Value Type` | `none`|
-| `Segment By` | `ibm_scope`, `ibm_ctype`, `ibm_location`,  `ibm_service_name`, `ibm_service_instance`, `ibm_eventnotifications_destination`, `ibm_eventnotifications_source`, `ibm_eventnotifications_type`,  |
+
 
