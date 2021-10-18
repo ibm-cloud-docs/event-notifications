@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-09-15"
+lastupdated: "2021-10-18"
 
 keywords: event-notification, event notification, high availability, ha, monitoring, metrics, monitor apps
 
@@ -148,13 +148,26 @@ You can configure only one instance of the {{site.data.keyword.mon_full_notm}} s
 
  | Metric Name |
  | ------------|
+ | [ibm_eventnotifications_total](#ibm_eventnotifications_total)|
  | [ibm_eventnotifications_total_ingested_notifications](#ibm_eventnotifications_total_ingested_notifications)|
- | [ibm_eventnotifications_sms_total](#ibm_eventnotifications_sms_total)|
- | [ibm_eventnotifications_sms_failure](#ibm_eventnotifications_sms_failure)|
- | [ibm_eventnotifications_email_total](#ibm_eventnotifications_email_total)|
- | [ibm_eventnotifications_email_failure](#ibm_eventnotifications_email_failure)|
- | [ibm_eventnotifications_webhook_total](#ibm_eventnotifications_webhook_total)|
- | [ibm_eventnotifications_webhook_failure](#ibm_eventnotifications_webhook_failure)|
+ | [ibm_eventnotifications_failed](#ibm_eventnotifications_failed)|
+ | [ibm_eventnotifications_destination](#ibm_eventnotifications_destination)|
+ | [ibm_eventnotifications_source](#ibm_eventnotifications_source)|
+ | [ibm_eventnotifications_type](#ibm_eventnotifications_type)|
+ 
+
+### ibm_eventnotifications_total
+{: ibm_eventnotifications_total}
+
+Total number of notifications for a particular type including successful and failed notifications
+
+| Metadata   | Description |
+|-------------|-------------|
+| `Metric Name` | `ibm_eventnotifications_total` |
+| `Metric Type` | `gauge`|
+| `Value Type` | `none`|
+| `Segment By` | `ibm_scope`, `ibm_ctype`, `ibm_location`,  `ibm_service_name`, `ibm_service_instance`, `ibm_eventnotifications_source`, `ibm_eventnotifications_destination`, `ibm_eventnotifications_source`, `ibm_eventnotifications_type`   |
+
 
 ### ibm_eventnotifications_total_ingested_notifications
 {: ibm_eventnotifications_total_ingested_notifications}
@@ -166,76 +179,53 @@ Total number of notifications that are ingested. Ingested notifications are even
 | `Metric Name` | `ibm_eventnotifications_total_ingested_notifications` |
 | `Metric Type` | `gauge`|
 | `Value Type` | `none`|
-| `Segment By` | `ibm_scope`, `ibm_ctype`, `ibm_location`,  `ibm_service_name`, `ibm_eventnotifications_source_id`, `ibm_eventnotifications_subscription_id`, `ibm_eventnotifications_destination_id`, `ibm_service_instance`,  |
+| `Segment By` | `ibm_scope`, `ibm_ctype`, `ibm_location`,  `ibm_service_name`, `ibm_service_instance`, `ibm_eventnotifications_source`  |
 
-### ibm_eventnotifications_sms_total
-{: ibm_eventnotifications_sms_total}
+### ibm_eventnotifications_failed
+{: ibm_eventnotifications_failed}
 
-Total number of SMS units sent. That is, the number for which the user is charged.
-
-| Metadata   | Description |
-|-------------|-------------|
-| `Metric Name` | `ibm_eventnotifications_sms_total` |
-| `Metric Type` | `gauge`|
-| `Value Type` | `none`|
-| `Segment By` | `ibm_scope`, `ibm_ctype`, `ibm_location`,  `ibm_service_name`, `ibm_eventnotifications_source_id`, `ibm_eventnotifications_subscription_id`, `ibm_eventnotifications_destination_id`, `ibm_service_instance`,  |
-
-### ibm_eventnotifications_sms_failure
-{: ibm_eventnotifications_sms_failure}
-
-Number of SMS units that failed.
+Total number of failed notifications of a particular type.
 
 | Metadata   | Description |
 |-------------|-------------|
-| `Metric Name` | `ibm_eventnotifications_sms_failure` |
+| `Metric Name` | `ibm_eventnotifications_failed` |
 | `Metric Type` | `gauge`|
 | `Value Type` | `none`|
-| `Segment By` | `ibm_scope`, `ibm_ctype`, `ibm_location`,  `ibm_service_name`, `ibm_eventnotifications_source_id`, `ibm_eventnotifications_subscription_id`, `ibm_eventnotifications_destination_id`, `ibm_service_instance`,  |
+| `Segment By` | `ibm_scope`, `ibm_ctype`, `ibm_location`,  `ibm_service_name`, `ibm_service_instance`, `ibm_eventnotifications_destination`, `ibm_eventnotifications_source`, `ibm_eventnotifications_type`,  |
 
-### ibm_eventnotifications_email_total
-{: ibm_eventnotifications_email_total}
+### ibm_eventnotifications_destination
+{: ibm_eventnotifications_destination}
 
-Total number of email units attempted.
+A string in the following format, Destination name ({Destination_id}
 
 | Metadata   | Description |
 |-------------|-------------|
-| `Metric Name` | `ibm_eventnotifications_email_total` |
+| `Metric Name` | `ibm_eventnotifications_destination` |
 | `Metric Type` | `gauge`|
 | `Value Type` | `none`|
-| `Segment By` | `ibm_scope`, `ibm_ctype`, `ibm_location`,  `ibm_service_name`, `ibm_eventnotifications_source_id`, `ibm_eventnotifications_subscription_id`, `ibm_eventnotifications_destination_id`, `ibm_service_instance`,  |
+| `Segment By` | `ibm_scope`, `ibm_ctype`, `ibm_location`,  `ibm_service_name`, `ibm_service_instance`, `ibm_eventnotifications_destination`, `ibm_eventnotifications_source`, `ibm_eventnotifications_type`,  |
 
-### ibm_eventnotifications_email_failure
-{: ibm_eventnotifications_email_failure}
+### ibm_eventnotifications_source
+{: ibm_eventnotifications_source}
 
-Total number of emails that are not sent.
+ A string in the following format, Source Name ({Source_id})
 
 | Metadata   | Description |
 |-------------|-------------|
-| `Metric Name` | `ibm_eventnotifications_email_failure` |
+| `Metric Name` | `ibm_eventnotifications_source` |
 | `Metric Type` | `gauge`|
 | `Value Type` | `none`|
-| `Segment By` | `ibm_scope`, `ibm_ctype`, `ibm_location`,  `ibm_service_name`, `ibm_eventnotifications_source_id`, `ibm_eventnotifications_subscription_id`, `ibm_eventnotifications_destination_id`, `ibm_service_instance`,  |
+| `Segment By` | `ibm_scope`, `ibm_ctype`, `ibm_location`,  `ibm_service_name`, `ibm_service_instance`, `ibm_eventnotifications_destination`, `ibm_eventnotifications_source`, `ibm_eventnotifications_type`,  |
 
-### ibm_eventnotifications_webhook_total
-{: ibm_eventnotifications_webhook_total}
+### ibm_eventnotifications_type
+{: ibm_eventnotifications_type}
 
-Total number of webhook (HTTP) events.
+Can have values like email/sms/webhook
 
 | Metadata   | Description |
 |-------------|-------------|
-| `Metric Name` | `ibm_eventnotifications_webhook_total` |
+| `Metric Name` | `ibm_eventnotifications_type |
 | `Metric Type` | `gauge`|
 | `Value Type` | `none`|
-| `Segment By` | `ibm_scope`, `ibm_ctype`, `ibm_location`,  `ibm_service_name`, `ibm_eventnotifications_source_id`, `ibm_eventnotifications_subscription_id`, `ibm_eventnotifications_destination_id`, `ibm_service_instance`,  |
+| `Segment By` | `ibm_scope`, `ibm_ctype`, `ibm_location`,  `ibm_service_name`, `ibm_service_instance`, `ibm_eventnotifications_destination`, `ibm_eventnotifications_source`, `ibm_eventnotifications_type`,  |
 
-### ibm_eventnotifications_webhook_failure
-{: ibm_eventnotifications_webhook_failure}
-
-Number of webhook events that returned with error codes.
-
-| Metadata   | Description |
-|-------------|-------------|
-| `Metric Name` | `ibm_eventnotifications_webhook_failure` |
-| `Metric Type` | `gauge`|
-| `Value Type` | `none`|
-| `Segment By` | `ibm_scope`, `ibm_ctype`, `ibm_location`,  `ibm_service_name`, `ibm_eventnotifications_source_id`, `ibm_eventnotifications_subscription_id`, `ibm_eventnotifications_destination_id`, `ibm_service_instance`,  |
