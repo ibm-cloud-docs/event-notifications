@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-09-27"
+lastupdated: "2021-10-18"
 
 keywords: event notifications logDNA , event notifications logging, event notifications external logs
 
@@ -78,9 +78,9 @@ Each log record has:
 - documentURL
 
 
-| Type of log     | InstanceId  | SourceId | NotificationId | Description | 
-|-----------------|-------------|----------|----------------|------------- | 
-| New incoming notification| 57dd1fef-e4fb-4479-ba1f-648319b88927| c6fd66fd-c75b-4bc4-87a1--5aa917435173:api| 3ac4259c-b1dd-4101-b62f-4914191a7194 | indicates that a notification was triggered| 
+| Log sample    |  SourceId  | Verbatim|
+|---------------|------------|-------------|
+| New incoming notification| | c6fd66fd-c75b-4bc4-87a1--5aa917435173:api|  indicates that a notification was triggered| 
 {: caption="Table 1. Types of logs" caption-side="top"}
 {: #en-logs-table-1}
 {: tab-title="Incoming notifications"}
@@ -88,11 +88,9 @@ Each log record has:
 {: class="simple-tab-table"}
 {: row-headers}
 
-| Type of log     | InstanceId | SourceId | NotificationId | Description | 
-|-----------------|------------|----------|----------------|--------------| 
-| New SMTP-IBM Notification ingested | 493e4a05-2b70-46cd-a27e-7057141951e9|2b094423-fd19-4b95-8bb1-5731e71b9f9a:api| c1dcb2a8-d218-413c-a10f-be5a64c620f4| After evaluation incoming notification is ingested into the system| 
-| New SMS-IBM Notification Ingested| 4493e4a05-2b70-46cd-a27e-7057141951e9| 2b094423-fd19-4b95-8bb1-5731e71b9f9a:api|1ec35fd9-f7b5-496a-86e7-2170b9ae68b4|
-| New WEBHOOK Notification Ingested|493e4a05-2b70-46cd-a27e-7057141951e9 | 2b094423-fd19-4b95-8bb1-5731e71b9f9a:api|1c1dcb2a8-d218-413c-a10f-be5a64c620f4|                             
+| Log sample    |  SourceId | NotificationId | Verbatim |
+|---------------|-----------|----------------|-------------|
+| New ingested notification | 2b094423-fd19-4b95-8bb1-5731e71b9f9a:api| c1dcb2a8-d218-413c-a10f-be5a64c620f4| After evaluation incoming notification is ingested into the system|
 {: caption="Table 1. Types of logs " caption-side="top"}
 {: #en-logs-table-2}
 {: tab-title="Ingested notifications"}
@@ -100,10 +98,9 @@ Each log record has:
 {: class="simple-tab-table"}
 {: row-headers}
 
-| Type of log     | InstanceId | SourceId | NotificationId |  Description |
-|-----------------|------------|----------|----------------|-------------- |
-| New email notification status | <InstanceID_here> |<Source_CRN_HERE> | <NOTIFICATION_ID>| Total 5 emails were attempted | 
-| New email notification status | <InstanceID_here>| <Source_CRN_HERE> |<NOTIFICATION_ID>| Failed to deliver emails to `test@gmail.com`|                            
+| Log sample  | SourceId | NotificationId | Verbatim |
+|-------------|----------|----------------|--------------|
+| New email notification status | <Source_CRN_HERE> | <NOTIFICATION_ID>| Total 5 emails were sent |
 {: caption="Table 1. Types of logs " caption-side="top"}
 {: #en-logs-table-2}
 {: tab-title="Email notifications"}
@@ -111,9 +108,10 @@ Each log record has:
 {: class="simple-tab-table"}
 {: row-headers}
 
-| Type of log     | InstanceId | SourceId | NotificationId |  Description |
-|-----------------|------------|----------|----------------|-------------- |
-| New SMS notification status | <InstanceID_here> |<Source_CRN_HERE> | <NOTIFICATION_ID>|Total 3 SMS units were sent. Failed to deliver SMS to 3 numbers |                           
+| Log sample   | SourceId | NotificationId |  Verbatim| Resolution | Helpdocs|
+|--------------|----------|----------------|--------------|---------------|------------|
+| SMS notification status | <Source_CRN_HERE> | <NOTIFICATION_ID>| Successfully sent SMS to 8 out of 10 phone numbers. Each message was segmented into 3 parts|   |   |
+| SMS failed status | <Source_CRN_HERE> | <NOTIFICATION_ID>| Failed to deliver to the following phone numbers: +91946******, +91976*****| Verify the phone numbers provided in the subscription are valid and from supported countries |  Link to our docs section   |
 {: caption="Table 1. Types of logs " caption-side="top"}
 {: #en-logs-table-2}
 {: tab-title="SMS notifications"}
@@ -121,10 +119,11 @@ Each log record has:
 {: class="simple-tab-table"}
 {: row-headers}
 
-| Type of log     | InstanceId | SourceId | NotificationId |  Description |
-|-----------------|------------|----------|----------------|-------------- |
-| Webhook notification status | <InstanceID_here> |<Source_CRN_HERE> | <NOTIFICATION_ID>|Webhook failed: {"webhook_id": "12323213", "status_code": 400, "status_message": "400 Bad Request https://webhook.site/dba0967b-0115-45d0-845c-e226bdf19555",   "date_sent": "2021-09-24T04:48:10.707Z"} |
-| Webhook notification status | <InstanceID_here> |<Source_CRN_HERE> | <NOTIFICATION_ID>|Webhook success: {"webhook_id": "12323213", "status_code": 200, "status_message": "OK",   "date_sent": "2021-09-24T04:48:10.707Z"} |
+| Log sample   | SourceId | NotificationId |  Verbatim| Resolution | Helpdocs|
+|--------------|----------|----------------|----------|------------| ------- |
+| Webhook notification status (warning) | <Source_CRN_HERE> | <NOTIFICATION_ID>|Failed to send the notification to webhook with the status code : 400 and response : 400 Bad Request https://webhook.site/dba0967b-0115-45d0-845c-e226bdf19555 | Please check the configured URL for the webhook as well as the headers provided."
+documentURL: "Link to our docs section  |  Link to our docs section  |
+| Webhook notification status | <Source_CRN_HERE> | <NOTIFICATION_ID>| Successfully sent the notification to the Webhook | N/A |  N/A  |
 {: caption="Table 1. Types of logs " caption-side="top"}
 {: #en-logs-table-2}
 {: tab-title="Webhook notifications"}
