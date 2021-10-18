@@ -154,7 +154,7 @@ You can configure only one instance of the {{site.data.keyword.mon_full_notm}} s
  | [ibm_eventnotifications_destination](#ibm_eventnotifications_destination)|
  | [ibm_eventnotifications_source](#ibm_eventnotifications_source)|
  | [ibm_eventnotifications_type](#ibm_eventnotifications_type)|
- 
+
 
 ### ibm_eventnotifications_total
 {: ibm_eventnotifications_total}
@@ -227,5 +227,3 @@ Can have values like email/sms/webhook
 | `Metric Name` | `ibm_eventnotifications_type` |
 | `Metric Type` | `tag`|
 | `Value Type` | `none`|
-
-
