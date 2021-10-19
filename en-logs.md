@@ -32,7 +32,7 @@ Logging is automatically enabled in {{site.data.keyword.en_full}} to help you tr
 ## Enabling platform logs from the {{site.data.keyword.en_short}} dashboard
 {: #en-logs-service}
 
-placeholder for content in pipeline.
+Placeholder for content in pipeline.
 
 ## Enabling platform logs from the Logging dashboard
 {: #en-logs}
@@ -49,7 +49,7 @@ To configure a logging instance from the Observability dashboard in the {{site.d
 
 4. Select a [region](/docs/log-analysis?topic=log-analysis-regions).
 
-5. Choose which logging instance will receive logs from enabled services on that location. [Learn more about the services that are enabled to send logs to {{site.data.keyword.la_full_notm}}.](/docs/log-analysis?topic=log-analysis-cloud_services)
+5. Choose which logging instance receives logs from enabled services on that location. [Learn more about the services that are enabled to send logs to {{site.data.keyword.la_full_notm}}.](/docs/log-analysis?topic=log-analysis-cloud_services)
 
 6. Click **Select**.
 
@@ -100,7 +100,7 @@ Each log record has:
 
 | Log sample  | SourceId | NotificationId | Verbatim |
 |-------------|----------|----------------|--------------|
-| New email notification status | <Source_CRN_HERE> | <NOTIFICATION_ID>| Total 5 emails were sent |
+| New email notification status | <Source_CRN_HERE> | <NOTIFICATION_ID>| Total five emails were sent |
 {: caption="Table 1. Types of logs " caption-side="top"}
 {: #en-logs-table-2}
 {: tab-title="Email notifications"}
@@ -110,8 +110,8 @@ Each log record has:
 
 | Log sample   | SourceId | NotificationId |  Verbatim| Resolution | Helpdocs|
 |--------------|----------|----------------|--------------|---------------|------------|
-| SMS notification status | <Source_CRN_HERE> | <NOTIFICATION_ID>| Successfully sent SMS to 8 out of 10 phone numbers. Each message was segmented into 3 parts| N/A  |  N/A |
-| SMS failed status | <Source_CRN_HERE> | <NOTIFICATION_ID>| Failed to deliver to the following phone numbers: +91946******, +91976*****| Verify the phone numbers provided in the subscription are valid and from supported countries |  Link to our docs section   |
+| SMS notification status | <Source_CRN_HERE> | <NOTIFICATION_ID>| Successfully sent SMS to 8 out of 10 phone numbers. Each message was segmented into three parts| N/A  |  N/A |
+| SMS failed status | <Source_CRN_HERE> | <NOTIFICATION_ID>| Failed to deliver to the following phone numbers: +91946******, +91976*****| Verify the phone numbers that are provided in the subscription are valid and from supported countries |  Link to our docs section   |
 {: caption="Table 1. Types of logs " caption-side="top"}
 {: #en-logs-table-2}
 {: tab-title="SMS notifications"}
@@ -119,10 +119,10 @@ Each log record has:
 {: class="simple-tab-table"}
 {: row-headers}
 
-| Log sample   | SourceId | NotificationId |  Verbatim| Resolution | Helpdocs|
+| Log sample   | SourceId | NotificationId |  Verbatim| Resolution | Help docs|
 |--------------|----------|----------------|----------|------------| ------- |
-| Webhook notification status (warning) | <Source_CRN_HERE> | <NOTIFICATION_ID>|Failed to send the notification to webhook with the status code : 400 and response : 400 Bad Request https://webhook.site/dba0967b-0115-45d0-845c-e226bdf19555 | Please check the configured URL for the webhook as well as the headers provided|  Link to our docs section  |
-| Webhook notification status | <Source_CRN_HERE> | <NOTIFICATION_ID>| Successfully sent the notification to the Webhook | N/A |  N/A  |
+| Webhook notification status (warning) | <Source_CRN_HERE> | <NOTIFICATION_ID>|Failed to send notification to webhook with status code: 400 and response: 400 Bad Request https://webhook.site/dba0967b-0115-45d0-845c-e226bdf19555 | Check the configured URL for the webhook and the headers provided|  Link to docs section  |
+| Webhook notification status | <Source_CRN_HERE> | <NOTIFICATION_ID>| Successfully sent notification to the webhook | N/A |  N/A  |
 {: caption="Table 1. Types of logs " caption-side="top"}
 {: #en-logs-table-2}
 {: tab-title="Webhook notifications"}
