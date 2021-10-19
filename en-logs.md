@@ -90,7 +90,7 @@ Each log record has:
 
 | Log sample    |  SourceId | NotificationId | Verbatim |
 |---------------|-----------|----------------|-------------|
-| New ingested notification | 2b094423-fd19-4b95-8bb1-5731e71b9f9a:api| c1dcb2a8-d218-413c-a10f-be5a64c620f4| After evaluation incoming notification is ingested into the system|
+| New ingested notification | 2b094423-fd19-4b95-8bb1-5731e71b9f9a:api| c1dcb2a8-d218-413c-a10f-be5a64c620f4|  Incoming notification is ingested into the system after evaluation|
 {: caption="Table 1. Types of logs " caption-side="top"}
 {: #en-logs-table-2}
 {: tab-title="Ingested notifications"}
@@ -111,7 +111,7 @@ Each log record has:
 | Log sample   | SourceId | NotificationId |  Verbatim| Resolution | Helpdocs|
 |--------------|----------|----------------|--------------|---------------|------------|
 | SMS notification status | <Source_CRN_HERE> | <NOTIFICATION_ID>| Successfully sent SMS to 8 out of 10 phone numbers. Each message was segmented into three parts| N/A  |  N/A |
-| SMS failed status | <Source_CRN_HERE> | <NOTIFICATION_ID>| Failed to deliver to the following phone numbers: +91946******, +91976*****| Verify the phone numbers that are provided in the subscription are valid and from supported countries |  Link to our docs section   |
+| SMS failed status | <Source_CRN_HERE> | <NOTIFICATION_ID>| Failed to deliver to the following phone numbers: +91946******, +91976*****| Verify that the phone numbers that are provided in the subscription are valid and from supported countries |  tbd   |
 {: caption="Table 1. Types of logs " caption-side="top"}
 {: #en-logs-table-2}
 {: tab-title="SMS notifications"}
@@ -121,7 +121,7 @@ Each log record has:
 
 | Log sample   | SourceId | NotificationId |  Verbatim| Resolution | Help docs|
 |--------------|----------|----------------|----------|------------| ------- |
-| Webhook notification status (warning) | <Source_CRN_HERE> | <NOTIFICATION_ID>|Failed to send notification to webhook with status code: 400 and response: 400 Bad Request https://webhook.site/dba0967b-0115-45d0-845c-e226bdf19555 | Check the configured URL for the webhook and the headers provided|  Link to docs section  |
+| Webhook notification status (warning) | <Source_CRN_HERE> | <NOTIFICATION_ID>|Failed to send notification to webhook with status code: 400 and response: 400 Bad Request https://webhook.site/dba0967b-0115-45d0-845c-e226bdf19555 | Check the configured URL for the webhook and the headers provided|  tbd |
 | Webhook notification status | <Source_CRN_HERE> | <NOTIFICATION_ID>| Successfully sent notification to the webhook | N/A |  N/A  |
 {: caption="Table 1. Types of logs " caption-side="top"}
 {: #en-logs-table-2}
@@ -131,6 +131,4 @@ Each log record has:
 {: row-headers}
 
 
-## Analyzing logs for {{site.data.keyword.en_short}}
 
-placeholder
