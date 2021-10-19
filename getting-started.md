@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-09-20"
+lastupdated: "2020-10-19"
 
 keywords:
 
@@ -23,8 +23,7 @@ completion-time: 10m
 {: toc-services=""}
 {: toc-completion-time="10m"}
 
-{{site.data.keyword.en_full}} is a centralized alerts management service that notifies and alerts you to events occurring in your {{site.data.keyword.Bluemix_notm}} account. You can, in turn send a filtered notification to a set of your users.
-You can create subscriptions to associate destinations to topics and write rules to filter specific notifications to the topic.
+ {{site.data.keyword.en_full}} is an event notification routing service that notifies you to critical events that occur in your {{site.data.keyword.Bluemix_notm}} account or triggers automated actions by using webhooks. You can filter and route event notifications from {{site.data.keyword.Bluemix_notm}} services like Monitoring, Security and Compliance Center, and Secrets Manager to email, SMS, and webhooks.
 In this tutorial, we'll take you through the steps to get started.
 {: shortdesc}
 
@@ -37,22 +36,9 @@ You need an {{site.data.keyword.cloud}} account. If you don't have an account, c
 
 Refer to {{site.data.keyword.en_short}} service [terms](/docs/event-notifications?topic=event-notifications-en-overview)
 
-## Filtering capability
-{: #en-getting-started-filtering}
 
-{{site.data.keyword.en_full}} can restrict notifications to events of your choice and also route notifications for specific events to specific destinations.
-
-
-Destinations that are currently supported include:
-
-- Email
-Uses {{site.data.keyword.Bluemix_notm}} provided email service to send emails to your recipients.
-- SMS
-Uses {{site.data.keyword.Bluemix_notm}} provided SMS function to send text notifications to your recipients.
-- Webhooks
-Send events from supported {{site.data.keyword.Bluemix_notm}} Services to Webhook destinations of your choice.
-
-The basic steps that get you started:
+## Basic steps to get you started
+{: #getting-started-steps}
 
 1. [Create an {{site.data.keyword.en_short}} service instance](/docs/event-notifications?topic=event-notifications-en-create-en-instance)
 1. [Create a topic](/docs/event-notifications?topic=event-notifications-en-create-en-topic)

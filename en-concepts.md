@@ -107,9 +107,6 @@ An event notification send from the Event Notifications service to a subscriber.
 
 The originating phone number or origin ID for a text message, and the originating domain or IP address for email.  In most countries the sender is obligated by law to be transparent about the origin of a digital message. If you select the IBM SMS Service or IBM Email Service as a destination for your subscriptions, the text messages the end user will receive will have an origin owned by IBM.   
 
-Abide by [{{site.data.keyword.en_short}} digital messaging policies](TODO link) to protect the reputation of IBM origins with downstream SMS and email providers.
-{:important: .important}
-
 ## SMS message
 {: #en-sms}
 
@@ -124,4 +121,7 @@ A group of 160 characters within an SMS text message.  A single message may con
 {: #en-sms-unit}
 
 A pricing unit for SMS text messages.
+
+### Preventing spam
+{: #en-sms-spam}
 
