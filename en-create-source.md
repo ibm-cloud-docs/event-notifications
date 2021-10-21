@@ -48,3 +48,7 @@ The supported IBM Cloud Services can be seen under Add--> IBM managed services.
 ![Add topic details](images/en-source2.png "Source"){: caption="Figure 2. Add an IBM managed source" caption-side="bottom"}
 
 
+## List of IBM provided sources
+{: #en-ibm-source-list}
+
+- [IBM Cloud Monitoring](https://cloud.ibm.com/catalog/services/ibm-cloud-monitoring?callback=%2Fobserve%2Fmonitoring%2Fcreate)
