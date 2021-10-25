@@ -37,7 +37,7 @@ A digitized message that is triggered when an event occurs. Event notifications
 {: #en-source}
 
 A service or application on {{site.data.keyword.Bluemix_notm}} that emits event notifications and publishes them to a topic within the {{site.data.keyword.en_short}} service. A source is a registered entity in an {{site.data.keyword.en_short}} service instance. Several services on {{site.data.keyword.Bluemix_notm}} are set to be integrated to send notifications to {{site.data.keyword.en_short}}.
-IBM Monitoring is enabled, while  {{site.data.keyword.compliance_long}}, and {{site.data.keyword.secrets-manager_full_notm}} are in the pipeline. A source can publish to multiple topics. In, other contexts sources can also be identified as producers or publishers.
+IBM Monitoring is enabled, while  {{site.data.keyword.compliance_long}}, and {{site.data.keyword.secrets-manager_full_notm}} are in the pipeline. A source can publish to multiple topics. In, other contexts sources are identified as producers or publishers.
 
 ## Filter
 {: #en-filters}
@@ -47,7 +47,7 @@ A mechanism for selectively passing event notifications from a source into a top
 ### Condition
 {: #en-conditions}
 
-One of many criteria used for filtering. {{site.data.keyword.en_short}} whose attributes match a condition are passed through to a topic. {{site.data.keyword.en_short}} whose attributes do not match a condition are dropped.
+One of many criteria used for filtering. Event notifications whose attributes match a condition are passed through to a topic. Notifications whose attributes do not match a condition are dropped.
 
 ## Ingested event notification
 {: #en-ingested}
@@ -66,7 +66,7 @@ One of many criteria used for filtering. {{site.data.keyword.en_short}} whose a
 ## Destination
 {: #en-destinations}
 
-A delivery target for event notifications.  In other contexts, destinations might be known as channels, sinks, consumers, or subscribers.
+A delivery target for event notifications. In other contexts, destinations are also called channels, sinks, consumers, or subscribers.
 
 - Human destination: A device, server, or application presents notifications for human consumption.  Examples of human destinations are email servers, SMS text providers, and push notification services. 
 
@@ -77,12 +77,12 @@ A delivery target for event notifications.  In other contexts, destinations mig
 ### Service-to-service 
 {: #en-destinations-s2s}
 
-A way to describe a notification that travels from a cloud service to a service destination. In other contexts, service-to-service can be known as app-to-app.
+A way to describe a notification that travels from a cloud service to a service destination. In other contexts, service-to-service is also categorized as app-to-app.
 
 ### Service-to-human
 {: #en-destinations-s2h}
 
-A way to describe a notification that travels from a cloud service to a human destination.  In other contexts, service-to-human can be known as app-to-person.
+A way to describe a notification that travels from a cloud service to a human destination.  In other contexts, service-to-human is also categorized as app-to-person.
 
 ## Subscription
 {: #en-subscriptions}
@@ -121,7 +121,4 @@ A group of 160 characters within an SMS text message.  A single message can con
 {: #en-sms-unit}
 
 A pricing unit for SMS text messages.
-
-### Preventing spam
-{: #en-sms-spam}
 
