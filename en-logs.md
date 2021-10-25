@@ -29,10 +29,6 @@ subcollection: event notifications
 Logging is automatically enabled in {{site.data.keyword.en_full}} to help you troubleshoot issues. You can also use the {{site.data.keyword.at_full_notm}} service to track how users and applications interact with the {{site.data.keyword.en_short}} service. Finally, you can view logs in {{site.data.keyword.la_full_notm}}.
 {: shortdesc}
 
-## Enabling platform logs from the {{site.data.keyword.en_short}} dashboard
-{: #en-logs-service}
-
-Placeholder for content in pipeline.
 
 ## Enabling platform logs from the Logging dashboard
 {: #en-logs}
@@ -62,25 +58,21 @@ To enable an instance that is receiving {{site.data.keyword.en_short}} action lo
 {{site.data.keyword.en_short}} sends the action logs to the Log Analysis service in the same region as the {{site.data.keyword.en_short}} namespace. Actions logs of a {{site.data.keyword.en_short}} namespace in `us-south` are sent to a logging instance in `us-south`.
 
 
-### Launching the LogDNA web UI from the {{site.data.keyword.en_short}} dashboard
-
-place holder for steps
-
 ## Pre-defined fields per log type
 {: #en-logs-fields}
 
 Each log record has:
 - LogSourceCRN : CRN of the customer's instance
 - saveServiceCopy: whether IBM's instance has access to it
-- messageId
-- messages
-- resolutionUrl
+- messageID
+- message
+- resolution
 - documentURL
 
 
-| Log sample    |  SourceId  | Verbatim|
+| Log sample    |  SourceId  | Description|
 |---------------|------------|-------------|
-| New incoming notification| c6fd66fd-c75b-4bc4-87a1--5aa917435173:api| Indicates that a notification was triggered| 
+| An event was received from the source <Source_ID> to be filtered by the topics for possible ingestion| <Source_ID>| Indicates that a notification was triggered| 
 {: caption="Table 1. Types of logs" caption-side="top"}
 {: #en-logs-table-1}
 {: tab-title="Incoming notifications"}
@@ -88,9 +80,9 @@ Each log record has:
 {: class="simple-tab-table"}
 {: row-headers}
 
-| Log sample    |  SourceId | NotificationId | Verbatim |
+| Log sample    |  SourceId | NotificationId | Description|
 |---------------|-----------|----------------|-------------|
-| New ingested notification | 2b094423-fd19-4b95-8bb1-5731e71b9f9a:api| c1dcb2a8-d218-413c-a10f-be5a64c620f4|  Incoming notification is ingested into the system after evaluation|
+| An event from the source <source_id> was ingested by the filter and has been assigned a unique notification_id <notificaiton_id> to be dispatched to the destinations. | <Source_ID>| <Notificaiton_id>| Incoming notification is ingested into the system after evaluation|
 {: caption="Table 1. Types of logs " caption-side="top"}
 {: #en-logs-table-2}
 {: tab-title="Ingested notifications"}
