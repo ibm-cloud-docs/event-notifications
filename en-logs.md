@@ -62,7 +62,7 @@ To enable an instance that is receiving {{site.data.keyword.en_short}} action lo
 {: #en-logs-fields}
 
 Each log record has:
-- LogSourceCRN : CRN of the customer's instance
+- LogSourceCRN: CRN of the customer's instance
 - saveServiceCopy: whether IBM's instance has access to it
 - messageID
 - message
@@ -82,7 +82,7 @@ Each log record has:
 
 | Log sample    |  SourceId | NotificationId | Description|
 |---------------|-----------|----------------|-------------|
-| An event from the source <source_id> was ingested by the filter and has been assigned a unique notification_id <notificaiton_id> to be dispatched to the destinations. | <Source_ID>| <Notificaiton_id>| Incoming notification is ingested into the system after evaluation|
+|An event from the source <source_id> was ingested by the filter and is assigned a unique notification_id <notificaiton_id> to be dispatched to the destinations.| <Source_ID>| <Notificaiton_id>| Incoming notification is ingested into the system after evaluation|
 {: caption="Table 1. Types of logs " caption-side="top"}
 {: #en-logs-table-2}
 {: tab-title="Ingested notifications"}
@@ -92,7 +92,7 @@ Each log record has:
 
 | Log sample  | SourceId | NotificationId | Verbatim |
 |-------------|----------|----------------|--------------|
-| New email notification status | <Source_CRN_HERE> | <NOTIFICATION_ID>| Total five emails were sent |
+|New email notification status| <Source_CRN_HERE> | <NOTIFICATION_ID>| Total five emails were sent |
 {: caption="Table 1. Types of logs " caption-side="top"}
 {: #en-logs-table-2}
 {: tab-title="Email notifications"}
@@ -100,9 +100,9 @@ Each log record has:
 {: class="simple-tab-table"}
 {: row-headers}
 
-| Log sample   | SourceId | NotificationId |  Verbatim| Resolution | Helpdocs|
+| Log sample   | SourceId | NotificationId |  Verbatim| Resolution | Help docs|
 |--------------|----------|----------------|--------------|---------------|------------|
-| SMS notification status | <Source_CRN_HERE> | <NOTIFICATION_ID>| Successfully sent SMS to 8 out of 10 phone numbers. Each message was segmented into three parts| N/A  |  N/A |
+|SMS notification status| <Source_CRN_HERE> | <NOTIFICATION_ID>| Successfully sent SMS to 8 out of 10 phone numbers. Each message was segmented into three parts| N/A  |  N/A |
 | SMS failed status | <Source_CRN_HERE> | <NOTIFICATION_ID>| Failed to deliver to the following phone numbers: +91946******, +91976*****| Verify that the phone numbers that are provided in the subscription are valid and from supported countries |  tbd   |
 {: caption="Table 1. Types of logs " caption-side="top"}
 {: #en-logs-table-2}
@@ -113,8 +113,8 @@ Each log record has:
 
 | Log sample   | SourceId | NotificationId |  Verbatim| Resolution | Help docs|
 |--------------|----------|----------------|----------|------------| ------- |
-| Webhook notification status (warning) | <Source_CRN_HERE> | <NOTIFICATION_ID>|Failed to send notification to webhook with status code: 400 and response: 400 Bad Request https://webhook.site/dba0967b-0115-45d0-845c-e226bdf19555 | Check the configured URL for the webhook and the headers provided|  tbd |
-| Webhook notification status | <Source_CRN_HERE> | <NOTIFICATION_ID>| Successfully sent notification to the webhook | N/A |  N/A  |
+|Webhook notification status (warning)| <Source_CRN_HERE> | <NOTIFICATION_ID>|Failed to send notification to webhook with status code: 400 and response: 400 Bad Request https://webhook.site/dba0967b-0115-45d0-845c-e226bdf19555 | Check the configured URL for the webhook and the headers provided|  tbd |
+|Webhook notification status | <Source_CRN_HERE> | <NOTIFICATION_ID>| Successfully sent notification to the webhook | N/A |  N/A  |
 {: caption="Table 1. Types of logs " caption-side="top"}
 {: #en-logs-table-2}
 {: tab-title="Webhook notifications"}
