@@ -27,8 +27,9 @@ completion-time: 10m
 In this tutorial, we'll take you through the steps to get started.
 {: shortdesc}
 
+
 SMS as an event destination is set to be active soon. Watch this space for the announce.
-{: .important }
+{: important }
 
 
 ## Pricing plans
