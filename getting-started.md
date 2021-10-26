@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-10-19"
+lastupdated: "2020-10-26"
 
 keywords:
 
@@ -28,7 +28,8 @@ In this tutorial, we'll take you through the steps to get started.
 {: shortdesc}
 
 SMS as an event destination is set to be active soon. Watch this space for the announce.
-{: important }
+{: .important }
+
 
 ## Pricing plans
 
