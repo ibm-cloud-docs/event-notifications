@@ -30,13 +30,13 @@ A destination is a delivery target for a notification. In other contexts, destin
 ## Destinations categories
 ​{: #en-destination-categories}
 
-- Human destinations; a device, server, or application that presents notifications for human consumption. The following human destinations are supported by the {{site.data.keyword.en_short}} service:
+Human destinations; a device, server, or application that presents notifications for human consumption. The following human destinations are supported by the {{site.data.keyword.en_short}} service:
   - 1. {{site.data.keyword.Bluemix_notm}} email service
   - 1. {{site.data.keyword.Bluemix_notm}} SMS service
 ​
 Both  email and SMS destinations are provided out of the box, and are available whenever you create an instance of {{site.data.keyword.en_short}}.
 ​
-- Service destinations; a cloud service or an application where notifications are consumed programmatically. The following service destination is supported by the {{site.data.keyword.en_short}} service:
- - 1. Webhook
- - 1. A webhook to a backend microservice is an example of a service destination.
+Service destinations; a cloud service or an application where notifications are consumed programmatically. The following service destination is supported by the {{site.data.keyword.en_short}} service:
+ - 1. Webhook: to a backend microservice.
+ 
 

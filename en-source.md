@@ -21,7 +21,7 @@ subcollection: event-notifications
 
 
 
-## Event source
+# Event source
 {: #en-source}
 
 A service or application on {{site.data.keyword.Bluemix_notm}} that emits event notifications and publishes them to a topic within the {{site.data.keyword.en_short}} service. A source is a registered entity in an {{site.data.keyword.en_short}} service instance. Several services on {{site.data.keyword.Bluemix_notm}} are set to be integrated to send notifications to {{site.data.keyword.en_short}}.
@@ -31,6 +31,3 @@ IBM Monitoring is enabled, while  {{site.data.keyword.compliance_long}}, and {{s
 {: #en-ibm-sources-list}
 
 - [IBM Cloud Monitoring](https://cloud.ibm.com/catalog/services/ibm-cloud-monitoring?callback=%2Fobserve%2Fmonitoring%2Fcreate)
-
-
-
