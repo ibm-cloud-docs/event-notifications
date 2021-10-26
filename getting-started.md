@@ -17,6 +17,9 @@ completion-time: 10m
 
 {{site.data.keyword.attribute-definition-list}}
 
+SMS as an event destination is set to be active soon. Watch this space for the announce.
+{: important}
+
 # Getting started with {{site.data.keyword.en_short}}
 {: #getting-started}
 {: toc-content-type="tutorial"}
