@@ -20,6 +20,13 @@ toc:
       - en-concepts.md
       - en-reln-model.md
       - en-release-notes.md
+      - en-source.md
+      - en-destination.md
+      - topicgroup:
+          label: Supported destinations
+          topics:
+          - en-destination-email.md
+          -en-destination-webhook.md  
 
   - navgroup:
       id: tutorial

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-11-29"
+lastupdated: "2021-10-26"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -20,7 +20,7 @@ subcollection: event-notifications
 {:tip: .tip}
 
 
-# {{site.data.keyword.en_short}} terms and use cases
+# {{site.data.keyword.en_short}} terms
 {: #en-overview}
 
 
@@ -74,7 +74,7 @@ A delivery target for event notifications. In other contexts, destinations are 
    {:note: .note}
 - Service destinations: A cloud service or an application where notifications are consumed programmatically. A webhook to a backend microservice is an example of a service destination.
 
-### Service-to-service 
+### Service-to-service
 {: #en-destinations-s2s}
 
 A way to describe a notification that travels from a cloud service to a service destination. In other contexts, service-to-service is also categorized as app-to-app.
@@ -121,4 +121,3 @@ A group of 160 characters within an SMS text message.  A single message can con
 {: #en-sms-unit}
 
 A pricing unit for SMS text messages.
-
