@@ -148,9 +148,22 @@ You can configure only one instance of the {{site.data.keyword.mon_full_notm}} s
 
  | Metric Name |
  | ------------|
- | [ibm_eventnotifications_total](#ibm_eventnotifications_total)|
  | [ibm_eventnotifications_total_ingested_notifications](#ibm_eventnotifications_total_ingested_notifications)|
+ | [ibm_eventnotifications_total](#ibm_eventnotifications_total)|
  | [ibm_eventnotifications_failed](#ibm_eventnotifications_failed)|
+
+
+### ibm_eventnotifications_total_ingested_notifications
+{: ibm_eventnotifications_total_ingested_notifications}
+
+Total number of notifications that are ingested. Ingested notifications are events from a source that has at least one condition that is defined on them for filtering.
+
+| Metadata   | Description |
+|-------------|-------------|
+| `Metric Name` | `ibm_eventnotifications_total_ingested_notifications` |
+| `Metric Type` | `gauge`|
+| `Value Type` | `none`|
+| `Segment By` | `ibm_scope`, `ibm_ctype`, `ibm_location`,  `ibm_service_name`, `ibm_service_instance`, `ibm_eventnotifications_source`  |
 
 
 
@@ -166,18 +179,6 @@ Total number of notifications for a particular type including successful and fai
 | `Value Type` | `none`|
 | `Segment By` | `ibm_scope`, `ibm_ctype`, `ibm_location`,  `ibm_service_name`, `ibm_service_instance`, `ibm_eventnotifications_source`, `ibm_eventnotifications_destination`, `ibm_eventnotifications_source`, `ibm_eventnotifications_type`   |
 
-
-### ibm_eventnotifications_total_ingested_notifications
-{: ibm_eventnotifications_total_ingested_notifications}
-
-Total number of notifications that are ingested. Ingested notifications are events from a source that has at least one condition that is defined on them for filtering.
-
-| Metadata   | Description |
-|-------------|-------------|
-| `Metric Name` | `ibm_eventnotifications_total_ingested_notifications` |
-| `Metric Type` | `gauge`|
-| `Value Type` | `none`|
-| `Segment By` | `ibm_scope`, `ibm_ctype`, `ibm_location`,  `ibm_service_name`, `ibm_service_instance`, `ibm_eventnotifications_source`  |
 
 ### ibm_eventnotifications_failed
 {: ibm_eventnotifications_failed}
@@ -215,5 +216,5 @@ The following attributes are available for segmenting one or more attributes as 
 |-----------|----------------|-----------------------|
 | `Name of the destination` | `ibm_eventnotifications_destination` | A destination name with its associated id. |
 | `Name of the source` | `ibm_eventnotifications_source` | A source name with its associated id. |
-| `Type of event notification` | `ibm_eventnotifications_type` | The type of notification, service-to-service or service-to-human. |
+| `Type of event notification` | `ibm_eventnotifications_type` | The type of supported destination types. (email, sms or webhook) |
 

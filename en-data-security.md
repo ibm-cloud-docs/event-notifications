@@ -54,7 +54,7 @@ The {{site.data.keyword.en_short}} data retention policy describes how long your
 
 1. Log in to your {{site.data.keyword.Bluemix_notm}} account by using {{site.data.keyword.Bluemix_notm}} CLI from terminal.
 2. `ibmcloud resource reclamations` lists your deleted instance along with reclamation ID for it.
-3. Use `ibmcloud resource reclamation-delete <reclamation_id_for_instance` to permanently delete data that is related to a deleted instance.
+3. Use `ibmcloud resource reclamation-delete <reclamation_id_for_instance>` to permanently delete data that is related to a deleted instance.
 4. If an instance is not restored, all related data will be autonomously deleted after the data retention period.
 
 ### Deleting Event Notifications instances
