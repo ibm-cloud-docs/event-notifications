@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-10-18"
+lastupdated: "2021-10-27"
 
 keywords: event-notification, event notification, high availability, ha, monitoring, metrics, monitor apps
 
@@ -193,37 +193,29 @@ Total number of failed notifications of a particular type.
 | `Value Type` | `none`|
 | `Segment By` | `ibm_scope`, `ibm_ctype`, `ibm_location`,  `ibm_service_name`, `ibm_service_instance`, `ibm_eventnotifications_destination`, `ibm_eventnotifications_source`, `ibm_eventnotifications_type`,  |
 
-### ibm_eventnotifications_destination
-{: ibm_eventnotifications_destination}
+## Attributes for segmentation
+{: attributes-en}
 
-A string in the following format, Destination name ({Destination_id}
+### Global Attributes
+{: global-attributes-en}
 
-| Metadata   | Description |
-|-------------|-------------|
-| `Metric Name` | `ibm_eventnotifications_destination` |
-| `Metric Type` | `tag`|
-| `Value Type` | `none`|
+The following attributes are available for segmenting all of the metrics previously listed.
 
+| Attribute | Attribute Name | Attribute Description |
+|-----------|----------------|-----------------------|
+| `Cloud Type` | `ibm_ctype` | The cloud type is a value of `public`, `dedicated`, or `local`. |
+| `Location` | `ibm_location` | The location of the monitored resource, which can be a region, data center, or global. |
+| `Scope` | `ibm_scope` | The scope is the account, organization, or space GUID associated with this metric. |
+| `Service instance` | `ibm_service_instance` | The service instance segment identifies the instance that the metric is associated with. |
 
-### ibm_eventnotifications_source
-{: ibm_eventnotifications_source}
+### More attributes
+{: additional-attributes-en}
 
- A string in the following format, Source Name ({Source_id})
+The following attributes are available for segmenting one or more attributes as described in the previous tables. See the individual metrics for segmentation options.
 
-| Metadata   | Description |
-|-------------|-------------|
-| `Metric Name` | `ibm_eventnotifications_source` |
-| `Metric Type` | `tag`|
-| `Value Type` | `none`|
+| Attribute | Attribute Name | Attribute Description |
+|-----------|----------------|-----------------------|
+| `Name of the destination` | `ibm_eventnotifications_destination` | A destination name with its associated id. |
+| `Name of the source` | `ibm_eventnotifications_source` | A source name with its associated id. |
+| `Type of event notification` | `ibm_eventnotifications_type` | The type of notification, service-to-service or service-to-human. |
 
-
-### ibm_eventnotifications_type
-{: ibm_eventnotifications_type}
-
-Can have values like email/sms/webhook
-
-| Metadata   | Description |
-|-------------|-------------|
-| `Metric Name` | `ibm_eventnotifications_type` |
-| `Metric Type` | `tag`|
-| `Value Type` | `none`|
