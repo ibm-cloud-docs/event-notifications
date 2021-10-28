@@ -26,6 +26,9 @@ subcollection: event-notifications
 
 A destination is a delivery target for a notification. In other contexts, destinations are also called channels, sinks, consumers.
 {: shortdesc}
+
+SMS as an event destination is set to be active soon. Watch this space for the announce.
+{: important }
 ​
 ## Destinations categories
 ​{: #en-destination-categories}
@@ -44,5 +47,5 @@ Both  email and SMS destinations are provided out of the box, and are available 
 
 Service destinations; a cloud service or an application where notifications are consumed programmatically. The following service destination is supported by the {{site.data.keyword.en_short}} service:
 -  Webhook: to a backend microservice.
- 
+
 
