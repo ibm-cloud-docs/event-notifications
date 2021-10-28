@@ -19,17 +19,14 @@ subcollection: event-notifications
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-
-
 # Event destination
 {: #en-destination}
-
 A destination is a delivery target for a notification. In other contexts, destinations are also called channels, sinks, consumers.
 {: shortdesc}
 
 SMS as an event destination is set to be active soon. Watch this space for the announce.
-{: important }
-​
+{: note }
+
 ## Destinations categories
 ​{: #en-destination-categories}
 
