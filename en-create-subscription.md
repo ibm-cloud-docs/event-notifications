@@ -56,3 +56,20 @@ Of these, SMTP_IBM and SMS_IBM are supported out of the box.
 - Click `Create` in the subscription wizard.
 
 ![Enable the subscription](images/en-subscription3.png "Finish adding a destination"){: caption="Figure 4. Add a destination" caption-side="bottom"}
+
+## Unsubscribed 
+{: #en-unsubscribe-finish}
+{: step}
+
+You can subscribe to or unsubscribe from specific Event Notification email notifications. Also, users can explicitly opt out of receiving notifications for any subscription.
+
+- To unsubscribe, do the following:
+    - Under email subscription, click the `Unsubscribed` dialog to modify subscription settings and unsubscribe from mailing lists. 
+    - Select or deselect the `Unsubscribed` dialog, this automatically reflects in the subscription wizard. 
+	 
+- The role of an Admin:
+    - Only an admin can move or modify an unsubscribed email id to `Active`.
+    - Only an admin can clear unsubscribed email lists. 
+    - An admin cannot manually move or add users to the unsubscribed list.
+
+![Unsubscribed](images/en-unsubscribed4.png "Opting out of a subscription"){: caption="Figure 5. Add unsubscribed" caption-side="bottom"}
