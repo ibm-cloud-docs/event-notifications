@@ -72,4 +72,4 @@ You can subscribe to or unsubscribe from specific Event Notification email notif
     - Only an admin can clear unsubscribed email lists. 
     - An admin cannot manually move or add users to the unsubscribed list.
 
-![Unsubscribed](images/en-unsubscribed4.png "Opting out of a subscription"){: caption="Figure 5. Add unsubscribed" caption-side="bottom"}
+![Unsubscribed](images/en-unsubscribed4.png "Opting out of a subscription"){: caption="Figure 5. Add opting out of a subscription" caption-side="bottom"}
