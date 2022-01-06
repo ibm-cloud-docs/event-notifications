@@ -28,10 +28,6 @@ In this tutorial, we'll take you through the steps to get started.
 {: shortdesc}
 
 
-SMS as an event destination is set to be active soon. Watch this space for the announce.
-{: important }
-
-
 ## Pricing plans
 
 Currently, two pricing plans are on offer: **Lite**, and **Standard**
