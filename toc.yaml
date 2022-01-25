@@ -27,6 +27,7 @@ toc:
           topics:
           - en-destination-email.md
           - en-destination-sms.md
+          - en-destination-push.md
           - en-destination-webhook.md
          
 
