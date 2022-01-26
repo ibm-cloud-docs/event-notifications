@@ -58,4 +58,4 @@ In or example, the total outbound digital messages is:
 
 You are charged for messages that are successfully sent by the {{site.data.keyword.Bluemix_notm}} email service regardless of whether or not the not the remote email server successfully delivered the message to the recipient. For example, bounced emails still count as outbound digital messages, so vet your email list carefully to prevent unnecessary charges.
 
-You can monitor your email usage by setting up a monitoring dashboard through the Actions menu in the upper right corner of {{site.data.keyword.en_short}} dashboard.  See the "How To" documentation section for details.
+You can monitor your email usage by setting up a monitoring dashboard through the Actions menu in the upper right corner of {{site.data.keyword.en_short}} dashboard.  [See Monitor Event Notifications service metrics with IBM Cloud Monitoring](/docs/event-notifications?topic=event-notifications-en-monitor#en-monitoring) for details.
