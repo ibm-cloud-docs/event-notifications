@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2021
-lastupdated: "2021-11-29"
+  years: 2020, 2021, 2022
+lastupdated: "2022-01-25"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -19,13 +19,13 @@ subcollection: event-notifications
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Event notification relationship model
+# Event Notifications relationship model
 {: #en-relation}
 
 Cardinality principles and relationships that govern event notification flow from source to destination.
 {: shortdesc}
 
-![Event notification flow](images/en-overview1.png "Event notifications flow"){: caption="Figure 1. {{site.data.keyword.en_short}} relationship model" caption-side="bottom"}
+![Event notification flow](images/en-relationshipmodel.png "Event notifications flow"){: caption="Figure 1. {{site.data.keyword.en_short}} relationship model" caption-side="bottom"}
 
 ## Event notification flow
 {: #en-flow}

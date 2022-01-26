@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2021
-lastupdated: "2021-11-8"
+  years: 2020, 2021, 2022
+lastupdated: "2022-01-25"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -25,14 +25,14 @@ subcollection: event-notifications
  {{site.data.keyword.en_full}} is an event notification routing service that notifies you to critical events that occur in your {{site.data.keyword.Bluemix_notm}} account or triggers automated actions by using webhooks. You can filter and route event notifications from {{site.data.keyword.Bluemix_notm}} services like Monitoring, to email, SMS, and webhooks.
 {: shortdesc}
 
-![Event notifications schema](images/en-schema.png "Event notifications schema"){: caption="Figure 1. {{site.data.keyword.en_short}} schema" caption-side="bottom" }
+![Event notifications](images/en-topleveldiagram.png "Event notifications top level diagram"){: caption="Figure 1. {{site.data.keyword.en_short}}" caption-side="bottom" }
 
 ## Features
 {: #en-features}
 
 ### Centralized alert routing
 {: #en-features-routing}
-From a single dashboard, route event notifications from {{site.data.keyword.compliance_long}} (SCC), {{site.data.keyword.secrets-manager_full_notm}}, or {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.prf_hubshort}} to relevant stakeholders. Filter alerts by severity and choose a communication channel that is most appropriate, SMS for immediate priority and email for a secondary level of urgency.
+From a single dashboard, route event notifications from {{site.data.keyword.compliance_long}} (SCC), {{site.data.keyword.secrets-manager_full_notm}}, or {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.prf_hubshort}} to relevant stakeholders. Filter alerts by severity and choose a communication channel that is most appropriate, SMS or push for immediate priority and email for a secondary level of urgency.
 
 ### Filtered source events
 {: #en-features-filter}
@@ -40,7 +40,7 @@ Filter incoming events into one or more topics. Use filters to fine-tune topic c
 
 ### Built-in communication providers
 {: #en-features-providers}
-{{site.data.keyword.en_short}} provides basic email and SMS capability that is built in the service. Add the {{site.data.keyword.Bluemix_notm}} email or {{site.data.keyword.Bluemix_notm}} SMS destination to any {{site.data.keyword.en_short}} subscription for instant connectivity.
+{{site.data.keyword.en_short}} comes with basic email and SMS capability built in to the service. Add the {{site.data.keyword.Bluemix_notm}} email or {{site.data.keyword.Bluemix_notm}} SMS destination to any {{site.data.keyword.en_short}} subscription for instant connectivity.  With a few additional steps, you can add the push notification destnation to your source list and subscribe to that as well.
 
 ### Webhooks
 {: #en-features-webhooks}

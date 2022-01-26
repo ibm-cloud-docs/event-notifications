@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2021
-lastupdated: "2021-12-09"
+  years: 2020, 2021, 2022
+lastupdated: "2022-01-25"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -19,7 +19,7 @@ subcollection: event-notifications
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-# Event destination
+# Event destinations
 {: #en-destination}
 A destination is a delivery target for a notification. In other contexts, destinations are also called channels, sinks, consumers.
 {: shortdesc}
@@ -33,9 +33,11 @@ A destination is a delivery target for a notification. In other contexts, destin
 
 Human destinations; a device, server, or application that presents notifications for human consumption. The following human destinations are supported by the {{site.data.keyword.en_short}} service:
 - {{site.data.keyword.Bluemix_notm}} email service
+- {{site.data.keyword.Bluemix_notm}} push notification service
 - {{site.data.keyword.Bluemix_notm}} SMS service
 ​
-Both  email and SMS destinations are provided out of the box, and are available whenever you create an instance of {{site.data.keyword.en_short}}.
+
+Both email and SMS destinations are provided out of the box, and are available whenever you create an instance of {{site.data.keyword.en_short}}.  IBM Cloud push notification service must be added manually and requires some configuration.
 ​
 ### Service destinations
 {: #en-destination-service}
