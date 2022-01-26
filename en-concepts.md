@@ -20,7 +20,7 @@ subcollection: event-notifications
 {:tip: .tip}
 
 
-# {{site.data.keyword.en_short}} terms
+# {{site.data.keyword.en_short}} concepts
 {: #en-overview}
 
 
