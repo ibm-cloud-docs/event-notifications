@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021, 2022
-lastupdated: "2022-01-25"
+lastupdated: "2022-01-26"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -22,11 +22,16 @@ subcollection: event-notifications
 # Event Notifications relationship model
 {: #en-relation}
 
-The relationship between {{site.data.keyword.en_short}} sources, filters, topics, destinations, and subscriptions is shown Figure 1 below.  Topics have associated filters the determine which source events are published.  Topics can have multiple sources, each with their own filter.  Topics isolate events of interest from various sources and aggregate them into one entity.  Subscriptions tie topics to destinations.  While a single topic or destination can be associated with multiple subscriptions, a subscription is on-to-one, meaning it ties one topic to one destination.   For service-to-human channels, one subscription can contain multiple recipients.  For example, a subscription to an email destination is not restricted to just one email address but instead has a recipient list that may hold many addresses.
+{{site.data.keyword.en_short}} includes sources, filters, topics, destinations, and subscriptions.  The relationship between these is shown Figure 1 below.
 {: shortdesc}
 
 ![Event notification flow](images/en-relationshipmodel.png "Event notifications flow"){: caption="Figure 1. {{site.data.keyword.en_short}} relationship model" caption-side="bottom"}
 
+Events originate outside {{site.data.keyword.en_short}}, for example, from {{site.data.keyword.Bluemix_notm}} services. A 'source' within {{site.data.keyword.en_short}} represents a connection between {{site.data.keyword.en_short}} one of these event-producing services.  
+
+Topics have associated filters that determine which source events are published.  Topics can have multiple sources, each with their own filter.  Topics isolate events of interest from various sources and aggregate them into one entity.  
+
+Subscriptions tie topics to destinations.  While a single topic or destination can be associated with multiple subscriptions, a subscription is on-to-one, meaning it ties one topic to one destination.   For service-to-human channels, one subscription can contain multiple recipients.  For example, a subscription to an email destination is not restricted to just one email address but instead has a recipient list that may hold many addresses.
 
 ## Event notification flow
 {: #en-flow}
