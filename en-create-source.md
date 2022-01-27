@@ -47,8 +47,23 @@ The supported IBM Cloud Services can be seen under Add--> IBM managed services.
 
 ![Add topic details](images/en-source2.png "Source"){: caption="Figure 2. Add an IBM managed source" caption-side="bottom"}
 
-
 ## List of IBM provided sources
 {: #en-ibm-source-list}
 
 - [IBM Cloud Monitoring](https://cloud.ibm.com/catalog/services/ibm-cloud-monitoring?callback=%2Fobserve%2Fmonitoring%2Fcreate)
+
+
+## Add API source
+API sources offers users the ability to use {{site.data.keyword.en_short}} service API's independently withoud the need to for any Service to Service integration.
+You can create topics, and write their own rules or filters to recieve notifications when certain conditions (rules) are a match.
+
+With API sources you can send notifications to webhooks and android destinations as of now.
+
+API sources cannot route notifications to Email and sms destinations due to security and legal concerns.
+
+## Add API source
+{: #en-ibm-source-add}
+{: step}
+- Click `Add`, and select API source.
+
+![Add topic details](images/en-source3.png "Source"){: caption="Figure 2. Add an API source" caption-side="bottom"}
