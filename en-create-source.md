@@ -57,9 +57,7 @@ The supported IBM Cloud Services can be seen under Add--> IBM managed services.
 API sources offers users the ability to use {{site.data.keyword.en_short}} service API's to send notifications.
 You can create topics, and write their own rules or filters to recieve notifications when certain conditions (rules) are a match.
 
-With API sources you can send notifications to webhooks and android destinations as of now.
-
-API sources cannot route notifications to Email and sms destinations due to security and legal concerns.
+API sources cannot route notifications to IBM Email and IBM SMS destinations due to security and legal concerns.
 
 ## Add API source
 {: #en-ibm-source-add}
