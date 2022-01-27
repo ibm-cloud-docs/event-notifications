@@ -64,4 +64,4 @@ API sources cannot route notifications to IBM Email and IBM SMS destinations due
 {: step}
 - Click `Add`, and select API source.
 
-![Add topic details](images/en-source3.png "Source"){: caption="Figure 2. Add an API source" caption-side="bottom"}
+![Add topic details](images/en-source3.png "Source"){: caption="Figure 3. Add an API source" caption-side="bottom"}
