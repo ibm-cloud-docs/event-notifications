@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020, 2022
-lastupdated: "2022-01-25"
+lastupdated: "2022-01-31"
 
 keywords:
 
@@ -23,14 +23,14 @@ completion-time: 10m
 {: toc-services=""}
 {: toc-completion-time="10m"}
 
- {{site.data.keyword.en_full}} is an event notification routing service that notifies you to critical events that occur in your {{site.data.keyword.Bluemix_notm}} account or triggers automated actions by using webhooks. You can filter and route event notifications from {{site.data.keyword.Bluemix_notm}} services like Monitoring, Security and Compliance Center, and Secrets Manager to email, SMS, push notifications, and webhooks.
-In this tutorial, we'll take you through the steps to get started.
+ {{site.data.keyword.en_full}} is an event notification routing service that notifies you of critical events that occur in your {{site.data.keyword.Bluemix_notm}} account or triggers automated actions by using webhooks. You can filter and route event notifications from {{site.data.keyword.Bluemix_notm}} services like Monitoring, Security and Compliance Center, and Secrets Manager to communication channels like email, SMS, push notifications, and webhooks.
+This tutorial takes you through the steps to get started.
 {: shortdesc}
 
 
 ## Pricing plans
 
-Currently, two pricing plans are on offer: **Lite**, and **Standard**
+Currently, two pricing plans are on offer: Lite, and Standard.
 
 You need an {{site.data.keyword.cloud}} account. If you don't have an account, create one [here](https://cloud.ibm.com/registration/). Log in to your {{site.data.keyword.cloud}} account.
 {: note }
