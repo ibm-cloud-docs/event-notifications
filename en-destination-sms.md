@@ -42,7 +42,7 @@ To use the SMS service destination, add it to a subscription along with the phon
 
 If you add an individual to the recipient list who does not want to receive SMS notifications, the recipient can opt out by clicking a link in the SMS or, in some areas, replying to message with keyword `STOP`. You can track recipients who opt into the {{site.data.keyword.en_short}} dashboard.
 
-By adding phone numbers, you represent on behalf of yourself and your company that you have informed the individuals, to whom the added phone numbers pertain, of their addition to this recipient list and purpose thereof, and have the required consents to do so.
+By adding phone numbers, you represent on behalf of yourself and your company that you have properly informed the individuals, to whom the added phone numbers pertain, of their addition to this recipient list and purpose thereof, and have the required consents to do so.
 {:note: .note}
 
 ## SMS charges
@@ -67,4 +67,3 @@ In the example, the total SMS units for messages sent to destination numbers in 
 You are charged for messages that are successfully sent by the {{site.data.keyword.Bluemix_notm}} SMS service to the local SMS provider regardless of whether the message was successfully delivered to the local device. So vet your phone number list carefully to prevent unnecessary charges.
 
 You can monitor your SMS usage by setting up a monitoring dashboard through the `Actions` menu in the {{site.data.keyword.en_short}} dashboard. See [Monitor Event Notifications service metrics with IBM Cloud Monitoring](docs/event-notifications?topic=event-notifications-en-monitoring) for details.
-
