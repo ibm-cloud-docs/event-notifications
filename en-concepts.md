@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2021
-lastupdated: "2021-10-26"
+  years: 2020, 2022
+lastupdated: "2022-02-01"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -23,14 +23,17 @@ subcollection: event-notifications
 # {{site.data.keyword.en_short}} concepts
 {: #en-overview}
 
-
+Learn about {{site.data.keyword.en_full}} concepts such as filters, conditions, and topics.
+{: shortdesc}
 
 ## Event
 {: #en-event}
+
 An occurrence of something of interest that is associated with {{site.data.keyword.Bluemix_notm}} platform or services and apps that run on it.  
 
 ## Event notification
 {: #en-eventn}
+
 A digitized message that is triggered when an event occurs. Event notifications come in to the {{site.data.keyword.en_short}} service from event sources. Sometimes "event notification" is shortened to "event" or "notification" in the context of the {{site.data.keyword.en_short}} service.
 
 ## Event source
@@ -61,7 +64,7 @@ One of many criteria used for filtering. Event notifications whose attributes m
 
 - A landing place for filtered events. Topics hold a set of incoming event notifications of interest. Each source is connected to a topic through a user-defined filter. Notifications that pass into a topic are pushed to all subscribed destinations. A topic can connect to multiple sources. 
 
--  Event notifications that end up in a topic are routed to destinations. A topic can be connected to multiple sources. Although topics are innately coupled to sources (via filters), they are not innately coupled to destinations. That coupling happens through subscriptions.
+-  Event notifications that end up in a topic are routed to destinations. A topic can be connected to multiple sources. Although topics are innately coupled to sources using filters, they are not innately coupled to destinations. That coupling happens through subscriptions.
 
 ## Destination
 {: #en-destinations}
