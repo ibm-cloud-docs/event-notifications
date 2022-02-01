@@ -42,7 +42,7 @@ The emails originate from `no-reply@cloud.ibm.com` or `event-notifications@cloud
 
  If you add an individual to the recipient list who does not want to receive email notifications, the recipient can opt out by clicking a link in the footer of the email. You can track recipients who opt into the {{site.data.keyword.en_short}} dashboard.
 
-By adding email addresses, you represent on behalf of yourself and your company that you have informed the individuals, to whom the added emails pertain, of their addition to this recipient list and purpose thereof, and have the required consents to do so.
+By adding email addresses, you represent on behalf of yourself and your company that you have properly informed the individuals, to whom the added emails pertain, of their addition to this recipient list and purpose thereof, and have the required consents to do so.
 {:note: .note}
 
 ## Email charges
