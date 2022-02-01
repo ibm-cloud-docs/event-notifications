@@ -1,67 +1,77 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-10-20"
+  years: 2015, 2020, 2022
+lastupdated: "2022-02-01"
 
-keywords: event notifications, event-notifications, tutorials
+keywords: event notifications, event-notifications, source, tutorials
 
 subcollection: event-notifications
 
 content-type: tutorial
 services:
 account-plan: lite
-completion-time: 10m
+completion-time: 15m
 
 ---
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Create an {{site.data.keyword.en_short}} source
-{: #en-create-en-source}
+# Add an {{site.data.keyword.en_short}} source
+{: #en-add-source}
 
-**Source** is the initiator of events to the {{site.data.keyword.en_short}} service. Source information is also an ask for {{site.data.keyword.en_short}} event payload to track the actual initiator of the notification event, via the service.
+Various services produce events that can be consumed by {{site.data.keyword.en_short}}.  You can add these services as 'sources' within your {{site.data.keyword.en_short}} instance.  After a source is added, you can filter the events from it by using topics, and then subscribe destinations to the topics.  This tutorial describes how to add a source.
 {: shortdesc}
 
+## Types of sources
+{: #en-add-source-types}
 
-## IBM provided sources
-{: #en-ibm-source}
+There are two types of sources for {{site.data.keyword.en_short}}:  IBM-managed sources and generic API sources.  
 
-IBM provided sources are IBM services that offer users the ability to add {{site.data.keyword.en_short}} service as an add-on, create topics, and write their own rules or filters to receive notifications when certain conditions (rules) are a match.
+With IBM-managed sources, events emit from managed services on {{site.data.keyword.Bluemix_notm}}.  For example, {{site.data.keyword.Bluemix_notm}} Monitoring, {{site.data.keyword.Bluemix_notm}} Security and Compliance Center, and {{site.data.keyword.Bluemix_notm}} Secrets Manager can all be added to {{site.data.keyword.en_short}} IBM-managed sources.  To see the current list {{site.data.keyword.Bluemix_notm}} services available as {{site.data.keyword.en_short}} sources, visit the Sources section of your {{site.data.keyword.en_short}} dashboard, click the 'Add' button, an select 'IBM Managed Services'.
 
-This is enabled by IBM Cloud Services S2S integration with {{site.data.keyword.en_short}} service, as described
-[here](https://pages.github.ibm.com/Notification-Hub/planning/internal-adopters/onboarding-procedure.html).
+With generic API sources, events emanate from services or applications not managed by IBM. For example, if you create your own application that sends events to {{site.data.keyword.en_short}}, your application can be added as an API source.  
 
-The supported IBM Cloud Services can be seen under Add--> IBM managed services.
+API sources cannot route notifications to the {{site.data.keyword.Bluemix_notm}} Email service and {{site.data.keyword.Bluemix_notm}} SMS service because these services are meant to deliver content generated exclusively from {{site.data.keyword.Bluemix_notm}} managed services.
+{: note}
 
+The connection protocols differ between source types, so the procedure for adding is different as described below.
 
-![Add a source](images/en-source1.png "Source"){: caption="Figure 1. Add a source" caption-side="bottom"}
+## Add an IBM-managed source
+{: #en-add-source-IBM-managed}
 
-## Add IBM provided source
-{: #en-ibm-source-add}
+Verify the managed service is available as a source for {{site.data.keyword.en_short}}
 {: step}
-- Click `Add`, and select IBM Managed Service.
-- Visit that service's cloud dashboard.
-- Find existing service instances in your [account resource list](https://cloud.ibm.com/resources).
-- If you don't have an existing instance, create one from the [IBM Cloud catalog](https://cloud.ibm.com/catalog).
 
-![Add topic details](images/en-source2.png "Source"){: caption="Figure 2. Add an IBM managed source" caption-side="bottom"}
+- Visit the Sources section of the {{site.data.keyword.en_short}} dashboard.
+- Click `Add` and select IBM Managed Service.
+- Confirm the managed service of interest is shown.
 
-## List of IBM provided sources
-{: #en-ibm-source-list}
-
-- [IBM Cloud Monitoring](https://cloud.ibm.com/catalog/services/ibm-cloud-monitoring?callback=%2Fobserve%2Fmonitoring%2Fcreate)
-
-
-## Add API source
-API sources offers users the ability to use {{site.data.keyword.en_short}} service API's to send notifications.
-You can create topics, and write their own rules or filters to recieve notifications when certain conditions (rules) are a match.
-
-API sources cannot route notifications to IBM Email and IBM SMS destinations due to security and legal concerns.
-
-## Add API source
-{: #en-ibm-source-add}
+Create a service-to-service authorization between your managed service and {{site.data.keyword.en_short}}
 {: step}
-- Click `Add`, and select API source.
 
-![Add topic details](images/en-source3.png "Source"){: caption="Figure 3. Add an API source" caption-side="bottom"}
+- From the top bar of the {{site.data.keyword.Bluemix_notm}} console, select Manage >> Access(IAM) >> Authorizations
+- In the Authorizations view you will see dropdowns for Source service and Target service.  Select your managed service as the source, and {{site.data.keyword.en_short}} as the target.
+- Set the service access level to Event Source Manager.
+
+Find your instance of the managed service
+{: step}
+
+- Find your existing service instances in your [account resource list](https://cloud.ibm.com/resources).
+- Select the instance of interest and open its dashboard.
+
+If you don't have an existing instance, create one from the [{{site.data.keyword.Bluemix_notm}} catalog](https://cloud.ibm.com/catalog).
+{: tip}
+
+Configure your managed service instance to connect to {{site.data.keyword.en_short}}
+{: step}
+
+- Follow the documentation for the selected service to configure the connection to {{site.data.keyword.en_short}}.
+
+## Add a generic API source
+{: #en-add-source-generic-API}
+
+- Visit the Sources section of the {{site.data.keyword.en_short}} dashboard.
+- Click `Add` and select API Source.
+- Type a name and description (optional) and click `Add`.
+- Since you will be connecting from your own application or service, follow the instructions in the [{{site.data.keyword.en_short}} API documenation](https://cloud.ibm.com/apidocs/event-notifications/event-notifications?code=node) or in the SDK documentation for your programming language to configure the connection.
