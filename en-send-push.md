@@ -82,7 +82,7 @@ Each SDK repo contains instrumentation instructions for the selected platform.  
 
 ### Initialize your {{site.data.keyword.en_short}} SDK.
 
-To initialize the SDK, you will need credentials with IAM role of Event Notification Publisher.  Create these in the Service Credentials section of you {{site.data.keyword.en_short}} dashboard.  Specifically, you will need 'apikey' and 'region' from you credential set.
+To initialize the SDK, you will need credentials with IAM role of Manager.  Create these in the Service Credentials section of you {{site.data.keyword.en_short}} dashboard.  Specifically, you will need 'apikey' and 'region' from you credential set.
 
 To initialize the SDK you will need credentials with IAM role of Device Manager.  Create these in the Service Credentials section of you {{site.data.keyword.en_short}} dashboard.  'region' is also shown in the credential set if you need that.
 
