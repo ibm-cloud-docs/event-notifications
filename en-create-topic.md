@@ -9,7 +9,7 @@ keywords: event notifications, event-notifications, tutorials
 subcollection: event-notifications
 
 content-type: tutorial
-services: containers, Registry
+services: 
 account-plan: lite
 completion-time: 10m
 
@@ -81,4 +81,3 @@ If you do not select any rules, a default rule gets added, which means all notif
 Click `Create` in the topic wizard.
 
 ![Click Create to finish](images/en-topic5.png "Create"){: caption="Figure 5. Finish creating a topic" caption-side="bottom"}
-
