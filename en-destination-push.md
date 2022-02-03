@@ -9,7 +9,7 @@ keywords: event-notifications, event notifications, about event notifications, d
 subcollection: event-notifications
 
 content-type: tutorial
-services: containers, Registry
+services: 
 account-plan: lite
 completion-time: 10m
 
@@ -73,4 +73,3 @@ In the example, the total outbound digital messages is:
 You are charged for messages that are successfully sent by the {{site.data.keyword.Bluemix_notm}} push service to the push provider regardless of whether the message was successfully delivered to the local device. So vet your device list carefully to prevent unnecessary charges.
 
 You can monitor your push usage by setting up a monitoring dashboard through the `Actions` menu in the {{site.data.keyword.en_short}} dashboard. See [Monitor Event Notifications service metrics with IBM Cloud Monitoring](docs/event-notifications?topic=event-notifications-en-monitoring) for details.
-
