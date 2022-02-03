@@ -1,15 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-09-21"
+  years: 2015, 2022
+lastupdated: "2020-02-02"
 
 keywords: event notifications, event-notifications, tutorials
 
 subcollection: event-notifications
 
 content-type: tutorial
-services:
+services: 
 account-plan: lite
 completion-time: 10m
 
@@ -19,22 +19,25 @@ completion-time: 10m
 
 # Create an {{site.data.keyword.en_short}} destination
 {: #en-create-en-destination}
+{: #tutorial-create-destination}
+{: toc-content-type="tutorial"}
+{: toc-services="containers, Registry"}
+{: toc-completion-time="10m"}
 
-Destinations are custom protocols, which are either services or user reachable entities.
-Presently, {{site.data.keyword.en_short}} supports three destination types:
+Create an {{site.data.keyword.en_short}} destination. Destinations are custom protocols, which are either services or user reachable entities. Currently, {{site.data.keyword.en_short}} supports three destination types:
 - SMTP_IBM
 - SMS_IBM
 - Webhook
 {: shortdesc}
 
-Of these, email-ibm and email-sms are supported out of the box.
+email-ibm and email-sms are supported out of the box.
 
 
 ## Create a destination
 {: #en-create-destination}
 {: step}
 
-- Click destinations in the {{site.data.keyword.en_short}} console.
+Click destinations in the {{site.data.keyword.en_short}} console.
 
 ![Create a destination](images/en-dest1.png "Create a destination"){: caption="Figure 1. Create a destination" caption-side="bottom"}
 
@@ -43,9 +46,9 @@ Of these, email-ibm and email-sms are supported out of the box.
 {: #en-destination-details }
 {: step}
 
-- Destination name; name of the Destination.
-- Destination description; add a description for the destination, which is optional.
-- Destination type; select type under Destination.
+- Destination name: add a name for the Destination.
+- Destination description: add an optional description for the destination.
+- Destination type: select a type from the dropdown list.
 
 
 ![Add destination details](images/en-dest2.png "Destination details"){: caption="Figure 2. Add destination details" caption-side="bottom"}
@@ -54,6 +57,6 @@ Of these, email-ibm and email-sms are supported out of the box.
 {: #en-destination-finish}
 {: step}
 
-- Click `Add`.
+Click `Add`.
 
 ![Complete adding a destination](images/en-dest3.png "Finish adding a destination"){: caption="Figure 4. Add a destination" caption-side="bottom"}
