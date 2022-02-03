@@ -37,10 +37,12 @@ To send push notifications, you must use the Event Notifications API or an {{sit
 A summary of the tasks you complete is as follows:
 
 - Configure {{site.data.keyword.en_short}} to route push notifications.
+
 	- Create an API source to connect to your sending app. See [Create an {{site.data.keyword.en_short}} API source](/docs/event-notifications?topic=event-notifications-en-create-en-source) for more details.
 	- Create a topic to accept incoming notifications. See [Create an {{site.data.keyword.en_short}} topic](/docs/event-notifications?topic=event-notifications-en-create-en-topic) for more details.
 	- Create a push destination to connect to your receiving app. See [Create an {{site.data.keyword.en_short}} push destination for Android (FCM)](/docs/event-notifications?topic=event-notifications-en-create-en-destination-push-fcm) for more details.
 	- Create a subscription to tie everything together. See[Create an {{site.data.keyword.en_short}} subscription](/docs/event-notifications?topic=event-notifications-en-create-en-subscription) for more details.
+
 - Instrument the receiving application.
 - Test the receiving application with cURL or Postman.
 - Instrument the sending application.
