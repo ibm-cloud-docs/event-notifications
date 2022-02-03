@@ -94,7 +94,6 @@ Each SDK repo contains instrumentation instructions for the selected platform. T
 
 To initialize the SDK, you need credentials with IAM role of Manager. Create these credentials in the `Service Credentials` section of your {{site.data.keyword.en_short}} dashboard. You need `apikey` and `region` from you credential set.
 
-To initialize the SDK you also need credentials with IAM role of Device Manager. Create these credentials in the `Service Credentials` section of your {{site.data.keyword.en_short}} dashboard. `region` is also shown in the credential set.
 
 ### Configure your message
 {: #en-config-msg}
