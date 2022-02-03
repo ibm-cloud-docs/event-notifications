@@ -2,12 +2,16 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-02-01"
-
+lastupdated: "2022-02-02"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, push
 
 subcollection: event-notifications
+
+content-type: tutorial
+services: containers, Registry
+account-plan: lite
+completion-time: 10m
 
 ---
 
@@ -24,6 +28,10 @@ subcollection: event-notifications
 
 # {{site.data.keyword.Bluemix_notm}} push notification service
 {: #en-destinations-push}
+{: #tutorial-destinations-pusj}
+{: toc-content-type="tutorial"}
+{: toc-services="containers, Registry"}
+{: toc-completion-time="10m"}
 
 {{site.data.keyword.en_short}} provides a push notification service for sending transactional and informational event notifications to mobile devices. 
 {: shortdesc}
@@ -32,7 +40,7 @@ subcollection: event-notifications
 {: #en-destinations-push-add}
 
 
-Add an {{site.data.keyword.Bluemix_notm}} push notification destination to your instance of {{site.data.keyword.en_short}} by clicking the `Add` button in the `Destinations` view of the {{site.data.keyword.en_short}} dashboard. After a new push destination is created, you see an entry `{{site.data.keyword.Bluemix_notm}} push service` in the Destination list. You must configure your push destination by adding credentials for Apple Push Notification Service (APNS) or Firebase Cloud Messaging (FCM). See [Send a push notification using Event Notifications](docs/event-notifications?topic=event-notifications-en-send-push) for more details.
+Add an {{site.data.keyword.Bluemix_notm}} push notification destination to your instance of {{site.data.keyword.en_short}} by clicking the `Add` button in the `Destinations` view of the {{site.data.keyword.en_short}} dashboard. After a new push destination is created, you see an entry `{{site.data.keyword.Bluemix_notm}} push service` in the `Destination` list. You must configure your push destination by adding credentials for Apple Push Notification Service (APNS) or Firebase Cloud Messaging (FCM). See [Send a push notification using Event Notifications](docs/event-notifications?topic=event-notifications-en-send-push) for more details.
 
 Each application and platform requires a separate push destination.
 
