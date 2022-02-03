@@ -9,7 +9,7 @@ keywords: event notifications, event-notifications, tutorials, push, android, fi
 subcollection: event-notifications
 
 content-type: tutorial
-services: containers, Registry
+services: 
 account-plan: lite
 completion-time: 10m
 
