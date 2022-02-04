@@ -24,9 +24,9 @@ completion-time: 10m
 {: toc-services="containers, Registry"}
 {: toc-completion-time="10m"}
 
-Create an {{site.data.keyword.en_short}} destination. Destinations are custom protocols, which are either services or user reachable entities. Currently, {{site.data.keyword.en_short}} supports three destination types:
-- SMTP_IBM
-- SMS_IBM
+Create an {{site.data.keyword.en_short}} destination. Destinations are custom protocols, which are either services or user reachable entities. Currently, {{site.data.keyword.en_short}} supports three destinations:
+- IBM Cloud Email
+- IBM Cloud SMS
 - Webhook
 {: shortdesc}
 
