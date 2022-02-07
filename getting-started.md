@@ -1,15 +1,14 @@
 ---
 
 copyright:
-  years: 2015, 2020, 2022
-lastupdated: "2022-01-31"
+  years: 2015, 2022
+lastupdated: "2022-02-07"
 
 keywords:
 
 subcollection:
 
 content-type: tutorial
-services:
 account-plan: lite
 completion-time: 10m
 
@@ -20,7 +19,6 @@ completion-time: 10m
 # Getting started with {{site.data.keyword.en_short}}
 {: #getting-started}
 {: toc-content-type="tutorial"}
-{: toc-services=""}
 {: toc-completion-time="10m"}
 
  {{site.data.keyword.en_full}} is an event notification routing service that notifies you of critical events that occur in your {{site.data.keyword.Bluemix_notm}} account or triggers automated actions by using webhooks. You can filter and route event notifications from {{site.data.keyword.Bluemix_notm}} services like Monitoring, Security and Compliance Center, and Secrets Manager to communication channels like email, SMS, push notifications, and webhooks.

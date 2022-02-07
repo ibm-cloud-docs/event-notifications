@@ -2,14 +2,13 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-02"
+lastupdated: "2022-02-07"
 
 keywords: event notifications, event-notifications, tutorials, push, android, firebase, fcm
 
 subcollection: event-notifications
 
 content-type: tutorial
-services: 
 account-plan: lite
 completion-time: 10m
 
@@ -19,9 +18,7 @@ completion-time: 10m
 
 # Create an {{site.data.keyword.en_short}} push destination for Android (FCM)
 {: #en-create-en-destination-push-fcm}
-{: #tutorial-create-fcm}
 {: toc-content-type="tutorial"}
-{: toc-services="containers, Registry"}
 {: toc-completion-time="10m"}
 
 Create an {{site.data.keyword.en_short}} push destination configured for Firebase Cloud Messaging (FCM) to send messages to Android devices.

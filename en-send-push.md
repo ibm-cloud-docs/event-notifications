@@ -2,14 +2,13 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-02"
+lastupdated: "2022-02-07"
 
 keywords: event notifications, event-notifications, push, tutorials
 
 subcollection: event-notifications
 
 content-type: tutorial
-services: 
 account-plan: lite
 completion-time: 60m
 
@@ -19,9 +18,7 @@ completion-time: 60m
 
 # Send a push notification using {{site.data.keyword.en_short}}
 {: #en-send-push}
-{: #tutorial-send-push}
 {: toc-content-type="tutorial"}
-{: toc-services="containers, Registry"}
 {: toc-completion-time="60m"}
 
 This tutorial describes how to send push notifications using {{site.data.keyword.en_short}}.

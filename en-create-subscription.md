@@ -2,14 +2,13 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-02"
+lastupdated: "2022-02-07"
 
 keywords: event notifications, event-notifications, tutorials
 
 subcollection: event-notifications
 
 content-type: tutorial
-services: 
 account-plan: lite
 completion-time: 10m
 
@@ -19,9 +18,7 @@ completion-time: 10m
 
 # Create an {{site.data.keyword.en_short}} subscription
 {: #en-create-en-subscription}
-{: #tutorial-create-en-subscription}
 {: toc-content-type="tutorial"}
-{: toc-services="containers, Registry"}
 {: toc-completion-time="10m"}
 
 Create an {{site.data.keyword.en_short}} subscription. Destinations subscribe to topics. Multiple destinations can subscribe to a single topic. An email subscription is a list of all emails IDs, and an SMS subscription is a list of all phone numbers that a notification is routed to. A webhook subscription links a webhook destination to a topic.
