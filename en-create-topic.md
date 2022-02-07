@@ -2,14 +2,13 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2020-02-02"
+lastupdated: "2020-02-07"
 
 keywords: event notifications, event-notifications, tutorials
 
 subcollection: event-notifications
 
 content-type: tutorial
-services: 
 account-plan: lite
 completion-time: 10m
 
@@ -19,9 +18,7 @@ completion-time: 10m
 
 # Create an {{site.data.keyword.en_short}} topic
 {: #en-create-en-topic}
-{: #tutorial-create-en-topic}
 {: toc-content-type="tutorial"}
-{: toc-services="containers, Registry"}
 {: toc-completion-time="10m"}
 
 {Create an {{site.data.keyword.en_short}} topic. Topics are based on a publish and subscription model. You can send notifications or alerts to multiple destination types, (for example, email, SMS, and others that are subscribed to a particular topic. Configure topics as needed and {{site.data.keyword.en_short}} handles the routing and delivering of alerts reliably to the right destinations.

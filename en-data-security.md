@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2021
-lastupdated: "2021-09-14"
+  years: 2020, 2022
+lastupdated: "2021-02-07"
 
 keywords: data encryption in Event Notifications, data storage for Event Notifications, bring your own keys for Event Notifications, BYOK for Event Notifications, key management for Event Notifications, key encryption for Event Notifications, personal data in Event Notifications, data deletion for Event Notifications, data in Event Notifications, data security in Event Notifications, KYOK for Event Notifications
 
@@ -24,7 +24,7 @@ subcollection: Enhance security
 # Securing your data in {{site.data.keyword.en_short}}
 {: #en-mng-data}
 
-To ensure that you can securely manage your data when you use {{site.data.keyword.en_full}}, it is important to know exactly what data is stored and encrypted and how you can delete any stored data.
+To ensure that you can securely manage your data when you use {{site.data.keyword.en_full}}, you must know exactly what data is stored and encrypted and you must know how to delete any stored data.
 {: shortdesc}
 
 <!-- Work with your offering's SMEs to fill out the following sections as applicable to your offering. -->
@@ -50,12 +50,13 @@ https://test.cloud.ibm.com/docs/appid?topic=appid-mng-data -->
 
 The {{site.data.keyword.en_short}} data retention policy describes how long your data is stored after you delete the service. As in {{site.data.keyword.Bluemix_notm}} data retention policy you can [restore](/docs/account?topic=account-resource-reclamation&interface=cli#restore-resource-cli) a resource within 7 days after you delete it.
 
-### Command to delete data
+### Commands to delete data
+{: #en-data-delete-cmd}
 
 1. Log in to your {{site.data.keyword.Bluemix_notm}} account by using {{site.data.keyword.Bluemix_notm}} CLI from terminal.
-2. `ibmcloud resource reclamations` lists your deleted instance along with reclamation ID for it.
+2. `ibmcloud resource reclamations` lists your deleted instance along with the reclamation ID for it.
 3. Use `ibmcloud resource reclamation-delete <reclamation_id_for_instance>` to permanently delete data that is related to a deleted instance.
-4. If an instance is not restored, all related data will be autonomously deleted after the data retention period.
+4. If an instance is not restored, all related data is automatically deleted after the data retention period.
 
 ### Deleting Event Notifications instances
 {: #en-delete}
@@ -66,4 +67,4 @@ If you no longer need an instance of {{site.data.keyword.en_short}}, you can del
 ### Restoring deleted data for {{site.data.keyword.en_short}}
 {: #en-data-restore}
 
-To restore a deleted instance or to delete the instance permanently, you can use Resource Reclamations. Refer to [Using Resource Reclamations](/docs/account?topic=account-resource-reclamation) to know more about resource reclamation.
+To restore a deleted instance or to delete the instance permanently, you can use Resource Reclamations. See [Using Resource Reclamations](/docs/account?topic=account-resource-reclamation) for more information about resource reclamation.

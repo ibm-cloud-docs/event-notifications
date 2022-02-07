@@ -2,14 +2,13 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-02-02"
+lastupdated: "2022-02-07"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, push
 
 subcollection: event-notifications
 
 content-type: tutorial
-services: 
 account-plan: lite
 completion-time: 10m
 
@@ -28,9 +27,7 @@ completion-time: 10m
 
 # {{site.data.keyword.Bluemix_notm}} push notification service
 {: #en-destinations-push}
-{: #tutorial-destinations-pusj}
 {: toc-content-type="tutorial"}
-{: toc-services="containers, Registry"}
 {: toc-completion-time="10m"}
 
 {{site.data.keyword.en_short}} provides a push notification service for sending transactional and informational event notifications to mobile devices. 

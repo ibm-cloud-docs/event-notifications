@@ -2,14 +2,13 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-02"
+lastupdated: "2022-02-07"
 
 keywords: event notifications, event-notifications, source, tutorials
 
 subcollection: event-notifications
 
 content-type: tutorial
-services: 
 account-plan: lite
 completion-time: 15m
 
@@ -19,9 +18,7 @@ completion-time: 15m
 
 # Add an {{site.data.keyword.en_short}} source
 {: #en-add-source}
-{: #tutorial-add-source}
 {: toc-content-type="tutorial"}
-{: toc-services="containers, Registry"}
 {: toc-completion-time="15m"}
 
 Add an {{site.data.keyword.en_short}} source. Various services produce events that can be consumed by {{site.data.keyword.en_short}}. You can add these services as 'sources' within your {{site.data.keyword.en_short}} instance. When a source is added, you can filter the events from it by using topics, and then subscribe destinations to the topics.

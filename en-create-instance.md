@@ -2,14 +2,13 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-02"
+lastupdated: "2022-02-07"
 
 keywords: event notifications, event-notifications, tutorials
 
 subcollection: event-notifications
 
 content-type: tutorial
-services: 
 account-plan: lite
 completion-time: 10m
 
@@ -19,9 +18,7 @@ completion-time: 10m
 
 # Create an {{site.data.keyword.en_short}} service instance
 {: #en-create-en-instance}
-{: #tutorial-create-en-instance}
 {: toc-content-type="tutorial"}
-{: toc-services="containers, Registry"}
 {: toc-completion-time="10m"}
 
 Take the steps that get you started by creating an {{site.data.keyword.en_short}} service instance.
