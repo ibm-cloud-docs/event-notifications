@@ -47,8 +47,7 @@ If you are using static events (event type, event subtype and severity)
 ```
 {: codeblock}
 
-- When event type, event subtype and severity are provided, where event type is `bluemix. certificate_manager`, event subtype is `expiring_in_90_days` and severity is LOW then type would be
-`bluemix.certificate_manager:expiring_in_90_days` and severity would be LOW.
+- When event type, event subtype and severity are provided, where event type is `bluemix. certificate_manager`, event subtype is `expiring_in_90_days` and severity is LOW then type would be `bluemix.certificate_manager:expiring_in_90_days` and severity would be LOW.
 
 ```cmd
 "type":"bluemix.certificate_manager:expiring_in_90_days",
