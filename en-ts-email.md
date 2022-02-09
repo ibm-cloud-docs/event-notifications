@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2020
-lastupdated: "2020-11-24"
+  years: 2019, 2022
+lastupdated: "2022-02-24"
 
 keywords: question about event notifications, permission, destination, email
 
@@ -21,15 +21,15 @@ content-type: troubleshoot
 {: troubleshoot}
 {: support}
 
- Email(SMTP_IBM) and SMS(SMS_IBM) destinations are not seen as destination options.
+Email (SMTP_IBM) and SMS (SMS_IBM) destinations are not seen as destination options.
 {: shortdesc}
 
-While creating destinations, you are unable to see email(SMTP_IBM) and SMS(SMS_IBM) destination categories.
+While creating destinations, you are unable to see email (SMTP_IBM) and SMS (SMS_IBM) destination categories.
 {: tsSymptoms}
 
-Destinations SMTP_IBM and SMS_IBM are provided out of the box by {{site.data.keyword.en_short}}, and need not be created.
+Destinations SMTP_IBM and SMS_IBM are provided out of the box by {{site.data.keyword.en_short}}, and do need not be created.
 {: tsCauses}
 
-These`out of the box' destinations are readily available to create subscriptions.
+These `out of the box' destinations are readily available to create subscriptions.
 {: tsResolve}
 

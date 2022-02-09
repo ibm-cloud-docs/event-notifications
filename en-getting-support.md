@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2021
-lastupdated: "2021-09-15"
+  years: 2020, 2022
+lastupdated: "2022-02-09"
 
 keywords: event-notifications, event notification, getting help and support
 
@@ -22,7 +22,7 @@ subcollection: event-notifications
 # Getting help and support
 {: #en-getting-help-and-support}
 
-{{site.data.keyword.en_full}} provides troubleshooting information to isolate and resolve problems, and also offers  support. If you are unable to resolve your issue with the troubleshooting guide, open an IBM support case.
+{{site.data.keyword.en_full}} provides troubleshooting information to isolate and resolve problems, and also offers support. If you cannot resolve your issue with the troubleshooting guide, open an IBM support case.
 {: shortdesc}
 
 By default, account users don't have access to create, update, search, or view cases. The account owner must provide users access by assigning an {{site.data.keyword.iamlong}} (IAM) access policy. For more information, see [Assigning user access for working with support cases](/docs/get-support?topic=get-support-access#access){: external}.
@@ -31,9 +31,9 @@ By default, account users don't have access to create, update, search, or view c
 ## Creating a cloud support case
 {: #en-cloud-support-case}
 
-Refer [here](/docs/get-support?topic=get-support-using-avatar){: external}.
+See [Using the Support Center](/docs/get-support?topic=get-support-using-avatar){: external} for more information.
 
-### Creating a support case for UI issue
+### Creating a support case for a UI issue
 {: #ac-ui-support-case}
 
 Collecting the following information can help a faster support case resolution for UI issues
@@ -43,18 +43,18 @@ Collecting the following information can help a faster support case resolution f
 - Include the steps to reproduce the issue, along with your inputs and expected outputs.
 - Note the approximate time that the error occurred.
 - Provide the code version and error details:
-   1. Right-click on the console page and select the **Inspect** or **Inspect Element** option.
+   1. Right-click on the console page and select the `Inspect` or `Inspect Element` option.
    1. Scroll to the end of the output and copy any errors or stack traces.
 - Provide the network response:
-   1. While you inspect the page, click the **Network** tab.
+   1. While you inspect the page, click the `Network` tab.
    1. Refresh the page and reproduce the problem.
-   1. Starting at the end of the list, click each request and view the **Preview** tab. If the request has an "errors" node, expand that node to show the full error.
-   1. Click the **Response** tab and include the full response string and the URL that generated the response.
+   1. Starting at the end of the list, click each request and view the `Preview` tab. If the request has an "errors" node, expand that node to show the full error.
+   1. Click the `Response` tab and include the full response string and the URL that generated the response.
 
-### Creating a support case for non-UI issue
+### Creating a support case for non-UI issues
 {: #en-non-ui-support-case}
 
-Collecting the following information can help a faster support case resolution for non-UI issues,
+Collect the following information to get a faster support case resolution for non-UI issues:
 
 - guid
 - sourceName
