@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2020
-lastupdated: "2020-11-24"
+  years: 2019, 2022
+lastupdated: "2022-02-09"
 
 keywords: question about event notifications, permission, integrating, authorization, authorize
 
@@ -24,11 +24,11 @@ content-type: troubleshoot
 {: troubleshoot}
 {: support} 
 
-Denied permission while integrating an {{site.data.keyword.en_short}} service instance with an IBM Managed Service.
+You are denied permission while integrating an {{site.data.keyword.en_short}} service instance with an IBM Managed Service.
 {: shortdesc}
 
 
-'Permission denied' message, while integrating {{site.data.keyword.en_short}} service instance with IBM Managed Services. 
+You get a 'Permission denied' message, while integrating {{site.data.keyword.en_short}} service instance with IBM Managed Services. 
 {: tsSymptoms}
 
 {{site.data.keyword.en_short}} integration APIs use Service to Service [authorization](/docs/get-coding?topic=get-coding-grant-access).
