@@ -39,8 +39,7 @@ toc:
       - en-create-destination.md
       - en-create-subscription.md
       - en-create-source.md
-      - en-create-destination-fcm.md
-      - en-send-push.md
+      - en-create-send-push-fcm.md
 
 
   - navgroup:
