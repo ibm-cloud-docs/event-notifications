@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-07"
+lastupdated: "2022-02-16"
 
 keywords:
 
@@ -27,8 +27,9 @@ This tutorial takes you through the steps to get started.
 
 
 ## Pricing plans
+{: #en-pricing-plans}
 
-Currently, two pricing plans are on offer: Lite, and Standard.
+Currently, the following service plans are available: Lite, and Standard.
 
 You need an {{site.data.keyword.cloud}} account. If you don't have an account, create one [here](https://cloud.ibm.com/registration/). Log in to your {{site.data.keyword.cloud}} account.
 {: note }
