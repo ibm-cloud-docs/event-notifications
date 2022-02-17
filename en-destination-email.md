@@ -32,7 +32,7 @@ The emails originate from `no-reply@cloud.ibm.com` or `event-notifications@cloud
 ## Adding an email service destination
 {: #en-destinations-email-add}
 
-{{site.data.keyword.Bluemix_notm}} email service is a destination that is provided out-of-the-box. When a new instance is created, you see an entry `{{site.data.keyword.Bluemix_notm}} email service` in the destination tab. The email destination is pre-configured, and is ready to use.
+{{site.data.keyword.Bluemix_notm}} email service is a destination that is provided out-of-the-box. When a new instance is created, you see an entry `{{site.data.keyword.Bluemix_notm}} Email service` in the destination tab. The email destination is pre-configured, and is ready to use.
 
 
 ## Using an {{site.data.keyword.Bluemix_notm}} email service destination

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-07"
+lastupdated: "2022-02-16"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -31,10 +31,7 @@ Of these, SMTP_IBM and SMS_IBM are supported out-of-the box.
 {: #en-create-subscription}
 {: step}
 
-Click subscriptions in the {{site.data.keyword.en_short}} console.
-
-![Create a subscription](images/en-subscription1.png "Create a subscription"){: caption="Figure 1. Create a subscription" caption-side="bottom"}
-
+Click `Subscriptions` in the {{site.data.keyword.en_short}} console.
 
 ## Add subscription details
 {: #en-subscription-details }
@@ -42,20 +39,16 @@ Click subscriptions in the {{site.data.keyword.en_short}} console.
 
 - Click `Create` to display subscription wizard.
 - Fill in the following subscription details:
-    - Subscription name: name of the subscription.
-    - Subscription description: add an optional description.
+    - `Subscription name`: name of the subscription.
+    - `Subscription description`: add an optional description.
 - Under the `Subscribe to a topic` section, select a topic from the drop down list and select a destination from from the destination drop down list.
 - Destination type; select type under `Destination`.
-
-![Add subscription details](images/en-subscription2.png "Subscription details"){: caption="Figure 2. Add subscription details" caption-side="bottom"}
 
 ## Enable the subscription
 {: #en-subscription-finish}
 {: step}
 
 - Click `Create` in the subscription wizard.
-
-![Enable the subscription](images/en-subscription3.png "Finish adding a destination"){: caption="Figure 4. Add a destination" caption-side="bottom"}
 
 ## Unsubscribe 
 {: #en-unsubscribe-finish}
@@ -72,4 +65,3 @@ To unsubscribe, do the following:
 - Only an admin can clear unsubscribed email lists. 
 - An admin cannot manually move or add users to the unsubscribed list.
 
-![Unsubscribed](images/en-unsubscribed4.png "Opting out of a subscription"){: caption="Figure 5. Add opting out of a subscription" caption-side="bottom"}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-02-14"
+lastupdated: "2022-02-16"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, push
 
@@ -12,9 +12,9 @@ content-type: tutorial
 account-plan: lite
 completion-time: 10m
 
-
 ---
 
+{{site.data.keyword.attribute-definition-list}}
 {:codeblock: .codeblock}
 {:external: target="_blank" .external}
 {:important: .important}
@@ -23,6 +23,11 @@ completion-time: 10m
 {:screen: .screen}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
+{:download: .download}
+{:term: .term}
+{:external: target="_blank" .external}
+{:step: data-tutorial-type='step'}
+{:codeblock: .codeblock}
 
 # Create and send push notifications to Android mobile using {{site.data.keyword.en_full}}
 {: #en-create-send}
@@ -74,8 +79,6 @@ You must have the following prerequisites in place:
 * Select a `resource group`.
 * Click `Create`.
 
-![Create a service instance](images/en-create-event.png "Create a service instance"){: caption="Figure 2. Create a service instance" caption-side="bottom"}
-
 ## Get FCM credentials
 {: #en-get-fcm}
 {: step}
@@ -91,7 +94,7 @@ Firebase Cloud Messaging (FCM) is the gateway that delivers push notifications t
 * In the navigation panel, select the `settings` icon next to the `Project Overview` and select `Settings > Project settings`.
 * Click the `Cloud Messaging` tab to view your project credentials: `Server Key` and `Sender ID`.
 
-![FCM credentials](images/en-fcm-credentials.png "FCM credentials"){: caption="Figure 3. FCM credentials" caption-side="bottom"}
+![FCM credentials](images/en-fcm-credentials.png "FCM credentials"){: caption="Figure 2. FCM credentials" caption-side="bottom"}
 
 ##  Generate `google-services.json`
 {: #en-gen-google-services}
@@ -101,18 +104,18 @@ You also need to generate the `google-services.json` file. Complete the followin
 
 * In the Firebase console Project overview section, under `Get started by adding Firebase to your app` section click the `Android` icon.
 
-![Firebase getting started](images/en-firebase-get-started.png "Firebase getting started"){: caption="Figure 4. Firebase getting started" caption-side="bottom"}
+![Firebase getting started](images/en-firebase-get-started.png "Firebase getting started"){: caption="Figure 3. Firebase getting started" caption-side="bottom"}
 
 * In the `Add Firebase to your Android app` window, add `com.ibm.cloud.eventnotifications.destination.android` as the Package Name. The `App nickname` field is optional. 
 * Click Register app.
 
-![Add Firebase to your Android app](images/en-add-firebase.png "Add Firebase to your Android app"){: caption="Figure 5. Add Firebase to your Android app" caption-side="bottom"}
+![Add Firebase to your Android app](images/en-add-firebase.png "Add Firebase to your Android app"){: caption="Figure 4. Add Firebase to your Android app" caption-side="bottom"}
 
 * Include the package name of your application. Enter the package name in `Add Firebase to your Android app` window. The `App nickname` field is optional. 
 
 * Click `Register app`. See the following example:
 
-![Register Android app](images/en-add-firebase.png "Register Android app"){: caption="Figure 6. Register Android app" caption-side="bottom"}
+![Register Android app](images/en-add-firebase.png "Register Android app"){: caption="Figure 5. Register Android app" caption-side="bottom"}
 
 * *The `google-services.json` file is generated.
 * Download the latest config file `google-services.json` under Your apps.
@@ -127,8 +130,6 @@ Take the following steps:
 * Click `Add` and select an API Source.
 * Type a name and an optional description and click `Add`.
 
-![Add a generic API source](images/en-add-generic-api.png "Add a generic API source"){: caption="Figure 7. Add a generic API source" caption-side="bottom"}
-
 ## Create an {{site.data.keyword.en_short}} destination
 {: #en-create-dest}
 {: step}
@@ -139,8 +140,6 @@ Click `Destinations` in the {{site.data.keyword.en_short}} console and add the f
 * `Destination description`: add an optional description for the destination.
 * `Destination type`: select Android Push Notifications type from the dropdown list.
 * Update the FCM Push Credentials with the `Sender ID/Project number` and `Server Key`. You can get these details from your `Firebase Console Project Settings > Cloud Messaging` section.
-
-![Destination details](images/en-dest-details.png "Destination details"){: caption="Figure 8. Destination details" caption-side="bottom"}
 
 ## Create an {{site.data.keyword.en_short}} topic
 {: #en-create-topic}
@@ -155,8 +154,6 @@ Select `Topics` in the Event Notifications console and click `Create`. Enter the
 * `Severity`: select severity from the severity dropdown list.
 * `Advanced conditions`: write your own custom conditions, which must follow [jsonpath specifications](https://jsonpath.com/).
 
-![Create a topic](images/en-create-topic.png "Create a topic"){: caption="Figure 9. Create a topic" caption-side="bottom"}
-
 ## Create an {{site.data.keyword.en_short}} subscription
 {: #en-create-sub}
 {: step}
@@ -170,8 +167,6 @@ Click `Subscriptions` in the {{site.data.keyword.en_short}} console. Enter the f
 * Under the `Subscribe to a topic` section, select a topic from the drop-down list and select a destination from the destination drop-down list.
 * `Destination type`: select type under `Destination` and click `Add`.
 
-![Create a subscription](images/en-create-subscription.png "Create a subscription"){: caption="Figure 10. Create a subscription" caption-side="bottom"}
-
 ## Set up {{site.data.keyword.en_short}} Android SDK
 {: #en-setup-android-sdk}
 {: step}
@@ -183,6 +178,7 @@ The Android SDK enables Android apps to receive push notifications. Complete the
 ```gradle
 compile 'com.ibm.cloud:eventnotifications-destination-android:0.0.1'
 ```
+ {: codeblock}
 
 * Follow [event-notifications-destination-android-sdk](https://github.com/IBM/event-notifications-destination-android-sdk) to install the SDK.
 
@@ -201,6 +197,8 @@ enPush.setCloudRegion(ENPush.REGION_US_SOUTH); // Set your region
 
 enPush.initialize(getApplicationContext(),instanceGUID,destinationID, apiKey);
 ```
+ {: codeblock}
+
 * When the SDK is initialized, [register](https://github.com/IBM/event-notifications-destination-android-sdk#register-for-notifications) for push notifications.
 
 ```java
@@ -218,6 +216,7 @@ enPush.initialize(getApplicationContext(),instanceGUID,destinationID, apiKey);
 		}
 	});
 ```
+ {: codeblock}
 
 * Add the Notifications listener for receiving the notification in your application.
 
@@ -231,12 +230,15 @@ ENPushNotificationListener notificationListener = new ENPushNotificationListener
     }	
 };
 ```
+ {: codeblock}
 
 ```java
     if(enPush != null) {
       enPush.listen(notificationListener);
     }
 ```
+ {: codeblock}
+ 
 * When the setup is complete, run your application and register for push notifications.
 
 ## Send notifications to the Android device
@@ -245,6 +247,6 @@ ENPushNotificationListener notificationListener = new ENPushNotificationListener
 
 Use the [Send Notification API](https://cloud.ibm.com/apidocs/event-notifications/event-notifications#send-notifications) to send the push notification for the Android device. You can use the [Node](mailto:https://github.com/IBM/event-notifications-node-admin-sdk#send-notifications) or [Go](https://github.com/IBM/event-notifications-go-admin-sdk#send-notifications) admin SDK instead of calling the API directly.
 
-![Send notifications](images/en-send-notifications.png "Send notifications"){: caption="Figure 11. Send notifications" caption-side="bottom"}
+![Send notifications](images/en-send-notifications.png "Send notifications"){: caption="Figure 6. Send notifications" caption-side="bottom"}
 
-![Receive notifications](images/en-receive-push.png "Receive notifications"){: caption="Figure 12. Receive notifications" caption-side="bottom"}
+![Receive notifications](images/en-receive-push.png "Receive notifications"){: caption="Figure 7. Receive notifications" caption-side="bottom"}
