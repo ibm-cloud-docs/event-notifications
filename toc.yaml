@@ -55,6 +55,7 @@ toc:
           topics:
           - en-audit.md
           - en-data-security.md
+          - en-service-credentials.md
 
 #  Links to your REST API docs should be included in the Reference navigation group. For details on publishing API docs, see https://test.cloud.ibm.com/docs/api-docs.
 #  Links to your command line reference docs should be included in the Reference navigation group.
@@ -71,8 +72,6 @@ toc:
           label: High availability and disaster recovery
           topics:
           - en-high-availability.md
-          - en-service-credentials.md
-          - en-responsibilities.md
           - en-regions-endpoints.md
 
 
@@ -80,6 +79,7 @@ toc:
       id: help
       topics:
       - en-getting-support.md
+      - en-responsibilities.md
       - topicgroup:
           label: FAQs
           topics:

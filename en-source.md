@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-02-01"
+lastupdated: "2022-02-18"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -27,7 +27,7 @@ subcollection: event-notifications
 An event source is a service or application on {{site.data.keyword.Bluemix_notm}} that emits event notifications and publishes them to a topic within the {{site.data.keyword.en_short}} service. A source is a registered entity in an {{site.data.keyword.en_short}} service instance. Several services on {{site.data.keyword.Bluemix_notm}} are set to be integrated to send notifications to {{site.data.keyword.en_short}}.
 {: shortdesc}
 
-{{site.data.keyword.monitoringfull}} is enabled while {{site.data.keyword.compliance_long}}, and {{site.data.keyword.secrets-manager_full_notm}} are in the pipeline. A source can publish to multiple topics. In other contexts sources are identified as producers or publishers.
+A source can publish to multiple topics. In other contexts sources are identified as producers or publishers.
 
 ## IBM provided sources
 {: #en-ibm-sources-list}

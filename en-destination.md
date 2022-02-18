@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-02-01"
+lastupdated: "2022-02-18"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -25,8 +25,10 @@ subcollection: event-notifications
 A destination is a delivery target for a notification. In other contexts, destinations are also called channels, sinks, or consumers.
 {: shortdesc}
 
-## Destinations categories
+## Destination categories
 ​{: #en-destination-categories}
+
+There are two destination categories : human and service.
 
 ### Human destinations
 {: #en-destination-human}
