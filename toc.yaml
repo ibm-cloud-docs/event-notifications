@@ -18,7 +18,6 @@ toc:
       - en-about.md
       - en-concepts.md
       - en-reln-model.md
-      - en-release-notes.md
       - en-source.md
       - en-destination.md
       - topicgroup:
@@ -28,7 +27,8 @@ toc:
           - en-destination-sms.md
           - en-destination-push.md
           - en-destination-webhook.md
-         
+      - topic: en-release-notes.md
+        navtitle: Release notes
 
 
   - navgroup:
