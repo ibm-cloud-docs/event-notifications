@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2020-02-16"
+lastupdated: "2020-02-18"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -51,7 +51,12 @@ Add the following rules to your topic:
 - `Event type`: select event type from the dropdown list.
 - `Event subtype`: select event sub type from the event sub type dropdown list.
 - `Severity`: select severity from the severity dropdown list.
-- `Advanced conditions`: create your own custom conditions, which must follow [jsonpath specifications](https://jsonpath.com/).
+- `Advanced conditions`: create your own custom conditions, which must follow [jsonpath specifications](https://jsonpath.com/). Example:
+
+```bash
+$.data.severity=='LOW'
+```
+{: codeblock}
 
 ## Finish adding rules to your topic
 {: #en-topic-condition}
@@ -59,7 +64,7 @@ Add the following rules to your topic:
 
 Click `Add a condition`.
 
-If you do not select any rules, a default rule gets added, which means all notifications route to the topic by default.
+If you do not select any rules, a default rule is added, which means all notifications route to the topic by default.
 {: note}
 
 ## Create a topic
