@@ -25,6 +25,9 @@ content-type: release-note
 # Release notes for {{site.data.keyword.en_short}}
 {: #release-notes}
 
+Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
+{: note}
+
 ## 31 January 2022
 {: #event-notifications-Jan3122}
 {: release-note}
