@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2021-02-07"
+lastupdated: "2022-02-07"
 
 keywords: data encryption in Event Notifications, data storage for Event Notifications, bring your own keys for Event Notifications, BYOK for Event Notifications, key management for Event Notifications, key encryption for Event Notifications, personal data in Event Notifications, data deletion for Event Notifications, data in Event Notifications, data security in Event Notifications, KYOK for Event Notifications
 
@@ -27,8 +27,6 @@ subcollection: Enhance security
 To ensure that you can securely manage your data when you use {{site.data.keyword.en_full}}, you must know exactly what data is stored and encrypted and you must know how to delete any stored data.
 {: shortdesc}
 
-<!-- Work with your offering's SMEs to fill out the following sections as applicable to your offering. -->
-
 ## How your data is stored and encrypted in {{site.data.keyword.en_short}}
 {: #en-data-storage}
 
@@ -39,11 +37,6 @@ To ensure that you can securely manage your data when you use {{site.data.keywor
 {: #en-data-encryption}
 
 The data that you store in the {{site.data.keyword.en_short}} instance is encrypted at rest by using a randomly generated key, which is in turn protected by Key Protect, managed by {{site.data.keyword.en_short}} service.
-
-<!-- Some other examples that support both Key Protect and Hyper Protect Crypto Services:
-Event Streams: https://test.cloud.ibm.com/docs/EventStreams?topic=EventStreams-managing_encryption
-https://test.cloud.ibm.com/docs/appid?topic=appid-mng-data -->
-
 
 ## Deleting your data in {{site.data.keyword.en_short}}
 {: #en-data-delete}
