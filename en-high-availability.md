@@ -6,7 +6,7 @@ lastupdated: "2022-02-09"
 
 keywords: HA for Event Notifications, high availability for Event Notifications, Event Notifications
 
-subcollection: _your-subcollection_
+subcollection: event-notifications
 
 ---
 

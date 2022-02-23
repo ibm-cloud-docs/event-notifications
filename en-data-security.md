@@ -6,7 +6,7 @@ lastupdated: "2022-02-07"
 
 keywords: data encryption in Event Notifications, data storage for Event Notifications, bring your own keys for Event Notifications, BYOK for Event Notifications, key management for Event Notifications, key encryption for Event Notifications, personal data in Event Notifications, data deletion for Event Notifications, data in Event Notifications, data security in Event Notifications, KYOK for Event Notifications
 
-subcollection: Enhance security
+subcollection: event-notifications
 
 ---
 

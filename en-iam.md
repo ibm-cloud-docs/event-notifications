@@ -6,7 +6,7 @@ lastupdated: "2022-02-07"
 
 keywords: event notifications, event notification, notifications, service access, manage, user roles
 
-subcollection: mobilepush
+subcollection: event-notifications
 
 ---
 
