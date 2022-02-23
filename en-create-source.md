@@ -80,6 +80,8 @@ Follow the documentation for the selected service to configure the connection to
 {: #en-add-source-generic-API}
 {: step}
 
+API Sources can not be used to send notifications to out of the box destinations like email and SMS. {: note }
+
 - Go to the `Sources` section of the {{site.data.keyword.en_short}} dashboard.
 - Click `Add` and select `API Source`.
 - Type a name and an optional description and click `Add`.
