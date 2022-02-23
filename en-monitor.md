@@ -152,6 +152,7 @@ Next, change the scope or make a copy of the default dashboard to monitor an {{s
  | [ibm_eventnotifications_total_ingested_notifications](#ibm_eventnotifications_total_ingested_notifications)|
  | [ibm_eventnotifications_total](#ibm_eventnotifications_total)|
  | [ibm_eventnotifications_failed](#ibm_eventnotifications_failed)|
+ | [ibm_eventnotifications_devices](#ibm_eventnotifications_devices)|
 {: caption="Table 2. Metrics available by service plan" caption-side="top"}
 
 ### ibm_eventnotifications_total_ingested_notifications
@@ -194,6 +195,19 @@ Total number of failed notifications of a particular type.
 | `Segment By` | `ibm_scope`, `ibm_ctype`, `ibm_location`,  `ibm_service_name`, `ibm_service_instance`, `ibm_eventnotifications_destination`, `ibm_eventnotifications_source`, `ibm_eventnotifications_type`,  |
 {: caption="Table 5. Failed notifications metadata" caption-side="top"}
 
+### ibm_eventnotifications_devices
+{: #ibm_eventnotifications_devices}
+
+Total number of push notification devices registered.
+
+| Metadata   | Description |
+|-------------|-------------|
+| `Metric Name` | `ibm_eventnotifications_devices` |
+| `Metric Type` | `gauge`|
+| `Value Type` | `none`|
+| `Segment By` | `ibm_scope`, `ibm_ctype`, `ibm_location`,  `ibm_service_name`, `ibm_service_instance`, `ibm_eventnotifications_destination`,  `ibm_eventnotifications_device_type`,  |
+{: caption="Table 5. Total devices registered" caption-side="top"}
+
 ## Attributes for segmentation
 {: #attributes-en}
 
@@ -220,4 +234,5 @@ The following attributes are available for segmenting one or more attributes as 
 | `Name of the destination` | `ibm_eventnotifications_destination` | A destination name with its associated id. |
 | `Name of the source` | `ibm_eventnotifications_source` | A source name with its associated id. |
 | `Type of event notification` | `ibm_eventnotifications_type` | The type of supported destination types. (email, sms or webhook) |
+| `Type of push notification device` | `ibm_eventnotifications_device_type` | The type of supported push notification device.(push_android, push_ios) |
 {: caption="Table 7. More attributes" caption-side="top"}
