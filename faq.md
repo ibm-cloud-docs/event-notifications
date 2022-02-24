@@ -6,14 +6,14 @@ lastupdated: "2022-02-09"
 
 keywords: event-notification, event notification, faqs, Frequently Asked Questions, question, billing, service
 
-subcollection: event-notification
+subcollection: event-notifications
 
 ---
 
 {:codeblock: .codeblock}
 {:external: target="_blank" .external}
 {:important: .important}
-{:note .note}
+{:note: .note}
 {:pre: .pre}
 {:screen: .screen}
 {:shortdesc: .shortdesc}

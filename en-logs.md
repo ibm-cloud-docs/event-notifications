@@ -6,7 +6,7 @@ lastupdated: "2021-10-18"
 
 keywords: event notifications logDNA , event notifications logging, event notifications external logs
 
-subcollection: event notifications
+subcollection: event-notifications
 
 ---
 

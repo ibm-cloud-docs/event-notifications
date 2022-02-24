@@ -4,9 +4,9 @@ copyright:
   years: 2015, 2022
 lastupdated: "2022-02-18"
 
-keywords:
+keywords: event notifications, IBM Cloud
 
-subcollection:
+subcollection: event-notifications
 
 content-type: tutorial
 account-plan: lite
@@ -21,10 +21,10 @@ completion-time: 10m
 {: toc-content-type="tutorial"}
 {: toc-completion-time="10m"}
 
- {{site.data.keyword.en_full}} is a routing service that tells you about critical events that occur in your {{site.data.keyword.Bluemix_notm}} account or triggers automated actions by using webhooks. You can filter and route event notifications from {{site.data.keyword.Bluemix_notm}} services like Monitoring, Security and Compliance Center, and Secrets Manager to communication channels like email, SMS, push notifications, and webhooks.
-This tutorial takes you through the steps to get started.
+{{site.data.keyword.en_full}} is a routing service that tells you about critical events that occur in your {{site.data.keyword.Bluemix_notm}} account or triggers automated actions by using webhooks. You can filter and route event notifications from {{site.data.keyword.Bluemix_notm}} services like Monitoring, Security and Compliance Center, and Secrets Manager to communication channels like email, SMS, push notifications, and webhooks.
 {: shortdesc}
 
+This tutorial takes you through the steps to get started.
 
 ## Pricing plans
 {: #en-pricing-plans}
@@ -32,10 +32,9 @@ This tutorial takes you through the steps to get started.
 Currently, the following service plans are available: Lite, and Standard.
 
 You need an {{site.data.keyword.cloud}} account. If you don't have an account, create one [here](https://cloud.ibm.com/registration/). Log in to your {{site.data.keyword.cloud}} account.
-{: note }
+{: note}
 
 Refer to {{site.data.keyword.en_short}} service [terms](/docs/event-notifications?topic=event-notifications-en-overview)
-
 
 ## Basic steps to get you started
 {: #getting-started-steps}
