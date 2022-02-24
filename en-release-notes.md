@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-31-Jan"
+lastupdated: "2022-02-24"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -32,7 +32,7 @@ Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, sec
 {: #event-notifications-Jan3122}
 {: release-note}
 
-New destination:  Firebase Cloud Messsaging (FCM) push notifications for Android
+New destination:  Firebase Cloud Messaging (FCM) push notifications for Android
 :   FCM is now available as a destination.   Send push notifications from your application to Android devices. For details, see [Create and send push notifications to Android mobile using IBM Cloud® Event Notifications](/docs/event-notifications?topic=event-notifications-en-create-send).
 
 ## 03 Feb 2022
@@ -47,7 +47,7 @@ New source : IBM Cloud Secrets Manager
 {: #event-notifications-Dec1421}
 {: release-note}
 
-New source : IBM Security and Compliance Centre (SCC).
+New source : {{site.data.keyword.compliance_full}} (SCC).
 :   Integrating SCC with Event Notifications can help you route security events via supported channels. For details, see [Enabling event notifications for Security and Compliance Center](/docs/security-compliance?topic=security-compliance-event-notifications&interface=ui).
 
 ## 28 Oct 2021
