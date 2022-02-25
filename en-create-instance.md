@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-16"
+lastupdated: "2022-02-24"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -40,9 +40,12 @@ Select a `Location`. Currently, Dallas (us-south), London (eu-gb), and Sydney (a
 {: #en-pricing}
 {: step}
 
-Currently, only `Lite` and `Standard` pricing plans are defined. 
-With the `Lite` plan, you get unlimited ingested events, 1 topic, and 100 outbound digital messages of any type per month.
-With the `Standard` plan, you are charged for ingested events and for outbound digital messages. An ingested event is one that is received and filtered. If a source is connected but no filters are defined for it, the incoming events are dropped and you are not charged. Outbound digital messages come in various types, and each type is priced separately.
+Currently, only `Lite` and `Standard` pricing plans are defined as follows:
+
+* `Lite` plan: This plan gives you unlimited ingested events, 10 topics, two filters per topic, five destinations, 20 outbound emails, 20 outbound SMSes, 20 outbound webhooks, and 1000 notifications per push destination. 10 subscriptions are allowed, and a subscription can have a maximum of three email recipients.
+
+
+* `Standard` plan: You are charged for ingested events and for outbound digital messages. An ingested event is one that is received and filtered. If a source is connected but no filters are defined for it (in other words, the source is not associated with any topic), the incoming events are dropped, and you are not charged.  Outbound digital messages come in various types, and each type is priced separately.
 
 ## Add a service name
 {: #en-configure}
@@ -67,4 +70,3 @@ Define optional tags that identify this service instance.
 {: step}
 
 Click `Create`. A new service instance is created and the {{site.data.keyword.en_short}} console is displayed.
-

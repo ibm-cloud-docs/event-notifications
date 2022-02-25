@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-16"
+lastupdated: "2022-02-24"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -21,8 +21,10 @@ completion-time: 10m
 {: toc-content-type="tutorial"}
 {: toc-completion-time="10m"}
 
-Create an {{site.data.keyword.en_short}} destination. Destinations are custom protocols, which are either services or user reachable entities. Currently, {{site.data.keyword.en_short}} supports three destinations:
+Create an {{site.data.keyword.en_short}} destination. Destinations are custom protocols, which are either services or user reachable entities. Currently, {{site.data.keyword.en_short}} supports the following destinations:
+
 - IBM Cloud Email
+- IBM Cloud push notification service
 - IBM Cloud SMS
 - Webhook
 {: shortdesc}

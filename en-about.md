@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-02-01"
+lastupdated: "2022-02-24"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -22,7 +22,7 @@ subcollection: event-notifications
 # What is {{site.data.keyword.en_short}}? 
 {: #en-about}
 
- {{site.data.keyword.en_full}} is an event notification routing service that notifies you of critical events that occur in your {{site.data.keyword.Bluemix_notm}} account or triggers automated actions. You can filter and route event notifications from {{site.data.keyword.Bluemix_notm}} services like Monitoring, to communication channels like email, SMS, and webhooks.
+{{site.data.keyword.en_full}} is a routing service that tells you about critical events that occur in your {{site.data.keyword.Bluemix_notm}} account or triggers automated actions by using webhooks. You can filter and route event notifications from {{site.data.keyword.Bluemix_notm}} services like Monitoring, to communication channels like email, SMS, and webhooks.
 {: shortdesc}
 
 ![Event notifications](images/en-topleveldiagram.png "Event notifications top-level diagram"){: caption="Figure 1. {{site.data.keyword.en_short}}" caption-side="bottom" }
