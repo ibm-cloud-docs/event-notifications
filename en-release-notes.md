@@ -28,12 +28,12 @@ content-type: release-note
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
 
-## 31 January 2022
-{: #event-notifications-Jan3122}
+## 28 February 2022
+{: #event-notifications-Feb2822}
 {: release-note}
 
-New destination: Firebase Cloud Messaging (FCM) push notifications for Android
-:   FCM is now available as a destination. Send push notifications from your application to Android devices. For more information, see [Create and send push notifications to Android mobile using IBM Cloud® Event Notifications](/docs/event-notifications?topic=event-notifications-en-create-send).
+New destination: Apple Push Notification Service (APNs) for iOS
+:   APNs is now available as a destination. Send push notifications from your application to iOS devices. For more information, see [Create and send push notifications to iOS mobile using IBM Cloud® Event Notifications](/docs/event-notifications?topic=event-notifications-en-create-send-apns).
 
 ## 03 Feb 2022
 {: #event-notifications-Feb0322}
@@ -42,6 +42,12 @@ New destination: Firebase Cloud Messaging (FCM) push notifications for Android
 New source: {{site.data.keyword.secrets-manager_full}}
 :   Integrating {{site.data.keyword.secrets-manager_short}} with Event Notifications can help you route life cycle events for your secrets by using supported channels. For more information, see [Enabling event notifications for Secrets Manager](/docs/secrets-manager?topic=secrets-manager-event-notifications&interface=ui).
 
+## 31 January 2022
+{: #event-notifications-Jan3122}
+{: release-note}
+
+New destination: Firebase Cloud Messaging (FCM) push notifications for Android
+:   FCM is now available as a destination. Send push notifications from your application to Android devices. For more information, see [Create and send push notifications to Android mobile using IBM Cloud® Event Notifications](/docs/event-notifications?topic=event-notifications-en-create-send).
 
 ## 14 Dec 2021
 {: #event-notifications-Dec1421}
