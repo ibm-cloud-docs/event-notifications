@@ -105,17 +105,17 @@ The App ID (the bundle identifier) is a unique identifier that identifies a spec
 * Select the App IDs option.
 ![App IDs option](images/en-apns-app-id-option.png "App IDs option"){: caption="Figure 4. App IDs option" caption-side="bottom"}
 * Select a type and click `Continue`.
-![App ID type](images/en-apns-app-id-type.png "App ID type"){: caption="Figure 2. App ID type" caption-side="bottom"}
+![App ID type](images/en-apns-app-id-type.png "App ID type"){: caption="Figure 5. App ID type" caption-side="bottom"}
 * Provide a string for the App ID Prefix. Provide the App name in the Description field. For example, Event Notifications iOS application.
 * For the Bundle ID, choose Explicit and provide a Bundle ID value. It is recommended that you provide a reverse domain-name style string. For example, `com.ibm.cloud.en.app`.
-![Create new App ID details](images/en-apns-app-id-details.png "Create new App ID details"){: caption="Figure 5. Create new App ID details" caption-side="bottom"}
+![Create new App ID details](images/en-apns-app-id-details.png "Create new App ID details"){: caption="Figure 6. Create new App ID details" caption-side="bottom"}
 * Select the `Push Notifications` check-box from the Capabilities and click `Continue`.
-![Enable Push Notifications](images/en-apns-app-id-enable-push-notifications.png "Enable Push Notifications"){: caption="Figure 2. Enable Push Notifications" caption-side="bottom"}
+![Enable Push Notifications](images/en-apns-app-id-enable-push-notifications.png "Enable Push Notifications"){: caption="Figure 7. Enable Push Notifications" caption-side="bottom"}
 * Go through your settings and click `Register > Done`.
 
 Your App ID is now registered.
 
-![App ID](images/en-apns-app-id.png "App ID"){: caption="Figure 2. Newly created App ID" caption-side="bottom"}
+![App ID](images/en-apns-app-id.png "App ID"){: caption="Figure 8. Newly created App ID" caption-side="bottom"}
 
 ### Create a development and distribution APNs SSL certificate
 {: #en-get-apns-certificate}
@@ -132,48 +132,48 @@ You must obtain separate certificates for your development and distribution envi
 #### Create an APNs p12 certificate
 
 * Go to the [Apple developer portal](https://developer.apple.com/) and select Certificates, Identifiers & Profiles.
-![Certificates, Identifiers & Profiles](images/en-apns-cert-tab.png "App ID"){: caption="Figure 6. Certificates, Identifiers & Profiles" caption-side="bottom"}
+![Certificates, Identifiers & Profiles](images/en-apns-cert-tab.png "App ID"){: caption="Figure 9. Certificates, Identifiers & Profiles" caption-side="bottom"}
 * In the `Identifiers area`, select your App ID.
-![Identifiers tab](images/en-apns-app-id.png "Identifiers tab"){: caption="Figure 7. Identifiers tab" caption-side="bottom"}
+![Identifiers tab](images/en-apns-app-id.png "Identifiers tab"){: caption="Figure 10. Identifiers tab" caption-side="bottom"}
 * Select the `Push Notifications` check-box OR select the `Edit` option.
-![Push Notifications check-box](images/en-apns-p12-push-notifications.png "Push Notifications check-box"){: caption="Figure 8. Push Notifications check-box" caption-side="bottom"}
+![Push Notifications check-box](images/en-apns-p12-push-notifications.png "Push Notifications check-box"){: caption="Figure 11. Push Notifications check-box" caption-side="bottom"}
   * On Development SSL certificate pane, click Create Certificate...
   * On Production SSL certificate pane, click Create Certificate...
-![Certificate type](images/en-apns-p12-certificate-type.png "Certificate type"){: caption="Figure 9. Certificate type" caption-side="bottom"}
+![Certificate type](images/en-apns-p12-certificate-type.png "Certificate type"){: caption="Figure 12. Certificate type" caption-side="bottom"}
 * Use Keychain Access application on your Mac to create a Certificate Signing Request (CSR).
 * From the menu, select `Keychain Access > Certificate Assistant > Request a Certificate From a Certificate Authority…`
-![Request new certificate](images/en-apns-p12-request-new-certificate.png "Request new certificate"){: caption="Figure 10. Request new certificate type" caption-side="bottom"}
+![Request new certificate](images/en-apns-p12-request-new-certificate.png "Request new certificate"){: caption="Figure 13. Request new certificate type" caption-side="bottom"}
 * In Certificate Information, enter the email address that is associated with your App Developer account and a common name. Give a meaningful name that helps you identify whether it is a certificate for development (sandbox) or distribution (production); for example, _sandbox-apns-certificate_ or _production-apns-certificate_.
 * Select `Saved to disk` to download the `.certSigningRequest` file to your Mac, then click `Continue`.
-![Certificate details](images/en-apns-p12-certificate-details.png "Certificate details"){: caption="Figure 11. Certificate details" caption-side="bottom"}
+![Certificate details](images/en-apns-p12-certificate-details.png "Certificate details"){: caption="Figure 14. Certificate details" caption-side="bottom"}
 * In the `Save As` menu option, name the `.certSigningRequest` file, select the location where the file has to be saved and click `Save`.
-![Save CSR file](images/en-apns-p12-save-csr.png "Save CSR file"){: caption="Figure 12. Save CSR file" caption-side="bottom"}
+![Save CSR file](images/en-apns-p12-save-csr.png "Save CSR file"){: caption="Figure 15. Save CSR file" caption-side="bottom"}
 * Click `Done`. You now have a CSR.
-![CSR created](images/en-apns-p12-csr-created.png "CSR created"){: caption="Figure 13. CSR created" caption-side="bottom"}
+![CSR created](images/en-apns-p12-csr-created.png "CSR created"){: caption="Figure 16. CSR created" caption-side="bottom"}
 * Go back to the Apple developer portal , for the Upload CSR file option, click Choose File, and select file `CertificateSigningRequest.certSigningRequest`. Click `Continue`.
-![Upload CSR file](images/en-apns-p12-upload-csr.png "Upload CSR file"){: caption="Figure 14. Upload CSR file" caption-side="bottom"}
+![Upload CSR file](images/en-apns-p12-upload-csr.png "Upload CSR file"){: caption="Figure 17. Upload CSR file" caption-side="bottom"}
 * Click `Download` . The `aps_development.cer` file is downloaded.
-[Download certificate](images/en-apns-p12-download-cer.png "Download certificate"){: caption="Figure 15. Download certificate" caption-side="bottom"}
+![Download certificate](images/en-apns-p12-download-cer.png "Download certificate"){: caption="Figure 18. Download certificate" caption-side="bottom"}
 * Locate your newly installed certificate. Double-click the certificate to install it into the Keychain Access.
 * On your Mac, go to `Keychain Access > My Certificates`.
 * Select the certificate and private key, and then select `Export` to convert the certificate into the personal information exchange format (`.p12` format).
-[Export certificate](images/en-apns-p12-export-cer.png "Export certificate"){: caption="Figure 16. Export certificate" caption-side="bottom"}
+![Export certificate](images/en-apns-p12-export-cer.png "Export certificate"){: caption="Figure 19. Export certificate" caption-side="bottom"}
 * In the `Save As` field, provide the certificate a meaningful name. For example, _sandbox-apns.p12_ or _production-apns.p12_, then click `Save`.
-[Save certificate](images/en-apns-p12-save-cer.png "Save certificate"){: caption="Figure 17. Save certificate" caption-side="bottom"}
+![Save certificate](images/en-apns-p12-save-cer.png "Save certificate"){: caption="Figure 20. Save certificate" caption-side="bottom"}
 * In the `Enter a password` field, enter a password to protect the exported items, then click `OK`. You can use this password to configure your APNs settings on the Event Notifications service console.
-[Protect certificate](images/en-apns-p12-protect-cer.png "Protect certificate"){: caption="Figure 18. Protect certificate" caption-side="bottom"}
+![Protect certificate](images/en-apns-p12-protect-cer.png "Protect certificate"){: caption="Figure 21. Protect certificate" caption-side="bottom"}
 * The Key Access app prompts you to export your key from the Keychain screen. Enter your administrative password for your Mac to allow your system to export these items, and then select the Always Allow option. A .p12 certificate is generated on your selected location.
   
 #### Create an APNs p8 token
 
 * Go to the [Apple developer portal](https://developer.apple.com/) and select Certificates, Identifiers & Profiles.
-![Certificates, Identifiers & Profiles](images/en-apns-cert-tab.png "App ID"){: caption="Figure 19. Certificates, Identifiers & Profiles" caption-side="bottom"}
+![Certificates, Identifiers & Profiles](images/en-apns-cert-tab.png "App ID"){: caption="Figure 22. Certificates, Identifiers & Profiles" caption-side="bottom"}
 * Navigate to `Keys` tab on Left Nav.
-![Keys tab](images/en-apns-keys-tab.png "Keys tab"){: caption="Figure 20. Keys tab" caption-side="bottom"}
+![Keys tab](images/en-apns-keys-tab.png "Keys tab"){: caption="Figure 23. Keys tab" caption-side="bottom"}
 * Enter `Key Name` and enable APNs, click on `continue`.
-![P8 token details](images/en-apns-p8-token-details.png "App ID"){: caption="Figure 21. P8 token details" caption-side="bottom"}
+![P8 token details](images/en-apns-p8-token-details.png "App ID"){: caption="Figure 24. P8 token details" caption-side="bottom"}
 * Click `Register`.
-![Register p8 token](images/en-apns-p8-register.png "Register p8 certificate"){: caption="Figure 22. Register p8 token" caption-side="bottom"}
+![Register p8 token](images/en-apns-p8-register.png "Register p8 certificate"){: caption="Figure 25. Register p8 token" caption-side="bottom"}
 * Make sure to download Keys in new redirected page after registration as it is a one time activity.
 
 `KeyID` will be visible as part of the file and displayed in the UI, this `KeyID` will be used for registering APNS certificate. `TeamID` is provided by apple for the developer account, can be seen next to the Team Name. `TeamID` will be used for registering APNS certificate. `BundleID` can be registered same as P12 certificate.
