@@ -30,7 +30,7 @@ completion-time: 10m
 {:codeblock: .codeblock}
 
 # Create and send push notifications to Android mobile using {{site.data.keyword.en_full}}
-{: #en-create-send}
+{: #en-push-fcm}
 {: toc-content-type="tutorial"}
 {: toc-completion-time="10m"}
 
