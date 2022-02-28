@@ -40,7 +40,7 @@ Refer to {{site.data.keyword.en_short}} service [terms](/docs/event-notification
 {: #getting-started-steps}
 
 1. [Create an {{site.data.keyword.en_short}} service instance](/docs/event-notifications?topic=event-notifications-en-create-en-instance)
-1. [Create an {{site.data.keyword.en_short}} source](/docs/event-notifications?topic=event-notifications-en-create-en-source)
+1. [Add an {{site.data.keyword.en_short}} source](/docs/event-notifications?topic=event-notifications-en-add-source)
 1. [Create a topic](/docs/event-notifications?topic=event-notifications-en-create-en-topic)
 1. [Define rules for a topic](/docs/event-notifications?topic=event-notifications-en-create-en-topic#en-topic-rules)
 1. [Select a destination](/docs/event-notifications?topic=event-notifications-en-create-en-destination)
