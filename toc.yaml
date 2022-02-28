@@ -70,6 +70,10 @@ toc:
               label: API Explorer
               href: https://test.cloud.ibm.com/apidocs/event-notifications
       - topicgroup:
+          label: Event Notifications CLI
+          topics:
+          - en-cli.md
+      - topicgroup:
           label: High availability and disaster recovery
           topics:
           - en-high-availability.md
