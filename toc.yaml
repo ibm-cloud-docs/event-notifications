@@ -39,8 +39,8 @@ toc:
       - en-create-destination.md
       - en-create-subscription.md
       - en-create-source.md
-      - en-create-send-push-fcm.md
-      - en-create-send-push-apns.md
+      - en-create-sendpushfcm.md
+      - en-create-sendpushapns.md
 
 
   - navgroup:
