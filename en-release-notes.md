@@ -33,7 +33,7 @@ Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, sec
 {: release-note}
 
 New destination: Apple Push Notification Service (APNs) for iOS
-:   APNs is now available as a destination. Send push notifications from your application to iOS devices. For more information, see [Create and send push notifications to iOS mobile using IBM Cloud® Event Notifications](/docs/event-notifications?topic=event-notifications-en-create-send-apns).
+:   Push Notifications to iOS (APNs) is now available as a destination. Send push notifications from your application to iOS devices. For more information, see [Create and send push notifications to iOS mobile using IBM Cloud® Event Notifications](/docs/event-notifications?topic=event-notifications-en-push-apns).
 
 ## 03 Feb 2022
 {: #event-notifications-Feb0322}
@@ -47,7 +47,7 @@ New source: {{site.data.keyword.secrets-manager_full}}
 {: release-note}
 
 New destination: Firebase Cloud Messaging (FCM) push notifications for Android
-:   FCM is now available as a destination. Send push notifications from your application to Android devices. For more information, see [Create and send push notifications to Android mobile using IBM Cloud® Event Notifications](/docs/event-notifications?topic=event-notifications-en-create-send).
+:   Push Notifications for Android devices (FCM) is now available as a destination. Send push notifications from your application to Android devices. For more information, see [Create and send push notifications to Android mobile using IBM Cloud® Event Notifications](/docs/event-notifications?topic=event-notifications-en-push-fcm).
 
 ## 14 Dec 2021
 {: #event-notifications-Dec1421}
