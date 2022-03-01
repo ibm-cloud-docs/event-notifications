@@ -19,12 +19,11 @@ keywords: event notifications CLI, event notifications command line, event notif
 # {{site.data.keyword.en_short}} CLI plug-in for Event Notifications service
 {: #CLI_Event_Notifications}
 
-Use the {{site.data.keyword.Bluemix_notm}} command-line interface (CLI) to interact with the cluster for an  {{site.data.keyword.iae_full_notm}} classic service instance.
+Use the {{site.data.keyword.Bluemix_notm}} command-line interface (CLI) to interact  {{site.data.keyword.en_short}} IBM Cloud service
 
 ## Prerequisites
-To use the {{site.data.keyword.Bluemix_notm}} CLI, download and install the following packages on your local system. Do not install the packages on the {{site.data.keyword.iae_full_notm}} cluster.
+To use the {{site.data.keyword.Bluemix_notm}} CLI, download and install the following packages on your local system.
 
-- The [Cloud Foundry CLI](https://github.com/cloudfoundry/cli/blob/master/README.md#installing-using-a-package-manager)
 
 - The [{{site.data.keyword.Bluemix_notm}} CLI](/docs/cli?topic=cloud-cli-install-ibmcloud-cli)
 
@@ -35,6 +34,7 @@ Install the plug-in by using the `plugin install` command.
 ```sh
 ibmcloud plugin install en
 ```
+{: pre}
 
 ### ibmcloud event-notifications init
 {: #event-notifications-cli-init-command}
@@ -45,6 +45,7 @@ Set instance you'll we working on.
 ibmcloud event-notifications init [--instance-id INSTANCE-ID]
 ```
 
+{: pre}
 
 #### Command options
 {: #event-notifications-init-cli-options}
@@ -63,6 +64,7 @@ Check your configuration.
 ```sh
 ibmcloud event-notifications show
 ```
+{: pre}
 
 
 #### Command options
@@ -77,6 +79,7 @@ Operate on IBM Cloud Event Notifications Destination.
 ibmcloud event-notifications destination --help
 ```
 
+{: pre}
 
 ### ibmcloud event-notifications destination create
 * **Action:** Create a new Destination
@@ -146,6 +149,7 @@ List all `Destination`.
 ```sh 
 ibmcloud event-notifications destination list [--limit LIMIT] [--offset OFFSET] [--search SEARCH] [--instance-id INSTANCE-ID]
 ```
+{: pre}
 
 
 * **Parameters to provide:**
@@ -184,6 +188,7 @@ Update existing `Destination`.
 ibmcloud event-notifications destination update --id ID [--name NAME] [--description DESCRIPTION] [--certificate CERTIFICATE] [--config CONFIG] [--instance-id INSTANCE-ID]
 ```
 
+{: pre}
 
 * **Parameters to provide:**
 * Unique identifier for Destination. Required.
@@ -209,6 +214,7 @@ Delete existing `Destination`.
 ibmcloud event-notifications destination delete --id ID [--instance-id INSTANCE-ID] [--force]
 ```
 
+{: pre}
 
 * **Parameters to provide:**
 * The Unique identifier for Destination. Required.
@@ -228,6 +234,7 @@ List all `Source`.
 ```sh 
 ibmcloud event-notifications source list [--limit LIMIT] [--offset OFFSET] [--search SEARCH] [--instance-id INSTANCE-ID]
 ```
+{: pre}
 
 
 * **Parameters to provide:**
@@ -251,6 +258,7 @@ Get specific `Source`.
 ```sh
 ibmcloud event-notifications source get --id ID [--instance-id INSTANCE-ID]
 ```
+{: pre}
 
 * **Parameters to provide:**
 * Unique identifier for Source. Required.
@@ -272,6 +280,7 @@ Operate on IBM Cloud Event Notifications Topic.
 ```sh
 ibmcloud event-notifications topic --help
 ```
+{: pre}
 
 
 ### ibmcloud event-notifications topic create
@@ -282,6 +291,9 @@ Create new `Topic`.
 ```sh
 ibmcloud event-notifications topic create --name NAME [--description DESCRIPTION] [--sources SOURCES] [--instance-id INSTANCE-ID]
 ```
+
+{: pre}
+
 * **Parameters to provide:**
 * Name of the topic. Required.
    * Flag: `--name NAME`
@@ -293,7 +305,6 @@ ibmcloud event-notifications topic create --name NAME [--description DESCRIPTION
    * Flag: `[--sources SOURCES]`   
 
 ```json
-
 [ {
   "id" : "exampleString",
   "rules" : [ {
@@ -312,6 +323,8 @@ List all `Topic`.
 ```sh
 ibmcloud event-notifications topic list [--limit LIMIT] [--offset OFFSET] [--search SEARCH] [--instance-id INSTANCE-ID]
 ```
+{: pre}
+
 
 * **Parameters to provide:**
 * The Page limit for paginated results.
@@ -331,6 +344,9 @@ Get specific `Topic`.
 ```sh
 ibmcloud event-notifications topic get --id ID [--include INCLUDE] [--instance-id INSTANCE-ID]
 ```
+{: pre}
+
+
 * **Parameters to provide:**
 * Unique identifier for Topic. Required.
    * Flag: `--id ID`
@@ -348,6 +364,9 @@ Update existing `Topic`.
 ```sh
 ibmcloud event-notifications topic update --id ID [--name NAME] [--description DESCRIPTION] [--sources SOURCES] [--instance-id INSTANCE-ID]
 ```
+
+{: pre}
+
 * **Parameters to provide:**
 * Unique identifier for Topic. Required.
    * Flag: `--id ID`
@@ -362,7 +381,6 @@ ibmcloud event-notifications topic update --id ID [--name NAME] [--description D
 
 
 ```json
-
 [ {
   "id" : "exampleString",
   "rules" : [ {
@@ -382,6 +400,8 @@ Delete existing `Topic`.
 ```sh
 ibmcloud event-notifications topic delete --id ID [--instance-id INSTANCE-ID] [--force]
 ```
+{: pre}
+
 * **Parameters to provide:**
 * Unique identifier for Topic. Required.
    * Flag: `--id ID`
@@ -400,6 +420,7 @@ Operate on IBM Cloud Event Notifications Subscription.
 ibmcloud event-notifications subscription --help
 ```
 
+{: pre}
 
 ### ibmcloud event-notifications subscription create
 {: #event-notifications-cli-subscription-create-command}
@@ -409,6 +430,9 @@ Create new `Subscription`.
 ```sh
 ibmcloud event-notifications subscription create [--name NAME] [--description DESCRIPTION] [--destination-id DESTINATION-ID] [--topic-id TOPIC-ID] [--attributes ATTRIBUTES] [--instance-id INSTANCE-ID]
 ```
+
+{: pre}
+
 
 * **Parameters to provide:**
 *  The name to be set for Subscription.
@@ -427,7 +451,6 @@ ibmcloud event-notifications subscription create [--name NAME] [--description DE
 Syntax in case of webhook subscription to be created   
 
 ```json
-
 {
   "add_notification_payload" : true,
   "signing_enabled" : true
@@ -436,7 +459,6 @@ Syntax in case of webhook subscription to be created
 Syntax in case of sms subscription to be created   
 
 ```json
-
 {
     "to" :["+19667895490", "+19845678321"]
 }
@@ -444,7 +466,6 @@ Syntax in case of sms subscription to be created
 Syntax in case of email subscription to be created   
 
 ```json
-
 {
     "to" :["entest@gmail.com"],
     "add_notification_payload": true,
@@ -463,6 +484,9 @@ List all `Subscription`.
 ```sh
 ibmcloud event-notifications subscription list [--offset OFFSET] [--limit LIMIT] [--search SEARCH] [--instance-id INSTANCE-ID]
 ```
+
+{: pre}
+
 * **Parameters to provide:**
 * The Page limit for paginated results.
    * Flag: `--limit LIMIT`
@@ -482,6 +506,9 @@ Get specific `Subscription`.
 ```sh
 ibmcloud event-notifications subscription get --id ID [--instance-id INSTANCE-ID]
 ```
+
+{: pre}
+
 * **Parameters to provide:**
 * Unique identifier for Subscription. Required.
    * Flag: `--id ID`
@@ -497,6 +524,9 @@ Delete existing `Subscription`.
 ```sh
 ibmcloud event-notifications subscription delete --id ID [--instance-id INSTANCE-ID] [--force]
 ```
+
+{: pre}
+
 * **Parameters to provide:**
 * Unique identifier for Subscription. Required.
    * Flag: `--id ID`
@@ -514,6 +544,7 @@ Update existing `Subscription`.
 ```sh
 ibmcloud event-notifications subscription update --id ID [--name NAME] [--description DESCRIPTION] [--attributes ATTRIBUTES] [--instance-id INSTANCE-ID] 
 ```
+{: pre}
 
 * **Parameters to provide:**
 *  Unique identifier for Subscription. Required.
@@ -535,6 +566,7 @@ ibmcloud event-notifications subscription update --id ID [--name NAME] [--descri
 ```sh
 send-notifications --instance-id INSTANCE-ID --subject SUBJECT --severity SEVERITY --id ID --source SOURCE --en-source-id EN-SOURCE-ID --type TYPE --time TIME [--data DATA] [--push-to PUSH-TO] [--message-fcm-body MESSAGE-FCM-BODY] [--message-apns-headers MESSAGE-APNS-HEADERS] [--message-apns-body MESSAGE-APNS-BODY] [--datacontenttype DATACONTENTTYPE] [--specversion SPECVERSION] 
 ```
+{: pre}
 
 * **Parameters to provide:**
 * The Unique identifier for IBM Cloud Event Notifications instance.
@@ -569,7 +601,6 @@ send-notifications --instance-id INSTANCE-ID --subject SUBJECT --severity SEVERI
 The following example shows the format of data payload for sending notifications.
 
 ```json
-
 {"data": {
             "createTimestamp": 1557282940339,
             "severity": "LOW",
@@ -581,9 +612,6 @@ The following example shows the format of data payload for sending notifications
 The following example shows the format of FCM message body to send notification to FCM devices.        
 
 ```json
-
-
-
 {"message":{
     "data":{
         "alert": "examlestring", "delay_while_idle":true,"time_to_live":2,"collapse_key":"testCollapseKey","notification":{"title":"Match update","body":"Arsenal goal in added time, score is now 3-0"},"data":{"alert":"Notification alert message","url":"https","payload":{"mydevicearra":["cc75e4a6-edd8-3bec-a7c3-dfca6572a03b"]}}
@@ -595,7 +623,6 @@ The following example shows the format of FCM message body to send notification 
 The following example shows the format of apns headers.   
 
 ```json
-
 {
     "test": "test header",
     "new": "newmesaage"
@@ -604,14 +631,12 @@ The following example shows the format of apns headers.
 The following example shows the format of APNS message body to send notification to FCM devices.        
 
 ```json
-
 {"data":{"alert":"alert","url":"https","badge":9,"sound":"bingbong.aiff","payload":"{\\\"fcm_devices\\\": [\\\"cc75e4a6-edd8-3bec-a7c3-dfca6572a03b\\\"]}","type":"DEFAULT","subtitle":"dummy","title":"dummy1","body":"body","ios_action_key":"key","interactive_category":"interactiveCategory","title_loc_key":"titleLocKey","loc_key":"GAME_PLAY_REQUEST_FORMAT","launch_image":"image.png","title_loc_args":["Shelly","Rick"],"loc_args":["Shelly","Rick"],"attachment_url":"some url","apns_collapse_id":"12","apns_thread_id":"1","apns_group_summary_arg":"apnsGroupSummaryArg","apns_group_summary_arg_count":1}}
 ```
 
 The following example shows the target device configuration example.
 
 ```json
-
 {"fcm_devices": ["deviceidstring"],"user_ids": ["useridstring"], "platform": ["G"]}
 ```
 
