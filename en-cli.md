@@ -44,7 +44,6 @@ Set instance you'll we working on.
 ```sh
 ibmcloud event-notifications init [--instance-id INSTANCE-ID]
 ```
-
 {: pre}
 
 #### Command options
@@ -78,7 +77,6 @@ Operate on IBM Cloud Event Notifications Destination.
 ```sh
 ibmcloud event-notifications destination --help
 ```
-
 {: pre}
 
 ### ibmcloud event-notifications destination create
@@ -87,6 +85,7 @@ ibmcloud event-notifications destination --help
 ```sh 
 ibmcloud event-notifications destination create --name NAME --type TYPE [--description DESCRIPTION] [--certificate CERTIFICATE] [--certificate-content-type CERTIFICATE-CONTENT-TYPE] [--config CONFIG] [--instance-id INSTANCE-ID]
 ```
+{: pre}
 
 
 * **Parameters to provide:**
@@ -187,7 +186,6 @@ Update existing `Destination`.
 ```sh 
 ibmcloud event-notifications destination update --id ID [--name NAME] [--description DESCRIPTION] [--certificate CERTIFICATE] [--config CONFIG] [--instance-id INSTANCE-ID]
 ```
-
 {: pre}
 
 * **Parameters to provide:**
@@ -213,7 +211,6 @@ Delete existing `Destination`.
 ```sh 
 ibmcloud event-notifications destination delete --id ID [--instance-id INSTANCE-ID] [--force]
 ```
-
 {: pre}
 
 * **Parameters to provide:**
@@ -291,7 +288,6 @@ Create new `Topic`.
 ```sh
 ibmcloud event-notifications topic create --name NAME [--description DESCRIPTION] [--sources SOURCES] [--instance-id INSTANCE-ID]
 ```
-
 {: pre}
 
 * **Parameters to provide:**
@@ -364,7 +360,6 @@ Update existing `Topic`.
 ```sh
 ibmcloud event-notifications topic update --id ID [--name NAME] [--description DESCRIPTION] [--sources SOURCES] [--instance-id INSTANCE-ID]
 ```
-
 {: pre}
 
 * **Parameters to provide:**
@@ -419,7 +414,6 @@ Operate on IBM Cloud Event Notifications Subscription.
 ```sh
 ibmcloud event-notifications subscription --help
 ```
-
 {: pre}
 
 ### ibmcloud event-notifications subscription create
@@ -430,7 +424,6 @@ Create new `Subscription`.
 ```sh
 ibmcloud event-notifications subscription create [--name NAME] [--description DESCRIPTION] [--destination-id DESTINATION-ID] [--topic-id TOPIC-ID] [--attributes ATTRIBUTES] [--instance-id INSTANCE-ID]
 ```
-
 {: pre}
 
 
@@ -484,7 +477,6 @@ List all `Subscription`.
 ```sh
 ibmcloud event-notifications subscription list [--offset OFFSET] [--limit LIMIT] [--search SEARCH] [--instance-id INSTANCE-ID]
 ```
-
 {: pre}
 
 * **Parameters to provide:**
@@ -506,7 +498,6 @@ Get specific `Subscription`.
 ```sh
 ibmcloud event-notifications subscription get --id ID [--instance-id INSTANCE-ID]
 ```
-
 {: pre}
 
 * **Parameters to provide:**
@@ -524,7 +515,6 @@ Delete existing `Subscription`.
 ```sh
 ibmcloud event-notifications subscription delete --id ID [--instance-id INSTANCE-ID] [--force]
 ```
-
 {: pre}
 
 * **Parameters to provide:**
@@ -640,9 +630,15 @@ The following example shows the target device configuration example.
 {"fcm_devices": ["deviceidstring"],"user_ids": ["useridstring"], "platform": ["G"]}
 ```
 
+<dd>Additional properties that can be configured for the IOS notification.
 <p>
 <table>
-  <caption>Table 2. Settings specific to iOS platform.</caption>
+  <caption>Table 1. Settings specific to iOS platform.</caption>
+  <tr>
+    <th>Property</th>
+    <th>Property type</th>
+    <th>Description</th>
+  </tr>
   <tr>
     <td>badge</td>
     <td>integer</td>
@@ -741,10 +737,15 @@ The following example shows the target device configuration example.
 </table>
 </p>
 
-
+<dd>Additional properties that can be configured for the FCM notification.
 <p>
 <table>
-  <caption>Table 3. Settings specific to Android platform.</caption>
+  <caption>Table 2. Settings specific to Android platform.</caption>
+  <tr>
+    <th>Property</th>
+    <th>Property type</th>
+    <th>Description</th>
+  </tr>
   <tr>
     <td>icon</td>
     <td>&nbsp;</td>
