@@ -25,7 +25,7 @@ subcollection: event-notifications
 {{site.data.keyword.en_short}} includes sources, filters, topics, destinations, and subscriptions. The relationship between these elements is shown in Figure 1.
 {: shortdesc}
 
-![Event notification flow](images/en-relationshipmodelv2.png "Event notifications flow"){: caption="Figure 1. {{site.data.keyword.en_short}} relationship model" caption-side="bottom"}
+![Event notification flow](images/en-relationshipmodelv3.png "Event notifications flow"){: caption="Figure 1. {{site.data.keyword.en_short}} relationship model" caption-side="bottom"}
 
 Events originate outside {{site.data.keyword.en_short}}, for example, from {{site.data.keyword.Bluemix_notm}} services. An 'event source' within {{site.data.keyword.en_short}} represents a connection between {{site.data.keyword.en_short}} and one of these event-producing services. 
 
