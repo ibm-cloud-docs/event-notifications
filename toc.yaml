@@ -41,7 +41,7 @@ toc:
       - en-create-source.md
       - en-push-fcm.md
       - en-push-apns.md
-
+      - en-terraform-tutorial.md
 
   - navgroup:
       id: howto
