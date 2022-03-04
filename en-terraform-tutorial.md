@@ -527,4 +527,6 @@ Apply complete! Resources: 4 added, 0 changed, 0 destroyed..
 ### Validating resources
 {: #en-validate-tf}
 
-Validate resources within the {{site.data.keyword.cloud}} by selecting the resource list in [resources](https://cloud.ibm.com/resources). For more information, see [ibm_en_destination](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/en_destination). For more information on API and SDK references, tutorials, ad FAQs, for {{site.data.keyword.cloud}} products and services, see [Documentation](https://cloud.ibm.com/docs).
+Validate resources within the {{site.data.keyword.cloud}} by selecting the resource list in [resources](https://cloud.ibm.com/resources). 
+
+For more information on API and SDK references, tutorials, ad FAQs, for {{site.data.keyword.cloud}} products and services, see [Documentation](https://cloud.ibm.com/docs).
