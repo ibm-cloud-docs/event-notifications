@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-03-03"
+lastupdated: "2022-03-07"
 
 keywords: event notifications, event-notifications, tutorials, terraform
 
@@ -29,7 +29,7 @@ completion-time: 30m
 {: toc-content-type="tutorial"}
 {: toc-completion-time="30m"}
 
-This tutorial shows you how to sse Terraform to configure files like `provider.tf` to declare {{site.data.keyword.en_short}} resources for deployent.
+This tutorial shows you how to use Terraform to configure files like `provider.tf` to declare {{site.data.keyword.en_short}} resources for deployment.
 {: shortdesc}
 
 ## Before you begin
@@ -37,17 +37,17 @@ This tutorial shows you how to sse Terraform to configure files like `provider.t
 
 Ensure that the following prerequisites are in place:
 
-* Install Terraform. For more information, see [Download Terraform ]((https://www.terraform.io/downloads.html).
+* Install Terraform. For more information, see [Download Terraform](https://www.terraform.io/downloads.html).
 * Either deploy Terraform to a specific folder or add it to your `PATH`.
 
-Check your version of Terraform:
+* Check your version of Terraform:
 
 `terraform –version`
 
 * You need an {{site.data.keyword.cloud}} account. If you don't have an account, then [Create an IBM Cloud account](https://cloud.ibm.com/registration/).
 * Log in to your {{site.data.keyword.cloud}} account.
 
-## Working with Terraform in {{site.data.keyword.cloud}}:
+## Working with Terraform in {{site.data.keyword.cloud}}
 {: #en-work-terraform-cloud}
 {: step}
 
@@ -66,13 +66,15 @@ Take the following steps:
 1. From [cloud.ibm.com](https://cloud.ibm.com/login) go to the **manage** tile and select **Access(IAM)** an then select **IBM Cloud API Keys**. 
 1. Create an IBM Cloud API Key and save the password.
 
-## Resources to deploy
+## Deploying resources
 {: #en-resources-deploy}
+{: step}
 
 Create an {{site.data.keyword.en_short}} resource. For more information, see [Getting started with {{site.data.keyword.en_short}}](docs/event-notifications?topic=event-notifications-getting-started).
 
 ## Building Infrastructure-as-Code
 {: #en-infrastructure-as-code}
+{: step}
 
 The `tf-template` directory contains the following Terraform configuration files:
 
@@ -213,8 +215,9 @@ resource "ibm_en_subscription" "subscription1" {
 ```
 {: codeblock}
 
-## Run your Terraform
+## Running your Terraform
 {: #en-execute-tf}
+{: step}
 
 Before running any Terraform scripts, learn about the following Terraform commands:
 
@@ -366,8 +369,9 @@ Terraform will perform the following actions:
 ```
 {: codeblock}
 
-### Export API key
+## Exporting an API key
 {: #en-exportkey-tf}
+{: step}
 
 Export your IBM Cloud API Key before running the **apply** command:
 
@@ -376,8 +380,9 @@ export IBMCLOUD_API_KEY={Your IBM Cloud API Key}
 ```
 {: codeblock}
 
-### Terraform **apply**
+## Running Terraform **apply**
 {: #en-apply-tf}
+{: step}
 
 The Terraform **apply** command implements the changes that are declared during the **plan** step and deploys the resource to the IBM cloud.
 
@@ -524,8 +529,9 @@ Apply complete! Resources: 4 added, 0 changed, 0 destroyed..
 ```
 {: codeblock}
 
-### Validating resources
+## Validating resources
 {: #en-validate-tf}
+{: step}
 
 Validate resources within the {{site.data.keyword.cloud}} by selecting the resource list in [resources](https://cloud.ibm.com/resources). 
 
