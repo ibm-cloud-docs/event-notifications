@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-07"
+lastupdated: "2022-03-11"
 
 keywords: event notifications, event-notifications, source, tutorials
 
@@ -42,6 +42,9 @@ The connection protocols differ between source types, so the procedure for addin
 
 ## Add an IBM-managed source
 {: #en-add-source-IBM-managed}
+
+## Verify the managed service
+{: #en-verify-manage-service}
 {: step}
 
 Verify that the managed service is available as a source for {{site.data.keyword.en_short}}
@@ -78,9 +81,8 @@ Follow the documentation for the selected service to configure the connection to
 
 ## Add a generic API source
 {: #en-add-source-generic-API}
-{: step}
 
-API Sources can not be used to send notifications to out of the box destinations like email and SMS. {: note }
+API Sources cannot be used to send notifications to out of the box destinations like email and SMS. {: note }
 
 - Go to the `Sources` section of the {{site.data.keyword.en_short}} dashboard.
 - Click `Add` and select `API Source`.
