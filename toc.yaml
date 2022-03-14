@@ -42,6 +42,7 @@ toc:
       - en-push-fcm.md
       - en-push-apns.md
       - en-terraform-tutorial.md
+      - en-ts-monitor-secrets.md
 
   - navgroup:
       id: howto

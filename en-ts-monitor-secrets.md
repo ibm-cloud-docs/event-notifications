@@ -2,7 +2,7 @@
 
 copyright:
    years: 2022
-lastupdated: "2022-03-11"
+lastupdated: "2022-03-14"
 
 keywords: event-notifications, event notifications, about event notifications, secrets manager certificates, secrets expiry 
 
@@ -23,7 +23,7 @@ completion-time: 30m
 {: toc-completion-time="30m"}
  
 
-In this tutorial, you'll learn how to monitor the expiry date or any updates on the secrets or certificates using TLS certificates or secrets. 
+This tutorial shows you how to monitor the expiry date or any updates on the secrets or certificates by using TLS certificates or secrets. 
 {: shortdesc}
 
 ![{{site.data.keyword.secrets-manager_short}} and {{site.data.keyword.en_short}}](images/en-secrets-manager.png "Secrets manager and {{site.data.keyword.en_short}}"){: caption="Figure 1. [{{site.data.keyword.secrets-manager_short}} and {{site.data.keyword.en_short}}"}
@@ -36,10 +36,10 @@ When an event of interest takes place in your {{site.data.keyword.secrets-manage
 This tutorial shows you how to configure the following flow:
 
 1. An alert is raised in {{site.data.keyword.secrets-manager_short}}.
-2. {{site.data.keyword.secrets-manager_short}} sends a notification to {{site.data.keyword.en_short}}.
-3. {{site.data.keyword.en_short}} creates an email and sends the email to the subscribed user.
+1. {{site.data.keyword.secrets-manager_short}} sends a notification to {{site.data.keyword.en_short}}.
+1. {{site.data.keyword.en_short}} creates an email and sends the email to the subscribed user.
 
-Secrets Manager aggregates a list of your pending notifications by [event type](/docs/secrets-manager?topic=secrets-manager-event-notifications&interface=ui#event-notifications-list), the type of secret, and expiry details if they apply. Every one to two minutes, the service checks for and dispatches any pending notifications to the connected {{site.data.keyword.en_short}} service. For example, you might receive notifications that are similar to the following messages:
+Secrets Manager aggregates a list of your pending notifications by [event type](/docs/secrets-manager?topic=secrets-manager-event-notifications&interface=ui#event-notifications-list), the type of secret, and expiry details if they apply. Every few minutes, the service checks for and dispatches any pending notifications to the connected {{site.data.keyword.en_short}} service. For example, you might receive notifications that are similar to the following messages:
 
 - "You have five public certificate secrets that expire in 10 days."
 - "You have 100 imported certificate secrets that expire in 30 days."
@@ -49,7 +49,7 @@ You can be notified of a maximum 100 secrets in a single event notification.
 ## Before you begin
 {: #cd-en-secrets-prereqs}
 
-You need an {{site.data.keyword.cloud}} account. If you don't have an account, then [Create an IBM Cloud account](https://cloud.ibm.com/registration/).
+You need an {{site.data.keyword.cloud}} account. If you don't have an account, then [Create an {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration/).
 
 
 ## Create an {{site.data.keyword.en_short}} service instance
@@ -57,7 +57,7 @@ You need an {{site.data.keyword.cloud}} account. If you don't have an account, t
 {: step}
 
 1. Log in to your [{{site.data.keyword.cloud}}](https://cloud.ibm.com) account.
-1. In the [IBM Cloud catalog](https://cloud.ibm.com/catalog#services), search **Event Notifications > Event Notifications**.
+1. In the [{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog#services), search **Event Notifications > Event Notifications**.
 1. Select a **Location** from the list of supported locations and select a pricing plan.
 1. Enter a service name.
 1. Select a resource group.
@@ -67,7 +67,7 @@ You need an {{site.data.keyword.cloud}} account. If you don't have an account, t
 {: #en-create-secret-instance}
 {: step}
 
-1. In the [IBM Cloud catalog](https://cloud.ibm.com/catalog#services), search **Secrets Manager > Secrets Manager**.
+1. In the [{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog#services), search **Secrets Manager > Secrets Manager**.
 1. Select a **Location** from the list of supported locations and select a pricing plan.
 1. Enter a service name.
 1. Select a resource group.
@@ -100,7 +100,7 @@ A success message is displayed to indicate that {{site.data.keyword.secrets-mana
 
 1. Click the menu icon **> Resource list**.
 1. Open **Services and software**.
-1. Open the {{site.data.keyword.secrets-manager_short}} instance you created. For more information, see [Sending email notifications to {{site.data.keyword.en_short}}](/docs/monitoring?topic=monitoring-tutorial-en#en-create-instance) 
+1. Open the {{site.data.keyword.secrets-manager_short}} instance that you created. For more information, see [Sending email notifications to {{site.data.keyword.en_short}}](/docs/monitoring?topic=monitoring-tutorial-en#en-create-instance) 
 1. Click **Sources**.
 
 When you connect to {{site.data.keyword.en_short}} in {{site.data.keyword.secrets-manager_short}}, a source, with the same name as your Secrets Manager instance name, is automatically added to your {{site.data.keyword.en_short}} list.
@@ -109,28 +109,60 @@ When you connect to {{site.data.keyword.en_short}} in {{site.data.keyword.secret
 {: #en-secret-destination}
 {: step}
 
-In this step you ensure that an email destination exists where notifications is forwarded.
+This step ensures that an email destination exists where notifications are forwarded.
 
 1. Click **Destinations**.
-1. Notice in the Destinations list that, by default, there is an IBM Cloud Email service defined. You do not need to do anything else to configure an email destination.
+1. Notice in the Destinations list that, by default, an {site.data.keyword.cloud_notm}} email service is defined. You do not need to do anything else to configure an email destination.
 
 If you want to add a webhook as a destination, click **Add** and enter the appropriate information in the **Add a destination** panel.
 
 ## Create an {{site.data.keyword.en_short}} topic
 {: #en-secret-topic}
+{: step}
 
 Define a topic that receives an event from {{site.data.keyword.secrets-manager_short}}.
 
 1. Click **Topics**.
 1. Click **Create**. 
 1. In the **Topic details** panel enter the following details:
-   - Enter the Name for your topic. For example, **MonitorSecretExpiry**.
+   - Enter the **Name** for your topic. For example, **MonitorSecretExpiry**.
    - For **Source** select the {{site.data.keyword.en_short}} source, which has the same name as your {{site.data.keyword.secrets-manager_short}} instance.
    - Select an **Event Type**. For this tutorial select **Secret about to expire**.
    - Select an **Event subtype**. For this tutorial select **Secret expire in 10 days**.
-   - Select a Severity. For this tutorial select **High Severity**.
-1. Click **Add a condition**. If you do not click **Add a condition** before you click **Create**, the topic is created with no conditions associated with it.
+   - Select a **Severity**. For this tutorial select **High Severity**.
+1. Click **Add a condition**. If you do not click **Add a condition** before you click **Create**, the topic is created with no conditions that are associated with it.
 1. Click **Create**. Your topic is displayed in the Topics list.
 
-Click **Add a condition** without selecting an Event Type sends the test event from {{site.data.keyword.secrets-manager_short}}.
+Clicking **Add a condition** without selecting an **Event Type** sends the test event from {{site.data.keyword.secrets-manager_short}}.
+{: note}
+
+## Create an {{site.data.keyword.en_short}} email subscription
+{: #en-secret-email-sub}
+{: step}
+
+Configure who receives an email when a notification is processed:
+
+1. Click **Subscriptions**.
+1. Click **Create**.
+1. In the **Create a subscription** panel enter the following details:
+   - Enter the **Name** for your subscription. For example, **SecretExpirySubscription**.
+   - For **Topic** select the topic you created. For example, **MonitorSecretExpiry**.
+   - For **Destination** select **{site.data.keyword.cloud_notm}} email service**.
+   - For **Recipients** enter a valid email address, for example, **MyEmail@MyCompany.com**.
+1. Click **Create**. Your subscription is added to the Subscriptions list.
+
+## Sending test event from {{site.data.keyword.secrets-manager_short}}
+{: #en-secret-send-test-event}
+{: step}
+
+Send a test event as follows:
+
+1. Click the **menu icon > Resource list**.
+1. Open **Services and software**.
+1. Open the {{site.data.keyword.secrets-manager_short}} instance that you created.
+1. Click **Settings**.
+1. Click send test event.
+
+You should start receiving notifications at the email address that you configured whenever the criteria defined in both {{site.data.keyword.secrets-manager_short}} and {{site.data.keyword.en_short}} match.
+
 
