@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-18"
+lastupdated: "2022-03-16"
 
 keywords: event notifications, IBM Cloud
 
@@ -21,29 +21,67 @@ completion-time: 10m
 {: toc-content-type="tutorial"}
 {: toc-completion-time="10m"}
 
-{{site.data.keyword.en_full}} is a routing service that tells you about critical events that occur in your {{site.data.keyword.Bluemix_notm}} account or triggers automated actions by using webhooks. You can filter and route event notifications from {{site.data.keyword.Bluemix_notm}} services like Monitoring, Security and Compliance Center, and Secrets Manager to communication channels like email, SMS, push notifications, and webhooks.
+This tutorial takes you through the steps that you need to take before you create an {site.data.keyword.en_full} service.
 {: shortdesc}
 
-This tutorial takes you through the steps to get started.
+{{site.data.keyword.en_short}} is a routing service that tells you about critical events that occur in your {{site.data.keyword.Bluemix_notm}} account. You can filter and route event notifications from {{site.data.keyword.Bluemix_notm}} services like Monitoring, Security and Compliance Center, and Secrets Manager to communication channels like email, SMS, push notifications, and webhooks.
 
-## Pricing plans
-{: #en-pricing-plans}
+## Create a cloud account
+{: #en-cloud-ac}
+{: #step}
 
-Currently, the following service plans are available: Lite, and Standard.
+You need an {{site.data.keyword.cloud}} account. If you don't have an account, [Create an IBM Cloud account](https://cloud.ibm.com/registration/).
 
-You need an {{site.data.keyword.cloud}} account. If you don't have an account, create one [here](https://cloud.ibm.com/registration/). Log in to your {{site.data.keyword.cloud}} account.
-{: note}
+## Decide on a location
+{: #en-decide-location}
+{: #step}
 
-Refer to {{site.data.keyword.en_short}} service [terms](/docs/event-notifications?topic=event-notifications-en-overview)
+Decide on a location where your service will be hosted. Currently, the following locations are supported:
 
-## Basic steps to get you started
-{: #getting-started-steps}
+* Dallas (us-south)
+* London (eu-gb)
+* Sydney (au-syd)
 
-1. [Create an {{site.data.keyword.en_short}} service instance](/docs/event-notifications?topic=event-notifications-en-create-en-instance)
-1. [Add an {{site.data.keyword.en_short}} source](/docs/event-notifications?topic=event-notifications-en-add-source)
-1. [Create a topic](/docs/event-notifications?topic=event-notifications-en-create-en-topic)
-1. [Define rules for a topic](/docs/event-notifications?topic=event-notifications-en-create-en-topic#en-topic-rules)
-1. [Select a destination](/docs/event-notifications?topic=event-notifications-en-create-en-destination)
-1. [Create a subscription by associating a destination with a topic](/docs/event-notifications?topic=event-notifications-en-create-en-subscription)
+For more information, see [Regions](/docs/openwhisk?topic=openwhisk-cloudfunctions_regions).
 
-Now you are ready to send out notifications.
+## Decide on a pricing plan
+{: #en-decide-pricing-plans}
+{: #step}
+
+Based on your budget requirements, decide on a pricing plan. Currently, the following plans are available: Lite, and Standard.
+
+* `Lite`: This plan gives you unlimited ingested events, 10 topics, 2 filters per topic, 5 destinations, 20 outbound emails, 20 outbound SMSes, 20 outbound webhooks, and 1000 notifications per push destination. Ten subscriptions are allowed, and a subscription can have a maximum of three email recipients.
+* `Standard`: You are charged for ingested events and for outbound digital messages. An ingested event is one that is received and filtered. If a source is connected but no filters are defined for it (in other words, the source is not associated with any topic), the incoming events are dropped, and you are not charged. Outbound digital messages come in various types, and each type is priced separately.
+
+## Choose an event source
+{: #en-decide-event-source}
+{: #step}
+
+An IBM managed source indicates a service on {{site.data.keyword.Bluemix_notm}}, which, can emit events to {{site.data.keyword.en_short}} service.
+
+The list of IBM provided sources is as follows:
+- [IBM Cloud Monitoring](https://cloud.ibm.com/docs/monitoring?topic=monitoring-notifications)
+- [IBM Cloud Security and Compliance Center](https://cloud.ibm.com/docs/security-compliance?topic=security-compliance-event-notifications&interface=ui)
+- [IBM Cloud Secrets Manager](https://cloud.ibm.com/docs/secrets-manager?topic=secrets-manager-event-notifications&interface=ui)
+
+## Choose an event destination
+{: #en-decide-event-destination}
+{: #step}
+
+A destination is a delivery target for a notification. Two destination categories are supported: human and service.
+
+### Human destinations
+{: #en-destination-human}
+
+Human destinations are devices, servers, or applications that present notifications for human consumption. The following human destinations are supported:
+
+- {{site.data.keyword.Bluemix_notm}} email service
+- {{site.data.keyword.Bluemix_notm}} push notification service
+- {{site.data.keyword.Bluemix_notm}} SMS service
+
+### Service destinations
+{: #en-destination-service}
+
+Service destinations are cloud services or applications where notifications are consumed programmatically. The following service destination is supported:
+
+- Webhook: to a backend microservice
