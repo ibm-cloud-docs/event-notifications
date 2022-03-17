@@ -45,7 +45,7 @@ Broadly there are 5 steps needed
 
 First you have to create a new instance of the {{site.data.keyword.en_short}} service.  For the purpose of this exercise, we will not use any advanced capabilities of 
 the {{site.data.keyword.en_short}} service. Within the service, you will create an API source, a Topic, a Subscription and a destination as per the following diagram. 
-For a more detailed explanation of the concepts of {{site.data.keyword.en_short}} you can refer to the documentation.
+For a more detailed explanation of the concepts of {{site.data.keyword.en_short}} you can refer to the [documentation](https://cloud.ibm.com/docs/event-notifications)
 
 ![Push capability in Event notifications](images/en-how-push-en.png "Push capability in Event Notifications"){: caption="Figure 1. Push capability in Event Notifications" caption-side="bottom"}
 
@@ -77,7 +77,7 @@ For the Android app a new Destination of type Android Push Notification (FCM) wi
 The package name for the Push Notifications SDK was “com.ibm.mobilefirstplatform.clientsdk.android.push” . The new Event Notification SDK has the package “com.ibm.cloud.eventnotifications.destination.android”. 
 You need to update your project in Firebase Console with the new package and downloadand replace the newgoogle-services.jsonfile in your Android project.
 
-* Visit the Firebase Console
+* Visit the [Firebase Console](https://console.firebase.google.com)
 
 ![Firebase console](images/en-migration-firebase-console.png "Firebase console"){: caption="Figure 3. Firebase Console" caption-side="bottom"}
 
@@ -126,7 +126,7 @@ Replace the old push import as shown below,
 ![Initialize SDK](images/en-migration-firebase-sdk.png "Initialize SDK"){: caption="Figure 11. Initialize SDK" caption-side="bottom"}
 
 There are additional fields like destinationID and apikey in new initialize() method.
-Visit this link <add a link here> for obtaining the apikey for client SDK. 
+Visit this [link](https://cloud.ibm.com/docs/event-notifications?topic=event-notifications-service-access-management)for obtaining the apikey for client SDK. 
 
 * Callback class in the new SDK has changes. Make changes in the listener
 
@@ -196,7 +196,7 @@ Follow the below steps to migrate from BMPush to ENPushDestination
 ![Replace SDK initialize](images/en-migration-apns-initialize.png "Replace SDK initialize"){: caption="Figure 25. Replace SDK initialize" caption-side="bottom"}
 
 There are additional fields like destinationID and apikey in new initialize() method.
-Visit this link <add link> for obtaining the apikey for client SDK.
+Visit this [link](https://cloud.ibm.com/docs/event-notifications?topic=event-notifications-service-access-management) for obtaining the apikey for client SDK.
 
 * Make changes in the device registration step 
 If you are registering without userID
