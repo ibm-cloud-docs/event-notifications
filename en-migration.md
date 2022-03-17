@@ -135,45 +135,45 @@ Visit this link <add a link here> for obtaining the apikey for client SDK.
 * Make changes in the device registration step 
 If you are registering without userID
 
-![Modify manifest](images/en-migration-firebase-manifest.png "Modify manifest"){: caption="Figure 13. Modify manifest" caption-side="bottom"}
+![Register without id](images/en-migration-firebase-registerwoutid.png "Register without id"){: caption="Figure 13. Register without id" caption-side="bottom"}
 
 * If you are using registerDeviceWithUserId
 
-![Modify manifest](images/en-migration-firebase-manifest.png "Modify manifest"){: caption="Figure 14. Modify manifest" caption-side="bottom"}
+![Register with id](images/en-migration-firebase-withid.png "Register with id"){: caption="Figure 14. Register with id" caption-side="bottom"}
 
 * Make changes to the unregister API call.
 
-![Modify manifest](images/en-migration-firebase-manifest.png "Modify manifest"){: caption="Figure 15. Modify manifest" caption-side="bottom"}
+![Change unregister API](images/en-migration-firebase-unregister.png "Modify unregister API"){: caption="Figure 15. Modify unregister API" caption-side="bottom"}
 
 * Optionally, if you are using Tags.
 Make the flowing changes to tag subscriptions
 
-![Modify manifest](images/en-migration-firebase-manifest.png "Modify manifest"){: caption="Figure 16. Modify manifest" caption-side="bottom"}
+![Modify tag subscriptions](images/en-migration-firebase-tag1.png "Modify tag subscriptions"){: caption="Figure 16. Modify tag subscriptions" caption-side="bottom"}
 
 Changes to get all the tag subscription for the device
 
-![Modify manifest](images/en-migration-firebase-manifest.png "Modify manifest"){: caption="Figure 17. Modify manifest" caption-side="bottom"}
+![Modify get all tag](images/en-migration-firebase-tag2.png "Modify get all tag"){: caption="Figure 17. Modify get all tag" caption-side="bottom"}
 
 Make changes to tag unsubscribe
 
-![Modify manifest](images/en-migration-firebase-manifest.png "Modify manifest"){: caption="Figure 18. Modify manifest" caption-side="bottom"}
+![Modify tag unsubscribe](images/en-migration-firebase-tagunsubscribe.png "Modify tag unsubscribe"){: caption="Figure 18. Modify tag unsubscribe" caption-side="bottom"}
 
 * Optionally - If you are using Notification options, follow these changes
 Initializing the class
 
-![Modify manifest](images/en-migration-firebase-manifest.png "Modify manifest"){: caption="Figure 19. Modify manifest" caption-side="bottom"}
+![Initialize class](images/en-migration-firebase-initialize.png "Initialize class"){: caption="Figure 19. Initialize class" caption-side="bottom"}
 
 Changes to Notification Button
 
-![Modify manifest](images/en-migration-firebase-manifest.png "Modify manifest"){: caption="Figure 20. Modify manifest" caption-side="bottom"}
+![Modify notification button](images/en-migration-firebase-button.png "Modify notification button"){: caption="Figure 20. Modify notification button" caption-side="bottom"}
 
 Changes to Notification category 
 
-![Modify manifest](images/en-migration-firebase-manifest.png "Modify manifest"){: caption="Figure 21. Modify manifest" caption-side="bottom"}
+![Modify category](images/en-migration-firebase-category.png "Modify category"){: caption="Figure 21. Modify category" caption-side="bottom"}
 
 Changes to the Notification actions listener
 
-![Modify manifest](images/en-migration-firebase-manifest.png "Modify manifest"){: caption="Figure 22. Modify manifest" caption-side="bottom"}
+![Modify action listener](images/en-migration-firebase-actlistener.png "Modify action listener"){: caption="Figure 22. Modify action listener" caption-side="bottom"}
 
 Your mobile app is ready to work with your new instance of Event Notifications.
 
@@ -189,11 +189,11 @@ For the iOS app a new Destination of type Apple Push Notification (APNs) will ha
 Follow the below steps to migrate from BMPush to ENPushDestination
 * Change the import statement
 
-![Modify manifest](images/en-migration-firebase-manifest.png "Modify manifest"){: caption="Figure 24. Modify manifest" caption-side="bottom"}
+![Change import](images/en-migration-apns-import.png "Change import"){: caption="Figure 24. Change import" caption-side="bottom"}
 
 * Replace SDK Initialization code as follows
 
-![Modify manifest](images/en-migration-firebase-manifest.png "Modify manifest"){: caption="Figure 25. Modify manifest" caption-side="bottom"}
+![Replace SDK initialize](images/en-migration-apns-initialize.png "Replace SDK initialize"){: caption="Figure 25. Replace SDK initialize" caption-side="bottom"}
 
 There are additional fields like destinationID and apikey in new initialize() method.
 Visit this link <add link> for obtaining the apikey for client SDK.
@@ -201,40 +201,40 @@ Visit this link <add link> for obtaining the apikey for client SDK.
 * Make changes in the device registration step 
 If you are registering without userID
 
-![Modify manifest](images/en-migration-firebase-manifest.png "Modify manifest"){: caption="Figure 26. Modify manifest" caption-side="bottom"}
+![Register withoutid](images/en-migration-apns-woutuid.png "Register withoutid"){: caption="Figure 26. Register withoutid" caption-side="bottom"}
 
 If you are using user ID for registration
 
-![Modify manifest](images/en-migration-firebase-manifest.png "Modify manifest"){: caption="Figure 27. Modify manifest" caption-side="bottom"}
+![Register withid](images/en-migration-apns-withuid.png "Register withid"){: caption="Figure 27. Register withid" caption-side="bottom"}
 
 Make changes to the unregister API call.
-![Modify manifest](images/en-migration-firebase-manifest.png "Modify manifest"){: caption="Figure 28. Modify manifest" caption-side="bottom"}
+![Change unregister](images/en-migration-apns-unreg.png "Change unregister"){: caption="Figure 28. Change unregister" caption-side="bottom"}
 
 
 Optionally – if you are using Tags
 Make the flowing changes to tag subscriptions
-![Modify manifest](images/en-migration-firebase-manifest.png "Modify manifest"){: caption="Figure 29. Modify manifest" caption-side="bottom"}
+![Change tag subscription](images/en-migration-apns-tagsubscribe.png "Change tag subscription"){: caption="Figure 29. Change tag subscription" caption-side="bottom"}
 
 
 Changes to get all the tag subscription for the device
-![Modify manifest](images/en-migration-firebase-manifest.png "Modify manifest"){: caption="Figure 30. Modify manifest" caption-side="bottom"}
+![Change get all](images/en-migration-apns-tagall.png "Change get all"){: caption="Figure 30. Change get all" caption-side="bottom"}
 
 
 Make changes to tag unsubscribe
-![Modify manifest](images/en-migration-firebase-manifest.png "Modify manifest"){: caption="Figure 31. Modify manifest" caption-side="bottom"}
+![Change tag unsubscribe](images/en-migration-apns-modifytag.png "Change tag unsubscribe"){: caption="Figure 31. Change tag unsubscribe" caption-side="bottom"}
 
 
 * Optionally -If you are using Notification options, follow these changes
 Initializing the class
-![Modify manifest](images/en-migration-firebase-manifest.png "Modify manifest"){: caption="Figure 32. Modify manifest" caption-side="bottom"}
+![Class initialization](images/en-migration-apns-classinit.png "Class initialization"){: caption="Figure 32. Class initialization" caption-side="bottom"}
 
 
 Changes to Notification Button
-![Modify manifest](images/en-migration-firebase-manifest.png "Modify manifest"){: caption="Figure 33. Modify manifest" caption-side="bottom"}
+![Change notification button](images/en-migration-apns-button.png "Change notification button"){: caption="Figure 33. Change notification button" caption-side="bottom"}
 
 
 Changes to Notification category
-![Modify manifest](images/en-migration-firebase-manifest.png "Modify manifest"){: caption="Figure 34. Modify manifest" caption-side="bottom"}
+![Change notification category](images/en-migration-apns-category.png "Change notification category"){: caption="Figure 34. Change notification category" caption-side="bottom"}
 
 
 Your mobile app is ready to work with your new instance of Event Notifications.
