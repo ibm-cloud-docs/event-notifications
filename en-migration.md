@@ -29,6 +29,8 @@ completion-time: 10m
 {:step: data-tutorial-type='step'}
 {:codeblock: .codeblock}
 
+## Migrate your apps from IBM Push Notifications service to {{site.data.keyword.en_full}}
+
 ## Introduction
 {{site.data.keyword.en_full}} is an event notification routing service that notifies you to critical events that occur in your IBM Cloud account or triggers
 automated actions by using webhooks. You can filter and route event notifications from your IBM Cloud account to Email, SMS, Webhooks and Push Notifications. 
@@ -292,6 +294,10 @@ The push_tofields can take four values same as `target` of push API.
 The ibmenfcmbodyfield contains every field in the settings-> gcmfield of IBM Cloud Push notifications service, but with some changes, 
 1. All fields are in snake case instead of camel case. For examples,interactiveCategorywill be interactive_category. 
 2. We don’t support the channels and channel groups. 
+
+# Migrate the data from Push Notifications service to IBM Cloud Event Notifications Service
+
+You can use this [tool](https://github.com/Event-Notifications/push-en-migration-tool) to migrate the devices and tag subscriptions data from Push Notifications service to IBM Cloud Event Notifications service.
 
 # Release new version of the app
 
