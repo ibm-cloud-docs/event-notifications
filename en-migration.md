@@ -245,27 +245,27 @@ This section contains the steps required to be performed in the backend side.  T
 # If you are using the Node.js SDK 
 The existing Node SDK will have to be migrated to the new Event Notifications SDK. Follow this link for the new Node Admin SDK documentation. 
 * Changes in importing the SDK
-![Modify manifest](images/en-migration-firebase-manifest.png "Modify manifest"){: caption="Figure 35. Modify manifest" caption-side="bottom"}
+![Import SDK](images/en-migration-importsdk.png "MImport SDK"){: caption="Figure 35. Import SDK" caption-side="bottom"}
 
 
 * Changes in initializing the SDK
-![Modify manifest](images/en-migration-firebase-manifest.png "Modify manifest"){: caption="Figure 36. Modify manifest" caption-side="bottom"}
+![Initialize SDK](images/en-migration-initializesdk.png "Initialize SDK"){: caption="Figure 36. Initialize SDK" caption-side="bottom"}
 
 
 * Changes in creating notification targets
-![Modify manifest](images/en-migration-firebase-manifest.png "Modify manifest"){: caption="Figure 37. Modify manifest" caption-side="bottom"}
+![Create targets](images/en-migration-targets.png "Create targets"){: caption="Figure 37. Create targets" caption-side="bottom"}
 
 
 * Changes in the FCM style payload
-![Modify manifest](images/en-migration-firebase-manifest.png "Modify manifest"){: caption="Figure 38. Modify manifest" caption-side="bottom"}
+![Change FCM Style](images/en-migration-fcmstyle.png "Change FCM Style"){: caption="Figure 38. Change FCM Style" caption-side="bottom"}
 
 
 * Changes in FCM message body
-![Modify manifest](images/en-migration-firebase-manifest.png "Modify manifest"){: caption="Figure 39. Modify manifest" caption-side="bottom"}
+![Change FCM message body](images/en-migration-messagebody.png "Change FCM message body"){: caption="Figure 39. Change FCM message body" caption-side="bottom"}
 
 
 * Changes in Send notification method
-![Modify manifest](images/en-migration-firebase-manifest.png "Modify manifest"){: caption="Figure 40. Modify manifest" caption-side="bottom"}
+![Change send method](images/en-migration-firebase-sendmethod.png "Change send method"){: caption="Figure 40. Change send method" caption-side="bottom"}
 
 
 # If you are using REST API
