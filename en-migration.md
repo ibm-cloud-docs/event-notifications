@@ -271,12 +271,12 @@ The existing Node SDK will have to be migrated to the new Event Notifications SD
 # If you are using REST API
 This section contains the details about the modifications required for Send Notifications API. In the new API we have additional parameters
 in the request body. The required parameters for Android push notifications are as given below
-![Modify manifest](images/en-migration-firebase-manifest.png "Modify manifest"){: caption="Figure 41. Modify manifest" caption-side="bottom"}
+![Modification to REST API1](images/en-migration-restapi1.png "Modification to REST API1t"){: caption="Figure 41. Modification to REST API1" caption-side="bottom"}
 
 
 For a detailed description of the event attributes please see the EN event attribute definition.
 
-![Modify manifest](images/en-migration-firebase-manifest.png "Modify manifest"){: caption="Figure 42. Modify manifest" caption-side="bottom"}
+![Modification to REST API2](images/en-migration-restapi2.png "Modification to REST API2"){: caption="Figure 42. Modification to REST API2" caption-side="bottom"}
 
 
 •`target` field is replaced by `ibmenpushto`
