@@ -183,7 +183,7 @@ The mobile app source code has to be modified to use the new Event Notifications
 ## Create iOS Destination
 For the iOS app a new Destination of type Apple Push Notification (APNs) will have to be created. Here provide the P12 or P8 and their configurations.
 
-![Modify manifest](images/en-migration-firebase-manifest.png "Modify manifest"){: caption="Figure 23. Modify manifest" caption-side="bottom"}
+![Create iOS destination](images/en-migration-apns.png "Create iOS destination"){: caption="Figure 23. Create iOS destination" caption-side="bottom"}
 
 ## Edit the iOS application
 Follow the below steps to migrate from BMPush to ENPushDestination
@@ -205,9 +205,9 @@ If you are registering without userID
 
 If you are using user ID for registration
 
-![Register withid](images/en-migration-apns-withuid.png "Register withid"){: caption="Figure 27. Register withid" caption-side="bottom"}
+![Register withid](images/en-migration-apns-withuid.png "Register withid"){: caption="Figure 27. Register with id" caption-side="bottom"}
 
-Make changes to the unregister API call.
+Make changes to the unregister API call
 ![Change unregister](images/en-migration-apns-unreg.png "Change unregister"){: caption="Figure 28. Change unregister" caption-side="bottom"}
 
 
