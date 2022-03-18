@@ -8,10 +8,6 @@ keywords: event-notifications, event notifications migration, notifications, des
 
 subcollection: event-notifications
 
-content-type: tutorial
-account-plan: lite
-completion-time: 10m
-
 ---
 
 {{site.data.keyword.attribute-definition-list}}
