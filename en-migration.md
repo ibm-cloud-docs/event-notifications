@@ -16,7 +16,7 @@ completion-time: 10m
 
 {{site.data.keyword.attribute-definition-list}}
 
-## Migrate your apps from IBM Push Notifications service to {{site.data.keyword.en_full}}
+# Migrate your apps from IBM Push Notifications service to {{site.data.keyword.en_full}}
 
 ## Introduction
 {{site.data.keyword.en_full}} is an event notification routing service that notifies you to critical events that occur in your IBM Cloud account or triggers
