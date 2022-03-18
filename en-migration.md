@@ -14,7 +14,6 @@ completion-time: 10m
 
 ---
 
-{{site.data.keyword.attribute-definition-list}}
 {:codeblock: .codeblock}
 {:external: target="_blank" .external}
 {:important: .important}
