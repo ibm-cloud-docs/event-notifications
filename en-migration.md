@@ -14,12 +14,7 @@ completion-time: 10m
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
+{{site.data.keyword.attribute-definition-list}}
 
 ## Migrate your apps from IBM Push Notifications service to {{site.data.keyword.en_full}}
 
