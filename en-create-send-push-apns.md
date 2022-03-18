@@ -96,7 +96,7 @@ You need to obtain and configure your APNs credentials. The APNs certificates ar
 The App ID (the bundle identifier) is a unique identifier that identifies a specific application. Each application requires an App ID. Services like the Push Notifications service are configured to the App ID.
 
 
-* Go to the [Apple developer portal]() and select Certificates, Identifiers & Profiles.
+* Go to the [Apple developer portal](https://developer.apple.com) and select Certificates, Identifiers & Profiles.
 ![Certificates, Identifiers & Profiles](images/en-apns-cert-tab.png "App ID"){: caption="Figure 2. Certificates, Identifiers & Profiles" caption-side="bottom"}
 * Go to `Identifiers > Add identifier button`.
 ![Identifier button](images/en-apns-identifier-button.png "Identifier button"){: caption="Figure 2. Identifier Button" caption-side="bottom"}
@@ -131,7 +131,7 @@ You must obtain separate certificates for your development and distribution envi
 
 #### Create an APNs p12 certificate
 
-* Go to the [Apple developer portal]() and select Certificates, Identifiers & Profiles.
+* Go to the [Apple developer portal](https://developer.apple.com) and select Certificates, Identifiers & Profiles.
 ![Certificates, Identifiers & Profiles](images/en-apns-cert-tab.png "App ID"){: caption="Figure 1. Certificates, Identifiers & Profiles" caption-side="bottom"}
 * In the `Identifiers area`, select your App ID.
 ![Identifiers tab](images/en-apns-en-apns-app-id.png "Identifiers tab"){: caption="Figure 2. Identifiers tab" caption-side="bottom"}
@@ -166,7 +166,7 @@ You must obtain separate certificates for your development and distribution envi
   
 #### Create an APNs p8 token
 
-* Go to the [Apple developer portal]() and select Certificates, Identifiers & Profiles.
+* Go to the [Apple developer portal](https://developer.apple.com) and select Certificates, Identifiers & Profiles.
 ![Certificates, Identifiers & Profiles](images/en-apns-cert-tab.png "App ID"){: caption="Figure 2. Certificates, Identifiers & Profiles" caption-side="bottom"}
 * Navigate to `Keys` tab on Left Nav.
 ![Keys tab](images/en-apns-keys-tab.png "Keys tab"){: caption="Figure 2. Keys tab" caption-side="bottom"}
@@ -201,6 +201,7 @@ Click `Destinations` in the {{site.data.keyword.en_short}} console and add the f
 * Update the iOS Push Credentials with the details based on `Authentication Type` and select `Environment`
 	* if certificate type is  `p8` , upload .p8 file and provide `KeyID`, `TeamID` and `BundleID`
 	* if certificate type is `p12`, upload p12 certificate and provide certificate `password`
+	
 ## Create an {{site.data.keyword.en_short}} topic
 {: #en-create-topic}
 {: step}
@@ -233,7 +234,7 @@ Click `Subscriptions` in the {{site.data.keyword.en_short}} console. Enter the f
 
 The iOS SDK enables iOS apps to receive push notifications. Complete the following steps to install {{site.data.keyword.en_short}} iOS SDK, initialize the SDK, and register for notifications for your iOS app.
 
-## Installation
+## SDK Installation
 The current version of this SDK is: 0.0.1
 
 To use the Event Notifications iOS destination SDK, define a dependency that contains the artifact coordinates (group id, artifact id and version) for the service, like this:
@@ -270,7 +271,6 @@ dependencies: [
     .package(url: "https://github.com/IBM/event-notifications-destination-ios-sdk", from: "0.0.1")
 ]
 ```
-
 
 ## Installation
 
