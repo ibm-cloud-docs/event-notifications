@@ -224,7 +224,7 @@ Changes to Notification category
 
 Your mobile app is ready to work with your new instance of Event Notifications.
 
-# Modify the backend
+## Modify the backend
 This section contains the steps required to be performed in the backend side.  The send notification API has changed and hence all the SDKs as well. 
 
 ## If you are using the Node.js SDK 
@@ -279,11 +279,11 @@ The ibmenfcmbody field contains every field in the settings-> gcmfield of IBM Cl
 2. We don’t support the channels and channel groups. 
 
 
-# Migrate the data from Push Notifications service to IBM Cloud Event Notifications Service
+## Migrate the data from Push Notifications service to IBM Cloud Event Notifications Service
 
 You can use this [tool](https://github.com/Event-Notifications/push-en-migration-tool) to migrate the devices and tag subscriptions data from Push Notifications service to IBM Cloud Event Notifications service.
 
-# Release new version of the app
+## Release new version of the app
 
 After the integration is complete –the new version of the App will have to be released. In the new version ask the user permission to send notification and register the device again.In the overlapping window when the user population is migrating from the old version of the app to the new version, the notifications may have to be sent to the existing Push Notification environment as well as the new Event Notifications environment.
 
