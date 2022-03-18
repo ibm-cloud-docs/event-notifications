@@ -140,6 +140,7 @@ ibmcloud event-notifications destination create --name NAME --type TYPE [--descr
    }
   }
   ```
+  
 ### ibmcloud event-notifications destination list
 {: #event-notifications-cli-destination-list-command}
 
@@ -549,6 +550,7 @@ ibmcloud event-notifications subscription update --id ID [--name NAME] [--descri
    * Flag: `[-attributes ATTRIBUTES]`     
 
 ## Send Notifications
+
 ### ibmcloud event-notifications Send Notifications
 {: #event-notifications-cli-send-notifications-command}
 
