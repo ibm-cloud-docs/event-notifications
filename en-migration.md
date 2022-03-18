@@ -280,9 +280,9 @@ For a detailed description of the event attributes please see the EN event attri
 ![Modification to REST API2](images/en-migration-restapi2.png "Modification to REST API2"){: caption="Figure 42. Modification to REST API2" caption-side="bottom"}
 
 
-•`target` field is replaced by `ibmenpushto`
-•`message` field is removed. The alert, url fields are part of the `ibmenfcmbody`.
-•`settings->gcm` is replaced by `ibmenfcmbody`.
+* `target` field is replaced by `ibmenpushto`
+* `message` field is removed. The alert, url fields are part of the `ibmenfcmbody`
+* `settings->gcm` is replaced by `ibmenfcmbody`
 
 The push_tofields can take four values same as `target` of push API. 
 1.tags –array of tag names
