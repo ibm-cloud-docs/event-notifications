@@ -4,7 +4,7 @@ copyright:
   years: 2022
 lastupdated: "2022-03-16"
 
-keywords: event-notifications, event notifications, notifications, destinations, push, migration
+keywords: event-notifications, event notifications migration, notifications, destinations, push, migration
 
 subcollection: event-notifications
 
@@ -14,19 +14,12 @@ completion-time: 10m
 
 ---
 
+{:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
-{:external: target="_blank" .external}
-{:important: .important}
-{:note: .note}
 {:pre: .pre}
 {:screen: .screen}
-{:shortdesc: .shortdesc}
 {:tip: .tip}
-{:download: .download}
-{:term: .term}
-{:external: target="_blank" .external}
-{:step: data-tutorial-type='step'}
-{:codeblock: .codeblock}
 
 ## Migrate your apps from IBM Push Notifications service to {{site.data.keyword.en_full}}
 
