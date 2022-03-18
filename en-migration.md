@@ -224,10 +224,10 @@ Changes to Notification category
 
 Your mobile app is ready to work with your new instance of Event Notifications.
 
-## Modify the backend
+# Modify the backend
 This section contains the steps required to be performed in the backend side.  The send notification API has changed and hence all the SDKs as well. 
 
-# If you are using the Node.js SDK 
+## If you are using the Node.js SDK 
 The existing Node SDK will have to be migrated to the new Event Notifications SDK. Follow this link for the new Node Admin SDK documentation. 
 * Changes in importing the SDK
 ![Import SDK](images/en-migration-importsdk.png "MImport SDK"){: caption="Figure 35. Import SDK" caption-side="bottom"}
@@ -250,10 +250,10 @@ The existing Node SDK will have to be migrated to the new Event Notifications SD
 
 
 * Changes in Send notification method
-![Change send method](images/en-migration-firebase-sendmethod.png "Change send method"){: caption="Figure 40. Change send method" caption-side="bottom"}
+![Change send method](images/en-migration-sendmethod.png "Change send method"){: caption="Figure 40. Change send method" caption-side="bottom"}
 
 
-# If you are using REST API
+## If you are using REST API
 This section contains the details about the modifications required for Send Notifications API. In the new API we have additional parameters
 in the request body. The required parameters for Android push notifications are as given below
 ![Modification to REST API1](images/en-migration-restapi1.png "Modification to REST API1t"){: caption="Figure 41. Modification to REST API1" caption-side="bottom"}
@@ -268,15 +268,16 @@ For a detailed description of the event attributes please see the EN event attri
 * `message` field is removed. The alert, url fields are part of the `ibmenfcmbody`
 * `settings->gcm` is replaced by `ibmenfcmbody`
 
-The push_tofields can take four values same as `target` of push API. 
-1.tags –array of tag names
-2.user_ids –array of user ids. 
-3.fcm_devices–array of device Ids.
-4.platforms –the target device platform. 
+The ibmenpushto fields can take four values same as `target` of push API
+1. tags –array of tag names
+2. user_ids –array of user ids. 
+3. fcm_devices–array of device Ids.
+4. platforms –the target device platform. 
 
-The ibmenfcmbodyfield contains every field in the settings-> gcmfield of IBM Cloud Push notifications service, but with some changes, 
+The ibmenfcmbody field contains every field in the settings-> gcmfield of IBM Cloud Push notifications service, but with some changes, 
 1. All fields are in snake case instead of camel case. For examples,interactiveCategorywill be interactive_category. 
 2. We don’t support the channels and channel groups. 
+
 
 # Migrate the data from Push Notifications service to IBM Cloud Event Notifications Service
 
