@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-03-16"
+lastupdated: "2022-03-21"
 
 keywords: event notifications, IBM Cloud
 
@@ -21,20 +21,20 @@ completion-time: 10m
 {: toc-content-type="tutorial"}
 {: toc-completion-time="10m"}
 
-This tutorial takes you through the steps that you need to take before you create an {site.data.keyword.en_full} service.
+This tutorial brings you through the steps that you need to take before you create an {{site.data.keyword.en_full_notm}} service.
 {: shortdesc}
 
 {{site.data.keyword.en_short}} is a routing service that tells you about critical events that occur in your {{site.data.keyword.Bluemix_notm}} account. You can filter and route event notifications from {{site.data.keyword.Bluemix_notm}} services like Monitoring, Security and Compliance Center, and Secrets Manager to communication channels like email, SMS, push notifications, and webhooks.
 
 ## Create a cloud account
 {: #en-cloud-ac}
-{: #step}
+{: step}
 
-You need an {{site.data.keyword.cloud}} account. If you don't have an account, [Create an IBM Cloud account](https://cloud.ibm.com/registration/).
+You need an {{site.data.keyword.cloud}} account. If you don't have one, [Create an IBM Cloud account](https://cloud.ibm.com/registration/).
 
 ## Decide on a location
 {: #en-decide-location}
-{: #step}
+{: step}
 
 Decide on a location where your service will be hosted. Currently, the following locations are supported:
 
@@ -42,22 +42,20 @@ Decide on a location where your service will be hosted. Currently, the following
 * London (eu-gb)
 * Sydney (au-syd)
 
-For more information, see [Regions](/docs/openwhisk?topic=openwhisk-cloudfunctions_regions).
-
 ## Decide on a pricing plan
 {: #en-decide-pricing-plans}
-{: #step}
+{: step}
 
-Based on your budget requirements, decide on a pricing plan. Currently, the following plans are available: Lite, and Standard.
+Based on your business requirements, decide on a pricing plan. Currently, the following plans are available: Lite, and Standard.
 
 * `Lite`: This plan gives you unlimited ingested events, 10 topics, 2 filters per topic, 5 destinations, 20 outbound emails, 20 outbound SMSes, 20 outbound webhooks, and 1000 notifications per push destination. Ten subscriptions are allowed, and a subscription can have a maximum of three email recipients.
-* `Standard`: You are charged for ingested events and for outbound digital messages. An ingested event is one that is received and filtered. If a source is connected but no filters are defined for it (in other words, the source is not associated with any topic), the incoming events are dropped, and you are not charged. Outbound digital messages come in various types, and each type is priced separately.
+* `Standard`: You are charged for ingested events and for outbound digital messages. An ingested event is one that is received and filtered. If a source is connected but no filters are defined for it (that is, the source is not associated with any topic), the incoming events are dropped, and you are not charged. Outbound digital messages come in various types, and each type is priced separately.
 
 ## Choose an event source
 {: #en-decide-event-source}
-{: #step}
+{: step}
 
-An IBM managed source indicates a service on {{site.data.keyword.Bluemix_notm}}, which, can emit events to {{site.data.keyword.en_short}} service.
+An IBM managed source indicates a service on {{site.data.keyword.Bluemix_notm}} that can emit events to {{site.data.keyword.en_short}} service.
 
 The list of IBM provided sources is as follows:
 - [IBM Cloud Monitoring](https://cloud.ibm.com/docs/monitoring?topic=monitoring-notifications)
@@ -66,7 +64,7 @@ The list of IBM provided sources is as follows:
 
 ## Choose an event destination
 {: #en-decide-event-destination}
-{: #step}
+{: step}
 
 A destination is a delivery target for a notification. Two destination categories are supported: human and service.
 
