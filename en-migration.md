@@ -133,11 +133,11 @@ If you are registering without userID
 * Optionally, if you are using Tags.
 Make the flowing changes to tag subscriptions
 
-![Modify tag subscriptions](images/en-migration-firebase-tag1.png "Modify tag subscriptions"){: caption="Figure 16. Modify tag subscriptions" caption-side="bottom"}
+![Modify tag subscriptions](images/en-migration-firebase-tag.png "Modify tag subscriptions"){: caption="Figure 16. Modify tag subscriptions" caption-side="bottom"}
 
 Changes to get all the tag subscription for the device
 
-![Modify get all tag](images/en-migration-firebase-tag2.png "Modify get all tag"){: caption="Figure 17. Modify get all tag" caption-side="bottom"}
+![Modify get all tag](images/en-migration-firebase-tag1.png "Modify get all tag"){: caption="Figure 17. Modify get all tag" caption-side="bottom"}
 
 Make changes to tag unsubscribe
 
