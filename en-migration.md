@@ -193,7 +193,7 @@ If you are using user ID for registration
 ![Register withid](images/en-migration-apns-withuid.png "Register withid"){: caption="Figure 27. Register with id" caption-side="bottom"}
 
 Make changes to the unregister API call
-![Change unregister](images/en-migration-apns-unreg.png "Change unregister"){: caption="Figure 28. Change unregister" caption-side="bottom"}
+![Change unregister](images/en-migration-apns-unregeg.png "Change unregister"){: caption="Figure 28. Change unregister" caption-side="bottom"}
 
 
 Optionally – if you are using Tags
