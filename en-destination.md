@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-03-04"
+lastupdated: "2022-03-24"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -45,6 +45,6 @@ Both email and SMS destinations are provided out of the box, and are available w
 
 Service destinations are cloud services or application where notifications are consumed programmatically. The following service destination is supported by the {{site.data.keyword.en_short}} service:
 
-- [Webhook: to a backend microservice](/docs/event-notifications?topic=event-notifications-en-destinations-webhook).
+- [Webhook: to a backend microservice](/docs/event-notifications?topic=event-notifications-en-destinations-webhook)
 
 

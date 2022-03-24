@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-03-21"
+lastupdated: "2022-03-24"
 
 keywords: event notifications, IBM Cloud
 
@@ -73,13 +73,13 @@ A destination is a delivery target for a notification. Two destination categorie
 
 Human destinations are devices, servers, or applications that present notifications for human consumption. The following human destinations are supported:
 
-- {{site.data.keyword.Bluemix_notm}} email service
-- {{site.data.keyword.Bluemix_notm}} push notification service
-- {{site.data.keyword.Bluemix_notm}} SMS service
+- [{{site.data.keyword.Bluemix_notm}} email service](docs/event-notifications?topic=event-notifications-en-destinations-email)
+- [{{site.data.keyword.Bluemix_notm}} push notification service](/docs/event-notifications?topic=event-notifications-en-destinations-push)
+- [{{site.data.keyword.Bluemix_notm}} SMS service](/docs/event-notifications?topic=event-notifications-en-destinations-sms)
 
 ### Service destinations
 {: #en-destination-service}
 
 Service destinations are cloud services or applications where notifications are consumed programmatically. The following service destination is supported:
 
-- Webhook: to a backend microservice
+- [Webhook: to a backend microservice](/docs/event-notifications?topic=event-notifications-en-destinations-webhook)
