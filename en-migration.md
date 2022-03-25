@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-03-24"
+lastupdated: "2022-03-25"
 
 keywords: event-notifications, event notifications migration, notifications, destinations, push, migration
 
@@ -88,25 +88,25 @@ The package name for the {{site.data.keyword.mobilepushshort}} SDK was `com.ibm.
 
 1. Go to the [Firebase Console](https://console.firebase.google.com)
 
-![Firebase console](images/en-migration-firebase-console.png "Firebase console"){: caption="Figure 3. Firebase Console" caption-side="bottom"}
+   ![Firebase console](images/en-migration-firebase-console.png "Firebase console"){: caption="Figure 3. Firebase Console" caption-side="bottom"}
 
-2. Select the project that you are using for {{site.data.keyword.mobilepushshort}}. 
+1. Select the project that you are using for {{site.data.keyword.mobilepushshort}}. 
 
-![Select project](images/en-migration-firebase-project.png "Select project"){: caption="Figure 4. Select project" caption-side="bottom"}
+   ![Select project](images/en-migration-firebase-project.png "Select project"){: caption="Figure 4. Select project" caption-side="bottom"}
 
-3. In the navigation panel, select the **Settings** icon next to the **Project Overview** and select **Settings > Project settings**. Scroll down to locate **Your apps**.
+1. In the navigation panel, select the **Settings** icon next to the **Project Overview** and select **Settings > Project settings**. Scroll down to locate **Your apps**.
 
-![Project setting](images/en-migration-firebase-setting.png "Project setting"){: caption="Figure 5. Project setting" caption-side="bottom"}
+   ![Project setting](images/en-migration-firebase-setting.png "Project setting"){: caption="Figure 5. Project setting" caption-side="bottom"}
 
-4. Find an app with package name `com.ibm.mobilefirstplatform.clientsdk.android.push` and click **Remove this app**. 
+1. Find an app with package name `com.ibm.mobilefirstplatform.clientsdk.android.push` and click **Remove this app**. 
 
-5. Click **Add app > Choose Android**
+1. Click **Add app > Choose Android**
 
-6. Enter `com.ibm.cloud.eventnotifications.destination.android` as the package name and click **Register App**. 
+1. Enter `com.ibm.cloud.eventnotifications.destination.android` as the package name and click **Register App**. 
 
-![Register app](images/en-migration-firebase-addapp.png "Project setting"){: caption="Figure 6. Register app" caption-side="bottom"}
+   ![Register app](images/en-migration-firebase-addapp.png "Project setting"){: caption="Figure 6. Register app" caption-side="bottom"}
 
-7. Download `google-services.json`. You use this file later when you modify the app.
+1. Download `google-services.json`. You use this file later when you modify the app.
 
 
 ### Edit the Android app
@@ -116,79 +116,79 @@ The package name for the {{site.data.keyword.mobilepushshort}} SDK was `com.ibm.
 
 1. Change the Module’s `build.gradlefile`to include the new SDKs.
 
-![Modify build](images/en-migration-firebase-gradle.png "Modify build"){: caption="Figure 7. Modify build" caption-side="bottom"}
+   ![Modify build](images/en-migration-firebase-gradle.png "Modify build"){: caption="Figure 7. Modify build" caption-side="bottom"}
 
-3. Open `AndroidManifest.xml` and change the following elements:
+1. Open `AndroidManifest.xml` and change the following elements:
 
    - Change the `<service>` section to refer to the new service
 
-![Modify manifest](images/en-migration-firebase-manifest.png "Modify manifest"){: caption="Figure 8. Modify manifest" caption-side="bottom"}
+   ![Modify manifest](images/en-migration-firebase-manifest.png "Modify manifest"){: caption="Figure 8. Modify manifest" caption-side="bottom"}
 
    - Change the `<activity>` section to point to the new class
 
+   ![Modify activity](images/en-migration-firebase-activity.png "Modify activity"){: caption="Figure 9. Modify activity" caption-side="bottom"}
 
-![Modify activity](images/en-migration-firebase-activity.png "Modify activity"){: caption="Figure 9. Modify activity" caption-side="bottom"}
+1. Change the import statements in the code. The new package name is `com.ibm.cloud.eventnotifications.destination.android.*`. Replace the old push import as shown:
 
-4. Change the import statements in the code. The new package name is `com.ibm.cloud.eventnotifications.destination.android.*`. Replace the old push import as shown:
+   ![Modify import](images/en-migration-firebase-import.png "Modify import"){: caption="Figure 10. Modify import" caption-side="bottom"}
 
-![Modify import](images/en-migration-firebase-import.png "Modify import"){: caption="Figure 10. Modify import" caption-side="bottom"}
+1. Initialize the new SDK  
 
-5. Initialize the new SDK  
+   ![Initialize SDK](images/en-migration-firebase-sdk.png "Initialize SDK"){: caption="Figure 11. Initialize SDK" caption-side="bottom"}
 
-![Initialize SDK](images/en-migration-firebase-sdk.png "Initialize SDK"){: caption="Figure 11. Initialize SDK" caption-side="bottom"}
+   There are additional fields like `destinationID` and `apikey` in the new `initialize()` method.
 
-There are additional fields like `destinationID` and `apikey` in the new `initialize()` method.
-For more information, on getting the `apikey` for client SDK see [Managing service access](/docs/event-notifications?topic=event-notifications-service-access-management). 
+   For more information, on getting the `apikey` for client SDK see [Managing service access](/docs/event-notifications?topic=event-notifications-service-access-management). 
 
-6. The callback class in the new SDK has changes. Make these changes in the listener.
+1. The callback class in the new SDK has changes. Make these changes in the listener.
 
-![Change listener](images/en-migration-firebase-sdk1.png "Change listener"){: caption="Figure 12. Change listener" caption-side="bottom"}
+   ![Change listener](images/en-migration-firebase-sdk1.png "Change listener"){: caption="Figure 12. Change listener" caption-side="bottom"}
 
-7. Make changes to the device registration step.
+1. Make changes to the device registration step.
 
    - If you are registering without `userID`
 
-![Register without id](images/en-migration-firebase-registerwoutid.png "Register without id"){: caption="Figure 13. Register without id" caption-side="bottom"}
+   ![Register without id](images/en-migration-firebase-registerwoutid.png "Register without id"){: caption="Figure 13. Register without id" caption-side="bottom"}
 
    - If you are using `registerDeviceWithUserId`
 
-![Register with id](images/en-migration-firebase-withid.png "Register with id"){: caption="Figure 14. Register with id" caption-side="bottom"}
+   ![Register with id](images/en-migration-firebase-withid.png "Register with id"){: caption="Figure 14. Register with id" caption-side="bottom"}
 
-8. Make changes to the unregister API call.
+1. Make changes to the unregister API call.
 
-![Change unregister API](images/en-migration-firebase-unregister.png "Modify unregister API"){: caption="Figure 15. Modify unregister API" caption-side="bottom"}
+   ![Change unregister API](images/en-migration-firebase-unregister.png "Modify unregister API"){: caption="Figure 15. Modify unregister API" caption-side="bottom"}
 
-9. Optionally, if you are using tags
+1. Optionally, if you are using tags
 
    - Change the tag subscriptions as follows:
 
-![Modify tag subscriptions](images/en-migration-firebase-tag.png "Modify tag subscriptions"){: caption="Figure 16. Modify tag subscriptions" caption-side="bottom"}
+   ![Modify tag subscriptions](images/en-migration-firebase-tag.png "Modify tag subscriptions"){: caption="Figure 16. Modify tag subscriptions" caption-side="bottom"}
 
    - Changes to get all the tag subscription for the device
 
-![Modify get all tag](images/en-migration-firebase-tag1.png "Modify get all tag"){: caption="Figure 17. Modify get all tag" caption-side="bottom"}
+   ![Modify get all tag](images/en-migration-firebase-tag1.png "Modify get all tag"){: caption="Figure 17. Modify get all tag" caption-side="bottom"}
 
    - Make changes to tag unsubscribe
 
-![Modify tag unsubscribe](images/en-migration-firebase-tagunsubscribe.png "Modify tag unsubscribe"){: caption="Figure 18. Modify tag unsubscribe" caption-side="bottom"}
+   ![Modify tag unsubscribe](images/en-migration-firebase-tagunsubscribe.png "Modify tag unsubscribe"){: caption="Figure 18. Modify tag unsubscribe" caption-side="bottom"}
 
-10. Optionally, if you are using Notification options, make the following changes:
+1. Optionally, if you are using Notification options, make the following changes:
 
    - Initializing the class
 
-![Initialize class](images/en-migration-firebase-initialize.png "Initialize class"){: caption="Figure 19. Initialize class" caption-side="bottom"}
+   ![Initialize class](images/en-migration-firebase-initialize.png "Initialize class"){: caption="Figure 19. Initialize class" caption-side="bottom"}
 
    - Changes to Notification button
 
-![Modify notification button](images/en-migration-firebase-button.png "Modify notification button"){: caption="Figure 20. Modify notification button" caption-side="bottom"}
+   ![Modify notification button](images/en-migration-firebase-button.png "Modify notification button"){: caption="Figure 20. Modify notification button" caption-side="bottom"}
 
    - Changes to Notification category 
 
-![Modify category](images/en-migration-firebase-category.png "Modify category"){: caption="Figure 21. Modify category" caption-side="bottom"}
+   ![Modify category](images/en-migration-firebase-category.png "Modify category"){: caption="Figure 21. Modify category" caption-side="bottom"}
 
-11. Changes to the Notification actions listener
+1. Changes to the Notification actions listener
 
-![Modify action listener](images/en-migration-firebase-actlistener.png "Modify action listener"){: caption="Figure 22. Modify action listener" caption-side="bottom"}
+   ![Modify action listener](images/en-migration-firebase-actlistener.png "Modify action listener"){: caption="Figure 22. Modify action listener" caption-side="bottom"}
 
 Your Android mobile app is ready to work with your new instance of {{site.data.keyword.en_full}}.
 
@@ -212,56 +212,56 @@ Follow these steps to migrate from BMPush to ENPushDestination:
 
 1. Change the import statement
 
-![Change import](images/en-migration-apns-import.png "Change import"){: caption="Figure 24. Change import" caption-side="bottom"}
+   ![Change import](images/en-migration-apns-import.png "Change import"){: caption="Figure 24. Change import" caption-side="bottom"}
 
-2. Replace SDK Initialization code
+1. Replace SDK Initialization code
 
-![Replace SDK initialize](images/en-migration-apns-initialize.png "Replace SDK initialize"){: caption="Figure 25. Replace SDK initialize" caption-side="bottom"}
+   ![Replace SDK initialize](images/en-migration-apns-initialize.png "Replace SDK initialize"){: caption="Figure 25. Replace SDK initialize" caption-side="bottom"}
 
-There are extra fields like `destinationID` and `apikey` in new `initialize()` method.
-For more information, on getting the `apikey` for client SDK see [Managing service access](/docs/event-notifications?topic=event-notifications-service-access-management). 
+   There are extra fields like `destinationID` and `apikey` in new `initialize()` method. For more information, on getting the `apikey` for client SDK see [Managing service access](/docs/event-notifications?topic=event-notifications-service-access-management). 
 
-3. Change the device registration step
+1. Change the device registration step
 
    - If you are registering without `userID`
 
-![Register withoutid](images/en-migration-apns-woutuid.png "Register withoutid"){: caption="Figure 26. Register withoutid" caption-side="bottom"}
+   ![Register withoutid](images/en-migration-apns-woutuid.png "Register withoutid"){: caption="Figure 26. Register withoutid" caption-side="bottom"}
 
    - If you are using user ID for registration
 
-![Register withid](images/en-migration-apns-withuid.png "Register withid"){: caption="Figure 27. Register with id" caption-side="bottom"}
+   ![Register withid](images/en-migration-apns-withuid.png "Register withid"){: caption="Figure 27. Register with id" caption-side="bottom"}
 
-4. Change the unregister API call
+1. Change the unregister API call
 
-![Change unregister](images/en-migration-apns-unregeg.png "Change unregister"){: caption="Figure 28. Change unregister" caption-side="bottom"}
+   ![Change unregister](images/en-migration-apns-unregeg.png "Change unregister"){: caption="Figure 28. Change unregister" caption-side="bottom"}
 
-5. Optionally, if you are using tags:
+
+1. Optionally, if you are using tags:
 
    - Change the tag subscriptions as follows:
 
-![Change tag subscription](images/en-migration-apns-tagsubscribe.png "Change tag subscription"){: caption="Figure 29. Change tag subscription" caption-side="bottom"}
+   ![Change tag subscription](images/en-migration-apns-tagsubscribe.png "Change tag subscription"){: caption="Figure 29. Change tag subscription" caption-side="bottom"}
 
    - Changes to the get all tag subscription for the device
 
-![Change get all](images/en-migration-apns-tagall.png "Change get all"){: caption="Figure 30. Change get all" caption-side="bottom"}
+   ![Change get all](images/en-migration-apns-tagall.png "Change get all"){: caption="Figure 30. Change get all" caption-side="bottom"}
 
    - Changes to the tag unsubscribe
 
-![Change tag unsubscribe](images/en-migration-apns-modifytag.png "Change tag unsubscribe"){: caption="Figure 31. Change tag unsubscribe" caption-side="bottom"}
+   ![Change tag unsubscribe](images/en-migration-apns-modifytag.png "Change tag unsubscribe"){: caption="Figure 31. Change tag unsubscribe" caption-side="bottom"}
 
-6. Optionally, if you are using **Notification options**, make the following changes:
+1. Optionally, if you are using **Notification options**, make the following changes:
 
    - Initialize the class
 
-![Class initialization](images/en-migration-apns-classinit.png "Class initialization"){: caption="Figure 32. Class initialization" caption-side="bottom"}
+   ![Class initialization](images/en-migration-apns-classinit.png "Class initialization"){: caption="Figure 32. Class initialization" caption-side="bottom"}
 
    - Change the Notification button
 
-![Change notification button](images/en-migration-apns-button.png "Change notification button"){: caption="Figure 33. Change notification button" caption-side="bottom"}
+   ![Change notification button](images/en-migration-apns-button.png "Change notification button"){: caption="Figure 33. Change notification button" caption-side="bottom"}
 
    - Change the Notification category
 
-![Change notification category](images/en-migration-apns-category.png "Change notification category"){: caption="Figure 34. Change notification category" caption-side="bottom"}
+   ![Change notification category](images/en-migration-apns-category.png "Change notification category"){: caption="Figure 34. Change notification category" caption-side="bottom"}
 
 Your iOS mobile app is ready to work with your new instance of {{site.data.keyword.en_full}}.
 
@@ -278,28 +278,29 @@ Migrate the existing Node SDK to the new {{site.data.keyword.en_full}} SDK. Foll
 
 1. Changes to importing the SDK
 
-![Import SDK](images/en-migration-importsdk.png "MImport SDK"){: caption="Figure 35. Import SDK" caption-side="bottom"}
+   ![Import SDK](images/en-migration-importsdk.png "MImport SDK"){: caption="Figure 35. Import SDK" caption-side="bottom"}
 
 
-2. Changes to initializing the SDK
+1. Changes to initializing the SDK
 
-![Initialize SDK](images/en-migration-initializesdk.png "Initialize SDK"){: caption="Figure 36. Initialize SDK" caption-side="bottom"}
+    ![Initialize SDK](images/en-migration-initializesdk.png "Initialize SDK"){: caption="Figure 36. Initialize SDK" caption-side="bottom"}
 
-3. Changes to creating notification targets
 
-![Create targets](images/en-migration-targets.png "Create targets"){: caption="Figure 37. Create targets" caption-side="bottom"}
+1. Changes to creating notification targets
 
-4. Changes to the FCM style payload
+   ![Create targets](images/en-migration-targets.png "Create targets"){: caption="Figure 37. Create targets" caption-side="bottom"}
 
-![Change FCM Style](images/en-migration-fcmstyle.png "Change FCM Style"){: caption="Figure 38. Change FCM Style" caption-side="bottom"}
+1. Changes to the FCM style payload
 
-5. Changes to FCM message body
+   ![Change FCM Style](images/en-migration-fcmstyle.png "Change FCM Style"){: caption="Figure 38. Change FCM Style" caption-side="bottom"}
 
-![Change FCM message body](images/en-migration-messagebody.png "Change FCM message body"){: caption="Figure 39. Change FCM message body" caption-side="bottom"}
+1. Changes to FCM message body
 
-6. Changes to Send notification method
+   ![Change FCM message body](images/en-migration-messagebody.png "Change FCM message body"){: caption="Figure 39. Change FCM message body" caption-side="bottom"}
 
-![Change send method](images/en-migration-sendmethod.png "Change send method"){: caption="Figure 40. Change send method" caption-side="bottom"}
+1. Changes to Send notification method
+
+   ![Change send method](images/en-migration-sendmethod.png "Change send method"){: caption="Figure 40. Change send method" caption-side="bottom"}
 
 
 ### If you are using REST API
@@ -340,8 +341,3 @@ You can use the [push-en-migration-tool](https://github.com/Event-Notifications/
 {: step}
 
 After the integration is complete, release the new version of the app. In the new version, ask the user's permission to send a notification and register the device again. In the overlapping window when the user population is migrating from the old version of the app to the new version, the notifications might have to be sent to the existing {{site.data.keyword.mobilepushshort}} environment and the new {{site.data.keyword.en_full}} environment.
-
-
-
-
-
