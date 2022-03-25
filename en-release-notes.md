@@ -28,6 +28,12 @@ content-type: release-note
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
 
+## 25 Mar 2022
+{: #event-notifications-Mar2522}
+{: release-note}
+
+Event Notifications is now available in Frankfurt region.
+
 ## 28 February 2022
 {: #event-notifications-Feb2822}
 {: release-note}
