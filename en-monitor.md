@@ -116,9 +116,10 @@ Currently, {{site.data.keyword.mon_full_notm}} integration is available for {{si
 
 | Deployment region | Monitoring region |
 |-------------|-------------|
-| Dallas| Dallas |
+| Dallas| Dallas|
 | London| London|
 | Sydney| Sydney|
+| Frankfurt| Frankfurt|
 {: caption="Table 1. Deployment regions" caption-side="top"}
 
 Before you can start with {{site.data.keyword.en_short}} monitoring metrics, you must first opt in and [enable platform metrics](https://cloud.ibm.com/docs/monitoring?topic=monitoring-platform_metrics_enabling)

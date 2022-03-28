@@ -34,7 +34,7 @@ In the {{site.data.keyword.Bluemix_notm}} [catalog](https://test.cloud.ibm.com/c
 {: #en-select}
 {: step}
 
-Select a `Location`. Currently, Dallas (us-south), London (eu-gb), and Sydney (au-syd) locations are supported.
+Select a `Location`. Currently, Dallas (us-south), London (eu-gb), Sydney (au-syd) and Frankfurt (eu-de) locations are supported.
 
 ## Select a pricing plan
 {: #en-pricing}
