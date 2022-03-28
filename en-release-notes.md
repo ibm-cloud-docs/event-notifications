@@ -32,7 +32,7 @@ Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, sec
 {: #event-notifications-Mar2522}
 {: release-note}
 
-Event Notifications is now available in Frankfurt region.
+Event Notifications is now available in the Frankfurt region.
 
 ## 28 February 2022
 {: #event-notifications-Feb2822}
