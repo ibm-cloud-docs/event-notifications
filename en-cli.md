@@ -46,6 +46,16 @@ ibmcloud event-notifications init [--instance-id INSTANCE-ID]
 ```
 {: pre}
 
+### ibmcloud event-notifications environment variables set
+
+export **IBMCLOUD_EN_ENDPOINT** variable to set the EN region endpoint
+
+**Dallas:** https://us-south.event-notifications.cloud.ibm.com/event-notifications
+**London:** https://eu-gb.event-notifications.cloud.ibm.com/event-notifications
+**Sydney:** https://au-syd.event-notifications.cloud.ibm.com/event-notifications
+**Frankfurt:** https://eu-de.event-notifications.cloud.ibm.com/event-notifications
+
+export **EVENT_NOTIFICATIONS_API_KEY** variable to set the Event Notifications instance apikey
 #### Command options
 {: #event-notifications-init-cli-options}
 
