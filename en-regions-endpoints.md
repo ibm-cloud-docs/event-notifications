@@ -35,6 +35,7 @@ Review region and connectivity options for interacting with {{site.data.keyword.
 - Dallas
 - London
 - Sydney
+- Frankfurt
 
 You can create {{site.data.keyword.en_full_notm}} resources in one of the supported {{site.data.keyword.cloud_notm}} regions.
 
@@ -48,4 +49,5 @@ The following table contains the base URLs for the {{site.data.keyword.en_full_n
 |Dallas |`https://us-south.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{instanceid}` |
 |London |`https://eu-gb.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{instanceid}` |
 |Sydney |`https://au-syd.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{instanceid}` |
+|Frankfurt |`https://eu-de.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{instanceid}` |
 {: caption="Table 1. Service endpoints" caption-side="top"}
