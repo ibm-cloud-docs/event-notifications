@@ -41,6 +41,7 @@ Decide on a location where your service will be hosted. Currently, the following
 * Dallas (us-south)
 * London (eu-gb)
 * Sydney (au-syd)
+* Frankfurt (eu-de)
 
 ## Decide on a pricing plan
 {: #en-decide-pricing-plans}
