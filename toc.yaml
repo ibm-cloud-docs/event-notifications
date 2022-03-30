@@ -69,7 +69,7 @@ toc:
           links:
           - link:
               label: API Explorer
-              href: https://test.cloud.ibm.com/apidocs/event-notifications
+              href: /apidocs/event-notifications
       - topicgroup:
           label: Event Notifications CLI
           topics:
