@@ -49,9 +49,10 @@ toc:
       topics:
       - en-iam.md
       - topicgroup:
-          label: Monitoring
+          label: Logging and Monitoring
           topics:
           - en-monitor.md
+          - en-logs.md
       - topicgroup:
           label: Enhancing security
           topics:
