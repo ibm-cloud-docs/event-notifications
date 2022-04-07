@@ -34,7 +34,7 @@ There are two destination categories: human and service.
 {: #en-destination-human}
 
 Human destinations are devices, servers, or applications that present notifications for human consumption. The following human destinations are supported by the {{site.data.keyword.en_short}} service:
-- [{{site.data.keyword.Bluemix_notm}} email service](docs/event-notifications?topic=event-notifications-en-destinations-email)
+- [{{site.data.keyword.Bluemix_notm}} email service](/docs/event-notifications?topic=event-notifications-en-destinations-email)
 - [{{site.data.keyword.Bluemix_notm}} push notification service](/docs/event-notifications?topic=event-notifications-en-destinations-push)
 - [{{site.data.keyword.Bluemix_notm}} SMS service](/docs/event-notifications?topic=event-notifications-en-destinations-sms)
 
