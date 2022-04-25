@@ -47,7 +47,7 @@ Create an {{site.data.keyword.en_short}} service, add a push destination for Fir
 
 The following diagram shows you how clients use Android Push Notifications.
 
-![How clients use push notifications](images/en-how-send.png "How clients use push notifications"){: caption="Figure 1. How clients use push notifications" caption-side="bottom"}
+![How clients use push notifications](images/en-how-send.svg "How clients use push notifications"){: caption="Figure 1. How clients use push notifications" caption-side="bottom"}
 
 ## Objectives
 {: #en-objectives}
