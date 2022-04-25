@@ -151,7 +151,28 @@ ibmcloud event-notifications destination create --name NAME --type TYPE [--descr
     "password": "apnspasswordvalue"
    }
   }
-```
+  ```
+
+  The following example shows the format of the DestinationConfig object for Chrome destination.
+
+   ``` json
+   {
+    "api_key": "chromeapikey",
+    "website_url" : "https://testwebsite.com",
+    
+   }
+  }
+  ```
+
+  The following example shows the format of the DestinationConfig object for Firefox destination.
+
+   ``` json
+   {
+    "website_url" : "https://testwebsite.com",
+    
+   }
+  }
+  ```
   
 ### ibmcloud event-notifications destination list
 {: #event-notifications-cli-destination-list-command}
@@ -234,7 +255,49 @@ ibmcloud event-notifications destination delete --id ID [--instance-id INSTANCE-
 * Activate to force resource deletion (to bypass the confirmation prompt).
    * Flag: `[--force]`   
 
+### ibmcloud event-notifications source create
+{: #event-notifications-cli-source-create-command}
 
+Create `Source`.
+
+```sh 
+ibmcloud event-notifications source create --instance-id INSTANCE-ID --name NAME --description DESCRIPTION [--enabled ENABLED]
+```
+{: pre}
+
+
+* **Parameters to provide:**
+* The name to be provided for API source
+   * Flag: `--name NAME`
+* The description for source.
+   * Flag: `--description DESCRIPTION`
+* The boolean flag to enable or disable the source
+   * Flag: `--enabled ENABLED`      
+* The Unique identifier for IBM Cloud Event Notifications instance.
+   * Flag: `[--instance-id INSTANCE-ID]`
+
+### ibmcloud event-notifications source update
+{: #event-notifications-cli-source-update-command}
+
+Update `Source`.
+
+```sh 
+ibmcloud event-notifications source update --instance-id INSTANCE-ID --id ID [--name NAME] [--description DESCRIPTION] [--enabled ENABLED]
+```
+{: pre}
+
+
+* **Parameters to provide:**
+* The name to be provided for API source
+   * Flag: `--name NAME`
+* Unique identifier for Source. Required.
+   * Flag: `--id ID`   
+* The description for source.
+   * Flag: `--description DESCRIPTION`
+* The boolean flag to enable or disable the source
+   * Flag: `--enabled ENABLED`      
+* The Unique identifier for IBM Cloud Event Notifications instance.
+   * Flag: `[--instance-id INSTANCE-ID]`   
 
 ### ibmcloud event-notifications source list
 {: #event-notifications-cli-source-list-command}
@@ -281,6 +344,24 @@ ibmcloud event-notifications source get --id ID [--instance-id INSTANCE-ID]
    * Flag: `[--instance-id INSTANCE-ID]`
 * Activate to force resource deletion (to bypass the confirmation prompt).
    * Flag: `[--force]`
+
+### ibmcloud event-notifications source delete
+{: #event-notifications-cli-source-delete-command}
+
+Delete specific `Source`.
+
+```sh
+ibmcloud event-notifications source delete --instance-id INSTANCE-ID --id ID
+```
+{: pre}
+
+* **Parameters to provide:**
+* Unique identifier for Source. Required.
+   * Flag: `--id ID`
+* The Unique identifier for IBM Cloud Event Notifications instance.
+   * Flag: `[--instance-id INSTANCE-ID]`
+* Activate to force resource deletion (to bypass the confirmation prompt).
+   * Flag: `[--force]`    
 
 ## Topic
 {: #event-notifications-topic-cli}
@@ -567,11 +648,16 @@ ibmcloud event-notifications subscription update --id ID [--name NAME] [--descri
 ### ibmcloud event-notifications Send Notifications
 {: #event-notifications-cli-send-notifications-command}
 
+Use below command to send notifications in cli version 0.0.7.
 
 ```sh
-send-notifications --instance-id INSTANCE-ID --subject SUBJECT --severity SEVERITY --id ID --source SOURCE --en-source-id EN-SOURCE-ID --type TYPE --time TIME [--data DATA] [--push-to PUSH-TO] [--message-fcm-body MESSAGE-FCM-BODY] [--message-apns-headers MESSAGE-APNS-HEADERS] [--message-apns-body MESSAGE-APNS-BODY] [--datacontenttype DATACONTENTTYPE] [--specversion SPECVERSION] 
+ibmcloud event-notifications send-notifications --instance-id INSTANCE-ID --subject SUBJECT --severity SEVERITY --id ID --source SOURCE --en-source-id EN-SOURCE-ID --type TYPE --time TIME [--data DATA] [--push-to PUSH-TO] [--message-fcm-body MESSAGE-FCM-BODY] [--message-apns-headers MESSAGE-APNS-HEADERS] [--message-apns-body MESSAGE-APNS-BODY] [--datacontenttype DATACONTENTTYPE] [--specversion SPECVERSION] 
 ```
 {: pre}
+
+Use below command to send notifications in cli version 0.0.8.
+
+send-notifications --instance-id INSTANCE-ID [--body BODY] [--ce-ibmenseverity CE-IBMENSEVERITY] [--ce-ibmendefaultshort CE-IBMENDEFAULTSHORT] [--ce-ibmendefaultlong CE-IBMENDEFAULTLONG] [--ce-ibmenfcmbody CE-IBMENFCMBODY] [--ce-ibmenapnsbody CE-IBMENAPNSBODY] [--ce-ibmenpushto CE-IBMENPUSHTO] [--ce-ibmenapnsheaders CE-IBMENAPNSHEADERS] [--ce-ibmenchromebody CE-IBMENCHROMEBODY] [--ce-ibmenfirefoxbody CE-IBMENFIREFOXBODY] [--ce-ibmenchromeheaders CE-IBMENCHROMEHEADERS] [--ce-ibmenfirefoxheaders CE-IBMENFIREFOXHEADERS] [--ce-ibmensourceid CE-IBMENSOURCEID] [--ce-id CE-ID] [--ce-source CE-SOURCE] [--ce-type CE-TYPE] [--ce-specversion CE-SPECVERSION] [--ce-time CE-TIME]
 
 * **Parameters to provide:**
 * The Unique identifier for IBM Cloud Event Notifications instance.
@@ -588,8 +674,6 @@ send-notifications --instance-id INSTANCE-ID --subject SUBJECT --severity SEVERI
    * Flag: `[--type TYPE]`  
 * The Timestamp to be set for notification. Required
    * Flag: `[--time TIME]` 
-* The Timestamp to be set for notification. Required
-   * Flag: `[--time TIME]` 
 * The datacontent type for notification. Required
    * Flag: `[--datacontenttype DATACONTENTTYPE]`         
 * The spec version value.Default value to be used is 1.0
@@ -601,7 +685,42 @@ send-notifications --instance-id INSTANCE-ID --subject SUBJECT --severity SEVERI
 * The Custom APNS headers information can be set using this option.
    * Flag: `[--message-apns-headers MESSAGE-APNS-HEADERS]`     
 * The apns meaage body can be set using this option.
-   * Flag: `[--message-apns-body MESSAGE-APNS-BODY]`            
+   * Flag: `[--message-apns-body MESSAGE-APNS-BODY]` 
+
+* The body payload to be provided for notification. 
+   * Flag: `[--body BODY]` 
+* The short text for notification to send
+   * Flag: `[--ce-ibmendefaultshort]`
+* The long text for notification top send.
+   * Flag: `[--ce-ibmendefaultlong CE-IBMENDEFAULTLONG]`   
+* The level of severity for notification. Required.
+   * Flag: `[--ce-ibmenseverity CE-IBMENSEVERITY]`   
+* The source description.
+   * Flag: `[--ce-source CE-SOURCE]`  
+* The source ID to be set for Notification source. Required
+   * Flag: `[--ce-ibmensourceid CE-IBMENSOURCEID]`
+* The type of notification. Required
+   * Flag: `[--ce-type CE-TYPE]`  
+* The Timestamp to be set for notification. Required
+   * Flag: `[--time TIME]`        
+* The spec version value.Default value to be used is 1.0
+   * Flag: `[--ce-specversion CE-SPECVERSION]`  
+* PThe Device data information to send data in case of Registered Devices/ Usersids/ Platforms.
+   * Flag: `[--ce-ibmenpushto CE-IBMENPUSHTO]`
+* FCM message body to send notification to FCM devices.
+   * Flag: `[--ce-ibmenfcmbody CE-IBMENFCMBODY]` 
+* Chrome message body to send notification to FCM devices.
+   * Flag: `[--ce-ibmenchromebody CE-IBMENCHROMEBODY]`
+* Firefox message body to send notification to FCM devices.
+   * Flag: `[--ce-ibmenfirefoxbody CE-IBMENFIREFOXBODY]`      
+* The Custom APNS headers information can be set using this option.
+   * Flag: `[--ce-ibmenapnsheaders CE-IBMENAPNSHEADERS]` 
+* The Custom Chrome headers information can be set using this option.
+   * Flag: `[--ce-ibmenchromeheaders CE-IBMENCHROMEHEADERS]` 
+* The Custom Firefox information can be set using this option.
+   * Flag: `[--ce-ibmenfirefoxheaders CE-IBMENFIREFOXHEADERS]`         
+* The apns meaage body can be set using this option.
+   * Flag: `[--ce-ibmenapnsbody CE-IBMENAPNSBODY]`              
 
 The following example shows the format of data payload for sending notifications.
 
@@ -625,7 +744,21 @@ The following example shows the format of FCM message body to send notification 
 
 ```
 
-The following example shows the format of apns headers.   
+The following example shows the format of Chrome message body to send notification to FCM devices.        
+
+```json
+{"title":"Hello Chrome", "en_data":{"alert":"Hello Chrome Notification","title":"Chrome New Title","iconUrl":"https://","timeToLive":100,"payload":{"key":"value"}}}
+
+```
+The following example shows the format of Firefox message body to send notification to FCM devices.        
+
+```json
+
+'{"title":"Hello Firefox", "en_data":{"alert":"Hello firefox Notification","title":"firefox New Title","iconUrl":"https://","timeToLive":100,"payload":{"key":"value"}}}'
+
+```
+
+The following example shows the format of apns/chrome/fireox custom headers.   
 
 ```json
 {
