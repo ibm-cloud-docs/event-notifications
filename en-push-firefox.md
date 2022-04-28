@@ -91,6 +91,11 @@ Click `Destinations` in the {{site.data.keyword.en_short}} console and add the f
 * `Destination description`: add an optional description for the destination.
 * `Destination type`: select Firefox Push Notifications type from the dropdown list.
 * Provide the Website URL of your website.
+* Once Firefox destination is created. Edit the created destination to get public vapId key required for web sdk.
+
+![Destination Edit](images/en-push-firefox-destination-edit.png "Destination Edit"){: caption="Figure 7. Receive notifications" caption-side="bottom"}
+
+![Destination](images/en-push-firefox-destination.png "Destination"){: caption="Figure 7. Receive notifications" caption-side="bottom"}
 
 ## Create an {{site.data.keyword.en_short}} topic
 {: #en-create-topic}

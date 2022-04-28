@@ -126,6 +126,11 @@ Click `Destinations` in the {{site.data.keyword.en_short}} console and add the f
 * `Destination type`: select Chrome Push Notifications type from the dropdown list.
 * Add your website URL to get it whitelisted.
 * Add the `Server Key` which you have got from `Get FCM credentials` section.
+* Once Chrome destination is created. Edit the created destination to get public vapId key required for web sdk.
+
+![Destination Edit](images/en-push-chrome-destination-edit.png "Destination Edit"){: caption="Figure 7. Receive notifications" caption-side="bottom"}
+
+![Destination](images/en-push-chrome-destination.png "Destination"){: caption="Figure 7. Receive notifications" caption-side="bottom"}
 
 ## Create an {{site.data.keyword.en_short}} topic
 
