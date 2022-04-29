@@ -15,24 +15,13 @@ completion-time: 10m
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-{:codeblock: .codeblock}
-{:external: target="_blank" .external}
-{:important: .important}
-{:note: .note}
-{:pre: .pre}
-{:screen: .screen}
-{:shortdesc: .shortdesc}
-{:tip: .tip}
-{:download: .download}
-{:term: .term}
-{:external: target="_blank" .external}
-{:step: data-tutorial-type='step'}
-{:codeblock: .codeblock}
+
 
 # Create and send push notifications to Chrome web using {{site.data.keyword.en_full}}
 
 {: #en-push-chrome}
 {: toc-content-type="tutorial"}
+{: toc-services=""}
 {: toc-completion-time="10m"}
 
 Create an {{site.data.keyword.en_short}} service, add a push destination for Chrome Push Notifications, and send messages to Chrome web devices.
