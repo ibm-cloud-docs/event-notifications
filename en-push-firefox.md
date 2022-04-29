@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-02-16"
+lastupdated: "2022-04-29"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, push
 
@@ -29,7 +29,7 @@ completion-time: 10m
 {:step: data-tutorial-type='step'}
 {:codeblock: .codeblock}
 
-# Create and send push notifications to Firefox web using {{site.data.keyword.en_full}}
+# Create and send push notifications to Firefox web by using {{site.data.keyword.en_full}}
 {: #en-push-firefox}
 {: toc-content-type="tutorial"}
 {: toc-completion-time="10m"}
@@ -50,7 +50,6 @@ The following diagram shows you how clients use Firefox web Push Notifications.
 ![How clients use push notifications](images/en-how-send-mozilla.png "How clients use push notifications"){: caption="Figure 1. How clients use push notifications" caption-side="bottom"}
 
 ## Objectives
-
 {: #en-objectives}
 
 This tutorial shows you how to send push notifications as follows:
@@ -58,7 +57,7 @@ This tutorial shows you how to send push notifications as follows:
 * Create a website with {{site.data.keyword.en_short}}.
 * Get Firefox web credentials.
 * Download the SDK and complete the notifications setup.
-* Configure and send Firefox web push Notifications to a browser.
+* Configure and send Firefox web Push Notifications to a browser.
 
 ## Create an {{site.data.keyword.en_short}} service instance
 {: #en-create-event}
@@ -90,7 +89,7 @@ Click `Destinations` in the {{site.data.keyword.en_short}} console and add the f
 * `Destination name`: add a name for the Destination.
 * `Destination description`: add an optional description for the destination.
 * `Destination type`: select Firefox Push Notifications type from the dropdown list.
-* Provide the Website URL of your website.
+* Provide the URL of your website.
 * Once Firefox destination is created. Edit the created destination to get public vapId key required for web sdk.
 
 ![Destination Edit](images/en-push-firefox-destination-edit.png "Destination Edit"){: caption="Figure 7. Receive notifications" caption-side="bottom"}
@@ -101,7 +100,7 @@ Click `Destinations` in the {{site.data.keyword.en_short}} console and add the f
 {: #en-create-topic}
 {: step}
 
-Select `Topics` in the Event Notifications console and click `Create`. Enter the following topic details:
+Select `Topics` in the {{site.data.keyword.en_short}} console and click `Create`. Enter the following topic details:
 * `Name`: enter a name for the topic.
 * `Description`: add an optional description for the topic.
 * `Source`: select a source from the dropdown list.
@@ -130,7 +129,7 @@ Click `Subscriptions` in the {{site.data.keyword.en_short}} console. Enter the f
 
 The Firefox web SDK enables Firefox websites to receive push notifications. Complete the following steps to install {{site.data.keyword.en_short}} Firefox web SDK, initialize the SDK, and register for notifications for your website.
 
-* To include the SDK in your project Add the `ENPushSDK.js`,`ENPushServiceWorker.js` and `manifest_Website.json` files to your project root folder.
+* To include the SDK in your project, add the `ENPushSDK.js`,`ENPushServiceWorker.js` and `manifest_Website.json` files to your project root folder.
 
 * Edit the manifest_Website.json file.
 
@@ -142,21 +141,21 @@ The Firefox web SDK enables Firefox websites to receive push notifications. Comp
 
 * Change the `manifest_Website.json` file name to `manifest.json`.
 
-* Include the manifest.json in <head> tag of your html file.
+* Include the manifest.json in the `<head>` tag of your html file.
 
-  ```html
+```html
     <link rel="manifest" href="manifest.json">
-  ```
+```
 
-* Include IBM Cloud Web push SDK to the script ,
+* Include IBM Cloud web push SDK to the script.
 
-  ```html
+```html
    <script src="ENPushSDK.js" async></script>
-  ```
+```
 
-* Complete the following steps to enable Website to initialize the SDK
+* Complete the following steps to enable the website to initialize the SDK
 
-  ```js
+```js
   var enPush = new ENPush()
 
   function callback(response) {
@@ -173,40 +172,39 @@ The Firefox web SDK enables Firefox websites to receive push notifications. Comp
   }
 
   enPush.initialize(initParams, callback)
+```
 
-  ```
+    * region: Region of the {{site.data.keyword.en_short}} instance. eg; `us-south`,`eu-gb`, `au-syd` and `eu-de`
 
-  * region : Region of the Event Notifications Instance. eg; `us-south`,`eu-gb`, `au-syd` and `eu-de`
+    * deviceId: Optional deviceId for device registration.
 
-  * deviceId: Optional deviceId for device registration.
+* To register for notifications, se the `register()` or `registerWithUserId()` API to register the device with IBM Cloud Event Notifications service. Choose either of the following options:
 
-* To register for notifications Use the `register()` or `registerWithUserId()` API to register the device with IBM Cloud Event Notifications service. Choose either of the following options:
+    * Register without `UserId`:
 
-  * Register without `UserId`:
-
-  ```js
+```js
     enPush.register(function(response) {
       alert(response.response)
     })
-  ```
+```
 
-  * Register with UserId. For `userId` based notification, the register method will accept one more parameter - `userId`
+    * Register with UserId. For `userId` based notification, the register method will accept one more parameter - `userId`
 
-  ```js
+```js
     bmsPush.registerWithUserId("UserId",function(response) {
       alert(response.response)
     })
-  ```
+```
 
-  `UserId` is the user identifier value with which you want to register devices in the push service instance.
+`UserId` is the user identifier value with which you want to register devices in the push service instance.
 
-* The `subscribe` API will subscribe the device for a given tag. After the device is subscribed to a particular tag, the device can receive notifications that are sent for that tag. Add the following code snippet to your web application to subscribe to a list of tags.
+* The `subscribe` API subscribes the device for a tag. After the device is subscribed to a particular tag, the device can receive notifications that are sent for that tag. Add the following code snippet to your web application to subscribe to a list of tags.
 
-  ```js
+```js
     enPush.subscribe(tagName, function(response) {
       alert(response.response)
     })
-  ```
+```
 
 * When the setup is complete, run your application and register for push notifications.
 

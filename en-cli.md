@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-22"
+lastupdated: "2022-04-29"
 
 subcollection: event-notifications-cli-plugin
 keywords: event notifications CLI, event notifications command line, event notifications terminal, event notifications shell, Event Notifications, en
@@ -11,10 +11,10 @@ keywords: event notifications CLI, event notifications command line, event notif
 
 {{site.data.keyword.attribute-definition-list}}
 
-# {{site.data.keyword.en_short}} CLI plug-in for Event Notifications service
+# {{site.data.keyword.en_short}} CLI plug-in for {{site.data.keyword.en_short}} service
 {: #CLI_Event_Notifications}
 
-Use the {{site.data.keyword.Bluemix_notm}} command-line interface (CLI) to interact  {{site.data.keyword.en_short}} IBM Cloud service
+Use the {{site.data.keyword.Bluemix_notm}} command-line interface (CLI) to interact {{site.data.keyword.en_short}} IBM Cloud service
 
 ## Prerequisites
 {: #CLI_Event_Notifications_prereq}
@@ -54,7 +54,7 @@ export **IBMCLOUD_EN_ENDPOINT** variable to set the EN region endpoint
 **Sydney:** https://au-syd.event-notifications.cloud.ibm.com/event-notifications
 **Frankfurt:** https://eu-de.event-notifications.cloud.ibm.com/event-notifications
 
-export **EVENT_NOTIFICATIONS_API_KEY** variable to set the Event Notifications instance apikey.
+export **EVENT_NOTIFICATIONS_API_KEY** variable to set the {{site.data.keyword.en_short}} instance apikey.
 
 #### Command options
 {: #event-notifications-init-cli-options}
@@ -105,11 +105,11 @@ ibmcloud event-notifications destination create --name NAME --type TYPE [--descr
    * Flag: `--name NAME`
 * The type of the Destination The options available are webhook, push_android, push_ios.
    * Flag: `--type TYPE`
-* The Description of the destination .
+* The Description of the destination.
    * Flag: `--description DESCRIPTION`   
 * The Certificate file path to be provided.
    * Flag: `--certificate CERTIFICATE`     
-* The Certificate Content type to be set in case of IOS destination. The available options are p8/p12
+* The Certificate Content type to be set in the case of IOS destination. The available options are p8/p12
    * Flag: `--certificate-content-type CERTIFICATE-CONTENT-TYPE`    
 * The Configuration needed to set the destination specific parameters.
    * Flag: `--config CONFIG` 
@@ -151,9 +151,9 @@ ibmcloud event-notifications destination create --name NAME --type TYPE [--descr
     "password": "apnspasswordvalue"
    }
   }
-  ```
+```
 
-  The following example shows the format of the DestinationConfig object for Chrome destination.
+The following example shows the format of the DestinationConfig object for Chrome destination.
 
    ``` json
    {
@@ -162,9 +162,9 @@ ibmcloud event-notifications destination create --name NAME --type TYPE [--descr
     
    }
   }
-  ```
+```
 
-  The following example shows the format of the DestinationConfig object for Firefox destination.
+The following example shows the format of the DestinationConfig object for Firefox destination.
 
    ``` json
    {
@@ -172,8 +172,8 @@ ibmcloud event-notifications destination create --name NAME --type TYPE [--descr
     
    }
   }
-  ```
-  
+```
+
 ### ibmcloud event-notifications destination list
 {: #event-notifications-cli-destination-list-command}
 
@@ -271,7 +271,7 @@ ibmcloud event-notifications source create --instance-id INSTANCE-ID --name NAME
    * Flag: `--name NAME`
 * The description for source.
    * Flag: `--description DESCRIPTION`
-* The boolean flag to enable or disable the source
+* The Boolean flag to enable or disable the source
    * Flag: `--enabled ENABLED`      
 * The Unique identifier for IBM Cloud Event Notifications instance.
    * Flag: `[--instance-id INSTANCE-ID]`
@@ -294,7 +294,7 @@ ibmcloud event-notifications source update --instance-id INSTANCE-ID --id ID [--
    * Flag: `--id ID`   
 * The description for source.
    * Flag: `--description DESCRIPTION`
-* The boolean flag to enable or disable the source
+* The Boolean flag to enable or disable the source
    * Flag: `--enabled ENABLED`      
 * The Unique identifier for IBM Cloud Event Notifications instance.
    * Flag: `[--instance-id INSTANCE-ID]`   
@@ -810,8 +810,8 @@ The following example shows the target device configuration example.
 |  Property  |  Property type  |  Description  |
 |-------------|-------------|-------------|
 | icon | string | Specify the name of the icon to be displayed for the notification. Make sure that the icon is already packaged with the client application. |
-| delay_while_idle | boolean | When set to true, this parameter indicates that the message should not be sent until the device becomes active. |
-| sync | boolean | Device group messaging makes it possible for every app instance in a group to reflect the latest messaging state. |
+| delay_while_idle | Boolean | When set to true, this parameter indicates that the message should not be sent until the device becomes active. |
+| sync | Boolean | Device group messaging makes it possible for every app instance in a group to reflect the latest messaging state. |
 | visibility | string | private/public - Visibility of this notification, which affects how and when the notifications are revealed on a secure locked screen. |
 | redact | string | Content that is specified shows up on a secure locked screen on the device when visibility is set to Private. |
 | payload | JSON object | Custom JSON payload that is sent as part of the notification message.|

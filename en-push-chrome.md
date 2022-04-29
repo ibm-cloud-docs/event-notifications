@@ -2,23 +2,17 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-04-25"
-
+lastupdated: "2022-04-29"
 keywords: event-notifications, event notifications, about event notifications, destinations, push, chrome
-
 subcollection: event-notifications
-
 content-type: tutorial
+services:
 account-plan: lite
 completion-time: 10m
-
 ---
-
 {{site.data.keyword.attribute-definition-list}}
 
-
-# Create and send push notifications to Chrome web using {{site.data.keyword.en_full}}
-
+# Create and send push notifications to Chrome web by using {{site.data.keyword.en_full}}
 {: #en-push-chrome}
 {: toc-content-type="tutorial"}
 {: toc-services=""}
@@ -28,13 +22,11 @@ Create an {{site.data.keyword.en_short}} service, add a push destination for Chr
 {: shortdesc}
 
 ## What is {{site.data.keyword.en_short}}?
-
 {: #en-what-is}
 
-{{site.data.keyword.en_short}} is an event notification routing service that notifies you of critical events that occur in your {{site.data.keyword.Bluemix_notm}} account or triggers automated actions by using webhooks. You can filter and route event notifications from {{site.data.keyword.Bluemix_notm}} services like {{site.data.keyword.prf_hubshort}}, to email, SMS, push notifications, and webhooks.
+{{site.data.keyword.en_short}} is an event notification routing service that tells you about critical events that occur in your {{site.data.keyword.Bluemix_notm}} account or triggers automated actions by using webhooks. You can filter and route event notifications from {{site.data.keyword.Bluemix_notm}} services like {{site.data.keyword.prf_hubshort}}, to email, SMS, push notifications, and webhooks.
 
 ## How do clients use Chrome web Push Notifications?
-
 {: #en-how-clients-send}
 
 The following diagram shows you how clients use Chrome web Push Notifications.
@@ -42,7 +34,6 @@ The following diagram shows you how clients use Chrome web Push Notifications.
 ![How clients use push notifications](images/en-how-send-chrome.png "How clients use push notifications"){: caption="Figure 1. How clients use push notifications" caption-side="bottom"}
 
 ## Objectives
-
 {: #en-objectives}
 
 This tutorial shows you how to send push notifications as follows:
@@ -50,20 +41,18 @@ This tutorial shows you how to send push notifications as follows:
 * Create a website with {{site.data.keyword.en_short}}.
 * Get Chrome web credentials.
 * Download the SDK and complete the notifications setup.
-* Configure and send Chrome web push Notifications to a browser.
+* Configure and send Chrome web Push Notifications to a browser.
 
 ## Before you begin
-
 {: #en-before-begin}
 
 You must have the following prerequisites in place:
 
-* Download and install any code editor to right website code using html, css and js.
+* Download and install any code editor to right website code by using HTML, CSS and js.
 * A Google account to log in to Firebase console to get your Sender ID and Server API Key.
 * An {{site.data.keyword.Bluemix_notm}} account. If you do not have one, [create an IBM Cloud account](https://cloud.ibm.com/).
 
 ## Create an {{site.data.keyword.en_short}} service instance
-
 {: #en-create-event}
 {: step}
 
@@ -75,7 +64,6 @@ You must have the following prerequisites in place:
 * Click `Create`.
 
 ## Get FCM credentials
-
 {: #en-get-fcm}
 {: step}
 
@@ -93,7 +81,6 @@ Firebase Cloud Messaging (FCM) is the gateway that delivers push notifications t
 ![FCM credentials](images/en-fcm-credentials.png "FCM credentials"){: caption="Figure 2. FCM credentials" caption-side="bottom"}
 
 ## Add a generic API source
-
 {: #en-add-gen-api}
 {: step}
 
@@ -104,7 +91,6 @@ Take the following steps:
 * Type a name and an optional description and click `Add`.
 
 ## Create an {{site.data.keyword.en_short}} destination
-
 {: #en-create-dest}
 {: step}
 
@@ -114,19 +100,18 @@ Click `Destinations` in the {{site.data.keyword.en_short}} console and add the f
 * `Destination description`: add an optional description for the destination.
 * `Destination type`: select Chrome Push Notifications type from the dropdown list.
 * Add your website URL to get it whitelisted.
-* Add the `Server Key` which you have got from `Get FCM credentials` section.
-* Once Chrome destination is created. Edit the created destination to get public vapId key required for web sdk.
+* Add the `Server Key`, which you got from `Get FCM credentials` section.
+* When Chrome destination is created. Edit the created destination to get public vapId key required for web sdk.
 
 ![Destination Edit](images/en-push-chrome-destination-edit.png "Destination Edit"){: caption="Figure 7. Receive notifications" caption-side="bottom"}
 
 ![Destination](images/en-push-chrome-destination.png "Destination"){: caption="Figure 7. Receive notifications" caption-side="bottom"}
 
 ## Create an {{site.data.keyword.en_short}} topic
-
 {: #en-create-topic}
 {: step}
 
-Select `Topics` in the Event Notifications console and click `Create`. Enter the following topic details:
+Select `Topics` in the {{site.data.keyword.en_short}} console and click `Create`. Enter the following topic details:
 
 * `Name`: enter a name for the topic.
 * `Description`: add an optional description for the topic.
@@ -137,7 +122,6 @@ Select `Topics` in the Event Notifications console and click `Create`. Enter the
 * `Advanced conditions`: write your own custom conditions, which must follow [jsonpath specifications](https://jsonpath.com/).
 
 ## Create an {{site.data.keyword.en_short}} subscription
-
 {: #en-create-sub}
 {: step}
 
@@ -145,19 +129,18 @@ Click `Subscriptions` in the {{site.data.keyword.en_short}} console. Enter the f
 
 * `Click` Create to display subscription wizard.
 * Complete the following subscription details:
-  * `Subscription name`: name of the subscription.
-  * `Subscription description`: add an optional description.
+   * `Subscription name`: name of the subscription.
+   * `Subscription description`: add an optional description.
 * Under the `Subscribe to a topic` section, select a topic from the drop-down list and select a destination from the destination drop-down list.
 * `Destination type`: select type under `Destination` and click `Add`.
 
 ## Set up {{site.data.keyword.en_short}} Chrome web SDK
-
 {: #en-setup-chrome-sdk}
 {: step}
 
 The Chrome web SDK enables Chrome websites to receive push notifications. Complete the following steps to install {{site.data.keyword.en_short}} Chrome web SDK, initialize the SDK, and register for notifications for your website.
 
-* To include the SDK in your project Add the `ENPushSDK.js`,`ENPushServiceWorker.js` and `manifest_Website.json` files to your project root folder.
+* To include the SDK in your project, add the `ENPushSDK.js`,`ENPushServiceWorker.js` and `manifest_Website.json` files to your project root folder.
 
 * Edit the manifest_Website.json file.
 
@@ -169,21 +152,21 @@ The Chrome web SDK enables Chrome websites to receive push notifications. Comple
 
 * Change the `manifest_Website.json` file name to `manifest.json`.
 
-* Include the manifest.json in <head> tag of your html file.
+* Include the manifest.json in `<head>` tag of your html file.
 
-  ```html
+```html
     <link rel="manifest" href="manifest.json">
-  ```
+```
 
-* Include IBM Cloud Web push SDK to the script ,
+* Include IBM Cloud Web push SDK to the script.
 
-  ```html
+```html
    <script src="ENPushSDK.js" async></script>
-  ```
+```
 
-* Complete the following steps to enable Website to initialize the SDK
+* Complete the following steps to enable website to initialize the SDK
 
-  ```js
+```js
   var enPush = new ENPush()
 
   function callback(response) {
@@ -200,45 +183,43 @@ The Chrome web SDK enables Chrome websites to receive push notifications. Comple
   }
 
   enPush.initialize(initParams, callback)
+```
 
-  ```
+    * region: Region of the {{site.data.keyword.en_short}} Instance. For example, `us-south`,`eu-gb`, `au-syd` or `eu-de`
 
-  * region : Region of the Event Notifications Instance. eg; `us-south`,`eu-gb`, `au-syd` and `eu-de`
+    * deviceId: Optional deviceId for device registration.
 
-  * deviceId: Optional deviceId for device registration.
+* To register for notifications, use the `register()` or `registerWithUserId()` API to register the device with {{site.data.keyword.en_short}} service. Choose either of the following options:
 
-* To register for notifications Use the `register()` or `registerWithUserId()` API to register the device with IBM Cloud Event Notifications service. Choose either of the following options:
+    * Register without `UserId`:
 
-  * Register without `UserId`:
-
-  ```js
+```js
     enPush.register(function(response) {
       alert(response.response)
     })
-  ```
+```
 
-  * Register with UserId. For `userId` based notification, the register method will accept one more parameter - `userId`
+* Register with user ID. For `userId` based notification, the register method accepts one more parameter - `userId`
 
-  ```js
+```js
     bmsPush.registerWithUserId("UserId",function(response) {
       alert(response.response)
     })
-  ```
+```
 
-  `UserId` is the user identifier value with which you want to register devices in the push service instance.
+`UserId` is the user identifier value with which you want to register devices in the push service instance.
 
-* The `subscribe` API will subscribe the device for a given tag. After the device is subscribed to a particular tag, the device can receive notifications that are sent for that tag. Add the following code snippet to your web application to subscribe to a list of tags.
+* The `subscribe` API subscribes the device for a tag. After the device is subscribed to a particular tag, the device can receive notifications that are sent for that tag. Add the following code snippet to your web application to subscribe to a list of tags.
 
-  ```js
+```js
     enPush.subscribe(tagName, function(response) {
       alert(response.response)
     })
-  ```
+```
 
 * When the setup is complete, run your application and register for push notifications.
 
 ## Send notifications to the Chrome web device
-
 {: #en-send-notifications}
 {: step}
 
