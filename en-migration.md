@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-03-25"
+lastupdated: "2022-05-05"
 
 keywords: event-notifications, event notifications migration, notifications, destinations, push, migration
 
