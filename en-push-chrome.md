@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-04-29"
+lastupdated: "2022-05-05"
 keywords: event-notifications, event notifications, about event notifications, destinations, push, chrome
 subcollection: event-notifications
 content-type: tutorial
@@ -31,7 +31,7 @@ Create an {{site.data.keyword.en_short}} service, add a push destination for Chr
 
 The following diagram shows you how clients use Chrome web Push Notifications.
 
-![How clients use push notifications](images/en-how-send-chrome.png "How clients use push notifications"){: caption="Figure 1. How clients use push notifications" caption-side="bottom"}
+![How clients use push notifications](images/en-how-send-chrome.svg "How clients use push notifications"){: caption="Figure 1. How clients use push notifications" caption-side="bottom"}
 
 ## Objectives
 {: #en-objectives}

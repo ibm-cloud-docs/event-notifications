@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-04-29"
+lastupdated: "2022-05-05"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, push
 
@@ -47,7 +47,7 @@ Create an {{site.data.keyword.en_short}} service, add a push destination for Fir
 
 The following diagram shows you how clients use Firefox web Push Notifications.
 
-![How clients use push notifications](images/en-how-send-mozilla.png "How clients use push notifications"){: caption="Figure 1. How clients use push notifications" caption-side="bottom"}
+![How clients use push notifications](images/en-how-send-mozilla.svg "How clients use push notifications"){: caption="Figure 1. How clients use push notifications" caption-side="bottom"}
 
 ## Objectives
 {: #en-objectives}
