@@ -66,28 +66,28 @@ case of failure of send notification.
 `source+id` will be logged in IBM Cloud Logging service. Using this combination IBM customers will be able to trace the event movement from one system to 
 another and will aid in debugging and tracing.
 
-e.g:  
+e.g:   
 `id: qwer-1234-1qsd-po94`  
 Binary mode header  
-`ce-id: qwer-1234-1qsd-po94`
+`ce-id: qwer-1234-1qsd-po94`  
 
 ### source (URI-reference)
 
 This is the identifier of the event producer. A way to uniquely identify the source of the event. For IBM Cloud services this is the crn 
 of the service instance producing the events.  For API sources this can be something the event producer backend can uniquely identify itself with.
 
-e.g.: 
-`source: com.mybank.customerbanking.accountmanagement`
-Binary mode header
-`ce-source: com.mybank.customerbanking.accountmanagement`
+e.g.:  
+`source: com.mybank.customerbanking.accountmanagement`  
+Binary mode header  
+`ce-source: com.mybank.customerbanking.accountmanagement`  
 
 ### specversion (string) 
 
 This is the version of CloudEvents specification that {{site.data.keyword.en_short}} currently supports. This value must be set to “1.0”
-e.g.: 
-`specversion:1.0`
-Binary mode header
-`ce-specversion:1.0`
+e.g.:  
+`specversion:1.0`  
+Binary mode header  
+`ce-specversion:1.0`  
 
 ### type (string) 
 
@@ -95,21 +95,21 @@ This describes the type of event.  It is of the form `<event-type-name>:<sub-typ
 The event type name has to be prefixed with the reverse DNS names so the event type is uniquely identified. The same event type can be produced 
 by 2 different sources. It is highly recommended to use hyphen `-` as a separator instead of `_`
 
-e.g. 1:
-`type:com.acmebank.password:expiring-in-15-days`
-Type: `com.acmebank.password`
-Sub type: `expiring-in-15-days`
+e.g. 1:  
+`type:com.acmebank.password:expiring-in-15-days`  
+Type: `com.acmebank.password`  
+Sub type: `expiring-in-15-days`  
 
-Binary mode header
-`ce-type:com.acmebank.password:expiring-in-15-days`
+Binary mode header  
+`ce-type:com.acmebank.password:expiring-in-15-days`  
 
-e.g. 2:
-`type:com.acmebank.password-changed`
-Type: `com.acmebank.password-changed`
-Sub type: N/A
+e.g. 2:  
+`type:com.acmebank.password-changed`  
+Type: `com.acmebank.password-changed`  
+Sub type: N/A  
 
-Binary mode header
-`ce-type:com.acmebank.password-changed`
+Binary mode header  
+`ce-type:com.acmebank.password-changed`  
 
 ## CE optional attributes
 
@@ -119,41 +119,41 @@ Following attributes are optional but highly recommended to take full advantage 
 
 UTC time stamp when the event occurred. Must be in the RFC 3339 format.
 
-E.g.:
-`time: 2022-02-10T10:51:37+00:00`
+E.g.:  
+`time: 2022-02-10T10:51:37+00:00`  
 
-Binary mode header
-`ce-time: 2022-02-10T10:51:37+00:00`
+Binary mode header  
+`ce-time: 2022-02-10T10:51:37+00:00`  
 
 ### subject (String) 
 
 This is the subject of the event in the event producer (source). So, this can be the account ID of the password that’s about to expire 
 
-e.g:
-`subject:ajay@accts.acmebank.com`
+e.g:  
+`subject:ajay@accts.acmebank.com`  
 
-Binary mode header
-`ce-subject:ajay@accts.acmebank.com`
+Binary mode header  
+`ce-subject:ajay@accts.acmebank.com`  
 
 ### datacontenttype
 
 Defines the MIME type of the data content. Currently only “application/json” is supported.
 
-e.g:
-`datacontenttype: application/json`
+e.g:  
+`datacontenttype: application/json`  
 
-Binary mode header 
-`Content-Type:application/json`
+Binary mode header   
+`Content-Type:application/json`  
 
 ### data
 
 The payload of the event.  This can contain information that can be passed along to destinations like webhooks. Make sure that you are not sending any 
 sensitive information. This has to be a valid JSON object
 
-e.g:
-`data: { “lastchanged-days”: “74”, “reason”:”time-based”}`
+e.g:  
+`data: { “lastchanged-days”: “74”, “reason”:”time-based”}`  
 
-Binary mode – this is part of the HTTP body N/A
+Binary mode – this is part of the HTTP body N/A  
 
 ## {{site.data.keyword.en_short}} extension mandatory attributes
 
@@ -162,10 +162,10 @@ These are mandatory attributes for every event sent to EN
 ### ibmensourceid (string): 
 This is the ID of the source created in EN. This is available in the EN UI in the “Sources” section
 
-e.g: 
-`ibmensourceid: 121313123:api`
-Binary mode header
-`ce-ibmensourceid: 121313123:api`
+e.g:  
+`ibmensourceid: 121313123:api`  
+Binary mode header  
+`ce-ibmensourceid: 121313123:api`  
 
 ## {{site.data.keyword.en_short}} extension optional attributes
 
@@ -174,30 +174,30 @@ These are optional attributes
 ### ibmenseverity(String) 
 
 Some sources can have the concept of an Event severity. Hence a handy way is provided to specify a severity of the event. 
-e.g:
-`ibmenseverity:LOW`
-Binary mode header
-`ce-ibmenseverity:LOW`
+e.g:  
+`ibmenseverity:LOW`  
+Binary mode header  
+`ce-ibmenseverity:LOW`  
 
 ### ibmendefaultshort(String) 
 This message will be used in case the event is routed to a destination that needs a human readable text, but a destination specific attribute is not specified.
 e.g.: if `ibmenfcmbody` is not specified and the event is routed to Android FCM type destination, `ibmendefaultshort` will be used as the notification title 
 (android_title).
 
-e.g.:
-`ibmendefaultshort: “Change password”`
-Binary mode header
-`ce-ibmendefaultshort: “Change password”`
+e.g.:  
+`ibmendefaultshort: “Change password”`  
+Binary mode header  
+`ce-ibmendefaultshort: “Change password”`  
 
 ### ibmendefaultlong(String) 
 
 This message will be used in case the eventis routed to a destination that needs a human readable text, but a destination specific attribute is not specified. 
 E.g.: if `ibmenfcmbody` is not specified and the event is routed to Android FCM type destination, `ibmendefaultlong` will be used as the notification body (alert).
 
-e.g.:
-`ibmendefaultlong: “Password will expire in 10 Days. Please log in to the Bank home page and click on Change Password link to change your password.”`
-Binary mode header
-`ce-ibmendefaultlong: “Password will expire in 10 Days. Pleaselog in to the Bank home page and click on Change Password link to change your password.”`
+e.g.:  
+`ibmendefaultlong: “Password will expire in 10 Days. Please log in to the Bank home page and click on Change Password link to change your password.”`  
+Binary mode header  
+`ce-ibmendefaultlong: “Password will expire in 10 Days. Pleaselog in to the Bank home page and click on Change Password link to change your password.”`  
 
 ### ibmenfcmbody(string/json)
 
@@ -205,10 +205,10 @@ This attribute is needed if you want to send push notification to an Android dev
 JSON in string format. For more info regarding FCM body please follow this documentation - https://firebase.google.com/docs/cloud-messaging/concept-options.
 For backward compatibility for existing Push notification customers, the previous unified data format is still supported but is deprecated. 
 
-e.g.: Deprecated Push Notification service compatible format:
-`“ibmenfcmbody": "{\"en_data\":{\"alert\":\" Password will expire in 10 Days. Please log in to the Bank home page and click on Change Password link to change your password. \", \"android_title\":\"Change Password\"}}"`
-Binary mode header
-`ce-ibmenfcmbody: "{\"en_data\":{\"alert\":\" Password will expire in 10 Days. Please log in to the Bank home page and click on Change Password link to change your password. \", \"android_title\":\"Change Password\"}}"`
+e.g.: Deprecated Push Notification service compatible format:  
+`“ibmenfcmbody": "{\"en_data\":{\"alert\":\" Password will expire in 10 Days. Please log in to the Bank home page and click on Change Password link to change your password. \", \"android_title\":\"Change Password\"}}"`  
+Binary mode header  
+`ce-ibmenfcmbody: "{\"en_data\":{\"alert\":\" Password will expire in 10 Days. Please log in to the Bank home page and click on Change Password link to change your password. \", \"android_title\":\"Change Password\"}}"`  
 
 ### ibmenapnsbody(string/json)
 
@@ -217,10 +217,10 @@ in string format. For more info regarding APNs body please follow this documenta
 
 For backward compatibility for existing Push notification customers, the previous unified data format is still supported but is deprecated. 
 
-e.g.: Deprecated Push Notification service compatible format:
-`“ibmenapnsbody": "{\"en_data\":{\"alert\":\"alert\",\"url\":\"https\",\"badge\":9,\"sound\":\"bingbong.aiff\",\"payload\":{\"myaarray\":[\"cc75e4a6-edd8-3bec-a7c3-dfca6572a03b\"]},\"type\":\"DEFAULT\",\"subtitle\":\"dummy\",\"title\":\"dummy1\",\"body\":\"body\",\"ios_action_key\":\"key\",\"interactive_category\":\"interactiveCategory\",\"title_loc_key\":\"titleLocKey\",\"loc_key\":\"GAME_PLAY_REQUEST_FORMAT\",\"launch_image\":\"image.png\",\"title_loc_args\":[\"Shelly\",\"Rick\"],\"loc_args\":[\"Shelly\",\"Rick\"],\"attachment_url\":\"some url\",\"apns_collapse_id\":\"12\",\"apns_thread_id\":\"1\",\"apns_group_summary_arg\":\"apnsGroupSummaryArg\",\"apns_group_summary_arg_count\":1}}"`
-Binary mode header
-`ce-ibmenapnsbody: "{\"en_data\":{\"alert\":\"alert\",\"url\":\"https\",\"badge\":9,\"sound\":\"bingbong.aiff\",\"payload\":{\"myaarray\":[\"cc75e4a6-edd8-3bec-a7c3-dfca6572a03b\"]},\"type\":\"DEFAULT\",\"subtitle\":\"dummy\",\"title\":\"dummy1\",\"body\":\"body\",\"ios_action_key\":\"key\",\"interactive_category\":\"interactiveCategory\",\"title_loc_key\":\"titleLocKey\",\"loc_key\":\"GAME_PLAY_REQUEST_FORMAT\",\"launch_image\":\"image.png\",\"title_loc_args\":[\"Shelly\",\"Rick\"],\"loc_args\":[\"Shelly\",\"Rick\"],\"attachment_url\":\"some url\",\"apns_collapse_id\":\"12\",\"apns_thread_id\":\"1\",\"apns_group_summary_arg\":\"apnsGroupSummaryArg\",\"apns_group_summary_arg_count\":1}}"`
+e.g.: Deprecated Push Notification service compatible format:  
+`“ibmenapnsbody": "{\"en_data\":{\"alert\":\"alert\",\"url\":\"https\",\"badge\":9,\"sound\":\"bingbong.aiff\",\"payload\":{\"myaarray\":[\"cc75e4a6-edd8-3bec-a7c3-dfca6572a03b\"]},\"type\":\"DEFAULT\",\"subtitle\":\"dummy\",\"title\":\"dummy1\",\"body\":\"body\",\"ios_action_key\":\"key\",\"interactive_category\":\"interactiveCategory\",\"title_loc_key\":\"titleLocKey\",\"loc_key\":\"GAME_PLAY_REQUEST_FORMAT\",\"launch_image\":\"image.png\",\"title_loc_args\":[\"Shelly\",\"Rick\"],\"loc_args\":[\"Shelly\",\"Rick\"],\"attachment_url\":\"some url\",\"apns_collapse_id\":\"12\",\"apns_thread_id\":\"1\",\"apns_group_summary_arg\":\"apnsGroupSummaryArg\",\"apns_group_summary_arg_count\":1}}"`  
+Binary mode header  
+`ce-ibmenapnsbody: "{\"en_data\":{\"alert\":\"alert\",\"url\":\"https\",\"badge\":9,\"sound\":\"bingbong.aiff\",\"payload\":{\"myaarray\":[\"cc75e4a6-edd8-3bec-a7c3-dfca6572a03b\"]},\"type\":\"DEFAULT\",\"subtitle\":\"dummy\",\"title\":\"dummy1\",\"body\":\"body\",\"ios_action_key\":\"key\",\"interactive_category\":\"interactiveCategory\",\"title_loc_key\":\"titleLocKey\",\"loc_key\":\"GAME_PLAY_REQUEST_FORMAT\",\"launch_image\":\"image.png\",\"title_loc_args\":[\"Shelly\",\"Rick\"],\"loc_args\":[\"Shelly\",\"Rick\"],\"attachment_url\":\"some url\",\"apns_collapse_id\":\"12\",\"apns_thread_id\":\"1\",\"apns_group_summary_arg\":\"apnsGroupSummaryArg\",\"apns_group_summary_arg_count\":1}}"`  
 
 ### ibmenpushto(string/json)
 
@@ -233,14 +233,14 @@ This contains details about the destination where you want to send push notifica
 - `fcm_devices` – Unique identifier of the FCM device where you want to target your notification
 - `apns_devices` - Unique identifier of the APNS device where you want to target your notification
 
-e.g.:
-`ibmenpushto: "{\"fcm_devices\": [\"9c75975a-37d0-3898-905d-3b5ee0d7c172\",\"C9CACDF5-6EBF-49E1-AD60-E25BA23E954C\"]}"`
-`ibmenpushto: "{\"apns_devices\": [\"1c75972a-37d0-3898-905d-3b5ee0d7c172\",\"M9CACDF5-1EBF-49E1-AD60-E25BA23E954C\"]}"`
+e.g.:  
+`ibmenpushto: "{\"fcm_devices\": [\"9c75975a-37d0-3898-905d-3b5ee0d7c172\",\"C9CACDF5-6EBF-49E1-AD60-E25BA23E954C\"]}"`  
+`ibmenpushto: "{\"apns_devices\": [\"1c75972a-37d0-3898-905d-3b5ee0d7c172\",\"M9CACDF5-1EBF-49E1-AD60-E25BA23E954C\"]}"`  
 
-Multiple destination can be targeted using following methods 
+Multiple destination can be targeted using following methods  
 
-`ibmenpushto: "{\"fcm_devices\": [\"9c75975a-37d0-3898-905d-3b5ee0d7c172\",\"C9CACDF5-6EBF-49E1-AD60-E25BA23E954C\"],\"apns_devices\": [\"1c75972a-37d0-3898-905d-3b5ee0d7c172\",\"M9CACDF5-1EBF-49E1-AD60-E25BA23E954C\"]}"`
+`ibmenpushto: "{\"fcm_devices\": [\"9c75975a-37d0-3898-905d-3b5ee0d7c172\",\"C9CACDF5-6EBF-49E1-AD60-E25BA23E954C\"],\"apns_devices\": [\"1c75972a-37d0-3898-905d-3b5ee0d7c172\",\"M9CACDF5-1EBF-49E1-AD60-E25BA23E954C\"]}"`  
 
-`ibmenpushto: "{\"user_id\": [\" ajay@accts.acmebank.com \",\" ankit@accts.acmebank.com \"]}"Binary mode headerce-ibmenpushto: "{\"user_id\": [\"ajay@accts.acmebank.com\",\"ankit@accts.acmebank.com\"]}"`
+`ibmenpushto: "{\"user_id\": [\" ajay@accts.acmebank.com \",\" ankit@accts.acmebank.com \"]}"Binary mode headerce-ibmenpushto: "{\"user_id\": [\"ajay@accts.acmebank.com\",\"ankit@accts.acmebank.com\"]}"`  
 
 
