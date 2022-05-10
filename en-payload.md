@@ -27,9 +27,9 @@ You can use this to send Push notifications from business backends.
 Events from API sources cannot be routed to IBM Email and IBM SMS destinations. 
 {: note}
 
-`METHOD: POST`  
-`URL: /event-notifications/v1/apps/{instanceID}/notifications`  
-`Header: Authorization: Bearer <IAM token>`  
+`METHOD: POST`\
+`URL: /event-notifications/v1/apps/{instanceID}/notifications`\
+`Header: Authorization: Bearer <IAM token>`\
 
 The Events adhere to Cloud Event standard. You can find more information about Cloud Events here. 
 
