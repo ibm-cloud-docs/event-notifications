@@ -12,7 +12,7 @@ subcollection: event-notifications
 
 {{site.data.keyword.attribute-definition-list}}
 
-# {{site.data.keyword.en_full}} payload
+# {{site.data.keyword.en_short}} payload
 {: #en-spec-payload}
 
 This document outlies the {{site.data.keyword.en_short}} notification specification
@@ -27,9 +27,9 @@ You can use this to send Push notifications from business backends.
 Events from API sources cannot be routed to IBM Email and IBM SMS destinations. 
 {: note}
 
-`METHOD: POST`
-`URL: /event-notifications/v1/apps/{instanceID}/notifications`
-`Header: Authorization: Bearer <IAM token>`
+`METHOD: POST`  
+`URL: /event-notifications/v1/apps/{instanceID}/notifications`  
+`Header: Authorization: Bearer <IAM token>`  
 
 The Events adhere to Cloud Event standard. You can find more information about Cloud Events here. 
 
@@ -66,9 +66,9 @@ case of failure of send notification.
 `source+id` will be logged in IBM Cloud Logging service. Using this combination IBM customers will be able to trace the event movement from one system to 
 another and will aid in debugging and tracing.
 
-e.g: 
-`id: qwer-1234-1qsd-po94`
-Binary mode header
+e.g:  
+`id: qwer-1234-1qsd-po94`  
+Binary mode header  
 `ce-id: qwer-1234-1qsd-po94`
 
 ### source (URI-reference)
