@@ -91,6 +91,7 @@ toc:
       - en-getting-support.md
       - en-responsibilities.md
       - en-migration.md
+      - en-payload.md
       - topicgroup:
           label: FAQs
           topics:
