@@ -27,10 +27,14 @@ subcollection: event-notifications
 A slack represents a service destination, where an incoming notification can be consumed programmatically. For example, an incoming notification about an event can trigger a slack notification based on the content of the incoming notification.
 {: shortdesc}
 
+## Generate slack incoming webhook URL 
+
+To post a slack notification you will need to generate an incoming webhook URL to generate the URL you can follow these steps - https://slack.com/intl/en-in/help/articles/115005265063-Incoming-webhooks-for-Slack
+
 ## Configuring a slack destination
 {: #en-slack-configure}
 
-You can configure a slack destination in the `Destinations` tab. As part of the configuration, enter the Slack Webhook URL. Create a subscription to associate the slack destination to a topic.
+You can configure a slack destination in the `Destinations` tab. As part of the configuration, enter the Slack Incoming Webhook URL. Create a subscription to associate the slack destination to a topic.
 
 ## Configuring a slack subscription
 {: #en-slack-configure-sub}
