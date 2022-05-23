@@ -41,6 +41,8 @@ toc:
       - en-create-source.md
       - en-push-fcm.md
       - en-push-apns.md
+      - en-push-chrome.md
+      - en-push-firefox.md
       - en-terraform-tutorial.md
       - en-ts-monitor-secrets.md
 
@@ -89,6 +91,7 @@ toc:
       - en-getting-support.md
       - en-responsibilities.md
       - en-migration.md
+      - en-payload.md
       - topicgroup:
           label: FAQs
           topics:

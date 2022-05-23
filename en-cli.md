@@ -2,32 +2,30 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-02-28"
+lastupdated: "2022-04-29"
 
 subcollection: event-notifications-cli-plugin
 keywords: event notifications CLI, event notifications command line, event notifications terminal, event notifications shell, Event Notifications, en
 
 ---
 
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
+{{site.data.keyword.attribute-definition-list}}
 
-# {{site.data.keyword.en_short}} CLI plug-in for Event Notifications service
+# {{site.data.keyword.en_short}} CLI plug-in for {{site.data.keyword.en_short}} service
 {: #CLI_Event_Notifications}
 
-Use the {{site.data.keyword.Bluemix_notm}} command-line interface (CLI) to interact  {{site.data.keyword.en_short}} IBM Cloud service
+Use the {{site.data.keyword.Bluemix_notm}} command-line interface (CLI) to interact {{site.data.keyword.en_short}} IBM Cloud service
 
 ## Prerequisites
+{: #CLI_Event_Notifications_prereq}
+
 To use the {{site.data.keyword.Bluemix_notm}} CLI, download and install the following packages on your local system.
 
 
 - The [{{site.data.keyword.Bluemix_notm}} CLI](/docs/cli?topic=cloud-cli-install-ibmcloud-cli)
 
 ## Install the {{site.data.keyword.en_short}} CLI
+{: #CLI_Event_Notifications_inst}
 
 Install the plug-in by using the `plugin install` command.
 
@@ -47,6 +45,7 @@ ibmcloud event-notifications init [--instance-id INSTANCE-ID]
 {: pre}
 
 ### ibmcloud event-notifications environment variables set
+{: #CLI_Event_Notifications_envvar}
 
 export **IBMCLOUD_EN_ENDPOINT** variable to set the EN region endpoint
 
@@ -55,7 +54,8 @@ export **IBMCLOUD_EN_ENDPOINT** variable to set the EN region endpoint
 **Sydney:** https://au-syd.event-notifications.cloud.ibm.com/event-notifications
 **Frankfurt:** https://eu-de.event-notifications.cloud.ibm.com/event-notifications
 
-export **EVENT_NOTIFICATIONS_API_KEY** variable to set the Event Notifications instance apikey
+export **EVENT_NOTIFICATIONS_API_KEY** variable to set the {{site.data.keyword.en_short}} instance apikey.
+
 #### Command options
 {: #event-notifications-init-cli-options}
 
@@ -90,6 +90,8 @@ ibmcloud event-notifications destination --help
 {: pre}
 
 ### ibmcloud event-notifications destination create
+{: #CLI_Event_Notifications_createdest}
+
 * **Action:** Create a new Destination
 
 ```sh 
@@ -103,17 +105,17 @@ ibmcloud event-notifications destination create --name NAME --type TYPE [--descr
    * Flag: `--name NAME`
 * The type of the Destination The options available are webhook, push_android, push_ios.
    * Flag: `--type TYPE`
-* The Description of the destination .
+* The Description of the destination.
    * Flag: `--description DESCRIPTION`   
 * The Certificate file path to be provided.
    * Flag: `--certificate CERTIFICATE`     
-* The Certificate Content type to be set in case of IOS destination. The available options are p8/p12
+* The Certificate Content type to be set in the case of IOS destination. The available options are p8/p12
    * Flag: `--certificate-content-type CERTIFICATE-CONTENT-TYPE`    
 * The Configuration needed to set the destination specific parameters.
    * Flag: `--config CONFIG` 
 * The Unique identifier for IBM Cloud Event Notifications instance.
-   * Flag: `--instance-id `      
-
+   * Flag: `--instance-id`
+   
     The `--config` flag json structure for Webhook Destination.
     ```json
     {
@@ -141,7 +143,7 @@ ibmcloud event-notifications destination create --name NAME --type TYPE [--descr
 
    The following example shows the format of the DestinationConfig object for IOS destination with P8 certificate.
 
-   ``` json
+```json
    {
     "params" : {
     "cert_type" : "p12",
@@ -149,8 +151,29 @@ ibmcloud event-notifications destination create --name NAME --type TYPE [--descr
     "password": "apnspasswordvalue"
    }
   }
-  ```
-  
+```
+
+The following example shows the format of the DestinationConfig object for Chrome destination.
+
+   ``` json
+   {
+    "api_key": "chromeapikey",
+    "website_url" : "https://testwebsite.com",
+    
+   }
+  }
+```
+
+The following example shows the format of the DestinationConfig object for Firefox destination.
+
+   ``` json
+   {
+    "website_url" : "https://testwebsite.com",
+    
+   }
+  }
+```
+
 ### ibmcloud event-notifications destination list
 {: #event-notifications-cli-destination-list-command}
 
@@ -170,7 +193,7 @@ ibmcloud event-notifications destination list [--limit LIMIT] [--offset OFFSET] 
 * The Search string for filtering results.
    * Flag: `--search SEARCH`   
 * The Unique identifier for IBM Cloud Event Notifications instance.
-   * Flag: `--instance-id ` 
+   * Flag: `--instance-id` 
 
 
 ### ibmcloud event-notifications destination get
@@ -211,7 +234,7 @@ ibmcloud event-notifications destination update --id ID [--name NAME] [--descrip
 * The Configuration needed to set the destination specific parameters.
    * Flag: `--config CONFIG` 
 * The Unique identifier for IBM Cloud Event Notifications instance.
-   * Flag: `--instance-id `   
+   * Flag: `--instance-id`   
 
 
 ### ibmcloud event-notifications destination delete
@@ -232,7 +255,49 @@ ibmcloud event-notifications destination delete --id ID [--instance-id INSTANCE-
 * Activate to force resource deletion (to bypass the confirmation prompt).
    * Flag: `[--force]`   
 
+### ibmcloud event-notifications source create
+{: #event-notifications-cli-source-create-command}
 
+Create `Source`.
+
+```sh 
+ibmcloud event-notifications source create --instance-id INSTANCE-ID --name NAME --description DESCRIPTION [--enabled ENABLED]
+```
+{: pre}
+
+
+* **Parameters to provide:**
+* The name to be provided for API source
+   * Flag: `--name NAME`
+* The description for source.
+   * Flag: `--description DESCRIPTION`
+* The Boolean flag to enable or disable the source
+   * Flag: `--enabled ENABLED`      
+* The Unique identifier for IBM Cloud Event Notifications instance.
+   * Flag: `[--instance-id INSTANCE-ID]`
+
+### ibmcloud event-notifications source update
+{: #event-notifications-cli-source-update-command}
+
+Update `Source`.
+
+```sh 
+ibmcloud event-notifications source update --instance-id INSTANCE-ID --id ID [--name NAME] [--description DESCRIPTION] [--enabled ENABLED]
+```
+{: pre}
+
+
+* **Parameters to provide:**
+* The name to be provided for API source
+   * Flag: `--name NAME`
+* Unique identifier for Source. Required.
+   * Flag: `--id ID`   
+* The description for source.
+   * Flag: `--description DESCRIPTION`
+* The Boolean flag to enable or disable the source
+   * Flag: `--enabled ENABLED`      
+* The Unique identifier for IBM Cloud Event Notifications instance.
+   * Flag: `[--instance-id INSTANCE-ID]`   
 
 ### ibmcloud event-notifications source list
 {: #event-notifications-cli-source-list-command}
@@ -279,6 +344,24 @@ ibmcloud event-notifications source get --id ID [--instance-id INSTANCE-ID]
    * Flag: `[--instance-id INSTANCE-ID]`
 * Activate to force resource deletion (to bypass the confirmation prompt).
    * Flag: `[--force]`
+
+### ibmcloud event-notifications source delete
+{: #event-notifications-cli-source-delete-command}
+
+Delete specific `Source`.
+
+```sh
+ibmcloud event-notifications source delete --instance-id INSTANCE-ID --id ID
+```
+{: pre}
+
+* **Parameters to provide:**
+* Unique identifier for Source. Required.
+   * Flag: `--id ID`
+* The Unique identifier for IBM Cloud Event Notifications instance.
+   * Flag: `[--instance-id INSTANCE-ID]`
+* Activate to force resource deletion (to bypass the confirmation prompt).
+   * Flag: `[--force]`    
 
 ## Topic
 {: #event-notifications-topic-cli}
@@ -560,15 +643,21 @@ ibmcloud event-notifications subscription update --id ID [--name NAME] [--descri
    * Flag: `[-attributes ATTRIBUTES]`     
 
 ## Send Notifications
+{: #CLI_Event_Notifications_sendnots}
 
 ### ibmcloud event-notifications Send Notifications
 {: #event-notifications-cli-send-notifications-command}
 
+Use below command to send notifications in cli version 0.0.7.
 
 ```sh
-send-notifications --instance-id INSTANCE-ID --subject SUBJECT --severity SEVERITY --id ID --source SOURCE --en-source-id EN-SOURCE-ID --type TYPE --time TIME [--data DATA] [--push-to PUSH-TO] [--message-fcm-body MESSAGE-FCM-BODY] [--message-apns-headers MESSAGE-APNS-HEADERS] [--message-apns-body MESSAGE-APNS-BODY] [--datacontenttype DATACONTENTTYPE] [--specversion SPECVERSION] 
+ibmcloud event-notifications send-notifications --instance-id INSTANCE-ID --subject SUBJECT --severity SEVERITY --id ID --source SOURCE --en-source-id EN-SOURCE-ID --type TYPE --time TIME [--data DATA] [--push-to PUSH-TO] [--message-fcm-body MESSAGE-FCM-BODY] [--message-apns-headers MESSAGE-APNS-HEADERS] [--message-apns-body MESSAGE-APNS-BODY] [--datacontenttype DATACONTENTTYPE] [--specversion SPECVERSION] 
 ```
 {: pre}
+
+Use below command to send notifications in cli version 0.0.8.
+
+send-notifications --instance-id INSTANCE-ID [--body BODY] [--ce-ibmenseverity CE-IBMENSEVERITY] [--ce-ibmendefaultshort CE-IBMENDEFAULTSHORT] [--ce-ibmendefaultlong CE-IBMENDEFAULTLONG] [--ce-ibmenfcmbody CE-IBMENFCMBODY] [--ce-ibmenapnsbody CE-IBMENAPNSBODY] [--ce-ibmenpushto CE-IBMENPUSHTO] [--ce-ibmenapnsheaders CE-IBMENAPNSHEADERS] [--ce-ibmenchromebody CE-IBMENCHROMEBODY] [--ce-ibmenfirefoxbody CE-IBMENFIREFOXBODY] [--ce-ibmenchromeheaders CE-IBMENCHROMEHEADERS] [--ce-ibmenfirefoxheaders CE-IBMENFIREFOXHEADERS] [--ce-ibmensourceid CE-IBMENSOURCEID] [--ce-id CE-ID] [--ce-source CE-SOURCE] [--ce-type CE-TYPE] [--ce-specversion CE-SPECVERSION] [--ce-time CE-TIME]
 
 * **Parameters to provide:**
 * The Unique identifier for IBM Cloud Event Notifications instance.
@@ -585,8 +674,6 @@ send-notifications --instance-id INSTANCE-ID --subject SUBJECT --severity SEVERI
    * Flag: `[--type TYPE]`  
 * The Timestamp to be set for notification. Required
    * Flag: `[--time TIME]` 
-* The Timestamp to be set for notification. Required
-   * Flag: `[--time TIME]` 
 * The datacontent type for notification. Required
    * Flag: `[--datacontenttype DATACONTENTTYPE]`         
 * The spec version value.Default value to be used is 1.0
@@ -598,7 +685,42 @@ send-notifications --instance-id INSTANCE-ID --subject SUBJECT --severity SEVERI
 * The Custom APNS headers information can be set using this option.
    * Flag: `[--message-apns-headers MESSAGE-APNS-HEADERS]`     
 * The apns meaage body can be set using this option.
-   * Flag: `[--message-apns-body MESSAGE-APNS-BODY]`            
+   * Flag: `[--message-apns-body MESSAGE-APNS-BODY]` 
+
+* The body payload to be provided for notification. 
+   * Flag: `[--body BODY]` 
+* The short text for notification to send
+   * Flag: `[--ce-ibmendefaultshort]`
+* The long text for notification top send.
+   * Flag: `[--ce-ibmendefaultlong CE-IBMENDEFAULTLONG]`   
+* The level of severity for notification. Required.
+   * Flag: `[--ce-ibmenseverity CE-IBMENSEVERITY]`   
+* The source description.
+   * Flag: `[--ce-source CE-SOURCE]`  
+* The source ID to be set for Notification source. Required
+   * Flag: `[--ce-ibmensourceid CE-IBMENSOURCEID]`
+* The type of notification. Required
+   * Flag: `[--ce-type CE-TYPE]`  
+* The Timestamp to be set for notification. Required
+   * Flag: `[--time TIME]`        
+* The spec version value.Default value to be used is 1.0
+   * Flag: `[--ce-specversion CE-SPECVERSION]`  
+* PThe Device data information to send data in case of Registered Devices/ Usersids/ Platforms.
+   * Flag: `[--ce-ibmenpushto CE-IBMENPUSHTO]`
+* FCM message body to send notification to FCM devices.
+   * Flag: `[--ce-ibmenfcmbody CE-IBMENFCMBODY]` 
+* Chrome message body to send notification to FCM devices.
+   * Flag: `[--ce-ibmenchromebody CE-IBMENCHROMEBODY]`
+* Firefox message body to send notification to FCM devices.
+   * Flag: `[--ce-ibmenfirefoxbody CE-IBMENFIREFOXBODY]`      
+* The Custom APNS headers information can be set using this option.
+   * Flag: `[--ce-ibmenapnsheaders CE-IBMENAPNSHEADERS]` 
+* The Custom Chrome headers information can be set using this option.
+   * Flag: `[--ce-ibmenchromeheaders CE-IBMENCHROMEHEADERS]` 
+* The Custom Firefox information can be set using this option.
+   * Flag: `[--ce-ibmenfirefoxheaders CE-IBMENFIREFOXHEADERS]`         
+* The apns meaage body can be set using this option.
+   * Flag: `[--ce-ibmenapnsbody CE-IBMENAPNSBODY]`              
 
 The following example shows the format of data payload for sending notifications.
 
@@ -622,12 +744,26 @@ The following example shows the format of FCM message body to send notification 
 
 ```
 
-The following example shows the format of apns headers.   
+The following example shows the format of Chrome message body to send notification to FCM devices.        
+
+```json
+{"title":"Hello Chrome", "en_data":{"alert":"Hello Chrome Notification","title":"Chrome New Title","iconUrl":"https://","timeToLive":100,"payload":{"key":"value"}}}
+
+```
+The following example shows the format of Firefox message body to send notification to FCM devices.        
+
+```json
+
+'{"title":"Hello Firefox", "en_data":{"alert":"Hello firefox Notification","title":"firefox New Title","iconUrl":"https://","timeToLive":100,"payload":{"key":"value"}}}'
+
+```
+
+The following example shows the format of apns/chrome/fireox custom headers.   
 
 ```json
 {
     "test": "test header",
-    "new": "newmesaage"
+    "new": "newmessage"
 }
 ```
 The following example shows the format of APNS message body to send notification to FCM devices.        
@@ -642,241 +778,55 @@ The following example shows the target device configuration example.
 {"fcm_devices": ["deviceidstring"],"user_ids": ["useridstring"], "platform": ["G"]}
 ```
 
-<dd>Additional properties that can be configured for the IOS notification.
-<p>
-<table>
-  <caption>Table 1. Settings specific to iOS platform.</caption>
-  <tr>
-    <th>Property</th>
-    <th>Property type</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>badge</td>
-    <td>integer</td>
-    <td>The number to display as the badge of the application icon.</td>
-  </tr>
-  <tr>
-    <td>interactive_category</td>
-    <td>string</td>
-    <td>The category identifier to be used for the interactive push notifications.</td>
-  </tr>
-  <tr>
-    <td>ios_action_key</td>
-    <td>string</td>
-    <td>The title for the Action key.</td>
-  </tr>
-  <tr>
-    <td>payload</td>
-    <td>JSON object</td>
-    <td>Custom JSON payload that will be sent as part of the notification message.</td>
-  </tr>
-  <tr>
-    <td>sound</td>
-    <td>string</td>
-    <td>The name of the sound file in the application bundle. The sound of this file is played as an alert.</td>
-  </tr>
-  <tr>
-    <td>title_loc_key</td>
-    <td>string</td>
-    <td>The key to a title string in the Localizable.strings file for the current localization. The key string can be formatted with %@ and %n$@ specifiers to take the variables specified in the titleLocArgs array.</td>
-  </tr>
-  <tr>
-    <td>loc_key</td>
-    <td>string</td>
-    <td>A key to an alert-message string in a Localizabl.strings file for the current localization (which is set by the user's language preference). The key string can be formatted with %@ and %n$@ specifiers to  take the variables specified in the locArgs array.</td>
-  </tr>
-  <tr>
-    <td>launch_image</td>
-    <td>string</td>
-    <td>The filename of an image file in the app bundle, with or without the filename extension. The image is used as the launch image when users tap the action button or move the action slider.</td>
-  </tr>
-  <tr>
-    <td>title_loc_args</td>
-    <td>string[]</td>
-    <td>Variable string values to appear in place of the format specifiers in title-loc-key.</td>
-  </tr>
-  <tr>
-    <td>loc_args</td>
-    <td>string[]</td>
-    <td>Variable string values to appear in place of the format specifiers in locKey.</td>
-  </tr>
-  <tr>
-    <td>title</td>
-    <td>string</td>
-    <td>The title of Rich Push notifications (Supported only on iOS 10 and above).</td>
-  </tr>
-  <tr>
-    <td>subtitle</td>
-    <td>string</td>
-    <td>The subtitle of the Rich Notifications (Supported only on iOS 10 and above).</td>
-  </tr>
-  <tr>
-    <td>body</td>
-    <td>string</td>
-    <td>The body for IOS notifications.</td>
-  </tr>
-  <tr>
-    <td>attachment_url</td>
-    <td>string</td>
-    <td>The link to the iOS notifications media (video, audio, GIF, images - Supported only on iOS 10 and above).</td>
-  </tr>
-  <tr>
-    <td>type</td>
-    <td>string</td>
-    <td>Allowable values: DEFAULT, MIXED, SILENT.</td>
-  </tr>
-  <tr>
-    <td>apns_collapse_id</td>
-    <td>string</td>
-    <td>Multiple notifications with the same collapse identifier are displayed to the user as a single notification.</td>
-  </tr>
-  <tr>
-    <td>apns_thread_id</td>
-    <td>string</td>
-    <td>An app-specific identifier for grouping related notifications. This value corresponds to the threadIdentifier property in the UNNotificationContent object.</td>
-  </tr>
-  <tr>
-    <td><nobr>apns_group_summary_arg</nobr></td>
-    <td>string</td>
-    <td>The string the notification adds to the category’s summary format string.</td>
-  </tr>
-  <tr>
-    <td><nobr>apns_group_summary_arg_count</nobr></td>
-    <td>integer</td>
-    <td>The number of items the notification adds to the category’s summary format string.</td>
-  </tr>
-</table>
-</p>
+#### Additional properties that can be configured for the IOS notification
+{: #event-notifications-cli-send-notifications-command-addprops}
 
-<dd>Additional properties that can be configured for the FCM notification.
-<p>
-<table>
-  <caption>Table 2. Settings specific to Android platform.</caption>
-  <tr>
-    <th>Property</th>
-    <th>Property type</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>icon</td>
-    <td>&nbsp;</td>
-    <td>string</td>
-    <td>Specify the name of the icon to be displayed for the notification. Make sure that the icon is already packaged with the client application.</td>
-  </tr>
-  <tr>
-    <td>delay_while_idle</td>
-    <td>&nbsp;</td>
-    <td>boolean</td>
-    <td>When this parameter is set to true, it indicates that the message should not be sent until the device becomes active.</td>
-  </tr>
-  <tr>
-    <td>sync</td>
-    <td>&nbsp;</td>
-    <td>boolean</td>
-    <td>Device group messaging makes it possible for every app instance in a group to reflect the latest messaging state.</td>
-  </tr>
-  <tr>
-    <td>visibility</td>
-    <td>&nbsp;</td>
-    <td>string</td>
-    <td>private/public - Visibility of this notification, which affects how and when the notifications are revealed on a secure locked screen.</td>
-  </tr>
-  <tr>
-    <td>redact</td>
-    <td>&nbsp;</td>
-    <td>string</td>
-    <td>Content that is specified will show up on a secure locked screen on the device when visibility is set to Private.</td>
-  </tr>
-  <tr>
-    <td>payload</td>
-    <td>&nbsp;</td>
-    <td>JSON object</td>
-    <td>Custom JSON payload that will be sent as part of the notification message.</td>
-  </tr>
-  <tr>
-    <td>priority</td>
-    <td>&nbsp;</td>
-    <td>string</td>
-    <td>A string value that indicates the priority of this notification. Allowed values are 'max', 'high', 'default', 'low' and 'min'. High/Max priority notifications along with 'sound' field might be used for Heads up notification in Android 5.0 or higher.sampleval='low'.</td>
-  </tr>
-  <tr>
-    <td>sound</td>
-    <td>&nbsp;</td>
-    <td>string</td>
-    <td>The sound file (on device) that will be attempted to play when the notification arrives on the device.</td>
-  </tr>
-  <tr>
-    <td>time_to_live</td>
-    <td>&nbsp;</td>
-    <td>integer</td>
-    <td>This parameter specifies how long (in seconds) the message should be kept in GCM storage if the device is offline.</td>
-  </tr>
-  <tr>
-    <td>lights</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>Allows setting the notification LED color on receiving push notification.</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>ledArgb</td>
-    <td>string</td>
-    <td>The color of the led. The hardware will do its best approximation.</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>ledOnMs</td>
-    <td>integer</td>
-    <td>The number of milliseconds for the LED to be on while it's flashing. The hardware will do its best approximation.</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>ledOffMs</td>
-    <td>string</td>
-    <td>The number of milliseconds for the LED to be off while it's flashing. The hardware will do its best approximation.</td>
-  </tr>
-  <tr>
-    <td>android_title</td>
-    <td>&nbsp;</td>
-    <td>string</td>
-    <td>The title of Rich Push notifications.</td>
-  </tr>
-  <tr>
-    <td>group_id</td>
-    <td>&nbsp;</td>
-    <td>string</td>
-    <td>Set this notification to be part of a group of notifications sharing the same key. Grouped notifications might display in a cluster or stack on devices that support such rendering.</td>
-  </tr>
-  <tr>
-    <td>style</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>Options to specify for Android expandable notifications. The types of expandable notifications are picture_notification, bigtext_notification, inbox_notification.</td>
-  </tr>
-  <tr>
-    <td>type</td>
-    <td>&nbsp;</td>
-    <td>string</td>
-    <td>Specifies the type of expandable notifications. The possible values are bigtext_notification, picture_notification, inbox_notification.</td>
-  </tr>
-  <tr>
-    <td>title</td>
-     <td>&nbsp;</td>
-    <td>string</td>
-    <td>Specifies the title of the notification. The title is displayed when the notification is expanded. Title must be specified for all three expandable notifications.</td>
-  </tr>
-  <tr>
-    <td>type</td>
-    <td>&nbsp;</td>
-    <td>string</td>
-    <td>Allowable values: DEFAULT, SILENT.</td>
-  </tr>
-   <tr>    
-    <td>alert</td>
-    <td>&nbsp;</td>
-    <td>string</td>
-    <td>The alert Vlaue of Notification</td>
-  </tr>
-</table>
-</p>
+|  Property  |  Property type  |  Description  |
+|-------------|-------------|-------------|
+|  badge | integer | The number to display as the badge of the application icon. |
+| interactive_category | string | The category identifier to be used for the interactive push notifications. |
+| ios_action_key | string |The title for the Action key.| 
+| payload | JSON object | Custom JSON payload that is sent as part of the notification message.|
+| sound | string | The name of the sound file in the application bundle. The sound of this file is played as an alert. |
+| title_loc_key | string | The key to a title string in the Localizable.strings file for the current localization. The key string can be formatted with %@ and %n$@ specifiers to take the variables specified in the titleLocArgs array. |
+| loc_key | string | A key to an alert-message string in a Localizabl.strings file for the current localization (which is set by the user's language preference). The key string can be formatted with %@ and %n$@ specifiers to take the variables specified in the locArgs array. |
+| launch_image | string | The filename of an image file in the app bundle, with or without the filename extension. The image is used as the launch image when users tap the action button or move the action slider. |
+| title_loc_args | string | Variable string values to appear in place of the format specifiers in title-loc-key. |
+| loc_args | string | Variable string values to appear in place of the format specifiers in locKey. | title string The title of Rich Push notifications (Supported only on iOS 10 and above).|
+| title | string | The title of Rich Push notifications (Supported only on iOS 10 and above). |
+| subtitle | string | The subtitle of the Rich Notifications (Supported only on iOS 10 and above). |
+| body | string | The body for IOS notifications. |
+| attachment_url | string | The link to the iOS notifications media (video, audio, GIF, images - Supported only on iOS 10 and above). |
+| type | string | Allowable values: DEFAULT, MIXED, SILENT. |
+| apns_collapse_id | string | Multiple notifications with the same collapse identifier are displayed to the user as a single notification. |
+| apns_thread_id | string | An app-specific identifier for grouping related notifications. This value corresponds to the threadIdentifier property in the UNNotificationContent object. |
+| apns_group_summary_arg | string | The string the notification adds to the category’s summary format string. |
+| apns_group_summary_arg_count | integer | The number of items the notification adds to the category’s summary format string. |
+{: caption="Table 1. iOS platform settings " caption-side="bottom"}
+
+#### Additional properties that can be configured for the FCM notification
+{: #event-notifications-cli-send-notifications-command-fcm}
+
+|  Property  |  Property type  |  Description  |
+|-------------|-------------|-------------|
+| icon | string | Specify the name of the icon to be displayed for the notification. Make sure that the icon is already packaged with the client application. |
+| delay_while_idle | Boolean | When set to true, this parameter indicates that the message should not be sent until the device becomes active. |
+| sync | Boolean | Device group messaging makes it possible for every app instance in a group to reflect the latest messaging state. |
+| visibility | string | private/public - Visibility of this notification, which affects how and when the notifications are revealed on a secure locked screen. |
+| redact | string | Content that is specified shows up on a secure locked screen on the device when visibility is set to Private. |
+| payload | JSON object | Custom JSON payload that is sent as part of the notification message.|
+|priority | string | A string value that indicates the priority of this notification. Allowed values are 'max', 'high', 'default', 'low' and 'min'. High/Max priority notifications along with 'sound' field might be used for Heads up notification in Android 5.0 or higher.sampleval='low'. |
+| sound | string| The sound file (on device) that will be attempted to play when the notification arrives on the device. |
+| time_to_live | integer | Specifies how long (in seconds) the message should be kept in GCM storage if the device is offline.
+| lights |  | Sets the notification LED color on receiving push notification. |
+| ledArgb | string | The color of the LED. The hardware does its best approximation. |
+| ledOnMs | integer | The time in milliseconds for the LED to be on while it's flashing. The hardware does its best approximation. |
+| ledOffMs | string | The time in milliseconds for the LED to be off while it's flashing. The hardware does its best approximation. |
+| android_title | string | The title of Rich Push notifications. |
+| group_id | string | Set this notification to be part of a group of notifications sharing the same key. Grouped notifications might display in a cluster or stack on devices that support such rendering. |
+| style |  | Options to specify for Android expandable notifications. The types of expandable notifications are picture_notification, bigtext_notification, inbox_notification. |
+| type | string | Specifies the type of expandable notifications. The possible values are bigtext_notification, picture_notification, inbox_notification.| 
+| title | string | Specifies the title of the notification. The title is displayed when the notification is expanded. Title must be specified for all three expandable notifications. |
+| type | string | Allowed values: DEFAULT, SILENT. |
+| alert | string | The alert value of Notification. |
+{: caption="Table 2. Android platform settings " caption-side="bottom"}

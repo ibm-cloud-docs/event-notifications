@@ -2,40 +2,14 @@
 
 copyright:
   years:  2017, 2022
-lastupdated: "2022-02-07"
+lastupdated: "2022-04-22"
 
 keywords: event notifications, event notification, notifications, service access, manage, user roles
 
 subcollection: event-notifications
 
 ---
-
-{:external: target="_blank" .external}
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tsSymptoms: .tsSymptoms}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
-{:tip: .tip}
-{:important: .important}
-{:note: .note}
-{:download: .download}
-{:java: .ph data-hd-programlang='java'}
-{:ruby: .ph data-hd-programlang='ruby'}
-{:c#: .ph data-hd-programlang='c#'}
-{:objectc: .ph data-hd-programlang='Objective C'}
-{:python: .ph data-hd-programlang='python'}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:php: .ph data-hd-programlang='PHP'}
-{:swift: .ph data-hd-programlang='swift'}
-{:reactnative: .ph data-hd-programlang='React Native'}
-{:csharp: .ph data-hd-programlang='csharp'}
-{:ios: .ph data-hd-programlang='iOS'}
-{:android: .ph data-hd-programlang='Android'}
-{:cordova: .ph data-hd-programlang='Cordova'}
-{:xml: .ph data-hd-programlang='xml'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Managing service access
 {: #service-access-management}
@@ -81,7 +55,7 @@ The following table details actions that are mapped to service access roles. Ser
 | Service Configuration Reader| Read services configuration for Governance management | View services configurations |
 | Event Source Manager | Source integration with {{site.data.keyword.en_short}} by using service to service authorization | * Perform service to service registration, of source \n * View, edit, and delete sources and events \n * Send notifications |
 | {{site.data.keyword.en_short}} Publisher | Create notification and view notifications count | Send notifications and view notifications count |
-Device Manager | Custom role to handle push device registration with the {{site.data.keyword.en_short}} service | * View, create, edit, and delete Push Devices by using {{site.data.keyword.en_short}} client SDKs. \n *View, create, and delete Tags for Push Devices by using [{{site.data.keyword.en_short}} API](https://test.cloud.ibm.com/apidocs/event-notifications/). \n * View, Create, and Delete Channel Groups for Push Devices by using [{{site.data.keyword.en_short}} API](https://test.cloud.ibm.com/apidocs/event-notifications/). \n * View, create and delete Channels for Push Devices by using [{{site.data.keyword.en_short}} APIs](https://test.cloud.ibm.com/apidocs/event-notifications/).|
+| Device Manager | Custom role to handle push device registration with the {{site.data.keyword.en_short}} service | * View, create, edit, and delete Push Devices by using {{site.data.keyword.en_short}} client SDKs. \n *View, create, and delete Tags for Push Devices by using [{{site.data.keyword.en_short}} API](https://test.cloud.ibm.com/apidocs/event-notifications/). \n * View, Create, and Delete Channel Groups for Push Devices by using [{{site.data.keyword.en_short}} API](https://test.cloud.ibm.com/apidocs/event-notifications/). \n * View, create and delete Channels for Push Devices by using [{{site.data.keyword.en_short}} APIs](https://test.cloud.ibm.com/apidocs/event-notifications/).|
 {: caption="Table 2. Actions mapping to service access roles" caption-side="top"}
 
 For more information about assigning user roles in the UI, see [Managing IAM access](/docs/account?topic=account-assign-access-resources).

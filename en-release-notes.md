@@ -28,6 +28,14 @@ content-type: release-note
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
 
+## 29 Apr 2022
+{: #event-notifications-Apr2922}
+{: release-note}
+
+New destinations: Web Push Notifications for Chrome and Firefox
+:   Push Notifications to Chrome is now available as a destination. Send push notifications from your application to Chrome. For more information, see [Create and send push notifications to Chrome web using IBM Cloud® Event Notifications](/docs/event-notifications?topic=event-notifications-en-push-chrome).
+:   Push Notifications to Firefox is now available as a destination. Send push notifications from your application to Firefox. For more information, see [Create and send push notifications to Firefox web using IBM Cloud® Event Notifications](/docs/event-notifications?topic=event-notifications-en-push-firefox).
+
 ## 25 Mar 2022
 {: #event-notifications-Mar2522}
 {: release-note}
