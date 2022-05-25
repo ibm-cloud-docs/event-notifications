@@ -174,6 +174,14 @@ The following example shows the format of the DestinationConfig object for Firef
   }
 ```
 
+The following example shows the format of the DestinationConfig object for Slack destination.
+    ```json
+    {
+     "params" : {
+     "url" : "https://hooks.slack.com/services/G0gyhsush/TYodsjhs/GHTbfidsimkk",
+    }
+    ``` 
+
 ### ibmcloud event-notifications destination list
 {: #event-notifications-cli-destination-list-command}
 
@@ -535,7 +543,7 @@ ibmcloud event-notifications subscription create [--name NAME] [--description DE
 * The attributes to be set for subscription
    * Flag: `[-attributes ATTRIBUTES]`     
 
-Syntax in case of webhook subscription to be created   
+Attributes flag syntax in case of webhook subscription to be created   
 
 ```json
 {
@@ -543,14 +551,14 @@ Syntax in case of webhook subscription to be created
   "signing_enabled" : true
 }
 ```    
-Syntax in case of sms subscription to be created   
+Attributes flag syntax in case of sms subscription to be created   
 
 ```json
 {
     "to" :["+19667895490", "+19845678321"]
 }
 ```    
-Syntax in case of email subscription to be created   
+Attributes flag syntax in case of email subscription to be created   
 
 ```json
 {
@@ -560,7 +568,15 @@ Syntax in case of email subscription to be created
     "reply_to_name": "EYS ORG",
     "from_name":"ABC ORG"
     }
-```      
+``` 
+
+Attributes flag syntax in case of slack subscription to be created   
+
+```json
+{
+    "attachment_color" : "#FF0000"
+    }
+```
 
 
 ### ibmcloud event-notifications subscription list
@@ -772,10 +788,16 @@ The following example shows the format of APNS message body to send notification
 {"data":{"alert":"alert","url":"https","badge":9,"sound":"bingbong.aiff","payload":"{\\\"fcm_devices\\\": [\\\"cc75e4a6-edd8-3bec-a7c3-dfca6572a03b\\\"]}","type":"DEFAULT","subtitle":"dummy","title":"dummy1","body":"body","ios_action_key":"key","interactive_category":"interactiveCategory","title_loc_key":"titleLocKey","loc_key":"GAME_PLAY_REQUEST_FORMAT","launch_image":"image.png","title_loc_args":["Shelly","Rick"],"loc_args":["Shelly","Rick"],"attachment_url":"some url","apns_collapse_id":"12","apns_thread_id":"1","apns_group_summary_arg":"apnsGroupSummaryArg","apns_group_summary_arg_count":1}}
 ```
 
+The following example shows the format of body to send notification to slack destination.
+
+```json
+   {"data": {"author": {"account_id": "efg56gtys8996fagat12","email": "testuser@ibm.com","id": "IBMid-5600987654","kind": "user"},"create_time": "2022-02-28T13:28:14.043755123Z","create_timestamp": 1646054894,"issuer": "IBM Cloud Security and Compliance Center","issuer_url": "https://cloud.ibm.com/security-compliance","long_description": "Success! Your Event Notifications instance is configured with IBM Cloud Security and Compliance Center.","payload_type": "test","reported_by": {"id": "compliance","title": "IBM Cloud Security and Compliance Center","url": "https://cloud.ibm.com/security-compliance"}},"severity": "LOW","short_description": "Success! Your Event Notifications instance is configured with IBM Cloud Security and Compliance Center.","transaction_id": "6a25fd3d-8530-43b9-96a5-ede2a7712bc9"}
+```      
+
 The following example shows the target device configuration example.
 
 ```json
-{"fcm_devices": ["deviceidstring"],"user_ids": ["useridstring"], "platform": ["G"]}
+{"fcm_devices": ["deviceidstring"],"user_ids": ["useridstring"], "platforms": ["G"]}
 ```
 
 #### Additional properties that can be configured for the IOS notification
