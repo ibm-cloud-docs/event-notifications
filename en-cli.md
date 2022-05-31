@@ -50,8 +50,11 @@ ibmcloud event-notifications init [--instance-id INSTANCE-ID]
 export **IBMCLOUD_EN_ENDPOINT** variable to set the EN region endpoint
 
 **Dallas:** https://us-south.event-notifications.cloud.ibm.com/event-notifications
+
 **London:** https://eu-gb.event-notifications.cloud.ibm.com/event-notifications
+
 **Sydney:** https://au-syd.event-notifications.cloud.ibm.com/event-notifications
+
 **Frankfurt:** https://eu-de.event-notifications.cloud.ibm.com/event-notifications
 
 export **EVENT_NOTIFICATIONS_API_KEY** variable to set the {{site.data.keyword.en_short}} instance apikey.
@@ -157,6 +160,7 @@ The following example shows the format of the DestinationConfig object for Chrom
 
    ``` json
    {
+   {
     "api_key": "chromeapikey",
     "website_url" : "https://testwebsite.com",
     
@@ -168,6 +172,7 @@ The following example shows the format of the DestinationConfig object for Firef
 
    ``` json
    {
+   {
     "website_url" : "https://testwebsite.com",
     
    }
@@ -175,10 +180,12 @@ The following example shows the format of the DestinationConfig object for Firef
 ```
 
 The following example shows the format of the DestinationConfig object for Slack destination.
+
     ```json
     {
      "params" : {
      "url" : "https://hooks.slack.com/services/G0gyhsush/TYodsjhs/GHTbfidsimkk",
+    }
     }
     ``` 
 
