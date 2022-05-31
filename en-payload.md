@@ -21,15 +21,15 @@ This document outlies the {{site.data.keyword.en_short}} notification specificat
 ## Introduction
 {: #en-spec-payloadintro}
 
-This document describes the payload details for sending events using the API sources in EN. API sources can be used to send events from your backend applications. 
+This document describes the payload details for sending events using the API sources in EN. API sources can be used to send events from your backend applications.
 You can use this to send Push notifications from business backends.
 
-Events from API sources cannot be routed to IBM Email and IBM SMS destinations. 
+Events from API sources cannot be routed to IBM Email and IBM SMS destinations.
 {: important}
 
-`METHOD: POST`  
-`URL: /event-notifications/v1/apps/{instanceID}/notifications`  
-`Header: Authorization: Bearer <IAM token>`  
+`METHOD: POST`
+`URL: /event-notifications/v1/apps/{instanceID}/notifications`
+`Header: Authorization: Bearer <IAM token>`
 
 The Events adhere to Cloud Event standard. You can find more information about Cloud Events here. 
 
@@ -201,46 +201,67 @@ Binary mode header
 
 ### ibmenfcmbody(string/json)
 
-This attribute is needed if you want to send push notification to an Android device. This is the body that you want to send to FCM server, this has to be 
+This attribute is needed if you want to send push notification to an Android device. This is the body that you want to send to FCM server, this has to be
 JSON in string format. For more info regarding FCM body please follow this documentation - https://firebase.google.com/docs/cloud-messaging/concept-options.
-For backward compatibility for existing Push notification customers, the previous unified data format is still supported but is deprecated. 
+For backward compatibility for existing Push notification customers, the previous unified data format is still supported but is deprecated.
 
-e.g.: Deprecated Push Notification service compatible format:  
-`“ibmenfcmbody": "{\"en_data\":{\"alert\":\" Password will expire in 10 Days. Please log in to the Bank home page and click on Change Password link to change your password. \", \"android_title\":\"Change Password\"}}"`  
-Binary mode header  
-`ce-ibmenfcmbody: "{\"en_data\":{\"alert\":\" Password will expire in 10 Days. Please log in to the Bank home page and click on Change Password link to change your password. \", \"android_title\":\"Change Password\"}}"`  
+e.g.: Deprecated Push Notification service compatible format:
+`“ibmenfcmbody": "{\"en_data\":{\"alert\":\" Password will expire in 10 Days. Please log in to the Bank home page and click on Change Password link to change your password. \", \"android_title\":\"Change Password\"}}"`
+Binary mode header
+`ce-ibmenfcmbody: "{\"en_data\":{\"alert\":\" Password will expire in 10 Days. Please log in to the Bank home page and click on Change Password link to change your password. \", \"android_title\":\"Change Password\"}}"`
 
 ### ibmenapnsbody(string/json)
 
-This attribute is needed if you want to send push notification to an IOS device. This is the body that you want to send to APNs server, this has to be JSON 
-in string format. For more info regarding APNs body please follow this documentation - https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html
+This attribute is needed if you want to send push notification to an IOS device. This is the body that you want to send to APNs server, this has to be JSON in string format. For more info regarding APNs body please follow this documentation [here](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html).
 
-For backward compatibility for existing Push notification customers, the previous unified data format is still supported but is deprecated. 
+For backward compatibility for existing Push notification customers, the previous unified data format is still supported but is deprecated.
 
-e.g.: Deprecated Push Notification service compatible format:  
-`“ibmenapnsbody": "{\"en_data\":{\"alert\":\"alert\",\"url\":\"https\",\"badge\":9,\"sound\":\"bingbong.aiff\",\"payload\":{\"myaarray\":[\"cc75e4a6-edd8-3bec-a7c3-dfca6572a03b\"]},\"type\":\"DEFAULT\",\"subtitle\":\"dummy\",\"title\":\"dummy1\",\"body\":\"body\",\"ios_action_key\":\"key\",\"interactive_category\":\"interactiveCategory\",\"title_loc_key\":\"titleLocKey\",\"loc_key\":\"GAME_PLAY_REQUEST_FORMAT\",\"launch_image\":\"image.png\",\"title_loc_args\":[\"Shelly\",\"Rick\"],\"loc_args\":[\"Shelly\",\"Rick\"],\"attachment_url\":\"some url\",\"apns_collapse_id\":\"12\",\"apns_thread_id\":\"1\",\"apns_group_summary_arg\":\"apnsGroupSummaryArg\",\"apns_group_summary_arg_count\":1}}"`  
-Binary mode header  
-`ce-ibmenapnsbody: "{\"en_data\":{\"alert\":\"alert\",\"url\":\"https\",\"badge\":9,\"sound\":\"bingbong.aiff\",\"payload\":{\"myaarray\":[\"cc75e4a6-edd8-3bec-a7c3-dfca6572a03b\"]},\"type\":\"DEFAULT\",\"subtitle\":\"dummy\",\"title\":\"dummy1\",\"body\":\"body\",\"ios_action_key\":\"key\",\"interactive_category\":\"interactiveCategory\",\"title_loc_key\":\"titleLocKey\",\"loc_key\":\"GAME_PLAY_REQUEST_FORMAT\",\"launch_image\":\"image.png\",\"title_loc_args\":[\"Shelly\",\"Rick\"],\"loc_args\":[\"Shelly\",\"Rick\"],\"attachment_url\":\"some url\",\"apns_collapse_id\":\"12\",\"apns_thread_id\":\"1\",\"apns_group_summary_arg\":\"apnsGroupSummaryArg\",\"apns_group_summary_arg_count\":1}}"`  
+e.g.: Deprecated Push Notification service compatible format:
+```JSON
+
+“ibmenapnsbody": "{\"en_data\":{\"alert\":\"alert\",\"url\":\"https\",\"badge\":9,\"sound\":\"bingbong.aiff\",\"payload\":{\"myaarray\":[\"cc75e4a6-edd8-3bec-a7c3-dfca6572a03b\"]},\"type\":\"DEFAULT\",\"subtitle\":\"dummy\",\"title\":\"dummy1\",\"body\":\"body\",\"ios_action_key\":\"key\",\"interactive_category\":\"interactiveCategory\",\"title_loc_key\":\"titleLocKey\",\"loc_key\":\"GAME_PLAY_REQUEST_FORMAT\",\"launch_image\":\"image.png\",\"title_loc_args\":[\"Shelly\",\"Rick\"],\"loc_args\":[\"Shelly\",\"Rick\"],\"attachment_url\":\"some url\",\"apns_collapse_id\":\"12\",\"apns_thread_id\":\"1\",\"apns_group_summary_arg\":\"apnsGroupSummaryArg\",\"apns_group_summary_arg_count\":1}}"
+```
+
+Binary mode header
+
+```JSON
+ce-ibmenapnsbody: "{\"en_data\":{\"alert\":\"alert\",\"url\":\"https\",\"badge\":9,\"sound\":\"bingbong.aiff\",\"payload\":{\"myaarray\":[\"cc75e4a6-edd8-3bec-a7c3-dfca6572a03b\"]},\"type\":\"DEFAULT\",\"subtitle\":\"dummy\",\"title\":\"dummy1\",\"body\":\"body\",\"ios_action_key\":\"key\",\"interactive_category\":\"interactiveCategory\",\"title_loc_key\":\"titleLocKey\",\"loc_key\":\"GAME_PLAY_REQUEST_FORMAT\",\"launch_image\":\"image.png\",\"title_loc_args\":[\"Shelly\",\"Rick\"],\"loc_args\":[\"Shelly\",\"Rick\"],\"attachment_url\":\"some url\",\"apns_collapse_id\":\"12\",\"apns_thread_id\":\"1\",\"apns_group_summary_arg\":\"apnsGroupSummaryArg\",\"apns_group_summary_arg_count\":1}}"
+```
+
+To customise your APNs push notifications, you can provide APNs headers. Some of them are mandatory to deliver a notification if key is present. The required body as follows:
+
+```JSON
+"ibmenapnsheaders": "{\"apns-priority\":10, \"apns-collapse-id\": \"collapse\"}"
+```
+
+To get more details on APNs headers, you can check out [here](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/sending_notification_requests_to_apns/).
+
+### ibmenchromebody(string/json)
+
+This attribute is needed if you want to send push notification to a chrome device. This is the body that you want to send to web server, this has to be JSON in string format. For more info regarding APNs body please follow this documentation [here](https://developer.mozilla.org/en-US/docs/Web/API/Notification).
+
+### ibmenfirefoxbody(string/json)
+
+This attribute is needed if you want to send push notification to a firefox device. This is the body that you want to send to web server, this has to be JSON in string format. For more info regarding APNs body please follow this documentation [here](https://developer.mozilla.org/en-US/docs/Web/API/Notification).
 
 ### ibmenpushto(string/json)
 
 This attribute is mandatory for successful delivery from an Android FCM or APNS destination
 
-This contains details about the destination where you want to send push notification. This field is also string format of JSON and further contains following field 
-- `user_id` – Useridto be associated with the device. where you want to target your notification 
+This contains details about the destination where you want to send push notification. This field is also string format of JSON and further contains following field
+
+- `user_id` – Useridto be associated with the device. where you want to target your notification
 - `tag` – This is used to send notifications on registered tags
 - `platform` - For FCM we can target all registered device by giving platform as “G”
 - `fcm_devices` – Unique identifier of the FCM device where you want to target your notification
 - `apns_devices` - Unique identifier of the APNS device where you want to target your notification
 
-e.g.:  
-`ibmenpushto: "{\"fcm_devices\": [\"9c75975a-37d0-3898-905d-3b5ee0d7c172\",\"C9CACDF5-6EBF-49E1-AD60-E25BA23E954C\"]}"`  
-`ibmenpushto: "{\"apns_devices\": [\"1c75972a-37d0-3898-905d-3b5ee0d7c172\",\"M9CACDF5-1EBF-49E1-AD60-E25BA23E954C\"]}"`  
+e.g.:
+`ibmenpushto: "{\"fcm_devices\": [\"9c75975a-37d0-3898-905d-3b5ee0d7c172\",\"C9CACDF5-6EBF-49E1-AD60-E25BA23E954C\"]}"`
+`ibmenpushto: "{\"apns_devices\": [\"1c75972a-37d0-3898-905d-3b5ee0d7c172\",\"M9CACDF5-1EBF-49E1-AD60-E25BA23E954C\"]}"`
 
-Multiple destination can be targeted using following methods  
+Multiple destination can be targeted using following methods
 
-`ibmenpushto: "{\"fcm_devices\": [\"9c75975a-37d0-3898-905d-3b5ee0d7c172\",\"C9CACDF5-6EBF-49E1-AD60-E25BA23E954C\"],\"apns_devices\": [\"1c75972a-37d0-3898-905d-3b5ee0d7c172\",\"M9CACDF5-1EBF-49E1-AD60-E25BA23E954C\"]}"`  
+`ibmenpushto: "{\"fcm_devices\": [\"9c75975a-37d0-3898-905d-3b5ee0d7c172\",\"C9CACDF5-6EBF-49E1-AD60-E25BA23E954C\"],\"apns_devices\": [\"1c75972a-37d0-3898-905d-3b5ee0d7c172\",\"M9CACDF5-1EBF-49E1-AD60-E25BA23E954C\"]}"`
 
-`ibmenpushto: "{\"user_id\": [\" ajay@accts.acmebank.com \",\" ankit@accts.acmebank.com \"]}"Binary mode headerce-ibmenpushto: "{\"user_id\": [\"ajay@accts.acmebank.com\",\"ankit@accts.acmebank.com\"]}"`  
-
-
+`ibmenpushto: "{\"user_id\": [\" ajay@accts.acmebank.com \",\" ankit@accts.acmebank.com \"]}"Binary mode headerce-ibmenpushto: "{\"user_id\": [\"ajay@accts.acmebank.com\",\"ankit@accts.acmebank.com\"]}"`
