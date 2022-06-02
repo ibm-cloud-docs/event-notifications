@@ -43,6 +43,7 @@ toc:
       - en-push-apns.md
       - en-push-chrome.md
       - en-push-firefox.md
+      - en-push-safari.md
       - en-terraform-tutorial.md
       - en-ts-monitor-secrets.md
 

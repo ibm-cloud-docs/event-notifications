@@ -358,6 +358,21 @@ To customise your chrome push notifications, you can provide firefox headers. So
 ce-ibmenfirefoxheaders: {"TTL":100, "Urgency": "low" , "Topic": "Test Firefox Notifications"}
 ```
 
+### ibmensafaribody(string/json)
+This attribute is needed if you want to send push notification to a Safari device. This is the body that you want to send to web server, this has to be JSON in string format. For more info regarding Safari body please follow this documentation [here](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/NotificationProgrammingGuideForWebsites/PushNotifications/PushNotifications.html#//apple_ref/doc/uid/TP40013225-CH3-SW1).
+
+You can follow below example for quick start:
+
+```JSON
+"ibmensafaribody": "{\"aps\":{\"alert\":{\"title\":\"Shipment Order 1832128321 Delevered\",\"body\":\"Shipment Order 1832128321 Delevered.\",\"action\":\"View\"},\"url-args\":[\"1832128321\"]}}"
+```
+
+****Binary mode header****
+
+```JSON
+ce-ibmensafaribody: {"aps":{"alert":{"title":"Shipment Order 1832128321 Delevered","body":"Shipment Order 1832128321 Delevered.","action":"View"},"url-args":["1832128321"]}}
+```
+
 ### ibmenpushto(string/json)
 
 This attribute is mandatory for successful delivery from an Android FCM or APNS destination
@@ -366,23 +381,62 @@ This contains details about the destination where you want to send push notifica
 
 - `user_id` – Useridto be associated with the device. where you want to target your notification
 - `tag` – This is used to send notifications on registered tags
-- `platform` - For FCM we can target all registered device by giving platform as "G"
+- `platform` - We can target all registered device by platforms.
+Below are the corresponding platform values for each type of target.
+  - `FCM`: push_android
+  - `APNS`: push_ios 
+  - `Chrome`: push_chrome
+  - `Firefox`: push_firefox
+  - `Safari`: push_safari
 - `fcm_devices` – Unique identifier of the FCM device where you want to target your notification
 - `apns_devices` - Unique identifier of the APNS device where you want to target your notification
+- `chrome_devices` - Unique identifier of the Chrome Web device where you want to target your notification
+- `firefox_devices` - Unique identifier of the Firefox Web device where you want to target your notification
+- `safari_devices` - Unique identifier of the Safari Web device where you want to target your notification
 
 e.g.:
 
 ```JSON
-ibmenpushto: "{\"fcm_devices\": [\"9c75975a-37d0-3898-905d-3b5ee0d7c172\",\"C9CACDF5-6EBF-49E1-AD60-E25BA23E954C\"]}"`
-`ibmenpushto: "{\"apns_devices\": [\"1c75972a-37d0-3898-905d-3b5ee0d7c172\",\"M9CACDF5-1EBF-49E1-AD60-E25BA23E954C\"]}"
+"ibmenpushto": "{\"fcm_devices\": [\"9c75975a-37d0-3898-905d-3b5ee0d7c172\",\"C9CACDF5-6EBF-49E1-AD60-E25BA23E954C\"]}"`
+"ibmenpushto": "{\"apns_devices\": [\"1c75972a-37d0-3898-905d-3b5ee0d7c172\",\"M9CACDF5-1EBF-49E1-AD60-E25BA23E954C\"]}"
+"ibmenpushto": "{\"chrome_devices\": [\"2c75972a-37d0-3898-905d-3b5ee0d7c182\",\"N9CACDF5-1EBF-49E1-AD60-E25BA23E994D\"]}"
+"ibmenpushto": "{\"firfox_devices\": [\"3c75972a-37d0-3898-905d-3b5ee0d7c182\",\"L9CACDF5-1EBF-49E1-AD60-E25BA23E994E\"]}"
+"ibmenpushto": "{\"safari_devices\": [\"1175972a-37d0-3898-905d-3b5ee0d7c1D2\",\"Q9CACDF5-1EBF-49E1-AD60-E25BA23E994N\"]}"
 ```
 
 Multiple destination can be targeted using following methods
 
 ```JSON
-ibmenpushto: "{\"fcm_devices\": [\"9c75975a-37d0-3898-905d-3b5ee0d7c172\",\"C9CACDF5-6EBF-49E1-AD60-E25BA23E954C\"],\"apns_devices\": [\"1c75972a-37d0-3898-905d-3b5ee0d7c172\",\"M9CACDF5-1EBF-49E1-AD60-E25BA23E954C\"]}"
+"ibmenpushto": "{\"fcm_devices\": [\"9c75975a-37d0-3898-905d-3b5ee0d7c172\",\"C9CACDF5-6EBF-49E1-AD60-E25BA23E954C\"],\"apns_devices\": [\"1c75972a-37d0-3898-905d-3b5ee0d7c172\",\"M9CACDF5-1EBF-49E1-AD60-E25BA23E954C\"],\"chrome_devices\": [\"2c75972a-37d0-3898-905d-3b5ee0d7c182\",\"N9CACDF5-1EBF-49E1-AD60-E25BA23E994D\"],\"firefox_devices\": [\"3c75972a-37d0-3898-905d-3b5ee0d7c182\",\"L9CACDF5-1EBF-49E1-AD60-E25BA23E994E\"],\"safari_devices\": [\"1175972a-37d0-3898-905d-3b5ee0d7c1D2\",\"Q9CACDF5-1EBF-49E1-AD60-E25BA23E994N\"]}"
 ```
 
+Targeting notifications to push user_ids.
 ```JSON
-ibmenpushto: "{\"user_id\": [\" ajay@accts.acmebank.com \",\" ankit@accts.acmebank.com \"]}"**Binary mode header**ce-ibmenpushto: "{\"user_id\": [\"ajay@accts.acmebank.com\",\"ankit@accts.acmebank.com\"]}"
+"ibmenpushto": "{\"user_ids\": [\"ajay@accts.acmebank.com\",\"ankit@accts.acmebank.com\"]}"
+```
+
+Targeting notifications to push tags.
+```JSON
+"ibmenpushto": "{\"tags\": [\"salesTeam\",\"TechTeam\"]}"
+```
+
+Targeting notifications to platforms.
+
+```JSON
+"ibmenpushto": "{\"platforms\":[\"push_android\",\"push_ios\"]]}"
+```
+
+Targeting notifications to specific platform.
+
+```JSON
+"ibmenpushto": "{\"platforms\":[\"push_android\"]}"
+"ibmenpushto": "{\"platforms\":[\"push_ios\"]}"
+"ibmenpushto": "{\"platforms\":[\"push_chrome\"]}"
+"ibmenpushto": "{\"platforms\":[\"push_firefox\"]}"
+"ibmenpushto": "{\"platforms\":[\"push_safari\"]}"
+```
+
+**Binary mode header** 
+```JSON
+ce-ibmenpushto: "{\"user_id\": [\"ajay@accts.acmebank.com\",\"ankit@accts.acmebank.com\"]}"
 ```
