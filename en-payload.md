@@ -27,8 +27,8 @@ You can use this to send Push notifications from business backends.
 Events from API sources cannot be routed to IBM Email and IBM SMS destinations.
 {: important}
 
-`METHOD: POST`
-`URL: /event-notifications/v1/apps/{instanceID}/notifications`
+`METHOD: POST`  
+`URL: /event-notifications/v1/apps/{instanceID}/notifications`   
 `Header: Authorization: Bearer <IAM token>`
 
 The Events adhere to Cloud Event standard. You can find more information about Cloud Events here. 
@@ -66,7 +66,7 @@ case of failure of send notification.
 `source+id` will be logged in IBM Cloud Logging service. Using this combination IBM customers will be able to trace the event movement from one system to 
 another and will aid in debugging and tracing.
 
-e.g:
+e.g.:
 
 ```JSON
 id: qwer-1234-1qsd-po94
@@ -116,7 +116,7 @@ This describes the type of event.  It is of the form `<event-type-name>:<sub-typ
 The event type name has to be prefixed with the reverse DNS names so the event type is uniquely identified. The same event type can be produced
 by 2 different sources. It is highly recommended to use hyphen `-` as a separator instead of `_`
 
-e.g. 1:
+e.g.:
 `type:com.acmebank.password:expiring-in-15-days`  
 Type: `com.acmebank.password`  
 Sub type: `expiring-in-15-days`  
@@ -126,7 +126,7 @@ Sub type: `expiring-in-15-days`
 ce-type:com.acmebank.password:expiring-in-15-days`
 ```
 
-e.g. 2:
+e.g.:
 `type:com.acmebank.password-changed`
 Type: `com.acmebank.password-changed`
 Sub type: N/A
@@ -145,7 +145,7 @@ Following attributes are optional but highly recommended to take full advantage 
 
 UTC time stamp when the event occurred. Must be in the RFC 3339 format.
 
-E.g.:
+e.g.:
 ```JSON
 time: 2022-02-10T10:51:37+00:00
 ```
@@ -243,8 +243,8 @@ ibmendefaultshort: "Change password"
 
 ### ibmendefaultlong(String)
 
-This message will be used in case the eventis routed to a destination that needs a human readable text, but a destination specific attribute is not specified.
-E.g.: if `ibmenfcmbody` is not specified and the event is routed to Android FCM type destination, `ibmendefaultlong` will be used as the notification body (alert).
+This message will be used in case the event is routed to a destination that needs a human readable text, but a destination specific attribute is not specified.  
+e.g.: if `ibmenfcmbody` is not specified and the event is routed to Android FCM type destination, `ibmendefaultlong` will be used as the notification body (alert).
 
 e.g.:
 
@@ -278,7 +278,7 @@ ce-ibmenfcmbody: {"en_data":{"alert":" Password will expire in 10 Days. Please l
 
 ### ibmenapnsbody(string/json)
 
-This attribute is needed if you want to send push notification to an IOS device. This is the body that you want to send to APNs server, this has to be JSON in string format. For more info regarding APNs body please follow this documentation [here](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html).
+This attribute is needed if you want to send push notification to an iOS device. This is the body that you want to send to APNs server, this has to be JSON in string format. For more info regarding APNs body please follow this documentation [here](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html).
 
 For backward compatibility for existing Push notification customers, the previous unified data format is still supported but is deprecated.
 
@@ -381,7 +381,8 @@ This contains details about the destination where you want to send push notifica
 
 - `user_id` – Useridto be associated with the device. where you want to target your notification
 - `tag` – This is used to send notifications on registered tags
-- `platform` - We can target all registered device by platforms.
+- `platform` - We can target all registered device by platforms. 
+
 Below are the corresponding platform values for each type of target.
   - `FCM`: push_android
   - `APNS`: push_ios 
