@@ -27,6 +27,7 @@ toc:
           - en-destination-sms.md
           - en-destination-push.md
           - en-destination-webhook.md
+          - en-destination-slack.md
       - topic: en-release-notes.md
         navtitle: Release notes
 
