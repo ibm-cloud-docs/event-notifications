@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-18"
+lastupdated: "2022-06-20"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -51,10 +51,35 @@ Add the following rules to your topic:
 - `Event type`: select event type from the dropdown list.
 - `Event subtype`: select event sub type from the event sub type dropdown list.
 - `Severity`: select severity from the severity dropdown list.
-- `Advanced conditions`: create your own custom conditions, which must follow [jsonpath specifications](https://jsonpath.com/). Example:
+- `Advanced conditions`: create your own custom conditions, which must follow [jsonpath specifications](https://github.com/spyzhov/ajson). In the given link, there are many operators support is provided but currently we are only providing support for `==` operator. Example:
+
+```JSON
+{
+	"data": {
+		"findings": [{
+				"severity": "LOW",
+				"provider": "cert-mgr"
+			},
+			{
+				"severity": "HIGH",
+				"provider": "secrets-mgr"
+			}
+		],
+		"severity": "LOW",
+		"payloadType": "findings",
+		"issuer": "IBM Cloud Security Advisor",
+	}
+}
+```
+Based on the above input json following valid JSONPaths can be constructed:
+
 
 ```bash
-$.data.severity=='LOW'
+1. $.data.severity=='LOW' 
+Output: True
+
+2. $.data.findings[1].severity == 'HIGH'
+Output: True
 ```
 {: codeblock}
 
