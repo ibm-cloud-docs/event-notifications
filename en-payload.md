@@ -250,8 +250,8 @@ ibmendefaultshort: "Change password"
 
 ### ibmendefaultlong(String)
 
-This message will be used in case the eventis routed to a destination that needs a human readable text, but a destination specific attribute is not specified.
-: if `ibmenfcmbody` is not specified and the event is routed to Android FCM type destination, `ibmendefaultlong` will be used as the notification body (alert).
+This message will be used in case the event is routed to a destination that needs a human readable text, but a destination specific attribute is not specified.
+Example: if `ibmenfcmbody` is not specified and the event is routed to Android FCM type destination, `ibmendefaultlong` will be used as the notification body (alert).
 
 #### Example
 
