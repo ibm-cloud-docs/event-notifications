@@ -285,7 +285,7 @@ ce-ibmenfcmbody: {"en_data":{"alert":" Password will expire in 10 Days. Please l
 
 ### ibmenapnsbody(string/json)
 
-This attribute is needed if you want to send push notification to an IOS device. This is the body that you want to send to APNs server, this has to be JSON in string format. For more info regarding APNs body please follow this documentation [here](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html){: external}.
+This attribute is needed if you want to send push notification to an iOS device. This is the body that you want to send to APNs server, this has to be JSON in string format. For more info regarding APNs body please follow this documentation [here](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html){: external}.
 
 For backward compatibility for existing Push notification customers, the previous unified data format is still supported but is deprecated.
 
