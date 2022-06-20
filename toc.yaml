@@ -27,6 +27,7 @@ toc:
           - en-destination-sms.md
           - en-destination-push.md
           - en-destination-webhook.md
+          - en-destination-slack.md
       - topic: en-release-notes.md
         navtitle: Release notes
 
@@ -43,6 +44,7 @@ toc:
       - en-push-apns.md
       - en-push-chrome.md
       - en-push-firefox.md
+      - en-push-safari.md
       - en-terraform-tutorial.md
       - en-ts-monitor-secrets.md
 

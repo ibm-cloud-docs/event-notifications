@@ -50,8 +50,11 @@ ibmcloud event-notifications init [--instance-id INSTANCE-ID]
 export **IBMCLOUD_EN_ENDPOINT** variable to set the EN region endpoint
 
 **Dallas:** https://us-south.event-notifications.cloud.ibm.com/event-notifications
+
 **London:** https://eu-gb.event-notifications.cloud.ibm.com/event-notifications
+
 **Sydney:** https://au-syd.event-notifications.cloud.ibm.com/event-notifications
+
 **Frankfurt:** https://eu-de.event-notifications.cloud.ibm.com/event-notifications
 
 export **EVENT_NOTIFICATIONS_API_KEY** variable to set the {{site.data.keyword.en_short}} instance apikey.
@@ -95,7 +98,9 @@ ibmcloud event-notifications destination --help
 * **Action:** Create a new Destination
 
 ```sh 
-ibmcloud event-notifications destination create --name NAME --type TYPE [--description DESCRIPTION] [--certificate CERTIFICATE] [--certificate-content-type CERTIFICATE-CONTENT-TYPE] [--config CONFIG] [--instance-id INSTANCE-ID]
+
+ibmcloud create --instance-id INSTANCE-ID --name NAME --type TYPE [--description DESCRIPTION] [--config CONFIG] [--certificate CERTIFICATE] [--certificate-content-type CERTIFICATE-CONTENT-TYPE] [--icon16x16 ICON16X16] [--icon16x16-content-type ICON16X16-CONTENT-TYPE] [--icon16x162x ICON16X162X] [--icon16x162x-content-type ICON16X162X-CONTENT-TYPE] [--icon32x32 ICON32X32] [--icon32x32-content-type ICON32X32-CONTENT-TYPE] [--icon32x322x ICON32X322X] [--icon32x322x-content-type ICON32X322X-CONTENT-TYPE] [--icon128x128 ICON128X128] [--icon128x128-content-type ICON128X128-CONTENT-TYPE] [--icon128x1282x ICON128X1282X] [--icon128x1282x-content-type ICON128X1282X-CONTENT-TYPE]
+
 ```
 {: pre}
 
@@ -108,9 +113,33 @@ ibmcloud event-notifications destination create --name NAME --type TYPE [--descr
 * The Description of the destination.
    * Flag: `--description DESCRIPTION`   
 * The Certificate file path to be provided.
-   * Flag: `--certificate CERTIFICATE`     
+   * Flag: `--certificate CERTIFICATE`  
 * The Certificate Content type to be set in the case of IOS destination. The available options are p8/p12
-   * Flag: `--certificate-content-type CERTIFICATE-CONTENT-TYPE`    
+   * Flag: `--certificate-content-type CERTIFICATE-CONTENT-TYPE`   
+* The path to icon file of 16x16 dimension to be provided.
+   * Flag: `----icon16x16 ICON16X16`
+* The path to icon file of 16x16x2x dimension to be provided..
+   * Flag: `----icon16x162x ICON16X162X`
+* The path to icon file of 32x32 dimension to be provided.
+   * Flag: `----icon32x32 ICON32X32`
+* The path to icon file of 32x32x2x dimension to be provided.
+   * Flag: `----icon32x322x ICON32X322X`
+* The path to icon file of 128x128 dimension to be provided.
+   * Flag: `---icon128x128 ICON128X128`
+* The path to icon file of 128x128x2x dimension to be provided.
+   * Flag: `--icon128x1282x ICON128X1282X`
+* The content type of icon file of 16x16 dimension to be provided.
+   * Flag: `----icon16x16-content-type ICON16X16-CONTENT-TYPE`
+* The content type of icon file of 16x16x2x dimension to be provided.
+   * Flag: `--icon16x162x-content-type ICON16X162X-CONTENT-TYPE`
+* The content type of icon file of 32x32 dimension to be provided.
+   * Flag: `-icon32x32-content-type ICON32X32-CONTENT-TYPE`  
+* The content type of icon file of 32x32x2x dimension to be provided.
+   * Flag: `--icon32x322x-content-type ICON32X322X-CONTENT-TYPE` 
+* The content type of icon file of 128x128 dimension to be provided.
+   * Flag: `----icon128x128-content-type ICON128X128-CONTENT-TYPE`
+* The content type of icon file of 128x128x2x dimension to be provided.
+   * Flag: `--icon128x1282x-content-type ICON128X1282X-CONTENT-TYPE`                                         
 * The Configuration needed to set the destination specific parameters.
    * Flag: `--config CONFIG` 
 * The Unique identifier for IBM Cloud Event Notifications instance.
@@ -141,9 +170,9 @@ ibmcloud event-notifications destination create --name NAME --type TYPE [--descr
    }
     ```  
 
-   The following example shows the format of the DestinationConfig object for IOS destination with P8 certificate.
+   The following example shows the format of the DestinationConfig object for IOS destination with P12 certificate.
 
-```json
+   ```json
    {
     "params" : {
     "cert_type" : "p12",
@@ -151,36 +180,55 @@ ibmcloud event-notifications destination create --name NAME --type TYPE [--descr
     "password": "apnspasswordvalue"
    }
   }
-```
+  ```
 
 The following example shows the format of the DestinationConfig object for Chrome destination.
 
    ``` json
    {
+   "params" : {
     "api_key": "chromeapikey",
     "website_url" : "https://testwebsite.com",
     
    }
   }
-```
+  ```
 
 The following example shows the format of the DestinationConfig object for Firefox destination.
 
    ``` json
    {
+    "params" : {
     "website_url" : "https://testwebsite.com",
     
    }
   }
-```
+  ```
 
 The following example shows the format of the DestinationConfig object for Slack destination.
-    ```json
+
+   ```json
     {
      "params" : {
      "url" : "https://hooks.slack.com/services/G0gyhsush/TYodsjhs/GHTbfidsimkk",
     }
-    ``` 
+    }
+   ``` 
+
+The following example shows the format of the DestinationConfig object for Safari destination.
+
+   ```json
+    {
+    "params": {"cert_type":"p12",
+    "certificate_name":"Users/Testuser/Documents/safari.p12",
+    "password":"safarinew",
+    "url_format_string":"https://test.com",
+    "website_name":"testwebsite",
+    "website_push_id":"test",
+    "website_url":"https://test.com"
+    }
+}
+   ```    
 
 ### ibmcloud event-notifications destination list
 {: #event-notifications-cli-destination-list-command}
@@ -226,7 +274,7 @@ Get specific `Destination`.
 Update existing `Destination`.
 
 ```sh 
-ibmcloud event-notifications destination update --id ID [--name NAME] [--description DESCRIPTION] [--certificate CERTIFICATE] [--config CONFIG] [--instance-id INSTANCE-ID]
+ibmcloud event-notifications destination update --id ID [--name NAME] [--description DESCRIPTION] [--certificate CERTIFICATE] [--config CONFIG] [--icon16x16 ICON16X16] [--icon16x16-content-type ICON16X16-CONTENT-TYPE] [--icon16x162x ICON16X162X] [--icon16x162x-content-type ICON16X162X-CONTENT-TYPE] [--icon32x32 ICON32X32] [--icon32x32-content-type ICON32X32-CONTENT-TYPE] [--icon32x322x ICON32X322X] [--icon32x322x-content-type ICON32X322X-CONTENT-TYPE] [--icon128x128 ICON128X128] [--icon128x128-content-type ICON128X128-CONTENT-TYPE] [--icon128x1282x ICON128X1282X] [--icon128x1282x-content-type ICON128X1282X-CONTENT-TYPE] [--instance-id INSTANCE-ID]
 ```
 {: pre}
 
@@ -238,7 +286,31 @@ ibmcloud event-notifications destination update --id ID [--name NAME] [--descrip
 * The Description of the destination .
    * Flag: `--description DESCRIPTION`  
 * The Certificate file path to be provided.
-   * Flag: `--certificate CERTIFICATE`    
+   * Flag: `--certificate CERTIFICATE` 
+* The path to icon file of 16x16 dimension to be provided.
+   * Flag: `----icon16x16 ICON16X16`
+* The path to icon file of 16x16x2x dimension to be provided..
+   * Flag: `----icon16x162x ICON16X162X`
+* The path to icon file of 32x32 dimension to be provided.
+   * Flag: `----icon32x32 ICON32X32`
+* The path to icon file of 32x32x2x dimension to be provided.
+   * Flag: `----icon32x322x ICON32X322X`
+* The path to icon file of 128x128 dimension to be provided.
+   * Flag: `---icon128x128 ICON128X128`
+* The path to icon file of 128x128x2x dimension to be provided.
+   * Flag: `--icon128x1282x ICON128X1282X`
+* The content type of icon file of 16x16 dimension to be provided.
+   * Flag: `----icon16x16-content-type ICON16X16-CONTENT-TYPE`
+* The content type of icon file of 16x16x2x dimension to be provided.
+   * Flag: `--icon16x162x-content-type ICON16X162X-CONTENT-TYPE`
+* The content type of icon file of 32x32 dimension to be provided.
+   * Flag: `-icon32x32-content-type ICON32X32-CONTENT-TYPE`  
+* The content type of icon file of 32x32x2x dimension to be provided.
+   * Flag: `--icon32x322x-content-type ICON32X322X-CONTENT-TYPE` 
+* The content type of icon file of 128x128 dimension to be provided.
+   * Flag: `----icon128x128-content-type ICON128X128-CONTENT-TYPE`
+* The content type of icon file of 128x128x2x dimension to be provided.
+   * Flag: `--icon128x1282x-content-type ICON128X1282X-CONTENT-TYPE`                                         
 * The Configuration needed to set the destination specific parameters.
    * Flag: `--config CONFIG` 
 * The Unique identifier for IBM Cloud Event Notifications instance.
@@ -673,7 +745,7 @@ ibmcloud event-notifications send-notifications --instance-id INSTANCE-ID --subj
 
 Use below command to send notifications in cli version 0.0.8.
 
-send-notifications --instance-id INSTANCE-ID [--body BODY] [--ce-ibmenseverity CE-IBMENSEVERITY] [--ce-ibmendefaultshort CE-IBMENDEFAULTSHORT] [--ce-ibmendefaultlong CE-IBMENDEFAULTLONG] [--ce-ibmenfcmbody CE-IBMENFCMBODY] [--ce-ibmenapnsbody CE-IBMENAPNSBODY] [--ce-ibmenpushto CE-IBMENPUSHTO] [--ce-ibmenapnsheaders CE-IBMENAPNSHEADERS] [--ce-ibmenchromebody CE-IBMENCHROMEBODY] [--ce-ibmenfirefoxbody CE-IBMENFIREFOXBODY] [--ce-ibmenchromeheaders CE-IBMENCHROMEHEADERS] [--ce-ibmenfirefoxheaders CE-IBMENFIREFOXHEADERS] [--ce-ibmensourceid CE-IBMENSOURCEID] [--ce-id CE-ID] [--ce-source CE-SOURCE] [--ce-type CE-TYPE] [--ce-specversion CE-SPECVERSION] [--ce-time CE-TIME]
+send-notifications --instance-id INSTANCE-ID [--body BODY] [--ce-ibmenseverity CE-IBMENSEVERITY] [--ce-ibmendefaultshort CE-IBMENDEFAULTSHORT] [--ce-ibmendefaultlong CE-IBMENDEFAULTLONG] [--ce-ibmenfcmbody CE-IBMENFCMBODY] [--ce-ibmenapnsbody CE-IBMENAPNSBODY] [--ce-ibmenpushto CE-IBMENPUSHTO] [--ce-ibmenapnsheaders CE-IBMENAPNSHEADERS] [--ce-ibmenchromebody CE-IBMENCHROMEBODY] [--ce-ibmensafaribody CE-IBMENSAFARIBODY] [--ce-ibmenfirefoxbody CE-IBMENFIREFOXBODY] [--ce-ibmenchromeheaders CE-IBMENCHROMEHEADERS] [--ce-ibmenfirefoxheaders CE-IBMENFIREFOXHEADERS] [--ce-ibmensourceid CE-IBMENSOURCEID] [--ce-id CE-ID] [--ce-source CE-SOURCE] [--ce-type CE-TYPE] [--ce-specversion CE-SPECVERSION] [--ce-time CE-TIME]
 
 * **Parameters to provide:**
 * The Unique identifier for IBM Cloud Event Notifications instance.
@@ -694,7 +766,7 @@ send-notifications --instance-id INSTANCE-ID [--body BODY] [--ce-ibmenseverity C
    * Flag: `[--datacontenttype DATACONTENTTYPE]`         
 * The spec version value.Default value to be used is 1.0
    * Flag: `[--specversion SPECVERSION]`  
-* PThe Device data information to send data in case of Registered Devices/ Usersids/ Platforms.
+* The Device data information to send data in case of Registered Devices/ Usersids/ Platforms.
    * Flag: `[--push-to PUSH-TO]`
 * FCM message body to send notification to FCM devices.
    * Flag: `[--message-fcm-body MESSAGE-FCM-BODY]` 
@@ -702,7 +774,6 @@ send-notifications --instance-id INSTANCE-ID [--body BODY] [--ce-ibmenseverity C
    * Flag: `[--message-apns-headers MESSAGE-APNS-HEADERS]`     
 * The apns meaage body can be set using this option.
    * Flag: `[--message-apns-body MESSAGE-APNS-BODY]` 
-
 * The body payload to be provided for notification. 
    * Flag: `[--body BODY]` 
 * The short text for notification to send
@@ -721,12 +792,14 @@ send-notifications --instance-id INSTANCE-ID [--body BODY] [--ce-ibmenseverity C
    * Flag: `[--time TIME]`        
 * The spec version value.Default value to be used is 1.0
    * Flag: `[--ce-specversion CE-SPECVERSION]`  
-* PThe Device data information to send data in case of Registered Devices/ Usersids/ Platforms.
+* The Device data information to send data in case of Registered Devices/ Usersids/ Platforms.
    * Flag: `[--ce-ibmenpushto CE-IBMENPUSHTO]`
 * FCM message body to send notification to FCM devices.
    * Flag: `[--ce-ibmenfcmbody CE-IBMENFCMBODY]` 
 * Chrome message body to send notification to FCM devices.
    * Flag: `[--ce-ibmenchromebody CE-IBMENCHROMEBODY]`
+* Safari message body to send notification to Safari devices.
+   * Flag: `[--ce-ibmensafaribody CE-IBMENSAFARIBODY]`   
 * Firefox message body to send notification to FCM devices.
    * Flag: `[--ce-ibmenfirefoxbody CE-IBMENFIREFOXBODY]`      
 * The Custom APNS headers information can be set using this option.
@@ -756,6 +829,7 @@ The following example shows the format of FCM message body to send notification 
     "data":{
         "alert": "examlestring", "delay_while_idle":true,"time_to_live":2,"collapse_key":"testCollapseKey","notification":{"title":"Match update","body":"Arsenal goal in added time, score is now 3-0"},"data":{"alert":"Notification alert message","url":"https","payload":{"mydevicearra":["cc75e4a6-edd8-3bec-a7c3-dfca6572a03b"]}}
         }
+}
 }
 
 ```
@@ -792,7 +866,15 @@ The following example shows the format of body to send notification to slack des
 
 ```json
    {"data": {"author": {"account_id": "efg56gtys8996fagat12","email": "testuser@ibm.com","id": "IBMid-5600987654","kind": "user"},"create_time": "2022-02-28T13:28:14.043755123Z","create_timestamp": 1646054894,"issuer": "IBM Cloud Security and Compliance Center","issuer_url": "https://cloud.ibm.com/security-compliance","long_description": "Success! Your Event Notifications instance is configured with IBM Cloud Security and Compliance Center.","payload_type": "test","reported_by": {"id": "compliance","title": "IBM Cloud Security and Compliance Center","url": "https://cloud.ibm.com/security-compliance"}},"severity": "LOW","short_description": "Success! Your Event Notifications instance is configured with IBM Cloud Security and Compliance Center.","transaction_id": "6a25fd3d-8530-43b9-96a5-ede2a7712bc9"}
-```      
+```  
+
+The following example shows the format of safari message body to send notification to safari devices.        
+
+```json
+
+{"ibmensafaribody": {"aps":{"alert":{"title":"FlightA998NowBoarding", "body":"BoardinghasbegunforFlightA998.","action":"View"}, "url-args":["boarding","A998"]}}}
+
+```
 
 The following example shows the target device configuration example.
 

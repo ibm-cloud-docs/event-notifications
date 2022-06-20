@@ -851,6 +851,192 @@ Follow these steps to migrate from BMPush to ENPushDestination:
 
 Your iOS mobile app is ready to work with your new instance of {{site.data.keyword.en_full}}.
 
+## Modify a Web application
+{: #en-migrate-modify-web}
+{: step}
+
+Modify the Web app source code to use the new {{site.data.keyword.en_short}} SDKs. You will replace the existing {{site.data.keyword.mobilepushshort}} service WebPush SDK with the {{site.data.keyword.en_short}} WebPush SDK.
+
+### Create a Web destination
+{: #en-migrate-create-web-destination}
+
+#### Chrome Destination
+{: #en-migrate-create-web-chrome-destination}
+Create a destination of type Chrome Push Notification for the Web app. Provide the Website URL and FCM Server key.
+
+![Create Chrome destination](images/en-migration-chrome.png "Create Chrome destination"){: caption="Figure 23. Create Chrome destination" caption-side="bottom"}
+
+#### Firefox Destination
+{: #en-migrate-create-web-firefox-destination}
+Create a destination of type Firefox Push Notification for the Web app. Provide the Website URL.
+
+![Create Firefox destination](images/en-migration-firefox.png "Create Firefox destination"){: caption="Figure 23. Create Firefox destination" caption-side="bottom"}
+
+#### Safari Destination
+{: #en-migrate-create-web-safari-destination}
+Create a destination of type Safari Push Notification for the Web app. Provide the Website name, Website push ID, Website URL, URL format string, p12 file, Password and icons.
+
+![Create Safari destination](images/en-migration-safari.png "Create Safari destination"){: caption="Figure 23. Create Safari destination" caption-side="bottom"}
+
+### Edit the Web application
+{: #en-migrate-edit-web-app}
+
+The web application needs to be updated with the latest SDK. Follow the below steps,
+
+1. Change the import statement
+
+   ```js
+      // Replace this 
+      <script src="BMSPushSDK.js" async></script>
+      
+      // with this 
+      <script src="ENPushSDK.js" async></script>
+
+   ```
+
+2. Replace SDK Initialization code
+
+   ```js
+      // Replace this 
+      
+      var bmsPush = new BMSPush()
+      function callback(response) {
+      	alert(response.response)
+      }
+      var initParams = {
+          "appGUID":"push app GUID",
+          "appRegion":"Region where service hosted",
+          "clientSecret":"push app client secret", 
+          "websitePushIDSafari": "website Push ID for safari",
+          "deviceId":"Optional deviceId for device registration",
+          "applicationServerKey":"VAPID key",
+      }
+      bmsPush.initialize(params, callback)
+      
+      // with this 
+
+      var enPush = new ENPush()
+      
+      function callback(response) {
+        alert(response)
+      }
+      
+      var  initParams = {
+         "instanceGUID": "<IBM-Cloud-en-instance_guid>",
+         "apikey": "<IBM-Cloud-en-instance-apikey>"; ,
+         "region": "<IBM cloud region>",
+         "chromeDestinationId": "<IBM-Cloud-en-instance-chrome-destination-id>",
+         "chromeApplicationServerKey": "<IBM-Cloud-en-instance-chrome-vapid>",
+         "firefoxDestinationId": "<IBM-Cloud-en-instance-firefox-destination-id>",
+         "firefoxApplicationServerKey": "<IBM-Cloud-en-instance-firefox-vapid>",
+         "safariDestinationId": "<IBM-Cloud-en-instance-safari-destination-id>",
+         "websitePushIdSafari": "<safari-web-push-id>"
+      }
+
+      enPush.initialize(initParams, callback)
+
+   ```
+
+1. Change the device registration step
+
+   - If you are registering without `userID`
+
+      ```js
+      // Replace this
+      bmsPush.register(function(response) {
+ 	      alert(response.response)
+      })
+         
+      // with this 
+       enPush.register(function(response) {
+ 	      alert(response)
+      })
+      ```
+
+
+   - If you are using user ID for registration
+
+      ```js
+      // Replace this 
+      bmsPush.registerWithUserId("your UserId", function(response) {
+ 	      alert(response.response)
+      })
+         
+      // with this 
+       enPush.registerWithUserId("your UserId", function(response) {
+ 	      alert(response)
+      })      
+      ```
+
+1. Change the unregister API call
+
+   ```js
+
+   // Replace this
+
+   bmsPush.unRegisterDevice(function(response) {
+ 	   alert(response.response)
+   })
+
+   // with this
+
+   enPush.unRegisterDevice(function (response) {
+      alert(response)
+   })
+   ```
+
+1. Optionally, if you are using tags:
+
+   - Change the tag subscriptions as follows:
+
+      ```js
+
+      // Replace this 
+      
+      bmsPush.subscribe("your tag", function (response) {
+        alert(response)
+      })
+
+      // with this 
+
+      enPush.subscribe("your tag", function (response) {
+        alert(response)
+      })
+
+      ```
+
+   - Changes to the get all tag subscription for the device
+
+      ```js
+      // Replace this
+      bmsPush.retrieveSubscriptions(function (response) {
+        alert(response)
+      })
+      
+      // with this
+
+      enPush.retrieveSubscriptions(function (response) {
+        alert(response)
+      })
+      ```
+
+   - Changes to the tag unsubscribe
+
+      ```js
+      // Replace this
+      bmsPush.unSubscribe("your tag", function (response) {
+        alert(response)
+      })
+      
+      // with this
+      enPush.unSubscribe("your tag", function (response) {
+        alert(response)
+      })
+      ```
+
+Your web app is ready to work with your new instance of {{site.data.keyword.en_full}}.
+
+
 ## Modify the back end
 {: #en-migrate-modify-backend}
 {: step}
@@ -927,9 +1113,10 @@ var target = PushMessageBuilder.Target
   
 const notificationDevicesModel = { 
     user_ids: ['userID1', 'userID2'], 
-    fcm_devices: ['deviceID1', 'deviceID2'], 
+    fcm_devices: ['deviceID1'], 
+    apns_devices: ['deviceID2'],
     tags: ['tag1', 'tag2'], 
-    platforms: ['G'], 
+    platforms: ['push_android', 'push_ios', 'push_chrome', 'push_firefox', 'push_safari'], 
 }; 
 ```
 <!-- ![Create targets](images/en-migration-targets.png "Create targets"){: caption="Figure 37. Create targets" caption-side="bottom"} -->
@@ -1053,7 +1240,7 @@ const params = {
   ceTime: date, 
   ceIbmenpushto: JSON.stringify(notificationFcmDevicesModel), 
   ceIbmenfcmbody: JSON.stringify(notificationFcmBodyModel), 
-  ceIbmenapnsbody: JSON.stringify(notificationApnsBodyModel), 
+  ceIbmenapnsbody: JSON.stringify(notificationApnsBodyModel),
   ceIbmenapnsheaders: JSON.stringify(apnsHeaders), 
   ceSpecversion: '1.0', 
 }; 
