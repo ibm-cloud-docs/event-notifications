@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-03-24"
+lastupdated: "2022-06-20"
 
 keywords: event notifications, IBM Cloud
 
@@ -24,13 +24,13 @@ completion-time: 10m
 This tutorial brings you through the steps that you need to take before you create an {{site.data.keyword.en_full_notm}} service.
 {: shortdesc}
 
-{{site.data.keyword.en_short}} is a routing service that tells you about critical events that occur in your {{site.data.keyword.Bluemix_notm}} account. You can filter and route event notifications from {{site.data.keyword.Bluemix_notm}} services like Monitoring, Security and Compliance Center, and Secrets Manager to communication channels like email, SMS, push notifications, and webhooks.
+{{site.data.keyword.en_short}} is a routing service that tells you about critical events that occur in your {{site.data.keyword.cloud}} account. You can filter and route event notifications from {{site.data.keyword.cloud_notm}} services like Monitoring, Security and Compliance Center, and Secrets Manager to communication channels like email, SMS, push notifications, and webhooks.
 
-## Create a cloud account
+## Create an {{site.data.keyword.cloud_notm}} account
 {: #en-cloud-ac}
 {: step}
 
-You need an {{site.data.keyword.cloud}} account. If you don't have one, [Create an IBM Cloud account](https://cloud.ibm.com/registration/).
+If you don't have an {{site.data.keyword.cloud_notm}} account, [create one](/registration){: external}.
 
 ## Decide on a location
 {: #en-decide-location}
@@ -58,14 +58,14 @@ Based on your business requirements, decide on a pricing plan. Currently, the fo
 
 You can create either an `API Source` or an `IBM Managed source`.
 
-An `API source` indicates that the Event originated outside of the IBM Cloud and is sent to {{site.data.keyword.en_short}} service through API calls.
+An `API source` indicates that the Event originated outside of {{site.data.keyword.cloud_notm}} and is sent to {{site.data.keyword.en_short}} service through API calls.
 
-An `IBM managed source` indicates a service on {{site.data.keyword.Bluemix_notm}} that can emit events to {{site.data.keyword.en_short}} service.
+An `IBM managed source` indicates a service on {{site.data.keyword.cloud_notm}} that can emit events to {{site.data.keyword.en_short}} service.
 
 The list of IBM provided sources is as follows:
-- [IBM Cloud Monitoring](https://cloud.ibm.com/docs/monitoring?topic=monitoring-notifications)
-- [IBM Cloud Security and Compliance Center](https://cloud.ibm.com/docs/security-compliance?topic=security-compliance-event-notifications&interface=ui)
-- [IBM Cloud Secrets Manager](https://cloud.ibm.com/docs/secrets-manager?topic=secrets-manager-event-notifications&interface=ui)
+- [IBM Cloud Monitoring](/docs/monitoring?topic=monitoring-notifications)
+- [IBM Cloud Security and Compliance Center](/docs/security-compliance?topic=security-compliance-event-notifications&interface=ui)
+- [IBM Cloud Secrets Manager](/docs/secrets-manager?topic=secrets-manager-event-notifications&interface=ui)
 
 ## Choose an event destination
 {: #en-decide-event-destination}
@@ -78,9 +78,9 @@ A destination is a delivery target for a notification. Two destination categorie
 
 Human destinations are devices, servers, or applications that present notifications for human consumption. The following human destinations are supported:
 
-- [{{site.data.keyword.Bluemix_notm}} email service](docs/event-notifications?topic=event-notifications-en-destinations-email)
-- [{{site.data.keyword.Bluemix_notm}} push notification service](/docs/event-notifications?topic=event-notifications-en-destinations-push)
-- [{{site.data.keyword.Bluemix_notm}} SMS service](/docs/event-notifications?topic=event-notifications-en-destinations-sms)
+- [{{site.data.keyword.cloud_notm}} email service](/docs/event-notifications?topic=event-notifications-en-destinations-email)
+- [{{site.data.keyword.cloud_notm}} push notification service](/docs/event-notifications?topic=event-notifications-en-destinations-push)
+- [{{site.data.keyword.cloud_notm}} SMS service](/docs/event-notifications?topic=event-notifications-en-destinations-sms)
 
 ### Service destinations
 {: #en-destination-service}
