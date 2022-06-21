@@ -98,8 +98,7 @@ ibmcloud event-notifications destination --help
 * **Action:** Create a new Destination
 
 ```sh 
-
-ibmcloud create --instance-id INSTANCE-ID --name NAME --type TYPE [--description DESCRIPTION] [--config CONFIG] [--certificate CERTIFICATE] [--certificate-content-type CERTIFICATE-CONTENT-TYPE] [--icon16x16 ICON16X16] [--icon16x16-content-type ICON16X16-CONTENT-TYPE] [--icon16x162x ICON16X162X] [--icon16x162x-content-type ICON16X162X-CONTENT-TYPE] [--icon32x32 ICON32X32] [--icon32x32-content-type ICON32X32-CONTENT-TYPE] [--icon32x322x ICON32X322X] [--icon32x322x-content-type ICON32X322X-CONTENT-TYPE] [--icon128x128 ICON128X128] [--icon128x128-content-type ICON128X128-CONTENT-TYPE] [--icon128x1282x ICON128X1282X] [--icon128x1282x-content-type ICON128X1282X-CONTENT-TYPE]
+ibmcloud event-notifications destination create --instance-id INSTANCE-ID --name NAME --type TYPE [--description DESCRIPTION] [--config CONFIG] [--certificate CERTIFICATE] [--certificate-content-type CERTIFICATE-CONTENT-TYPE] [--icon16x16 ICON16X16] [--icon16x16-content-type ICON16X16-CONTENT-TYPE] [--icon16x162x ICON16X162X] [--icon16x162x-content-type ICON16X162X-CONTENT-TYPE] [--icon32x32 ICON32X32] [--icon32x32-content-type ICON32X32-CONTENT-TYPE] [--icon32x322x ICON32X322X] [--icon32x322x-content-type ICON32X322X-CONTENT-TYPE] [--icon128x128 ICON128X128] [--icon128x128-content-type ICON128X128-CONTENT-TYPE] [--icon128x1282x ICON128X1282X] [--icon128x1282x-content-type ICON128X1282X-CONTENT-TYPE]
 
 ```
 {: pre}
@@ -188,7 +187,7 @@ The following example shows the format of the DestinationConfig object for Chrom
    {
    "params" : {
     "api_key": "chromeapikey",
-    "website_url" : "https://testwebsite.com",
+    "website_url" : "https://testwebsite.com"
     
    }
   }
@@ -199,7 +198,7 @@ The following example shows the format of the DestinationConfig object for Firef
    ``` json
    {
     "params" : {
-    "website_url" : "https://testwebsite.com",
+    "website_url" : "https://testwebsite.com"
     
    }
   }
@@ -210,7 +209,7 @@ The following example shows the format of the DestinationConfig object for Slack
    ```json
     {
      "params" : {
-     "url" : "https://hooks.slack.com/services/G0gyhsush/TYodsjhs/GHTbfidsimkk",
+     "url" : "https://hooks.slack.com/services/G0gyhsush/TYodsjhs/GHTbfidsimkk"
     }
     }
    ``` 
@@ -228,7 +227,14 @@ The following example shows the format of the DestinationConfig object for Safar
     "website_url":"https://test.com"
     }
 }
-   ```    
+   ```  
+
+The following example shows the format of the DestinationConfig object for msteams destination.
+
+   ```json
+    {"params" : {"url" : "https://xyz.webhook.office.com"}
+    }
+   ```     
 
 ### ibmcloud event-notifications destination list
 {: #event-notifications-cli-destination-list-command}
