@@ -74,7 +74,7 @@ toc:
           links:
           - link:
               label: API Explorer
-              href: /apidocs/event-notifications
+              href: https://{DomainName}/apidocs/event-notifications
       - topicgroup:
           label: Event Notifications CLI
           topics:
