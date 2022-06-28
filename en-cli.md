@@ -2,9 +2,10 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-29"
+lastupdated: "2022-06-29"
 
 subcollection: event-notifications-cli-plugin
+
 keywords: event notifications CLI, event notifications command line, event notifications terminal, event notifications shell, Event Notifications, en
 
 ---
@@ -14,15 +15,15 @@ keywords: event notifications CLI, event notifications command line, event notif
 # {{site.data.keyword.en_short}} CLI plug-in for {{site.data.keyword.en_short}} service
 {: #CLI_Event_Notifications}
 
-Use the {{site.data.keyword.Bluemix_notm}} command-line interface (CLI) to interact {{site.data.keyword.en_short}} IBM Cloud service
+Use the {{site.data.keyword.cloud_notm}} command-line interface (CLI) to interact {{site.data.keyword.en_short}} IBM Cloud service
 
 ## Prerequisites
 {: #CLI_Event_Notifications_prereq}
 
-To use the {{site.data.keyword.Bluemix_notm}} CLI, download and install the following packages on your local system.
+To use the {{site.data.keyword.cloud_notm}} CLI, download and install the following packages on your local system.
 
 
-- The [{{site.data.keyword.Bluemix_notm}} CLI](/docs/cli?topic=cloud-cli-install-ibmcloud-cli)
+- The [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-install-ibmcloud-cli)
 
 ## Install the {{site.data.keyword.en_short}} CLI
 {: #CLI_Event_Notifications_inst}
@@ -49,13 +50,13 @@ ibmcloud event-notifications init [--instance-id INSTANCE-ID]
 
 export **IBMCLOUD_EN_ENDPOINT** variable to set the EN region endpoint
 
-**Dallas:** https://us-south.event-notifications.cloud.ibm.com/event-notifications
+**Dallas:** `https://us-south.event-notifications.cloud.ibm.com/event-notifications`
 
-**London:** https://eu-gb.event-notifications.cloud.ibm.com/event-notifications
+**London:** `https://eu-gb.event-notifications.cloud.ibm.com/event-notifications`
 
-**Sydney:** https://au-syd.event-notifications.cloud.ibm.com/event-notifications
+**Sydney:** `https://au-syd.event-notifications.cloud.ibm.com/event-notifications`
 
-**Frankfurt:** https://eu-de.event-notifications.cloud.ibm.com/event-notifications
+**Frankfurt:** `https://eu-de.event-notifications.cloud.ibm.com/event-notifications`
 
 export **EVENT_NOTIFICATIONS_API_KEY** variable to set the {{site.data.keyword.en_short}} instance apikey.
 
@@ -67,7 +68,6 @@ export **EVENT_NOTIFICATIONS_API_KEY** variable to set the {{site.data.keyword.e
 
     The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]/`.
 
-
 ### ibmcloud event-notifications show
 {: #event-notifications-cli-show-command}
 
@@ -77,7 +77,6 @@ Check your configuration.
 ibmcloud event-notifications show
 ```
 {: pre}
-
 
 #### Command options
 {: #event-notifications-show-cli-options}
@@ -102,7 +101,6 @@ ibmcloud event-notifications destination create --instance-id INSTANCE-ID --name
 
 ```
 {: pre}
-
 
 * **Parameters to provide:**
 * The name of the Destination.
@@ -263,16 +261,13 @@ ibmcloud event-notifications destination list [--limit LIMIT] [--offset OFFSET] 
 
 Get specific `Destination`.
 
-
 * **Usage:** `ibmcloud event-notifications destination get --id ID [--instance-id INSTANCE-ID]`
-
 
 * **Parameters to provide:**
 * The Unique identifier for Destination. Required.
    * Flag: `--id ID`
 * The offset for paginated results.
    * Flag: `[--instance-id INSTANCE-ID]`
-
 
 ### ibmcloud event-notifications destination update
 {: #event-notifications-cli-destination-update-command}
@@ -322,7 +317,6 @@ ibmcloud event-notifications destination update --id ID [--name NAME] [--descrip
 * The Unique identifier for IBM Cloud Event Notifications instance.
    * Flag: `--instance-id`   
 
-
 ### ibmcloud event-notifications destination delete
 {: #event-notifications-cli-destination-delete-command}
 
@@ -351,7 +345,6 @@ ibmcloud event-notifications source create --instance-id INSTANCE-ID --name NAME
 ```
 {: pre}
 
-
 * **Parameters to provide:**
 * The name to be provided for API source
    * Flag: `--name NAME`
@@ -371,7 +364,6 @@ Update `Source`.
 ibmcloud event-notifications source update --instance-id INSTANCE-ID --id ID [--name NAME] [--description DESCRIPTION] [--enabled ENABLED]
 ```
 {: pre}
-
 
 * **Parameters to provide:**
 * The name to be provided for API source
@@ -395,7 +387,6 @@ ibmcloud event-notifications source list [--limit LIMIT] [--offset OFFSET] [--se
 ```
 {: pre}
 
-
 * **Parameters to provide:**
 * The Page limit for paginated results.
    * Flag: `--limit LIMIT`
@@ -407,7 +398,6 @@ ibmcloud event-notifications source list [--limit LIMIT] [--offset OFFSET] [--se
    * Flag: `[--instance-id INSTANCE-ID]`
 * Activate to force resource deletion (to bypass the confirmation prompt).
    * Flag: `[--force]`  
-
 
 ### ibmcloud event-notifications source get
 {: #event-notifications-cli-source-get-command}
@@ -459,7 +449,6 @@ ibmcloud event-notifications topic --help
 ```
 {: pre}
 
-
 ### ibmcloud event-notifications topic create
 {: #event-notifications-cli-topic-create-command}
 
@@ -501,7 +490,6 @@ ibmcloud event-notifications topic list [--limit LIMIT] [--offset OFFSET] [--sea
 ```
 {: pre}
 
-
 * **Parameters to provide:**
 * The Page limit for paginated results.
    * Flag: `--limit LIMIT`
@@ -522,7 +510,6 @@ ibmcloud event-notifications topic get --id ID [--include INCLUDE] [--instance-i
 ```
 {: pre}
 
-
 * **Parameters to provide:**
 * Unique identifier for Topic. Required.
    * Flag: `--id ID`
@@ -530,7 +517,6 @@ ibmcloud event-notifications topic get --id ID [--include INCLUDE] [--instance-i
    * Flag: `--include INCLUDE` 
 * The Unique identifier for IBM Cloud Event Notifications instance.
    * Flag: `[--instance-id INSTANCE-ID]`
-
 
 ### ibmcloud event-notifications topic update
 {: #event-notifications-cli-topic-update-command}
@@ -553,7 +539,6 @@ ibmcloud event-notifications topic update --id ID [--name NAME] [--description D
    * Flag: `[--description --description DESCRIPTION ]`   
 * TheList of sources for topic
    * Flag: `[--sources SOURCES]`   
-
 
 ```json
 [ {
@@ -585,7 +570,6 @@ ibmcloud event-notifications topic delete --id ID [--instance-id INSTANCE-ID] [-
 * Activate to force resource deletion (to bypass the confirmation prompt).
    * Flag: `[--force]`   
 
-
 ## Subscription
 {: #event-notifications-subscription-cli}
 
@@ -605,7 +589,6 @@ Create new `Subscription`.
 ibmcloud event-notifications subscription create [--name NAME] [--description DESCRIPTION] [--destination-id DESTINATION-ID] [--topic-id TOPIC-ID] [--attributes ATTRIBUTES] [--instance-id INSTANCE-ID]
 ```
 {: pre}
-
 
 * **Parameters to provide:**
 *  The name to be set for Subscription.
@@ -656,7 +639,6 @@ Attributes flag syntax in case of slack subscription to be created
     }
 ```
 
-
 ### ibmcloud event-notifications subscription list
 {: #event-notifications-cli-subscription-list-command}
 
@@ -677,7 +659,6 @@ ibmcloud event-notifications subscription list [--offset OFFSET] [--limit LIMIT]
 * The Unique identifier for IBM Cloud Event Notifications instance.
    * Flag: `[--instance-id INSTANCE-ID]`
 
-
 ### ibmcloud event-notifications subscription get
 {: #event-notifications-cli-subscription-get-command}
 
@@ -693,7 +674,6 @@ ibmcloud event-notifications subscription get --id ID [--instance-id INSTANCE-ID
    * Flag: `--id ID`
 * The Unique identifier for IBM Cloud Event Notifications instance.
    * Flag: `[--instance-id INSTANCE-ID]`
-
 
 ### ibmcloud event-notifications subscription delete
 {: #event-notifications-cli-subscription-delete-command}
@@ -712,7 +692,6 @@ ibmcloud event-notifications subscription delete --id ID [--instance-id INSTANCE
    * Flag: `[--instance-id INSTANCE-ID]`
 * Activate to force resource deletion (to bypass the confirmation prompt).
    * Flag: `[--force]`  
-
 
 ### ibmcloud event-notifications subscription update
 {: #event-notifications-cli-subscription-update-command}

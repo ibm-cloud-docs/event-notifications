@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-05-05"
+lastupdated: "2022-06-29"
 keywords: event-notifications, event notifications, about event notifications, destinations, push, chrome
 subcollection: event-notifications
 content-type: tutorial
@@ -22,19 +22,19 @@ Create an {{site.data.keyword.en_short}} service, add a push destination for Chr
 {: shortdesc}
 
 ## What is {{site.data.keyword.en_short}}?
-{: #en-what-is}
+{: #en-what-is-chrome}
 
-{{site.data.keyword.en_short}} is an event notification routing service that tells you about critical events that occur in your {{site.data.keyword.Bluemix_notm}} account or triggers automated actions by using webhooks. You can filter and route event notifications from {{site.data.keyword.Bluemix_notm}} services like {{site.data.keyword.prf_hubshort}}, to email, SMS, push notifications, and webhooks.
+{{site.data.keyword.en_short}} is an event notification routing service that tells you about critical events that occur in your {{site.data.keyword.cloud_notm}} account or triggers automated actions by using webhooks. You can filter and route event notifications from {{site.data.keyword.cloud_notm}} services like {{site.data.keyword.prf_hubshort}}, to email, SMS, push notifications, and webhooks.
 
 ## How do clients use Chrome web Push Notifications?
-{: #en-how-clients-send}
+{: #en-how-clients-send-chrome}
 
 The following diagram shows you how clients use Chrome web Push Notifications.
 
 ![How clients use push notifications](images/en-how-send-chrome.svg "How clients use push notifications"){: caption="Figure 1. How clients use push notifications" caption-side="bottom"}
 
 ## Objectives
-{: #en-objectives}
+{: #en-objectives-chrome}
 
 This tutorial shows you how to send push notifications as follows:
 
@@ -44,27 +44,27 @@ This tutorial shows you how to send push notifications as follows:
 * Configure and send Chrome web Push Notifications to a browser.
 
 ## Before you begin
-{: #en-before-begin}
+{: #en-before-begin-chrome}
 
 You must have the following prerequisites in place:
 
 * Download and install any code editor to right website code by using HTML, CSS and js.
 * A Google account to log in to Firebase console to get your Sender ID and Server API Key.
-* An {{site.data.keyword.Bluemix_notm}} account. If you do not have one, [create an IBM Cloud account](https://cloud.ibm.com/).
+* An {{site.data.keyword.cloud_notm}} account. If you do not have one, [create an IBM Cloud account](https://cloud.ibm.com/).
 
 ## Create an {{site.data.keyword.en_short}} service instance
-{: #en-create-event}
+{: #en-create-event-chrome}
 {: step}
 
-* Log in to your [{{site.data.keyword.Bluemix_notm}} account](https://cloud.ibm.com/).
-* In the [{{site.data.keyword.Bluemix_notm}} catalog](https://cloud.ibm.com/catalog#services), search `Event Notifications > Event Notifications`.
+* Log in to your [{{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/).
+* In the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog#services), search `Event Notifications > Event Notifications`.
 * Select a `Region` from the list of supported regions and select a `pricing plan`.
 * Provide a `Service name`.
 * Select a `resource group`.
 * Click `Create`.
 
 ## Get FCM credentials
-{: #en-get-fcm}
+{: #en-get-fcm-chrome}
 {: step}
 
 Firebase Cloud Messaging (FCM) is the gateway that delivers push notifications to Chrome web devices. To set up the Chrome web Push destination on the console, you must get your FCM credentials (Server key). The server key is stored securely and used by the {{site.data.keyword.en_short}} service to connect to the FCM server
@@ -81,7 +81,7 @@ Firebase Cloud Messaging (FCM) is the gateway that delivers push notifications t
 ![FCM credentials](images/en-fcm-credentials.png "FCM credentials"){: caption="Figure 2. FCM credentials" caption-side="bottom"}
 
 ## Add a generic API source
-{: #en-add-gen-api}
+{: #en-add-gen-api-chrome}
 {: step}
 
 Take the following steps:
@@ -91,7 +91,7 @@ Take the following steps:
 * Type a name and an optional description and click `Add`.
 
 ## Create an {{site.data.keyword.en_short}} destination
-{: #en-create-dest}
+{: #en-create-dest-chrome}
 {: step}
 
 Click `Destinations` in the {{site.data.keyword.en_short}} console and add the following destination details:
@@ -108,7 +108,7 @@ Click `Destinations` in the {{site.data.keyword.en_short}} console and add the f
 ![Destination](images/en-push-chrome-destination.png "Destination"){: caption="Figure 7. Receive notifications" caption-side="bottom"}
 
 ## Create an {{site.data.keyword.en_short}} topic
-{: #en-create-topic}
+{: #en-create-topic-chrome}
 {: step}
 
 Select `Topics` in the {{site.data.keyword.en_short}} console and click `Create`. Enter the following topic details:
@@ -122,7 +122,7 @@ Select `Topics` in the {{site.data.keyword.en_short}} console and click `Create`
 * `Advanced conditions`: write your own custom conditions, which must follow [jsonpath specifications](https://jsonpath.com/).
 
 ## Create an {{site.data.keyword.en_short}} subscription
-{: #en-create-sub}
+{: #en-create-sub-chrome}
 {: step}
 
 Click `Subscriptions` in the {{site.data.keyword.en_short}} console. Enter the following subscription details:
@@ -220,7 +220,7 @@ The Chrome web SDK enables Chrome websites to receive push notifications. Comple
 * When the setup is complete, run your application and register for push notifications.
 
 ## Send notifications to the Chrome web device
-{: #en-send-notifications}
+{: #en-send-notifications-chrome}
 {: step}
 
 Use the [Send Notification API](https://cloud.ibm.com/apidocs/event-notifications/event-notifications#send-notifications) to send the push notification for the Chrome web device. You can use the [Node](https://github.com/IBM/event-notifications-node-admin-sdk#send-notifications) or [Go](https://github.com/IBM/event-notifications-go-admin-sdk#send-notifications) admin SDK instead of calling the API directly.

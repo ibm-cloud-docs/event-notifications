@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-06-20"
+lastupdated: "2022-06-29"
 
 keywords: event notifications, IBM Cloud
 
@@ -81,6 +81,8 @@ Human destinations are devices, servers, or applications that present notificati
 - [{{site.data.keyword.cloud_notm}} email service](/docs/event-notifications?topic=event-notifications-en-destinations-email)
 - [{{site.data.keyword.cloud_notm}} push notification service](/docs/event-notifications?topic=event-notifications-en-destinations-push)
 - [{{site.data.keyword.cloud_notm}} SMS service](/docs/event-notifications?topic=event-notifications-en-destinations-sms)
+- [{{site.data.keyword.cloud_notm}} Slack](/docs/event-notifications?topic=event-notifications-en-destinations-slack)
+- [Microsoft Teams](/docs/event-notifications?topic=event-notifications-en-destinations-msteams)
 
 ### Service destinations
 {: #en-destination-service}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-24"
+lastupdated: "2022-06-29"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -24,11 +24,11 @@ completion-time: 10m
 Take the steps that get you started by creating an {{site.data.keyword.en_short}} service instance.
 {: shortdesc}
 
-## Log in to your {{site.data.keyword.Bluemix_notm}} account
+## Log in to your {{site.data.keyword.cloud_notm}} account
 {: #en-log-in}
 {: step}
 
-In the {{site.data.keyword.Bluemix_notm}} [catalog](https://test.cloud.ibm.com/catalog#services), search and select [{{site.data.keyword.en_short}}](https://test.cloud.ibm.com/catalog/services/event-notifications). The service configuration screen opens.
+In the {{site.data.keyword.cloud_notm}} [catalog](https://test.cloud.ibm.com/catalog#services), search and select [{{site.data.keyword.en_short}}](https://test.cloud.ibm.com/catalog/services/event-notifications). The service configuration screen opens.
 
 ## Select a location
 {: #en-select}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-02-01"
+lastupdated: "2022-06-29"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -27,7 +27,7 @@ subcollection: event-notifications
 
 ![Event notification flow](images/en_relationshipmodelv3.png "Event notifications flow"){: caption="Figure 1. {{site.data.keyword.en_short}} relationship model" caption-side="bottom"}
 
-Events originate outside {{site.data.keyword.en_short}}, for example, from {{site.data.keyword.Bluemix_notm}} services. An 'event source' within {{site.data.keyword.en_short}} represents a connection between {{site.data.keyword.en_short}} and one of these event-producing services. 
+Events originate outside {{site.data.keyword.en_short}}, for example, from {{site.data.keyword.cloud_notm}} services. An 'event source' within {{site.data.keyword.en_short}} represents a connection between {{site.data.keyword.en_short}} and one of these event-producing services. 
 
 Topics have associated filters that determine which source events are published. Topics can have multiple sources, each with their own filter. Topics isolate events of interest from various sources and aggregate them into one entity. 
 

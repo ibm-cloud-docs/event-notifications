@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-02-16"
+lastupdated: "2022-06-29"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, push
 
@@ -38,19 +38,19 @@ Create an {{site.data.keyword.en_short}} service, add a push destination for Fir
 {: shortdesc}
 
 ## What is {{site.data.keyword.en_short}}?
-{: #en-what-is}
+{: #en-what-is-fcm}
 
-{{site.data.keyword.en_short}} is an event notification routing service that notifies you of critical events that occur in your {{site.data.keyword.Bluemix_notm}} account or triggers automated actions by using webhooks. You can filter and route event notifications from {{site.data.keyword.Bluemix_notm}} services like {{site.data.keyword.prf_hubshort}}, to email, SMS, push notifications, and webhooks.
+{{site.data.keyword.en_short}} is an event notification routing service that notifies you of critical events that occur in your {{site.data.keyword.cloud_notm}} account or triggers automated actions by using webhooks. You can filter and route event notifications from {{site.data.keyword.cloud_notm}} services like {{site.data.keyword.prf_hubshort}}, to email, SMS, push notifications, and webhooks.
 
 ## How do clients use Android Push Notifications?
-{: #en-how-clients-send}
+{: #en-how-clients-send-fcm}
 
 The following diagram shows you how clients use Android Push Notifications.
 
 ![How clients use push notifications](images/en-how-send.svg "How clients use push notifications"){: caption="Figure 1. How clients use push notifications" caption-side="bottom"}
 
 ## Objectives
-{: #en-objectives}
+{: #en-objectives-fcm}
 
 This tutorial shows you how to send push notifications as follows:
 
@@ -60,20 +60,20 @@ This tutorial shows you how to send push notifications as follows:
 * Configure and send Android Push Notifications to a mobile device.
 
 ## Before you begin
-{: #en-before-begin}
+{: #en-before-begin-fcm}
 
 You must have the following prerequisites in place:
 
 * Download and install [Android Studio](https://developer.android.com/studio/index.html) so that you can import and enhance your code.
 * A Google account to log in to Firebase console to get your Sender ID and Server API Key.
-* An {{site.data.keyword.Bluemix_notm}} account. If you do not have one, [create an IBM Cloud account](https://cloud.ibm.com/).
+* An {{site.data.keyword.cloud_notm}} account. If you do not have one, [create an IBM Cloud account](https://cloud.ibm.com/).
 
 ## Create an {{site.data.keyword.en_short}} service instance
-{: #en-create-event}
+{: #en-create-event-fcm}
 {: step}
 
-* Log in to your [{{site.data.keyword.Bluemix_notm}} account](https://cloud.ibm.com/).
-* In the [{{site.data.keyword.Bluemix_notm}} catalog](https://cloud.ibm.com/catalog#services), search `Event Notifications > Event Notifications`.
+* Log in to your [{{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/).
+* In the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog#services), search `Event Notifications > Event Notifications`.
 * Select a `Region` from the list of supported regions and select a `pricing plan`.
 * Provide a `Service name`.
 * Select a `resource group`.
@@ -121,7 +121,7 @@ You also need to generate the `google-services.json` file. Complete the followin
 * Download the latest config file `google-services.json` under Your apps.
 
 ## Add a generic API source
-{: #en-add-gen-api}
+{: #en-add-gen-api-fcm}
 {: step}
 
 Take the following steps:
@@ -131,7 +131,7 @@ Take the following steps:
 * Type a name and an optional description and click `Add`.
 
 ## Create an {{site.data.keyword.en_short}} destination
-{: #en-create-dest}
+{: #en-create-dest-fcm}
 {: step}
 
 Click `Destinations` in the {{site.data.keyword.en_short}} console and add the following destination details:
@@ -142,7 +142,7 @@ Click `Destinations` in the {{site.data.keyword.en_short}} console and add the f
 * Update the FCM Push Credentials with the `Sender ID/Project number` and `Server Key`. You can get these details from your `Firebase Console Project Settings > Cloud Messaging` section.
 
 ## Create an {{site.data.keyword.en_short}} topic
-{: #en-create-topic}
+{: #en-create-topic-fcm}
 {: step}
 
 Select `Topics` in the Event Notifications console and click `Create`. Enter the following topic details:
@@ -155,7 +155,7 @@ Select `Topics` in the Event Notifications console and click `Create`. Enter the
 * `Advanced conditions`: write your own custom conditions, which must follow [jsonpath specifications](https://jsonpath.com/).
 
 ## Create an {{site.data.keyword.en_short}} subscription
-{: #en-create-sub}
+{: #en-create-sub-fcm}
 {: step}
 
 Click `Subscriptions` in the {{site.data.keyword.en_short}} console. Enter the following subscription details:
@@ -242,7 +242,7 @@ ENPushNotificationListener notificationListener = new ENPushNotificationListener
 * When the setup is complete, run your application and register for push notifications.
 
 ## Send notifications to the Android device
-{: #en-send-notifications}
+{: #en-send-notifications-fcm}
 {: step}
 
 Use the [Send Notification API](https://cloud.ibm.com/apidocs/event-notifications/event-notifications#send-notifications) to send the push notification for the Android device. You can use the [Node](mailto:https://github.com/IBM/event-notifications-node-admin-sdk#send-notifications) or [Go](https://github.com/IBM/event-notifications-go-admin-sdk#send-notifications) admin SDK instead of calling the API directly.

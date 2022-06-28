@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-02-07"
+lastupdated: "2022-06-29"
 
 keywords: data encryption in Event Notifications, data storage for Event Notifications, bring your own keys for Event Notifications, BYOK for Event Notifications, key management for Event Notifications, key encryption for Event Notifications, personal data in Event Notifications, data deletion for Event Notifications, data in Event Notifications, data security in Event Notifications, KYOK for Event Notifications
 
@@ -41,12 +41,12 @@ The data that you store in the {{site.data.keyword.en_short}} instance is encryp
 ## Deleting your data in {{site.data.keyword.en_short}}
 {: #en-data-delete}
 
-The {{site.data.keyword.en_short}} data retention policy describes how long your data is stored after you delete the service. As in {{site.data.keyword.Bluemix_notm}} data retention policy you can [restore](/docs/account?topic=account-resource-reclamation&interface=cli#restore-resource-cli) a resource within 7 days after you delete it.
+The {{site.data.keyword.en_short}} data retention policy describes how long your data is stored after you delete the service. As in {{site.data.keyword.cloud_notm}} data retention policy you can [restore](/docs/account?topic=account-resource-reclamation&interface=cli#restore-resource-cli) a resource within 7 days after you delete it.
 
 ### Commands to delete data
 {: #en-data-delete-cmd}
 
-1. Log in to your {{site.data.keyword.Bluemix_notm}} account by using {{site.data.keyword.Bluemix_notm}} CLI from terminal.
+1. Log in to your {{site.data.keyword.cloud_notm}} account by using {{site.data.keyword.cloud_notm}} CLI from terminal.
 2. `ibmcloud resource reclamations` lists your deleted instance along with the reclamation ID for it.
 3. Use `ibmcloud resource reclamation-delete <reclamation_id_for_instance>` to permanently delete data that is related to a deleted instance.
 4. If an instance is not restored, all related data is automatically deleted after the data retention period.
@@ -54,7 +54,7 @@ The {{site.data.keyword.en_short}} data retention policy describes how long your
 ### Deleting Event Notifications instances
 {: #en-delete}
 
-If you no longer need an instance of {{site.data.keyword.en_short}}, you can delete the service instance by using {{site.data.keyword.Bluemix_notm}} CLI. You can also choose to delete your service instance by using the console. Any data that is stored related to that instance is also deleted.
+If you no longer need an instance of {{site.data.keyword.en_short}}, you can delete the service instance by using {{site.data.keyword.cloud_notm}} CLI. You can also choose to delete your service instance by using the console. Any data that is stored related to that instance is also deleted.
 
 
 ### Restoring deleted data for {{site.data.keyword.en_short}}

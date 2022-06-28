@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-05-05"
+lastupdated: "2022-06-29"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, push
 
@@ -25,19 +25,19 @@ Create an {{site.data.keyword.en_short}} service, add a push destination for App
 {: shortdesc}
 
 ## What is {{site.data.keyword.en_short}}?
-{: #en-what-is}
+{: #en-what-is-safari}
 
-{{site.data.keyword.en_short}} is an event notification routing service that notifies you of critical events that occur in your {{site.data.keyword.Bluemix_notm}} account or triggers automated actions by using webhooks. You can filter and route event notifications from {{site.data.keyword.Bluemix_notm}} services like {{site.data.keyword.prf_hubshort}}, to email, SMS, push notifications (FCM/APNs), and webhooks.
+{{site.data.keyword.en_short}} is an event notification routing service that notifies you of critical events that occur in your {{site.data.keyword.cloud_notm}} account or triggers automated actions by using webhooks. You can filter and route event notifications from {{site.data.keyword.cloud_notm}} services like {{site.data.keyword.prf_hubshort}}, to email, SMS, push notifications (FCM/APNs), and webhooks.
 
 ## How do clients use Safari Push Notifications?
-{: #en-how-clients-send}
+{: #en-how-clients-send-safari}
 
 The following diagram shows you how clients use iOS Push Notifications.
 
 ![How clients use push notifications](images/en-how-send-safari.svg "How clients use push notifications"){: caption="Figure 1. How clients use push notifications" caption-side="bottom"}
 
 ## Objectives
-{: #en-objectives}
+{: #en-objectives-safari}
 
 This tutorial shows you how to send push notifications as follows:
 
@@ -47,7 +47,7 @@ This tutorial shows you how to send push notifications as follows:
 * Configure and send Safari Push Notifications to a Safari Web.
 
 ## Before you begin
-{: #en-before-begin}
+{: #en-before-begin-safari}
 
 You must have the following prerequisites in place:
 
@@ -56,11 +56,11 @@ You must have the following prerequisites in place:
 * An IAM API key to allow the SDK to access your account. Create one [here](https://cloud.ibm.com/iam/apikeys).
 
 ## Create an {{site.data.keyword.en_short}} service instance
-{: #en-create-event}
+{: #en-create-event-safari}
 {: step}
 
-* Log in to your [{{site.data.keyword.Bluemix_notm}} account](https://cloud.ibm.com/).
-* In the [{{site.data.keyword.Bluemix_notm}} catalog](https://cloud.ibm.com/catalog#services), search `Event Notifications > Event Notifications`.
+* Log in to your [{{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/).
+* In the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog#services), search `Event Notifications > Event Notifications`.
 * Select a `Region` from the list of supported regions and select a `pricing plan`.
 * Provide a `Service name`.
 * Select a `resource group`.
@@ -122,7 +122,7 @@ The Web Push ID (the bundle identifier) is a unique identifier that identifies a
 
 
 ## Add a generic API source
-{: #en-add-gen-api}
+{: #en-add-gen-api-safari}
 {: step}
 
 Take the following steps:
@@ -132,7 +132,7 @@ Take the following steps:
 * Type a name and an optional description and click `Add`.
 
 ## Create a {{site.data.keyword.en_short}} destination
-{: #en-create-dest}
+{: #en-create-dest-safari}
 {: step}
 
 Click `Destinations` in the {{site.data.keyword.en_short}} console and add the following destination details:
@@ -148,7 +148,7 @@ Click `Destinations` in the {{site.data.keyword.en_short}} console and add the f
   * upload p12 certificate and provide certificate `password`
 
 ## Create an {{site.data.keyword.en_short}} topic
-{: #en-create-topic}
+{: #en-create-topic-safari}
 {: step}
 
 Select `Topics` in the Event Notifications console and click `Create`. Enter the following topic details:
@@ -161,7 +161,7 @@ Select `Topics` in the Event Notifications console and click `Create`. Enter the
 * `Advanced conditions`: write your own custom conditions, which must follow [jsonpath specifications](https://jsonpath.com/).
 
 ## Create an {{site.data.keyword.en_short}} subscription
-{: #en-create-sub}
+{: #en-create-sub-safari}
 {: step}
 
 Click `Subscriptions` in the {{site.data.keyword.en_short}} console. Enter the following subscription details:
@@ -173,8 +173,8 @@ Click `Subscriptions` in the {{site.data.keyword.en_short}} console. Enter the f
 * Under the `Subscribe to a topic` section, select a topic from the drop-down list and select a destination from the destination drop-down list.
 * `Destination type`: select type under `Destination` and click `Add`.
 
-## Set up {{site.data.keyword.en_short}} Firefox web SDK
-{: #en-setup-firefox-sdk}
+## Set up {{site.data.keyword.en_short}} Safari web SDK
+{: #en-setup-safari-sdk}
 {: step}
 
 The Safari web SDK enables Safari websites to receive push notifications. Complete the following steps to install {{site.data.keyword.en_short}} Firefox web SDK, initialize the SDK, and register for notifications for your website.
@@ -259,7 +259,7 @@ The Safari web SDK enables Safari websites to receive push notifications. Comple
 * When the setup is complete, run your application and register for push notifications.
 
 ## Send notifications to the Safari Web device
-{: #en-send-notifications}
+{: #en-send-notifications-safari}
 {: step}
 
 Use the [Send Notification API](https://cloud.ibm.com/apidocs/event-notifications/event-notifications#send-notifications) to send the push notification for the Firefox device. You can use the [Node](https://github.com/IBM/event-notifications-node-admin-sdk#send-notifications) or [Go](https://github.com/IBM/event-notifications-go-admin-sdk#send-notifications) admin SDK instead of calling the API directly.

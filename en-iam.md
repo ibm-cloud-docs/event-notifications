@@ -2,7 +2,7 @@
 
 copyright:
   years:  2017, 2022
-lastupdated: "2022-04-22"
+lastupdated: "2022-06-29"
 
 keywords: event notifications, event notification, notifications, service access, manage, user roles
 
@@ -66,7 +66,7 @@ For more information about assigning user roles in the UI, see [Managing IAM acc
 Every user who accesses the {{site.data.keyword.en_short}} service in your account must be assigned an access policy with an IAM user role defined. That policy determines what actions the user can perform within the context of the service or instance you select.
 {: shortdesc}
 
-The actions are customized and defined by the {{site.data.keyword.Bluemix_notm}} service as operations that are permitted in the service. The actions are then mapped to IAM user roles. Some of the actions taken you can track with the {{site.data.keyword.cloudaccesstrailshort}} service. In the following table, the actions and required permissions for {{site.data.keyword.en_short}} are mapped.
+The actions are customized and defined by the {{site.data.keyword.cloud_notm}} service as operations that are permitted in the service. The actions are then mapped to IAM user roles. Some of the actions taken you can track with the {{site.data.keyword.cloudaccesstrailshort}} service. In the following table, the actions and required permissions for {{site.data.keyword.en_short}} are mapped.
 
 | Service action | Display name| Role| Description|
 |----------------|-------------|------------------|-----------------|

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-05-05"
+lastupdated: "2022-06-29"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, push
 
@@ -25,19 +25,19 @@ Create an {{site.data.keyword.en_short}} service, add a push destination for App
 {: shortdesc}
 
 ## What is {{site.data.keyword.en_short}}?
-{: #en-what-is}
+{: #en-what-is-apns}
 
-{{site.data.keyword.en_short}} is an event notification routing service that notifies you of critical events that occur in your {{site.data.keyword.Bluemix_notm}} account or triggers automated actions by using webhooks. You can filter and route event notifications from {{site.data.keyword.Bluemix_notm}} services like {{site.data.keyword.prf_hubshort}}, to email, SMS, push notifications (FCM/APNs), and webhooks.
+{{site.data.keyword.en_short}} is an event notification routing service that notifies you of critical events that occur in your {{site.data.keyword.cloud_notm}} account or triggers automated actions by using webhooks. You can filter and route event notifications from {{site.data.keyword.cloud_notm}} services like {{site.data.keyword.prf_hubshort}}, to email, SMS, push notifications (FCM/APNs), and webhooks.
 
 ## How do clients use iOS Push Notifications?
-{: #en-how-clients-send}
+{: #en-how-clients-send-apns}
 
 The following diagram shows you how clients use iOS Push Notifications.
 
 ![How clients use push notifications](images/en-how-send-apns.svg "How clients use push notifications"){: caption="Figure 1. How clients use push notifications" caption-side="bottom"}
 
 ## Objectives
-{: #en-objectives}
+{: #en-objectives-apns}
 
 This tutorial shows you how to send push notifications as follows:
 
@@ -47,7 +47,7 @@ This tutorial shows you how to send push notifications as follows:
 * Configure and send iOS Push Notifications to a mobile device.
 
 ## Before you begin
-{: #en-before-begin}
+{: #en-before-begin-apns}
 
 You must have the following prerequisites in place:
 
@@ -59,11 +59,11 @@ You must have the following prerequisites in place:
 * iOS 10.0+
 
 ## Create an {{site.data.keyword.en_short}} service instance
-{: #en-create-event}
+{: #en-create-event-apns}
 {: step}
 
-* Log in to your [{{site.data.keyword.Bluemix_notm}} account](https://cloud.ibm.com/).
-* In the [{{site.data.keyword.Bluemix_notm}} catalog](https://cloud.ibm.com/catalog#services), search `Event Notifications > Event Notifications`.
+* Log in to your [{{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/).
+* In the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog#services), search `Event Notifications > Event Notifications`.
 * Select a `Region` from the list of supported regions and select a `pricing plan`.
 * Provide a `Service name`.
 * Select a `resource group`.
@@ -194,7 +194,7 @@ You must obtain separate certificates for your development and distribution envi
 {:note: .note}
 
 ## Add a generic API source
-{: #en-add-gen-api}
+{: #en-add-gen-api-apns}
 {: step}
 
 Take the following steps:
@@ -204,7 +204,7 @@ Take the following steps:
 * Type a name and an optional description and click `Add`.
 
 ## Create a {{site.data.keyword.en_short}} destination
-{: #en-create-dest}
+{: #en-create-dest-apns}
 {: step}
 
 Click `Destinations` in the {{site.data.keyword.en_short}} console and add the following destination details:
@@ -217,7 +217,7 @@ Click `Destinations` in the {{site.data.keyword.en_short}} console and add the f
 	* if certificate type is `p12`, upload p12 certificate and provide certificate `password`
 
 ## Create an {{site.data.keyword.en_short}} topic
-{: #en-create-topic}
+{: #en-create-topic-apns}
 {: step}
 
 Select `Topics` in the Event Notifications console and click `Create`. Enter the following topic details:
@@ -230,7 +230,7 @@ Select `Topics` in the Event Notifications console and click `Create`. Enter the
 * `Advanced conditions`: write your own custom conditions, which must follow [jsonpath specifications](https://jsonpath.com/).
 
 ## Create an {{site.data.keyword.en_short}} subscription
-{: #en-create-sub}
+{: #en-create-sub-apns}
 {: step}
 
 Click `Subscriptions` in the {{site.data.keyword.en_short}} console. Enter the following subscription details:
@@ -483,7 +483,7 @@ override func didReceive(_ request: UNNotificationRequest, withContentHandler co
 ```
 
 ## Send notifications to the iOS device
-{: #en-send-notifications}
+{: #en-send-notifications-apns}
 {: step}
 
 Use the [Send Notification API](https://cloud.ibm.com/apidocs/event-notifications/event-notifications#send-notifications) to send the push notification for the iOS device. You can use the [Node](mailto:https://github.com/IBM/event-notifications-node-admin-sdk#send-notifications) or [Go](https://github.com/IBM/event-notifications-go-admin-sdk#send-notifications) admin SDK instead of calling the API directly.

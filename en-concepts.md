@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-02-01"
+lastupdated: "2022-06-29"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -29,7 +29,7 @@ Learn about {{site.data.keyword.en_full}} concepts such as filters, conditions, 
 ## Event
 {: #en-event}
 
-An occurrence of something of interest that is associated with {{site.data.keyword.Bluemix_notm}} platform or services and apps that run on it.  
+An occurrence of something of interest that is associated with {{site.data.keyword.cloud_notm}} platform or services and apps that run on it.  
 
 ## Event notification
 {: #en-eventn}
@@ -37,9 +37,9 @@ An occurrence of something of interest that is associated with {{site.data.keywo
 A digitized message that is triggered when an event occurs. Event notifications come in to the {{site.data.keyword.en_short}} service from event sources. Sometimes "event notification" is shortened to "event" or "notification" in the context of the {{site.data.keyword.en_short}} service.
 
 ## Event source
-{: #en-source}
+{: #en-source-1}
 
-A service or application on {{site.data.keyword.Bluemix_notm}} that emits event notifications and publishes them to a topic within the {{site.data.keyword.en_short}} service. A source is a registered entity in an {{site.data.keyword.en_short}} service instance. Several services on {{site.data.keyword.Bluemix_notm}} are set to be integrated to send notifications to {{site.data.keyword.en_short}}.
+A service or application on {{site.data.keyword.cloud_notm}} that emits event notifications and publishes them to a topic within the {{site.data.keyword.en_short}} service. A source is a registered entity in an {{site.data.keyword.en_short}} service instance. Several services on {{site.data.keyword.cloud_notm}} are set to be integrated to send notifications to {{site.data.keyword.en_short}}.
 IBM Monitoring is enabled, while  {{site.data.keyword.compliance_long}}, and {{site.data.keyword.secrets-manager_full_notm}} are in the pipeline. A source can publish to multiple topics. In, other contexts sources are identified as producers or publishers.
 
 Size limit for a send notification request is limited to 64KB
