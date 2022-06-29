@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-03-07"
+lastupdated: "2022-06-29"
 
 keywords: event notifications, event-notifications, tutorials, terraform
 
@@ -70,7 +70,7 @@ Take the following steps:
 {: #en-resources-deploy}
 {: step}
 
-Create an {{site.data.keyword.en_short}} resource. For more information, see [Getting started with {{site.data.keyword.en_short}}](docs/event-notifications?topic=event-notifications-getting-started).
+Create an {{site.data.keyword.en_short}} resource. For more information, see [Getting started with {{site.data.keyword.en_short}}](/docs/event-notifications?topic=event-notifications-getting-started).
 
 ## Building Infrastructure-as-Code
 {: #en-infrastructure-as-code}

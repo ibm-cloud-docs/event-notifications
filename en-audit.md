@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-02-07"
+lastupdated: "2022-06-29"
 
 keywords: event notifications activity tracker events, event notifications events, event notifications audit, event notifications audit events, event notifications audit logs
 
@@ -26,7 +26,7 @@ subcollection: event notifications
 # Auditing events
 {: #en-at_events}
 
-As a security officer, auditor, or manager, you can use the {{site.data.keyword.at_full_notm}} service to track how users and applications interact with the {{site.data.keyword.en_short}} service in {{site.data.keyword.Bluemix_notm}}.
+As a security officer, auditor, or manager, you can use the {{site.data.keyword.at_full_notm}} service to track how users and applications interact with the {{site.data.keyword.en_short}} service in {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
 {{site.data.keyword.at_full_notm}} records user-initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}. Use this service to investigate abnormal activity and critical actions and to comply with regulatory audit requirements. You are also alerted about actions as they happen. The events that are collected comply with the Cloud Auditing Data Federation (CADF) Standard. For more information, see the [getting started tutorial for {{site.data.keyword.at_full_notm}}](/docs/activity-tracker?topic=activity-tracker-getting-started).

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-06-20"
+lastupdated: "2022-06-29"
 
 keywords: event-notifications, event notifications migration, notifications, destinations, specification
 
@@ -128,6 +128,7 @@ Sub type: `expiring-in-15-days`
 ce-type:com.acmebank.password:expiring-in-15-days`
 ```
 #### Example 2
+{: #en-example2}
 
 `type:com.acmebank.password-changed`
 Type: `com.acmebank.password-changed`

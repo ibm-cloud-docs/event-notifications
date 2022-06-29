@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-02-07"
+lastupdated: "2022-06-29"
 
 keywords: event-notification, event notification, high availability, ha, monitoring, metrics, monitor apps
 
@@ -109,7 +109,7 @@ Use {{site.data.keyword.mon_full_notm}} to gain operational visibility into the 
 ## Set up your {{site.data.keyword.mon_full_notm}} service instance
 {: #en-setup-monitor}
 
-To get started, you need to [provision {{site.data.keyword.Bluemix_notm}} Monitoring](https://cloud.ibm.com/catalog/services/ibm-cloud-monitoring?callback=/observe/monitoring/create) instance on your {{site.data.keyword.IBM}} account. See [Provisioning an instance](https://cloud.ibm.com/docs/monitoring?topic=monitoring-provision) for more details.
+To get started, you need to [provision {{site.data.keyword.cloud_notm}} Monitoring](https://cloud.ibm.com/catalog/services/ibm-cloud-monitoring?callback=/observe/monitoring/create) instance on your {{site.data.keyword.IBM}} account. See [Provisioning an instance](https://cloud.ibm.com/docs/monitoring?topic=monitoring-provision) for more details.
 
 
 Currently, {{site.data.keyword.mon_full_notm}} integration is available for {{site.data.keyword.en_short}} service deployments in the following regions:
@@ -130,7 +130,7 @@ You can configure only one instance of the {{site.data.keyword.mon_full_notm}} s
 - To configure the {{site.data.keyword.mon_full_notm}} instance, you must turn on the platform metrics configuration setting.
 - If a monitoring instance in a region is already enabled to collect platform metrics, metrics from enabled-monitoring services are collected automatically and available for monitoring through this instance. For more information about enabled-monitoring services, see {{site.data.keyword.Bluemix}} services.
 
-To monitor platform metrics, check that the {{site.data.keyword.mon_full_notm}} instance is provisioned in the same region where the {{site.data.keyword.Bluemix_notm}} instance is provisioned.
+To monitor platform metrics, check that the {{site.data.keyword.mon_full_notm}} instance is provisioned in the same region where the {{site.data.keyword.cloud_notm}} instance is provisioned.
 {:note: .note}
 
 
