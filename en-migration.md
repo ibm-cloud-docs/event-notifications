@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-06-29"
+lastupdated: "2022-06-30"
 
 keywords: event-notifications, event notifications migration, notifications, destinations, push, migration
 
@@ -37,6 +37,7 @@ Take the following steps to migrate your mobile apps:
 {: step}
 
 Create an instance of the {{site.data.keyword.en_short}} service. This procedure does not use any advanced capabilities of the {{site.data.keyword.en_short}} service. Within the service, you create an API source, a topic, a subscription, and a destination as outlined in figure 1. 
+
 For a more detailed explanation of the concepts of {{site.data.keyword.en_short}}, see [Getting started with {{site.data.keyword.en_full}}](/docs/event-notifications?topic=event-notifications-getting-started).
 
 ![Push capability in {{site.data.keyword.en_short}}](images/en-how-push-en.png "Push capability in {{site.data.keyword.en_short}}"){: caption="Figure 1. Push capability in {{site.data.keyword.en_short}}" caption-side="bottom"}
@@ -45,7 +46,6 @@ For a more detailed explanation of the concepts of {{site.data.keyword.en_short}
 {: #en-migrate-create-source}
 
 Create an API source. This source represents the backend from which you send the notifications. 
-
 
 ### Create a topic
 {: #en-migrate-create-topic}
@@ -70,7 +70,6 @@ Create a set of credentials with the role of “Device Manager”.
 ## Modify an Android mobile application
 {: #en-migrate-modify-android}
 {: step}
-
 
 Modify the mobile app source code to use the new {{site.data.keyword.en_short}} SDKs. You replace the existing {{site.data.keyword.mobilepushshort}} service SDK with the {{site.data.keyword.en_short}} FCM SDK.
 
@@ -108,7 +107,6 @@ The package name for the {{site.data.keyword.mobilepushshort}} SDK was `com.ibm.
 
 1. Download `google-services.json`. You use this file later when you modify the app.
 
-
 ### Edit the Android app
 {: #en-migrate-edit-andriod-app}
 
@@ -116,28 +114,27 @@ The package name for the {{site.data.keyword.mobilepushshort}} SDK was `com.ibm.
 
 1. Change the Module’s `build.gradlefile`to include the new SDKs.
 
-```groovy
-// Replace the below section   
+   ```groovy
+   // Replace the below section   
  
-dependencies {  
-    ........  
-    implementation 'com.google.firebase:firebase-messaging:20.0.0'  
-    Implementation 'com.ibm.mobilefirstplatform.clientsdk.android:core:3.+'  
-    .......  
-}  
+   dependencies {  
+      ........  
+      implementation 'com.google.firebase:firebase-messaging:20.0.0'  
+      Implementation 'com.ibm.mobilefirstplatform.clientsdk.android:core:3.+'  
+      .......  
+   }
   
-// with this  
+   // with this  
    
-dependencies {  
-    ........  
-    implementation platform('com.google.firebase:firebase-bom:29.0.0')  
-    implementation 'com.google.firebase:firebase-messaging'  
-    implementation 'com.ibm.cloud:sdk-core:9.15.0'  
-    implementation 'com.ibm.cloud:eventnotifications-destination-android:0.0.1'  
-    .......  
-} 
-```
-   <!-- ![Modify build](images/en-migration-firebase-gradle.png "Modify build"){: caption="Figure 7. Modify build" caption-side="bottom"} -->
+   dependencies {  
+      ........  
+      implementation platform('com.google.firebase:firebase-bom:29.0.0')  
+      implementation 'com.google.firebase:firebase-messaging'  
+      implementation 'com.ibm.cloud:sdk-core:9.15.0'  
+      implementation 'com.ibm.cloud:eventnotifications-destination-android:0.0.1'  
+      .......  
+   } 
+   ```
 
 1. Open `AndroidManifest.xml` and change the following elements:
 
@@ -154,7 +151,7 @@ dependencies {
       </service> 
       
       <service 
-      android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPush" android:exported="true" > 
+         android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPush" android:exported="true" > 
          <intent-filter> 
             <action android:name="com.google.firebase.INSTANCE_ID_EVENT" /> 
          </intent-filter> 
@@ -162,7 +159,7 @@ dependencies {
       
       // with this 
       
-      <service  android:name="com.ibm.cloud.eventnotifications.destination.android.ENPushIntentService” android:exported="true"> 
+      <service android:name="com.ibm.cloud.eventnotifications.destination.android.ENPushIntentService” android:exported="true"> 
          <intent-filter> 
             <action android:name="com.google.firebase.MESSAGING_EVENT" /> 
          </intent-filter> 
@@ -173,14 +170,12 @@ dependencies {
             <action android:name="com.google.firebase.INSTANCE_ID_EVENT" /> 
          </intent-filter> 
       </service> 
-      
       ```
-
-<!-- ![Modify manifest](images/en-migration-firebase-manifest.png "Modify manifest"){: caption="Figure 8. Modify manifest" caption-side="bottom"} -->
 
    - Change the `<activity>` section to point to the new class
 
       ```groovy
+
       // Replace the below section   
   
       <activity  android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.    MFPPushNotificationHandler" android:theme="@android:style/Theme.NoDisplay"/> 
@@ -189,8 +184,6 @@ dependencies {
 
       <activity   android:name="com.ibm.cloud.eventnotifications.destination.android.     ENPushNotificationHandler" android:theme="@android:style/Theme.NoDisplay"/> 
       ```
-
-   <!-- ![Modify activity](images/en-migration-firebase-activity.png "Modify activity"){: caption="Figure 9. Modify activity" caption-side="bottom"} -->
 
 1. Change the import statements in the code. The new package name is `com.ibm.cloud.eventnotifications.destination.android.*`. Replace the old push import as shown:
 
@@ -203,7 +196,6 @@ dependencies {
    
    import com.ibm.cloud.eventnotifications.destination.android.ENPush; 
    ```
-   <!-- ![Modify import](images/en-migration-firebase-import.png "Modify import"){: caption="Figure 10. Modify import" caption-side="bottom"} -->
 
 1. Initialize the new SDK  
 
@@ -225,7 +217,6 @@ dependencies {
    
    push.initialize(getApplicationContext(),instanceGUID,destinationID, apiKey); 
    ```
-   <!-- ![Initialize SDK](images/en-migration-firebase-sdk.png "Initialize SDK"){: caption="Figure 11. Initialize SDK" caption-side="bottom"} -->
 
    There are additional fields like `destinationID` and `apikey` in the new `initialize()` method.
 
@@ -258,115 +249,110 @@ dependencies {
    
    push.listen(notificationListener)
    ```
-   <!-- ![Change listener](images/en-migration-firebase-sdk1.png "Change listener"){: caption="Figure 12. Change listener" caption-side="bottom"} -->
 
 1. Make changes to the device registration step.
 
    - If you are registering without `userID`
+
       ```java
-         // Replace the below section   
+      // Replace the below section   
 
       push.registerDevice(new MFPPushResponseListener<String>() { 
 
-           @Override 
-           public void onSuccess(String response) { 
-               //handle successful device registration here 
-           } 
+         @Override 
+         public void onSuccess(String response) { 
+            //handle successful device registration here 
+         } 
 
-           @Override 
-           public void onFailure(MFPPushException ex) { 
-               //handle failure in device registration here 
-               } 
+         @Override 
+         public void onFailure(MFPPushException ex) { 
+            //handle failure in device registration here 
+         } 
       }); 
 
       // with this 
 
       push.registerDevice(new ENPushResponseListener<String>() {  
 
-           @Override  
-           public void onSuccess(String deviceId) {  
-                //handle successful device registration here  
-           } 
+         @Override  
+         public void onSuccess(String deviceId) {  
+            //handle successful device registration here  
+         } 
 
-           @Override  
-           public void onFailure(ENPushException ex) {  
-                //handle failure in device registration here  
-           }  
+         @Override  
+         public void onFailure(ENPushException ex) {  
+            //handle failure in device registration here  
+         }  
       }); 
       ```
 
-   <!-- ![Register without id](images/en-migration-firebase-registerwoutid.png "Register without id"){: caption="Figure 13. Register without id" caption-side="bottom"} -->
-
    - If you are using `registerDeviceWithUserId`
+
       ```java
       // Replace the below section   
 
       push.registerDeviceWithUserId("userId", new MFPPushResponseListener<String>() {  
 
-           @Override  
-           public void onSuccess(String response) {  
-               //handle successful device registration here  
-           }  
+         @Override  
+         public void onSuccess(String response) {  
+            //handle successful device registration here  
+         }  
 
-           @Override  
-           public void onFailure(MFPPushException ex) {  
-               //handle failure in device registration here  
-           }  
+         @Override  
+         public void onFailure(MFPPushException ex) {  
+            //handle failure in device registration here  
+         }  
       });  
 
       // with this  
 
       push.registerDeviceWithUserId("userId",new ENPushResponseListener<String>() {  
 
-            @Override  
-            public void onSuccess(String deviceId) {  
-                //handle successful device registration here  
-            }  
+         @Override  
+         public void onSuccess(String deviceId) {  
+            //handle successful device registration here  
+         }  
 
-            @Override  
-            public void onFailure(ENPushException ex) {  
-                //handle failure in device registration here  
-            }  
+         @Override  
+         public void onFailure(ENPushException ex) {  
+            //handle failure in device registration here  
+         }  
       }); 
       ```
-
-   <!-- ![Register with id](images/en-migration-firebase-withid.png "Register with id"){: caption="Figure 14. Register with id" caption-side="bottom"} -->
 
 1. Make changes to the unregister API call.
 
-      ```java
-      // Replace the below section   
+   ```java
+   // Replace the below section   
       
-      push.unregister(new MFPPushResponseListener<String>() { 
+   push.unregister(new MFPPushResponseListener<String>() { 
                
-         @Override 
-         public void onSuccess(String s) { 
-               // Handle success 
-         } 
-               
-         @Override 
-         public void onFailure(MFPPushException e) { 
-               // Handle Failure 
-         } 
-      }); 
-         
-      // with this  
-         
-      push.unregister(new ENPushResponseListener<String>() { 
-               
-            @Override 
-            public void onSuccess(String s) { 
-               // Handle success 
-            } 
+      @Override 
+      public void onSuccess(String s) { 
+         // Handle success 
+      } 
       
-            @Override 
-            public void onFailure(ENPushException e) { 
-               // Handle Failure 
-            } 
-      }); 
-      ```
-
-   <!-- ![Change unregister API](images/en-migration-firebase-unregister.png "Modify unregister API"){: caption="Figure 15. Modify unregister API" caption-side="bottom"} -->
+      @Override 
+      public void onFailure(MFPPushException e) { 
+         // Handle Failure 
+      } 
+   }); 
+         
+   // with this  
+         
+   push.unregister(new ENPushResponseListener<String>() { 
+               
+      @Override 
+      public void onSuccess(String s) { 
+         // Handle success 
+      } 
+      
+      @Override 
+      public void onFailure(ENPushException e) { 
+         // Handle Failure 
+      } 
+   }); 
+   ```
 
 1. Optionally, if you are using tags
 
@@ -377,37 +363,37 @@ dependencies {
       
       push.subscribe("tagName", new MFPPushResponseListener<String>() { 
       
-            @Override 
-            public void onSuccess(String arg) { 
-               System.out.println("Succesfully Subscribed to: "+ arg); 
-            } 
+         @Override 
+         public void onSuccess(String arg) { 
+            System.out.println("Succesfully Subscribed to: "+ arg); 
+         } 
       
-            @Override 
-            public void onFailure(MFPPushException ex) { 
-               String message = ex.getMessage(); 
-               System.out.println("Error subscribing to Tag " + message); 
-            } 
+         @Override 
+         public void onFailure(MFPPushException ex) { 
+            String message = ex.getMessage(); 
+            System.out.println("Error subscribing to Tag " + message); 
+         } 
       }); 
          
       // with this  
          
       push.subscribe("tagName", new ENPushResponseListener<String>() { 
       
-            @Override 
-            public void onSuccess(String arg) { 
-               System.out.println("Succesfully Subscribed to: "+ arg); 
-            } 
+         @Override 
+         public void onSuccess(String arg) { 
+            System.out.println("Succesfully Subscribed to: "+ arg); 
+         } 
                
-            @Override 
-            public void onFailure(ENPushException ex) { 
-               String message = ex.getMessage(); 
-               System.out.println("Error subscribing to Tag " + message); 
-            } 
+         @Override 
+         public void onFailure(ENPushException ex) { 
+            String message = ex.getMessage(); 
+            System.out.println("Error subscribing to Tag " + message); 
+         } 
       }); 
       ```
-   <!-- ![Modify tag subscriptions](images/en-migration-firebase-tag.png "Modify tag subscriptions"){: caption="Figure 16. Modify tag subscriptions" caption-side="bottom"} -->
 
    - Changes to get all the tag subscription for the device
+
       ```java
       // Replace the below section   
       
@@ -442,9 +428,8 @@ dependencies {
       }) 
       ```
 
-   <!-- ![Modify get all tag](images/en-migration-firebase-tag1.png "Modify get all tag"){: caption="Figure 17. Modify get all tag" caption-side="bottom"} -->
-
    - Make changes to tag unsubscribe
+
       ```java
       // Replace the below section   
       
@@ -479,62 +464,10 @@ dependencies {
       }); 
       ```
 
-   <!-- ![Modify tag unsubscribe](images/en-migration-firebase-tagunsubscribe.png "Modify tag unsubscribe"){: caption="Figure 18. Modify tag unsubscribe" caption-side="bottom"} -->
-
 1. Optionally, if you are using Notification options, make the following changes:
 
-   - Initializing the class
-   ```java
-   // Replace the below section   
-  
-      MFPPushNotificationOptions options = new MFPPushNotificationOptions(); 
-      push = MFPPush.getInstance(); 
-      push.initialize(getApplicationContext(),"appGUID", "clientSecret",options); 
-         
-      // with this  
-      
-      ENPushNotificationOptions options = new ENPushNotificationOptions(); 
-      ENPush push = ENPush.getInstance(); 
-      push.initialize(getApplicationContext(),instanceGUID,destinationID, apiKey, options); 
-   ```
+   1. Changes to the Notification actions listener
 
-   <!-- ![Initialize class](images/en-migration-firebase-initialize.png "Initialize class"){: caption="Figure 19. Initialize class" caption-side="bottom"} -->
-
-   - Changes to Notification button
-
-      ```java
-      // Replace the below section   
-      
-      MFPPushNotificationButton acceptButton = new MFPPushNotificationButton.Builder("Accept Button") 
-         .setIcon("check_circle_icon") 
-         .setLabel("Accept") 
-         .build(); 
-         
-      // with this  
-      
-      ENPushNotificationButton acceptButton = new ENPushNotificationButton.Builder("Accept Button") 
-         .setIcon("check_circle_icon") 
-         .setLabel("Accept") 
-         .build(); 
-      ```
-   <!-- ![Modify notification button](images/en-migration-firebase-button.png "Modify notification button"){: caption="Figure 20. Modify notification button" caption-side="bottom"} -->
-
-   - Changes to Notification category 
-      ```java
-      // Replace the below section   
-      
-      MFPPushNotificationCategory category = new MFPPushNotificationCategory.Builder("First_Button_Group1") 
-                                 .setButtons(buttonGroup_1).build(); 
-      
-      // with this  
-      
-      ENPushNotificationCategory category = new ENPushNotificationCategory 
-      .Builder("First_Button_Group1") 
-                              .setButtons(buttonGroup_1).build(); 
-      ```
-   <!-- ![Modify category](images/en-migration-firebase-category.png "Modify category"){: caption="Figure 21. Modify category" caption-side="bottom"} -->
-
-1. Changes to the Notification actions listener
       ```java
       // Replace the below section   
       
@@ -554,21 +487,18 @@ dependencies {
       // with this  
       
       notificationListener = new ENPushNotificationListener() { 
-      
          @Override 
          public void onReceive(final ENSimplePushNotification message) { 
             if (message.getActionName().equals("Accept Button")){ 
-                  System.out.print("Clicked Accept Action"); 
-            }else if (message.getActionName().equals("Decline Button")){ 
-                  System.out.print("Clicked Decline Action"); 
-            }else if (message.getActionName().equals("View Button")){ 
-                  System.out.print("Clicked View Action"); 
+               System.out.print("Clicked Accept Action"); 
+            } else if (message.getActionName().equals("Decline Button")){ 
+               System.out.print("Clicked Decline Action"); 
+            } else if (message.getActionName().equals("View Button")){ 
+               System.out.print("Clicked View Action"); 
             } 
          } 
       }; 
       ```
-
-   <!-- ![Modify action listener](images/en-migration-firebase-actlistener.png "Modify action listener"){: caption="Figure 22. Modify action listener" caption-side="bottom"} -->
 
 Your Android mobile app is ready to work with your new instance of {{site.data.keyword.en_full}}.
 
@@ -602,36 +532,33 @@ Follow these steps to migrate from BMPush to ENPushDestination:
    
    import ENPushDestination 
    ```
-   <!-- ![Change import](images/en-migration-apns-import.png "Change import"){: caption="Figure 24. Change import" caption-side="bottom"} -->
 
 1. Replace SDK Initialization code
 
-      ```swift
-      // Replace this 
+   ```swift
+   // Replace this 
       
-      let push = BMSClient.sharedInstance 
+   let push = BMSClient.sharedInstance 
       
-      push.initialize(bluemixRegion: "<IBM cloud region>") 
+   push.initialize(bluemixRegion: "<IBM cloud region>") 
       
-      push.initializeWithAppGUID( 
-                     appGUID: "<IBM Cloud Push Instance GUID>", 
-                     clientSecret:"<IBM Cloud Push Instance ClientSecret>" 
-                  ) 
+   push.initializeWithAppGUID( 
+                  appGUID: "<IBM Cloud Push Instance GUID>", 
+                  clientSecret:"<IBM Cloud Push Instance ClientSecret>" 
+               ) 
       
-      // with this 
+   // with this 
       
-      let instanceGUID = "<IBM-Cloud-en-instance_guid>>"; 
-      let destinationID = "<IBM-Cloud-en-instance-destination-id>"; 
-      let apiKey = "<IBM-Cloud-en-instance-apikey>"; 
+   let instanceGUID = "<IBM-Cloud-en-instance_guid>>"; 
+   let destinationID = "<IBM-Cloud-en-instance-destination-id>"; 
+   let apiKey = "<IBM-Cloud-en-instance-apikey>"; 
       
-      let push = ENPush.sharedInstance 
+   let push = ENPush.sharedInstance 
       
-      push.setCloudRegion(region: "<IBM cloud region>") 
+   push.setCloudRegion(region: "<IBM cloud region>") 
       
-      push.initialize(instanceGUID, destinationID, apiKey) 
-      ```
-
-   <!-- ![Replace SDK initialize](images/en-migration-apns-initialize.png "Replace SDK initialize"){: caption="Figure 25. Replace SDK initialize" caption-side="bottom"} -->
+   push.initialize(instanceGUID, destinationID, apiKey) 
+   ```
 
    There are extra fields like `destinationID` and `apikey` in new `initialize()` method. For more information, on getting the `apikey` for client SDK see [Managing service access](/docs/event-notifications?topic=event-notifications-service-access-management). 
 
@@ -658,8 +585,6 @@ Follow these steps to migrate from BMPush to ENPushDestination:
          } 
       ```
 
-   <!-- ![Register withoutid](images/en-migration-apns-woutuid.png "Register withoutid"){: caption="Figure 26. Register withoutid" caption-side="bottom"} -->
-
    - If you are using user ID for registration
 
       ```swift
@@ -680,7 +605,6 @@ Follow these steps to migrate from BMPush to ENPushDestination:
          print(response) 
       } 
       ```
-   <!-- ![Register withid](images/en-migration-apns-withuid.png "Register withid"){: caption="Figure 27. Register with id" caption-side="bottom"} -->
 
 1. Change the unregister API call
 
@@ -699,9 +623,6 @@ Follow these steps to migrate from BMPush to ENPushDestination:
       print(response) 
    } 
    ```
-
-   <!-- ![Change unregister](images/en-migration-apns-unregeg.png "Change unregister"){: caption="Figure 28. Change unregister" caption-side="bottom"} -->
-
 
 1. Optionally, if you are using tags:
 
@@ -723,7 +644,6 @@ Follow these steps to migrate from BMPush to ENPushDestination:
          /**.....*/  
       }); 
       ```
-   <!-- ![Change tag subscription](images/en-migration-apns-tagsubscribe.png "Change tag subscription"){: caption="Figure 29. Change tag subscription" caption-side="bottom"} -->
 
    - Changes to the get all tag subscription for the device
 
@@ -743,8 +663,6 @@ Follow these steps to migrate from BMPush to ENPushDestination:
          /**.....*/  
       } 
       ```
-
-   <!-- ![Change get all](images/en-migration-apns-tagall.png "Change get all"){: caption="Figure 30. Change get all" caption-side="bottom"} -->
 
    - Changes to the tag unsubscribe
 
@@ -767,7 +685,6 @@ Follow these steps to migrate from BMPush to ENPushDestination:
          /**.....*/  
       } 
       ```
-   <!-- ![Change tag unsubscribe](images/en-migration-apns-modifytag.png "Change tag unsubscribe"){: caption="Figure 31. Change tag unsubscribe" caption-side="bottom"} -->
 
 1. Optionally, if you are using **Notification options**, make the following changes:
 
@@ -795,7 +712,6 @@ Follow these steps to migrate from BMPush to ENPushDestination:
                         "<instance_apikey>",  
                         notificationOptions) 
       ```
-   <!-- ![Class initialization](images/en-migration-apns-classinit.png "Class initialization"){: caption="Figure 32. Class initialization" caption-side="bottom"} -->
 
    - Change the Notification button
 
@@ -829,7 +745,6 @@ Follow these steps to migrate from BMPush to ENPushDestination:
                      isAuthenticationRequired: false, 
                      defineActivationMode: .destructive) 
       ```
-   <!-- ![Change notification button](images/en-migration-apns-button.png "Change notification button"){: caption="Figure 33. Change notification button" caption-side="bottom"} -->
 
    - Change the Notification category
 
@@ -847,7 +762,6 @@ Follow these steps to migrate from BMPush to ENPushDestination:
                      buttonActions: [actionOne, actionTwo]) 
       ```
 
-   <!-- ![Change notification category](images/en-migration-apns-category.png "Change notification category"){: caption="Figure 34. Change notification category" caption-side="bottom"} -->
 
 Your iOS mobile app is ready to work with your new instance of {{site.data.keyword.en_full}}.
 
@@ -862,18 +776,21 @@ Modify the Web app source code to use the new {{site.data.keyword.en_short}} SDK
 
 #### Chrome Destination
 {: #en-migrate-create-web-chrome-destination}
+
 Create a destination of type Chrome Push Notification for the Web app. Provide the Website URL and FCM Server key.
 
 ![Create Chrome destination](images/en-migration-chrome.png "Create Chrome destination"){: caption="Figure 23. Create Chrome destination" caption-side="bottom"}
 
 #### Firefox Destination
 {: #en-migrate-create-web-firefox-destination}
+
 Create a destination of type Firefox Push Notification for the Web app. Provide the Website URL.
 
 ![Create Firefox destination](images/en-migration-firefox.png "Create Firefox destination"){: caption="Figure 23. Create Firefox destination" caption-side="bottom"}
 
 #### Safari Destination
 {: #en-migrate-create-web-safari-destination}
+
 Create a destination of type Safari Push Notification for the Web app. Provide the Website name, Website push ID, Website URL, URL format string, p12 file, Password and icons.
 
 ![Create Safari destination](images/en-migration-safari.png "Create Safari destination"){: caption="Figure 23. Create Safari destination" caption-side="bottom"}
@@ -894,7 +811,7 @@ The web application needs to be updated with the latest SDK. Follow the below st
 
    ```
 
-2. Replace SDK Initialization code
+1. Replace SDK Initialization code
 
    ```js
       // Replace this 
@@ -1036,7 +953,6 @@ The web application needs to be updated with the latest SDK. Follow the below st
 
 Your web app is ready to work with your new instance of {{site.data.keyword.en_full}}.
 
-
 ## Modify the back end
 {: #en-migrate-modify-backend}
 {: step}
@@ -1063,11 +979,8 @@ var PushNotificationsApiKey = require('ibm-push-notifications').PushNotification
 var IamAuthenticator = require('@ibm-cloud/event-notifications-node-admin-sdk/auth').IamAuthenticator 
 var EventNotificationsV1 = require('@ibm-cloud/event-notifications-node-admin-sdk/event-notifications/v1') 
 ```
-<!-- 
-   ![Import SDK](images/en-migration-importsdk.png "MImport SDK"){: caption="Figure 35. Import SDK" caption-side="bottom"} -->
 
-
-2. Changes to initializing the SDK
+1. Changes to initializing the SDK
 
 ```js
 // Replace the below section   
@@ -1089,10 +1002,8 @@ const eventNotificationsService = EventNotificationsV1.newInstance({
   serviceUrl: "https://" + region + ".event-notifications.cloud.ibm.com/event-notifications" 
 }); 
 ```
-<!-- ![Initialize SDK](images/en-migration-initializesdk.png "Initialize SDK"){: caption="Figure 36. Initialize SDK" caption-side="bottom"} -->
 
-
-3. Changes to creating notification targets
+1. Changes to creating notification targets
 
 ```js
 // Replace the below section   
@@ -1119,9 +1030,8 @@ const notificationDevicesModel = {
     platforms: ['push_android', 'push_ios', 'push_chrome', 'push_firefox', 'push_safari'], 
 }; 
 ```
-<!-- ![Create targets](images/en-migration-targets.png "Create targets"){: caption="Figure 37. Create targets" caption-side="bottom"} -->
 
-4. Changes to the FCM style payload
+1. Changes to the FCM style payload
 
 ```js
 // Replace the below section   
@@ -1158,9 +1068,7 @@ const lightsModel = {
 }; 
 ```
 
-<!-- ![Change FCM Style](images/en-migration-fcmstyle.png "Change FCM Style"){: caption="Figure 38. Change FCM Style" caption-side="bottom"} -->
-
-5. Changes to FCM message body
+1. Changes to FCM message body
 
 ```js
 // Replace the below section   
@@ -1206,9 +1114,8 @@ const notificationBodyMessageModel = {
   en_data: notificationFcmBodyMessageDataModel, 
 }; 
 ```
-<!-- ![Change FCM message body](images/en-migration-messagebody.png "Change FCM message body"){: caption="Figure 39. Change FCM message body" caption-side="bottom"} -->
 
-6. Changes to Send notification method
+1. Changes to Send notification method
 
 ```js
 // Replace the below section   
@@ -1254,9 +1161,6 @@ try {
 } 
 ```
 
-<!-- ![Change send method](images/en-migration-sendmethod.png "Change send method"){: caption="Figure 40. Change send method" caption-side="bottom"} -->
-
-
 ### If you are using REST API
 {: #en-migrate-using-restapi}
 
@@ -1273,7 +1177,6 @@ This section contains the details about the modifications that are required for 
    "ibmenpushto": "{\"fcm_devices\": [\"9c75975a-3898-905d-3bd7c172\"]]}", 
   } 
 ```
-<!-- ![Modification to REST API1](images/en-migration-restapi1.png "Modification to REST API1t"){: caption="Figure 41. Modification to REST API1" caption-side="bottom"} -->
 
 For a detailed description of the event attributes, see the {{site.data.keyword.en_full}} event attribute definition.
 
@@ -1309,7 +1212,6 @@ For a detailed description of the event attributes, see the {{site.data.keyword.
   "type": "com.acme.flightbooking.complete"  
 } 
 ```
-<!-- ![Modification to REST API2](images/en-migration-restapi2.png "Modification to REST API2"){: caption="Figure 42. Modification to REST API2" caption-side="bottom"} -->
 
 * `target` field is replaced by `ibmenpushto`
 * `message` field is removed. The `alert`, `url` fields are part of the `ibmenfcmbody`
