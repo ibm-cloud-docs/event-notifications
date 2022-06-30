@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-06-29"
+lastupdated: "2022-06-30"
 
 subcollection: event-notifications-cli-plugin
 
@@ -21,7 +21,6 @@ Use the {{site.data.keyword.cloud_notm}} command-line interface (CLI) to interac
 {: #CLI_Event_Notifications_prereq}
 
 To use the {{site.data.keyword.cloud_notm}} CLI, download and install the following packages on your local system.
-
 
 - The [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-install-ibmcloud-cli)
 
@@ -98,7 +97,6 @@ ibmcloud event-notifications destination --help
 
 ```sh 
 ibmcloud event-notifications destination create --instance-id INSTANCE-ID --name NAME --type TYPE [--description DESCRIPTION] [--config CONFIG] [--certificate CERTIFICATE] [--certificate-content-type CERTIFICATE-CONTENT-TYPE] [--icon16x16 ICON16X16] [--icon16x16-content-type ICON16X16-CONTENT-TYPE] [--icon16x162x ICON16X162X] [--icon16x162x-content-type ICON16X162X-CONTENT-TYPE] [--icon32x32 ICON32X32] [--icon32x32-content-type ICON32X32-CONTENT-TYPE] [--icon32x322x ICON32X322X] [--icon32x322x-content-type ICON32X322X-CONTENT-TYPE] [--icon128x128 ICON128X128] [--icon128x128-content-type ICON128X128-CONTENT-TYPE] [--icon128x1282x ICON128X1282X] [--icon128x1282x-content-type ICON128X1282X-CONTENT-TYPE]
-
 ```
 {: pre}
 
@@ -142,97 +140,101 @@ ibmcloud event-notifications destination create --instance-id INSTANCE-ID --name
 * The Unique identifier for IBM Cloud Event Notifications instance.
    * Flag: `--instance-id`
    
-    The `--config` flag json structure for Webhook Destination.
-    ```json
-    {
-     "params" : {
-     "url" : "exampleString",
-     "verb" : "get",
-     "custom_headers" : { },
-     "sensitive_headers" : [ "exampleString" ]
-     }
-    }
-    ```    
-    The following example shows the format of the DestinationConfig object for IOS destination with P8 certificate.
+The `--config` flag json structure for Webhook Destination.
 
-    ```json
-    {
-    "params" : {
+```json
+{
+   "params" : {
+      "url" : "exampleString",
+      "verb" : "get",
+      "custom_headers" : { },
+      "sensitive_headers" : [ "exampleString" ]
+   }
+}
+```
+
+The following example shows the format of the DestinationConfig object for iOS destination with P8 certificate.
+
+```json
+{
+   "params" : {
       "cert_type" : "p8",
       "is_sandbox" : true,
       "key_id": "production",
       "team_id": "1234",
       "bundle_id":"test1"
-    }
    }
-    ```  
+}
+```
 
-   The following example shows the format of the DestinationConfig object for IOS destination with P12 certificate.
+The following example shows the format of the DestinationConfig object for iOS destination with P12 certificate.
 
-   ```json
-   {
-    "params" : {
-    "cert_type" : "p12",
-    "is_sandbox" : true,
-    "password": "apnspasswordvalue"
+```json
+{
+   "params" : {
+      "cert_type" : "p12",
+      "is_sandbox" : true,
+      "password": "apnspasswordvalue"
    }
-  }
-  ```
+}
+```
 
 The following example shows the format of the DestinationConfig object for Chrome destination.
 
-   ``` json
-   {
+```json
+{
    "params" : {
-    "api_key": "chromeapikey",
-    "website_url" : "https://testwebsite.com"
-    
+      "api_key": "chromeapikey",
+      "website_url" : "https://testwebsite.com"
    }
-  }
-  ```
+}
+```
 
 The following example shows the format of the DestinationConfig object for Firefox destination.
 
-   ``` json
-   {
-    "params" : {
-    "website_url" : "https://testwebsite.com"
-    
+```json
+{
+   "params" : {
+      "website_url" : "https://testwebsite.com"
    }
-  }
-  ```
+}
+```
 
 The following example shows the format of the DestinationConfig object for Slack destination.
 
-   ```json
-    {
-     "params" : {
-     "url" : "https://hooks.slack.com/services/G0gyhsush/TYodsjhs/GHTbfidsimkk"
-    }
-    }
-   ``` 
+```json
+{
+   "params" : {
+      "url" : "https://hooks.slack.com/services/G0gyhsush/TYodsjhs/GHTbfidsimkk"
+   }
+}
+``` 
 
 The following example shows the format of the DestinationConfig object for Safari destination.
 
-   ```json
-    {
-    "params": {"cert_type":"p12",
-    "certificate_name":"Users/Testuser/Documents/safari.p12",
-    "password":"safarinew",
-    "url_format_string":"https://test.com",
-    "website_name":"testwebsite",
-    "website_push_id":"test",
-    "website_url":"https://test.com"
-    }
+```json
+{
+   "params": {
+      "cert_type":"p12",
+      "certificate_name":"Users/Testuser/Documents/safari.p12",
+      "password":"safarinew",
+      "url_format_string":"https://test.com",
+      "website_name":"testwebsite",
+      "website_push_id":"test",
+      "website_url":"https://test.com"
+   }
 }
-   ```  
+```  
 
 The following example shows the format of the DestinationConfig object for msteams destination.
 
-   ```json
-    {"params" : {"url" : "https://xyz.webhook.office.com"}
-    }
-   ```     
+```json
+{
+   "params" : {
+      "url" : "https://xyz.webhook.office.com"
+   }
+}
+```     
 
 ### ibmcloud event-notifications destination list
 {: #event-notifications-cli-destination-list-command}
@@ -244,7 +246,6 @@ ibmcloud event-notifications destination list [--limit LIMIT] [--offset OFFSET] 
 ```
 {: pre}
 
-
 * **Parameters to provide:**
 * The Page limit for paginated results.
    * Flag: `--limit LIMIT`
@@ -254,7 +255,6 @@ ibmcloud event-notifications destination list [--limit LIMIT] [--offset OFFSET] 
    * Flag: `--search SEARCH`   
 * The Unique identifier for IBM Cloud Event Notifications instance.
    * Flag: `--instance-id` 
-
 
 ### ibmcloud event-notifications destination get
 {: #event-notifications-cli-destination-get-command}
@@ -470,14 +470,18 @@ ibmcloud event-notifications topic create --name NAME [--description DESCRIPTION
    * Flag: `[--sources SOURCES]`   
 
 ```json
-[ {
-  "id" : "exampleString",
-  "rules" : [ {
-    "enabled" : true,
-    "event_type_filter" : "$.*",
-    "notification_filter" : "exampleString"
-  } ]
-} ]
+[
+   {
+      "id" : "exampleString",
+      "rules" : [ 
+         {
+            "enabled" : true,
+            "event_type_filter" : "$.*",
+            "notification_filter" : "exampleString"
+         }
+      ]
+   }
+]
 ```
 
 ### ibmcloud event-notifications topic list
@@ -541,15 +545,19 @@ ibmcloud event-notifications topic update --id ID [--name NAME] [--description D
    * Flag: `[--sources SOURCES]`   
 
 ```json
-[ {
-  "id" : "exampleString",
-  "rules" : [ {
-    "enabled" : true,
-    "event_type_filter" : "exampleString",
-    "notification_filter" : "exampleString",
-    "rule_id" : "exampleString"
-  } ]
-} ]
+[
+   {
+      "id" : "exampleString",
+      "rules" : [
+         {
+            "enabled" : true,
+            "event_type_filter" : "exampleString",
+            "notification_filter" : "exampleString",
+            "rule_id" : "exampleString"
+         }
+      ]
+   }
+]
 ```
 
 ### ibmcloud event-notifications topic delete
@@ -608,35 +616,35 @@ Attributes flag syntax in case of webhook subscription to be created
 
 ```json
 {
-  "add_notification_payload" : true,
-  "signing_enabled" : true
+   "add_notification_payload" : true,
+   "signing_enabled" : true
 }
 ```    
 Attributes flag syntax in case of sms subscription to be created   
 
 ```json
 {
-    "to" :["+19667895490", "+19845678321"]
+   "to" :["+19667895490", "+19845678321"]
 }
 ```    
 Attributes flag syntax in case of email subscription to be created   
 
 ```json
 {
-    "to" :["entest@gmail.com"],
-    "add_notification_payload": true,
-    "reply_to_mail": "en@ibm.com",
-    "reply_to_name": "EYS ORG",
-    "from_name":"ABC ORG"
-    }
+   "to" :["entest@gmail.com"],
+   "add_notification_payload": true,
+   "reply_to_mail": "en@ibm.com",
+   "reply_to_name": "EYS ORG",
+   "from_name":"ABC ORG"
+}
 ``` 
 
 Attributes flag syntax in case of slack subscription to be created   
 
 ```json
 {
-    "attachment_color" : "#FF0000"
-    }
+   "attachment_color" : "#FF0000"
+}
 ```
 
 ### ibmcloud event-notifications subscription list
@@ -730,7 +738,10 @@ ibmcloud event-notifications send-notifications --instance-id INSTANCE-ID --subj
 
 Use below command to send notifications in cli version 0.0.8.
 
+```sh
 send-notifications --instance-id INSTANCE-ID [--body BODY] [--ce-ibmenseverity CE-IBMENSEVERITY] [--ce-ibmendefaultshort CE-IBMENDEFAULTSHORT] [--ce-ibmendefaultlong CE-IBMENDEFAULTLONG] [--ce-ibmenfcmbody CE-IBMENFCMBODY] [--ce-ibmenapnsbody CE-IBMENAPNSBODY] [--ce-ibmenpushto CE-IBMENPUSHTO] [--ce-ibmenapnsheaders CE-IBMENAPNSHEADERS] [--ce-ibmenchromebody CE-IBMENCHROMEBODY] [--ce-ibmensafaribody CE-IBMENSAFARIBODY] [--ce-ibmenfirefoxbody CE-IBMENFIREFOXBODY] [--ce-ibmenchromeheaders CE-IBMENCHROMEHEADERS] [--ce-ibmenfirefoxheaders CE-IBMENFIREFOXHEADERS] [--ce-ibmensourceid CE-IBMENSOURCEID] [--ce-id CE-ID] [--ce-source CE-SOURCE] [--ce-type CE-TYPE] [--ce-specversion CE-SPECVERSION] [--ce-time CE-TIME]
+```
+{: pre}
 
 * **Parameters to provide:**
 * The Unique identifier for IBM Cloud Event Notifications instance.
@@ -799,11 +810,12 @@ send-notifications --instance-id INSTANCE-ID [--body BODY] [--ce-ibmenseverity C
 The following example shows the format of data payload for sending notifications.
 
 ```json
-{"data": {
-            "createTimestamp": 1557282940339,
-            "severity": "LOW",
-            "shortDescription": "examplestring"
-          }
+{
+   "data": {
+      "createTimestamp": 1557282940339,
+      "severity": "LOW",
+      "shortDescription": "examplestring"
+   }
 }
 ```
 
@@ -816,31 +828,29 @@ The following example shows the format of FCM message body to send notification 
         }
 }
 }
-
 ```
 
 The following example shows the format of Chrome message body to send notification to FCM devices.        
 
 ```json
 {"title":"Hello Chrome", "en_data":{"alert":"Hello Chrome Notification","title":"Chrome New Title","iconUrl":"https://","timeToLive":100,"payload":{"key":"value"}}}
-
 ```
+
 The following example shows the format of Firefox message body to send notification to FCM devices.        
 
 ```json
-
 '{"title":"Hello Firefox", "en_data":{"alert":"Hello firefox Notification","title":"firefox New Title","iconUrl":"https://","timeToLive":100,"payload":{"key":"value"}}}'
-
 ```
 
 The following example shows the format of apns/chrome/fireox custom headers.   
 
 ```json
 {
-    "test": "test header",
-    "new": "newmessage"
+   "test": "test header",
+   "new": "newmessage"
 }
 ```
+
 The following example shows the format of APNS message body to send notification to FCM devices.        
 
 ```json
@@ -850,15 +860,13 @@ The following example shows the format of APNS message body to send notification
 The following example shows the format of body to send notification to slack destination.
 
 ```json
-   {"data": {"author": {"account_id": "efg56gtys8996fagat12","email": "testuser@ibm.com","id": "IBMid-5600987654","kind": "user"},"create_time": "2022-02-28T13:28:14.043755123Z","create_timestamp": 1646054894,"issuer": "IBM Cloud Security and Compliance Center","issuer_url": "https://cloud.ibm.com/security-compliance","long_description": "Success! Your Event Notifications instance is configured with IBM Cloud Security and Compliance Center.","payload_type": "test","reported_by": {"id": "compliance","title": "IBM Cloud Security and Compliance Center","url": "https://cloud.ibm.com/security-compliance"}},"severity": "LOW","short_description": "Success! Your Event Notifications instance is configured with IBM Cloud Security and Compliance Center.","transaction_id": "6a25fd3d-8530-43b9-96a5-ede2a7712bc9"}
+{"data": {"author": {"account_id": "efg56gtys8996fagat12","email": "testuser@ibm.com","id": "IBMid-5600987654","kind": "user"},"create_time": "2022-02-28T13:28:14.043755123Z","create_timestamp": 1646054894,"issuer": "IBM Cloud Security and Compliance Center","issuer_url": "https://cloud.ibm.com/security-compliance","long_description": "Success! Your Event Notifications instance is configured with IBM Cloud Security and Compliance Center.","payload_type": "test","reported_by": {"id": "compliance","title": "IBM Cloud Security and Compliance Center","url": "https://cloud.ibm.com/security-compliance"}},"severity": "LOW","short_description": "Success! Your Event Notifications instance is configured with IBM Cloud Security and Compliance Center.","transaction_id": "6a25fd3d-8530-43b9-96a5-ede2a7712bc9"}
 ```  
 
 The following example shows the format of safari message body to send notification to safari devices.        
 
 ```json
-
 {"ibmensafaribody": {"aps":{"alert":{"title":"FlightA998NowBoarding", "body":"BoardinghasbegunforFlightA998.","action":"View"}, "url-args":["boarding","A998"]}}}
-
 ```
 
 The following example shows the target device configuration example.
@@ -891,7 +899,7 @@ The following example shows the target device configuration example.
 | apns_thread_id | string | An app-specific identifier for grouping related notifications. This value corresponds to the threadIdentifier property in the UNNotificationContent object. |
 | apns_group_summary_arg | string | The string the notification adds to the category’s summary format string. |
 | apns_group_summary_arg_count | integer | The number of items the notification adds to the category’s summary format string. |
-{: caption="Table 1. iOS platform settings " caption-side="bottom"}
+{: caption="Table 1. iOS platform settings" caption-side="bottom"}
 
 #### Additional properties that can be configured for the FCM notification
 {: #event-notifications-cli-send-notifications-command-fcm}
@@ -918,4 +926,4 @@ The following example shows the target device configuration example.
 | title | string | Specifies the title of the notification. The title is displayed when the notification is expanded. Title must be specified for all three expandable notifications. |
 | type | string | Allowed values: DEFAULT, SILENT. |
 | alert | string | The alert value of Notification. |
-{: caption="Table 2. Android platform settings " caption-side="bottom"}
+{: caption="Table 2. Android platform settings" caption-side="bottom"}

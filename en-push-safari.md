@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-06-29"
+lastupdated: "2022-06-30"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, push
 
@@ -140,12 +140,13 @@ Click `Destinations` in the {{site.data.keyword.en_short}} console and add the f
 * `Destination name`: add a name for the Destination.
 * `Destination description`: add an optional description for the destination.
 * `Destination type`: select Safari Push Notifications type from the dropdown list.
+
 * Update the Safari Push Credentials with the details
-  * `Website Name`: The website name. This is the heading used in Notification Center
-  * `Website push ID`: Unique reverse-domain string for your Website Push ID such as web.com.example.domain (the string must start with web).
-  * `Website URL`: The URL of the website that should be permitted to subscribe to Safari Push Notifications.
-  * `URL format string`: he URL to go to when the notification is clicked. Use %@ as a placeholder for arguments you fill in when delivering your notification. This URL must use the http or https scheme; otherwise, it is invalid.
-  * upload p12 certificate and provide certificate `password`
+    * `Website Name`: The website name. This is the heading used in Notification Center
+    * `Website push ID`: Unique reverse-domain string for your Website Push ID such as web.com.example.domain (the string must start with web).
+    * `Website URL`: The URL of the website that should be permitted to subscribe to Safari Push Notifications.
+    * `URL format string`: he URL to go to when the notification is clicked. Use %@ as a placeholder for arguments you fill in when delivering your notification. This URL must use the http or https scheme; otherwise, it is invalid.
+    * upload p12 certificate and provide certificate `password`
 
 ## Create an {{site.data.keyword.en_short}} topic
 {: #en-create-topic-safari}
@@ -167,9 +168,11 @@ Select `Topics` in the Event Notifications console and click `Create`. Enter the
 Click `Subscriptions` in the {{site.data.keyword.en_short}} console. Enter the following subscription details:
 
 * `Click` Create to display subscription wizard.
+
 * Complete the following subscription details: 
     * `Subscription name`: name of the subscription.
     * `Subscription description`: add an optional description.
+
 * Under the `Subscribe to a topic` section, select a topic from the drop-down list and select a destination from the destination drop-down list.
 * `Destination type`: select type under `Destination` and click `Add`.
 
@@ -183,46 +186,46 @@ The Safari web SDK enables Safari websites to receive push notifications. Comple
 
 * Edit the manifest_Website.json file.
 
-  ```js
-   {
-     "name": "YOUR_WEBSITE_NAME"
+    ```js
+    {
+        "name": "YOUR_WEBSITE_NAME"
     }
-   ```
+    ```
 
 * Change the `manifest_Website.json` file name to `manifest.json`.
 
 * Include the manifest.json in the `<head>` tag of your html file.
 
-```html
+    ```html
     <link rel="manifest" href="manifest.json">
-```
+    ```
 
 * Include IBM Cloud web push SDK to the script.
 
-```html
+    ```html
    <script src="ENPushSDK.js" async></script>
-```
+    ```
 
 * Complete the following steps to enable the website to initialize the SDK
 
-```js
-  var enPush = new ENPush()
+    ```js
+    var enPush = new ENPush()
 
-  function callback(response) {
-    alert(response.response)
-  }
+    function callback(response) {
+        alert(response.response)
+    }
 
-  var initParams = {
-    "instanceGUID": "<instance_guid>",
-    "apikey": "<instance_apikey>",
-    "region": "<region>",
-    "deviceId": "<YOUR_DEVICE_ID>",
-    "safariDestinationId": "<safari_destination_id>",
-    "websitePushIdSafari": "<Safari Web Push Id Identifier>"
-  }
+    var initParams = {
+        "instanceGUID": "<instance_guid>",
+        "apikey": "<instance_apikey>",
+        "region": "<region>",
+        "deviceId": "<YOUR_DEVICE_ID>",
+        "safariDestinationId": "<safari_destination_id>",
+        "websitePushIdSafari": "<Safari Web Push Id Identifier>"
+    }
 
-  enPush.initialize(initParams, callback)
-```
+    enPush.initialize(initParams, callback)
+    ```
 
     * region: Region of the {{site.data.keyword.en_short}} instance. eg; `us-south`,`eu-gb`, `au-syd` and `eu-de`
 
@@ -232,29 +235,29 @@ The Safari web SDK enables Safari websites to receive push notifications. Comple
 
     * Register without `UserId`:
 
-```js
+    ```js
     enPush.register(function(response) {
       alert(response.response)
     })
-```
+    ```
 
     * Register with UserId. For `userId` based notification, the register method will accept one more parameter - `userId`
 
-```js
+    ```js
     bmsPush.registerWithUserId("UserId",function(response) {
       alert(response.response)
     })
-```
+    ```
 
-`UserId` is the user identifier value with which you want to register devices in the push service instance.
+    `UserId` is the user identifier value with which you want to register devices in the push service instance.
 
 * The `subscribe` API subscribes the device for a tag. After the device is subscribed to a particular tag, the device can receive notifications that are sent for that tag. Add the following code snippet to your web application to subscribe to a list of tags.
 
-```js
+    ```js
     enPush.subscribe(tagName, function(response) {
       alert(response.response)
     })
-```
+    ```
 
 * When the setup is complete, run your application and register for push notifications.
 
@@ -263,6 +266,5 @@ The Safari web SDK enables Safari websites to receive push notifications. Comple
 {: step}
 
 Use the [Send Notification API](https://cloud.ibm.com/apidocs/event-notifications/event-notifications#send-notifications) to send the push notification for the Firefox device. You can use the [Node](https://github.com/IBM/event-notifications-node-admin-sdk#send-notifications) or [Go](https://github.com/IBM/event-notifications-go-admin-sdk#send-notifications) admin SDK instead of calling the API directly.
-
 
 ![Receive notifications](images/en_receive_safari_push_notification.png "Receive notifications"){: caption="Figure 16. Receive notifications" caption-side="bottom"}

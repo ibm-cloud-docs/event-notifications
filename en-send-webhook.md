@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-07"
+lastupdated: "2022-06-30"
 
 keywords: event notifications, event-notifications, webhook, slack, tutorials
 
@@ -44,8 +44,8 @@ A summary of the tasks you complete before triggering a webhook is as follows:
 - Instrument the sending application.
 - Test the sending and receiving applications end-to-end.
 
-
 ## Test with cURL or Postman
+{: #en-test-with-curl-or-postman}
 {: step}
 
 You have configured your {{site.data.keyword.en_short}} instance, but before instrumenting your sending application, verify that {{site.data.keyword.en_short}} is pushing to your registered webhook. Use an API testing app like cURL or Postman to verify that notifications are pushing to your app. 
@@ -56,8 +56,8 @@ You also need an access token so that your API testing tool can access your {{si
 
 Sample cURL to trigger slack webhook - 
 
- ```
- curl --location --request POST '<<EN_REGION_URL>>/event-notifications/v1/instances/<<EN_INSTANCE_ID>>/notifications' \
+```curl
+curl --location --request POST '<<EN_REGION_URL>>/event-notifications/v1/instances/<<EN_INSTANCE_ID>>/notifications' \
 --header 'Accept: application/json' \
 --header 'ce-id: id' \
 --header 'ce-specversion: 1.0' \

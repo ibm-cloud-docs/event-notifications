@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-06-29"
+lastupdated: "2022-06-30"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, event destination
 
@@ -26,7 +26,7 @@ A destination is a delivery target for a notification. In other contexts, destin
 {: shortdesc}
 
 ## Destination categories
-​{: #en-destination-categories}
+{: #en-destination-categories}
 
 There are two destination categories: human and service.
 

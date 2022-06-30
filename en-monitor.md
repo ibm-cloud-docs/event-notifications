@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-06-29"
+lastupdated: "2022-06-30"
 
 keywords: event-notification, event notification, high availability, ha, monitoring, metrics, monitor apps
 
@@ -100,8 +100,6 @@ subcollection: event-notifications
 
 # Monitor {{site.data.keyword.en_short}} service metrics with {{site.data.keyword.mon_full_notm}}
 {: #en-monitoring}
-
-<!-- All IBM Cloud® general availability (GA) services have a Service Level Agreement of 99.99% availability.  -->
 
 Use {{site.data.keyword.mon_full_notm}} to gain operational visibility into the performance and health of your applications, services, and platforms. It offers administrators, DevOps teams, and developers full stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards.
 {: shortdesc}
