@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-06-29"
+lastupdated: "2022-07-13"
 keywords: event-notifications, event notifications, about event notifications, destinations, push, chrome
 subcollection: event-notifications
 content-type: tutorial
@@ -99,7 +99,7 @@ Click `Destinations` in the {{site.data.keyword.en_short}} console and add the f
 * `Destination name`: add a name for the Destination.
 * `Destination description`: add an optional description for the destination.
 * `Destination type`: select Chrome Push Notifications type from the dropdown list.
-* Add your website URL to get it whitelisted.
+* Add your website URL to get it allow listed.
 * Add the `Server Key`, which you got from `Get FCM credentials` section.
 * When Chrome destination is created. Edit the created destination to get public vapId key required for web sdk.
 
