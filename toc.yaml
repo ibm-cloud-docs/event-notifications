@@ -76,8 +76,11 @@ toc:
               label: API Explorer
               href: https://{DomainName}/apidocs/event-notifications
       - topicgroup:
-          label: Event Notifications CLI
+          label: CLI Reference
           topics:
+          - link:
+              label: Event Notifications CLI
+              href: /event-notifications-cli-plugin/event-notifications-cli-plugin-event-notifications-cli
           - en-cli.md
       - topicgroup:
           label: High availability and disaster recovery
@@ -105,3 +108,4 @@ toc:
           - en-ts-email.md
           - en-ts-rules.md
           - en-ts-notification.md
+          - en-ts-app-crash.md
