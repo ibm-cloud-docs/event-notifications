@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-06-29"
+lastupdated: "2022-07-20"
 
 keywords: event notifications, event-notifications, source, tutorials
 
@@ -47,7 +47,7 @@ The connection protocols differ between source types, so the procedure for addin
 {: #en-verify-manage-service}
 {: step}
 
-Verify that the managed service is available as a source for {{site.data.keyword.en_short}}
+Verify that the managed service is available as a source for {{site.data.keyword.en_short}}.
 
 - Go to the `Sources` section of the {{site.data.keyword.en_short}} dashboard.
 - Click `Add` and select `IBM Managed Service`.
@@ -57,7 +57,7 @@ Verify that the managed service is available as a source for {{site.data.keyword
 {: #en-create-service-auth}
 {: step}
 
-Create a service-to-service authorization between your managed service and {{site.data.keyword.en_short}}
+Create a service-to-service authorization between your managed service and {{site.data.keyword.en_short}}.
 
 - From the {{site.data.keyword.cloud_notm}} console, select `Manage` >> `Access(IAM)` >> `Authorizations`.
 - The Authorizations view contains dropdowns for `Source service` and `Target service`. Select your managed service as the source, and {{site.data.keyword.en_short}} as the target.
@@ -82,7 +82,8 @@ Follow the documentation for the selected service to configure the connection to
 ## Add a generic API source
 {: #en-add-source-generic-API}
 
-API Sources cannot be used to send notifications to out of the box destinations like email and SMS. {: note }
+API Sources cannot be used to send notifications to out of the box destinations like email and SMS. 
+{: note}
 
 - Go to the `Sources` section of the {{site.data.keyword.en_short}} dashboard.
 - Click `Add` and select `API Source`.

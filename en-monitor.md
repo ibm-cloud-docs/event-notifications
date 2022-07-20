@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-06-30"
+lastupdated: "2022-07-20"
 
 keywords: event-notification, event notification, high availability, ha, monitoring, metrics, monitor apps
 
@@ -10,93 +10,7 @@ subcollection: event-notifications
 
 ---
 
-{:codeblock: .codeblock}
-{:external: target="_blank" .external}
-{:important: .important}
-{:note: .note}
-{:pre: .pre}
-{:screen: .screen}
-{:shortdesc: .shortdesc}
-{:tip: .tip}
-{:DomainName: data-hd-keyref="APPDomain"}
-{:DomainName: data-hd-keyref="DomainName"}
-{:android: data-hd-operatingsystem="android"}
-{:api: .ph data-hd-interface='api'}
-{:apikey: data-credential-placeholder='apikey'}
-{:app_key: data-hd-keyref="app_key"}
-{:app_name: data-hd-keyref="app_name"}
-{:app_secret: data-hd-keyref="app_secret"}
-{:app_url: data-hd-keyref="app_url"}
-{:authenticated-content: .authenticated-content}
-{:beta: .beta}
-{:c#: data-hd-programlang="c#"}
-{:cli: .ph data-hd-interface='cli'}
-{:codeblock: .codeblock}
-{:curl: .ph data-hd-programlang='curl'}
-{:deprecated: .deprecated}
-{:dotnet-standard: .ph data-hd-programlang='dotnet-standard'}
-{:download: .download}
-{:external: target="_blank" .external}
-{:faq: data-hd-content-type='faq'}
-{:fuzzybunny: .ph data-hd-programlang='fuzzybunny'}
-{:generic: data-hd-operatingsystem="generic"}
-{:generic: data-hd-programlang="generic"}
-{:gif: data-image-type='gif'}
-{:go: .ph data-hd-programlang='go'}
-{:help: data-hd-content-type='help'}
-{:hide-dashboard: .hide-dashboard}
-{:hide-in-docs: .hide-in-docs}
-{:important: .important}
-{:ios: data-hd-operatingsystem="ios"}
-{:java: .ph data-hd-programlang='java'}
-{:java: data-hd-programlang="java"}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:javascript: data-hd-programlang="javascript"}
-{:new_window: target="_blank"}
-{:note: .note}
-{:objectc: data-hd-programlang="objectc"}
-{:org_name: data-hd-keyref="org_name"}
-{:php: data-hd-programlang="php"}
-{:pre: .pre}
-{:preview: .preview}
-{:python: .ph data-hd-programlang='python'}
-{:python: data-hd-programlang="python"}
-{:route: data-hd-keyref="route"}
-{:row-headers: .row-headers}
-{:ruby: .ph data-hd-programlang='ruby'}
-{:ruby: data-hd-programlang="ruby"}
-{:runtime: architecture="runtime"}
-{:runtimeIcon: .runtimeIcon}
-{:runtimeIconList: .runtimeIconList}
-{:runtimeLink: .runtimeLink}
-{:runtimeTitle: .runtimeTitle}
-{:screen: .screen}
-{:script: data-hd-video='script'}
-{:service: architecture="service"}
-{:service_instance_name: data-hd-keyref="service_instance_name"}
-{:service_name: data-hd-keyref="service_name"}
-{:shortdesc: .shortdesc}
-{:space_name: data-hd-keyref="space_name"}
-{:step: data-tutorial-type='step'}
-{:subsection: outputclass="subsection"}
-{:support: data-reuse='support'}
-{:swift: .ph data-hd-programlang='swift'}
-{:swift: data-hd-programlang="swift"}
-{:table: .aria-labeledby="caption"}
-{:term: .term}
-{:tip: .tip}
-{:tooling-url: data-tooling-url-placeholder='tooling-url'}
-{:troubleshoot: data-hd-content-type='troubleshoot'}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
-{:tsSymptoms: .tsSymptoms}
-{:tutorial: data-hd-content-type='tutorial'}
-{:ui: .ph data-hd-interface='ui'}
-{:unity: .ph data-hd-programlang='unity'}
-{:url: data-credential-placeholder='url'}
-{:user_ID: data-hd-keyref="user_ID"}
-{:vbnet: .ph data-hd-programlang='vb.net'}
-{:video: .video}
+{{site.data.keyword.attribute-definition-list}}
 
 # Monitor {{site.data.keyword.en_short}} service metrics with {{site.data.keyword.mon_full_notm}}
 {: #en-monitoring}
@@ -118,41 +32,43 @@ Currently, {{site.data.keyword.mon_full_notm}} integration is available for {{si
 | London| London|
 | Sydney| Sydney|
 | Frankfurt| Frankfurt|
-{: caption="Table 1. Deployment regions" caption-side="top"}
+{: caption="Table 1. Deployment regions" caption-side="bottom"}
 
 Before you can start with {{site.data.keyword.en_short}} monitoring metrics, you must first opt in and [enable platform metrics](https://cloud.ibm.com/docs/monitoring?topic=monitoring-platform_metrics_enabling)
-{: note .note}
+{: note}
 
 You can configure only one instance of the {{site.data.keyword.mon_full_notm}} service per region to collect platform metrics.
 
 - To configure the {{site.data.keyword.mon_full_notm}} instance, you must turn on the platform metrics configuration setting.
-- If a monitoring instance in a region is already enabled to collect platform metrics, metrics from enabled-monitoring services are collected automatically and available for monitoring through this instance. For more information about enabled-monitoring services, see {{site.data.keyword.Bluemix}} services.
+- If a monitoring instance in a region is already enabled to collect platform metrics, metrics from enabled-monitoring services are collected automatically and available for monitoring through this instance. For more information about enabled-monitoring services, see {{site.data.keyword.cloud}} services.
 
 To monitor platform metrics, check that the {{site.data.keyword.mon_full_notm}} instance is provisioned in the same region where the {{site.data.keyword.cloud_notm}} instance is provisioned.
-{:note: .note}
-
+{: note}
 
 ## Access your {{site.data.keyword.mon_full_notm}} metrics
 {: #en-access-monitor}
 
 1. Launch the [{{site.data.keyword.mon_full_notm}} web UI](https://cloud.ibm.com/docs/monitoring?topic=monitoring-launch) from the `Observability` page.
-2. Click `DASHBOARDS`.
-3. In the `Default Dashboards` section, expand `IBM`.
-4. Choose the `{{site.data.keyword.en_short}}` dashboard from the list.
+
+1. Click `DASHBOARDS`.
+
+1. In the `Default Dashboards` section, expand `IBM`.
+
+1. Choose the `{{site.data.keyword.en_short}}` dashboard from the list.
 
 Access your deployment's monitoring dashboard from {{site.data.keyword.mon_full_notm}}, it's in the sidebar, under `IBM`.
 Next, change the scope or make a copy of the default dashboard to monitor an {{site.data.keyword.en_short}} service instance.
 
 ## Metrics available by Service Plan
- {: #en-metrics-by-plan}
+{: #en-metrics-by-plan}
 
- | Metric Name |
- | ------------|
- | [ibm_eventnotifications_total_ingested_notifications](#ibm_eventnotifications_total_ingested_notifications)|
- | [ibm_eventnotifications_total](#ibm_eventnotifications_total)|
- | [ibm_eventnotifications_failed](#ibm_eventnotifications_failed)|
- | [ibm_eventnotifications_devices](#ibm_eventnotifications_devices)|
-{: caption="Table 2. Metrics available by service plan" caption-side="top"}
+| Metric Name |
+| ------------|
+| [ibm_eventnotifications_total_ingested_notifications](#ibm_eventnotifications_total_ingested_notifications)|
+| [ibm_eventnotifications_total](#ibm_eventnotifications_total)|
+| [ibm_eventnotifications_failed](#ibm_eventnotifications_failed)|
+| [ibm_eventnotifications_devices](#ibm_eventnotifications_devices)|
+{: caption="Table 2. Metrics available by service plan" caption-side="bottom"}
 
 ### ibm_eventnotifications_total_ingested_notifications
 {: #ibm_eventnotifications_total_ingested_notifications}
@@ -165,8 +81,7 @@ Total number of notifications that are ingested. Ingested notifications are even
 | `Metric Type` | `gauge`|
 | `Value Type` | `none`|
 | `Segment By` | `ibm_scope`, `ibm_ctype`, `ibm_location`,  `ibm_service_name`, `ibm_service_instance`, `ibm_eventnotifications_source`  |
-{: caption="Table 3. Ingestion metadata" caption-side="top"}
-
+{: caption="Table 3. Ingestion metadata" caption-side="bottom"}
 
 ### ibm_eventnotifications_total
 {: #ibm_eventnotifications_total}
@@ -179,7 +94,7 @@ Total number of notifications for a particular type including successful and fai
 | `Metric Type` | `gauge`|
 | `Value Type` | `none`|
 | `Segment By` | `ibm_scope`, `ibm_ctype`, `ibm_location`,  `ibm_service_name`, `ibm_service_instance`, `ibm_eventnotifications_source`, `ibm_eventnotifications_destination`, `ibm_eventnotifications_source`, `ibm_eventnotifications_type`|
-{: caption="Table 4. Notifications metadata" caption-side="top"}
+{: caption="Table 4. Notifications metadata" caption-side="bottom"}
 
 ### ibm_eventnotifications_failed
 {: #ibm_eventnotifications_failed}
@@ -192,7 +107,7 @@ Total number of failed notifications of a particular type.
 | `Metric Type` | `gauge`|
 | `Value Type` | `none`|
 | `Segment By` | `ibm_scope`, `ibm_ctype`, `ibm_location`,  `ibm_service_name`, `ibm_service_instance`, `ibm_eventnotifications_destination`, `ibm_eventnotifications_source`, `ibm_eventnotifications_type`,  |
-{: caption="Table 5. Failed notifications metadata" caption-side="top"}
+{: caption="Table 5. Failed notifications metadata" caption-side="bottom"}
 
 ### ibm_eventnotifications_devices
 {: #ibm_eventnotifications_devices}
@@ -205,7 +120,7 @@ Total number of push notification devices registered.
 | `Metric Type` | `gauge`|
 | `Value Type` | `none`|
 | `Segment By` | `ibm_scope`, `ibm_ctype`, `ibm_location`,  `ibm_service_name`, `ibm_service_instance`, `ibm_eventnotifications_destination`,  `ibm_eventnotifications_device_type`,  |
-{: caption="Table 5. Total devices registered" caption-side="top"}
+{: caption="Table 6. Total devices registered" caption-side="bottom"}
 
 ## Attributes for segmentation
 {: #attributes-en}
@@ -221,7 +136,7 @@ The following attributes are available for segmenting all of the metrics previou
 | `Location` | `ibm_location` | The location of the monitored resource, which can be a region, data center, or global. |
 | `Scope` | `ibm_scope` | The scope is the account, organization, or space GUID associated with this metric. |
 | `Service instance` | `ibm_service_instance` | The service instance segment identifies the instance that the metric is associated with. |
-{: caption="Table 6. Segmentation attributes" caption-side="top"}
+{: caption="Table 7. Segmentation attributes" caption-side="bottom"}
 
 ### More attributes
 {: #additional-attributes-en}
@@ -234,4 +149,4 @@ The following attributes are available for segmenting one or more attributes as 
 | `Name of the source` | `ibm_eventnotifications_source` | A source name with its associated id. |
 | `Type of event notification` | `ibm_eventnotifications_type` | The type of supported destination types. (email, sms or webhook) |
 | `Type of push notification device` | `ibm_eventnotifications_device_type` | The type of supported push notification device.(push_android, push_ios) |
-{: caption="Table 7. More attributes" caption-side="top"}
+{: caption="Table 8. More attributes" caption-side="bottom"}
