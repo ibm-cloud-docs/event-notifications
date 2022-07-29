@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-06-29"
+lastupdated: "2022-07-05"
 
 keywords: event notifications activity tracker events, event notifications events, event notifications audit, event notifications audit events, event notifications audit logs
 
@@ -36,7 +36,6 @@ As a security officer, auditor, or manager, you can use the {{site.data.keyword.
 
 The following list of {{site.data.keyword.en_short}} data events is sent to {{site.data.keyword.at_full_notm}}.
 
-
 | Action             | Description      |
 | -------------------| -----------------|
 | `event-notifications.topics.read` | An event is generated when a topic is retrieved.|
@@ -60,7 +59,6 @@ The following list of {{site.data.keyword.en_short}} data events is sent to {{si
 | `event-notifications.subscriptions.update` | An event is generated when you update a subscription.|
 | `event-notifications.subscriptions.delete` | An event is generated when you delete a subscription.|
 {: caption="Table 1. Overview of {{site.data.keyword.en_short}} actions that generate {{site.data.keyword.at_full_notm}} events" caption-side="top"}
-
 
 ## Viewing events
 {: #at_ui}

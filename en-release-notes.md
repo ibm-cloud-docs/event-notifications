@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-06-29"
+  years: 2021, 2022
+lastupdated: "2022-07-05"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -20,7 +20,6 @@ content-type: release-note
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 {:release-note: data-hd-content-type='release-note'}
-
 
 # Release notes for {{site.data.keyword.en_short}}
 {: #release-notes}
@@ -44,7 +43,7 @@ New destination: Slack
 
 
 ## 29 Apr 2022
-{: #event-notifications-Apr2922}
+{: #event-notifications-Apr2022}
 {: release-note}
 
 New destinations: Web Push Notifications for Chrome and Firefox
@@ -57,7 +56,7 @@ New destinations: Web Push Notifications for Chrome and Firefox
 
 Event Notifications is now available in the Frankfurt region.
 
-## 28 February 2022
+## 28 Feb 2022
 {: #event-notifications-Feb2822}
 {: release-note}
 
@@ -71,7 +70,7 @@ New destination: Apple Push Notification Service (APNs) for iOS
 New source: {{site.data.keyword.secrets-manager_full}}
 :   Integrating {{site.data.keyword.secrets-manager_short}} with Event Notifications can help you route life cycle events for your secrets by using supported channels. For more information, see [Enabling event notifications for Secrets Manager](/docs/secrets-manager?topic=secrets-manager-event-notifications&interface=ui).
 
-## 31 January 2022
+## 31 Jan 2022
 {: #event-notifications-Jan3122}
 {: release-note}
 
@@ -91,4 +90,3 @@ New source: {{site.data.keyword.compliance_full}}
 
 Introducing Event Notifications
 :   Event Notifications is Generally Available. IBM Cloud Monitoring as a source is supported to route events to communication channels like email, SMS and webhooks. 
-

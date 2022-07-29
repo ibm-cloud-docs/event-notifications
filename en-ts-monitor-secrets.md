@@ -2,7 +2,7 @@
 
 copyright:
    years: 2022
-lastupdated: "2022-07-20"
+lastupdated: "2022-07-21"
 
 keywords: event-notifications, event notifications, about event notifications, secrets manager certificates, secrets expiry 
 

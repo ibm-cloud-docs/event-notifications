@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-06-30"
+lastupdated: "2022-07-05"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, slack
 
@@ -47,37 +47,37 @@ Event notification generates slack notifications from incoming payload. The temp
 
 ```sh
 {
-    "text": "*{{event.ibmendefaultshort}}*",
-    "attachments": [{
-        "color": "{{config.subscription.attachment_color}}",
-        "blocks": [{
-            "type": "section",
-            "text": {
-                "type": "mrkdwn",
-                "text": "{{event.ibmendefaultlong}}"
-            }
-        },
-        {
-            "type": "divider"
-        },
-        {
-            "type": "section",
-            "text": {
-                "type": "mrkdwn",
-                "text": "```{{event.data}} ```"
-            }
-        }
-    ]
-    }]
+   "text": "*{{event.ibmendefaultshort}}*",
+   "attachments": [{
+      "color": "{{config.subscription.attachment_color}}",
+      "blocks": [{
+         "type": "section",
+         "text": {
+            "type": "mrkdwn",
+            "text": "{{event.ibmendefaultlong}}"
+         }
+      },
+      {
+         "type": "divider"
+      },
+      {
+         "type": "section",
+         "text": {
+            "type": "mrkdwn",
+            "text": "```{{event.data}} ```"
+         }
+      }
+      ]
+   }]
 }
 ```
 
 Here - 
 
-*ibmendefaultshort* is the default short payload provided in the incoming payload
-*attachment_color* is the color that will be applied to the notification which was provided during subscription
-*ibmendefaultlong* is tbe default long payload provided in the incoming payload
-*data* is the data JSON provided in the incoming payload and will be formated as json in the slack notification
+*ibmendefaultshort* is the default short payload provided in the incoming payload.
+*attachment_color* is the color that will be applied to the notification which was provided during subscription.
+*ibmendefaultlong* is tbe default long payload provided in the incoming payload.
+*data* is the data JSON provided in the incoming payload and will be formated as json in the slack notification.
 
 ## Slack retry policy
 {: #en-slack-retry}

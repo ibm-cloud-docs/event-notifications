@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-06-29"
+lastupdated: "2022-07-05"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -40,7 +40,7 @@ A digitized message that is triggered when an event occurs. Event notifications
 {: #en-source-1}
 
 A service or application on {{site.data.keyword.cloud_notm}} that emits event notifications and publishes them to a topic within the {{site.data.keyword.en_short}} service. A source is a registered entity in an {{site.data.keyword.en_short}} service instance. Several services on {{site.data.keyword.cloud_notm}} are set to be integrated to send notifications to {{site.data.keyword.en_short}}.
-IBM Monitoring is enabled, while  {{site.data.keyword.compliance_long}}, and {{site.data.keyword.secrets-manager_full_notm}} are in the pipeline. A source can publish to multiple topics. In, other contexts sources are identified as producers or publishers.
+IBM Monitoring is enabled, while {{site.data.keyword.compliance_long}}, and {{site.data.keyword.secrets-manager_full_notm}} are in the pipeline. A source can publish to multiple topics. In, other contexts sources are identified as producers or publishers.
 
 Size limit for a send notification request is limited to 64KB
 
@@ -57,7 +57,7 @@ One of many criteria used for filtering. Event notifications whose attributes m
 ## Ingested event notification
 {: #en-ingested}
 
-- An event notification that is evaluated by a filter.  Ingested events are a primary billing metric. The price for ingested events is the same for all sources. If no filter is defined for a  source, none of the events from that source are ingested. 
+- An event notification that is evaluated by a filter.  Ingested events are a primary billing metric. The price for ingested events is the same for all sources. If no filter is defined for a source, none of the events from that source are ingested. 
 
 - If a filter is defined for a source but no event notifications are passed through, the number of notifications that bounced are still considered "ingested" because they were analyzed by a filter. 
 
@@ -66,7 +66,7 @@ One of many criteria used for filtering. Event notifications whose attributes m
 
 - A landing place for filtered events. Topics hold a set of incoming event notifications of interest. Each source is connected to a topic through a user-defined filter. Notifications that pass into a topic are pushed to all subscribed destinations. A topic can connect to multiple sources. 
 
--  Event notifications that end up in a topic are routed to destinations. A topic can be connected to multiple sources. Although topics are innately coupled to sources using filters, they are not innately coupled to destinations. That coupling happens through subscriptions.
+- Event notifications that end up in a topic are routed to destinations. A topic can be connected to multiple sources. Although topics are innately coupled to sources using filters, they are not innately coupled to destinations. That coupling happens through subscriptions.
 
 ## Destination
 {: #en-destinations}
@@ -76,7 +76,8 @@ A delivery target for event notifications. In other contexts, destinations are 
 - Human destination: A device, server, or application presents notifications for human consumption.  Examples of human destinations are email servers, SMS text providers, and push notification services. 
 
    Specific email addresses, phone numbers, and device IDs can be part of a subscription to a destination, but they are not part of the destination itself.
-   {:note: .note}
+   {: note}
+ 
 - Service destinations: A cloud service or an application where notifications are consumed programmatically. A webhook to a backend microservice is an example of a service destination.
 
 ### Service-to-service

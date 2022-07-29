@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-06-30"
+lastupdated: "2022-07-05"
 
 keywords: event-notifications, event notifications migration, notifications, destinations, push, migration
 
@@ -114,27 +114,27 @@ The package name for the {{site.data.keyword.mobilepushshort}} SDK was `com.ibm.
 
 1. Change the Module’s `build.gradlefile`to include the new SDKs.
 
-   ```groovy
-   // Replace the below section   
+```groovy
+// Replace the below section   
  
-   dependencies {  
-      ........  
-      implementation 'com.google.firebase:firebase-messaging:20.0.0'  
-      Implementation 'com.ibm.mobilefirstplatform.clientsdk.android:core:3.+'  
-      .......  
-   }
+dependencies {  
+    ........  
+    implementation 'com.google.firebase:firebase-messaging:20.0.0'  
+    Implementation 'com.ibm.mobilefirstplatform.clientsdk.android:core:3.+'  
+    .......  
+}  
   
-   // with this  
+// with this  
    
-   dependencies {  
-      ........  
-      implementation platform('com.google.firebase:firebase-bom:29.0.0')  
-      implementation 'com.google.firebase:firebase-messaging'  
-      implementation 'com.ibm.cloud:sdk-core:9.15.0'  
-      implementation 'com.ibm.cloud:eventnotifications-destination-android:0.0.1'  
-      .......  
-   } 
-   ```
+dependencies {  
+    ........  
+    implementation platform('com.google.firebase:firebase-bom:29.0.0')  
+    implementation 'com.google.firebase:firebase-messaging'  
+    implementation 'com.ibm.cloud:sdk-core:9.15.0'  
+    implementation 'com.ibm.cloud:eventnotifications-destination-android:0.0.1'  
+    .......  
+} 
+```
 
 1. Open `AndroidManifest.xml` and change the following elements:
 
@@ -151,7 +151,7 @@ The package name for the {{site.data.keyword.mobilepushshort}} SDK was `com.ibm.
       </service> 
       
       <service 
-         android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPush" android:exported="true" > 
+      android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPush" android:exported="true" > 
          <intent-filter> 
             <action android:name="com.google.firebase.INSTANCE_ID_EVENT" /> 
          </intent-filter> 
@@ -159,7 +159,7 @@ The package name for the {{site.data.keyword.mobilepushshort}} SDK was `com.ibm.
       
       // with this 
       
-      <service android:name="com.ibm.cloud.eventnotifications.destination.android.ENPushIntentService” android:exported="true"> 
+      <service android:name="com.ibm.cloud.eventnotifications.destination.android.ENPushIntentService" android:exported="true"> 
          <intent-filter> 
             <action android:name="com.google.firebase.MESSAGING_EVENT" /> 
          </intent-filter> 
@@ -253,36 +253,35 @@ The package name for the {{site.data.keyword.mobilepushshort}} SDK was `com.ibm.
 1. Make changes to the device registration step.
 
    - If you are registering without `userID`
-
       ```java
-      // Replace the below section   
+         // Replace the below section   
 
       push.registerDevice(new MFPPushResponseListener<String>() { 
 
-         @Override 
-         public void onSuccess(String response) { 
-            //handle successful device registration here 
-         } 
+           @Override 
+           public void onSuccess(String response) { 
+               //handle successful device registration here 
+           } 
 
-         @Override 
-         public void onFailure(MFPPushException ex) { 
-            //handle failure in device registration here 
-         } 
+           @Override 
+           public void onFailure(MFPPushException ex) { 
+               //handle failure in device registration here 
+               } 
       }); 
 
       // with this 
 
       push.registerDevice(new ENPushResponseListener<String>() {  
 
-         @Override  
-         public void onSuccess(String deviceId) {  
-            //handle successful device registration here  
-         } 
+           @Override  
+           public void onSuccess(String deviceId) {  
+                //handle successful device registration here  
+           } 
 
-         @Override  
-         public void onFailure(ENPushException ex) {  
-            //handle failure in device registration here  
-         }  
+           @Override  
+           public void onFailure(ENPushException ex) {  
+                //handle failure in device registration here  
+           }  
       }); 
       ```
 
@@ -293,66 +292,66 @@ The package name for the {{site.data.keyword.mobilepushshort}} SDK was `com.ibm.
 
       push.registerDeviceWithUserId("userId", new MFPPushResponseListener<String>() {  
 
-         @Override  
-         public void onSuccess(String response) {  
-            //handle successful device registration here  
-         }  
+           @Override  
+           public void onSuccess(String response) {  
+               //handle successful device registration here  
+           }  
 
-         @Override  
-         public void onFailure(MFPPushException ex) {  
-            //handle failure in device registration here  
-         }  
+           @Override  
+           public void onFailure(MFPPushException ex) {  
+               //handle failure in device registration here  
+           }  
       });  
 
       // with this  
 
       push.registerDeviceWithUserId("userId",new ENPushResponseListener<String>() {  
 
-         @Override  
-         public void onSuccess(String deviceId) {  
-            //handle successful device registration here  
-         }  
+            @Override  
+            public void onSuccess(String deviceId) {  
+                //handle successful device registration here  
+            }  
 
-         @Override  
-         public void onFailure(ENPushException ex) {  
-            //handle failure in device registration here  
-         }  
+            @Override  
+            public void onFailure(ENPushException ex) {  
+                //handle failure in device registration here  
+            }  
       }); 
       ```
 
 1. Make changes to the unregister API call.
 
-   ```java
-   // Replace the below section   
+      ```java
+      // Replace the below section   
       
-   push.unregister(new MFPPushResponseListener<String>() { 
+      push.unregister(new MFPPushResponseListener<String>() { 
                
-      @Override 
-      public void onSuccess(String s) { 
-         // Handle success 
-      } 
-      
-      @Override 
-      public void onFailure(MFPPushException e) { 
-         // Handle Failure 
-      } 
-   }); 
-         
-   // with this  
-         
-   push.unregister(new ENPushResponseListener<String>() { 
+         @Override 
+         public void onSuccess(String s) { 
+               // Handle success 
+         } 
                
-      @Override 
-      public void onSuccess(String s) { 
-         // Handle success 
-      } 
+         @Override 
+         public void onFailure(MFPPushException e) { 
+               // Handle Failure 
+         } 
+      }); 
+         
+      // with this  
+         
+      push.unregister(new ENPushResponseListener<String>() { 
+               
+            @Override 
+            public void onSuccess(String s) { 
+               // Handle success 
+            } 
       
-      @Override 
-      public void onFailure(ENPushException e) { 
-         // Handle Failure 
-      } 
-   }); 
-   ```
+            @Override 
+            public void onFailure(ENPushException e) { 
+               // Handle Failure 
+            } 
+      }); 
+      ```
 
 1. Optionally, if you are using tags
 
@@ -363,32 +362,32 @@ The package name for the {{site.data.keyword.mobilepushshort}} SDK was `com.ibm.
       
       push.subscribe("tagName", new MFPPushResponseListener<String>() { 
       
-         @Override 
-         public void onSuccess(String arg) { 
-            System.out.println("Succesfully Subscribed to: "+ arg); 
-         } 
+            @Override 
+            public void onSuccess(String arg) { 
+               System.out.println("Succesfully Subscribed to: "+ arg); 
+            } 
       
-         @Override 
-         public void onFailure(MFPPushException ex) { 
-            String message = ex.getMessage(); 
-            System.out.println("Error subscribing to Tag " + message); 
-         } 
+            @Override 
+            public void onFailure(MFPPushException ex) { 
+               String message = ex.getMessage(); 
+               System.out.println("Error subscribing to Tag " + message); 
+            } 
       }); 
          
       // with this  
          
       push.subscribe("tagName", new ENPushResponseListener<String>() { 
       
-         @Override 
-         public void onSuccess(String arg) { 
-            System.out.println("Succesfully Subscribed to: "+ arg); 
-         } 
+            @Override 
+            public void onSuccess(String arg) { 
+               System.out.println("Succesfully Subscribed to: "+ arg); 
+            } 
                
-         @Override 
-         public void onFailure(ENPushException ex) { 
-            String message = ex.getMessage(); 
-            System.out.println("Error subscribing to Tag " + message); 
-         } 
+            @Override 
+            public void onFailure(ENPushException ex) { 
+               String message = ex.getMessage(); 
+               System.out.println("Error subscribing to Tag " + message); 
+            } 
       }); 
       ```
 
@@ -466,7 +465,7 @@ The package name for the {{site.data.keyword.mobilepushshort}} SDK was `com.ibm.
 
 1. Optionally, if you are using Notification options, make the following changes:
 
-   1. Changes to the Notification actions listener
+1. Changes to the Notification actions listener
 
       ```java
       // Replace the below section   
@@ -487,14 +486,14 @@ The package name for the {{site.data.keyword.mobilepushshort}} SDK was `com.ibm.
       // with this  
       
       notificationListener = new ENPushNotificationListener() { 
-         @Override 
+               @Override 
          public void onReceive(final ENSimplePushNotification message) { 
             if (message.getActionName().equals("Accept Button")){ 
-               System.out.print("Clicked Accept Action"); 
+                  System.out.print("Clicked Accept Action"); 
             } else if (message.getActionName().equals("Decline Button")){ 
-               System.out.print("Clicked Decline Action"); 
+                  System.out.print("Clicked Decline Action"); 
             } else if (message.getActionName().equals("View Button")){ 
-               System.out.print("Clicked View Action"); 
+                  System.out.print("Clicked View Action"); 
             } 
          } 
       }; 
@@ -535,30 +534,30 @@ Follow these steps to migrate from BMPush to ENPushDestination:
 
 1. Replace SDK Initialization code
 
-   ```swift
-   // Replace this 
+      ```swift
+      // Replace this 
       
-   let push = BMSClient.sharedInstance 
+      let push = BMSClient.sharedInstance 
       
-   push.initialize(bluemixRegion: "<IBM cloud region>") 
+      push.initialize(bluemixRegion: "<IBM cloud region>") 
       
-   push.initializeWithAppGUID( 
-                  appGUID: "<IBM Cloud Push Instance GUID>", 
-                  clientSecret:"<IBM Cloud Push Instance ClientSecret>" 
-               ) 
+      push.initializeWithAppGUID( 
+                     appGUID: "<IBM Cloud Push Instance GUID>", 
+                     clientSecret:"<IBM Cloud Push Instance ClientSecret>" 
+                  ) 
       
-   // with this 
+      // with this 
       
-   let instanceGUID = "<IBM-Cloud-en-instance_guid>>"; 
-   let destinationID = "<IBM-Cloud-en-instance-destination-id>"; 
-   let apiKey = "<IBM-Cloud-en-instance-apikey>"; 
+      let instanceGUID = "<IBM-Cloud-en-instance_guid>>"; 
+      let destinationID = "<IBM-Cloud-en-instance-destination-id>"; 
+      let apiKey = "<IBM-Cloud-en-instance-apikey>"; 
       
-   let push = ENPush.sharedInstance 
+      let push = ENPush.sharedInstance 
       
-   push.setCloudRegion(region: "<IBM cloud region>") 
+      push.setCloudRegion(region: "<IBM cloud region>") 
       
-   push.initialize(instanceGUID, destinationID, apiKey) 
-   ```
+      push.initialize(instanceGUID, destinationID, apiKey) 
+      ```
 
    There are extra fields like `destinationID` and `apikey` in new `initialize()` method. For more information, on getting the `apikey` for client SDK see [Managing service access](/docs/event-notifications?topic=event-notifications-service-access-management). 
 

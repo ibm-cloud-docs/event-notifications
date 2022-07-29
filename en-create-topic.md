@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-06-20"
+lastupdated: "2022-07-05"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -26,7 +26,6 @@ Create an {{site.data.keyword.en_short}} topic. Topics are based on a publish an
 
 - Each topic is created under a registered source.
 - Each topic can have its own set of rules, which routes the incoming payload to the respective topic.
-
 
 ## Select topics in the {{site.data.keyword.en_short}} console
 {: #en-select-topics}
@@ -55,24 +54,25 @@ Add the following rules to your topic:
 
 ```JSON
 {
-	"data": {
-		"findings": [{
-				"severity": "LOW",
-				"provider": "cert-mgr"
-			},
-			{
-				"severity": "HIGH",
-				"provider": "secrets-mgr"
-			}
-		],
-		"severity": "LOW",
-		"payloadType": "findings",
-		"issuer": "IBM Cloud Security Advisor",
-	}
+   "data": {
+      "findings": [
+         {
+            "severity": "LOW",
+            "provider": "cert-mgr"
+         },
+         {
+            "severity": "HIGH",
+            "provider": "secrets-mgr"
+         }
+      ],
+      "severity": "LOW",
+      "payloadType": "findings",
+      "issuer": "IBM Cloud Security Advisor",
+   }
 }
 ```
-Based on the above input json following valid JSONPaths can be constructed:
 
+Based on the above input json following valid JSONPaths can be constructed:
 
 ```bash
 1. $.data.severity=='LOW' 
@@ -97,4 +97,3 @@ If you do not select any rules, a default rule is added, which means all notific
 {: step}
 
 Click `Create` in the topic wizard.
-

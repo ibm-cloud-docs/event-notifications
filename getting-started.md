@@ -84,6 +84,7 @@ Human destinations are devices, servers, or applications that present notificati
 - [{{site.data.keyword.cloud_notm}} Slack](/docs/event-notifications?topic=event-notifications-en-destinations-slack)
 - [Microsoft Teams](/docs/event-notifications?topic=event-notifications-en-destinations-msteams)
 
+
 ### Service destinations
 {: #en-destination-service}
 
