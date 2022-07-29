@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-06-30"
+lastupdated: "2022-07-05"
 
 keywords: event notifications logDNA, event notifications logging, event notifications external logs
 

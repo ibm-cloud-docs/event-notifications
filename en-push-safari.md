@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-06-30"
+lastupdated: "2022-07-05"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, push
 

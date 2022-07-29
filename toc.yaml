@@ -32,6 +32,7 @@ toc:
       - topic: en-release-notes.md
         navtitle: Release notes
 
+
   - navgroup:
       id: tutorial
       topics:
@@ -80,7 +81,7 @@ toc:
           topics:
           - link:
               label: Event Notifications CLI
-              href: /event-notifications-cli-plugin/event-notifications-cli-plugin-event-notifications-cli
+              href: https://{DomainName}/docs/event-notifications-cli-plugin/event-notifications-cli-plugin-event-notifications-cli
           - en-cli.md
       - topicgroup:
           label: High availability and disaster recovery
@@ -88,6 +89,7 @@ toc:
           - en-high-availability.md
           - en-regions-endpoints.md
       - en-notices.md
+
 
   - navgroup:
       id: help
@@ -108,4 +110,3 @@ toc:
           - en-ts-email.md
           - en-ts-rules.md
           - en-ts-notification.md
-          - en-ts-app-crash.md

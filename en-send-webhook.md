@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-06-30"
+lastupdated: "2022-07-05"
 
 keywords: event notifications, event-notifications, webhook, slack, tutorials
 
@@ -57,7 +57,7 @@ You also need an access token so that your API testing tool can access your {{si
 Sample cURL to trigger slack webhook - 
 
 ```curl
-curl --location --request POST '<<EN_REGION_URL>>/event-notifications/v1/instances/<<EN_INSTANCE_ID>>/notifications' \
+ curl --location --request POST '<<EN_REGION_URL>>/event-notifications/v1/instances/<<EN_INSTANCE_ID>>/notifications' \
 --header 'Accept: application/json' \
 --header 'ce-id: id' \
 --header 'ce-specversion: 1.0' \

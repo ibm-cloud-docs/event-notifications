@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-06-29"
+lastupdated: "2022-07-05"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, push
 
@@ -133,34 +133,34 @@ The Firefox web SDK enables Firefox websites to receive push notifications. Comp
 
 * Edit the manifest_Website.json file.
 
-  ```js
+   ```js
    {
-     "name": "YOUR_WEBSITE_NAME"
-    }
+      "name": "YOUR_WEBSITE_NAME"
+   }
    ```
 
 * Change the `manifest_Website.json` file name to `manifest.json`.
 
 * Include the manifest.json in the `<head>` tag of your html file.
 
-```html
-    <link rel="manifest" href="manifest.json">
-```
+   ```html
+  <link rel="manifest" href="manifest.json">
+   ```
 
 * Include IBM Cloud web push SDK to the script.
 
-```html
+   ```html
    <script src="ENPushSDK.js" async></script>
-```
+   ```
 
 * Complete the following steps to enable the website to initialize the SDK
 
-```js
-  var enPush = new ENPush()
+   ```js
+   var enPush = new ENPush()
 
-  function callback(response) {
-    alert(response.response)
-  }
+   function callback(response) {
+     alert(response.response)
+   }
 
   var initParams = {
     "instanceGUID": "<instance_guid>",
@@ -169,42 +169,42 @@ The Firefox web SDK enables Firefox websites to receive push notifications. Comp
     "deviceId": "<YOUR_DEVICE_ID>",
     "firefoxDestinationId": "<firefox_destination_id>",
     "firefoxApplicationServerKey": "<Firefox_VapId_public_key>"
-  }
+   }
 
-  enPush.initialize(initParams, callback)
-```
+   enPush.initialize(initParams, callback)
+   ```
 
-    * region: Region of the {{site.data.keyword.en_short}} instance. eg; `us-south`,`eu-gb`, `au-syd` and `eu-de`
+   * region: Region of the {{site.data.keyword.en_short}} instance. eg; `us-south`,`eu-gb`, `au-syd` and `eu-de`
 
-    * deviceId: Optional deviceId for device registration.
+   * deviceId: Optional deviceId for device registration.
 
 * To register for notifications, se the `register()` or `registerWithUserId()` API to register the device with IBM Cloud Event Notifications service. Choose either of the following options:
 
-    * Register without `UserId`:
+   * Register without `UserId`:
 
-```js
-    enPush.register(function(response) {
-      alert(response.response)
-    })
-```
+      ```js
+       enPush.register(function(response) {
+         alert(response.response)
+      })
+      ```
 
-    * Register with UserId. For `userId` based notification, the register method will accept one more parameter - `userId`
+   * Register with UserId. For `userId` based notification, the register method will accept one more parameter - `userId`
 
-```js
-    bmsPush.registerWithUserId("UserId",function(response) {
-      alert(response.response)
-    })
-```
+      ```js
+      bmsPush.registerWithUserId("UserId",function(response) {
+         alert(response.response)
+      })
+      ```
 
-`UserId` is the user identifier value with which you want to register devices in the push service instance.
+      `UserId` is the user identifier value with which you want to register devices in the push service instance.
 
 * The `subscribe` API subscribes the device for a tag. After the device is subscribed to a particular tag, the device can receive notifications that are sent for that tag. Add the following code snippet to your web application to subscribe to a list of tags.
 
-```js
-    enPush.subscribe(tagName, function(response) {
+   ```js
+   enPush.subscribe(tagName, function(response) {
       alert(response.response)
     })
-```
+   ```
 
 * When the setup is complete, run your application and register for push notifications.
 
@@ -213,6 +213,5 @@ The Firefox web SDK enables Firefox websites to receive push notifications. Comp
 {: step}
 
 Use the [Send Notification API](https://cloud.ibm.com/apidocs/event-notifications/event-notifications#send-notifications) to send the push notification for the Firefox device. You can use the [Node](https://github.com/IBM/event-notifications-node-admin-sdk#send-notifications) or [Go](https://github.com/IBM/event-notifications-go-admin-sdk#send-notifications) admin SDK instead of calling the API directly.
-
 
 ![Receive notifications](images/en-receive-push-firefox.png "Receive notifications"){: caption="Figure 7. Receive notifications" caption-side="bottom"}

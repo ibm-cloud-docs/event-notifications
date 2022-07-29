@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-06-29"
+lastupdated: "2022-07-05"
 
 keywords: HA for Event Notifications, high availability for Event Notifications, Event Notifications
 
@@ -20,10 +20,8 @@ subcollection: event-notifications
 {:download: .download}
 {:term: .term}
 
-
 # High availability and disaster recovery for {{site.data.keyword.en_short}}
 {: #en-ha}
-
 
 {{site.data.keyword.en_short}} service is a highly available, regional service that runs in multiple zones.
 
@@ -50,7 +48,6 @@ Some API examples are as follows:
 {: caption="Table 1. Example API endpoints" caption-side="top"}
 
 For each data set that you need to back up and restore, use `GET` calls to get a copy of the data. And use the corresponding `PUT / POST API` to populate the new instance on a different region.
-
 
 ## Locations
 {: #en-ha-locations}

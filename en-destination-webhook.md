@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-02-01"
+lastupdated: "2022-07-05"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, webhook
 
@@ -19,20 +19,16 @@ subcollection: event-notifications
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-
-
 # Webhooks
 {: #en-destinations-webhook}
 
 A webhook represents a service destination, where an incoming notification can be consumed programmatically. For example, an incoming notification about an event can trigger a webhook destination to a back-end microservice to act based on the content of the incoming notification.
 {: shortdesc}
 
-
 ## Configuring a webhook destination
 {: #en-webhook-configure}
 
 You can configure a webhook destination in the `Destinations` tab. As part of the configuration, enter the webhook URL, and the REST API verb to be called when the webhook is called. You can also enter authorization headers to the destination webhook. Create a subscription to associate the webhook destination to a topic.
-
 
 ## Webhook signing
 {: #en-webhook-sign}
@@ -53,5 +49,4 @@ In addition, the following timeout conditions cause the webhook call to fail:
 - A response timeout of 60 seconds
 
 If a call to the webhook URL fails even after retry attempts, the notification is lost.
-{:note: .note}
-
+{: note}

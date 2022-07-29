@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-06-30"
+lastupdated: "2022-07-05"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, ms teams, Microsoft Teams
 
@@ -47,71 +47,71 @@ Event notification generates Microsoft Teams notifications from incoming payload
 
 ```sh
 {
-    "type": "message",
-    "attachments": [
-        {
-            "contentType": "application/vnd.microsoft.card.adaptive",
-            "content": {
-                "type": "AdaptiveCard",
-                "body": [
-                    {
-                        "items": [
-                            {
-                                "size": "large",
-                                "text": "{{event.ibmendefaultshort}}",
-                                "type": "TextBlock"
-                            }
+   "type": "message",
+   "attachments": [
+      {
+         "contentType": "application/vnd.microsoft.card.adaptive",
+         "content": {
+            "type": "AdaptiveCard",
+            "body": [
+               {
+                  "items": [
+                     {
+                        "size": "large",
+                        "text": "{{event.ibmendefaultshort}}",
+                        "type": "TextBlock"
+                     }
+                  ],
+                  "type": "Container"
+               },
+               {
+                  "text": "{{event.ibmendefaultlong}}",
+                  "type": "TextBlock",
+                  "weight": "Bolder",
+                  "wrap": true
+               },
+               {
+                  "actions": [
+                     {
+                        "targetElements": [
+                           "stacktrace"
                         ],
-                        "type": "Container"
-                    },
-                    {
-                        "text": "{{event.ibmendefaultlong}}",
+                        "title": "Show Data",
+                        "type": "Action.ToggleVisibility"
+                     }
+                  ],
+                  "type": "ActionSet"
+               },
+               {
+                  "id": "stacktrace",
+                  "isVisible": false,
+                  "items": [
+                     {
+                        "fontType": "monospace",
+                        "isSubtle": true,
+                        "size": "Small",
+                        "text": "{{event.data}}",
                         "type": "TextBlock",
                         "weight": "Bolder",
                         "wrap": true
-                    },
-                    {
-                        "actions": [
-                            {
-                                "targetElements": [
-                                    "stacktrace"
-                                ],
-                                "title": "Show Data",
-                                "type": "Action.ToggleVisibility"
-                            }
-                        ],
-                        "type": "ActionSet"
-                    },
-                    {
-                        "id": "stacktrace",
-                        "isVisible": false,
-                        "items": [
-                            {
-                                "fontType": "monospace",
-                                "isSubtle": true,
-                                "size": "Small",
-                                "text": "{{event.data}}",
-                                "type": "TextBlock",
-                                "weight": "Bolder",
-                                "wrap": true
-                            }
-                        ],
-                        "type": "Container"
-                    }
-                ],
-                "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-                "version": "1.4"
-            }
-        }
-    ]
+                     }
+                  ],
+                  "type": "Container"
+               }
+            ],
+            "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+            "version": "1.4"
+         }
+      }
+   ]
 }
 ```
 
 Here - 
 
-*ibmendefaultshort* is the default short payload provided in the incoming payload
-*ibmendefaultlong* is tbe default long payload provided in the incoming payload
-*data* is the data JSON provided in the incoming payload and will be formated as json in the Microsoft Teams notification
+*ibmendefaultshort* is the default short payload provided in the incoming payload.
+*ibmendefaultlong* is tbe default long payload provided in the incoming payload.
+*data* is the data JSON provided in the incoming payload and will be formated as json in the Microsoft Teams notification.
 
 ## Microsoft Teams retry policy
 {: #en-msteams-retry}

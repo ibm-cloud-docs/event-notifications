@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-06-29"
+lastupdated: "2022-07-05"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email
 
@@ -19,8 +19,6 @@ subcollection: event-notifications
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 
-
-
 # {{site.data.keyword.cloud_notm}} email service
 {: #en-destinations-email}
 
@@ -34,16 +32,15 @@ The emails originate from `no-reply@cloud.ibm.com` or `event-notifications@cloud
 
 {{site.data.keyword.cloud_notm}} email service is a destination that is provided out-of-the-box. When a new instance is created, you see an entry `{{site.data.keyword.cloud_notm}} Email service` in the destination tab. The email destination is pre-configured, and is ready to use.
 
-
 ## Using an {{site.data.keyword.cloud_notm}} email service destination
 {: #en-destinations-email-use}
 
- To use the email service destination, add it to a subscription along with the email addresses of interest. Within a single subscription, you can add up to 100 email recipients. The subscription also needs a topic to filter events of interest from your sources. When an event lands in the topic, {{site.data.keyword.en_short}} immediately routes the event notification to your email recipients. 
+To use the email service destination, add it to a subscription along with the email addresses of interest. Within a single subscription, you can add up to 100 email recipients. The subscription also needs a topic to filter events of interest from your sources. When an event lands in the topic, {{site.data.keyword.en_short}} immediately routes the event notification to your email recipients. 
 
- If you add an individual to the recipient list who does not want to receive email notifications, the recipient can opt out by clicking a link in the footer of the email. You can track recipients who opt into the {{site.data.keyword.en_short}} dashboard.
+If you add an individual to the recipient list who does not want to receive email notifications, the recipient can opt out by clicking a link in the footer of the email. You can track recipients who opt into the {{site.data.keyword.en_short}} dashboard.
 
 By adding email addresses, you represent on behalf of yourself and your company that you have properly informed the individuals, to whom the added emails pertain, of their addition to this recipient list and purpose thereof, and have the required consents to do so.
-{:note: .note}
+{: note}
 
 ## Email charges
 {: #en-destinations-email-charge}

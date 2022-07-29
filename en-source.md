@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-06-29"
+lastupdated: "2022-07-05"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -30,14 +30,10 @@ A source can publish to multiple topics. In other contexts sources are identifie
 ## IBM managed sources
 {: #en-ibm-sources-list}
 
-An IBM managed source indicates a service on {{site.data.keyword.cloud_notm}} which can emit events to {{site.data.keyword.en_short}} service.
-
 The list of IBM provided sources is as follows:
 - [IBM Cloud Monitoring](https://cloud.ibm.com/docs/monitoring?topic=monitoring-notifications)
 - [IBM Cloud Security and Compliance Center](https://cloud.ibm.com/docs/security-compliance?topic=security-compliance-event-notifications&interface=ui)
 - [IBM Cloud Secrets Manager](https://cloud.ibm.com/docs/secrets-manager?topic=secrets-manager-event-notifications&interface=ui)
-
-An IBM managed source service needs to be enabled and connected to an {{site.data.keyword.en_short}} service instance, so that it can send events to the service.
 
 ## API sources
 {: #en-api-sources}

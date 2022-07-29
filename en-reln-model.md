@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-06-29"
+lastupdated: "2022-07-05"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -42,7 +42,6 @@ When an event occurs in a registered source, the source sends an event notificat
 {: #en-format}
 
 A notification sent to the Event Notifications service must conform to the [CNCF](https://www.cncf.io/) [CloudEvents](https://cloudevents.io/) format.
-
 
 ## More about filters
 {: #en-more-filter}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-06-29"
+lastupdated: "2022-07-05"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email
 
@@ -40,7 +40,7 @@ To use the SMS service destination, add it to a subscription along with the phon
 If you add an individual to the recipient list who does not want to receive SMS notifications, the recipient can opt out by clicking a link in the SMS or, in some areas, replying to message with keyword `STOP`. You can track recipients who opt into the {{site.data.keyword.en_short}} dashboard.
 
 By adding phone numbers, you represent on behalf of yourself and your company that you have properly informed the individuals, to whom the added phone numbers pertain, of their addition to this recipient list and purpose thereof, and have the required consents to do so.
-{:note: .note}
+{: note}
 
 ## SMS charges
 {: #en-destinations-sms-charge}

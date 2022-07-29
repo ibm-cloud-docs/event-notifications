@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-16"
+lastupdated: "2022-07-05"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -26,7 +26,6 @@ Create an {{site.data.keyword.en_short}} subscription. Destinations subscribe to
 
 Of these, SMTP_IBM and SMS_IBM are supported out-of-the box.
 
-
 ## Create a subscription
 {: #en-create-subscription}
 {: step}
@@ -34,14 +33,14 @@ Of these, SMTP_IBM and SMS_IBM are supported out-of-the box.
 Click `Subscriptions` in the {{site.data.keyword.en_short}} console.
 
 ## Add subscription details
-{: #en-subscription-details }
+{: #en-subscription-details}
 {: step}
 
 - Click `Create` to display subscription wizard.
 - Fill in the following subscription details:
     - `Subscription name`: name of the subscription.
     - `Subscription description`: add an optional description.
-- Under the `Subscribe to a topic` section, select a topic from the drop down list and select a destination from from the destination drop down list.
+- Under the `Subscribe to a topic` section, select a topic from the drop down list and select a destination from the destination drop down list.
 - Destination type; select type under `Destination`.
 
 ## Enable the subscription
@@ -57,11 +56,12 @@ Click `Subscriptions` in the {{site.data.keyword.en_short}} console.
 You can subscribe to or unsubscribe from specific Event Notification email notifications. Also, users can opt out of receiving notifications for any subscription.
 
 To unsubscribe, do the following:
+
 - Under email subscription, click the `Unsubscribed` dialog to modify subscription settings and unsubscribe from mailing lists. 
 - Select or deselect the `Unsubscribed` dialog, this automatically reflects in the subscription wizard. 
 	 
--The role of an Admin:
+The role of an Admin:
+
 - Only an admin can move or modify an unsubscribed email id to `Active`.
 - Only an admin can clear unsubscribed email lists. 
 - An admin cannot manually move or add users to the unsubscribed list.
-

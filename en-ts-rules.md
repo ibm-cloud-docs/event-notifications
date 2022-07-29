@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-03-04"
+lastupdated: "2022-07-05"
 
 keywords: question about event notifications, rules, topic
 
@@ -12,9 +12,7 @@ content-type: troubleshoot
 
 ---
 
-
 {{site.data.keyword.attribute-definition-list}}
-
 
 # Why can't I write rules for the topic?
 {: #troubleshoot-rules-topic}
