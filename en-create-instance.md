@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-07-05"
+lastupdated: "2022-07-29"
 
 keywords: event notifications, event-notifications, tutorials
 
 subcollection: event-notifications
 
 content-type: tutorial
-account-plan: lite
+account-plan: lite, standard
 completion-time: 10m
 
 ---
@@ -44,8 +44,10 @@ Currently, only `Lite` and `Standard` pricing plans are defined as follows:
 
 * `Lite` plan: This plan gives you unlimited ingested events, 10 topics, two filters per topic, five destinations, 20 outbound emails, 20 outbound SMSes, 20 outbound webhooks, and 1000 notifications per push destination. 10 subscriptions are allowed, and a subscription can have a maximum of three email recipients.
 
+* `Standard` plan: You are charged for ingested events and for outbound digital messages. An ingested event is one that is received and filtered. If a source is connected but no filters are defined for it (in other words, the source is not associated with any topic), the incoming events are dropped, and you are not charged.  Outbound digital messages come in various types, and each type is priced separately.
 
-* `Standard` plan: You are charged for ingested events and for outbound digital messages. An ingested event is one that is received and filtered. If a source is connected but no filters are defined for it (in other words, the source is not associated with any topic), the incoming events are dropped, and you are not charged. Outbound digital messages come in various types, and each type is priced separately.
+   You can use **Pre-production destination**, as low-cost push destination, for your development and test environments. This feature is only available for `Standard` pricing plan.
+   {: note}
 
 ## Add a service name
 {: #en-configure}
@@ -68,5 +70,7 @@ Define optional tags that identify this service instance.
 ## Create the {{site.data.keyword.en_short}} service instance
 {: #en-create}
 {: step}
+
+Accept the licensing agreements and terms by clicking the checkbox.
 
 Click `Create`. A new service instance is created and the {{site.data.keyword.en_short}} console is displayed.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-07-05"
+lastupdated: "2022-07-29"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email
 
@@ -56,3 +56,19 @@ In the example, the total outbound digital messages are as follows:
 You are charged for messages that are successfully sent by the {{site.data.keyword.cloud_notm}} email service regardless of whether the remote email server successfully delivered the message to the recipient. For example, bounced emails still count as outbound digital messages. So vet your email list carefully to prevent unnecessary charges.
 
 You can monitor your email usage by setting up a monitoring dashboard through the `Actions` menu of the {{site.data.keyword.en_short}} dashboard. See [Monitor Event Notifications service metrics with IBM Cloud Monitoring](/docs/event-notifications?topic=event-notifications-en-monitoring#en-monitoring) for details.
+
+## Unsubscribe 
+{: #en-unsubscribe-email-destination}
+
+You can subscribe to or unsubscribe from specific Event Notification email notifications. Also, users can opt out of receiving notifications for any subscription.
+
+The **Active** tab displays the list of recipients email addresses and the date activated. The **Unsubscribed** tab displays the list of recipients who don't want to receive any email notification.
+
+To unsubscribe, do the following:
+- Under email subscription, click the `Unsubscribed` dialog to modify subscription settings and unsubscribe from mailing lists. 
+- Select or deselect the `Unsubscribed` dialog, this automatically reflects in the subscription wizard. 
+	 
+-The role of an Admin:
+- Only an admin can move or modify an unsubscribed email id to `Active`.
+- Only an admin can clear unsubscribed email lists. 
+- An admin cannot manually move or add users to the unsubscribed list.
