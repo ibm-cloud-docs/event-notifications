@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-07-05"
+lastupdated: "2022-07-29"
 
 keywords: event notifications, event-notifications, tutorials
 
 subcollection: event-notifications
 
 content-type: tutorial
-account-plan: lite
+account-plan: lite, standard
 completion-time: 10m
 
 ---
@@ -24,7 +24,7 @@ completion-time: 10m
 Create an {{site.data.keyword.en_short}} subscription. Destinations subscribe to topics. Multiple destinations can subscribe to a single topic. An email subscription is a list of all emails IDs, and an SMS subscription is a list of all phone numbers that a notification is routed to. A webhook subscription links a webhook destination to a topic.
 {: shortdesc}
 
-Of these, SMTP_IBM and SMS_IBM are supported out-of-the box.
+Of these, {{site.data.keyword.cloud_notm}} Email service and {{site.data.keyword.cloud_notm}} SMS service are supported out-of-the box.
 
 ## Create a subscription
 {: #en-create-subscription}
@@ -36,32 +36,25 @@ Click `Subscriptions` in the {{site.data.keyword.en_short}} console.
 {: #en-subscription-details}
 {: step}
 
-- Click `Create` to display subscription wizard.
+- Click `Create` to display subscription side panel.
 - Fill in the following subscription details:
-    - `Subscription name`: name of the subscription.
-    - `Subscription description`: add an optional description.
-- Under the `Subscribe to a topic` section, select a topic from the drop down list and select a destination from the destination drop down list.
-- Destination type; select type under `Destination`.
+    - `Name`: name of the subscription.
+    - `Description`: add an optional description.
+- Select a `Topic` from the drop down list.
+- Select a destination type from the destination drop down list.
+   - `IBM Cloud SMS service` - When you select this option, you can add upto 100 phone numbers to the recipient list. In the **Active** tab, add the Mobile numbers. When a recipient sends an response `STOP`, the recipients number will be moved to the **Unsubscribed** tab. The recipient can restart to receive the SMS by sending a response code `START`.
+   - `IBM Cloud Email service` - When you select this option, you can add upto 100 email addresses of the recipient list. The **Active** tab displays the list of recipients email addresses and the date activated. The **Unsubscribed** tab displays the list of recipients who don't want to receive any email notification.
+- Add additional information related to the respective destination type.
+- Click **Create**.
 
 ## Enable the subscription
 {: #en-subscription-finish}
 {: step}
 
-- Click `Create` in the subscription wizard.
+- Click `Create` in the subscription side panel.
 
 ## Unsubscribe 
 {: #en-unsubscribe-finish}
 {: step}
 
-You can subscribe to or unsubscribe from specific Event Notification email notifications. Also, users can opt out of receiving notifications for any subscription.
-
-To unsubscribe, do the following:
-
-- Under email subscription, click the `Unsubscribed` dialog to modify subscription settings and unsubscribe from mailing lists. 
-- Select or deselect the `Unsubscribed` dialog, this automatically reflects in the subscription wizard. 
-	 
-The role of an Admin:
-
-- Only an admin can move or modify an unsubscribed email id to `Active`.
-- Only an admin can clear unsubscribed email lists. 
-- An admin cannot manually move or add users to the unsubscribed list.
+You can subscribe to or unsubscribe from specific Event Notification subscription. Also, users can opt-out of receiving notifications for any subscription.

@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-06-29"
+lastupdated: "2022-07-29"
 
 keywords: event notifications, IBM Cloud
 
 subcollection: event-notifications
 
 content-type: tutorial
-account-plan: lite
+account-plan: lite, standard
 completion-time: 10m
 
 ---
@@ -24,7 +24,7 @@ completion-time: 10m
 This tutorial brings you through the steps that you need to take before you create an {{site.data.keyword.en_full_notm}} service.
 {: shortdesc}
 
-{{site.data.keyword.en_short}} is a routing service that tells you about critical events that occur in your {{site.data.keyword.cloud}} account. You can filter and route event notifications from {{site.data.keyword.cloud_notm}} services like Monitoring, Security and Compliance Center, and Secrets Manager to communication channels like email, SMS, push notifications, and webhooks.
+{{site.data.keyword.en_short}} is a routing service that tells you about critical events that occur in your {{site.data.keyword.cloud}} account. You can filter and route event notifications from {{site.data.keyword.cloud_notm}} services like Monitoring, Security and Compliance Center, and Secrets Manager to communication channels like email, SMS, push notifications, webhooks, slack, and Microsoft&trade; Teams.
 
 ## Create an {{site.data.keyword.cloud_notm}} account
 {: #en-cloud-ac}
@@ -40,8 +40,8 @@ Decide on a location where your service will be hosted. Currently, the following
 
 * Dallas (us-south)
 * London (eu-gb)
-* Sydney (au-syd)
 * Frankfurt (eu-de)
+* Sydney (au-syd)
 
 ## Decide on a pricing plan
 {: #en-decide-pricing-plans}
@@ -49,8 +49,12 @@ Decide on a location where your service will be hosted. Currently, the following
 
 Based on your business requirements, decide on a pricing plan. Currently, the following plans are available: Lite, and Standard.
 
-* `Lite`: This plan gives you unlimited ingested events, 10 topics, 2 filters per topic, 5 destinations, 20 outbound emails, 20 outbound SMSes, 20 outbound webhooks, and 1000 notifications per push destination. Ten subscriptions are allowed, and a subscription can have a maximum of three email recipients.
-* `Standard`: You are charged for ingested events and for outbound digital messages. An ingested event is one that is received and filtered. If a source is connected but no filters are defined for it (that is, the source is not associated with any topic), the incoming events are dropped, and you are not charged. Outbound digital messages come in various types, and each type is priced separately.
+- `Lite`: This plan gives you unlimited ingested events, 10 topics, 2 filters per topic, 5 destinations, 20 outbound emails, 20 outbound SMSes, 20 outbound webhooks, and 1000 notifications per push destination. Ten subscriptions are allowed, and a subscription can have a maximum of three email recipients.
+
+- `Standard`: You are charged for ingested events and for outbound digital messages. An ingested event is one that is received and filtered. If a source is connected but no filters are defined for it (that is, the source is not associated with any topic), the incoming events are dropped, and you are not charged. Outbound digital messages come in various types, and each type is priced separately.
+
+   You can use **Pre-production destination**, as low-cost push destination, for your development and test environments. This feature is only available for `Standard` pricing plan.
+   {: note}
 
 ## Choose an event source
 {: #en-decide-event-source}
@@ -83,7 +87,6 @@ Human destinations are devices, servers, or applications that present notificati
 - [{{site.data.keyword.cloud_notm}} SMS service](/docs/event-notifications?topic=event-notifications-en-destinations-sms)
 - [{{site.data.keyword.cloud_notm}} Slack](/docs/event-notifications?topic=event-notifications-en-destinations-slack)
 - [Microsoft Teams](/docs/event-notifications?topic=event-notifications-en-destinations-msteams)
-
 
 ### Service destinations
 {: #en-destination-service}

@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-07-05"
+lastupdated: "2022-07-29"
 
 keywords: event notifications, event-notifications, tutorials, push, android, firebase, fcm
 
 subcollection: event-notifications
 
 content-type: tutorial
-account-plan: lite
+account-plan: lite, standard
 completion-time: 10m
 
 ---

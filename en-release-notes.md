@@ -2,11 +2,12 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-07-05"
+lastupdated: "2022-07-29"
 
 keywords: event-notifications, event notifications, about event notifications
 
 subcollection: event-notifications
+
 content-type: release-note
 
 ---
@@ -27,15 +28,25 @@ content-type: release-note
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
 
-## 29 June 2022
-{: #event-notifications-June2022}
+## 31 Jul 2022
+{: #event-notifications-July3122}
+{: release-note}
+
+New Pre-production destination
+:  You can now use **Pre-production destination**, as low-cost push destination, for your development and test environments. For more information, see [{{site.data.keyword.cloud_notm}} Push notification service](/docs/event-notifications?topic=event-notifications-en-destinations-push).
+
+Support for SMS opt-out
+:  You can now monitor users who opt out for receiving SMS. For more information, see [{{site.data.keyword.cloud_notm}} Push notification service](/docs/event-notifications?topic=event-notifications-en-destinations-sms).
+
+## 29 Jun 2022
+{: #event-notifications-June2922}
 {: release-note}
 
 New destination: Microsoft Teams
 :  Microsoft Teams is now available as a destination. You can send notifications to your Microsoft Teams using Event Notifications. [Send notifications to your Teams using IBM Cloud® Event Notifications](/docs/event-notifications?topic=event-notifications-en-destinations-msteams).
 
 ## 31 May 2022
-{: #event-notifications-May2022}
+{: #event-notifications-May3122}
 {: release-note}
 
 New destination: Slack
@@ -43,7 +54,7 @@ New destination: Slack
 
 
 ## 29 Apr 2022
-{: #event-notifications-Apr2022}
+{: #event-notifications-Apr2922}
 {: release-note}
 
 New destinations: Web Push Notifications for Chrome and Firefox
@@ -56,7 +67,7 @@ New destinations: Web Push Notifications for Chrome and Firefox
 
 Event Notifications is now available in the Frankfurt region.
 
-## 28 Feb 2022
+## 28 February 2022
 {: #event-notifications-Feb2822}
 {: release-note}
 

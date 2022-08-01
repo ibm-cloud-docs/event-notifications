@@ -88,6 +88,7 @@ toc:
           topics:
           - en-high-availability.md
           - en-regions-endpoints.md
+      - en-payload.md
       - en-notices.md
 
 
@@ -97,7 +98,6 @@ toc:
       - en-getting-support.md
       - en-responsibilities.md
       - en-migration.md
-      - en-payload.md
       - topicgroup:
           label: FAQs
           topics:
