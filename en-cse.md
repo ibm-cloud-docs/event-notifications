@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-08-09"
+lastupdated: "2022-08-10"
 
 keywords: event-notifications, event notifications, about event notifications, service endpoints for {{site.data.keyword.en_short}}, network isolation in {{site.data.keyword.en_short}}
 
@@ -28,9 +28,8 @@ Keep in mind the following considerations:
 - You can select a service endpoint option for a {{site.data.keyword.en_short}} instance only at its creation.
 - The {{site.data.keyword.en_short}} service UI is not accessible for **Private only** instances.
 
-## Setting up private endpoints for {{site.data.keyword.secrets-manager_short}} in the UI
+## Setting up private endpoints for {{site.data.keyword.en_short}} in the UI
 {: #en-endpoint-setup-ui}
-{: ui}
 
 After your account is enabled for VRF and service endpoints, you can provision a {{site.data.keyword.en_short}} service instance to connect over a private service endpoint.
 
@@ -56,3 +55,8 @@ After your account is enabled for VRF and service endpoints, you can provision a
 1. Accept the licensing agreements and terms by clicking the checkbox.
 
 1. Click **Create**. A new service instance is created and the {{site.data.keyword.en_short}} console displayed.
+
+## Viewing your endpoint URLs
+{: #en-viewing-endpoint-ui}
+
+The service endpoint URLs are different for private and public network connections. For more information about your service endpoint URLs, see [Regions and endpoints](/docs/event-notifications?topic=event-notifications-en-regions-endpoints).
