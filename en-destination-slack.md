@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-07-05"
+lastupdated: "2022-08-16"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, slack
 
@@ -24,6 +24,9 @@ subcollection: event-notifications
 
 A slack represents a service destination, where an incoming notification can be consumed programmatically. For example, an incoming notification about an event can trigger a slack notification based on the content of the incoming notification.
 {: shortdesc}
+
+When a message of length greater than 3000 characters is sent to slack, the message text will get truncated with leaders `[...]`.
+{: note}
 
 ## Generate slack incoming webhook URL 
 {: #en-generate-slack-incoming-webhook-url}

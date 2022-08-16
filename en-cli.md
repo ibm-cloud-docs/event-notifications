@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-07-15"
+lastupdated: "2022-08-16"
 
 keywords: event notifications CLI, event notifications command line, event notifications terminal, event notifications shell, Event Notifications, en, en version history
 
@@ -26,4 +26,5 @@ Find a summary of changes for each version of {{site.data.keyword.en_short}} plu
 | 0.0.8      | 4 May 2022       | Chrome and Firefox destination support and Send notification cloud spec. |
 | 0.1.0      | 6 June 2022      | Slack and Safari Destination support.                                    |
 | 0.1.1      | 27 June 2022     | Microsoft Teams destination support.                                     |
+| 0.1.1      | 16 August 2022   | Support for Private endpoint.                                            |
 {: caption="Table 1. Changes in the {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} CLI" caption-side="bottom"} 

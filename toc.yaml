@@ -25,7 +25,25 @@ toc:
           topics:
           - en-destination-email.md
           - en-destination-sms.md
-          - en-destination-push.md
+          - topicgroup:
+              label: Push Notifications
+              topics:
+              - en-destination-push.md
+              - link:
+                  label: Android Push Notifications (FCM)
+                  href: https://{DomainName}/docs/event-notifications?topic=event-notifications-en-push-fcm
+              - link:
+                  label: iOS Push Notifications (APNs)
+                  href: https://{DomainName}/docs/event-notifications?topic=event-notifications-en-push-apns
+              - link:
+                  label: Chrome Push Notifications
+                  href: https://{DomainName}/docs/event-notifications?topic=event-notifications-en-push-chrome
+              - link:
+                  label: Firefox Push Notifications
+                  href: https://{DomainName}/docs/event-notifications?topic=event-notifications-en-push-firefox
+              - link:
+                  label: Safari Push Notifications
+                  href: https://{DomainName}/docs/event-notifications?topic=event-notifications-en-push-safari
           - en-destination-webhook.md
           - en-destination-slack.md
           - en-destination-msteams.md
