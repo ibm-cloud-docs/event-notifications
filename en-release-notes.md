@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-07-29"
+lastupdated: "2022-08-16"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -27,6 +27,13 @@ content-type: release-note
 
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
+
+## 16 Aug 2022
+{: #event-notifications-Aug1622}
+{: release-note}
+
+Support for Private endpoints
+:  To ensure that you have enhanced control and security over your data when you use Event Notifications, you have the option of using private routes to {{site.data.keyword.cloud_notm}} service endpoints. For more information, see [Using service endpoints to privately connect to Event Notifications](/docs/event-notifications?topic=event-notifications-en-service-connection).
 
 ## 31 Jul 2022
 {: #event-notifications-July3122}
@@ -67,7 +74,7 @@ New destinations: Web Push Notifications for Chrome and Firefox
 
 Event Notifications is now available in the Frankfurt region.
 
-## 28 February 2022
+## 28 Feb 2022
 {: #event-notifications-Feb2822}
 {: release-note}
 
