@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-07-29"
+lastupdated: "2022-08-24"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -23,15 +23,16 @@ completion-time: 10m
 
 Create an {{site.data.keyword.en_short}} destination. Destinations are custom protocols, which are either services or user reachable entities. Currently, {{site.data.keyword.en_short}} supports the following destinations:
 
-- IBM Cloud Email
-- IBM Cloud push notification service
-- IBM Cloud SMS
-- Webhook
+- {{site.data.keyword.cloud_notm}} Email
+- {{site.data.keyword.cloud_notm}} SMS
+- Push notifications (Android, iOS, Chrome, Firefox, and Safari)
 - Slack
 - Microsoft&trade; Teams
+- Webhook
+- {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}
 {: shortdesc}
 
-email-ibm and email-sms are supported out of the box.
+**IBM Cloud SMS service** and **IBM Cloud Email service** are supported out of the box.
 
 ## Create a destination
 {: #en-create-destination}
@@ -58,3 +59,20 @@ When you select the `Destination Type` as any one of the push notification servi
 {: step}
 
 Click `Add`.
+
+## Modify a Pre-production destination to Production destination
+{: #en-destination-preprod-prod}
+
+You can modify a **Pre-production destination** to **Production destination** after creating the destination by using the **Edit** option from the overflow menu.
+
+The destination change will be charged additionally. For more information on the charges calculation, see [here](/docs/event-notifications?topic=event-notifications-en-destinations-push#en-destinations-push-charge-preprod-to-prod).
+
+To modify the destination, 
+- Select the pre-production destination from the list of destinations
+- Click the three vertical dots in the selected pre-production destination to access the overflow menu
+- Click **Edit**. This brings the editable view of the selected destination.
+- Click the **Production destination** tile to change the destination.
+- Click **Add**.
+
+You cannot change a **Production destination** to **Pre-production destination**.
+{: important}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-08-16"
+lastupdated: "2022-08-24"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -27,6 +27,16 @@ content-type: release-note
 
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
+
+## 25 Aug 2022
+{: #event-notifications-Aug2522}
+{: release-note}
+
+New destination: {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}
+:  {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}} is now available as a destination. You can send notifications to your {{site.data.keyword.openwhisk_short}} instance using Event Notifications. [Send notifications to your {{site.data.keyword.openwhisk_short}} instance using Event Notifications](/docs/event-notifications?topic=event-notifications-en-destinations--cloud-functions).
+
+Support for changing a **Pre-production destination** to **Production destination**
+:  You can now change a **Pre-production destination** to **Production destination** after your development and testing. For more information, see [Modify a Pre-production destination to Production destination](/docs/event-notifications?topic=event-notifications-en-create-en-destination#en-destination-preprod-prod).
 
 ## 16 Aug 2022
 {: #event-notifications-Aug1622}

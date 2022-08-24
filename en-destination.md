@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2022
-lastupdated: "2022-08-16"
+  years: 2021, 2022
+lastupdated: "2022-08-24"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, event destination
 
@@ -10,14 +10,7 @@ subcollection: event-notifications
 
 ---
 
-{:codeblock: .codeblock}
-{:external: target="_blank" .external}
-{:important: .important}
-{:note: .note}
-{:pre: .pre}
-{:screen: .screen}
-{:shortdesc: .shortdesc}
-{:tip: .tip}
+{{site.data.keyword.attribute-definition-list}}
 
 # Event destinations
 {: #en-destination}
@@ -54,3 +47,4 @@ Both Email and SMS destinations are provided out of the box, and are available w
 Service destinations are cloud services or application where notifications are consumed programmatically. The following service destination is supported by the {{site.data.keyword.en_short}} service:
 
 - [Webhook](/docs/event-notifications?topic=event-notifications-en-destinations-webhook)
+- [{{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}](/docs/event-notifications?topic=event-notifications-en-destinations-cloud-functions)
