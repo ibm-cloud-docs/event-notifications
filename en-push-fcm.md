@@ -2,14 +2,14 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-07-05"
+lastupdated: "2022-07-29"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, push
 
 subcollection: event-notifications
 
 content-type: tutorial
-account-plan: lite
+account-plan: lite, standard
 completion-time: 10m
 
 ---
@@ -136,10 +136,14 @@ Take the following steps:
 
 Click `Destinations` in the {{site.data.keyword.en_short}} console and add the following destination details:
 
-* `Destination name`: add a name for the Destination.
-* `Destination description`: add an optional description for the destination.
-* `Destination type`: select Android Push Notifications type from the dropdown list.
+* `Name`: add a name for the Destination.
+* `Description`: add an optional description for the destination.
+* `Type`: select `Android Push Notifications (FCM)` type from the dropdown list.
+* Select a destination plan: Pre-production destination or Production destination.
+   - `Pre-production destination` - select this destination as low-cost push destination, for your development and test environments.
+   - `Production destination` - utilize the full capability of this destination. Unlimited devices and outbound messages allowed.
 * Update the FCM Push Credentials with the `Sender ID/Project number` and `Server Key`. You can get these details from your `Firebase Console Project Settings > Cloud Messaging` section.
+* Click `Add`.
 
 ## Create an {{site.data.keyword.en_short}} topic
 {: #en-create-topic-fcm}

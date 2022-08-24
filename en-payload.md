@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-07-05"
+lastupdated: "2022-07-29"
 
 keywords: event-notifications, event notifications migration, notifications, destinations, specification
 
@@ -44,7 +44,7 @@ Event Notifications supports the following two modes from the CloudEvents specif
 ### Binary Mode
 {: #en-binary-mode}
 
-In the binarycontent mode, the value of the event `data` is placed into the HTTP request, or response, body as-is, with the `datacontenttype` attribute  value declaring its media type in the HTTP `Content-Typeheader`; all other event attributes are mapped to HTTP headers.
+In the binarycontent mode, the value of the event `data` is placed into the HTTP request, or response, body as-is, with the `datacontenttype` attribute  value declaring its media type in the HTTP `Content-Type` header; all other event attributes are mapped to HTTP headers.
 
 All the attribute names are prefixed with `ce-` and added to the header (except for the `data` and `datacontenttype`).
 
@@ -54,7 +54,7 @@ Binary Mode is recommended way to send notifications.
 ### Structured Mode
 {: #en-structured-mode}
 
-In the structured content mode, event metadata attributes and event data are placed into the HTTP request body. For structured mode set the `Content-Typeheader` to `application/cloudevents+json`.
+In the structured content mode, event metadata attributes and event data are placed into the HTTP request body. For structured mode set the `Content-Type` header to `application/cloudevents+json`.
 
 ## Attributes
 {: #en-attributes}

@@ -2,14 +2,14 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-07-05"
+lastupdated: "2022-07-29"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, push
 
 subcollection: event-notifications
 
 content-type: tutorial
-account-plan: lite
+account-plan: lite, standard
 completion-time: 10m
 
 ---
@@ -86,15 +86,19 @@ Take the following steps:
 
 Click `Destinations` in the {{site.data.keyword.en_short}} console and add the following destination details:
 
-* `Destination name`: add a name for the Destination.
-* `Destination description`: add an optional description for the destination.
-* `Destination type`: select Firefox Push Notifications type from the dropdown list.
+* `Name`: add a name for the Destination.
+* `Description`: add an optional description for the destination.
+* `Type`: select `Firefox Push Notifications` type from the dropdown list.
+* Select a destination plan: Pre-production destination or Production destination.
+   - `Pre-production destination` - select this destination as low-cost push destination, for your development and test environments.
+   - `Production destination` - utilize the full capability of this destination. Unlimited devices and outbound messages allowed.
 * Provide the URL of your website.
-* Once Firefox destination is created. Edit the created destination to get public vapId key required for web sdk.
+* Click **Add**.
+* Once Firefox destination is created. Edit the created destination to get `public vapId key` required for web sdk.
 
-![Destination Edit](images/en-push-firefox-destination-edit.png "Destination Edit"){: caption="Figure 7. Receive notifications" caption-side="bottom"}
+![Destination Edit](images/en-push-firefox-destination-edit.png "Destination Edit"){: caption="Figure 2. Receive notifications" caption-side="bottom"}
 
-![Destination](images/en-push-firefox-destination.png "Destination"){: caption="Figure 7. Receive notifications" caption-side="bottom"}
+![Destination](images/en-push-firefox-destination.png "Destination"){: caption="Figure 3. Receive notifications" caption-side="bottom"}
 
 ## Create an {{site.data.keyword.en_short}} topic
 {: #en-create-topic-ff}
@@ -214,4 +218,4 @@ The Firefox web SDK enables Firefox websites to receive push notifications. Comp
 
 Use the [Send Notification API](https://cloud.ibm.com/apidocs/event-notifications/event-notifications#send-notifications) to send the push notification for the Firefox device. You can use the [Node](https://github.com/IBM/event-notifications-node-admin-sdk#send-notifications) or [Go](https://github.com/IBM/event-notifications-go-admin-sdk#send-notifications) admin SDK instead of calling the API directly.
 
-![Receive notifications](images/en-receive-push-firefox.png "Receive notifications"){: caption="Figure 7. Receive notifications" caption-side="bottom"}
+![Receive notifications](images/en-receive-push-firefox.png "Receive notifications"){: caption="Figure 4. Receive notifications" caption-side="bottom"}

@@ -2,14 +2,14 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-07-05"
+lastupdated: "2022-07-29"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, push
 
 subcollection: event-notifications
 
 content-type: tutorial
-account-plan: lite
+account-plan: lite, standard
 completion-time: 10m
 
 ---
@@ -70,7 +70,6 @@ You must have the following prerequisites in place:
 {: #en-get-safari-credentials}
 {: step}
 
-
 * Add Apple World wide intermediate certificate to your Key Chain, you can find the certificate [here](https://www.apple.com/certificateauthority/)
 
 ![Certificates, Apple World Wide Intermediate certificate Site](images/en_apple_intermediate.png "App ID"){: caption="Figure 2. Certificates, Identifiers & Profiles" caption-side="bottom"}
@@ -81,10 +80,10 @@ You must have the following prerequisites in place:
 
 The Web Push ID (the bundle identifier) is a unique identifier that identifies a specific application. Each application requires an Web Push ID. 
 
-
 * Go to the [Apple developer portal](https://developer.apple.com/) and select Certificates, Identifiers & Profiles.
 
 ![Certificates, Identifiers & Profiles](images/en-apns-cert-tab.png "Web Push ID"){: caption="Figure 4. Certificates, Identifiers & Profiles" caption-side="bottom"}
+
 * Go to `Identifiers > Add identifier button`.
 
 ![Identifier button](images/en-apns-identifier-button.png "Identifier button"){: caption="Figure 5. Identifier Button" caption-side="bottom"}
@@ -137,9 +136,12 @@ Take the following steps:
 
 Click `Destinations` in the {{site.data.keyword.en_short}} console and add the following destination details:
 
-* `Destination name`: add a name for the Destination.
-* `Destination description`: add an optional description for the destination.
-* `Destination type`: select Safari Push Notifications type from the dropdown list.
+* `Name`: add a name for the Destination.
+* `Description`: add an optional description for the destination.
+* `Type`: select Safari Push Notifications type from the dropdown list.
+* Select a destination plan: Pre-production destination or Production destination.
+   - `Pre-production destination` - select this destination as low-cost push destination, for your development and test environments.
+   - `Production destination` - utilize the full capability of this destination. Unlimited devices and outbound messages allowed.
 
 * Update the Safari Push Credentials with the details
     * `Website Name`: The website name. This is the heading used in Notification Center

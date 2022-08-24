@@ -25,7 +25,25 @@ toc:
           topics:
           - en-destination-email.md
           - en-destination-sms.md
-          - en-destination-push.md
+          - topicgroup:
+              label: Push Notifications
+              topics:
+              - en-destination-push.md
+              - link:
+                  label: Android Push Notifications (FCM)
+                  href: https://{DomainName}/docs/event-notifications?topic=event-notifications-en-push-fcm
+              - link:
+                  label: iOS Push Notifications (APNs)
+                  href: https://{DomainName}/docs/event-notifications?topic=event-notifications-en-push-apns
+              - link:
+                  label: Chrome Push Notifications
+                  href: https://{DomainName}/docs/event-notifications?topic=event-notifications-en-push-chrome
+              - link:
+                  label: Firefox Push Notifications
+                  href: https://{DomainName}/docs/event-notifications?topic=event-notifications-en-push-firefox
+              - link:
+                  label: Safari Push Notifications
+                  href: https://{DomainName}/docs/event-notifications?topic=event-notifications-en-push-safari
           - en-destination-webhook.md
           - en-destination-slack.md
           - en-destination-msteams.md
@@ -64,6 +82,11 @@ toc:
           - en-audit.md
           - en-data-security.md
           - en-service-credentials.md
+          - topicgroup:
+              label: Privately connecting to Event Notifications
+              topics:
+              - en-cse.md
+
 
 #  Links to your REST API docs should be included in the Reference navigation group. For details on publishing API docs, see https://test.cloud.ibm.com/docs/api-docs.
 #  Links to your command line reference docs should be included in the Reference navigation group.
@@ -87,7 +110,8 @@ toc:
           label: High availability and disaster recovery
           topics:
           - en-high-availability.md
-          - en-regions-endpoints.md
+      - en-regions-endpoints.md
+      - en-payload.md
       - en-notices.md
 
 
@@ -97,7 +121,6 @@ toc:
       - en-getting-support.md
       - en-responsibilities.md
       - en-migration.md
-      - en-payload.md
       - topicgroup:
           label: FAQs
           topics:

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-07-05"
+lastupdated: "2022-07-29"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email
 
@@ -37,7 +37,7 @@ The text messages originate from IBM-owned phone numbers or alphanumeric sender 
 
 To use the SMS service destination, add it to a subscription along with the phone numbers of the recipients. Within a single subscription, you can add up to 100 phone numbers. The subscription also needs a topic to filter events of interest from your sources. When an event lands in the topic, {{site.data.keyword.en_short}} immediately routes the event notification to your SMS recipients. 
 
-If you add an individual to the recipient list who does not want to receive SMS notifications, the recipient can opt out by clicking a link in the SMS or, in some areas, replying to message with keyword `STOP`. You can track recipients who opt into the {{site.data.keyword.en_short}} dashboard.
+When you select `IBM Cloud SMS service` as the destination type, you can add upto 100 phone numbers to the recipient list. In the **Active** tab, add the Mobile numbers. When a recipient doesn's wants to receive any SMS notification, they can opt-out by sending an response `STOP`, the recipients number will be moved to the **Unsubscribed** tab. The recipient can restart to receive the SMS by sending a response code `START`, in which case, the recipient number will be moved back to the **Active** tab. You can track recipients who opt into the {{site.data.keyword.en_short}} dashboard. 
 
 By adding phone numbers, you represent on behalf of yourself and your company that you have properly informed the individuals, to whom the added phone numbers pertain, of their addition to this recipient list and purpose thereof, and have the required consents to do so.
 {: note}

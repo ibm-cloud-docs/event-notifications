@@ -2,12 +2,12 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-07-13"
+lastupdated: "2022-07-29"
 keywords: event-notifications, event notifications, about event notifications, destinations, push, chrome
 subcollection: event-notifications
 content-type: tutorial
 services:
-account-plan: lite
+account-plan: lite, standard
 completion-time: 10m
 ---
 {{site.data.keyword.attribute-definition-list}}
@@ -96,16 +96,20 @@ Take the following steps:
 
 Click `Destinations` in the {{site.data.keyword.en_short}} console and add the following destination details:
 
-* `Destination name`: add a name for the Destination.
-* `Destination description`: add an optional description for the destination.
-* `Destination type`: select Chrome Push Notifications type from the dropdown list.
+* `Name`: add a name for the Destination.
+* `Description`: add an optional description for the destination.
+* `Type`: select `Chrome Push Notifications` type from the dropdown list.
+* Select a destination plan: Pre-production destination or Production destination.
+   - `Pre-production destination` - select this destination as low-cost push destination, for your development and test environments.
+   - `Production destination` - utilize the full capability of this destination. Unlimited devices and outbound messages allowed.
 * Add your website URL to get it allow listed.
 * Add the `Server Key`, which you got from `Get FCM credentials` section.
+* Click **Add**.
 * When Chrome destination is created. Edit the created destination to get public vapId key required for web sdk.
 
-![Destination Edit](images/en-push-chrome-destination-edit.png "Destination Edit"){: caption="Figure 7. Receive notifications" caption-side="bottom"}
+![Destination Edit](images/en-push-chrome-destination-edit.png "Destination Edit"){: caption="Figure 3. Receive notifications" caption-side="bottom"}
 
-![Destination](images/en-push-chrome-destination.png "Destination"){: caption="Figure 7. Receive notifications" caption-side="bottom"}
+![Destination](images/en-push-chrome-destination.png "Destination"){: caption="Figure 4. Receive notifications" caption-side="bottom"}
 
 ## Create an {{site.data.keyword.en_short}} topic
 {: #en-create-topic-chrome}
