@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-08-24"
+lastupdated: "2022-08-25"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -60,12 +60,12 @@ When you select the `Destination Type` as any one of the push notification servi
 
 Click `Add`.
 
-## Modify a Pre-production destination to Production destination
+## Upgrading a Pre-production destination to Production destination
 {: #en-destination-preprod-prod}
 
-You can modify a **Pre-production destination** to **Production destination** after creating the destination by using the **Edit** option from the overflow menu.
+You can upgrade a **Pre-production destination** to **Production destination** after creating the destination by using the **Edit** option from the overflow menu.
 
-The destination change will be charged additionally. For more information on the charges calculation, see [here](/docs/event-notifications?topic=event-notifications-en-destinations-push#en-destinations-push-charge-preprod-to-prod).
+To understand the billing impact of upgrading a **Pre-production destination** to **Production destination**, see [here](/docs/event-notifications?topic=event-notifications-en-destinations-push#en-destinations-push-charge-preprod-to-prod).
 
 To modify the destination, 
 - Select the pre-production destination from the list of destinations
