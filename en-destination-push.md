@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2022
-lastupdated: "2022-07-29"
+  years: 2021, 2022
+lastupdated: "2022-08-24"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, push
 
@@ -14,16 +14,9 @@ completion-time: 10m
 
 ---
 
-{:codeblock: .codeblock}
-{:external: target="_blank" .external}
-{:important: .important}
-{:note: .note}
-{:pre: .pre}
-{:screen: .screen}
-{:shortdesc: .shortdesc}
-{:tip: .tip}
+{{site.data.keyword.attribute-definition-list}}
 
-# {{site.data.keyword.cloud_notm}} push notification service
+# Push notifications
 {: #en-destinations-push}
 {: toc-content-type="tutorial"}
 {: toc-completion-time="10m"}
@@ -34,17 +27,17 @@ completion-time: 10m
 ## Adding a push service destination
 {: #en-destinations-push-add}
 
-Add an {{site.data.keyword.cloud_notm}} push notification destination to your instance of {{site.data.keyword.en_short}} by clicking the `Add` button in the `Destinations` view of the {{site.data.keyword.en_short}} dashboard. After a new push destination is created, you see an entry `{{site.data.keyword.cloud_notm}} push service` in the `Destination` list. You must configure your push destination by adding credentials for Apple Push Notification Service (APNS) or Firebase Cloud Messaging (FCM). See [Send a push notification using Event Notifications](/docs/event-notifications?topic=event-notifications-en-send-push) for more details.
+Add an {{site.data.keyword.cloud_notm}} push notification destination to your instance of {{site.data.keyword.en_short}} by clicking the `Add` button in the `Destinations` view of the {{site.data.keyword.en_short}} dashboard. After a new push destination is created, you see an entry `{{site.data.keyword.cloud_notm}} push service` in the `Destination` list. You must configure your push destination by adding credentials for Apple Push Notification Service (APNS) or Firebase Cloud Messaging (FCM). 
 
 Each application and platform requires a separate push destination.
 
-You can use **Pre-production destination**, as low-cost push destination, for your development and test environments. This feature is only available for `Standard` pricing plan.
+You can use **Pre-production destination**, as low-cost push destination, for your development and test environments. You can change the **Pre-production destination** to **Production destination** post completion of your development and testing. This feature is only available for `Standard` pricing plan.
 {: note}
 
-## Using an {{site.data.keyword.cloud_notm}} push service destination
+## Using a push service destination
 {: #en-destinations-push-use}
 
-To use the push service destination, add it to a subscription. The subscription also needs a topic to filter events of interest from your sources. When an event lands in the topic, {{site.data.keyword.en_short}} immediately routes the event notification to your registered devices. 
+To use a push service destination, add it to a subscription. The subscription also needs a topic to filter events of interest from your sources. When an event lands in the topic, {{site.data.keyword.en_short}} immediately routes the event notification to your registered devices. 
 
 The push service works along with an app on your users' mobile devices. You must instrument the app with the {{site.data.keyword.en_short}} push SDK. The app must ensure that users consent to notifications, and then the SDK helps to register their mobile devices. See the [Create an Event Notifications destination](/docs/event-notifications?topic=event-notifications-en-create-en-destination) for details.
 
@@ -82,3 +75,27 @@ Consumption: Only 500 devices or 5000 outbound digital messages is permitted per
 
 For example, if you tried to send 5001th message, the message cap automatically is raised to 10000 (another 5000 messages are added) for the month and the device cap is raised to 1000 (another 500 devices are added) per month. Notice both limits are always raised even if only one cap has been exceeded.
 
+### Push charges for changing from pre-production destination to production destination
+{: #en-destinations-push-charge-preprod-to-prod}
+
+You can change a pre-production destination to a production destination at any given time and the charges are calculated accordingly.
+
+The push service has two components to pricing: a destination instance fee and a consumption price.
+
+A pre-production destination instance fee of $15 is charged monthly. Every pre-production destination added to your {{site.data.keyword.en_short}} instance incurs the fee.
+
+A production destination charges are $50 per destination per month with unlimited devices and outbound messages.
+
+If you change a pre-production destination to a production destination, the charges would be $15 + pro-rated charge of $50 for that month and the next month onwards, it will be the only production destination charges.
+
+For example, 
+- As of 31 July, you create a pre-production destination and does not register any devices or send messages, the charges for July will be $15.
+- As of 1 August, you register 500 devices and 5001 messages sent. The charges for August will be $30 (This is due to the message threashold exceeding the permitted limit.) 
+- As of 5 August, you change from pre-production destination to production destination. Then the charges for August will be $30 plus pro-rata charges of consumption price, which will be equal to 
+
+   Amount charged = $30 + $ (50/31) x (remaining number of days in the month) = $30 + [(50/31) x 26] = $71.86.
+
+- If you create a pre-production destination on 1 August and not registered any devices and not sent any message, but on 5th August change from pre-production destination to a production destination, then the charges will be:
+
+   Amount charged = $15 + $ (50/31) x (remaining number of days in the month) = $15 + [(50/31) x 26] = $56.86.
+ 

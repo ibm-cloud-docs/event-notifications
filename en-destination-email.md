@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2022
-lastupdated: "2022-07-29"
+  years: 2021, 2022
+lastupdated: "2022-08-24"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email
 
@@ -10,16 +10,9 @@ subcollection: event-notifications
 
 ---
 
-{:codeblock: .codeblock}
-{:external: target="_blank" .external}
-{:important: .important}
-{:note: .note}
-{:pre: .pre}
-{:screen: .screen}
-{:shortdesc: .shortdesc}
-{:tip: .tip}
+{{site.data.keyword.attribute-definition-list}}
 
-# {{site.data.keyword.cloud_notm}} email service
+# {{site.data.keyword.cloud_notm}} Email service
 {: #en-destinations-email}
 
 {{site.data.keyword.en_short}} provides a built-in SMTP server for sending transactional and informational event notification emails to recipients who need to be aware of events that happen within your {{site.data.keyword.cloud_notm}} account. 
@@ -68,7 +61,7 @@ To unsubscribe, do the following:
 - Under email subscription, click the `Unsubscribed` dialog to modify subscription settings and unsubscribe from mailing lists. 
 - Select or deselect the `Unsubscribed` dialog, this automatically reflects in the subscription wizard. 
 	 
--The role of an Admin:
+The role of an Admin:
 - Only an admin can move or modify an unsubscribed email id to `Active`.
 - Only an admin can clear unsubscribed email lists. 
 - An admin cannot manually move or add users to the unsubscribed list.

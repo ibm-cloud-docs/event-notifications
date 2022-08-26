@@ -44,9 +44,10 @@ toc:
               - link:
                   label: Safari Push Notifications
                   href: https://{DomainName}/docs/event-notifications?topic=event-notifications-en-push-safari
-          - en-destination-webhook.md
           - en-destination-slack.md
           - en-destination-msteams.md
+          - en-destination-webhook.md
+          - en-destination-cloud-functions.md
       - topic: en-release-notes.md
         navtitle: Release notes
 
