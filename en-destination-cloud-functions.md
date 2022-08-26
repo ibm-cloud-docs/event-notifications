@@ -18,10 +18,10 @@ subcollection: event-notifications
 A {{site.data.keyword.openwhisk_short}} represents a service destination, where an incoming notification can be consumed programmatically. For example, an incoming notification about an action can trigger a {{site.data.keyword.openwhisk_short}} notification based on the actions that are set to perform one specific task.
 {: shortdesc}
 
-## Generate {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}} incoming webhook URL 
+## Generate {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}} endpoint 
 {: #en-generate-cf-incoming-webhook-url}
 
-To post a {{site.data.keyword.openwhisk_short}} notification you will need to generate an incoming webhook URL. To generate the URL, follow these steps: 
+To post a {{site.data.keyword.openwhisk_short}} notification you will need to generate an endpoint. To generate the endpoint, follow these steps: 
 
 1. Create a [{{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}](https://{DomainName}/functions/create) instance. If you already have an {{site.data.keyword.openwhisk_short}} instance, go to step 3.
 
