@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-08-24"
+lastupdated: "2022-08-29"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, IBM Cloud Functions, cloud functions
 
@@ -15,7 +15,7 @@ subcollection: event-notifications
 # {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}
 {: #en-destinations-cloud-functions}
 
-A {{site.data.keyword.openwhisk_short}} represents a service destination, where an incoming notification can be consumed programmatically. For example, an incoming notification about an action can trigger a {{site.data.keyword.openwhisk_short}} notification based on the actions that are set to perform one specific task.
+A {{site.data.keyword.openwhisk_short}} represents a service destination, where an incoming notification can be consumed programmatically to actions.
 {: shortdesc}
 
 ## Generate {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}} endpoint 
