@@ -65,3 +65,47 @@ Sometimes the devices are marked invalid and deleted from database, if they meet
    - `Gone` - the subscription is no longer valid. 
 
    For more information on the web push protocol, see [here](https://web.dev/push-notifications-web-push-protocol/).
+
+
+## What is the difference between EN Topic Subscriptions and EN Tag Subsciptions to push devices?
+
+
+**EN Topic Subscriptions**:
+For the topic subscription, we start by creating a Topic and writing conditions on that topic.
+This topic is responsible for routing the incoming notification which satisfies the topic condition.
+
+We can subscribe to multiple EN destinations like email, SMS, webhooks, slack, and Microsoft team.
+Also, we can subscribe push type destinations like android, ios firefox, chrome, and safari.
+
+So if incoming notifications satisfy the condition written for Topic (T), it will route the notification to all the destinations subscribed or connected to Topic (T) irrespective of the type of destinations.
+
+
+For example, let's say an `ACME` Bank wants to route maintenance event notifications to android and ios devices customers.
+Acme Bank will follow the below steps
+1) Create a topic named `ACME-Maintenance`.
+2) Write Advance condition `$.notification-type == 'maintenance'`.
+3) Subscribe push android and push ios destinations to the above topic.
+4) Next they send a event notification with payload containing attribute   ``"notification-type":"maintenance"``and ``"ibmenpushto": "{\"platforms\":[\"push_android\",\"push_ios\"]]}"``, `notification-type` attribute is added so that it matches against the  topic condition and `ibmenpushto` because we are targeting customers with android and ios devices.
+
+5) Event notification will get routed to customers with android and ios devices, since its payload contains ``"notification-type":"maintenance"`` which matches the condition for Topic `ACME-Maintenance` and ``"ibmenpushto": "{\"platforms\":[\"push_android\",\"push_ios\"]]}"`` as `ibmenpushto` mandatory for push type EN destinations.
+
+
+***Note:*** All push devices will get registered under EN destination of type push. For example `push-android` , `push-ios`, etc.
+
+
+**Tag Subscription to push devices**
+
+Now in the above example let's say ACME Bank maintenance usually takes place in one region at a time.
+
+ACME Bank wants to register each of their customer's android and ios devices under region-specific tags.
+
+1) To achieve this they can use EN Android Client SDK and IOS Client SDK to subscribe to `Asia Pacific` customers' android and ios devices under the `AP` tag.
+Follow the below links on how to subscribe tag to push devices using EN client SDKs
+
+ - [Android Push Notifications (FCM)](/docs/event-notifications?topic=event-notifications-en-push-fcm)
+ - [iOS Push Notifications (APNs)](/docs/event-notifications?topic=event-notifications-en-push-apns)
+ - [Chrome Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-chrome)
+ - [Firefox Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-firefox)
+ - [Safari Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-safari)
+
+2) Next they send a notification with payload contianing attribute   ``"notification-type":"maintenance"``and ``"ibmenpushto": "{\"tags\":[\"AP\""]]}"``, `notification-type` atttribute is added so that it matches against the topic condition and `ibmenpushto` because we are targeting push customers with android and ios devices in Asia Pacific region `AP`.
