@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-07-29"
+lastupdated: "2022-09-26"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email
 
@@ -35,9 +35,17 @@ The text messages originate from IBM-owned phone numbers or alphanumeric sender 
 ## Using an {{site.data.keyword.cloud_notm}} SMS service destination
 {: #en-destinations-sms-use}
 
-To use the SMS service destination, add it to a subscription along with the phone numbers of the recipients. Within a single subscription, you can add up to 100 phone numbers. The subscription also needs a topic to filter events of interest from your sources. When an event lands in the topic, {{site.data.keyword.en_short}} immediately routes the event notification to your SMS recipients. 
+`IBM Cloud SMS service` as the destination type is only supported for US and Canada numbers only.
+{: important}
 
-When you select `IBM Cloud SMS service` as the destination type, you can add upto 100 phone numbers to the recipient list. In the **Active** tab, add the Mobile numbers. When a recipient doesn's wants to receive any SMS notification, they can opt-out by sending an response `STOP`, the recipients number will be moved to the **Unsubscribed** tab. The recipient can restart to receive the SMS by sending a response code `START`, in which case, the recipient number will be moved back to the **Active** tab. You can track recipients who opt into the {{site.data.keyword.en_short}} dashboard. 
+To use the SMS service destination, add it to a subscription along with the phone numbers of the recipients. Within a single subscription, you can add up to 100 phone numbers. The subscription also needs a topic to filter events of interest from your sources. When an event lands in the topic, {{site.data.keyword.en_short}} immediately routes the event notification to your SMS recipients.
+
+When you select `IBM Cloud SMS service` as the destination type, you can add upto 100 phone numbers to the recipient list. In the **Active** tab, add the Mobile numbers. When a recipient doesn's wants to receive any SMS notification, they can opt-out by sending an response `STOP`, the recipients number will be moved to the **Unsubscribed** tab.
+
+To add a recipient number back to active list, take the following steps:
+
+1. Recipient needs to send `START` message back to the number from which SMS was received.
+1. After sending `START` message, the recipient can contact their {{site.data.keyword.IBM_notm}} {{site.data.keyword.en_short}}  service administrator to add the number back to subscription.
 
 By adding phone numbers, you represent on behalf of yourself and your company that you have properly informed the individuals, to whom the added phone numbers pertain, of their addition to this recipient list and purpose thereof, and have the required consents to do so.
 {: note}
@@ -47,9 +55,9 @@ By adding phone numbers, you represent on behalf of yourself and your company th
 
 Because SMS delivery rates vary widely with location, SMS text messages are charged in terms of `SMS Units`. An SMS unit is a fixed unit of cost. The number of units consumed by a message varies based on the destination country, and therefore {{site.data.keyword.en_short}} service charges vary. Table 1 shows the current SMS Units by country.
 
-| Country   | SMS Units|
-|-------------|-------------|
-| US| 1 unit|
+| Supported Country Code        | SMS Units |
+|-------------------------------|-----------|
+| +1 (United States and Canada) | 1 unit    |
 {: caption="Table 1. Destination country and unit per segment" caption-side="top"}
 
 Longer notifications (those greater than 160 characters) might be split into multiple segments. Each segment is considered a message, as is each recipient phone number. For example, if an incoming notification is split into three SMS segments, and the message is sent to five subscribed phone numbers, then the total consumed SMS units for the incoming message is as follows:
