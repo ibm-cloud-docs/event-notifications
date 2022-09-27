@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-08-30"
+lastupdated: "2022-09-27"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -27,6 +27,13 @@ content-type: release-note
 
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
+
+## 27 Sep 2022
+{: #event-notifications-Sep2722}
+{: release-note}
+
+New supported {{site.data.keyword.cloud_notm}} source: {{site.data.keyword.cloud_notm}} Platform Notifications
+:  {{site.data.keyword.cloud_notm}} Platform Notifications is now available as new supported {{site.data.keyword.cloud_notm}} source. For more information, see [Enabling Event Notifications for the notification distribution list](https://cloud.ibm.com/docs/account?topic=account-add-users-distribution-list#event-notifications-distribution-list).
 
 ## 29 Aug 2022
 {: #event-notifications-Aug2522}
@@ -117,4 +124,4 @@ New source: {{site.data.keyword.compliance_full}}
 {: release-note}
 
 Introducing Event Notifications
-:   Event Notifications is Generally Available. IBM Cloud Monitoring as a source is supported to route events to communication channels like email, SMS and webhooks. 
+:   Event Notifications is Generally Available. IBM Cloud Monitoring as a source is supported to route events to communication channels like email, SMS and webhooks.

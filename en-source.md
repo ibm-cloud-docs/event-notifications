@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-07-05"
+lastupdated: "2022-09-27"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -22,18 +22,19 @@ subcollection: event-notifications
 # Event sources
 {: #en-source}
 
-An event source is a service or application on {{site.data.keyword.cloud_notm}} that emits event notifications and publishes them to a topic within the {{site.data.keyword.en_short}} service. A source is a registered entity in an {{site.data.keyword.en_short}} service instance. A source can be registered to an {{site.data.keyword.en_short}} service instance either as an `IBM managed source` or an `API source`. 
+An event source is a service or application on {{site.data.keyword.cloud_notm}} that emits event notifications and publishes them to a topic within the {{site.data.keyword.en_short}} service. A source is a registered entity in an {{site.data.keyword.en_short}} service instance. A source can be registered to an {{site.data.keyword.en_short}} service instance either as an `IBM managed source` or an `API source`.
 {: shortdesc}
 
 A source can publish to multiple topics. In other contexts sources are identified as producers or publishers.
 
-## IBM managed sources
+## {{site.data.keyword.cloud_notm}} sources
 {: #en-ibm-sources-list}
 
 The list of IBM provided sources is as follows:
-- [IBM Cloud Monitoring](https://cloud.ibm.com/docs/monitoring?topic=monitoring-notifications)
-- [IBM Cloud Security and Compliance Center](https://cloud.ibm.com/docs/security-compliance?topic=security-compliance-event-notifications&interface=ui)
-- [IBM Cloud Secrets Manager](https://cloud.ibm.com/docs/secrets-manager?topic=secrets-manager-event-notifications&interface=ui)
+- [{{site.data.keyword.monitoringfull_notm}}](https://cloud.ibm.com/docs/monitoring?topic=monitoring-notifications)
+- [{{site.data.keyword.cloud_notm}} Platform Notifications](https://cloud.ibm.com/docs/account?topic=account-add-users-distribution-list#event-notifications-distribution-list)
+- [{{site.data.keyword.secrets-manager_full_notm}}](https://cloud.ibm.com/docs/secrets-manager?topic=secrets-manager-event-notifications&interface=ui)
+- [{{site.data.keyword.compliance_long}}](https://cloud.ibm.com/docs/security-compliance?topic=security-compliance-event-notifications&interface=ui)
 
 ## API sources
 {: #en-api-sources}

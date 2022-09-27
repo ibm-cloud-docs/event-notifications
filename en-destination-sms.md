@@ -35,7 +35,7 @@ The text messages originate from IBM-owned phone numbers or alphanumeric sender 
 ## Using an {{site.data.keyword.cloud_notm}} SMS service destination
 {: #en-destinations-sms-use}
 
-`IBM Cloud SMS service` as the destination type is only supported for US and Canada numbers only.
+`IBM Cloud SMS service` as the destination type is only supported for US and Canada numbers.
 {: important}
 
 To use the SMS service destination, add it to a subscription along with the phone numbers of the recipients. Within a single subscription, you can add up to 100 phone numbers. The subscription also needs a topic to filter events of interest from your sources. When an event lands in the topic, {{site.data.keyword.en_short}} immediately routes the event notification to your SMS recipients.
