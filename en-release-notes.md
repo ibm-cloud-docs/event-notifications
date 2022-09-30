@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-09-27"
+lastupdated: "2022-09-30"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -27,6 +27,16 @@ content-type: release-note
 
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
+
+## 03 Oct 2022
+{: #event-notifications-Oct0322}
+{: release-note}
+
+New supported {{site.data.keyword.cloud_notm}} source: {{site.data.keyword.cloud_notm}} Resource lifecycle events
+:  {{site.data.keyword.cloud_notm}} Resource lifecycle events is now available as new supported {{site.data.keyword.cloud_notm}} source. For more information, see [{{site.data.keyword.cloud_notm}} Resource lifecycle events](/docs/event-notifications?topic=event-notifications-en-resource-lifecycle-events).
+
+Support for Email "Opt-in"
+:  You can now control the list of user's invited to an Email subscription. You can add email addresses, delete unsubscribed email addresses and expired invited email addresses, resend invite to the invited email addresses. For more information, see [{{site.data.keyword.cloud_notm}} Email service](/docs/event-notifications?topic=event-notifications-en-destinations-email).
 
 ## 27 Sep 2022
 {: #event-notifications-Sep2722}
