@@ -222,6 +222,27 @@ enPush.initialize(getApplicationContext(),instanceGUID,destinationID, apiKey);
 ```
  {: codeblock}
 
+  {: codeblock}
+
+* Optionally if you can also create push tag subscription, [subscribeToPushTag](https://github.com/IBM/event-notifications-destination-android-sdk#subscribe-to-tags) for push device. The subscribe API will subscribe the device for a given tag. After the device is subscribed to a particular tag, the device can receive notifications that are sent for that tag. Add the following code snippet to your Android mobile application to subscribe to a list of tags.
+
+```java
+	// Subscribe to the given tag, if tagname is not available it will first get create then push device will get subscribe to it.
+    enPush.subscribe(tagName, new ENPushResponseListener<String>() {
+	
+		@Override
+		public void onSuccess(String arg) {
+			System.out.println("Succesfully Subscribed to: "+ arg);
+		}
+
+		@Override
+		public void onFailure(ENPushException ex) {
+			System.out.println("Error subscribing to Tag1.." + ex.getMessage());
+		}
+});
+```
+ {: codeblock}
+
 * Add the Notifications listener for receiving the notification in your application.
 
 ```java
