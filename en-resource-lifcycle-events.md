@@ -83,3 +83,44 @@ Some example of Resource lifecycle events are:
 After enabling the source, you can publish the lifecycle events to the [Topic](/docs/event-notifications?topic=event-notifications-en-overview#en-topics) of your choice.
 
 To learn more about working with **Topics**, see [here](/docs/event-notifications?topic=event-notifications-en-create-en-topic).
+
+### Example event
+{: #en-example-event}
+
+```javascript
+{
+   "account_id": "abcdef2595f4d598c1725d60fc77",
+   "context": {
+      "activity": {
+         "action": "apprapp.instance.create",
+         "message": "App Configuration: create instance App Configuration-0001",
+         "outcome": "success",
+         "reason_reasonCode": 201,
+         "target_name": "App Configuration-0001"
+      },
+      "subject_id": "IBMid-xxxxxQExx",
+      "subject_name": "xyz@ibm.com"
+   },
+   "event_id": "7ca39870-eb1b-6c50-88b1-48c04123494",
+   "event_properties": {
+      "created_at": "2022-09-30T16:18:54.926735545Z",
+      "created_by": "IBMid-xxxxxQExx",
+      "crn": "crn:v1:staging:public:apprapp:us-south:a/abcdf222595g44d598c178525i60jc77:f4fca3f2-fdd3-485e-b86c-1234dd3eabc4::",
+      "guid": "a4bcc3f2-dee3-485f-a86b-4818dd3eabc4",
+      "last_operation": {
+         "description": "Completed create instance operation",
+         "state": "succeeded",
+         "type": "create"
+      },
+      "name": "App Configuration-z0",
+      "region_id": "us-south",
+      "resource_group_id": "ee24533eed37412e988179fe694062bc",
+      "resource_id": "apprapp-a6bcce47-d840-45b0-8ab9-ad15354defgea",
+      "state": "active",
+      "type": "service_instance",
+      "updated_at": "2022-09-30T16:18:55.295780335Z"
+   },
+   "event_type": "resource-controller.instance.create",
+   "timestamp": "2022-09-30T16:18:55Z"
+}
+```
