@@ -65,3 +65,45 @@ Sometimes the devices are marked invalid and deleted from database, if they meet
    - `Gone` - the subscription is no longer valid. 
 
    For more information on the web push protocol, see [here](https://web.dev/push-notifications-web-push-protocol/).
+
+
+## What is the difference between {{site.data.keyword.en_short}} Topic Subscriptions and {{site.data.keyword.en_short}} Tag Subsciptions to push devices?
+{: #faq-en-topic-tag-subscriptions}
+{: faq}
+
+- **{{site.data.keyword.en_short}} Topic subscriptions**:
+
+   For the topic subscriptions, start by creating a **Topic** and write conditions on that topic. This topic is responsible for routing the incoming notification which satisfies the topic conditions.
+
+   You can subscribe to multiple {{site.data.keyword.en_short}} destinations like email, SMS, webhooks, slack, and Microsoft teams. Also, you can subscribe push type destinations like android, iOS, firefox, chrome, and safari.
+
+   If the incoming notifications satisfy the condition written for Topic (T), it will route the notification to all the destinations subscribed or connected to Topic (T) irrespective of the type of destinations.
+
+   For example, `ACME` Bank wants to route maintenance event notifications to customers using android and iOS devices. Acme Bank will be following these steps:
+
+   1. Create a topic named `ACME-Maintenance`.
+   1. Write Advance condition `$.notification-type == 'maintenance'`.
+   1. Subscribe push android and push iOS destinations to the above topic.
+   1. Next send a event notification with payload containing attribute ``"notification-type":"maintenance"``and ``"ibmenpushto": "{\"platforms\":[\"push_android\",\"push_ios\"]]}"``, `notification-type` attribute is added so that it matches against the topic condition and `ibmenpushto` for targeting customers with android and iOS devices.
+   1. {{site.data.keyword.en_short}} will get routed to customers with android and iOS devices, since its payload contains ``"notification-type":"maintenance"`` which matches the condition for Topic `ACME-Maintenance` and ``"ibmenpushto": "{\"platforms\":[\"push_android\",\"push_ios\"]]}"`` as `ibmenpushto` is mandatory for push type {{site.data.keyword.en_short}} destinations.
+
+   All push devices will get registered under {{site.data.keyword.en_short}} destination of type push. For example `push-android` , `push-ios`, and so on.
+   {: note}
+
+- **{{site.data.keyword.en_short}} Tag subscriptions to push devices**
+
+   For example. `ACME` Bank wants to route maintenance event notifications to customers using android and iOS devices. ACME Bank maintenance usually takes place in one region at a time.
+
+   ACME Bank wants to register each of their customer's android and iOS devices under region-specific tags.
+
+   1. To achieve this the bank can use {{site.data.keyword.en_short}} Android Client SDK and iOS Client SDK to subscribe to `Asia Pacific` customers' android and iOS devices under the `AP` tag.
+
+   Follow the below links on how to subscribe tag to push devices using {{site.data.keyword.en_short}} client SDKs:
+   - [Android Push Notifications (FCM)](/docs/event-notifications?topic=event-notifications-en-push-fcm)
+   - [iOS Push Notifications (APNs)](/docs/event-notifications?topic=event-notifications-en-push-apns)
+   - [Chrome Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-chrome)
+   - [Firefox Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-firefox)
+   - [Safari Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-safari)
+   {: note}
+
+   1. Next the bank sends a notification with payload contianing attribute ``"notification-type":"maintenance"``and ``"ibmenpushto": "{\"tags\":[\"AP\""]]}"``, `notification-type` atttribute is added so that it matches against the topic condition and `ibmenpushto` as the message is for targeting push customers with android and iOS devices in Asia Pacific region `AP`.

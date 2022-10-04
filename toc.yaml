@@ -67,6 +67,7 @@ toc:
       - en-push-safari.md
       - en-terraform-tutorial.md
       - en-ts-monitor-secrets.md
+      - en-resource-lifcycle-events.md
 
   - navgroup:
       id: howto
