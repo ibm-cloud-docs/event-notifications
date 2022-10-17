@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-08-16"
+lastupdated: "2022-10-17"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, slack
 
@@ -10,28 +10,21 @@ subcollection: event-notifications
 
 ---
 
-{:codeblock: .codeblock}
-{:external: target="_blank" .external}
-{:important: .important}
-{:note: .note}
-{:pre: .pre}
-{:screen: .screen}
-{:shortdesc: .shortdesc}
-{:tip: .tip}
+{{site.data.keyword.attribute-definition-list}}
 
 # Slack
 {: #en-destinations-slack}
 
-A slack represents a service destination, where an incoming notification can be consumed programmatically. For example, an incoming notification about an event can trigger a slack notification based on the content of the incoming notification.
+Slack is a messaging platform that helps teams to connect and collaborate. When you select slack as a service destination, any subscribed notification about an event can be sent as a message to slack channels.
 {: shortdesc}
 
-When a message of length greater than 3000 characters is sent to slack, the message text will get truncated with leaders `[...]`.
+When a message of length greater than 3000 characters is sent to slack, the message text gets truncated with leaders `[...]`.
 {: note}
 
-## Generate slack incoming webhook URL 
+## Generate slack incoming webhook URL
 {: #en-generate-slack-incoming-webhook-url}
 
-To post a slack notification you will need to generate an incoming webhook URL. To generate the URL, follow these steps: [Incoming webhooks for Slack](https://slack.com/intl/en-in/help/articles/115005265063-Incoming-webhooks-for-Slack){: external}.
+To post a slack notification, that you need to generate an incoming webhook URL. To generate the URL, follow these steps: [Incoming webhooks for Slack](https://slack.com/intl/en-in/help/articles/115005265063-Incoming-webhooks-for-Slack){: external}.
 
 ## Configuring a slack destination
 {: #en-slack-configure-destination}
@@ -41,12 +34,12 @@ You can configure a slack destination in the `Destinations` tab. As part of the 
 ## Configuring a slack subscription
 {: #en-slack-configure-sub}
 
-You can add attachment color to individual slack subscription based on hex code for e.g. "#0000FF" for blue 
+You can add attachment color to individual slack subscription based on hex code, for example, "#0000FF" for blue.
 
-## How a slack notification from Event Notifications looks 
+## How a slack notification from Event Notifications looks
 {: #en-how-a-slack-notification-from-en-looks}
 
-Event notification generates slack notifications from incoming payload. The template event notification use to send to slack looks like following - 
+Event notification generates slack notifications from incoming payload. The template event notification use to send to slack looks like following -
 
 ```sh
 {
@@ -75,12 +68,12 @@ Event notification generates slack notifications from incoming payload. The temp
 }
 ```
 
-Here - 
+Here -
 
-*ibmendefaultshort* is the default short payload provided in the incoming payload.
-*attachment_color* is the color that will be applied to the notification which was provided during subscription.
-*ibmendefaultlong* is tbe default long payload provided in the incoming payload.
-*data* is the data JSON provided in the incoming payload and will be formated as json in the slack notification.
+*ibmendefaultshort* is the default short payload that is provided in the incoming payload.
+*attachment_color* is the color that is applied to the notification, which was provided during subscription.
+*ibmendefaultlong* is the default long payload that is provided in the incoming payload.
+*data* is the data JSON provided in the incoming payload and format as JSON in the slack notification.
 
 ## Slack retry policy
 {: #en-slack-retry}

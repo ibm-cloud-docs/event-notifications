@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-07-05"
+lastupdated: "2022-10-17"
 
 keywords: HA for Event Notifications, high availability for Event Notifications, Event Notifications
 
@@ -10,15 +10,7 @@ subcollection: event-notifications
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:download: .download}
-{:term: .term}
+{{site.data.keyword.attribute-definition-list}}
 
 # High availability and disaster recovery for {{site.data.keyword.en_short}}
 {: #en-ha}
@@ -30,7 +22,7 @@ In each supported multizone region, every zone has its own {{site.data.keyword.c
 
 {{site.data.keyword.en_short}} service persists tenant data in a highly available database. A single regional database stores data of all the {{site.data.keyword.en_short}} tenants in that particular region. The data is stored across multiple zones in each region. Data that is stored in the {{site.data.keyword.en_short}} service is encrypted and persisted in a database cluster that is spread across availability zones. All databases connections use TLS/SSL encryption for data in transit.
 
-{{site.data.keyword.en_short}} service is a regional service. It does not provide automated cross-regional failover or cross-regional disaster recovery. If a regional disaster occurs, all the data might not be recovered. However, a location recovery is possible and data can be restored from that location. 
+{{site.data.keyword.en_short}} service is a regional service. It does not provide automated cross-regional failover or cross-regional disaster recovery. If a regional disaster occurs, all the data might not be recovered. However, a location recovery is possible and data can be restored from that location.
 
 For regional disaster recovery, you must create and maintain backup instances in other regions. To synchronize a service instance in one region with an instance in a different region, use the APIs.
 
@@ -38,13 +30,13 @@ Review the API documentation and decide the data that you want backed up and res
 
 Some API examples are as follows:
 
-|Entity   |Endpoint|Description|
+|Entity   | Endpoint | Description |
 |---------|--------|-----------|
-|sources|/v1/instances/{instance_id}/sources|Your platform sources|
-|topics| /v1/instances/{instance_id}/topics|All registered topics|
-|rules| /v1/instances/{instance_id}/rules|All rules created on topics|
-|destinations| /v1/instances/{instance_id}/destinations|All registered destinations|
-|subscriptions| /v1/instances/{instance_id}/subscriptions|All the subscriptions|
+| sources | `/v1/instances/{instance_id}/sources` | Your platform sources |
+| topics | `/v1/instances/{instance_id}/topics` | All registered topics |
+| rules | `/v1/instances/{instance_id}/rules` | All rules created on topics |
+| destinations | `/v1/instances/{instance_id}/destinations` | All registered destinations |
+| subscriptions | `/v1/instances/{instance_id}/subscriptions` | All the subscriptions |
 {: caption="Table 1. Example API endpoints" caption-side="top"}
 
 For each data set that you need to back up and restore, use `GET` calls to get a copy of the data. And use the corresponding `PUT / POST API` to populate the new instance on a different region.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-07-29"
+lastupdated: "2022-10-17"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, push
 
@@ -16,7 +16,7 @@ completion-time: 10m
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Create and send push notifications to Safari web using {{site.data.keyword.en_full}}
+# Create and send push notifications to Safari web by using {{site.data.keyword.en_short}}
 {: #en-push-safari}
 {: toc-content-type="tutorial"}
 {: toc-completion-time="10m"}
@@ -27,9 +27,9 @@ Create an {{site.data.keyword.en_short}} service, add a push destination for App
 ## What is {{site.data.keyword.en_short}}?
 {: #en-what-is-safari}
 
-{{site.data.keyword.en_short}} is an event notification routing service that notifies you of critical events that occur in your {{site.data.keyword.cloud_notm}} account or triggers automated actions by using webhooks. You can filter and route event notifications from {{site.data.keyword.cloud_notm}} services like {{site.data.keyword.prf_hubshort}}, to email, SMS, push notifications (FCM/APNs), and webhooks.
+{{site.data.keyword.en_short}} is an event notification routing service that notifies you of critical events that occur in your {{site.data.keyword.cloud_notm}} account or triggers automated actions by using webhooks. You can filter and route event notifications from {{site.data.keyword.cloud_notm}} services like {{site.data.keyword.prf_hubshort}}, to email, SMS, push notifications (FCM or APNs), and webhooks.
 
-## How do clients use Safari Push Notifications?
+## How do clients use Safari push notifications?
 {: #en-how-clients-send-safari}
 
 The following diagram shows you how clients use iOS Push Notifications.
@@ -41,7 +41,7 @@ The following diagram shows you how clients use iOS Push Notifications.
 
 This tutorial shows you how to send push notifications as follows:
 
-* Create a Web app with {{site.data.keyword.en_short}}.
+* Create a web app with {{site.data.keyword.en_short}}.
 * Get Safari credentials.
 * Download the code and complete the notifications setup.
 * Configure and send Safari Push Notifications to a Safari Web.
@@ -51,9 +51,9 @@ This tutorial shows you how to send push notifications as follows:
 
 You must have the following prerequisites in place:
 
-* An [IBM Cloud][ibm-cloud-onboarding] account.
-* An Event Notifications Instance
-* An IAM API key to allow the SDK to access your account. Create one [here](https://cloud.ibm.com/iam/apikeys).
+* An {{site.data.keyword.cloud_notm}} account. If you do not have one, [create an {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/){: external}.
+* An {{site.data.keyword.en_short}} Instance.
+* An IAM API key to allow the SDK to access your account. Create one [here](https://cloud.ibm.com/iam/apikeys){: external}.
 
 ## Create an {{site.data.keyword.en_short}} service instance
 {: #en-create-event-safari}
@@ -64,61 +64,70 @@ You must have the following prerequisites in place:
 * Select a `Region` from the list of supported regions and select a `pricing plan`.
 * Provide a `Service name`.
 * Select a `resource group`.
+* Accept the licensing agreements and terms by clicking the checkbox.
 * Click `Create`.
 
 ## Get Safari credentials
 {: #en-get-safari-credentials}
 {: step}
 
-* Add Apple World wide intermediate certificate to your Key Chain, you can find the certificate [here](https://www.apple.com/certificateauthority/)
+* Add Apple Worldwide intermediate certificate to your Key Chain, you can find the certificate [here](https://www.apple.com/certificateauthority/){: external}.
 
-![Certificates, Apple World Wide Intermediate certificate Site](images/en_apple_intermediate.png "App ID"){: caption="Figure 2. Certificates, Identifiers & Profiles" caption-side="bottom"}
+   ![Certificates, Apple Worldwide Intermediate certificate Site](images/en_apple_intermediate.png "App ID"){: caption="Figure 2. Certificates, Identifiers & Profiles" caption-side="bottom"}
 
-![Certificates, Apple World Wide Intermediate certificate Add](images/en_apple_intermediate_add.png "App ID"){: caption="Figure 3. Certificates, Identifiers & Profiles" caption-side="bottom"}
+   ![Certificates, Apple Worldwide Intermediate certificate Add](images/en_apple_intermediate_add.png "App ID"){: caption="Figure 3. Certificates, Identifiers & Profiles" caption-side="bottom"}
 
-* Create Web Push ID in your [Apple Developer account](https://developer.apple.com/account/)
+* Create Web Push ID in your [Apple Developer account](https://developer.apple.com/account/){: external}.
 
-The Web Push ID (the bundle identifier) is a unique identifier that identifies a specific application. Each application requires an Web Push ID. 
+   The Web Push ID (the bundle identifier) is a unique identifier that identifies a specific application. Each application requires a Web Push ID.
 
-* Go to the [Apple developer portal](https://developer.apple.com/) and select Certificates, Identifiers & Profiles.
+* Go to the [Apple developer portal](https://developer.apple.com/){: external} and select `Certificates, Identifiers & Profiles`.
 
-![Certificates, Identifiers & Profiles](images/en-apns-cert-tab.png "Web Push ID"){: caption="Figure 4. Certificates, Identifiers & Profiles" caption-side="bottom"}
+   ![Certificates, Identifiers & Profiles](images/en-apns-cert-tab.png "Web Push ID"){: caption="Figure 4. Certificates, Identifiers & Profiles" caption-side="bottom"}
 
 * Go to `Identifiers > Add identifier button`.
 
-![Identifier button](images/en-apns-identifier-button.png "Identifier button"){: caption="Figure 5. Identifier Button" caption-side="bottom"}
-* Click on add a new Identifier button.
+   ![Identifier button](images/en-apns-identifier-button.png "Identifier button"){: caption="Figure 5. Identifier Button" caption-side="bottom"}
 
-![Add new Identifier button](images/en-apns-new-identifier-button.png "Add new Identifier button"){: caption="Figure 6. Add new Identifier button" caption-side="bottom"}
+* Click `Add a new Identifier` button.
+
+   ![Add new Identifier button](images/en-apns-new-identifier-button.png "Add new Identifier button"){: caption="Figure 6. Add new Identifier button" caption-side="bottom"}
+
 * Select the Web Push IDs option.
 
-![Web Push IDs option](images/en_safari_webpushid_option.png "Web Push IDs option"){: caption="Figure 7. Web Push IDs option" caption-side="bottom"}
+   ![Web Push IDs option](images/en_safari_webpushid_option.png "Web Push IDs option"){: caption="Figure 7. Web Push IDs option" caption-side="bottom"}
+
 * Provide Identifier and description for your Web Push ID, identifier is unique reverse-domain string for your Web Push ID such as **web.com.example.domain** (the string must start with **web**). If your website is yourwebsite.com add the identifier as **web.com.yourwebsite**.
 
-![Web Push IDs](images/en_safari_webpushid.png "Web Push IDs"){: caption="Figure 8. Web Push IDs" 
-* Continue and then click on Create certificate on the next page.
+   ![Web Push IDs](images/en_safari_webpushid.png "Web Push IDs"){: caption="Figure 8. Web Push IDs" caption-side="bottom"}
 
-![Create Certificate Button](images/en_createcertificate_button.png "Create Certificate Button"){: caption="Figure 9. Create Certificate Button" 
-![Create Certificate Page](images/en_createcertificate_page.png "Create Certificate Page"){: caption="Figure 10. Create Certificate Page" 
-* Create a Certificate Signing Request using KeyChain and save it to disk. More  information you can find [here](https://help.apple.com/developer-account/#/devbfa00fef7)
+* Continue and then click `Create certificate` on the next page.
 
-![Certificate Signing](images/en_safari_certificate_request_creation.png "Certificate Signing"){: caption="Figure 11. Create Certificate Signing"
+   ![Create Certificate Button](images/en_createcertificate_button.png "Create Certificate Button"){: caption="Figure 9. Create Certificate Button" caption-side="bottom"}
 
-![Certificate Signing](images/en_safari_save_certificate_signing.png "Certificate Signing"){: caption="Figure 12. Create Certificate Signing"
-* Upload the **CertificateSigningRequest.certSigningRequest** and click on **Continue**
+   ![Create Certificate Page](images/en_createcertificate_page.png "Create Certificate Page"){: caption="Figure 10. Create Certificate Page" caption-side="bottom"}
 
-![Singning Certificate Upload](images/en_safari_upload_signing.png "Singning Certificate Upload"){: caption="Figure 13. Upload Certificate Signing"
+* Create a Certificate Signing Request by using KeyChain and save it to disk. For more information, see [here](https://help.apple.com/developer-account/#/devbfa00fef7){: external}.
 
-![Certificate Download Page](images/en_safari_download_page.png "Certificate Download Page"){: caption="Figure 14. Upload Certificate Signing"
-* Download the certificate with `.cer` extension and double click on it. It will add it to **Keychain Access → My Certificates**
+   ![Certificate Signing](images/en_safari_certificate_request_creation.png "Certificate Signing"){: caption="Figure 11. Create Certificate Signing" caption-side="bottom"}
 
-* Got to your **Keychain Access→ My Certificate** , select your certificate export it.
+   ![Certificate Signing](images/en_safari_save_certificate_signing.png "Certificate Signing"){: caption="Figure 12. Create Certificate Signing" caption-side="bottom"}
 
-![Export Certificate](images/en_safari_export_p12.png "Export Certificate"){: caption="Figure 15. Upload Certificate Signing"
+* Upload the **CertificateSigningRequest.certSigningRequest** and click **Continue**.
 
-![Export Certificate Add Password](images/en_safari_add_password_p12.png "Export Certificate Add Password"){: caption="Figure 13. Upload Certificate Signing"
-* add a password (Don't Forget it) and save as p12 certificate.
+   ![Signing Certificate Upload](images/en_safari_upload_signing.png "Signing Certificate Upload"){: caption="Figure 13. Upload Certificate Signing" caption-side="bottom"}
 
+   ![Certificate Download Page](images/en_safari_download_page.png "Certificate Download Page"){: caption="Figure 14. Upload Certificate Signing" caption-side="bottom"}
+
+* Download the certificate with `.cer` extension and double-click it. It adds it to **Keychain Access → My Certificates**.
+
+* Got to your **Keychain Access→ My Certificate**, select your certificate export it.
+
+   ![Export Certificate](images/en_safari_export_p12.png "Export Certificate"){: caption="Figure 15. Upload Certificate Signing" caption-side="bottom"}
+
+   ![Export Certificate Add Password](images/en_safari_add_password_p12.png "Export Certificate Add Password"){: caption="Figure 13. Upload Certificate Signing" caption-side="bottom"}
+
+* Add a password (Don't Forget it) and save as p12 certificate.
 
 ## Add a generic API source
 {: #en-add-gen-api-safari}
@@ -141,14 +150,14 @@ Click `Destinations` in the {{site.data.keyword.en_short}} console and add the f
 * `Type`: select Safari Push Notifications type from the dropdown list.
 * Select a destination plan: Pre-production destination or Production destination.
    - `Pre-production destination` - select this destination as low-cost push destination, for your development and test environments.
-   - `Production destination` - utilize the full capability of this destination. Unlimited devices and outbound messages allowed.
+   - `Production destination` - use the full capability of this destination. Unlimited devices and outbound messages allowed.
 
-* Update the Safari Push Credentials with the details
-    * `Website Name`: The website name. This is the heading used in Notification Center
-    * `Website push ID`: Unique reverse-domain string for your Website Push ID such as web.com.example.domain (the string must start with web).
+* Update the Safari Push Credentials with the details.
+    * `Website Name`: The website name. This is the heading that is used in Notification Center.
+    * `Website push ID`: Unique reverse-domain string for your website Push ID such as web.com.example.domain (the string must start with web).
     * `Website URL`: The URL of the website that should be permitted to subscribe to Safari Push Notifications.
-    * `URL format string`: he URL to go to when the notification is clicked. Use %@ as a placeholder for arguments you fill in when delivering your notification. This URL must use the http or https scheme; otherwise, it is invalid.
-    * upload p12 certificate and provide certificate `password`
+    * `URL format string`: The URL to go to when the notification is clicked. Use %@ as a placeholder for arguments that you complete when delivering your notification. This URL must use the http or https scheme: otherwise, it is invalid.
+    * upload p12 certificate and provide certificate `password`.
 
 ## Create an {{site.data.keyword.en_short}} topic
 {: #en-create-topic-safari}
@@ -171,7 +180,7 @@ Click `Subscriptions` in the {{site.data.keyword.en_short}} console. Enter the f
 
 * `Click` Create to display subscription wizard.
 
-* Complete the following subscription details: 
+* Complete the following subscription details:
     * `Subscription name`: name of the subscription.
     * `Subscription description`: add an optional description.
 
@@ -184,66 +193,66 @@ Click `Subscriptions` in the {{site.data.keyword.en_short}} console. Enter the f
 
 The Safari web SDK enables Safari websites to receive push notifications. Complete the following steps to install {{site.data.keyword.en_short}} Firefox web SDK, initialize the SDK, and register for notifications for your website.
 
-* To include the SDK in your project, add the `ENPushSDK.js`,`ENPushServiceWorker.js` and `manifest_Website.json` files to your project root folder.
+* To include the SDK in your project, add the `ENPushSDK.js`, `ENPushServiceWorker.js`, and `manifest_Website.json` files to your project root folder.
 
-* Edit the manifest_Website.json file.
+* Edit the `manifest_Website.json` file.
 
-    ```js
-    {
-        "name": "YOUR_WEBSITE_NAME"
-    }
-    ```
+   ```js
+   {
+      "name": "YOUR_WEBSITE_NAME"
+   }
+   ```
 
 * Change the `manifest_Website.json` file name to `manifest.json`.
 
-* Include the manifest.json in the `<head>` tag of your html file.
+* Include the `manifest.json` in the `<head>` tag of your html file.
 
-    ```html
-    <link rel="manifest" href="manifest.json">
-    ```
+   ```html
+   <link rel="manifest" href="manifest.json">
+   ```
 
-* Include IBM Cloud web push SDK to the script.
+* Include {{site.data.keyword.cloud_notm}} web push SDK to the script.
 
-    ```html
+   ```html
    <script src="ENPushSDK.js" async></script>
-    ```
+   ```
 
 * Complete the following steps to enable the website to initialize the SDK
 
-    ```js
-    var enPush = new ENPush()
+   ```js
+   var enPush = new ENPush()
 
-    function callback(response) {
-        alert(response.response)
-    }
-
-    var initParams = {
-        "instanceGUID": "<instance_guid>",
-        "apikey": "<instance_apikey>",
-        "region": "<region>",
-        "deviceId": "<YOUR_DEVICE_ID>",
-        "safariDestinationId": "<safari_destination_id>",
-        "websitePushIdSafari": "<Safari Web Push Id Identifier>"
-    }
-
-    enPush.initialize(initParams, callback)
-    ```
-
-    * region: Region of the {{site.data.keyword.en_short}} instance. eg; `us-south`,`eu-gb`, `au-syd` and `eu-de`
-
-    * deviceId: Optional deviceId for device registration.
-
-* To register for notifications, se the `register()` or `registerWithUserId()` API to register the device with IBM Cloud Event Notifications service. Choose either of the following options:
-
-    * Register without `UserId`:
-
-    ```js
-    enPush.register(function(response) {
+   function callback(response) {
       alert(response.response)
-    })
-    ```
+   }
 
-    * Register with UserId. For `userId` based notification, the register method will accept one more parameter - `userId`
+   var initParams = {
+      "instanceGUID": "<instance_guid>",
+      "apikey": "<instance_apikey>",
+      "region": "<region>",
+      "deviceId": "<YOUR_DEVICE_ID>",
+      "safariDestinationId": "<safari_destination_id>",
+      "websitePushIdSafari": "<Safari Web Push Id Identifier>"
+   }
+
+   enPush.initialize(initParams, callback)
+   ```
+
+   * `region`: Region of the {{site.data.keyword.en_short}} instance. for example, `us-south`,`eu-gb`, `au-syd`, and `eu-de`.
+
+   * `deviceId`: Optional `deviceId` for device registration.
+
+* To register for notifications, se the `register()` or `registerWithUserId()` API to register the device with {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} service. Choose either of the following options:
+
+   * Register without `UserId`:
+
+      ```js
+      enPush.register(function(response) {
+         alert(response.response)
+      })
+      ```
+
+   * Register with `UserId`. For `userId` based notification, the register method accepts one more parameter - `userId`.
 
     ```js
     bmsPush.registerWithUserId("UserId",function(response) {
@@ -267,6 +276,6 @@ The Safari web SDK enables Safari websites to receive push notifications. Comple
 {: #en-send-notifications-safari}
 {: step}
 
-Use the [Send Notification API](https://cloud.ibm.com/apidocs/event-notifications/event-notifications#send-notifications) to send the push notification for the Firefox device. You can use the [Node](https://github.com/IBM/event-notifications-node-admin-sdk#send-notifications) or [Go](https://github.com/IBM/event-notifications-go-admin-sdk#send-notifications) admin SDK instead of calling the API directly.
+Use the [Send Notification API](https://cloud.ibm.com/apidocs/event-notifications/event-notifications#send-notifications) to send the push notification for the Firefox device. You can use the [Node](https://github.com/IBM/event-notifications-node-admin-sdk#send-notifications){: external} or [Go](https://github.com/IBM/event-notifications-go-admin-sdk#send-notifications){: external} admin SDK instead of calling the API directly.
 
 ![Receive notifications](images/en_receive_safari_push_notification.png "Receive notifications"){: caption="Figure 16. Receive notifications" caption-side="bottom"}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-02-24"
+lastupdated: "2022-10-17"
 
 keywords: question about event notifications, permission, destination, email
 
@@ -12,9 +12,7 @@ content-type: troubleshoot
 
 ---
 
-
 {{site.data.keyword.attribute-definition-list}}
-
 
 # Why can't I create email (SMTP_IBM) and SMS (SMS_IBM) destinations?
 {: #troubleshoot-email-destination}
@@ -32,4 +30,3 @@ Destinations SMTP_IBM and SMS_IBM are provided out of the box by {{site.data.key
 
 These `out of the box' destinations are readily available to create subscriptions.
 {: tsResolve}
-

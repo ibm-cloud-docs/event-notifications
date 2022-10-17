@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-07-05"
+lastupdated: "2022-10-17"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -36,7 +36,7 @@ Select `Topics` in the {{site.data.keyword.en_short}} console.
 Click `Create`, and enter the following topic details:
 - `Name`: enter a name for the topic.
 - `Description`: add an optional description for the topic.
-- `Source`: select a source from the dropdown list.
+- `Source`: select a source from the list.
 
 ## Add rules to your topic
 {: #en-topic-rules}
@@ -47,10 +47,10 @@ Step 1 created a topic, step 2 provisions optional custom rules for the topic.
 
 Add the following rules to your topic:
 
-- `Event type`: select event type from the dropdown list.
-- `Event subtype`: select event sub type from the event sub type dropdown list.
-- `Severity`: select severity from the severity dropdown list.
-- `Advanced conditions`: create your own custom conditions, which must follow [jsonpath specifications](https://github.com/spyzhov/ajson). In the given link, there are many operators support is provided but currently we are only providing support for `==` operator. Example:
+- `Event type`: select event type from the list.
+- `Event subtype`: select event sub type from the event sub type list.
+- `Severity`: select severity from the severity list.
+- `Advanced conditions`: create your own custom conditions, which must follow [jsonpath specifications](https://github.com/spyzhov/ajson). In the jsonpath specifications, many operators support is provided but currently support for `==` operator enabled. Example:
 
 ```JSON
 {
@@ -72,10 +72,10 @@ Add the following rules to your topic:
 }
 ```
 
-Based on the above input json following valid JSONPaths can be constructed:
+Based on the above input JSON following valid JSONPaths can be constructed:
 
 ```bash
-1. $.data.severity=='LOW' 
+1. $.data.severity=='LOW'
 Output: True
 
 2. $.data.findings[1].severity == 'HIGH'

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-08-10"
+lastupdated: "2022-10-17"
 
 keywords: event-notifications, event notifications, about event notifications, service endpoints for {{site.data.keyword.en_short}}, network isolation in {{site.data.keyword.en_short}}
 

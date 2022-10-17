@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-07-05"
+lastupdated: "2022-10-17"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, webhook
 
@@ -10,19 +10,12 @@ subcollection: event-notifications
 
 ---
 
-{:codeblock: .codeblock}
-{:external: target="_blank" .external}
-{:important: .important}
-{:note: .note}
-{:pre: .pre}
-{:screen: .screen}
-{:shortdesc: .shortdesc}
-{:tip: .tip}
+{{site.data.keyword.attribute-definition-list}}
 
 # Webhooks
 {: #en-destinations-webhook}
 
-A webhook represents a service destination, where an incoming notification can be consumed programmatically. For example, an incoming notification about an event can trigger a webhook destination to a back-end microservice to act based on the content of the incoming notification.
+A webhook represents a service destination, where an incoming notification can be consumed programmatically. For example, an incoming notification about an event can trigger a webhook destination to a backend microservice to act based on the content of the incoming notification.
 {: shortdesc}
 
 ## Configuring a webhook destination
@@ -33,7 +26,7 @@ You can configure a webhook destination in the `Destinations` tab. As part of th
 ## Webhook signing
 {: #en-webhook-sign}
 
-To identify that the incoming notification is coming from {{site.data.keyword.en_full_notm}}, you can enable webhook signing. If signing is enabled, a public key can be downloaded and used to decrypt the incoming notification content.
+To identify that the incoming notification is coming from {{site.data.keyword.en_full_notm}}, you can enable webhook signing. If signing is enabled, a public key can be downloaded, and used to decrypt the incoming notification content.
 
 ## Webhook retry policy
 {: #en-webhook-retry}

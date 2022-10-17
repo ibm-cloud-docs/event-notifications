@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-02-09"
+lastupdated: "2022-10-17"
 
 keywords: question about event notifications, permission, integrating, authorization, authorize
 
@@ -12,29 +12,23 @@ content-type: troubleshoot
 
 ---
 
-
 {{site.data.keyword.attribute-definition-list}}
-
-
-
-
 
 # Why am I denied permission to integrate an {{site.data.keyword.en_short}} instance?
 {: #troubleshoot-integrate}
 {: troubleshoot}
-{: support} 
+{: support}
 
-You are denied permission while integrating an {{site.data.keyword.en_short}} service instance with an IBM Managed Service.
+You are denied permission while integrating an {{site.data.keyword.en_short}} service instance with an IBM Cloud Service.
 {: shortdesc}
 
-
-You get a 'Permission denied' message, while integrating {{site.data.keyword.en_short}} service instance with IBM Managed Services. 
+You get a 'Permission denied' message, while integrating {{site.data.keyword.en_short}} service instance with IBM Cloud service.
 {: tsSymptoms}
 
-{{site.data.keyword.en_short}} integration APIs use Service to Service [authorization](/docs/get-coding?topic=get-coding-grant-access).
+{{site.data.keyword.en_short}} integration APIs use Service to Service [authorization](/docs/get-coding?topic=get-coding-grant-access){: external}.
 {: tsCauses}
 
-Grant authorization between the IBM Managed Service (for example: Security and Compliance Center) and {{site.data.keyword.en_short}} service instance.
+Grant authorization between the IBM Cloud Service (for example: Security and Compliance Center) and {{site.data.keyword.en_short}} service instance.
 {: tsResolve}
 
 Manage --> Access (IAM) --> Authorization --> Create

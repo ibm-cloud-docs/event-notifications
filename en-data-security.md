@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-07-05"
+lastupdated: "2022-10-17"
 
 keywords: data encryption in Event Notifications, data storage for Event Notifications, bring your own keys for Event Notifications, BYOK for Event Notifications, key management for Event Notifications, key encryption for Event Notifications, personal data in Event Notifications, data deletion for Event Notifications, data in Event Notifications, data security in Event Notifications, KYOK for Event Notifications
 
@@ -10,14 +10,7 @@ subcollection: event-notifications
 
 ---
 
-{:external: target="_blank" .external}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:note: .note}
+{{site.data.keyword.attribute-definition-list}}
 
 # Securing your data in {{site.data.keyword.en_short}}
 {: #en-mng-data}
@@ -48,7 +41,7 @@ The {{site.data.keyword.en_short}} data retention policy describes how long your
 1. Use `ibmcloud resource reclamation-delete <reclamation_id_for_instance>` to permanently delete data that is related to a deleted instance.
 1. If an instance is not restored, all related data is automatically deleted after the data retention period.
 
-### Deleting Event Notifications instances
+### Deleting {{site.data.keyword.en_short}} instances
 {: #en-delete}
 
 If you no longer need an instance of {{site.data.keyword.en_short}}, you can delete the service instance by using {{site.data.keyword.cloud_notm}} CLI. You can also choose to delete your service instance by using the console. Any data that is stored related to that instance is also deleted.

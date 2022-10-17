@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-09-30"
+lastupdated: "2022-10-17"
 
 keywords: event notifications, Resource lifecycle events
 
@@ -35,7 +35,7 @@ Some example of Resource lifecycle events are:
 
 1. Service instance type and sub-types
 
-   | Event type | sub-type    | Description     |
+   | Event type | Sub-type    | Description     |
    | :--------- | :---------- | :-------------- |
    | `instance` | `apply_promo_code` | An event created when a promo code is applied. |
    | `instance` | `create` | An event is generated when you provision a service instance. |
@@ -58,7 +58,7 @@ Some example of Resource lifecycle events are:
 
 1. Service key type resources
 
-   | Event type | sub-type    | Description     |
+   | Event type | Sub-type    | Description     |
    | :--------- | :---------- | :-------------- |
    | `key` | `create` | An event is generated when a service instance credentials are created successfully. |
    | `key` | `create_failure` | An event is generated when a service instance credentials creation failed. |
@@ -68,7 +68,7 @@ Some example of Resource lifecycle events are:
 
 1. Resource Group resources
 
-   | Event type | sub-type    | Description     |
+   | Event type | Sub-type    | Description     |
    | :--------- | :---------- | :-------------- |
    | `Resource_group` | `create` | An event is generated when a resource group get created. |
    | `Resource_group` | `delete` | An event is generated when a resource group get deleted. |

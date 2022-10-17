@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-07-05"
+lastupdated: "2022-10-17"
 
 keywords: event notifications, event-notifications, tutorials, terraform
 
@@ -14,15 +14,7 @@ completion-time: 30m
 
 ---
 
-{:codeblock: .codeblock}
-{:external: target="_blank" .external}
-{:important: .important}
-{:note: .note}
-{:pre: .pre}
-{:screen: .screen}
-{:shortdesc: .shortdesc}
-{:tip: .tip}
-{:step: data-tutorial-type='step'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Working with Terraform in {{site.data.keyword.en_short}}
 {: #en-tera-workwith}
@@ -37,15 +29,18 @@ This tutorial shows you how to use Terraform to configure files like `provider.t
 
 Ensure that the following prerequisites are in place:
 
-* Install Terraform. For more information, see [Download Terraform](https://www.terraform.io/downloads.html).
+* Install Terraform. For more information, see [Download Terraform](https://www.terraform.io/downloads.html){: external}.
 * Either deploy Terraform to a specific folder or add it to your `PATH`.
 
 * Check your version of Terraform:
 
-`terraform –version`
+   ```bash
+   terraform –version
+   ```
+   {: codeblock}
 
-* You need an {{site.data.keyword.cloud}} account. If you don't have an account, then [Create an IBM Cloud account](https://cloud.ibm.com/registration/).
-* Log in to your {{site.data.keyword.cloud}} account.
+* You need an {{site.data.keyword.cloud_notm}} account. If you don't have an account, then [Create an IBM Cloud account](https://cloud.ibm.com/registration/){: external}.
+* Log in to your {{site.data.keyword.cloud_notm}} account.
 
 ## Working with Terraform in {{site.data.keyword.cloud}}
 {: #en-work-terraform-cloud}
@@ -53,18 +48,27 @@ Ensure that the following prerequisites are in place:
 
 Take the following steps:
 
-1. To work with Terraform and the IBM Cloud, a plug-in is required to extend the current functionality. For more information on how to install and configure the IBM Cloud plug-in, see [terraform-provider-ibm](https://github.com/IBM-Cloud/terraform-provider-ibm). This tutorial uses IBM Cloud Provider 1.38.2. For more information, see [IBM Cloud Provider](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs) 
+1. To work with Terraform and the {{site.data.keyword.cloud_notm}}, a plug-in is required to extend the current functionality. For more information on how to install and configure the {{site.data.keyword.cloud_notm}} plug-in, see [terraform-provider-ibm](https://github.com/IBM-Cloud/terraform-provider-ibm){: external}. This tutorial uses {{site.data.keyword.cloud_notm}} Provider 1.38.2. For more information, see [{{site.data.keyword.cloud_notm}} Provider](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs){: external}.
+
 1. Create a hidden directory from the home directory:
 
-`mkdir $HOME/.terraform.d/plugins`
+   ```bash
+   mkdir $HOME/.terraform.d/plugins
+   ```
+   {: codeblock}
 
-1. Download and move the plug-in to the directory that you created. For more information, see [terraform-provider-ibm](https://github.com/IBM-Cloud/terraform-provider-ibm/releases):
+1. Download and move the plug-in to the directory that you created. For more information, see [terraform-provider-ibm](https://github.com/IBM-Cloud/terraform-provider-ibm/releases){: external}.
 
-`mv $HOME/Downloads/terraform-provider-ibm_v1.38.2 $HOME/.terraform.d/plugins/`
+   ```bash
+   mv $HOME/Downloads/terraform-provider-ibm_v1.38.2 $HOME/.terraform.d/plugins/
+   ```
+   {: codeblock}
 
-1. Connect to your {{site.data.keyword.cloud}} account with {{site.data.keyword.cloud}} API Key. 
-1. From [cloud.ibm.com](https://cloud.ibm.com/login) go to the **manage** tile and select **Access(IAM)** an then select **IBM Cloud API Keys**. 
-1. Create an IBM Cloud API Key and save the password.
+1. Connect to your {{site.data.keyword.cloud_notm}} account with {{site.data.keyword.cloud_notm}} API Key.
+
+1. From [cloud.ibm.com](https://cloud.ibm.com/login){: external} go to the **manage** tile and select **Access(IAM)** and then select **{{site.data.keyword.cloud_notm}} API Keys**.
+
+1. Create an {{site.data.keyword.cloud_notm}} API Key and save the password.
 
 ## Deploying resources
 {: #en-resources-deploy}
@@ -90,8 +94,8 @@ terraform {
          source = "IBM-Cloud/ibm"
          version = "1.38.2"
       }
-    }
-  }
+   }
+}
 ```
 {: codeblock}
 
@@ -102,39 +106,39 @@ terraform {
 
 ```hcl
 variable "instance_id" {
-  type        = string
-  default     = "235b109c-0a2c-438b-8758-1a4b9db044db"
-  description = "Event Notifications service instanceId."
+   type        = string
+   default     = "235b109c-0a2c-438b-8758-1a4b9db044db"
+   description = "Event Notifications service instanceId."
 }
 
 variable "destination_name" {
-  type        = string
-  default     = "Smart Home Android app"
-  description = "Destination name."
+   type        = string
+   default     = "Smart Home Android app"
+   description = "Destination name."
 }
 
 variable "destination_description" {
-  type        = string
-  default     = "Smart House device status"
-  description = "Description for the destination."
+   type        = string
+   default     = "Smart House device status"
+   description = "Description for the destination."
 }
 
 variable "webhook_type" {
-  default     = "webhook"
-  type        = string
-  description = "Type of the destination"
+   default     = "webhook"
+   type        = string
+   description = "Type of the destination"
 }
 
 variable "webhook_verb" {
-  default     = "POST"
-  type        = string
-  description = "Type of verb fro the destination"
+   default     = "POST"
+   type        = string
+   description = "Type of verb fro the destination"
 }
 
 variable "webhook_URL" {
-  type        = string
-  description = "URL of the webhook"
-  default     = "https://hello.demo.com/hello"
+   type        = string
+   description = "URL of the webhook"
+   default     = "https://hello.demo.com/hello"
 }
 ```
 {: codeblock}
@@ -148,10 +152,10 @@ The remaining files declare the resources to be deployed.
 
 ```hcl
 resource "ibm_resource_instance" "terraform_demo" {
-  plan     = "lite"
-  location = "us-south"
-  name     = "terraform_demo"
-  service  = "event-notifications"
+   plan     = "lite"
+   location = "us-south"
+   name     = "terraform_demo"
+   service  = "event-notifications"
 }
 ```
 {: codeblock}
@@ -163,20 +167,20 @@ resource "ibm_resource_instance" "terraform_demo" {
 
 ```hcl
 resource "ibm_en_destination" "destination1" {
-  type          = var.webhook_type
-  name          = var.destination_name
-  description   = var.destination_description
-  instance_guid = ibm_resource_instance.terraform_demo.guid
-  config {
-    params {
-      url  = var.webhook_URL
-      verb = var.webhook_verb
-      custom_headers = {
-        "authorization" = "secure"
+   type          = var.webhook_type
+   name          = var.destination_name
+   description   = var.destination_description
+   instance_guid = ibm_resource_instance.terraform_demo.guid
+   config {
+      params {
+         url  = var.webhook_URL
+         verb = var.webhook_verb
+         custom_headers = {
+           "authorization" = "secure"
+         }
+         sensitive_headers = ["authorization"]
       }
-      sensitive_headers = ["authorization"]
-    }
-  }
+   }
 }
 ```
 {: codeblock}
@@ -188,9 +192,9 @@ resource "ibm_en_destination" "destination1" {
 
 ```hcl
 resource "ibm_en_topic" "topic1" {
-  instance_guid = ibm_resource_instance.terraform_demo.guid
-  description   = "Check the status of front door"
-  name          = "Front Door Status"
+   instance_guid = ibm_resource_instance.terraform_demo.guid
+   description   = "Check the status of front door"
+   name          = "Front Door Status"
 }
 ```
 {: codeblock}
@@ -202,15 +206,15 @@ resource "ibm_en_topic" "topic1" {
 
 ```hcl
 resource "ibm_en_subscription" "subscription1" {
-  instance_guid  = ibm_resource_instance.terraform_demo.guid
-  name           = "Android app Subscription"
-  description    = "Subscribe to Android app"
-  topic_id       = ibm_en_topic.topic1.topic_id
-  destination_id = ibm_en_destination.destination1.destination_id
-  attributes {
-    add_notification_payload = true
-    signing_enabled          = true
-  }
+   instance_guid  = ibm_resource_instance.terraform_demo.guid
+   name           = "Android app Subscription"
+   description    = "Subscribe to Android app"
+   topic_id       = ibm_en_topic.topic1.topic_id
+   destination_id = ibm_en_destination.destination1.destination_id
+   attributes {
+      add_notification_payload = true
+      signing_enabled          = true
+   }
 }
 ```
 {: codeblock}
@@ -250,18 +254,18 @@ commands will detect it and remind you to do so if necessary.
 ### Terraform **plan**
 {: #en-plan-tf}
 
-The Terraform **plan** command compares the declared resources with the state file to print the resources to be created, altered, or destroyed. This step shows you the impact of the `main.tf` file. 
+The Terraform **plan** command compares the declared resources with the state file to print the resources to be created, altered, or destroyed. This step shows you the impact of the `main.tf` file.
 
 ```bash
 bash-5.1# terraform plan
 
 Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
-  + create
+   + create
 
 Terraform will perform the following actions:
 
-  # ibm_en_destination.destination1 will be created
-  + resource "ibm_en_destination" "destination1" {
+   # ibm_en_destination.destination1 will be created
+   + resource "ibm_en_destination" "destination1" {
       + description        = "Smart House device status"
       + destination_id     = (known after apply)
       + id                 = (known after apply)
@@ -273,18 +277,18 @@ Terraform will perform the following actions:
       + updated_at         = (known after apply)
 
       + config {
-          + params {
-              + custom_headers    = {
-                  + "authorization" = "secure"
-                }
-              + sensitive_headers = [
-                  + "authorization",
-                ]
-              + url               = "https://hello.demo.com/hello"
-              + verb              = "POST"
+         + params {
+            + custom_headers    = {
+               + "authorization" = "secure"
             }
-        }
-    }
+            + sensitive_headers = [
+               + "authorization",
+            ]
+            + url               = "https://hello.demo.com/hello"
+            + verb              = "POST"
+         }
+      }
+   }
 
   # ibm_en_subscription.subscription1 will be created
   + resource "ibm_en_subscription" "subscription1" {
@@ -302,13 +306,13 @@ Terraform will perform the following actions:
       + updated_at       = (known after apply)
 
       + attributes {
-          + add_notification_payload = true
-          + signing_enabled          = true
-        }
-    }
+         + add_notification_payload = true
+         + signing_enabled          = true
+      }
+   }
 
-  # ibm_en_topic.topic1 will be created
-  + resource "ibm_en_topic" "topic1" {
+   # ibm_en_topic.topic1 will be created
+   + resource "ibm_en_topic" "topic1" {
       + description        = "Check the status of front door"
       + id                 = (known after apply)
       + instance_guid      = (known after apply)
@@ -318,10 +322,10 @@ Terraform will perform the following actions:
       + subscriptions      = (known after apply)
       + topic_id           = (known after apply)
       + updated_at         = (known after apply)
-    }
+   }
 
-  # ibm_resource_instance.terraform_demo will be created
-  + resource "ibm_resource_instance" "terraform_demo" {
+   # ibm_resource_instance.terraform_demo will be created
+   + resource "ibm_resource_instance" "terraform_demo" {
       + account_id              = (known after apply)
       + allow_cleanup           = (known after apply)
       + created_at              = (known after apply)
@@ -365,7 +369,7 @@ Terraform will perform the following actions:
       + type                    = (known after apply)
       + update_at               = (known after apply)
       + update_by               = (known after apply)
-    }
+   }
 ```
 {: codeblock}
 
@@ -373,10 +377,10 @@ Terraform will perform the following actions:
 {: #en-exportkey-tf}
 {: step}
 
-Export your IBM Cloud API Key before running the **apply** command:
+Export your {{site.data.keyword.cloud_notm}} API Key before running the **apply** command:
 
 ```bash
-export IBMCLOUD_API_KEY={Your IBM Cloud API Key}
+export IBMCLOUD_API_KEY={Your {{site.data.keyword.cloud_notm}} API Key}
 ```
 {: codeblock}
 
@@ -384,7 +388,7 @@ export IBMCLOUD_API_KEY={Your IBM Cloud API Key}
 {: #en-apply-tf}
 {: step}
 
-The Terraform **apply** command implements the changes that are declared during the **plan** step and deploys the resource to the IBM cloud.
+The Terraform **apply** command implements the changes that are declared during the **plan** step and deploys the resource to the {{site.data.keyword.cloud_notm}}.
 
 ```bash
 bash-5.1# terraform apply
@@ -515,15 +519,15 @@ ibm_resource_instance.terraform_demo: Still creating... [20s elapsed]
 ibm_resource_instance.terraform_demo: Still creating... [30s elapsed]
 ibm_resource_instance.terraform_demo: Still creating... [40s elapsed]
 ibm_resource_instance.terraform_demo: Still creating... [50s elapsed]
-ibm_resource_instance.terraform_demo: Creation complete after 52s [id=crn:v1:bluemix:public:event-notifications:us-south:a/4a74f2c31f554afc88156b73a1d577c6:13436c77-d344-437e-ba5d-fd810f5c2914::]
+ibm_resource_instance.terraform_demo: Creation complete after 52s [id=crn:v1:bluemix:public:event-notifications:us-south:a/4a74f2c31f554afc88156b73a1d577c6:24547d88-e455-548f-cb6e-ge921g6d3025::]
 ibm_en_topic.topic1: Creating...
 ibm_en_destination.destination1: Creating...
 ibm_en_destination.destination1: Still creating... [10s elapsed]
 ibm_en_topic.topic1: Still creating... [10s elapsed]
-ibm_en_topic.topic1: Creation complete after 12s [id=13436c77-d344-437e-ba5d-fd810f5c2914/7960f1fe-7991-4993-ad0c-38f12c78b3c8]
-ibm_en_destination.destination1: Creation complete after 13s [id=13436c77-d344-437e-ba5d-fd810f5c2914/878ce8e6-75f9-41e6-913f-6b42f6945588]
+ibm_en_topic.topic1: Creation complete after 12s [id=24547d88-e455-548f-cb6e-ge921g6d3025/7960f1fe-7991-4993-ad0c-38f12c78b3c8]
+ibm_en_destination.destination1: Creation complete after 13s [id=24547d88-e455-548f-cb6e-ge921g6d3025/878ce8e6-75f9-41e6-913f-6b42f6945588]
 ibm_en_subscription.subscription1: Creating...
-ibm_en_subscription.subscription1: Creation complete after 4s [id=13436c77-d344-437e-ba5d-fd810f5c2914/b2d88ff9-da10-412a-9f7a-19f509ea83fb]
+ibm_en_subscription.subscription1: Creation complete after 4s [id=24547d88-e455-548f-cb6e-ge921g6d3025/b2d88ff9-da10-412a-9f7a-19f509ea83fb]
 
 Apply complete! Resources: 4 added, 0 changed, 0 destroyed..
 ```
@@ -533,6 +537,6 @@ Apply complete! Resources: 4 added, 0 changed, 0 destroyed..
 {: #en-validate-tf}
 {: step}
 
-Validate resources within the {{site.data.keyword.cloud}} by selecting the resource list in [resources](https://cloud.ibm.com/resources). 
+Validate resources within the {{site.data.keyword.cloud_notm}} by selecting the resource list in [resources](https://cloud.ibm.com/resources){: external}.
 
-For more information on API and SDK references, tutorials, ad FAQs, for {{site.data.keyword.cloud}} products and services, see [Documentation](https://cloud.ibm.com/docs).
+For more information on API and SDK references, tutorials, and FAQs, for {{site.data.keyword.cloud_notm}} products and services, see [Documentation](https://cloud.ibm.com/docs).

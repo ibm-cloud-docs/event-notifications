@@ -2,9 +2,9 @@
 
 copyright:
    years: 2022
-lastupdated: "2022-07-21"
+lastupdated: "2022-10-17"
 
-keywords: event-notifications, event notifications, about event notifications, secrets manager certificates, secrets expiry 
+keywords: event-notifications, event notifications, about event notifications, secrets manager certificates, secrets expiry
 
 subcollection: event-notifications
 
@@ -20,8 +20,8 @@ completion-time: 30m
 {: #tutorial-en-monitor-secret}
 {: toc-content-type="tutorial"}
 {: toc-completion-time="30m"}
- 
-This tutorial shows you how to monitor the expiry date or any updates on the secrets or certificates by using TLS certificates or secrets. 
+
+This tutorial shows you how to monitor the expiry date or any updates on the secrets or certificates by using TLS certificates or secrets.
 {: shortdesc}
 
 ![{{site.data.keyword.secrets-manager_short}} and {{site.data.keyword.en_short}}](images/en-secrets-manager.png "Secrets manager and {{site.data.keyword.en_short}}"){: caption="Figure 1. {{site.data.keyword.secrets-manager_short}} and {{site.data.keyword.en_short}}" caption-side="bottom"}
@@ -55,7 +55,7 @@ You need an {{site.data.keyword.cloud}} account. If you don't have an account, t
 {: #en-create-instance}
 {: step}
 
-1. Log in to your [{{site.data.keyword.cloud}}](https://cloud.ibm.com) account.
+1. Log in to your [{{site.data.keyword.cloud}}](https://cloud.ibm.com){: external} account.
 
 1. In the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog#services), search **Event Notifications > Event Notifications**.
 
@@ -81,7 +81,7 @@ You need an {{site.data.keyword.cloud}} account. If you don't have an account, t
 
 1. Accept the license agreement terms and click **Create**.
 
-## Connecting to {{site.data.keyword.en_short}} in the {{site.data.keyword.secrets-manager_short}} user interface 
+## Connecting to {{site.data.keyword.en_short}} in the {{site.data.keyword.secrets-manager_short}} user interface
 {: #en-connect-secret}
 {: step}
 
@@ -109,7 +109,7 @@ If an IAM authorization between {{site.data.keyword.secrets-manager_short}} and 
 
 1. To confirm the connection, click **Connect**.
 
-A success message is displayed to indicate that {{site.data.keyword.secrets-manager_short}} is now connected to {{site.data.keyword.en_short}}. 
+A success message is displayed to indicate that {{site.data.keyword.secrets-manager_short}} is now connected to {{site.data.keyword.en_short}}.
 
 ## Verify the {{site.data.keyword.secrets-manager_short}} source in {{site.data.keyword.en_short}}
 {: #en-verify-source}
@@ -119,7 +119,7 @@ A success message is displayed to indicate that {{site.data.keyword.secrets-mana
 
 1. Open **Services and software**.
 
-1. Open the {{site.data.keyword.secrets-manager_short}} instance that you created. For more information, see [Sending email notifications to {{site.data.keyword.en_short}}](/docs/monitoring?topic=monitoring-tutorial-en#en-create-instance) 
+1. Open the {{site.data.keyword.secrets-manager_short}} instance that you created. For more information, see [Sending email notifications to {{site.data.keyword.en_short}}](/docs/monitoring?topic=monitoring-tutorial-en#en-create-instance){: external}.
 
 1. Click **Sources**.
 
@@ -145,14 +145,14 @@ Define a topic that receives an event from {{site.data.keyword.secrets-manager_s
 
 1. Click **Topics**.
 
-1. Click **Create**. 
+1. Click **Create**.
 
 1. In the **Topic details** panel enter the following details:
    - Enter the **Name** for your topic. For example, **MonitorSecretExpiry**.
    - For **Source** select the {{site.data.keyword.en_short}} source, which has the same name as your {{site.data.keyword.secrets-manager_short}} instance.
-   - Select an **Event Type**. For this tutorial select **Secret about to expire**.
-   - Select an **Event subtype**. For this tutorial select **Secret expire in 10 days**.
-   - Select a **Severity**. For this tutorial select **High Severity**.
+   - Select an **Event Type**. For this tutorial, select **Secret about to expire**.
+   - Select an **Event subtype**. For this tutorial, select **Secret expire in 10 days**.
+   - Select a **Severity**. For this tutorial, select **High Severity**.
 
 1. Click **Add a condition**. If you do not click **Add a condition** before you click **Create**, the topic is created with no conditions that are associated with it.
 
@@ -173,9 +173,9 @@ Configure who receives an email when a notification is processed:
 
 1. In the **Create a subscription** panel enter the following details:
    - Enter the **Name** for your subscription. For example, **SecretExpirySubscription**.
-   - For **Topic** select the topic you created. For example, **MonitorSecretExpiry**.
-   - For **Destination** select **{{site.data.keyword.cloud_notm}} email service**.
-   - For **Recipients** enter a valid email address, for example, **MyEmail@MyCompany.com**.
+   - For **Topic**, select the topic you created. For example, **MonitorSecretExpiry**.
+   - For **Destination**, select **{{site.data.keyword.cloud_notm}} email service**.
+   - For **Recipients**, enter a valid email address, for example, **MyEmail@MyCompany.com**.
 
 1. Click **Create**. Your subscription is added to the Subscriptions list.
 

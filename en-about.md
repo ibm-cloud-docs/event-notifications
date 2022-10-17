@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-07-29"
+lastupdated: "2022-10-17"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -10,19 +10,12 @@ subcollection: event-notifications
 
 ---
 
-{:codeblock: .codeblock}
-{:external: target="_blank" .external}
-{:important: .important}
-{:note: .note}
-{:pre: .pre}
-{:screen: .screen}
-{:shortdesc: .shortdesc}
-{:tip: .tip}
+{{site.data.keyword.attribute-definition-list}}
 
-# What is {{site.data.keyword.en_short}}? 
+# What is {{site.data.keyword.en_short}}?
 {: #en-about}
 
-{{site.data.keyword.en_full}} is a routing service that tells you about critical events that occur in your {{site.data.keyword.cloud_notm}} account or triggers automated actions by using webhooks. You can filter and route event notifications from {{site.data.keyword.cloud_notm}} services like Monitoring, to communication channels like email, SMS, and webhooks.
+{{site.data.keyword.en_full}} is a routing service that provides you about critical events that occur in your {{site.data.keyword.cloud_notm}} account or triggers automated actions by using webhooks. You can filter and route event notifications from {{site.data.keyword.cloud_notm}} services like monitoring, to communication channels like email, SMS, and webhooks.
 {: shortdesc}
 
 ![Event notifications](images/en-topleveldiagram.png "Event notifications top-level diagram"){: caption="Figure 1. {{site.data.keyword.en_short}}" caption-side="bottom"}
@@ -33,7 +26,7 @@ subcollection: event-notifications
 ### Centralized alert routing
 {: #en-features-routing}
 
-From a single dashboard, you can route event notifications from {{site.data.keyword.compliance_long}} (SCC), {{site.data.keyword.secrets-manager_full_notm}}, or {{site.data.keyword.cloud_notm}} {{site.data.keyword.prf_hubshort}} to relevant stakeholders. You can also filter alerts by severity and choose a communication channel that is most appropriate, for example SMS or push for immediate priority or email for lower priority alerts.
+From a single dashboard, you can route event notifications from {{site.data.keyword.compliance_long}} (SCC), {{site.data.keyword.secrets-manager_full_notm}}, or {{site.data.keyword.cloud_notm}} {{site.data.keyword.prf_hubshort}} to relevant stakeholders. You can also filter alerts by severity and choose a communication channel that is most appropriate, for example SMS or push for immediate priority or email for lesser priority alerts.
 
 ### Filtered source events
 {: #en-features-filter}
