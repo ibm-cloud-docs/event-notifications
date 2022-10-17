@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-08-29"
+lastupdated: "2022-10-17"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, IBM Cloud Functions, cloud functions
 
@@ -18,25 +18,25 @@ subcollection: event-notifications
 A {{site.data.keyword.openwhisk_short}} represents a service destination, where an incoming notification can be consumed programmatically to actions.
 {: shortdesc}
 
-## Generate {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}} endpoint 
+## Generate {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}} endpoint
 {: #en-generate-cf-incoming-webhook-url}
 
-To post a {{site.data.keyword.openwhisk_short}} notification you will need to generate an endpoint. To generate the endpoint, follow these steps: 
+To post a {{site.data.keyword.openwhisk_short}} notification, you need to generate an endpoint. To generate the endpoint, follow these steps:
 
 1. Create a [{{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}](https://{DomainName}/functions/create) instance. If you already have an {{site.data.keyword.openwhisk_short}} instance, go to step 3.
 
-1. Create a **Namespace**. For more information on creating a **Namespace**, refer [here](https://{DomainName}/docs/openwhisk?topic=openwhisk-namespaces#create_iam_namespace).
+1. Create a **Namespace**. For more information, see [here](https://{DomainName}/docs/openwhisk?topic=openwhisk-namespaces#create_iam_namespace).
 
-1. Create an **Action**. For more information on creating an **Action**, refer [here](https://{DomainName}/docs/openwhisk?topic=openwhisk-actions).
+1. Create an **Action**. For more information, see [here](https://{DomainName}/docs/openwhisk?topic=openwhisk-actions).
 
-1. Select **Endpoint** from the left hand menu.
+1. Select **Endpoint** from the left menu.
 
 1. Copy the URL mentioned and use it in **Destination Configuration** in {{site.data.keyword.en_short}} instance.
 
 ## Generate API key for your namespace
 {: #en-generate-cf-api-key}
 
-1. From your {{site.data.keyword.cloud_notm}} dashboard, navigate to **Manage > Access (IAM)**.
+1. From your {{site.data.keyword.cloud_notm}} dashboard, go to **Manage > Access (IAM)**.
 
 1. Select **Service IDs**.
 
@@ -44,19 +44,19 @@ To post a {{site.data.keyword.openwhisk_short}} notification you will need to ge
 
 1. Select **API keys**.
 
-1. Unlock if the API key is locked by navigating to **Actions > Unlock**.
+1. Unlock if the API key is locked by going to **Actions > Unlock**.
 
-1. Click **Create** and provie a **Name**. This will give you the apikey for the namespace you have selected.
+1. Click **Create** and provide a **Name**. This gives you the apikey for the namespace you selected.
 
 1. Copy **api_key** and use it in **Destination Configuration** in {{site.data.keyword.en_short}} instance.
 
-{{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}} Cloud Foundary based namespace is not supported, only IAM based namespace is supported.
+{{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}} Cloud Foundary based namespace is not supported. Only IAM-based namespace is supported.
 {: note}
 
 ## Configuring a {{site.data.keyword.openwhisk_short}} destination
 {: #en-cf-configure-destination}
 
-You can configure a {{site.data.keyword.openwhisk_short}} destination in the `Destinations` tab. 
+You can configure a {{site.data.keyword.openwhisk_short}} destination in the `Destinations` tab.
 
 To configure a {{site.data.keyword.openwhisk_short}} destination, do the following steps:
 
@@ -68,9 +68,9 @@ To configure a {{site.data.keyword.openwhisk_short}} destination, do the followi
 
    - **Name** - Enter a name for your destination.
    - **Description** - Optionally, enter a description for your destination.
-   - **Type** - Under **Destination**, for the **Type**, select **{{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}** from the drop down as your destination type.
+   - **Type** - Under **Destination**, for the **Type**, select **{{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}** from the drop-down as your destination type.
    - **URL** - Enter the {{site.data.keyword.openwhisk_short}} incoming webhook URL. This is the URL that you have [generated](#en-generate-cf-incoming-webhook-url) earlier.
-   - **API key** - Enter the API key you have [generated](#en-generate-cf-api-key) earlier.
+   - **API key** - Enter the API key that you have [generated](#en-generate-cf-api-key) earlier.
 
 1. Click **Add**.
 

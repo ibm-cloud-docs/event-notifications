@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-08-25"
+lastupdated: "2022-10-17"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -21,7 +21,7 @@ completion-time: 10m
 {: toc-content-type="tutorial"}
 {: toc-completion-time="10m"}
 
-Create an {{site.data.keyword.en_short}} destination. Destinations are custom protocols, which are either services or user reachable entities. Currently, {{site.data.keyword.en_short}} supports the following destinations:
+Create an {{site.data.keyword.en_short}} destination. Destinations are custom protocols, which are either services or user reachable entities. {{site.data.keyword.en_short}} supports the following destinations:
 
 - {{site.data.keyword.cloud_notm}} Email
 - {{site.data.keyword.cloud_notm}} SMS
@@ -32,26 +32,26 @@ Create an {{site.data.keyword.en_short}} destination. Destinations are custom pr
 - {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}
 {: shortdesc}
 
-**IBM Cloud SMS service** and **IBM Cloud Email service** are supported out of the box.
+**{{site.data.keyword.cloud_notm}} SMS service** and **{{site.data.keyword.cloud_notm}} Email service** are supported out of the box.
 
 ## Create a destination
 {: #en-create-destination}
 {: step}
 
-Click `Destinations` in the {{site.data.keyword.en_short}} console. By default, **IBM Cloud SMS service** and **IBM Cloud Email service** are included, with their `Destination ID`.
+Click `Destinations` in the {{site.data.keyword.en_short}} console. By default, **{{site.data.keyword.cloud_notm}} SMS service** and **{{site.data.keyword.cloud_notm}} Email service** are included, with their `Destination ID`.
 
 ## Add destination details
 {: #en-destination-details}
 {: step}
 
-Click **Add +** to add new destination. 
+Click **Add +** to add new destination.
 
 Provide the new destination details:
 - `Destination name`: add a name for the Destination.
 - `Destination description`: add an optional description for the destination.
-- `Destination type`: select a type from the dropdown list.
+- `Destination type`: select a type from the list.
 
-When you select the `Destination Type` as any one of the push notification service (FCM, APNs, Chrome, Firefox, and Safari), you can select a Pre-production destination for developing and testing your environments at a lower-cost.
+When you select the `Destination Type` as any one of the push notification services (FCM, APNs, Chrome, Firefox, and Safari), you can select a Pre-production destination for developing and testing your environments at a low cost.
 {: note}
 
 ## Add the destination
@@ -67,10 +67,10 @@ You can upgrade a **Pre-production destination** to **Production destination** a
 
 To understand the billing impact of upgrading a **Pre-production destination** to **Production destination**, see [here](/docs/event-notifications?topic=event-notifications-en-destinations-push#en-destinations-push-charge-preprod-to-prod).
 
-To modify the destination, 
+To modify the destination,
 - Select the pre-production destination from the list of destinations
 - Click the three vertical dots in the selected pre-production destination to access the overflow menu
-- Click **Edit**. This brings the editable view of the selected destination.
+- Click **Edit**, which brings the editable view of the selected destination.
 - Click the **Production destination** tile to change the destination.
 - Click **Add**.
 

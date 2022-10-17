@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-07-05"
+lastupdated: "2022-10-17"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, ms teams, Microsoft Teams
 
@@ -10,40 +10,33 @@ subcollection: event-notifications
 
 ---
 
-{:codeblock: .codeblock}
-{:external: target="_blank" .external}
-{:important: .important}
-{:note: .note}
-{:pre: .pre}
-{:screen: .screen}
-{:shortdesc: .shortdesc}
-{:tip: .tip}
+{{site.data.keyword.attribute-definition-list}}
 
 # Microsoft Teams
 {: #en-destinations-msteams}
 
-Microsoft Teams represents a service destination, where an incoming notification can be consumed programmatically. For example, an incoming notification about an event can share content in Microsoft Teams notification based on the content of the incoming notification.
+Microsoft&trade; Teams is an enterprise collaboration and communication platform. When you select Microsoft Teams as a service destination, any subscribed notification about an event can be sent as a message to a Microsoft Teams channel.
 {: shortdesc}
 
-## Create an incoming webhook URL 
+## Create an incoming webhook URL
 {: #en-create-an-incoming-webhook-url}
 
-To post a Microsoft Teams notification you will need to create an incoming webhook URL. To create the incoming webhook URL, follow these steps: https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook.
+To post a Microsoft Teams notification, you need to create an incoming webhook URL. To create the incoming webhook URL, follow these steps: https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook.
 
-## Configuring an Microsoft Teams destination
+## Configuring a Microsoft Teams destination
 {: #en-msteams-configure}
 
-You can configure an Microsoft Teams destination in the `Destinations` tab. As part of the configuration, enter the Microsoft Teams Incoming Webhook URL.
+You can configure a Microsoft Teams destination in the `Destinations` tab. As part of the configuration, enter the Microsoft Teams Incoming Webhook URL.
 
 ## Configuring an Microsoft Teams subscription
 {: #en-msteams-configure-sub}
 
 Create a subscription to associate the Microsoft Teams destination to a topic.
 
-## How do Microsoft Teams notification from Event Notifications looks 
+## How do Microsoft Teams notification from Event Notifications looks
 {: #en-how-do-msteams-notification-from-en-looks}
 
-Event notification generates Microsoft Teams notifications from incoming payload. The template event notification use to send to Microsoft Teams looks like following - 
+Event notification generates Microsoft Teams notifications from incoming payload. The template event notification use to send to Microsoft Teams looks like following -
 
 ```sh
 {
@@ -107,7 +100,7 @@ Event notification generates Microsoft Teams notifications from incoming payload
 }
 ```
 
-Here - 
+Here -
 
 *ibmendefaultshort* is the default short payload provided in the incoming payload.
 *ibmendefaultlong* is tbe default long payload provided in the incoming payload.

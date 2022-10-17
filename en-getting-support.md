@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-02-09"
+lastupdated: "2022-10-17"
 
 keywords: event-notifications, event notification, getting help and support
 
@@ -10,14 +10,7 @@ subcollection: event-notifications
 
 ---
 
-{:codeblock: .codeblock}
-{:external: target="_blank" .external}
-{:important: .important}
-{:note: .note}
-{:pre: .pre}
-{:screen: .screen}
-{:shortdesc: .shortdesc}
-{:tip: .tip}
+{{site.data.keyword.attribute-definition-list}}
 
 # Getting help and support
 {: #en-getting-help-and-support}
@@ -31,7 +24,7 @@ By default, account users don't have access to create, update, search, or view c
 ## Creating a cloud support case
 {: #en-cloud-support-case}
 
-See [Using the Support Center](/docs/get-support?topic=get-support-using-avatar){: external} for more information.
+For more information, see [Using the Support Center](/docs/get-support?topic=get-support-using-avatar){: external}.
 
 ### Creating a support case for a UI issue
 {: #ac-ui-support-case}

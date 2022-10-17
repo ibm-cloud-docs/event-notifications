@@ -9,7 +9,6 @@ toc:
     path: event-notifications
     label: Event Notifications
 
-#  List your getting started tutorial (getting-started.md) as the first item in the Get started nav group. See https://test.cloud.ibm.com/docs/writing?topic=writing-navigation for more details on the toc design.
   entries:
   - navgroup:
       id: learn
@@ -51,7 +50,6 @@ toc:
       - topic: en-release-notes.md
         navtitle: Release notes
 
-
   - navgroup:
       id: tutorial
       topics:
@@ -89,9 +87,6 @@ toc:
               topics:
               - en-cse.md
 
-
-#  Links to your REST API docs should be included in the Reference navigation group. For details on publishing API docs, see https://test.cloud.ibm.com/docs/api-docs.
-#  Links to your command line reference docs should be included in the Reference navigation group.
   - navgroup:
       id: reference
       topics:

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-02-09"
+lastupdated: "2022-10-17"
 
 keywords: app configuration, service credentials, authentication, IBM Cloud, event notifications
 
@@ -10,17 +10,10 @@ subcollection: event-notifications
 
 ---
 
-{:codeblock: .codeblock}
-{:external: target="_blank" .external}
-{:important: .important}
-{:note: .note}
-{:pre: .pre}
-{:screen: .screen}
-{:shortdesc: .shortdesc}
-{:tip: .tip}
+{{site.data.keyword.attribute-definition-list}}
 
 # Authenticating with service credentials
-{: #ac-service-credentials}
+{: #en-service-credentials}
 
 You can generate a new set of credentials for cases where you want to manually connect an app or external consumer to an {{site.data.keyword.cloud_notm}} service. Credentials are provided in JSON format. The JSON snippet lists credentials, such as the API key and secret, and the connection information for the service.
 {: shortdesc}

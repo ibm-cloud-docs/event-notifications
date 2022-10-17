@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-07-05"
+lastupdated: "2022-10-17"
 
 keywords: event notifications logDNA, event notifications logging, event notifications external logs
 
@@ -10,49 +10,37 @@ subcollection: event-notifications
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:download: .download}
-{:preview: .preview}
+{{site.data.keyword.attribute-definition-list}}
 
 # Logging for {{site.data.keyword.en_short}}
 {: #logging}
 
-You can view and analyze {{site.data.keyword.en_short}} logs by using the {{site.data.keyword.la_full}} service and enabling platform logs in each region where you operate in {{site.data.keyword.cloud_notm}}. {{site.data.keyword.la_full_notm}} adds log management capabilities to your {{site.data.keyword.cloud}} architecture. 
+You can view and analyze {{site.data.keyword.en_short}} logs by using the {{site.data.keyword.la_full}} service and enabling platform logs in each region where you operate in {{site.data.keyword.cloud_notm}}. {{site.data.keyword.la_full_notm}} adds log management capabilities to your {{site.data.keyword.cloud}} architecture.
 {: shortdesc}
 
-Use the [{{site.data.keyword.at_full_notm}} service](/docs/activity-tracker) to audit and track how users and applications interact with the {{site.data.keyword.en_short}} service. 
+Use the [{{site.data.keyword.at_full_notm}} service](/docs/activity-tracker) to audit and track how users and applications interact with the {{site.data.keyword.en_short}} service.
 {: tip}
 
 ## Platform logs
 {: #logging_ov}
 
-Platform logs are logs that are exposed by logging-enabled services and the platform in {{site.data.keyword.cloud_notm}}. 
+Platform logs are logs that are exposed by logging-enabled services and the platform in {{site.data.keyword.cloud_notm}}.
 
-- Platform logs are regional. 
+- Platform logs are regional.
 
-    You can monitor logs from enabled services on the {{site.data.keyword.cloud_notm}} in the region where the service is available. 
+   You can monitor logs from enabled services on the {{site.data.keyword.cloud_notm}} in the region where the service is available.
 
-- You can configure one instance only of the {{site.data.keyword.la_short}} service per region to collect platform logs in that location. 
+- You can configure one instance only of the {{site.data.keyword.la_short}} service per region to collect platform logs in that location.
 
-    You can have multiple {{site.data.keyword.la_short}} instances in a location. However, only one instance in a location (region) can be configured to receive logs from [enabled services](/docs/log-analysis?topic=log-analysis-cloud_services) in that {{site.data.keyword.cloud_notm}} location.
+   You can have multiple {{site.data.keyword.la_short}} instances in a location. However, only one instance in a location (region) can be configured to receive logs from [enabled services](/docs/log-analysis?topic=log-analysis-cloud_services) in that {{site.data.keyword.cloud_notm}} location.
 
 - To configure a {{site.data.keyword.la_short}} instance, you must set on the `platform logs` configuration setting. Also, you must have the platform role `editor` or higher for the {{site.data.keyword.la_short}} service in your account.
 
-    To enable platform logs, see:
+   To enable platform logs, see:
 
-    - [Configuring platform logs through the Observability dashboard](/docs/log-analysis?topic=log-analysis-config_svc_logs#config_svc_logs_ui)
+   - [Configuring platform logs through the Observability dashboard](/docs/log-analysis?topic=log-analysis-config_svc_logs#config_svc_logs_ui)
 
-    - [Configuring platform logs from the command line](/docs/log-analysis?topic=log-analysis-config_svc_logs#platform_logs_enabling_cli)
-
+   - [Configuring platform logs from the command line](/docs/log-analysis?topic=log-analysis-config_svc_logs#platform_logs_enabling_cli)
 
 For more information about platform logs, see [Configuring IBM Cloud platform logs](/docs/log-analysis?topic=log-analysis-config_svc_logs).
 
@@ -97,14 +85,14 @@ Table 4 outlines the fields that are included in each log record:
 | `logSourceCRN`    | Required   | Defines the account where the log is published. |
 | `saveServiceCopy` | Required   | Defines whether IBM saves a copy of the record for operational purposes. |
 | `resourceGroupId` | Required   | Defines the resource group that is associated with the {{site.data.keyword.en_short}} instance. |
-| `message`         | Required   | Description of the log that is generated. 
+| `message`         | Required   | Description of the log that is generated.
 | `msg_timestamp`   | Required   | UTC timestamp of the message.
 | `messageID`       | Required   | ID of the log that is generated. |
 | `resolution`      | Optional   | Guidance on how to proceed if you receive this log record. |
 | `documentsURL`    | Optional   | More information on how to proceed if you receive this log record. |
 | `sourceID`        | Required   | CRN of the {{site.data.keyword.cloud_notm}} service that sends the notification through the {{site.data.keyword.en_short}} service. |
 | `notificationID`  | Optional   | ID of the notification that is sent to a destination. |
-| `level`           | Required   | Type of log. Valid values are `INFO`, `WARN`, `ERROR` | 
+| `level`           | Required   | Type of log. Valid values are `INFO`, `WARN`, `ERROR` |
 {: caption="Table 4. Log record fields" caption-side="top"}
 
 ## Log messages
@@ -122,9 +110,9 @@ The following table lists the message IDs that are generated by the {{site.data.
 | `event-notifications.00007I` | `INFO` | `An SMS is dispatched to the following numbers: [<LIST-OF-TELEPHONE-NUMBERS].` |
 | `event-notifications.00008I` | `INFO` | `An email is sent to each of the following destinataries: [<LIST-OF-EMAIL-ADDRESSES>]` |
 | `event-notifications.00009I` | `INFO` | `A webhook is successfully served. Response from the webhook: OK with the status code: 200` |
-| `event-notifications.00010I` | `INFO` | `A notification event with ID <NOTIFICATION_ID is sent to the following subscriptions.<LIST-OF_SUBSCRIPTIONS>` 
-| `event-notifications.00011I` | `INFO` | `A notification event with ID <NOTIFICATION_ID is sent to the following destinations.<LIST-OF_DESTINATIONS>` 
-| `event-notifications.00012I` | `INFO` | `Notification processed successfully for total: 1 devices and platform push_chrome` 
+| `event-notifications.00010I` | `INFO` | `A notification event with ID <NOTIFICATION_ID is sent to the following subscriptions.<LIST-OF_SUBSCRIPTIONS>`
+| `event-notifications.00011I` | `INFO` | `A notification event with ID <NOTIFICATION_ID is sent to the following destinations.<LIST-OF_DESTINATIONS>`
+| `event-notifications.00012I` | `INFO` | `Notification processed successfully for total: 1 devices and platform push_chrome`
 | `event-notifications.00013I` | `INFO` | `Notification dispatched successfully to total devices <COUNT> and platform push_android`. |
 | `event-notifications.00014I` | `INFO` | `The slack destination is successfully served. Response from the slack API:`. |
 | `event-notifications.00015I` | `INFO` | `The notification is delievered to the deviceID:<DEVICE_ID> on the platform: <PLATFORM_NAME> and the destination ID:<DESTINATION_ID>`. |
@@ -153,7 +141,7 @@ The following table lists the message IDs that are generated by the {{site.data.
 {: #logging_analyze_1}
 
 If you want to view all the logs thar are being generated for a particular source, get the `sourceID` from the {{site.data.keyword.en_short}} service dashboard and use the following query in {{site.data.keyword.la_short}}:
- 
+
 ```sh
 sourceID:<source_crn>
 ```

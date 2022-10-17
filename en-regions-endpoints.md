@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-08-10"
+lastupdated: "2022-10-17"
 
 keywords: event-notifications, event notifications, regions, endpoints, private endpoints
 
@@ -36,10 +36,10 @@ You can create {{site.data.keyword.en_full_notm}} resources in one of the suppor
 {{site.data.keyword.en_short}} offers two connectivity options for interacting with its service APIs.
 
 Public endpoints
-:   By default, you can connect to resources in your account over the {{site.data.keyword.cloud_notm}} public network. Your data is encrypted in transit by default using the Transport Security Layer (TLS) 1.2 protocol.
+:   By default, you can connect to resources in your account over the {{site.data.keyword.cloud_notm}} public network. Your data is encrypted in transit by default that uses the Transport Security Layer (TLS) 1.2 protocol.
 
 Private endpoints
-:   To further secure your connection, you can also enable [virtual routing and forwarding (VRF) and service endpoints](https://cloud.ibm.com/docs/account?topic=account-vrf-service-endpoint&interface=ui) for your infrastructure account. When you enable VRF for your account, you can [connect to {{site.data.keyword.en_short}} by using a private IP](/docs/event-notifications?topic=event-notifications-en-service-connection) that is accessible only through the {{site.data.keyword.cloud_notm}} private network.
+:   To further secure your connection, you can also enable [virtual routing and forwarding (VRF) and service endpoints](https://cloud.ibm.com/docs/account?topic=account-vrf-service-endpoint&interface=ui){: external} for your infrastructure account. When you enable VRF for your account, you can [connect to {{site.data.keyword.en_short}} by using a private IP](/docs/event-notifications?topic=event-notifications-en-service-connection) that is accessible only through the {{site.data.keyword.cloud_notm}} private network.
 
 ### Public endpoints
 {: #en-public-endpoints}
