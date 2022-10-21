@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-10-17"
+lastupdated: "2022-10-20"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -28,7 +28,6 @@ From a billing perspective, ingested notifications are calculated for all incomi
 
 The list of IBM provided sources is as follows:
 - [{{site.data.keyword.monitoringfull_notm}}](https://{DomainName}/docs/monitoring?topic=monitoring-notifications){: external}
-- [{{site.data.keyword.cloud_notm}} Platform Notifications](https://{DomainName}/docs/account?topic=account-add-users-distribution-list#event-notifications-distribution-list){: external}
 - [{{site.data.keyword.secrets-manager_full_notm}}](https://{DomainName}/docs/secrets-manager?topic=secrets-manager-event-notifications&interface=ui){: external}
 - [{{site.data.keyword.compliance_long}}](https://{DomainName}/docs/security-compliance?topic=security-compliance-event-notifications&interface=ui){: external}
 
@@ -42,4 +41,5 @@ To add an {{site.data.keyword.cloud_notm}} source or an API source, complete the
 ## {{site.data.keyword.cloud_notm}} platform sources
 {: #en-ibm-cloud-platform-sources}
 
+- [{{site.data.keyword.cloud_notm}} Platform Notifications](https://{DomainName}/docs/account?topic=account-add-users-distribution-list#event-notifications-distribution-list){: external}
 - [{{site.data.keyword.cloud_notm}} Resource lifecycle events](/docs/event-notifications?topic=event-notifications-en-resource-lifecycle-events)

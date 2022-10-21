@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-10-17"
+lastupdated: "2022-10-20"
 
 keywords: event notifications, event-notifications, tutorials, terraform
 
@@ -42,7 +42,7 @@ Ensure that the following prerequisites are in place:
 * You need an {{site.data.keyword.cloud_notm}} account. If you don't have an account, then [Create an IBM Cloud account](https://cloud.ibm.com/registration/){: external}.
 * Log in to your {{site.data.keyword.cloud_notm}} account.
 
-## Working with Terraform in {{site.data.keyword.cloud}}
+## Working with Terraform in {{site.data.keyword.cloud_notm}}
 {: #en-work-terraform-cloud}
 {: step}
 
@@ -66,7 +66,7 @@ Take the following steps:
 
 1. Connect to your {{site.data.keyword.cloud_notm}} account with {{site.data.keyword.cloud_notm}} API Key.
 
-1. From [cloud.ibm.com](https://cloud.ibm.com/login){: external} go to the **manage** tile and select **Access(IAM)** and then select **{{site.data.keyword.cloud_notm}} API Keys**.
+1. Login to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/login){: external} and go to the **Manage** tile and select **Access(IAM)**, and then select **{{site.data.keyword.cloud_notm}} API Keys**.
 
 1. Create an {{site.data.keyword.cloud_notm}} API Key and save the password.
 
@@ -380,7 +380,7 @@ Terraform will perform the following actions:
 Export your {{site.data.keyword.cloud_notm}} API Key before running the **apply** command:
 
 ```bash
-export IBMCLOUD_API_KEY={Your {{site.data.keyword.cloud_notm}} API Key}
+export IBMCLOUD_API_KEY={Your IBM Cloud API Key}
 ```
 {: codeblock}
 

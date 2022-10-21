@@ -17,7 +17,11 @@ toc:
       - en-about.md
       - en-concepts.md
       - en-reln-model.md
-      - en-source.md
+      - topicgroup:
+          label: Event sources
+          topics:
+          - en-source.md
+          - en-resource-lifcycle-events.md
       - en-destination.md
       - topicgroup:
           label: Supported destinations
@@ -65,7 +69,6 @@ toc:
       - en-push-safari.md
       - en-terraform-tutorial.md
       - en-ts-monitor-secrets.md
-      - en-resource-lifcycle-events.md
 
   - navgroup:
       id: howto
@@ -110,7 +113,6 @@ toc:
       - en-regions-endpoints.md
       - en-payload.md
       - en-notices.md
-
 
   - navgroup:
       id: help
