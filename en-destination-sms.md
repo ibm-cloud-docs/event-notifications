@@ -70,7 +70,7 @@ The Opt-in message contains:
 
 In some cases, the carrier service allows keywords like `START` and `STOP` for receiving notifications and to stop notifications.
 
-When a recipient doesn't wants to receive any SMS notification, they can opt out by sending a response `STOP`, the recipients number is moved to the **Unsubscribed** tab.
+When a recipient doesn't wants to receive any SMS notification, they can opt out by sending a response `STOP`, which immediately disables sending notifications to the recipient. However, the phone number is moved to **Unsubscribed** tab only on the next attempt to send an SMS to the same number.
 
 To add a recipient number back to active list, take the following steps:
 

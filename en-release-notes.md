@@ -20,8 +20,8 @@ content-type: release-note
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
 
-## 31 Oct 2022
-{: #event-notifications-Oct3122}
+## 28 Oct 2022
+{: #event-notifications-Oct2822}
 {: release-note}
 
 Support for SMS "Opt-in"
