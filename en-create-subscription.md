@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-10-17"
+lastupdated: "2022-10-28"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -42,7 +42,10 @@ Click `Subscriptions` in the {{site.data.keyword.en_short}} console.
     - `Description`: add an optional description.
 - Select a `Topic` from the list.
 - Select a Destination type from the **Destination** list.
-   - `{{site.data.keyword.cloud_notm}} SMS service` - When you select this option, you can add up to 100 phone numbers to the recipient list. In the **Active** tab, add the Mobile numbers. When a recipient sends a response `STOP`, the recipients number is moved to the **Unsubscribed** tab. The recipient can restart to receive the SMS by sending a response code `START`.
+   - `{{site.data.keyword.cloud_notm}} SMS service` - When you select this option, you can add up to 3 phone numbers for lite plan and 100 phone numbers for standard plan to the recipient list. After adding phone number and when you click **Create** subscription, the number are added to the **Invited** tab. The **Active** tab, displays the phone number of recipients who confirmed receiving SMS notifications for the topic selected in the invite.
+      - When a recipient clicks the **Unsubscribe** link, the recipients number is moved to the **Unsubscribed** tab. To restart the subscription, the recipient need to contact {{site.data.keyword.IBM_notm}} {{site.data.keyword.en_short}} service administrator to add the number back to subscription.
+      - In some cases, the carrier service allows keywords like `START` and `STOP`. When a recipient sends a response `STOP`, sending notifications to the recipient gets immediately disabled. However, the phone number is moved to **Unsubscribed** tab only on the next attempt to send an SMS to the same number. The recipient can restart to receive the SMS by sending a response code `START` in some case where keyword use is permitted by the carrier service.
+
    - `{{site.data.keyword.cloud_notm}} Email service` - When you select this option, you can add up to 100 email addresses of the recipient list. The **Invited** tab displays the list of users who not yet accepted the invitation to be a subscriber. The **Active** tab displays the list of recipients email addresses and the date activated. The **Unsubscribed** tab displays the list of recipients who don't want to receive any email notification for this subscription.
 - Add additional information that is related to the respective destination type.
    - For `{{site.data.keyword.cloud_notm}} Email service`

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-10-17"
+lastupdated: "2022-10-28"
 
 keywords: event-notifications, event notifications migration, notifications, destinations, specification
 
@@ -323,7 +323,7 @@ ibmendefaultlong: "Password will expire in 10 Days. Please log in to the Bank ho
 {: #en-binary-mode-header11}
 
 ```JSON
-ce-ibmendefaultlong: "Password will expire in 10 Days. Pleaselog in to the Bank home page and click on Change Password link to change your password."
+ce-ibmendefaultlong: "Password will expire in 10 Days. Please log in to the Bank home page and click on Change Password link to change your password."
 ```
 
 #### ibmenfcmbody(string/json)

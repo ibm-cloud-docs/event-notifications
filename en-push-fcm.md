@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-10-17"
+lastupdated: "2022-10-28"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, push
 
@@ -96,13 +96,13 @@ You also need to generate the `google-services.json` file. Complete the followin
 
 * In the `Add Firebase to your Android app` window, add `com.ibm.cloud.eventnotifications.destination.android` as the Package Name. The `App nickname` field is optional.
 
-* Click Register app.
+* Click **Register app**.
 
    ![Add Firebase to your Android app](images/en-add-firebase.png "Add Firebase to your Android app"){: caption="Figure 4. Add Firebase to your Android app" caption-side="bottom"}
 
 * Include the package name of your application. Enter the package name in `Add Firebase to your Android app` window. The `App nickname` field is optional.
 
-* Click `Register app`. See the following example:
+* Click **Register app**. See the following example:
 
    ![Register Android app](images/en-add-firebase.png "Register Android app"){: caption="Figure 5. Register Android app" caption-side="bottom"}
 
@@ -133,7 +133,7 @@ Click `Destinations` in the {{site.data.keyword.en_short}} console and add the f
    - `Pre-production destination` - select this destination as low-cost push destination, for your development and test environments.
    - `Production destination` - use the full capability of this destination. Unlimited devices and outbound messages allowed.
 * Update the FCM Push Credentials with the `Sender ID/Project number` and `Server Key`. You can get these details from your `Firebase Console Project Settings > Cloud Messaging` section.
-* Click `Add`.
+* Click **Add**.
 
 ## Create an {{site.data.keyword.en_short}} topic
 {: #en-create-topic-fcm}
@@ -160,7 +160,7 @@ Click `Subscriptions` in the {{site.data.keyword.en_short}} console. Enter the f
    * `Subscription name`: name of the subscription.
    * `Subscription description`: add an optional description.
 * Under the `Subscribe to a topic` section, select a topic from the drop-down list and select a destination from the destination drop-down list.
-* `Destination type`: select type under `Destination` and click `Add`.
+* `Destination type`: select type under `Destination` and click **Add**.
 
 ## Set up {{site.data.keyword.en_short}} Android SDK
 {: #en-setup-android-sdk}
