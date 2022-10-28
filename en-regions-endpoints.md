@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-10-17"
+lastupdated: "2022-10-28"
 
 keywords: event-notifications, event notifications, regions, endpoints, private endpoints
 
@@ -48,10 +48,10 @@ The following table contains the base URLs for the {{site.data.keyword.en_full_n
 
 | Location     | Endpoint URL      |
 |--------------|-------------------|
-| Dallas |`https://us-south.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{instanceid}` |
-| London |`https://eu-gb.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{instanceid}` |
-| Sydney |`https://au-syd.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{instanceid}` |
-| Frankfurt |`https://eu-de.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{instanceid}` |
+| Dallas |`https://us-south.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
+| London |`https://eu-gb.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
+| Sydney |`https://au-syd.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
+| Frankfurt |`https://eu-de.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
 {: caption="Table 1. Public endpoints for interacting with {{site.data.keyword.en_short}} by using APIs" caption-side="bottom"}
 
 ### Private endpoints
@@ -61,9 +61,9 @@ If you need to manage your {{site.data.keyword.en_short}} resources over a priva
 
 | Region       | Endpoint URL      |
 |--------------|-------------------|
-| Dallas |`https://private.us-south.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{instanceid}` |
-| London |`https://private.eu-gb.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{instanceid}` |
-| Sydney |`https://private.au-syd.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{instanceid}` |
-| Frankfurt |`https://private.eu-de.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{instanceid}` |
+| Dallas |`https://private.us-south.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
+| London |`https://private.eu-gb.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
+| Sydney |`https://private.au-syd.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
+| Frankfurt |`https://private.eu-de.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
 {: caption="Table 2. Private endpoints for interacting with {{site.data.keyword.en_short}} by using APIs" caption-side="bottom"}
 

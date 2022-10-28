@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-10-17"
+lastupdated: "2022-10-28"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -12,21 +12,20 @@ content-type: release-note
 
 ---
 
-{:codeblock: .codeblock}
-{:external: target="_blank" .external}
-{:important: .important}
-{:note: .note}
-{:pre: .pre}
-{:screen: .screen}
-{:shortdesc: .shortdesc}
-{:tip: .tip}
-{:release-note: data-hd-content-type='release-note'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Release notes for {{site.data.keyword.en_short}}
 {: #release-notes}
 
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
+
+## 31 Oct 2022
+{: #event-notifications-Oct3122}
+{: release-note}
+
+Support for SMS "Opt-in"
+:  You can now control the list of users who are invited to an SMS subscription. You can add phone numbers, delete unsubscribed phone numbers and expired invited phone numbers, resend invite to the invited phone numbers. For more information, see [{{site.data.keyword.cloud_notm}} SMS service](/docs/event-notifications?topic=event-notifications-en-destinations-sms).
 
 ## 03 Oct 2022
 {: #event-notifications-Oct0322}

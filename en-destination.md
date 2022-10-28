@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-10-17"
+lastupdated: "2022-10-28"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, event destination
 
@@ -37,7 +37,7 @@ Human destinations are devices, servers, or applications that present notificati
    - [Safari Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-safari)
 - [Inbuilt SMS](/docs/event-notifications?topic=event-notifications-en-destinations-sms)
 - [Slack](/docs/event-notifications?topic=event-notifications-en-destinations-slack)
-- [Microsoft&trade; Teams](/docs/event-notifications?topic=event-notifications-en-destinations-msteams)
+- [Microsoft&reg; Teams](/docs/event-notifications?topic=event-notifications-en-destinations-msteams)
 
 Both Email and SMS destinations are provided out of the box, and are available whenever you create an instance of {{site.data.keyword.en_short}}. {{site.data.keyword.cloud_notm}} push notification service must be added manually and requires configuration.
 

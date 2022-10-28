@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-10-17"
+lastupdated: "2022-10-28"
 
 keywords: event notifications, IBM Cloud
 
@@ -24,7 +24,7 @@ completion-time: 10m
 This tutorial brings you through the steps that you need to take before you create an {{site.data.keyword.en_full_notm}} service.
 {: shortdesc}
 
-{{site.data.keyword.en_short}} is a routing service that provides you about critical events that occur in your {{site.data.keyword.cloud}} account. You can filter and route event notifications from {{site.data.keyword.cloud_notm}} services like Monitoring, Security and Compliance Center, and Secrets Manager to communication channels like email, SMS, push notifications, webhook, slack, Microsoft&trade; Teams, and {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}.
+{{site.data.keyword.en_short}} is a routing service that provides you about critical events that occur in your {{site.data.keyword.cloud}} account. You can filter and route event notifications from {{site.data.keyword.cloud_notm}} services like Monitoring, Security and Compliance Center, and Secrets Manager to communication channels like email, SMS, push notifications, webhook, slack, Microsoft&reg; Teams, and {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}.
 
 ## Create an {{site.data.keyword.cloud_notm}} account
 {: #en-cloud-ac}
@@ -93,7 +93,7 @@ Human destinations are devices, servers, or applications that present notificati
    - [Safari Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-safari)
 - [{{site.data.keyword.cloud_notm}} SMS](/docs/event-notifications?topic=event-notifications-en-destinations-sms)
 - [Slack](/docs/event-notifications?topic=event-notifications-en-destinations-slack)
-- [Microsoft@trade; Teams](/docs/event-notifications?topic=event-notifications-en-destinations-msteams)
+- [Microsoft&reg; Teams](/docs/event-notifications?topic=event-notifications-en-destinations-msteams)
 
 ### Service destinations
 {: #en-destination-service}
