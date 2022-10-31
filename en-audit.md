@@ -48,6 +48,8 @@ The following list of {{site.data.keyword.en_short}} data events is sent to {{si
 | `event-notifications.subscriptions.update` | An event is generated when you update a subscription.|
 | `event-notifications.subscriptions.delete` | An event is generated when you delete a subscription.|
 | `event-notifications.smtp_ibm.invite` | An event is generated when an invite is sent for Email subscription.|
+| `event-notifications.sms_ibm.invite` | An event is generated when an invite is sent for SMS subscription.|
+
 {: caption="Table 1. Overview of {{site.data.keyword.en_short}} actions that generate {{site.data.keyword.at_full_notm}} events" caption-side="top"}
 
 ## Viewing events
