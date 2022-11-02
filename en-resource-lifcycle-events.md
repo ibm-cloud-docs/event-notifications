@@ -20,7 +20,7 @@ subcollection: event-notifications
 
 The {{site.data.keyword.cloud_notm}} provisioning layer manages the lifecycle of {{site.data.keyword.cloud_notm}} resources. A *resource* is anything that you can create from the {{site.data.keyword.cloud_notm}} catalog that is managed by and contained within a resource group.
 
-Resource lifecycle events are events around the {{site.data.keyword.cloud_notm}} resources. For more information, see [Creating reources](https://cloud.ibm.com/docs/account?topic=account-manage_resource&interface=ui){: external}.
+Resource lifecycle events are events around the {{site.data.keyword.cloud_notm}} resources. For more information, see [Creating resources](https://cloud.ibm.com/docs/account?topic=account-manage_resource&interface=ui){: external}.
 
 Some example of Resource lifecycle events are:
 
