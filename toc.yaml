@@ -73,7 +73,6 @@ toc:
   - navgroup:
       id: howto
       topics:
-      - en-iam.md
       - topicgroup:
           label: Logging and Monitoring
           topics:
@@ -82,8 +81,11 @@ toc:
       - topicgroup:
           label: Enhancing security
           topics:
+          - en-iam.md
           - en-audit.md
+          - en-data-security-compliance.md
           - en-data-security.md
+          - en-cipher.md
           - en-service-credentials.md
           - topicgroup:
               label: Privately connecting to Event Notifications
