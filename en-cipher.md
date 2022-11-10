@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-11-08"
+lastupdated: "2022-11-10"
 
 keywords: event-notifications, event notifications, about event notifications, securing your data, tls cipher
 
@@ -30,3 +30,4 @@ subcollection: event-notifications
 
 - `TLS_AES_128_GCM_SHA256`
 - `TLS_CHACHA20_POLY1305_SHA256`
+- `TLS_AES_256_GCM_SHA384`
