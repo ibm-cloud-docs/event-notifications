@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-10-17"
+lastupdated: "2022-11-16"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -28,6 +28,7 @@ Create an {{site.data.keyword.en_short}} destination. Destinations are custom pr
 - Push notifications (Android, iOS, Chrome, Firefox, and Safari)
 - Slack
 - Microsoft&trade; Teams
+- PagerDuty
 - Webhook
 - {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}
 {: shortdesc}

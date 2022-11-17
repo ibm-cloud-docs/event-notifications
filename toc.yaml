@@ -49,6 +49,7 @@ toc:
                   href: https://{DomainName}/docs/event-notifications?topic=event-notifications-en-push-safari
           - en-destination-slack.md
           - en-destination-msteams.md
+          - en-destination-pagerduty.md
           - en-destination-webhook.md
           - en-destination-cloud-functions.md
       - topic: en-release-notes.md
@@ -62,11 +63,21 @@ toc:
       - en-create-destination.md
       - en-create-subscription.md
       - en-create-source.md
-      - en-push-fcm.md
-      - en-push-apns.md
-      - en-push-chrome.md
-      - en-push-firefox.md
-      - en-push-safari.md
+
+      - topicgroup:
+         label: Create and send push notifications
+         topics:
+            - topic: en-push-fcm.md
+              navtitle: Android Push Notifications (FCM)
+            - topic: en-push-apns.md
+              navtitle: iOS Push Notifications (APNs)
+            - topic: en-push-chrome.md
+              navtitle: Chrome Push Notifications
+            - topic: en-push-firefox.md
+              navtitle: Firefox Push Notifications
+            - topic: en-push-safari.md
+              navtitle: Safari Push Notifications
+
       - en-terraform-tutorial.md
       - en-ts-monitor-secrets.md
 

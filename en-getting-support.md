@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-10-17"
+lastupdated: "2022-11-17"
 
 keywords: event-notifications, event notification, getting help and support
 
@@ -57,3 +57,4 @@ Collect the following information to get a faster support case resolution for no
 - subscriptionName (if the issue is related to subscriptions)
 - notification_id (if the issue is related to sending notification)
 - Error message received
+- Status of notification shown in LogDNA (in the case of notification sent but not received)

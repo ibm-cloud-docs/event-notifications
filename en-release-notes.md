@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-10-28"
+lastupdated: "2022-11-16"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -19,6 +19,13 @@ content-type: release-note
 
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
+
+## 16 Nov 2022
+{: #event-notifications-Nov1622}
+{: release-note}
+
+New destination: PagerDuty
+:  PagerDuty is now available as a destination. You can send notifications to your PagerDuty destination by using {{site.data.keyword.en_short}}. [Send notifications to your PagerDuty destination by using {{site.data.keyword.en_short}}](/docs/event-notifications?topic=event-notifications-en-destinations-pagerduty).
 
 ## 28 Oct 2022
 {: #event-notifications-Oct2822}
@@ -49,7 +56,7 @@ New supported {{site.data.keyword.cloud_notm}} source: {{site.data.keyword.cloud
 {: release-note}
 
 New destination: {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}
-:  {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}} is now available as a destination. You can send notifications to your {{site.data.keyword.openwhisk_short}} instance by using Event Notifications. [Send notifications to your {{site.data.keyword.openwhisk_short}} instance by using Event Notifications](/docs/event-notifications?topic=event-notifications-en-destinations--cloud-functions).
+:  {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}} is now available as a destination. You can send notifications to your {{site.data.keyword.openwhisk_short}} instance by using Event Notifications. [Send notifications to your {{site.data.keyword.openwhisk_short}} instance by using Event Notifications](/docs/event-notifications?topic=event-notifications-en-destinations-cloud-functions).
 
 Support for changing a **Pre-production destination** to **Production destination**
 :  You can now change a **Pre-production destination** to **Production destination** after your development and testing. For more information, see [Modify a Pre-production destination to Production destination](/docs/event-notifications?topic=event-notifications-en-create-en-destination#en-destination-preprod-prod).
@@ -84,7 +91,6 @@ New destination: Microsoft&trade; Teams
 
 New destination: Slack
 :  Slack is now available as a destination. You can send notifications to your slack channels by using Event Notifications. [Send notifications to your slack channels by using IBM Cloud® Event Notifications](/docs/event-notifications?topic=event-notifications-en-destinations-slack).
-
 
 ## 29 Apr 2022
 {: #event-notifications-Apr2922}
