@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-11-16"
+lastupdated: "2022-11-17"
 
 keywords: event-notifications, event notifications, destinations, pagerduty
 
@@ -18,17 +18,17 @@ subcollection: event-notifications
 PagerDuty empowers users and organizations to prevent and resolve business-impacting incidents for exceptional customer experience. PagerDuty helps organizations with the insight to proactively manage events that may impact customers across their IT environment.
 {: shortdesc}
 
-When you select PagerDuty as service destination, any subscribed notification about an event can be sent as a message to PagerDuty channels.
+When you select PagerDuty as service destination, any subscribed notification about an event can be sent as an **alert** to PagerDuty channels.
+
+## Generate PagerDuty API key
+{: #en-pd-generate-api-key}
+
+Generate the PagerDuty API key as per the guidance [here](https://support.pagerduty.com/docs/api-access-keys){: external}.
 
 ## Generate PagerDuty routing key
 {: #en-pd-generate-routing-key}
 
 To integrate your PagerDuty service to {{site.data.keyword.en_short}} service destination, you need to generate a PagerDuty routing key. To generate a PagerDuty routing key, follow these steps: [Generate a new Integration Key](https://support.pagerduty.com/docs/services-and-integrations#generate-a-new-integration-key){: external}.
-
-## Generate API key
-{: #en-pd-generate-api-key}
-
-Generate the API key as per the guidance [here](https://support.pagerduty.com/docs/api-access-keys){: external}.
 
 ## Configuring a PagerDuty destination
 {: #en-pd-configure-destination}
