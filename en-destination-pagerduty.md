@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-11-17"
+lastupdated: "2022-11-22"
 
 keywords: event-notifications, event notifications, destinations, pagerduty
 
@@ -29,6 +29,9 @@ Generate the PagerDuty API key as per the guidance [here](https://support.pagerd
 {: #en-pd-generate-routing-key}
 
 To integrate your PagerDuty service to {{site.data.keyword.en_short}} service destination, you need to generate a PagerDuty routing key. To generate a PagerDuty routing key, follow these steps: [Generate a new Integration Key](https://support.pagerduty.com/docs/services-and-integrations#generate-a-new-integration-key){: external}.
+
+If you already integrated EventsV2 api with your PagerDuty service, jump to service directory, select **More** and select **View Integrations**. You will find the Integration key inside this view.
+{: note}
 
 ## Configuring a PagerDuty destination
 {: #en-pd-configure-destination}
@@ -71,6 +74,15 @@ To configure a PagerDuty destination, do the following steps:
 | NA | `images` | No |
 | NA | `links` | No |
 {: caption="Table 1. Supported PagerDuty alert events" caption-side="bottom"}
+
+| {{site.data.keyword.en_short}} severity | PagerDuty severity |
+| :---------- | :---------- |
+| High | Critical |
+| Medium | Error |
+| Low | Warning |
+| Info | Info |
+| Anything Else | Low |
+{: caption="Table 2. {{site.data.keyword.en_short}} severity to PagerDuty severity mapping" caption-side="bottom"}
 
 ## PagerDuty retry policy
 {: #en-pd-retry}
