@@ -2,7 +2,7 @@
 
 copyright:
   years:  2017, 2022
-lastupdated: "2022-10-17"
+lastupdated: "2022-11-28"
 
 keywords: event notifications, event notification, notifications, service access, manage, user roles
 
@@ -123,6 +123,9 @@ The actions are customized and defined by the {{site.data.keyword.cloud_notm}} s
 | `event-notifications.channel-groups.list`| `GET /event-notifications/v1/instances/{instance_id}/destinations/{id}/fcm_channel_groups` | Manager, Administrator, Device-Manager | List all channel groups under a push notifications FCM destination |
 | `event-notifications.channel-groups.update`| `PUT /event-notifications/v1/instances/{instance_id}/destinations/{id}/fcmChannelGroups/{group_id}` | Manager, Administrator, Device-Manager | Update an existing channel group under a push notifications FCM destination |
 | `event-notifications.channel-groups.delete`| `DELETE /event-notifications/v1/instances/{instance_id}/destinations/{id}/fcm_channel_groups/{group_id}` | Manager, Administrator | Delete an existing channel group under a push notifications FCM destination |
+| `event-notifications.integrations.list`| `GET /event-notifications/v1/instances/{instance_id}/integrations` | Manager, Administrator, Device-Manager | List all Key Management Services integrations |
+| `event-notifications.integrations.read`| `GET /event-notifications/v1/instances/{instance_id}/integrations/{id}` | Manager, Administrator, Device-Manager | Get a single Key Management Services integration |
+| `event-notifications.integrations.update`| `PUT /event-notifications/v1/instances/{instance_id}/integrations/{id}` | Manager, Administrator, Device-Manager | Update an existing Key Management Services integration |
 {: caption="Table 3. Actions mapped to different roles" caption-side="top"}
 
 ## Working with API keys

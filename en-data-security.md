@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-10-17"
+lastupdated: "2022-11-28"
 
 keywords: data encryption in Event Notifications, data storage for Event Notifications, bring your own keys for Event Notifications, BYOK for Event Notifications, key management for Event Notifications, key encryption for Event Notifications, personal data in Event Notifications, data deletion for Event Notifications, data in Event Notifications, data security in Event Notifications, KYOK for Event Notifications
 
@@ -22,6 +22,10 @@ To ensure that you can securely manage your data when you use {{site.data.keywor
 {: #en-data-storage}
 
 {{site.data.keyword.en_short}} stores and encrypts details that are related to your destinations like email (sender, recipients, subject), or SMS (sender, recipient, details). As a multi-tenant service, every tenant has a designated encryption key and user data in each tenant is encrypted with only that tenant's key. This tenant key is protected by using {{site.data.keyword.en_short}} managed Key Protect. {{site.data.keyword.en_short}} ensures that private information is encrypted before it is stored.
+
+You can add a higher level of encryption control to your data at rest (when it is stored) by enabling integration with a Key Management Service (KMS). The data that you store in {{site.data.keyword.cloud_notm}} is encrypted at rest by using envelope encryption. If you need to control the encryption keys, you can integrate Key Protect or Hyper Protect Crypto Services. This process is commonly referred to as Bring Your Own Key (BYOK). With Key Protect and Hyper Protect Crypto Services, you can create, import, and manage encryption keys. You can assign access policies to the keys, assign users or service IDs to the keys, or give the key access only to a specific service.
+
+For more information, see [Managing encryption](/docs/event-notifications?topic=event-notifications-en-managing-encryption).
 
 ## Protecting your sensitive data in {{site.data.keyword.en_short}}
 {: #en-data-encryption}
