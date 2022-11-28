@@ -52,6 +52,7 @@ toc:
           - en-destination-pagerduty.md
           - en-destination-webhook.md
           - en-destination-cloud-functions.md
+      - en-integrations.md
       - topic: en-release-notes.md
         navtitle: Release notes
 
@@ -96,6 +97,7 @@ toc:
           - en-audit.md
           - en-data-security-compliance.md
           - en-data-security.md
+          - en-managing-encryption.md
           - en-cipher.md
           - en-service-credentials.md
           - topicgroup:

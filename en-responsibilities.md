@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-10-17"
+lastupdated: "2022-11-28"
 
 keywords: event-notifications, event notifications, customer responsibilities, IBM responsibilities, terms and conditions, disaster recovery, toolchain backup
 
@@ -55,7 +55,7 @@ You are responsible for identity and access management of your application and a
 
 |Task     |{{site.data.keyword.IBM_notm}} Responsibilities |Your Responsibilities |
 |-------------|-----------------------|-----------------------|
-|Applications |Offer ability to restrict access to resources.	|Depending on your needs, restrict access to resources and service functions by using Cloud IAM access policies. For more information, see [Managing user access](/docs/app-configuration?topic=app-configuration-ac-service-access-management). |
+|Applications |Offer ability to restrict access to resources.	|Depending on your needs, restrict access to resources and service functions by using Cloud IAM access policies. For more information, see [Managing user access](/docs/event-notifications?topic=event-notifications-service-access-management). |
 {: caption="Table 3. Responsibilities for identity and access management" caption-side="top"}
 
 ## Security and regulation compliance

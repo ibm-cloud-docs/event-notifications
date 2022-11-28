@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-11-16"
+lastupdated: "2022-11-28"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -19,6 +19,13 @@ content-type: release-note
 
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
+
+## 28 Nov 2022
+{: #event-notifications-Nov2822}
+{: release-note}
+
+Support for high level encryption: BYOK and KYOK
+:  Support for high level encryption using {{site.data.keyword.keymanagementservicefull}} (Bring Your Own Key - BYOK) and {{site.data.keyword.hscrypto}} (Keep Your Own Key - KYOK). For more information, see [Integrations](/docs/event-notifications?topic=event-notifications-en-integrations).
 
 ## 16 Nov 2022
 {: #event-notifications-Nov1622}
