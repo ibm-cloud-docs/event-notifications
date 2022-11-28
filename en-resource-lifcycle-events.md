@@ -94,7 +94,7 @@ The following table describes the fields of a Resource Lifecycle event:
 |:-----------|:------|:-------------| 
 | account_id | String | The Account ID of the user who initiated the event | 
 | event_id | String | A unique ID identifying the event on IB Cloud. It is a UUID |
-| event_type | String | Identifies the type of event. It can be any of the events as documented [here](https://cloud.ibm.com/docs/event-notifications?topic=event-notifications-en-resource-lifecycle-events#en-supported-resource-types) | 
+| event_type | String | Identifies the type of event. It can be any of the events [here](/docs/event-notifications?topic=event-notifications-en-resource-lifecycle-events#en-supported-resource-types) | 
 | timestamp | String | Time when the Event occurred.| 
 | context | Object | This JSON gives the context in which the event occurred | 
 | context.subject_id | String | The IAM ID of the initiator of the Event. Note below to find your IBM Cloud IAM ID | 
