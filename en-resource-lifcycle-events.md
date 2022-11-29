@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-10-17"
+lastupdated: "2022-11-29"
 
 keywords: event notifications, Resource lifecycle events
 
@@ -84,49 +84,47 @@ After enabling the source, you can publish the lifecycle events to the [Topic](/
 
 To learn more about working with **Topics**, see [here](/docs/event-notifications?topic=event-notifications-en-create-en-topic).
 
-
 ## Event Schma for Resource Lifecycle Events
 {: #en-schema-rc-events}
-The following table describes the fields of a Resource Lifecycle event:
 
+The following table describes the fields of a Resource Lifecycle event:
 
 | Field Name | Type | Description | 
 |:-----------|:------|:-------------| 
-| account_id | String | The Account ID of the user who initiated the event | 
-| event_id | String | A unique ID identifying the event on IB Cloud. It is a UUID |
-| event_type | String | Identifies the type of event. It can be any of the events [here](/docs/event-notifications?topic=event-notifications-en-resource-lifecycle-events#en-supported-resource-types) | 
-| timestamp | String | Time when the Event occurred.| 
-| context | Object | This JSON gives the context in which the event occurred | 
-| context.subject_id | String | The IAM ID of the initiator of the Event. Note below to find your IBM Cloud IAM ID | 
-| context.subject_name | String | The email ID of the initiator of the email. Note below to find your IBM Cloud subject_name | 
-| context.activity | Object | This JSON gives details of the activity performed |
-| context.activity.action | String | Identifies the action taken by the user to trigger this event |
-| context.activity.message | String | A message describing the event |
-| context.activity.outcome | String | Result or outcome of the action | 
-| context.activity.reason_reasonCode | Number | The response code from the respective resource for the triggered action |
-| context.activity.target_name | String | The name of the resource on which the action was triggered | 
-| event_properties | Object |  A JSON object containing the properties of the current event |
-| event_properties.created_at | String | The timestamp when the resource was created |
-| event_properties.created_by | String | The IAM id who created the resource | 
-| event_properties.crn | String | The CRN of the resource |
-|event_properties. guid | String |  The guid of the resource | 
-| event_properties.name | String | Name of the resource |
-| event_properties.resource_group_id | String | The Resource Group ID |
-| event_properties.resource_id | String | The Resource ID. This identifies the type of the resource in the iBM Cloud catalog | 
-| event_properties.last_operation | Object | JSON object identifying the last operation on the resource in question |
-| event_properties.last_operation.description | String | A message describing the last operation carried out on the resource |
-| event_properties.last_operation.state | String | Final state after the last operation was done |
-| event_properties.last_operation.type | String | Event type of the last operation | 
-| event_properties.region_id | String | The region of  resource for which the action was done | 
-| event_properties.state | String | The state of the resource after the action | 
-| event_properties.type | String | The type of the resource: "service_instance" or "resource_instance"  | 
-| event_properties.restored_at | String | Timestamp when the resource was restored. Available for restore resource action | 
-| event_properties.restored_by | String | IAM ID who restored the resource. Available for restore resource action | 
-| event_properties.scheduled_reclaim_at | String | Timestamp when the resource was reclaimed. Available for reclaim resource action | 
-| event_properties.scheduled_reclaim_by | String |  IAM ID who restored the resource. Available for restore resource action | 
-| event_properties.updated_at | String | Timestamp which the last update on the resource was done | 
-
-
+| `account_id` | String | The Account ID of the user who initiated the event. | 
+| `event_id` | String | A unique ID identifying the event on {{site.data.keyword.cloud_notm}}. It is a UUID. |
+| `event_type` | String | Identifies the type of event. It can be any of the events specified [here](/docs/event-notifications?topic=event-notifications-en-resource-lifecycle-events#en-supported-resource-types). | 
+| `timestamp` | String | Time when the Event occurred. | 
+| `context` | Object | This JSON gives the context in which the event occurred. | 
+| `context.subject_id` | String | The IAM ID of the initiator of the Event. Note below to find your {{site.data.keyword.cloud_notm}} IAM ID. | 
+| `context.subject_name` | String | The email ID of the initiator of the email. Note below to find your {{site.data.keyword.cloud_notm}} subject_name. | 
+| `context.activity` | Object | This JSON gives details of the activity performed. |
+| `context.activity.action` | String | Identifies the action taken by the user to trigger an event. |
+| `context.activity.message` | String | A message describing the event. |
+| `context.activity.outcome` | String | Result or outcome of an action. | 
+| `context.activity.reason_reasonCode` | Number | The response code from the respective resource for the triggered action. |
+| `context.activity.target_name` | String | The name of the resource on which the action was triggered. | 
+| `event_properties` | Object | A JSON object containing the properties of the current event. |
+| `event_properties.created_at` | String | The timestamp when the resource was created. |
+| `event_properties.created_by` | String | The IAM ID who created the resource. | 
+| `event_properties.crn` | String | The CRN of the resource. |
+| `event_properties.guid` | String | The guid of the resource. | 
+| `event_properties.name` | String | Name of the resource. |
+| `event_properties.resource_group_id` | String | The Resource Group ID. |
+| `event_properties.resource_id` | String | The Resource ID. This identifies the type of the resource in the {{site.data.keyword.cloud_notm}} catalog. |
+| `event_properties.last_operation` | Object | JSON object identifying the last operation on the resource in question. |
+| `event_properties.last_operation.description` | String | A message describing the last operation carried out on the resource. |
+| `event_properties.last_operation.state` | String | Final state after the last operation was performed. |
+| `event_properties.last_operation.type` | String | Event type of the last operation. | 
+| `event_properties.region_id` | String | The region of resource for which the action was done. |
+| `event_properties.state` | String | The state of the resource after the action. |
+| `event_properties.type` | String | The type of the resource: "service_instance" or "resource_instance". |
+| `event_properties.restored_at` | String | Timestamp when the resource was restored. Available for restore resource action. | 
+| `event_properties.restored_by` | String | IAM ID who restored the resource. Available for restore resource action. |
+| `event_properties.scheduled_reclaim_at` | String | Timestamp when the resource was reclaimed. Available for reclaim resource action. |
+| `event_properties.scheduled_reclaim_by` | String | IAM ID who restored the resource. Available for restore resource action. |
+| `event_properties.updated_at` | String | Timestamp which the last update on the resource was done. |
+{: caption="Table 4. Event Schma for Resource Lifecycle Events" caption-side="bottom"}
 
 ### Example event
 {: #en-example-event}
@@ -168,3 +166,4 @@ The following table describes the fields of a Resource Lifecycle event:
    "timestamp": "2022-09-30T16:18:55Z"
 }
 ```
+{: codeblock}
