@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-11-22"
+lastupdated: "2022-11-30"
 
 keywords: event-notifications, event notifications, destinations, pagerduty
 
@@ -77,11 +77,11 @@ To configure a PagerDuty destination, do the following steps:
 
 | {{site.data.keyword.en_short}} severity | PagerDuty severity |
 | :---------- | :---------- |
-| High | Critical |
-| Medium | Error |
-| Low | Warning |
-| Info | Info |
-| Anything Else | Low |
+| Critical | Critical |
+| High | Error |
+| Medium | Warning |
+| Low | Info |
+| Anything Else | Info |
 {: caption="Table 2. {{site.data.keyword.en_short}} severity to PagerDuty severity mapping" caption-side="bottom"}
 
 ## PagerDuty retry policy

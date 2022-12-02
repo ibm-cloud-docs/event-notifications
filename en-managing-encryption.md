@@ -14,7 +14,7 @@ subcollection: event-notifications
 # Managing encryption
 {: #en-managing-encryption}
 
-By default, source, topic, and subscription data in {{site.data.keyword.en_short}} are encrypted at-rest using a randomly generated key. Although this default encryption model provides at-rest security, you might need a higher level of control. For these use cases, {{site.data.keyword.en_short}} supports customer-managed encryption with the following IBM Cloud® Key Management Services:
+By default, customer data in {{site.data.keyword.en_short}} are encrypted at-rest using a randomly generated key. Although this default encryption model provides at-rest security, you might need a higher level of control. For these use cases, {{site.data.keyword.en_short}} supports customer-managed encryption with the following IBM Cloud® Key Management Services:
 
 - {{site.data.keyword.keymanagementservicefull}} (Bring Your Own Key - BYOK) helps you provision encrypted keys for apps across {{site.data.keyword.cloud_notm}} services. As you manage the lifecycle of your keys, you can benefit from knowing that your keys are secured by FIPS 140-2 Level 3 certified cloud-based hardware security modules (HSMs) that protect against the theft of information. You can find out more about using {{site.data.keyword.keymanagementserviceshort}} in the [Getting Started tutorial](/docs/key-protect?topic=key-protect-getting-started-tutorial){: external}.
 - {{site.data.keyword.hscrypto}} (Keep Your Own Key - KYOK) is a single-tenant, dedicated HSM that is controlled by you. The service is built on FIPS 140-2 Level 4-certified hardware, the highest offered by any cloud provider in the industry. You can find out more about using {{site.data.keyword.hscrypto}} in the [Getting Started tutorial](/docs/hs-crypto?topic=hs-crypto-get-started){: external}.
@@ -37,7 +37,7 @@ Deletion of the customer-managed key is non-recoverable and will result in the l
 ## What is not covered by customer-managed encryption
 {: #en-encryption-what}
 
-If customer-managed encryption feature is selected, the user should be aware that **only** source, topic, and subscription data is covered by this encryption. {{site.data.keyword.en_short}} encrypts at-rest other data related to the use of the service.
+If customer-managed encryption feature is selected, the user should be aware that **only** customer data is covered by this encryption. {{site.data.keyword.en_short}} encrypts at-rest other data related to the use of the service.
 
 You are not recommended to use confidential information in client metadata.
 {: important}

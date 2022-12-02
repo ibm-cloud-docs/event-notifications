@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-11-28"
+lastupdated: "2022-11-30"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -20,19 +20,18 @@ content-type: release-note
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
 
-## 28 Nov 2022
-{: #event-notifications-Nov2822}
+## 30 Nov 2022
+{: #event-notifications-Nov3022}
 {: release-note}
 
 Support for high level encryption: BYOK and KYOK
 :  Support for high level encryption using {{site.data.keyword.keymanagementservicefull}} (Bring Your Own Key - BYOK) and {{site.data.keyword.hscrypto}} (Keep Your Own Key - KYOK). For more information, see [Integrations](/docs/event-notifications?topic=event-notifications-en-integrations).
 
-## 16 Nov 2022
-{: #event-notifications-Nov1622}
-{: release-note}
-
 New destination: PagerDuty
 :  PagerDuty is now available as a destination. You can send notifications to your PagerDuty destination by using {{site.data.keyword.en_short}}. [Send notifications to your PagerDuty destination by using {{site.data.keyword.en_short}}](/docs/event-notifications?topic=event-notifications-en-destinations-pagerduty).
+
+New supported {{site.data.keyword.cloud_notm}} source: {{site.data.keyword.cloud_notm}} Resource lifecycle events
+:  {{site.data.keyword.cloud_notm}} Resource lifecycle events is now available as new supported {{site.data.keyword.cloud_notm}} source. For more information, see [{{site.data.keyword.cloud_notm}} Resource lifecycle events](/docs/event-notifications?topic=event-notifications-en-resource-lifecycle-events).
 
 ## 28 Oct 2022
 {: #event-notifications-Oct2822}
@@ -44,9 +43,6 @@ Support for SMS "Opt-in"
 ## 03 Oct 2022
 {: #event-notifications-Oct0322}
 {: release-note}
-
-New supported {{site.data.keyword.cloud_notm}} source: {{site.data.keyword.cloud_notm}} Resource lifecycle events
-:  {{site.data.keyword.cloud_notm}} Resource lifecycle events is now available as new supported {{site.data.keyword.cloud_notm}} source. For more information, see [{{site.data.keyword.cloud_notm}} Resource lifecycle events](/docs/event-notifications?topic=event-notifications-en-resource-lifecycle-events).
 
 Support for Email "Opt-in"
 :  You can now control the list of users who are invited to an Email subscription. You can add email addresses, delete unsubscribed email addresses and expired invited email addresses, resend invite to the invited email addresses. For more information, see [{{site.data.keyword.cloud_notm}} Email service](/docs/event-notifications?topic=event-notifications-en-destinations-email).
