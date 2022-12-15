@@ -2,7 +2,7 @@
 
 copyright:
   years:  2022
-lastupdated: "2022-12-07"
+lastupdated: "2022-12-15"
 
 keywords: event notifications, event notification, notifications, integrations, key protect, key management, hyper protect, hpcs
 
@@ -29,8 +29,6 @@ For more information, see [Managing encryption](/docs/event-notifications?topic=
 ## Integrating with a Key management service
 {: #en-int-key-management}
 
-By default customer data is encrypted. You can user APIs, CLI, or User Interface to provide your own KMS details for data encryption. If you are using CLI or APIs then you need to get default KMS integration ID through [List all integrations](/apidocs/event-notifications#list-integrations) API. In case of default KMS integrations except integration ID all other values are empty. You need to use the integration ID to update the integration details with your own KMS details.
-
 If you are using {{site.data.keyword.en_short}} CLI or API to integrate with a key management service (KMS), ensure that you have enabled authorization to grant access between services before integrating with a KMS service. For more information, see [Using authorizations to grant access between services](#en-using-auth-access-between-services).
 {: important}
 
@@ -49,6 +47,9 @@ You can create and bring keys that are created by using {{site.data.keyword.keym
 1. Click **Save** to apply the changes.
 
 The updated **Key Management** information is listed in the **Integrations** dashboard.
+
+By default customer data is encrypted. You can user APIs, CLI, or User Interface to provide your own KMS details for data encryption. If you are using CLI or APIs then you need to get default KMS integration ID through [List all integrations](/apidocs/event-notifications#list-integrations) API. In case of default KMS integrations except integration ID all other values are empty. You need to use the integration ID to update the integration details with your own KMS details.
+{: note}
 
 ## Using authorizations to grant access between services
 {: #en-using-auth-access-between-services}
