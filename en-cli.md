@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-10-17"
+lastupdated: "2022-12-08"
 
 keywords: event notifications CLI, event notifications command line, event notifications terminal, event notifications shell, Event Notifications, en, en version history
 
@@ -28,4 +28,5 @@ Find a summary of changes for each version of {{site.data.keyword.en_short}} plu
 | 0.1.1      | 27 June 2022     | Microsoft&trade; Teams destination support.                                     |
 | 0.1.1      | 16 August 2022   | Support for Private endpoint.                                            |
 | 0.1.2      | 29 August 2022   | Support for {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}} as a destination.  \n Upgrading a **Pre-production destination** to **Production destination**. |
+| 0.1.3      | 08 December 2022 | Support for high-level encryption (BYOK and KYOK), and PagerDuty destination. |
 {: caption="Table 1. Changes in the {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} CLI" caption-side="bottom"}
