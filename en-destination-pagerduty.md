@@ -85,7 +85,7 @@ To configure a PagerDuty destination, do the following steps:
 {: caption="Table 2. {{site.data.keyword.en_short}} severity to PagerDuty severity mapping" caption-side="bottom"}
 
 ## PagerDuty retry policy
-{: #en-pd-retry}
+{: #en-pd-retry-policy}
 
 When calling a webhook, issues such as network errors and application glitches can cause the requests to fail. A retry is used to provide resiliency to external requests. Attempt to retry the requests in such situations by using the following values:
 
