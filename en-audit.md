@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-11-28"
+lastupdated: "2022-12-15"
 
 keywords: event notifications activity tracker events, event notifications events, event notifications audit, event notifications audit events, event notifications audit logs
 
@@ -49,11 +49,10 @@ The following list of {{site.data.keyword.en_short}} data events is sent to {{si
 | `event-notifications.subscriptions.delete` | An event is generated when you delete a subscription.|
 | `event-notifications.smtp_ibm.invite` | An event is generated when an invite is sent for Email subscription.|
 | `event-notifications.sms_ibm.invite` | An event is generated when an invite is sent for SMS subscription.|
-| `event-notifications.integrations.list`| List all the Key Management Services integrations. |
-| `event-notifications.integrations.read`| Get a single Key Management Services integration. |
-| `event-notifications.integrations.update`| Update an existing Key Management Services integration. |
-| `event-notifications.pre-prod-destination-billing.set`| Set the billing unit for pre prod destination after crossing the usage in the current unit. |
-
+| `event-notifications.integrations.list` | List all the Key Management Services integrations. |
+| `event-notifications.integrations.read` | Get a single Key Management Services integration. |
+| `event-notifications.integrations.update` | Update an existing Key Management Services integration. |
+| `event-notifications.pre-prod-destination-billing.set` | Set the billing unit for pre-prod destination after crossing the usage in the current unit. |
 {: caption="Table 1. Overview of {{site.data.keyword.en_short}} actions that generate {{site.data.keyword.at_full_notm}} events" caption-side="top"}
 
 ## Viewing events
