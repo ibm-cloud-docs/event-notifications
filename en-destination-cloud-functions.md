@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-10-17"
+lastupdated: "2022-12-23"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, IBM Cloud Functions, cloud functions
 
@@ -29,7 +29,10 @@ To post a {{site.data.keyword.openwhisk_short}} notification, you need to genera
 
 1. Create an **Action**. For more information, see [here](https://{DomainName}/docs/openwhisk?topic=openwhisk-actions).
 
-1. Select **Endpoint** from the left menu.
+1. Select **Endpoints** from the left menu.
+
+   Make sure to uncheck `Enable as Web Action` and `Raw HTTP handling` options in the Web Action section for an effective usage of {{site.data.keyword.openwhisk_short}} as a destination.
+   {: note}
 
 1. Copy the URL mentioned and use it in **Destination Configuration** in {{site.data.keyword.en_short}} instance.
 
