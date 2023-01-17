@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-10-28"
+  years: 2020, 2023
+lastupdated: "2023-01-17"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -53,6 +53,8 @@ Click `Subscriptions` in the {{site.data.keyword.en_short}} console.
       - Add the sender's name in the **From name**.
       - Add **Reply to** information - Enter the reply to name, to whom the reply to be addressed, and Email of the reply to name.
       - In the **Recipients**, select the **Invited** tab, and enter the Email of the recipient and click **Add +**. You can invite a maximum of 100 recipients.
+   - For `ServiceNow` destination
+      - Add **Assign to** and **Assignment group**, which are optional.
 - Click **Create**.
 
 ## Enable the subscription
