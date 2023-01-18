@@ -59,7 +59,7 @@ To configure a ServiceNow destination, do the following steps:
 | Medium | 3 |
 | Low | 4 |
 | Anything Else | 4 |
-{: caption="Table 1. {{site.data.keyword.en_short}} severity to PagerDuty severity mapping" caption-side="bottom"}
+{: caption="Table 1. {{site.data.keyword.en_short}} severity to ServiceNow severity mapping" caption-side="bottom"}
 
 ## ServiceNow retry policy
 {: #en-sn-retry}
