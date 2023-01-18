@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2022-10-28"
+  years: 2021, 2023
+lastupdated: "2023-01-17"
 
 keywords: event notifications, IBM Cloud
 
@@ -24,7 +24,7 @@ completion-time: 10m
 This tutorial brings you through the steps that you need to take before you create an {{site.data.keyword.en_full_notm}} service.
 {: shortdesc}
 
-{{site.data.keyword.en_short}} is a routing service that provides you about critical events that occur in your {{site.data.keyword.cloud}} account. You can filter and route event notifications from {{site.data.keyword.cloud_notm}} services like Monitoring, Security and Compliance Center, and Secrets Manager to communication channels like email, SMS, push notifications, webhook, slack, Microsoft&reg; Teams, and {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}.
+{{site.data.keyword.en_short}} is a routing service that provides you about critical events that occur in your {{site.data.keyword.cloud}} account. You can filter and route event notifications from {{site.data.keyword.cloud_notm}} services like Monitoring, Security and Compliance Center, and Secrets Manager to communication channels like email, SMS, push notifications, webhook, slack, Microsoft&reg; Teams, ServiceNow, and {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}.
 
 ## Create an {{site.data.keyword.cloud_notm}} account
 {: #en-cloud-ac}
@@ -102,3 +102,4 @@ Service destinations are cloud services or applications where notifications are 
 
 - [Webhook](/docs/event-notifications?topic=event-notifications-en-destinations-webhook)
 - [{{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}](/docs/event-notifications?topic=event-notifications-en-destinations-cloud-functions)
+- [ServiceNow](/docs/event-notifications?topic=event-notifications-en-destinations-servicenow)

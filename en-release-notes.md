@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2022-11-30"
+  years: 2021, 2023
+lastupdated: "2023-01-18"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -19,6 +19,16 @@ content-type: release-note
 
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
+
+## 18 Jan 2023
+{: #event-notifications-Jan1823}
+{: release-note}
+
+New destination: ServiceNow
+:  ServiceNow is now available as a destination. You can send notifications to your ServiceNow destination by using {{site.data.keyword.en_short}}. [Send notifications to your ServiceNow destination by using {{site.data.keyword.en_short}}](/docs/event-notifications?topic=event-notifications-en-destinations-servicenow).
+
+New supported {{site.data.keyword.cloud_notm}} source: {{site.data.keyword.appconfig_short}}
+:  {{site.data.keyword.appconfig_short}} is now available as new supported {{site.data.keyword.cloud_notm}} source. For more information, see [{{site.data.keyword.appconfig_short}}](/docs/app-configuration?topic=app-configuration-getting-started).
 
 ## 30 Nov 2022
 {: #event-notifications-Nov3022}

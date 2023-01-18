@@ -52,6 +52,7 @@ toc:
           - en-destination-pagerduty.md
           - en-destination-webhook.md
           - en-destination-cloud-functions.md
+          - en-destination-servicenow.md
       - en-integrations.md
       - topic: en-release-notes.md
         navtitle: Release notes

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-11-16"
+  years: 2020, 2023
+lastupdated: "2023-01-17"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -31,6 +31,7 @@ Create an {{site.data.keyword.en_short}} destination. Destinations are custom pr
 - PagerDuty
 - Webhook
 - {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}
+- ServiceNow
 {: shortdesc}
 
 **{{site.data.keyword.cloud_notm}} SMS service** and **{{site.data.keyword.cloud_notm}} Email service** are supported out of the box.

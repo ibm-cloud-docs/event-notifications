@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2022
-lastupdated: "2022-10-20"
+  years: 2020, 2023
+lastupdated: "2023-01-17"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -28,8 +28,9 @@ From a billing perspective, ingested notifications are calculated for all incomi
 
 The list of IBM provided sources is as follows:
 - [{{site.data.keyword.monitoringfull_notm}}](https://{DomainName}/docs/monitoring?topic=monitoring-notifications){: external}
-- [{{site.data.keyword.secrets-manager_full_notm}}](https://{DomainName}/docs/secrets-manager?topic=secrets-manager-event-notifications&interface=ui){: external}
 - [{{site.data.keyword.compliance_long}}](https://{DomainName}/docs/security-compliance?topic=security-compliance-event-notifications&interface=ui){: external}
+- [{{site.data.keyword.secrets-manager_full_notm}}](https://{DomainName}/docs/secrets-manager?topic=secrets-manager-event-notifications&interface=ui){: external}
+- [{{site.data.keyword.appconfig_short}}](https://{DomainName}/docs/app-configuration?topic=app-configuration-getting-started){: external}
 
 ## API sources
 {: #en-api-sources}
