@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-01-17"
+lastupdated: "2023-01-18"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -54,7 +54,13 @@ Click `Subscriptions` in the {{site.data.keyword.en_short}} console.
       - Add **Reply to** information - Enter the reply to name, to whom the reply to be addressed, and Email of the reply to name.
       - In the **Recipients**, select the **Invited** tab, and enter the Email of the recipient and click **Add +**. You can invite a maximum of 100 recipients.
    - For `ServiceNow` destination
-      - Add **Assign to** and **Assignment group**, which are optional.
+      - Add values for the following fields, which are optional:
+         - **Assign to** - User you want the incident to be assigned, and it can be left empty.
+         - **Assignment group** - Group you want the incident to be assigned, and can be left empty.
+
+         If you are providing **Assigned to** and **Assignment group** values, make sure they have proper settings and linked otherwise ServiceNow will reject requests with 403. Also make sure there are no Business Rule blocking assignment to these groups and users.
+         {: note}
+
 - Click **Create**.
 
 ## Enable the subscription
