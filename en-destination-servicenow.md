@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-01-18"
+lastupdated: "2023-01-20"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, ServiceNow, servicenow
 
@@ -52,13 +52,13 @@ To configure a ServiceNow destination, do the following steps:
 ## {{site.data.keyword.en_short}} severity to ServiceNow severity mapping
 {: #en-sn-severity-mapping}
 
-| {{site.data.keyword.en_short}} severity | ServiceNow severity |
-| :---------- | :---------- |
-| Critical | 1 |
-| High | 2 |
-| Medium | 3 |
-| Low | 4 |
-| Anything Else | 4 |
+| {{site.data.keyword.en_short}} severity | ServiceNow severity - Impact | ServiceNow severity - Urgency | ServiceNow severity - Priority |
+| :---------- | :---------- | :---------- | :---------- |
+| Critical | 1 | 1 | 1 |
+| High | 1 | 2 | 2 |
+| Medium | 2 | 2 | 3 |
+| Low | 2 | 3 | 4 |
+| Anything Else | 3 | 3 | 4 |
 {: caption="Table 1. {{site.data.keyword.en_short}} severity to ServiceNow severity mapping" caption-side="bottom"}
 
 ## ServiceNow retry policy
