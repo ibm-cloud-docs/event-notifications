@@ -136,10 +136,7 @@ toc:
       - en-getting-support.md
       - en-responsibilities.md
       - en-migration.md
-      - topicgroup:
-          label: FAQs
-          topics:
-          - faq.md
+      - faq.md
       - topicgroup:
           label: Troubleshooting
           topics:
