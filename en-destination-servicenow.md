@@ -18,6 +18,9 @@ subcollection: event-notifications
 A ServiceNow represents a service destination, where an incoming security event notification can be consumed programmatically to actions.
 {: shortdesc}
 
+An event which is routed to a ServiceNow destination will trigger creation of an Incident in the configured ServiceNow destination.
+{: important}
+
 ## Configuring a ServiceNow destination
 {: #en-sn-configure-destination}
 
