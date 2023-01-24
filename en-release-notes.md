@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-01-18"
+lastupdated: "2023-01-24"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -20,8 +20,8 @@ content-type: release-note
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
 
-## 18 Jan 2023
-{: #event-notifications-Jan1823}
+## 24 Jan 2023
+{: #event-notifications-Jan2423}
 {: release-note}
 
 New destination: ServiceNow
