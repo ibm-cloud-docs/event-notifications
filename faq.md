@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-01-20"
+lastupdated: "2023-01-25"
 
 keywords: event-notification, event notification, faqs, Frequently Asked Questions, question, billing, service, invalid devices, device deletion, database
 
@@ -111,6 +111,7 @@ Email and SMS are supported only for {{site.data.keyword.IBM_notm}} Managed Sour
 {: faq}
 
 {{site.data.keyword.en_short}} supports the Slack destination using Slack's “Incoming Webhook” feature. An incoming webhook is linked directly to a Slack channel. Hence, there is no need to separately specify the Slack channel.
+
 ## Is it possible to customize the message that is generated from {{site.data.keyword.cloud_notm}} services (({{site.data.keyword.cloud_notm}} sources)?
 {: #faq-en-sms-customize}
 {: faq}
