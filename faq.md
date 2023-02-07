@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-01-25"
+lastupdated: "2023-02-07"
 
 keywords: event-notification, event notification, faqs, Frequently Asked Questions, question, billing, service, invalid devices, device deletion, database
 
@@ -124,3 +124,16 @@ You cannot customize messages that are generated from {{site.data.keyword.cloud_
 
 {{site.data.keyword.en_short}} service is unable to process your request. This is usually seen when there is no condition or filter associated with the topic to which the notification is sent. Check your topic and verify that it is connected to the correct source, with the intended conditions.
 
+## Why my email notifications sent didn’t reach customers even though in the logs I can see successfully sent notifications?
+{: #faq-en-email-notifications-missing}
+{: faq}
+
+This may be due to your {{site.data.keyword.en_short}} instance has a subscription created for the smtp_ibm destination and has no email ID added as a recipient to the list for the subscription.
+
+Make sure your {{site.data.keyword.en_short}} instance has a subscription created for the smtp_ibm destination and has at least one email ID added as a recipient to the list for the subscription.
+
+## Is it possible to send notifications to more than one destination using Event Notifications?
+{: #faq-en-notifications-multiple-destination}
+{: faq}
+
+Yes. You can send notifications to more than one destination.
