@@ -55,7 +55,7 @@ You must have the following prerequisites in place:
 * A Google account to log in to Firebase console to get your `project_id`, `private_key`, and `client_email`.
 * An {{site.data.keyword.cloud_notm}} account. If you do not have one, [create an {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/){: external}.
 
-The instructions used in this document uses FCM's HTTP v1 API. The HTTP v1 API has advantages such as secure access tokens, efficient customizations, and future proof as well as more extendable client platform versions. For more information on migrating from FCM legacy HTTP API to the HTTP v1 API, see [Migrating FCM legacy HTTP API to HTTP v1 API]().
+The instructions used in this document uses FCM's HTTP v1 API. The HTTP v1 API has advantages such as secure access tokens, efficient customizations, and future proof as well as more extendable client platform versions. For more information on migrating from FCM legacy HTTP API to the HTTP v1 API, see [Migrating FCM legacy HTTP API to HTTP v1 API](#en-fcm-http-migration).
 {: important}
 
 ## Create an {{site.data.keyword.en_short}} service instance
