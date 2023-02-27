@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-02-23"
+lastupdated: "2023-02-27"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, push
 
@@ -74,7 +74,7 @@ The instructions used in this document uses FCM's HTTP v1 API. The HTTP v1 API h
 {: #en-get-fcm}
 {: step}
 
-Firebase Cloud Messaging (FCM) is the gateway that delivers push notifications to Android devices. To set up the Android Push destination on the console, you must get your FCM credentials. The API key is stored securely and used by the {{site.data.keyword.en_short}} service to connect to the FCM server. The sender ID (project number) is used by the Android SDK on the client side.
+Firebase Cloud Messaging (FCM) is the gateway that delivers push notifications to Android devices. To set up the Android Push destination on the console, you must get your FCM credentials `project_id`, `private_key`, and `client_email`.
 
 * Go to the [Firebase Console](https://console.firebase.google.com/?pli=1){: external}. A Google user account is required.
 * Click `Create a project`. If you are already having a project, then click `Add Project`.
