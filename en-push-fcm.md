@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-10-28"
+  years: 2022, 2023
+lastupdated: "2023-02-27"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, push
 
@@ -52,15 +52,18 @@ This tutorial shows you how to send push notifications as follows:
 You must have the following prerequisites in place:
 
 * Download and install [Android Studio](https://developer.android.com/studio/index.html){: external} so that you can import and enhance your code.
-* A Google account to log in to Firebase console to get your Sender ID and Server API Key.
+* A Google account to log in to Firebase console to get your `project_id`, `private_key`, and `client_email`.
 * An {{site.data.keyword.cloud_notm}} account. If you do not have one, [create an {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/){: external}.
+
+The instructions used in this document uses FCM's HTTP v1 API. The HTTP v1 API has advantages such as secure access tokens, efficient customizations, and future proof as well as more extendable client platform versions. For more information on migrating from FCM legacy HTTP API to the HTTP v1 API, see [Migrating FCM legacy HTTP API to HTTP v1 API](#en-fcm-http-migration).
+{: important}
 
 ## Create an {{site.data.keyword.en_short}} service instance
 {: #en-create-event-fcm}
 {: step}
 
 * Log in to your [{{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/).
-* In the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog#services), search `Event Notifications > Event Notifications`.
+* In the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog#services), search and select `Event Notifications > Event Notifications`.
 * Select a `Region` from the list of supported regions and select a `pricing plan`.
 * Provide a `Service name`.
 * Select a `resource group`.
@@ -71,7 +74,7 @@ You must have the following prerequisites in place:
 {: #en-get-fcm}
 {: step}
 
-Firebase Cloud Messaging (FCM) is the gateway that delivers push notifications to Android devices. To set up the Android Push destination on the console, you must get your FCM credentials (Sender ID and API key). The API key is stored securely and used by the {{site.data.keyword.en_short}} service to connect to the FCM server. The sender ID (project number) is used by the Android SDK on the client side.
+Firebase Cloud Messaging (FCM) is the gateway that delivers push notifications to Android devices. To set up the Android Push destination on the console, you must get your FCM credentials `project_id`, `private_key`, and `client_email`.
 
 * Go to the [Firebase Console](https://console.firebase.google.com/?pli=1){: external}. A Google user account is required.
 * Click `Create a project`. If you are already having a project, then click `Add Project`.
@@ -80,9 +83,11 @@ Firebase Cloud Messaging (FCM) is the gateway that delivers push notifications t
 * Click `Create Project`.
 * Click `Continue` when the new project is ready.
 * In the navigation panel, select the `settings` icon next to the `Project Overview` and select `Settings > Project settings`.
-* Click the `Cloud Messaging` tab to view your project credentials: `Server Key` and `Sender ID`.
+* Click the `Service Accounts` tab.
 
    ![FCM credentials](images/en-fcm-credentials.png "FCM credentials"){: caption="Figure 2. FCM credentials" caption-side="bottom"}
+
+* Click **Generate new private key** to generate your project credentials. The downloaded file will contain: `project_id`, `private_key`, and `client_email`.
 
 ## Generate `google-services.json`
 {: #en-gen-google-services}
@@ -132,7 +137,7 @@ Click `Destinations` in the {{site.data.keyword.en_short}} console and add the f
 * Select a destination plan: Pre-production destination or Production destination.
    - `Pre-production destination` - select this destination as low-cost push destination, for your development and test environments.
    - `Production destination` - use the full capability of this destination. Unlimited devices and outbound messages allowed.
-* Update the FCM Push Credentials with the `Sender ID/Project number` and `Server Key`. You can get these details from your `Firebase Console Project Settings > Cloud Messaging` section.
+* Update the FCM Push Credentials with the `project_id`, `private_key`, and `client_email` from the file downloaded earlier.
 * Click **Add**.
 
 ## Create an {{site.data.keyword.en_short}} topic
@@ -145,7 +150,7 @@ Select `Topics` in the {{site.data.keyword.en_short}} console and click `Create`
 * `Description`: add an optional description for the topic.
 * `Source`: select a source from the dropdown list.
 * `Event type`: select event type from the dropdown list.
-* `Event sub type` select event sub type from the event sub type dropdown list.
+* `Event sub type`: select event sub type from the event sub type dropdown list.
 * `Severity`: select severity from the severity dropdown list.
 * `Advanced conditions`: write your own custom conditions, which must follow [jsonpath specifications](https://jsonpath.com/).
 
@@ -263,3 +268,89 @@ Use the [Send notification API](https://cloud.ibm.com/apidocs/event-notification
 ![Send notifications](images/en-send-notifications.png "Send notifications"){: caption="Figure 6. Send notifications" caption-side="bottom"}
 
 ![Receive notifications](images/en-receive-push.png "Receive notifications"){: caption="Figure 7. Receive notifications" caption-side="bottom"}
+
+## Migrating FCM legacy HTTP API to HTTP v1 API
+{: #en-fcm-http-migration}
+
+Apps using the FCM legacy HTTP API should consider migrating to the HTTP v1 API using the instructions in this section. The HTTP v1 API has advantages such as secure access tokens, efficient customizations, and future proof as well as more extendable client platform versions.
+
+In {{site.data.keyword.en_short}}, you can create an android destination by following FCM norms. For legacy HTTP API we have been providing support via two required parameters `server_key` and `sender_id`. For the v1 HTTP API, FCM introduced three new parameters: `project_id`, `client_email`, and `private_key`. The important point to observe here is both legacy and v1 HTTP APIs are mutually exclusive and we have taken care of that in {{site.data.keyword.en_short}}.
+
+Here's how you can migrate from an old configuration to a new one.
+
+1. Under your existing FCM Android destination configuration you will find `server_key` and `sender_id` provided. Now you just need to update the existing destination by providing `project_id`, `client_email`, and `private_key` USING the PATCH /destinations/{id} API call.
+
+   Existing Android destination configuration:
+
+   ```javascript
+   {
+      "name": "Existing android destination",
+      "description": "Android destination with legacy parameters",
+      "type": "push_android",
+      "config": {
+         "params": {
+            "sender_id": "xxxxxx",
+            "server_key": "xxxxxx"
+         }
+      }
+   }
+   ```
+   {: codeblock}
+
+   New Android destination configuration:
+
+   ```javascript
+   {
+      "name": "New android destination",
+      "description": "Android destination with V1 HTTP parameters",
+      "type": "push_android",
+      "config": {
+         "params": {
+            "project_id": "xxxxx",
+            "private_key": "xxxxx",
+            "client_email": "abc@xyz.pqr"
+         }
+      }
+   }
+   ```
+   {: codeblock}
+
+### Examples of FCM payload changes
+{: #en-fcm-http-migration-payload-example}
+
+* FCM Legacy HTTP API
+
+   ```javascript
+   {
+      "notification": {
+      "title": "Incidunt qui porro sequi iste assumenda esse animi.",
+      "body": "Minus reprehenderit ut nisi. Aut earum qui est iure eos fuga."
+      },
+      "data": {
+         "name": "Willie Greenholt",
+         "description": "Voluptas voluptatem sed quia expedita error a at sit rerum. Numquam unde debitis incidunt qui impedit et necessitatibus. Cupiditate exercitationem enim ut laborum itaque et."
+      }
+   }
+   ```
+   {: codeblock}
+
+* FCM HTTP v1 API
+
+   ```javascript
+   {
+      "message": {
+         "android": {
+            "notification": {
+               "title": "Incidunt qui porro sequi iste assumenda esse animi.",
+               "body": "Minus reprehenderit ut nisi. Aut earum qui est iure eos fuga."
+            },
+            "data": {
+               "name": "Willie Greenholt",
+               "description": "Voluptas voluptatem sed quia expedita error a at sit rerum. Numquam unde debitis incidunt qui impedit et necessitatibus. Cupiditate exercitationem enim ut laborum itaque et."
+            }
+         }
+      }
+   }
+   ```
+   {: codeblock}
+
