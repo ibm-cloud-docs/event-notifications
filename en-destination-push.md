@@ -74,7 +74,7 @@ You can monitor your push usage by setting up a monitoring dashboard through the
 
 The {{site.data.keyword.cloud_notm}} push service has two components to pricing: a destination instance fee and a consumption price.
 
-A pre-production destination instance fee of $15 is charged monthly. Every pre-production destination added to your {{site.data.keyword.en_short}} instance incurs the fee.
+A pre-production destination instance fee is charged monthly. Every pre-production destination added to your {{site.data.keyword.en_short}} instance incurs the fee.
 
 Consumption: Only 500 devices or 5000 outbound digital messages is permitted per pre-production destination. If either the number of devices or the number of outbound digital messages exceeds the permitted limit, the permitted number of devices is moved by additional 500 devices or by additional 5000 messages and charged.
 
@@ -87,19 +87,21 @@ You can change a pre-production destination to a production destination at any p
 
 The push service has two components to pricing: a destination instance fee and a consumption price.
 
-A pre-production destination instance fee of $15 is charged monthly. Every pre-production destination added to your {{site.data.keyword.en_short}} instance incurs the fee.
+A pre-production destination instance fee is charged monthly. Every pre-production destination added to your {{site.data.keyword.en_short}} instance incurs the fee.
 
-A production destination charge is $50 per destination per month with unlimited devices and outbound messages.
+A production destination instance fee is also charged monthly and allows unlimited devices and outbound messages.
 
-If you change a pre-production destination to a production destination, the charges would be $15 + pro-rated charge of $50 for that month and the next month onwards, it will be the only production destination charges.
+If you change a pre-production destination to a production destination, the charges for the transition month would be the pre-producdtion fee + pro-rated charge for the production instance.
 
-For example,
+For example, assume the pre-production instance fee is $15 per month and the production instance fee is $50 per month. 
+(NOTE: Prices are for the calculation example only.  The current may vary from the amounts shown in the example.)
 - As of 31 July, you create a pre-production destination and does not register any devices or send messages, the charges for July will be $15.
 - As of 1 August, you register 500 devices and 5001 messages sent. The charges for August will be $30 (This is due to the message threshold exceeds the permitted limit.)
 - As of 5 August, you change from pre-production destination to production destination. Then, the charges for August will be $30 plus pro-rata charges of consumption price, which will be equal to
 
    Amount charged = $30 + $ (50/31) x (remaining number of days in the month) = $30 + [(50/31) x 26] = $71.86.
 
-- If you create a pre-production destination on 1 August and not registered any devices and not sent any message, but on 5th August change from pre-production destination to a production destination, then the charges will be:
+- If you create a pre-production destination on 1 August and do not register any devices and do not sent any message, but on 5th August change from pre-production destination to a production destination, then the charges will be:
 
    Amount charged = $15 + $ (50/31) x (remaining number of days in the month) = $15 + [(50/31) x 26] = $56.86.
+   
