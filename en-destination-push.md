@@ -94,7 +94,7 @@ A production destination instance fee is also charged monthly and allows unlimit
 If you change a pre-production destination to a production destination, the charges for the transition month would be the pre-producdtion fee + pro-rated charge for the production instance.
 
 For example, assume the pre-production instance fee is $15 per month and the production instance fee is $50 per month. 
-(NOTE: Prices are for the calculation example only.  The current may vary from the amounts shown in the example.)
+(NOTE: Prices are for the calculation example only.  The current price may vary from the amounts shown in the example.)
 - As of 31 July, you create a pre-production destination and does not register any devices or send messages, the charges for July will be $15.
 - As of 1 August, you register 500 devices and 5001 messages sent. The charges for August will be $30 (This is due to the message threshold exceeds the permitted limit.)
 - As of 5 August, you change from pre-production destination to production destination. Then, the charges for August will be $30 plus pro-rata charges of consumption price, which will be equal to
