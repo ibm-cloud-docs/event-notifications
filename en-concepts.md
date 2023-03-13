@@ -64,7 +64,7 @@ One of many criteria can be used for filtering. {{site.data.keyword.en_short}} 
 ## Destination
 {: #en-destinations}
 
-A delivery target for event notifications. In other contexts, destinations are also called channels, sinks, consumers, or subscribers.
+A delivery target for {{site.data.keyword.en_short}}. In other contexts, destinations are also called channels, sinks, consumers, or subscribers.
 
 - Human destination: A device, server, or application presents notifications for human consumption. Examples of human destinations are email servers, SMS text providers, and push notification services. 
 
