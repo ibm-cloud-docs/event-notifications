@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-01-25"
+lastupdated: "2023-03-13"
 
 keywords: event notifications, IBM Cloud
 
@@ -55,6 +55,9 @@ Based on your business requirements, decide on a pricing plan. Currently, the fo
 
    You can use **Pre-production destination**, as low-cost push destination, for your development and test environments. You can change the **Pre-production destination** to **Production destination** post completion of your development and testing. This feature is only available for `Standard` pricing plan.
    {: note}
+
+Changing plans from a chargeable plan (Standard) to free plan (Lite) is not permitted as this may result in disruption and data loss due to the plan limitations.
+{: important}
 
 ## Choose an event source
 {: #en-decide-event-source}
