@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2022
-lastupdated: "2022-10-28"
+  years: 2020, 2023
+lastupdated: "2023-03-15"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, sms
 
@@ -19,6 +19,8 @@ subcollection: event-notifications
 {: shortdesc}
 
 The text messages originate from IBM-owned phone numbers or alphanumeric sender IDs. Except for test messages, the content cannot be modified within {{site.data.keyword.en_short}}.
+
+![SMS state-diagram](images/en-sms-state-diagram.png "SMS state diagram"){: caption="Figure 1. SMS state diagram" caption-side="bottom"}
 
 ## Adding an SMS destination
 {: #en-destinations-sms-add}
@@ -87,8 +89,18 @@ Because SMS delivery rates vary widely with location, SMS text messages are char
 
 | Supported Country Code        | SMS Units |
 |-------------------------------|-----------|
-| +1 (United States and Canada) | One unit    |
-{: caption="Table 1. Destination country and unit per segment" caption-side="top"}
+| +1 (United States and Canada) | 1 unit    |
+| +55 (Brazil)                  | 5 units   |
+| +33 (France)                  | 4 units   |
+| +44 (UK)                      | 3 units   |
+| +81 (Japan)                   | 4 units   |
+| +49 (Germany)                 | 5 units   |
+| +52 (Mexico)                  | 3 units   |
+| +39 (Italy)                   | 5 units   |
+| +91 (India)                   | 1 unit    |
+| +61 (Australia)               | 3 units   |
+| +34 (Spain)                   | 5 units   |
+{: caption="Table 1. Destination country and unit per segment" caption-side="bottom"}
 
 Longer notifications (notifications greater than 160 characters) might be split into multiple segments. Each segment is considered a message, as is each recipient phone number. For example, if an incoming notification is split into three SMS segments, and the message is sent to five subscribed phone numbers, then the total consumed SMS units for the incoming message is as follows:
 

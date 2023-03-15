@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2022-10-17"
+  years: 2021, 2023
+lastupdated: "2023-03-15"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email
 
@@ -19,6 +19,8 @@ subcollection: event-notifications
 {: shortdesc}
 
 The emails originate from `no-reply@cloud.ibm.com` or `event-notifications@cloud.ibm.com`, but you can add your own reply-to address. Except for test emails, the content cannot be modified within {{site.data.keyword.en_short}}.
+
+![Email state-diagram](images/en-email-state-diagram.png "Email state diagram"){: caption="Figure 1. Email state diagram" caption-side="bottom"}
 
 ## Adding an email service destination
 {: #en-destinations-email-add}
