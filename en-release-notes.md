@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-01-24"
+lastupdated: "2023-03-15"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -19,6 +19,13 @@ content-type: release-note
 
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
+
+## 15 Mar 2023
+{: #event-notifications-Mar1523}
+{: release-note}
+
+Support to additional countries for SMS notification
+:  You can now send SMS notifications to countries listed [here](/docs/event-notifications?topic=event-notifications-en-destinations-sms).
 
 ## 24 Jan 2023
 {: #event-notifications-Jan2423}
