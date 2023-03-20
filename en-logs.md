@@ -92,6 +92,7 @@ Table 4 outlines the fields that are included in each log record:
 | `documentsURL`    | Optional   | More information on how to proceed if you receive this log record. |
 | `sourceID`        | Required   | CRN of the {{site.data.keyword.cloud_notm}} service that sends the notification through the {{site.data.keyword.en_short}} service. |
 | `notificationID`  | Optional   | ID of the notification that is sent to a destination. |
+| `destinationID `  | Optional   | ID of the destination for which the status is being reported. |
 | `level`           | Required   | Type of log. Valid values are `INFO`, `WARN`, `ERROR` |
 {: caption="Table 4. Log record fields" caption-side="top"}
 
