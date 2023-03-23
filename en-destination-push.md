@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2022-11-16"
+  years: 2021, 2023
+lastupdated: "2023-03-03"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, push
 
@@ -93,8 +93,11 @@ A production destination instance fee is also charged monthly and allows unlimit
 
 If you change a pre-production destination to a production destination, the charges for the transition month would be the pre-producdtion fee + pro-rated charge for the production instance.
 
-For example, assume the pre-production instance fee is $15 per month and the production instance fee is $50 per month. 
-(NOTE: These prices are assumed for this example only. Current pricing may be different from the amounts shown in the example. See the Event Notifications catalog page for current pricing.)
+For example, assume the pre-production instance fee is $15 per month and the production instance fee is $50 per month.
+
+These prices are assumed for this example only. Current pricing may be different from the amounts shown in the example. See the {{site.data.keyword.en_short}} catalog page for current pricing.
+{: note}
+
 - As of 31 July, you create a pre-production destination and does not register any devices or send messages, the charges for July will be $15.
 - As of 1 August, you register 500 devices and 5001 messages sent. The charges for August will be $30 (This is due to the message threshold exceeds the permitted limit.)
 - As of 5 August, you change from pre-production destination to production destination. Then, the charges for August will be $30 plus pro-rata charges of consumption price, which will be equal to
@@ -104,4 +107,3 @@ For example, assume the pre-production instance fee is $15 per month and the pro
 - If you create a pre-production destination on 1 August and do not register any devices and do not sent any message, but on 5th August change from pre-production destination to a production destination, then the charges will be:
 
    Amount charged = $15 + $ (50/31) x (remaining number of days in the month) = $15 + [(50/31) x 26] = $56.86.
-   
