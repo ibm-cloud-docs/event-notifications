@@ -117,6 +117,7 @@ toc:
           label: Enhancing security
           topics:
           - en-iam.md
+          - en-cbr.md
           - en-audit.md
           - en-data-security-compliance.md
           - en-data-security.md
@@ -167,3 +168,4 @@ toc:
           - en-ts-email.md
           - en-ts-rules.md
           - en-ts-notification.md
+          - en-ts-ip-address-cbr.md
