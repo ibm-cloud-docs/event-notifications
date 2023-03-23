@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-03-15"
+lastupdated: "2023-03-24"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -19,6 +19,13 @@ content-type: release-note
 
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
+
+## 24 Mar 2023
+{: #event-notifications-Mar2423}
+{: release-note}
+
+New destination: {{site.data.keyword.cloud_notm}} {{site.data.keyword.codeengineshort}}
+:  {{site.data.keyword.cloud_notm}} {{site.data.keyword.codeengineshort}} is now available as a destination. You can send notifications to your {{site.data.keyword.codeengineshort}} destination by using {{site.data.keyword.en_short}}. [Send notifications to your {{site.data.keyword.codeengineshort}} destination by using {{site.data.keyword.en_short}}](/docs/event-notifications?topic=event-notifications-en-destinations-codeengine).
 
 ## 15 Mar 2023
 {: #event-notifications-Mar1523}

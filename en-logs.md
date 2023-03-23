@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2022
-lastupdated: "2022-10-17"
+  years: 2019, 2023
+lastupdated: "2023-03-21"
 
 keywords: event notifications logDNA, event notifications logging, event notifications external logs
 
@@ -92,7 +92,7 @@ Table 4 outlines the fields that are included in each log record:
 | `documentsURL`    | Optional   | More information on how to proceed if you receive this log record. |
 | `sourceID`        | Required   | CRN of the {{site.data.keyword.cloud_notm}} service that sends the notification through the {{site.data.keyword.en_short}} service. |
 | `notificationID`  | Optional   | ID of the notification that is sent to a destination. |
-| `destinationID `  | Optional   | ID of the destination for which the status is being reported. |
+| `destinationID`   | Optional   | ID of the destination for which the status is being reported. |
 | `level`           | Required   | Type of log. Valid values are `INFO`, `WARN`, `ERROR` |
 {: caption="Table 4. Log record fields" caption-side="top"}
 

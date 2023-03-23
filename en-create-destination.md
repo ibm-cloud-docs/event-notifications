@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-01-17"
+lastupdated: "2023-03-23"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -32,6 +32,7 @@ Create an {{site.data.keyword.en_short}} destination. Destinations are custom pr
 - Webhook
 - {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}
 - ServiceNow
+- {{site.data.keyword.cloud_notm}} {{site.data.keyword.codeengineshort}}
 {: shortdesc}
 
 **{{site.data.keyword.cloud_notm}} SMS service** and **{{site.data.keyword.cloud_notm}} Email service** are supported out of the box.
