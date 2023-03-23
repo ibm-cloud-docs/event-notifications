@@ -25,7 +25,13 @@ Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, sec
 {: release-note}
 
 New destination: {{site.data.keyword.cloud_notm}} {{site.data.keyword.codeengineshort}}
-:  {{site.data.keyword.cloud_notm}} {{site.data.keyword.codeengineshort}} is now available as a destination. You can send notifications to your {{site.data.keyword.codeengineshort}} destination by using {{site.data.keyword.en_short}}. [Send notifications to your {{site.data.keyword.codeengineshort}} destination by using {{site.data.keyword.en_short}}](/docs/event-notifications?topic=event-notifications-en-destinations-codeengine).
+:  {{site.data.keyword.cloud_notm}} {{site.data.keyword.codeengineshort}} is now available as a destination. You can [Send notifications to your {{site.data.keyword.codeengineshort}} destination by using {{site.data.keyword.en_short}}](/docs/event-notifications?topic=event-notifications-en-destinations-codeengine).
+
+Support for context-based restrictions (CBR)
+:  Manage user and service access to your {{site.data.keyword.en_short}} resources by using context-based restrictions, based on defined criteria. For more information, see [Managing access with context-based restrictions](/docs/event-notifications?topic=event-notifications-en-access-control-cbr).
+
+   As part of the support for CBR, the private service inner IPs were modified. The hostnames were not modified. If needed, you can use DNS lookup to find the exact IPs.
+   {: note}
 
 ## 15 Mar 2023
 {: #event-notifications-Mar1523}
