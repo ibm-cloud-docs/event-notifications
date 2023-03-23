@@ -23,11 +23,6 @@ subcollection: event-notifications
 
 You can configure a {{site.data.keyword.cloud_notm}} {{site.data.keyword.codeengineshort}} destination in the `Destinations` tab. As part of the configuration, enter the secured URL (only HTTPS), and select the Verb to be called (GET or POST). You can also enter authorization headers to the destination {{site.data.keyword.codeengineshort}}. Create a subscription to associate the {{site.data.keyword.codeengineshort}} destination to a topic.
 
-## {{site.data.keyword.codeengineshort}} signing
-{: #en-codeengine-sign}
-
-To identify that the incoming notification is coming from {{site.data.keyword.en_full_notm}}, you can enable {{site.data.keyword.codeengineshort}} signing. If signing is enabled, a public key can be downloaded, and used to decrypt the incoming notification content.
-
 ## {{site.data.keyword.codeengineshort}} retry policy
 {: #en-codengine-retry}
 
