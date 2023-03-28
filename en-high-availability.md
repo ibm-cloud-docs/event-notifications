@@ -31,13 +31,13 @@ A region (location) is a geographically and physically separate group of one or 
 - Regions are designed to remove shared single points of failure with other regions and provide low inter-zone latency within the region.
 - Each region has three different data centers (DC) for redundancy.
 - In each supported region, traffic is load balanced across infrastructure in multiple availability zones, with no single point of failure.
-- If all the data centers in a region fail, {{site.data.keyword.appconfig_short}} becomes unavailable in that region.
+- If all the data centers in a region fail, {{site.data.keyword.en_short}} becomes unavailable in that region.
 
 In each supported multizone region, every zone has its own {{site.data.keyword.cloud_notm}} Kubernetes service cluster with several worker nodes. Each worker node runs several instances of {{site.data.keyword.en_short}} service components. Each region is fronted by a global load balancer and a web application firewall.
 
 {{site.data.keyword.en_short}} service persists tenant data in a highly available database. A single regional database stores data of all the {{site.data.keyword.en_short}} tenants in that particular region. The data is stored across multiple zones in each region. Data that is stored in the {{site.data.keyword.en_short}} service is encrypted and persisted in a database cluster that is spread across availability zones. All databases connections use TLS/SSL encryption for data in transit.
 
-## Availability zones for {{site.data.keyword.appconfig_short}}
+## Availability zones for {{site.data.keyword.en_short}}
 {: #en-zones-ha}
 
 The following table lists the high-availability (HA) status for the regions (locations) where the {{site.data.keyword.en_short}} service is available:
@@ -58,7 +58,7 @@ Where:
    - A region contains [multiple availability zones](https://www.ibm.com/cloud/data-centers/) to meet local access, low latency, and security requirements for the region.
 - `MZR` means multi-zone region. [Learn more](/docs/overview?topic=overview-locations#mzr-table).
 
-## Disaster recovery (DR) for {{site.data.keyword.appconfig_short}} service in a region
+## Disaster recovery (DR) for {{site.data.keyword.en_short}} service in a region
 {: #en-dr}
 
 {{site.data.keyword.en_short}} service is a regional service. It does not provide automated cross-regional failover or cross-regional disaster recovery. If a regional disaster occurs, all the data might not be recovered. However, a location recovery is possible and data can be restored from that location.
