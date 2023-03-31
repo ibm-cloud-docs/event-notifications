@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-03-09"
+lastupdated: "2023-03-31"
 
 keywords: event notifications CLI, event notifications command line, event notifications terminal, event notifications shell, Event Notifications, en, en version history
 
@@ -30,4 +30,5 @@ Find a summary of changes for each version of {{site.data.keyword.en_short}} plu
 | 0.1.2      | 29 August 2022   | Support for {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}} as a destination.  \n Upgrading a **Pre-production destination** to **Production destination**. |
 | 0.1.3      | 08 December 2022 | Support for high-level encryption (BYOK and KYOK), and PagerDuty destination. |
 | 0.1.4      | 28 February 2023 | Support for ServiceNow destination and FCM Http v1 config changes. |
+| 0.1.5      | 31 March 2023    | Support for Code Engine destination. |
 {: caption="Table 1. Changes in the {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} CLI" caption-side="bottom"}
