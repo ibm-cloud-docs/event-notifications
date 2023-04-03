@@ -24,7 +24,7 @@ When a message of length greater than 3000 characters is sent to slack, the mess
 ## Generate slack incoming webhook URL
 {: #en-generate-slack-incoming-webhook-url}
 
-To post a slack notification, that you need to generate an incoming webhook URL. To generate the URL, follow these steps: [Incoming webhooks for Slack](https://slack.com/intl/en-in/help/articles/115005265063-Incoming-webhooks-for-Slack){: external}.
+To post a slack notification, that you need to generate an incoming webhook URL. To generate the URL, follow these steps: [Incoming webhooks for Slack](https://api.slack.com/messaging/webhooks){: external}.
 
 ## Configuring a slack destination
 {: #en-slack-configure-destination}
