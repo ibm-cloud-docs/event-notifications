@@ -98,5 +98,5 @@ After you create rules, you can [update](/apidocs/context-based-restrictions#rep
 
 You must follow the creation or modification of zones or rules with adequate testing to ensure access and availability.
 
-Users who attempt to access your resources outside of the defined zones receive `HTTP error 401` when the appropriate rules are not established.
+Users who attempt to access your resources outside of the defined zones receive `HTTP error 403` when the appropriate rules are not established.
 {: note}

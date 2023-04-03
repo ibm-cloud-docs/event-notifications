@@ -30,9 +30,6 @@ New destination: {{site.data.keyword.cloud_notm}} {{site.data.keyword.codeengine
 Support for context-based restrictions (CBR)
 :  Manage user and service access to your {{site.data.keyword.en_short}} resources by using context-based restrictions, based on defined criteria. For more information, see [Managing access with context-based restrictions](/docs/event-notifications?topic=event-notifications-en-access-control-cbr).
 
-   As part of the support for CBR, the private service inner IPs were modified. The hostnames were not modified. If needed, you can use DNS lookup to find the exact IPs.
-   {: note}
-
 ## 15 Mar 2023
 {: #event-notifications-Mar1523}
 {: release-note}
