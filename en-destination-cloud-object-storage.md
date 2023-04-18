@@ -43,7 +43,7 @@ To configure a {{site.data.keyword.cos_full_notm}} destination, do the following
 
 1. Click **Add**.
 
-## {{site.data.keyword.openwhisk_short}} retry policy
+## {{site.data.keyword.cos_full_notm}} retry policy
 {: #en-destinations-cos-retry}
 
 When calling a webhook, issues such as network errors and application glitches can cause the requests to fail. A retry is used to provide resiliency to external requests. Attempt to retry the requests in such situations by using the following values:
