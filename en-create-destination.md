@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-03-23"
+lastupdated: "2023-04-18"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -33,6 +33,7 @@ Create an {{site.data.keyword.en_short}} destination. Destinations are custom pr
 - {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}
 - ServiceNow
 - {{site.data.keyword.cloud_notm}} {{site.data.keyword.codeengineshort}}
+- {{site.data.keyword.cos_full_notm}}
 {: shortdesc}
 
 **{{site.data.keyword.cloud_notm}} SMS service** and **{{site.data.keyword.cloud_notm}} Email service** are supported out of the box.

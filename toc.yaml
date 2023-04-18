@@ -54,6 +54,7 @@ toc:
           - en-destination-cloud-functions.md
           - en-destination-servicenow.md
           - en-destination-codeengine.md
+          - en-destination-cloud-object-storage.md
       - en-integrations.md
       - topicgroup:
           label: SDKs
