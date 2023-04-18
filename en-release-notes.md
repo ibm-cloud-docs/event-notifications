@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-03-24"
+lastupdated: "2023-04-18"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -19,6 +19,13 @@ content-type: release-note
 
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
+
+## 18 Apr 2023
+{: #event-notifications-Apr1823}
+{: release-note}
+
+New destination: {{site.data.keyword.cos_full_notm}}
+:  {{site.data.keyword.cos_full_notm}} is now available as a destination. You can [send and store notifications to your {{site.data.keyword.cos_full_notm}} destination by using {{site.data.keyword.en_short}}](/docs/event-notifications?topic=event-notifications-en-destinations-cloud-object-storage).
 
 ## 24 Mar 2023
 {: #event-notifications-Mar2423}

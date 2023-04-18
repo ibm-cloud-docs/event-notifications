@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-03-13"
+lastupdated: "2023-04-18"
 
 keywords: event notifications, IBM Cloud
 
@@ -106,3 +106,4 @@ Service destinations are cloud services or applications where notifications are 
 
 - [Webhook](/docs/event-notifications?topic=event-notifications-en-destinations-webhook)
 - [{{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}](/docs/event-notifications?topic=event-notifications-en-destinations-cloud-functions)
+- [{{site.data.keyword.cos_full_notm}}](/docs/event-notifications?topic=event-notifications-en-destinations-cloud-object-storage)

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-03-24"
+lastupdated: "2023-04-18"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, event destination
 
@@ -51,3 +51,4 @@ Service destinations are cloud services or application where notifications are c
 - [Webhook](/docs/event-notifications?topic=event-notifications-en-destinations-webhook)
 - [{{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}](/docs/event-notifications?topic=event-notifications-en-destinations-cloud-functions)
 - [{{site.data.keyword.codeengineshort}}](/docs/event-notifications?topic=event-notifications-en-destinations-codeengine)
+- [{{site.data.keyword.cos_full_notm}}](/docs/event-notifications?topic=event-notifications-en-destinations-cloud-object-storage)
