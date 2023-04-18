@@ -42,19 +42,3 @@ To configure a {{site.data.keyword.cos_full_notm}} destination, do the following
    - **Endpoint** - Enter the {{site.data.keyword.cos_full_notm}} endpoint URL.
 
 1. Click **Add**.
-
-## {{site.data.keyword.cos_full_notm}} retry policy
-{: #en-destinations-cos-retry}
-
-When calling a webhook, issues such as network errors and application glitches can cause the requests to fail. A retry is used to provide resiliency to external requests. Attempt to retry the requests in such situations by using the following values:
-
-- Limit = 60 seconds: total time that the service retries.
-- Step = 5 seconds: after each failure, the service waits 5 seconds before retrying. This delay prevents bombarding of the external services (webhook).
-
-In addition, the following timeout conditions cause the {{site.data.keyword.cos_full_notm}} call to fail:
-
-- A connection timeout of 10 seconds
-- A response timeout of 60 seconds
-
-If a call to the {{site.data.keyword.cos_full_notm}} URL fails even after retry attempts, the notification is lost.
-{: note}
