@@ -20,7 +20,7 @@ subcollection: event-notifications
 
 A {{site.data.keyword.cos_full_notm}} represents a service destination, where an incoming notification can be stored and consumed programmatically to actions.
 
-Make sure that you have an {{site.data.keyword.cos_full_notm}} instance is [created and configured](https://cloud.ibm.com/objectstorage/create). For more information, [Getting started with {{site.data.keyword.cos_full_notm}}]https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage).
+Make sure that you have an {{site.data.keyword.cos_full_notm}} instance is [created and configured](https://cloud.ibm.com/objectstorage/create). For more information, see [Getting started with {{site.data.keyword.cos_full_notm}}](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage).
 {: note}
 
 ## Configuring a {{site.data.keyword.cos_full_notm}} destination
