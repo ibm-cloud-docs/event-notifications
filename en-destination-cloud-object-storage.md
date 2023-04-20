@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-04-19"
+lastupdated: "2023-04-20"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, IBM Cloud Object Storage, cloud object storage, object storage
 
@@ -23,7 +23,7 @@ A {{site.data.keyword.cos_full_notm}} represents a service destination, where an
 ## Configuring a {{site.data.keyword.cos_full_notm}} destination in the UI
 {: #en-destinations-cos-configure}
 
-Before you configure {{site.data.keyword.cos_full_notm}} as a destination, make sure that you have an {{site.data.keyword.cos_full_notm}} instance [created and configured](https://cloud.ibm.com/objectstorage/create) in the same account as your {{site.data.keyword.en_short}} instance. Also you need to have IAM role Manager for {{site.data.keyword.IBM_notm}} {{site.data.keyword.en_short}}, and [IAM service-to-service authorization](#en-using-s2s-auth1).
+Before you configure {{site.data.keyword.cos_full_notm}} as a destination, make sure that you have an {{site.data.keyword.cos_full_notm}} instance [created and configured](https://cloud.ibm.com/objectstorage/create) in the same account as your {{site.data.keyword.en_short}} instance.
 {: note}
 
 If you are using {{site.data.keyword.en_short}} CLI or API to configure {{site.data.keyword.cos_full_notm}} service instance as a destination, ensure that you have enabled authorization to grant access between services before integrating with {{site.data.keyword.cos_full_notm}}. For more information, see [Using authorizations to grant access between services](#en-using-s2s-auth1).
@@ -41,14 +41,22 @@ To configure a {{site.data.keyword.cos_full_notm}} destination, do the following
    - **Description** - Optionally, enter a description for your destination.
    - **Type** - Under **Destination**, for the **Type**, select **{{site.data.keyword.cos_full_notm}}** from the list as your destination type.
 
-   - **Instance name** - Select the {{site.data.keyword.cos_full_notm}} instance name from the list, if you already have an {{site.data.keyword.cos_full_notm}} instance. Otherwise, click the **Click new instance** link, to create an {{site.data.keyword.cos_full_notm}} instance.
+   - **Instance name** - Select the {{site.data.keyword.cos_full_notm}} instance name from the list, if you already have an {{site.data.keyword.cos_full_notm}} instance. Otherwise, click the **Create new instance** link, to create an {{site.data.keyword.cos_full_notm}} instance.
 
-      When you are creating a new {{site.data.keyword.cos_full_notm}} instance by **Click new instance** option, the authorization between the services will be created internally between the two services, {{site.data.keyword.en_short}} and {{site.data.keyword.cos_full_notm}}.
+      When you select an existing {{site.data.keyword.cos_full_notm}} instance, the authorization between the services will be created internally between the two service instances.
       {: note}
 
-   - **Bucket name** - Enter the Bucket name to be used for connecting to the {{site.data.keyword.cos_full_notm}} instance. {{site.data.keyword.en_short}} creates a new object per notification into the {{site.data.keyword.cos_full_notm}} Bucket name. The pattern that {{site.data.keyword.en_short}} uses to name the object is **----Information to come from Pankaj----**.
+   - **Bucket name** - Enter the Bucket name to be used for creating a new object per notification into the {{site.data.keyword.cos_full_notm}} instance.
 
-   - **Endpoint** - Enter the {{site.data.keyword.cos_full_notm}} endpoint URL. For more information, see [Endpoint url]().
+      You can get the bucket name from your {{site.data.keyword.cos_full_notm}} instance. For more information, see [Bucket name](#en-cos-bucket-name).
+
+      The pattern (is a combination of destination name and notification ID) that {{site.data.keyword.en_short}} uses to store the object in {{site.data.keyword.cos_full_notm}} bucket is similar to the example below:
+
+      `Rhonda Macejkovic/013f87bc-0537-4dad-8511-8cb054890ffc.json`,
+
+      where `Rhonda Macejkovic` is destination name and `013f87bc-0537-4dad-8511-8cb054890ffc` is notification ID. `.json` is the payload format.
+
+   - **Endpoint** - Enter the {{site.data.keyword.cos_full_notm}} endpoint URL. For more information, see [Endpoint url](#en-endpoint-url).
 
 1. Click **Add**.
 
@@ -87,7 +95,22 @@ To authorize a source service to access a target service, run the `ibmcloud iam 
 
 For more information about all of the parameters that are available for this command, see [ibmcloud iam authorization-policy-create](/docs/cli?topic=cli-ibmcloud_commands_iam#ibmcloud_iam_authorization_policy_create).
 
-## How to find the Endpoint URL of the {{site.data.keyword.cos_full_notm}} service?
+## How to find the Bucket name in the {{site.data.keyword.cos_full_notm}} service instance?
+{: #en-cos-bucket-name}
+
+1. Login to your {{site.data.keyword.cloud_notm}} account.
+
+1. Navigate to **Resource List** in the menu.
+
+1. Navigate to **Storage** in the Resource list.
+
+1. Click the {{site.data.keyword.cos_full_notm}} name that will display your {{site.data.keyword.cos_full_notm}} console.
+
+1. In the {{site.data.keyword.cos_full_notm}} console, navigate to **Buckets**.
+
+1. Select and copy the required Bucket name that need to used in the destination creation process. Use this copied Bucket name in the destination creation screen.
+
+## How to find the Endpoint URL of the {{site.data.keyword.cos_full_notm}} service instance?
 {: #en-endpoint-url}
 
 Endpoints are used with your credentials (Bucket name, API Key, SDK) to tell your service where to look for your bucket.
@@ -100,8 +123,8 @@ Endpoints are used with your credentials (Bucket name, API Key, SDK) to tell you
 
 1. Click the {{site.data.keyword.cos_full_notm}} name that will display your {{site.data.keyword.cos_full_notm}} console.
 
-1. In the {{site.data.keyword.cos_full_notm}} console, navigate to **Endpoints**.
+1. In the {{site.data.keyword.cos_full_notm}} console, navigate to **Buckets** in the menu.
 
-1. In the **Endpoints**, **Select resiliency** and **Select location** to narrow down your selection.
+1. Click the required **Bucket name** to view the **Bucket configuration** details.
 
-1. Navigate to **Legacy Endpoints** section and copy your Global public or private endpoints as required. Use this value as the **Endpoint** in the [Configuring a {{site.data.keyword.cos_full_notm}} destination](#en-destinations-cos-configure) section.
+1. Navigate to **Endpoints** section and copy your public or private endpoints as required. Use this value as the **Endpoint** in the [Configuring a {{site.data.keyword.cos_full_notm}} destination](#en-destinations-cos-configure) section.
