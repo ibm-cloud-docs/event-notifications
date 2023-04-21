@@ -29,7 +29,7 @@ Add an {{site.data.keyword.en_short}} source. Various services produce events th
 
 Three types of sources are supported for {{site.data.keyword.en_short}}: {{site.data.keyword.cloud_notm}} sources, generic API sources, and {{site.data.keyword.cloud_notm}} platform sources.
 
-With {{site.data.keyword.cloud_notm}} sources, events emit from managed services on {{site.data.keyword.cloud_notm}}. For example, {{site.data.keyword.monitoringfull_notm}}, {{site.data.keyword.cloud_notm}} Security and Compliance Center, {{site.data.keyword.secrets-manager_full_notm}}, {{site.data.keyword.appconfig_short}}, and Toolchain can all be added to {{site.data.keyword.en_short}} {{site.data.keyword.cloud_notm}} sources.
+With {{site.data.keyword.cloud_notm}} sources, events emit from managed services on {{site.data.keyword.cloud_notm}}. For example, {{site.data.keyword.monitoringfull_notm}}, {{site.data.keyword.cloud_notm}} Security and Compliance Center, {{site.data.keyword.secrets-manager_full_notm}}, {{site.data.keyword.appconfig_short}}, IBM Cloud Projects, and Toolchain can all be added to {{site.data.keyword.en_short}} {{site.data.keyword.cloud_notm}} sources.
 
 With generic API sources, events emanate from services or applications that are not managed by IBM. For example, if you create your own application that sends events to {{site.data.keyword.en_short}}, your application can be added as an API source.
 

@@ -27,10 +27,11 @@ From a billing perspective, ingested notifications are calculated for all incomi
 {: #en-ibm-sources-list}
 
 The list of IBM provided sources is as follows:
-- [{{site.data.keyword.monitoringfull_notm}}](https://{DomainName}/docs/monitoring?topic=monitoring-notifications){: external}
+- [{{site.data.keyword.monitoringfull_notm}}](https://{DomainName}/docs/monitoring?topic=monitoring-tutorial-en){: external}
 - [Security and Compliance](https://{DomainName}/docs/security-compliance?topic=security-compliance-event-notifications&interface=ui){: external}
 - [{{site.data.keyword.secrets-manager_short}}](https://{DomainName}/docs/secrets-manager?topic=secrets-manager-event-notifications&interface=ui){: external}
 - [{{site.data.keyword.appconfig_short}}](https://{DomainName}/docs/app-configuration?topic=app-configuration-getting-started){: external}
+- [IBM Cloud Projects](https://{DomainName}/docs/allowlist/projects?topic=projects-event-notifications-events&interface=ui){: external}
 - [Toolchain](https://{DomainName}/docs/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-cd&interface=ui){: external}
 
 ## API sources

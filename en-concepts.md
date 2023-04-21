@@ -33,7 +33,7 @@ A digitized message that is triggered when an event occurs. Event notifications
 
 A service or application on {{site.data.keyword.cloud_notm}} that emits event notifications and publishes them to a topic within the {{site.data.keyword.en_short}} service. A source is a registered entity in an {{site.data.keyword.en_short}} service instance. Several services on {{site.data.keyword.cloud_notm}} are set to be integrated to send notifications to {{site.data.keyword.en_short}}.
 
-{{site.data.keyword.monitoringlong_notm}}, {{site.data.keyword.compliance_long}}, {{site.data.keyword.secrets-manager_full_notm}} Platform Notifications for {{site.data.keyword.cloud_notm}}, {{site.data.keyword.cloud_notm}} Resource Lifecycle Events, and Toolchain are enabled. A source can publish to multiple topics. In other contexts sources are identified as producers or publishers.
+{{site.data.keyword.monitoringlong_notm}}, {{site.data.keyword.compliance_long}}, {{site.data.keyword.secrets-manager_full_notm}} Platform Notifications for {{site.data.keyword.cloud_notm}}, {{site.data.keyword.cloud_notm}} Resource Lifecycle Events, {{site.data.keyword.cloud_notm}} Projects, and Toolchain are enabled. A source can publish to multiple topics. In other contexts sources are identified as producers or publishers.
 
 Size limit for a send notification request is limited to 64 KB.
 

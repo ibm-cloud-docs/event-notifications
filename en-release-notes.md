@@ -24,6 +24,9 @@ Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, sec
 {: #event-notifications-Apr2123}
 {: release-note}
 
+New supported {{site.data.keyword.cloud_notm}} source: IBM Cloud Projects
+:  IBM Cloud Projects is now available as new supported {{site.data.keyword.cloud_notm}} source. For more information, see [IBM Cloud Projects](/docs/allowlist/projects?topic=projects-event-notifications-events&interface=ui).
+
 New supported {{site.data.keyword.cloud_notm}} source: Toolchain
 :  Toolchain is now available as new supported {{site.data.keyword.cloud_notm}} source. For more information, see [Toolchain](/docs/ContinuousDelivery?topic=ContinuousDelivery-getting-started&interface=ui).
 
