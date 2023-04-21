@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-04-18"
+lastupdated: "2023-04-21"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -19,6 +19,13 @@ content-type: release-note
 
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
+
+## 21 Apr 2023
+{: #event-notifications-Apr2123}
+{: release-note}
+
+New supported {{site.data.keyword.cloud_notm}} source: Toolchain
+:  Toolchain is now available as new supported {{site.data.keyword.cloud_notm}} source. For more information, see [Toolchain](/docs/ContinuousDelivery?topic=ContinuousDelivery-getting-started&interface=ui).
 
 ## 18 Apr 2023
 {: #event-notifications-Apr1823}
