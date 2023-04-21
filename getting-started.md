@@ -24,7 +24,7 @@ completion-time: 10m
 This tutorial brings you through the steps that you need to take before you create an {{site.data.keyword.en_full_notm}} service.
 {: shortdesc}
 
-{{site.data.keyword.en_short}} is a routing service that provides you about critical events that occur in your {{site.data.keyword.cloud}} account. You can filter and route event notifications from {{site.data.keyword.cloud_notm}} services like Monitoring, Security and Compliance Center, Secrets Manager, and Toolchain to communication channels like email, SMS, push notifications, webhook, slack, Microsoft&reg; Teams, ServiceNow, and {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}.
+{{site.data.keyword.en_short}} is a routing service that provides you about critical events that occur in your {{site.data.keyword.cloud}} account. You can filter and route event notifications from {{site.data.keyword.cloud_notm}} services like {{site.data.keyword.monitoringlong_notm}}, {{site.data.keyword.compliance_short}}, {{site.data.keyword.secrets-manager_short}}, {{site.data.keyword.cloud_notm}} Projects, and Toolchain to communication channels like email, SMS, push notifications, webhook, slack, Microsoft&reg; Teams, ServiceNow, {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}, and {{site.data.keyword.cos_full_notm}}.
 
 ## Create an {{site.data.keyword.cloud_notm}} account
 {: #en-cloud-ac}
@@ -67,14 +67,15 @@ You can create either an `API Source` or an `{{site.data.keyword.cloud_notm}}` s
 
 An `API source` indicates that the Event originated outside of {{site.data.keyword.cloud_notm}} and is sent to {{site.data.keyword.en_short}} service through API calls.
 
-An `{{site.data.keyword.cloud_notm}}` source indicates a service on {{site.data.keyword.cloud_notm}} that can emit events to {{site.data.keyword.en_short}} service.
+An `{{site.data.keyword.cloud_notm}} source` indicates a service on {{site.data.keyword.cloud_notm}} that can emit events to {{site.data.keyword.en_short}} service.
 
 `{{site.data.keyword.cloud_notm}} platform sources` indicates a {{site.data.keyword.cloud_notm}} resource that emits resource lifecycle events around the {{site.data.keyword.cloud_notm}} resources.
 
 The list of IBM provided sources is as follows:
-- [IBM Cloud Monitoring](/docs/monitoring?topic=monitoring-notifications)
+- [IBM Cloud Monitoring](/docs/monitoring?topic=monitoring-tutorial-en)
 - [IBM Cloud Security and Compliance Center](/docs/security-compliance?topic=security-compliance-event-notifications&interface=ui)
 - [IBM Cloud Secrets Manager](/docs/secrets-manager?topic=secrets-manager-event-notifications&interface=ui)
+- [IBM Cloud Projects](/docs/allowlist/projects?topic=projects-event-notifications-events&interface=ui)
 - [Toolchain](/docs/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-cd&interface=ui)
 
 ## Choose an event destination
