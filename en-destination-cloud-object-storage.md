@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-04-20"
+lastupdated: "2023-04-21"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, IBM Cloud Object Storage, cloud object storage, object storage
 
@@ -63,7 +63,7 @@ To configure a {{site.data.keyword.cos_full_notm}} destination, do the following
 ## Using authorizations to grant access between services
 {: #en-using-s2s-auth1}
 
-Use {{site.data.keyword.cloud}} Identity and Access Management (IAM) to create or remove an authorization that grants one service access to another service. Use authorization delegation to automatically create access policies that grant access to dependent services.
+Use {{site.data.keyword.cloud}} Identity and Access Management (IAM) to create or remove an authorization that grants one service access to another service.
 
 ### Creating an authorization in the console
 {: #en-using-s2s-console}
@@ -74,7 +74,6 @@ Use {{site.data.keyword.cloud}} Identity and Access Management (IAM) to create o
 
 1. Select a source account.
    * If the source service that needs access to the target service is in this account, select **This account**.
-   * If the source service that needs access to the target service is in a different account, select **Other account**. Then, enter the **Account ID** of the source account.
 
 1. Select a **Source service** as **Event Notifications**.
 
@@ -84,7 +83,7 @@ Use {{site.data.keyword.cloud}} Identity and Access Management (IAM) to create o
 
 1. For the target service, specify whether you want the authorization to be for all instances, only to a specific instance in the account, or instances only in a certain resource group.
 
-1. Select a role to assign access to the source service that accesses the target service.
+1. Select both the roles (Reader, and Object Writer) to assign access to the source service that accesses the target service.
 
 1. Click **Authorize**.
 
