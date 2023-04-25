@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-04-21"
+lastupdated: "2023-04-25"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, IBM Cloud Object Storage, cloud object storage, object storage
 
@@ -43,7 +43,7 @@ To configure a {{site.data.keyword.cos_full_notm}} destination, do the following
 
    - **Instance name** - Select the {{site.data.keyword.cos_full_notm}} instance name from the list, if you already have an {{site.data.keyword.cos_full_notm}} instance. Otherwise, click the **Create new instance** link, to create an {{site.data.keyword.cos_full_notm}} instance.
 
-      When you select an existing {{site.data.keyword.cos_full_notm}} instance, the authorization between the services will be created internally between the two service instances.
+      When you select an {{site.data.keyword.cos_full_notm}} instance, the authorization between the services will be created internally between the two service instances, if the authorization between the services doesn't exist.
       {: note}
 
    - **Bucket name** - Enter the Bucket name to be used for creating a new object per notification into the {{site.data.keyword.cos_full_notm}} instance.
@@ -84,6 +84,9 @@ Use {{site.data.keyword.cloud}} Identity and Access Management (IAM) to create o
 1. For the target service, specify whether you want the authorization to be for all instances, only to a specific instance in the account, or instances only in a certain resource group.
 
 1. Select both the roles (Reader, and Object Writer) to assign access to the source service that accesses the target service.
+
+If you have selected only one of these two roles (Reader or Object Writer) during the service to service authorization, you may endup with not able to write or read from the {{site.data.keyword.cos_full_notm}} bucket. You will get an error for service to service authorization failure in these cases. Make sure to recreate an authorization between the services with both the roles selected.
+{: important}
 
 1. Click **Authorize**.
 
