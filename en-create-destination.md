@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-04-18"
+lastupdated: "2023-05-25"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -37,6 +37,11 @@ Create an {{site.data.keyword.en_short}} destination. Destinations are custom pr
 {: shortdesc}
 
 **{{site.data.keyword.cloud_notm}} SMS service** and **{{site.data.keyword.cloud_notm}} Email service** are supported out of the box.
+
+By default, each destination detail consists of **Name**, **Description**, **Type**, **Subscriptions**, **Collect failed events** (Off).
+
+When you try to toggle the **Collect failed events** switch to **ON** without configuring a {{site.data.keyword.cos_full_notm}} bucket to collect the failed events, an appropriate error message displays. For more information on configuration and collecting failed events, see [here](/docs/event-notifications?topic=event-notifications-en-cfe-integrations).
+{: note}
 
 ## Create a destination
 {: #en-create-destination}

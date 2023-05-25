@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-04-21"
+lastupdated: "2023-05-25"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -19,6 +19,13 @@ content-type: release-note
 
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
+
+## 25 May 2023
+{: #event-notifications-May2523}
+{: release-note}
+
+Support for collecting failed events details
+:  Collecting failed events helps you to identify which messages have failed and can take remedial action. For more information, see [Collect failed events](/docs/event-notifications?topic=event-notifications-en-cfe-integrations).
 
 ## 21 Apr 2023
 {: #event-notifications-Apr2123}
