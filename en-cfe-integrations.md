@@ -21,11 +21,7 @@ Collect failed events helps you to identify which messages have failed and can t
 
 When a message fails to be delivered a set number of times, the failed message ends up in a {{site.data.keyword.cos_full_notm}} bucket. You can able to identify the subscription or topic to which that failed message belongs and take further action, if required.
 
-You can either resend the message or remove it from the Collect failed events {{site.data.keyword.cos_full_notm}} bucket.
-
-You can also check, how many messages are in the failed events queue, how many are new, and how many were removed.
-
-Before you enable collecting failed events, make sure that you have an {{site.data.keyword.cos_full_notm}} instance [created and configured](https://{DomainName}/objectstorage/create) in the same account as your {{site.data.keyword.en_short}} instance.
+Before you enable collecting failed events in **Destinations**, make sure that you have an {{site.data.keyword.cos_full_notm}} instance [created and configured](https://{DomainName}/objectstorage/create) in the same account as your {{site.data.keyword.en_short}} instance.
 {: note}
 
 If you are using {{site.data.keyword.en_short}} CLI or API to configure {{site.data.keyword.cos_full_notm}} service instance, ensure that you have enabled authorization to grant access between services before integrating with {{site.data.keyword.cos_full_notm}}. For more information, see [Using authorizations to grant access between services](#en-using-s2s-auth2).
@@ -42,7 +38,7 @@ To configure and collect failed events, do the following steps:
    When you select an {{site.data.keyword.cos_full_notm}} instance, the authorization between the services will be created internally between the two service instances, if the authorization between the services doesn't exist.
    {: note}
 
-1. **Bucket name** - Enter the Bucket name to be used for creating a new object per notification into the {{site.data.keyword.cos_full_notm}} instance.
+1. **Bucket name** - Enter the Bucket name to be used for storing the failed events.
 
    You can get the bucket name from your {{site.data.keyword.cos_full_notm}} instance. For more information, see [Bucket name](#en-cos-bucket-name2).
 
@@ -54,13 +50,16 @@ To configure and collect failed events, do the following steps:
 
 1. **Endpoint** - Enter the {{site.data.keyword.cos_full_notm}} endpoint URL. For more information, see [Endpoint url](#en-endpoint-url2).
 
-1. Click **Add**.
+1. Click **Save**.
 
 1. From your {{site.data.keyword.en_short}} instance dashboard, click **Destinations**.
 
 1. Click the toggle switch to **ON** status under the **Collect failed events** column for the destination for which you want to collect the failed events. A success message is displayed for switching ON for collecting failed events for the selected destination.
 
 After configuration and enabling collecting of failed events for a destination, the failed events gets added to the {{site.data.keyword.cos_full_notm}} bucket. You can take further action on the failed events as per your requirements.
+
+If you disconnect **Collect Failed Events** from the **Integrations** > **Collect Failed Events** overflow menu option, then all the destinations that are enabled to collect the failed events, will be switched to **OFF** state.
+{: note}
 
 ## Using authorizations to grant access between services
 {: #en-using-s2s-auth2}
