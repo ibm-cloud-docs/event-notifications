@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years:  2022
-lastupdated: "2022-12-15"
+  years:  2022, 2023
+lastupdated: "2023-05-25"
 
-keywords: event notifications, event notification, notifications, integrations, key protect, key management, hyper protect, hpcs
+keywords: event notifications, event notification, notifications, integrations, key protect, key management, hyper protect, hpcs, Collect Failed events
 
 subcollection: event-notifications
 
@@ -14,8 +14,11 @@ subcollection: event-notifications
 # Integrations
 {: #en-integrations}
 
-Integrations in {{site.data.keyword.en_short}} represent list of other {{site.data.keyword.cloud_notm}} services that are connected to your {{site.data.keyword.en_short}} instance. You can encrypt the data that you store in {{site.data.keyword.cloud_notm}} databases by using encryption keys that you can control.
+Integrations in {{site.data.keyword.en_short}} represent list of other {{site.data.keyword.cloud_notm}} services that are connected to your {{site.data.keyword.en_short}} instance. You can encrypt the data that you store in {{site.data.keyword.cloud_notm}} databases by using encryption keys that you can control. For more information, see [Integrating with a Key management service](#en-int-key-management). You can also collect failed events and take appropriate action. For more information, see [Collect failed events](/docs/event-notifications?topic=event-notifications-en-cfe-integrations).
 {: shortdesc}
+
+## Integrating with a Key management service
+{: #en-int-key-management}
 
 You can use either one of the following options:
 - Bring Your Own Key (BYOK) through {{site.data.keyword.keymanagementservicelong_notm}}, and use one of your own keys to encrypt your databases and backups.
@@ -25,9 +28,6 @@ BYOK and KYOK capabilities are supported only for {{site.data.keyword.en_short}}
 {: important}
 
 For more information, see [Managing encryption](/docs/event-notifications?topic=event-notifications-en-managing-encryption).
-
-## Integrating with a Key management service
-{: #en-int-key-management}
 
 If you are using {{site.data.keyword.en_short}} CLI or API to integrate with a key management service (KMS), ensure that you have enabled authorization to grant access between services before integrating with a KMS service. For more information, see [Using authorizations to grant access between services](#en-using-auth-access-between-services).
 {: important}
