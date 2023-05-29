@@ -20,6 +20,13 @@ content-type: release-note
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
 
+## 29 May 2023
+{: #event-notifications-May2923}
+{: release-note}
+
+New destination: Huawei Cloud Push
+:  Huawei Push Destination is now available as a {{site.data.keyword.en_short}} destination. You can [send and store notifications to your Huawei Push Destination by using {{site.data.keyword.en_short}}](/docs/event-notifications?topic=event-notifications-en-push-huawei).
+
 ## 25 May 2023
 {: #event-notifications-May2523}
 {: release-note}
