@@ -47,6 +47,7 @@ toc:
               - link:
                   label: Safari Push Notifications
                   href: https://{DomainName}/docs/event-notifications?topic=event-notifications-en-push-safari
+          - en-destination-huawei.md
           - en-destination-slack.md
           - en-destination-msteams.md
           - en-destination-pagerduty.md
