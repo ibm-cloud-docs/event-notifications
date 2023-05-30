@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-03-15"
+lastupdated: "2023-05-30"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, sms
 
@@ -82,6 +82,13 @@ To add a recipient number back to active list, take the following steps:
 By adding phone numbers, you represent on behalf of yourself and your company that you have properly informed the individuals, to whom the added phone numbers pertain, of their addition to this recipient list and purpose thereof, and have the required consents to do so.
 {: note}
 
+## SMS segment
+{: #en-destinations-sms-segment}
+
+SMS segments are character batches (of length 160 characters) of an SMS message, used by carriers to measure the message size.
+
+If a message contains less than 160 characters, then it is considered as one SMS segment. If a message contains over 160 characters, for example, of 200 characters, then it is considered as 2 segments, first segment has 160 character and the second segment has 40 characters.
+
 ## SMS charges
 {: #en-destinations-sms-charge}
 
@@ -110,6 +117,6 @@ In the example, the total SMS units for messages that are sent to destination nu
 
 3 x 5 x 1 = 15 SMS units
 
-You are charged for messages that are successfully sent by the {{site.data.keyword.cloud_notm}} SMS service to the local SMS provider regardless of whether the message was successfully delivered to the local device. So vet your phone number list carefully to prevent unnecessary charges.
+You are charged for messages that are successfully sent by the {{site.data.keyword.cloud_notm}} SMS service to the local SMS provider regardless of whether the message was successfully delivered to the local device. So verify your phone number list carefully to prevent unnecessary charges.
 
 You can monitor your SMS usage by setting up a monitoring dashboard through the `Actions` menu in the {{site.data.keyword.en_short}} dashboard. See [Monitor {{site.data.keyword.en_short}} service metrics with {{site.data.keyword.monitoringfull_notm}}](/docs/event-notifications?topic=event-notifications-en-monitoring) for details.
