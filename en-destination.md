@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-04-18"
+lastupdated: "2023-06-16"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, event destination
 
@@ -38,7 +38,7 @@ Human destinations are devices, servers, or applications that present notificati
    - [Chrome Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-chrome)
    - [Firefox Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-firefox)
    - [Safari Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-safari)
-- [Huawei Cloud Push](/docs/event-notifications?topic=event-notifications-en-push-huawei)
+   - [Huawei Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-huawei)
 - [Slack](/docs/event-notifications?topic=event-notifications-en-destinations-slack)
 - [ServiceNow](/docs/event-notifications?topic=event-notifications-en-destinations-servicenow)
 
