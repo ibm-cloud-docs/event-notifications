@@ -18,14 +18,14 @@ subcollection: event-notifications
 {{site.data.keyword.en_short}} provides a push notification service for sending transactional and informational event notifications to Huawei mobile devices.
 {: shortdesc}
 
-## Create a Huawei push destination
+## Create a Huawei Push Destination
 {: #en-create-destination-huawei}
 
-To create a Huawei push destination, perform the following steps:
+To create a Huawei Push Destination, perform the following steps:
 
 1. Login to your {{site.data.keyword.cloud_notm}} account.
 
-1. If you already have a {{site.data.keyword.en_short}} service instance, navigate to your {{site.data.keyword.en_short}} service instance from the **Resource list** and select the required {{site.data.keyword.en_short}} service instance. Otherwise, you can [create a new {{site.data.keyword.en_short}} service instance](/docs/event-notifications?topic=event-notifications-en-create-en-instance).
+1. If you already have an {{site.data.keyword.en_short}} service instance, navigate to your {{site.data.keyword.en_short}} service instance from the **Resource list** and select the required {{site.data.keyword.en_short}} service instance. Otherwise, you can [create a new {{site.data.keyword.en_short}} service instance](/docs/event-notifications?topic=event-notifications-en-create-en-instance).
 
 1. Click `Destinations` in the {{site.data.keyword.en_short}} console. By default, **{{site.data.keyword.cloud_notm}} SMS service** and **{{site.data.keyword.cloud_notm}} Email service** are included, with their `Destination ID`.
 
@@ -34,7 +34,7 @@ To create a Huawei push destination, perform the following steps:
 1. Provide the new destination details:
    - `Name`: add a name for the Destination.
    - `Description`: add an optional description about the destination.
-   - `Destination type`: select **Huawei Push Destination** from the list.
+   - `Destination type`: select **Huawei Push Notifications** from the list.
 
 1.  Select a destination plan. You can select a **Pre-production destination** for developing and testing your environments at a low cost. You can upgrade a **Pre-production destination** to **Production destination** after creating the destination by using the **Edit** option from the overflow menu post your development and testing. For more information, see [Upgrading a Pre-production destination to Production destination](#en-destination-preprod-prod1). There will be change in cost when you upgrade.
 
@@ -44,10 +44,10 @@ To create a Huawei push destination, perform the following steps:
 
 1. Click **Add**.
 
-## Retrieving Huawei credentials
+## Retrieving Huawei Credentials
 {: #en-retrieve-huawei-credentials}
 
-To complete the Huawei Push notification setup, you need a **Client ID** and **Client secret**. Obtain these from the Huawei AppGallery Connect portal.
+To complete the Huawei Push Notification setup, you need a **Client ID** and **Client secret**. Obtain these from the Huawei AppGallery Connect portal.
 
 1. Sign into the Huawei [AppGallery Connect](https://developer.huawei.com/consumer/en/service/josp/agc/index.html#/).
 
@@ -55,9 +55,12 @@ To complete the Huawei Push notification setup, you need a **Client ID** and **C
 
 1. Click **Add app**, if there are no applications created in the project or select the existing application.
 
+1. Enable Push Kit to see the app details. For more information, see [Enabling Push Kit](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/android-config-agc-0000001050170137#section9471122085218).
+
+
 1. Go to the **App information** section, where you can find OAuth 2.0 **Client ID**. Copy the **Client ID** and **Client secret** values into the respective fields.
 
-## Upgrading a Pre-production destination to Production destination
+## Upgrading a Pre-production Destination to Production Destination
 {: #en-destination-preprod-prod1}
 
 You can upgrade a **Pre-production destination** to **Production destination** after creating the destination by using the **Edit** option from the overflow menu.
