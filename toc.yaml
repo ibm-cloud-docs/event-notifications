@@ -106,6 +106,8 @@ toc:
               navtitle: Firefox Push Notifications
             - topic: en-push-safari.md
               navtitle: Safari Push Notifications
+            - topic: en-push-huawei.md
+              navtitle: Huawei Push Notifications
 
       - en-terraform-tutorial.md
       - en-ts-monitor-secrets.md

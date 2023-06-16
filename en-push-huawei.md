@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-05-29"
+lastupdated: "2023-06-16"
 
 keywords: event-notifications, event notifications, destinations, Huawei
 
