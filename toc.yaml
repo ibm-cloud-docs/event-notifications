@@ -48,7 +48,7 @@ toc:
                   label: Safari Push Notifications
                   href: https://{DomainName}/docs/event-notifications?topic=event-notifications-en-push-safari
               - link:
-                  label: Safari Push Notifications
+                  label: Huawei Push Notifications
                   href: https://{DomainName}/docs/event-notifications?topic=event-notifications-en-push-huawei
           - en-destination-slack.md
           - en-destination-msteams.md

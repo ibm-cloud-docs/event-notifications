@@ -21,7 +21,7 @@ subcollection: event-notifications
 ## Create a Huawei Push Destination
 {: #en-create-destination-huawei}
 
-To create a Huawei push destination, perform the following steps:
+To create a Huawei Push Destination, perform the following steps:
 
 1. Login to your {{site.data.keyword.cloud_notm}} account.
 
@@ -54,6 +54,9 @@ To complete the Huawei Push Notification setup, you need a **Client ID** and **C
 1. Click **My projects**. Select an existing project or click on **Add project** to create one.
 
 1. Click **Add app**, if there are no applications created in the project or select the existing application.
+
+1. Enable Push Kit to see the app details. For more information, see [Enabling Push Kit](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/android-config-agc-0000001050170137#section9471122085218).
+
 
 1. Go to the **App information** section, where you can find OAuth 2.0 **Client ID**. Copy the **Client ID** and **Client secret** values into the respective fields.
 
