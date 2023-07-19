@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-05-25"
+lastupdated: "2023-07-19"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -19,6 +19,12 @@ content-type: release-note
 
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
+## 19 July 2023
+{: #event-notifications-Jul1923}
+{: release-note}
+
+Support for Custom Domain Email Service
+:  Event Notifications provides support for sending emails with Custom Domain using Custom Email destination. For more information, see [Custom Domain Email Service](/docs/event-notifications?topic=event-notifications-en-destinations-email).
 
 ## 29 May 2023
 {: #event-notifications-May2923}

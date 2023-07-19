@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-03-15"
+lastupdated: "2023-07-19"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email
 
@@ -18,7 +18,7 @@ subcollection: event-notifications
 {{site.data.keyword.en_short}} provides a built-in SMTP server for sending transactional and informational event notification emails to recipients who need to be aware of events that happen within your {{site.data.keyword.cloud_notm}} account.
 {: shortdesc}
 
-The emails originate from `no-reply@cloud.ibm.com` or `event-notifications@cloud.ibm.com`, but you can add your own reply-to address. Except for test emails, the content cannot be modified within {{site.data.keyword.en_short}}.
+In the default mode, the emails originate from `no-reply@cloud.ibm.com` or `event-notifications@cloud.ibm.com`, while you can add your own reply-to address. If you are using the email service with custom domain, the email originates from the custom domain that you have chosen. Except for test emails, the content cannot be modified within {{site.data.keyword.en_short}}. 
 
 ![Email state-diagram](images/en-email-state-diagram.png "Email state diagram"){: caption="Figure 1. Email state diagram" caption-side="bottom"}
 
@@ -27,7 +27,7 @@ The emails originate from `no-reply@cloud.ibm.com` or `event-notifications@cloud
 
 {{site.data.keyword.cloud_notm}} email service is a destination that is provided as ready for immediate use. When a new instance is created, you see an entry `{{site.data.keyword.cloud_notm}} Email service` in the destination tab. The email destination is pre-configured, and is ready to use.
 
-## Using an {{site.data.keyword.cloud_notm}} email service destination
+## Using an {{site.data.keyword.cloud_notm}} email service with default domain
 {: #en-destinations-email-use}
 
 To use the email service destination, add it to a subscription along with the email addresses of interest. Within a single subscription, you can add up to 100 email recipients. The subscription also needs a topic to filter events of interest from your sources. When an event lands in the topic, {{site.data.keyword.en_short}} immediately routes the event notification to your email recipients.
@@ -44,6 +44,14 @@ Opt-in message contains user or account who invited the recipient, the name of t
 The {{site.data.keyword.en_short}} are only sent to the opted-in recipients.
 
 You can either resend the invitation or remove the recipient from the **Invited** list. In the **Invited** tab, click and select the three vertical dots (overflow menu) and select **Resend invitation** for the recipient email address, to whom you need to resend the invitation. For deleting a user from the invited list, in the **Invited** tab, click the three vertical dots (overflow menu) and select **Delete** for the recipient email address, to whom you need to remove from the **Invited** list. For adding back a recipient after opted-out or not responded within the stipulated time that is mentioned in the invite email, you need to send a mail to the **Reply to** email address mentioned in the initial invite mail.
+
+## Using an {{site.data.keyword.cloud_notm}} email service with custom domain
+{: #en-destinations-custom-email}
+
+This capability is available only for selected users. If you would like to leverage this capability, please contact support.
+{: tip}
+
+Event Notifications provides support for sending emails with custom domain using Custom Email destination. Using this destination any subscribed email recipients can be notified with the transactional and informational events that happen within the integrated source. These emails will originate from the custom domain configured for the destination. Follow [these steps](/docs/event-notifications?topic=event-notifications-en-destination-email-custom-domain) to get started with custom domain.
 
 ## Email charges
 {: #en-destinations-email-charge}
