@@ -149,7 +149,7 @@ toc:
       - topicgroup:
           label: CLI Reference
           topics:
-          - /event-notifications-cli-plugin/event-notifications-cli-plugin-event-notifications-cli
+          - include: ../event-notifications-cli-plugin/event-notifications-cli.md
           - en-cli.md
       - topicgroup:
           label: High availability and disaster recovery
