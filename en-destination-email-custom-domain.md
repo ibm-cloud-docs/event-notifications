@@ -12,7 +12,7 @@ subcollection: event-notifications
 
 {{site.data.keyword.attribute-definition-list}}
 
-## Using an {{site.data.keyword.cloud_notm}} email service with custom domain
+# Using an {{site.data.keyword.cloud_notm}} email service with custom domain
 {: #en-destinations-custom-email}
 
 This capability is available only for selected users. If you would like to leverage this capability, [contact us](mailto:mbluemix@in.ibm.com).
