@@ -12,18 +12,18 @@ subcollection: event-notifications
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Using an {{site.data.keyword.cloud_notm}} email service with custom domain
+# {{site.data.keyword.cloud_notm}} Email service with custom domain
 {: #en-destinations-custom-email}
 
 This capability is available only for selected users. If you would like to leverage this capability, [contact us](mailto:mbluemix@in.ibm.com).
 {: tip}
 
-### Configuring a webhook destination
+## Configuring a webhook destination
 {: #en-destinations-custom-email-webhook}
 
 You can configure a custom email destination in the Destinations tab. As part of the configuration, enter the domain name to be used for sending emails.
 
-### Custom domain name verification
+## Custom domain name verification
 {: #en-destinations-custom-email-verify}
 
 After you create the destination with your domain name, make sure its validated for the right ownership. This will prevent misuse of your domain and to keep away from bad actors.
@@ -44,7 +44,7 @@ b. The DNS record for the domain is not updated correctly. Verify if the SPF/DKI
 c. The DNS propagation may take up to 72 hours to be updated across the internet.
 {: note}
 
-### Using a Custom email destination
+## Using a Custom email destination
 {: #en-destinations-custom-email-use}
 
 To use the email service destination, add it to a subscription along with the email addresses of interest. Within a single subscription, you can add up to 100 email recipients. The subscription also needs a topic to filter events of interest from your sources. When an event lands in the topic, Event Notifications immediately routes the event notification to your email recipients.
