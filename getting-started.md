@@ -90,7 +90,7 @@ A destination is a delivery target for a notification. Two destination categorie
 Human destinations are devices, servers, or applications that present notifications for human consumption. The following human destinations are supported:
 
 - [{{site.data.keyword.cloud_notm}} Email](/docs/event-notifications?topic=event-notifications-en-destinations-email)
-   - [{{site.data.keyword.cloud_notm}} Email with custom domain](/docs/event-notifications?topic=event-notifications-en-destination-email-custom-domain)
+   - [{{site.data.keyword.cloud_notm}} Email with custom domain](/docs/event-notifications?topic=event-notifications-en-destinations-email-custom-domain)
 - [Push notifications](/docs/event-notifications?topic=event-notifications-en-destinations-push)
    - [Android Push Notifications (FCM)](/docs/event-notifications?topic=event-notifications-en-push-fcm)
    - [iOS Push Notifications (APNs)](/docs/event-notifications?topic=event-notifications-en-push-apns)
