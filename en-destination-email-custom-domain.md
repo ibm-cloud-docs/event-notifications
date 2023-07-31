@@ -64,7 +64,9 @@ You can either resend the invitation or remove the recipient from the Invited li
 
 ### Templates
 
-Event Notifications offers users the flexibility of utilizing custom email destinations along with templates. Users have the option to provide HTML templates containing a payload, and when sending notifications, the Event notification service seamlessly integrates these templates by replacing template variables with the corresponding variables present in the payload. This allows for dynamic and personalized email content for recipients. In cases where a custom template is not available, the system will automatically default to the "ibmenhtmlbody" template. If, by any chance, the "ibmenhtmlbody" template is also unavailable, the system will gracefully fallback to the "ibmendefaultlong" template, ensuring a smooth and consistent user experience. This robust template selection mechanism ensures that notifications are always dispatched with relevant and appealing content, maximizing their impact and effectiveness.
+Event Notifications offers users the flexibility of utilizing custom email destinations along with templates. Users have the option to provide HTML templates containing a payload. When sending notifications, the service integrates these templates seamlessly, replacing template variables with corresponding variables from the payload. This allows for dynamic and personalized email content for recipients.
+
+In cases where a custom template is not available, the system automatically defaults to the "ibmenhtmlbody" template. If the "ibmenhtmlbody" template is also unavailable, the system gracefully fallbacks to the "ibmendefaultlong" template, ensuring a smooth and consistent user experience. This robust template selection mechanism guarantees that notifications are always dispatched with relevant and appealing content, maximizing their impact and effectiveness.
 
 Example - 
 
@@ -77,3 +79,5 @@ Here in a snippet you can send template with following body (It has to be minima
   </body> 
 </html>
 ```
+
+
