@@ -61,3 +61,23 @@ Opt-in message contains user or account who invited the recipient, the name of t
 The Event Notifications are only sent to the opted-in recipients.
 
 You can either resend the invitation or remove the recipient from the Invited list. In the Invited tab, click and select the three vertical dots (overflow menu) and select Resend invitation for the recipient email address, to whom you need to resend the invitation. For deleting a user from the invited list, in the Invited tab, click the three vertical dots (overflow menu) and select Delete for the recipient email address, to whom you need to remove from the Invited list. For adding back a recipient after opted-out or not responded within the stipulated time that is mentioned in the invite email, you need to send a mail to the Reply to email address mentioned in the initial invite mail.
+
+### Templates
+
+Event Notifications offers users the flexibility of utilizing custom email destinations along with templates. Users have the option to provide HTML templates containing a payload. When sending notifications, the service integrates these templates seamlessly, replacing template variables with corresponding variables from the payload. This allows for dynamic and personalized email content for recipients.
+
+In cases where a custom template is not available, the system automatically defaults to the "ibmenhtmlbody" template. If the "ibmenhtmlbody" template is also unavailable, the system gracefully fallbacks to the "ibmendefaultlong" template, ensuring a smooth and consistent user experience. This robust template selection mechanism guarantees that notifications are always dispatched with relevant and appealing content, maximizing their impact and effectiveness.
+
+Example - 
+
+Here in a snippet you can send template with following body (It has to be minimal without any \n) with a variable which will be present in payload.
+
+```
+<html>
+  <body>
+    {{event.custom_variable_from_payload}} 
+  </body> 
+</html>
+```
+
+
