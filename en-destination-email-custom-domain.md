@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-07-19"
+lastupdated: "2023-07-31"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email
 
@@ -15,7 +15,7 @@ subcollection: event-notifications
 # {{site.data.keyword.cloud_notm}} Email service with custom domain
 {: #en-destinations-custom-email}
 
-This capability is available only for selected users. If you would like to leverage this capability, [contact us](mailto:mbluemix@in.ibm.com).
+This capability is available only for selected users. If you would like to leverage this capability, [contact us](mailto:mbluemix@in.ibm.com?subject=[Custom%20Email%20Domain]%20:%20%20Request%20for%20Allowlisting&body=Kindly%20provide%20the%20below%20details:%0D%0A%0D%0AEvent%20Notifications%20Instance%20ID:%0D%0AIBM%20Account%20ID:%0D%0AIBM%20User%20ID:%0D%0ARegion:).
 {: tip}
 
 ## Configuring a webhook destination
@@ -62,15 +62,14 @@ The Event Notifications are only sent to the opted-in recipients.
 
 You can either resend the invitation or remove the recipient from the Invited list. In the Invited tab, click and select the three vertical dots (overflow menu) and select Resend invitation for the recipient email address, to whom you need to resend the invitation. For deleting a user from the invited list, in the Invited tab, click the three vertical dots (overflow menu) and select Delete for the recipient email address, to whom you need to remove from the Invited list. For adding back a recipient after opted-out or not responded within the stipulated time that is mentioned in the invite email, you need to send a mail to the Reply to email address mentioned in the initial invite mail.
 
-### Templates
+## Email Templates
+{: #en-destinations-custom-email-templates}
 
 Event Notifications offers users the flexibility of utilizing custom email destinations along with templates. Users have the option to provide HTML templates containing a payload. When sending notifications, the service integrates these templates seamlessly, replacing template variables with corresponding variables from the payload. This allows for dynamic and personalized email content for recipients.
 
 In cases where a custom template is not available, the system automatically defaults to the "ibmenhtmlbody" template. If the "ibmenhtmlbody" template is also unavailable, the system gracefully fallbacks to the "ibmendefaultlong" template, ensuring a smooth and consistent user experience. This robust template selection mechanism guarantees that notifications are always dispatched with relevant and appealing content, maximizing their impact and effectiveness.
 
-Example - 
-
-Here in a snippet you can send template with following body (It has to be minimal without any \n) with a variable which will be present in payload.
+In the following example snippet, you can find a template with a minimal body that should not contain any line breaks (\n). The template includes a variable that will be replaced with its value in email.
 
 ```
 <html>
@@ -79,5 +78,3 @@ Here in a snippet you can send template with following body (It has to be minima
   </body> 
 </html>
 ```
-
-
