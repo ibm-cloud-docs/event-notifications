@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-03-24"
+lastupdated: "2023-04-03"
 
 keywords: event-notifications, event notifications, about event notifications, context-based restrictions, access allowlist, network security
 

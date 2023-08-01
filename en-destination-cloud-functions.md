@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-12-23"
+lastupdated: "2022-12-26"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, IBM Cloud Functions, cloud functions
 

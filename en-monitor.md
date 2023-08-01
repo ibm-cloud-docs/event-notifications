@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-10-17"
+lastupdated: "2022-10-26"
 
 keywords: event-notification, event notification, high availability, ha, monitoring, metrics, monitor apps
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-10-17"
+lastupdated: "2022-10-26"
 
 keywords: app configuration, service credentials, authentication, IBM Cloud, event notifications
 
