@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-07-19"
+lastupdated: "2023-07-31"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -19,12 +19,20 @@ content-type: release-note
 
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
-## 19 July 2023
-{: #event-notifications-Jul1923}
+
+## 31 July 2023
+{: #event-notifications-Jul3123}
+{: release-note}
+
+New supported {{site.data.keyword.cloud_notm}} source: watsonx.data
+:  IBM watsonx.data is an open, hybrid, and governed fit-for-purpose data store optimized to scale all data, analytics and AI workloads available as a Event Notifications source under IBM Cloud Sources. For more information, see [Enabling event notifications for watsonx.data](/docs/watsonxdata?topic=watsonxdata-event-notifications-events).
+
+## 31 July 2023
+{: #event-notifications-Jul3123}
 {: release-note}
 
 Support for Custom Domain Email Service
-:  Event Notifications provides support for sending emails with Custom Domain using Custom Email destination. For more information, see [Custom Domain Email Service](/docs/event-notifications?topic=event-notifications-en-destinations-email).
+:  Event Notifications provides support for sending emails from custom domain using the new destination, email service with custom domain name. For more information, see [Using an IBM Cloud email service with custom domain](/docs/event-notifications?topic=event-notifications-en-destinations-email#en-destinations-custom-email).
 
 ## 29 May 2023
 {: #event-notifications-May2923}

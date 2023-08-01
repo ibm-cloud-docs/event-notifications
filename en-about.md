@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-04-27"
+lastupdated: "2023-07-31"
 
 keywords: event-notifications, event notifications, about event notifications
 
