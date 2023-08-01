@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-10-17"
+lastupdated: "2022-10-26"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, push, chrome
 

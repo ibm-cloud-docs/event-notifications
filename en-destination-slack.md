@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2022
-lastupdated: "2022-10-17"
+  years: 2020, 2023
+lastupdated: "2023-04-03"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, slack
 

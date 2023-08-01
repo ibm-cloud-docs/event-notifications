@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-05-29"
+lastupdated: "2023-06-16"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -25,8 +25,7 @@ Create an {{site.data.keyword.en_short}} destination. Destinations are custom pr
 
 - {{site.data.keyword.cloud_notm}} Email
 - {{site.data.keyword.cloud_notm}} SMS
-- Push notifications (Android, iOS, Chrome, Firefox, and Safari)
-- Huawei Cloud push
+- Push notifications (Android, iOS, Chrome, Firefox, Safari and Huawei)
 - Slack
 - Microsoft&trade; Teams
 - PagerDuty

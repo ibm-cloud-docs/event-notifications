@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-10-17"
+lastupdated: "2022-10-26"
 
 keywords: question about event notifications, permission, destination, email
 

@@ -34,8 +34,8 @@ New supported {{site.data.keyword.cloud_notm}} source: watsonx.data
 Support for Custom Domain Email Service
 :  Event Notifications provides support for sending emails from custom domain using the new destination, email service with custom domain name. For more information, see [Using an IBM Cloud email service with custom domain](/docs/event-notifications?topic=event-notifications-en-destinations-email#en-destinations-custom-email).
 
-## 29 May 2023
-{: #event-notifications-May2923}
+## 14 June 2023
+{: #event-notifications-Jun1423}
 {: release-note}
 
 New destination: Huawei Cloud Push
