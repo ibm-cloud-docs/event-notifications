@@ -110,6 +110,7 @@ toc:
             - topic: en-push-huawei.md
               navtitle: Huawei Push Notifications
 
+      - en-create-template.md
       - en-terraform-tutorial.md
       - en-ts-monitor-secrets.md
 
