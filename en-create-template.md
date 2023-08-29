@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-08-28"
+lastupdated: "2023-08-29"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -17,7 +17,7 @@ completion-time: 10m
 {{site.data.keyword.attribute-definition-list}}
 
 # Create an {{site.data.keyword.en_short}} template
-{: #en-create-templates}
+{: #en-create-en-template}
 {: toc-content-type="tutorial"}
 {: toc-completion-time="10m"}
 

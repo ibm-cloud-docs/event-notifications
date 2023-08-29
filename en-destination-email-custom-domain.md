@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-08-28"
+lastupdated: "2023-08-29"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email
 
@@ -79,4 +79,4 @@ In the following example snippet, you can find a template with a minimal body th
 </html>
 ```
 
-For more information on how to create custom templates, follow [these steps](/docs/event-notifications?topic=event-notifications-en-create-templates).
+For more information on how to create custom templates, follow [these steps](/docs/event-notifications?topic=event-notifications-en-create-en-template).
