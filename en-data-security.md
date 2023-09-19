@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-11-28"
+lastupdated: "2023-09-19"
 
 keywords: data encryption in Event Notifications, data storage for Event Notifications, bring your own keys for Event Notifications, BYOK for Event Notifications, key management for Event Notifications, key encryption for Event Notifications, personal data in Event Notifications, data deletion for Event Notifications, data in Event Notifications, data security in Event Notifications, KYOK for Event Notifications
 
@@ -28,7 +28,7 @@ You can add a higher level of encryption control to your data at rest (when it i
 For more information, see [Managing encryption](/docs/event-notifications?topic=event-notifications-en-managing-encryption).
 
 ## Protecting your sensitive data in {{site.data.keyword.en_short}}
-{: #en-data-encryption}
+{: #en-data-sensitive}
 
 The data that you store in the {{site.data.keyword.en_short}} instance is encrypted at rest by using a randomly generated key, which is in turn protected by Key Protect, managed by {{site.data.keyword.en_short}} service.
 
