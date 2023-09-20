@@ -60,6 +60,28 @@ Click `Templates` in the {{site.data.keyword.en_short}} console.
 ## Personalisation in templates
 {: #en-template-personalisation} {: step}
 
+Email personalization refers to the practice of tailoring email content and messaging to individual recipients or specific segments of your email list based on their personal preferences, behaviors, demographics, or interactions with your brand. The goal of email personalization is to create a more engaging and relevant email experience for each recipient, which can lead to higher open rates, click-through rates, and conversions. Here are some common ways email personalization can be implemented:
+
+- Personalized Greetings: Addressing the recipient by their first name in the email's salutation can make the email feel more personalized and less generic.
+
+- Product Recommendations: Analyzing a recipient's past purchases or browsing history and suggesting products or services that are relevant to their interests.
+
+- Dynamic Content: Creating email templates with dynamic content blocks that can change based on recipient data, such as location, recent interactions, or purchase history.
+
+- Behavioral Triggers: Sending automated emails triggered by specific actions or behaviors, such as abandoned shopping carts, inactivity, or milestone celebrations.
+
+- Segmentation: Dividing your email list into segments based on criteria like demographics, purchase history, engagement level, or geographic location. Each segment receives content tailored to their characteristics or behaviors.
+
+- Personalized Recommendations: Providing personalized content recommendations, such as blog posts, articles, or videos, based on the recipient's previous engagement with your content.
+
+- Timing and Frequency: Sending emails at times and frequencies that align with each recipient's preferences. Some people may prefer daily updates, while others prefer weekly summaries.
+
+- Relevant Offers: Tailoring promotions and offers to match the recipient's past interactions or purchase history. For example, offering a discount on products they've shown interest in.
+
+- Location-Based Personalization: Customizing content or promotions based on the recipient's geographic location or time zone.
+
+- Abandonment Recovery: Sending reminder emails to users who have abandoned a shopping cart or registration process to encourage them to complete the action.
+
 - In the send notification payload add a `personalisation` parameter to enable it
 ```
  "personalisation": {
