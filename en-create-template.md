@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-08-29"
+lastupdated: "2023-09-20"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -68,35 +68,98 @@ Email personalization refers to the practice of tailoring email content and mess
 
 - Dynamic Content: Creating email templates with dynamic content blocks that can change based on recipient data, such as location, recent interactions, or purchase history.
 
-- Behavioral Triggers: Sending automated emails triggered by specific actions or behaviors, such as abandoned shopping carts, inactivity, or milestone celebrations.
-
-- Segmentation: Dividing your email list into segments based on criteria like demographics, purchase history, engagement level, or geographic location. Each segment receives content tailored to their characteristics or behaviors.
-
 - Personalized Recommendations: Providing personalized content recommendations, such as blog posts, articles, or videos, based on the recipient's previous engagement with your content.
-
-- Timing and Frequency: Sending emails at times and frequencies that align with each recipient's preferences. Some people may prefer daily updates, while others prefer weekly summaries.
-
-- Relevant Offers: Tailoring promotions and offers to match the recipient's past interactions or purchase history. For example, offering a discount on products they've shown interest in.
 
 - Location-Based Personalization: Customizing content or promotions based on the recipient's geographic location or time zone.
 
-- Abandonment Recovery: Sending reminder emails to users who have abandoned a shopping cart or registration process to encourage them to complete the action.
-
 - In the send notification payload add a `personalisation` parameter to enable it
-```
- "personalisation": {
-      "johnny.piquet@ibm.com": {
-        "name": "John"
+
+Let's look at the detailed flow with an example
+
+1. Send Notification Payload
+
+```JSON
+{
+    "id": "b2198eb8-04b1-48ec-a78c-ee87694dd845",
+    "time": "06/06/2022, 14:23:01",
+    "source": "apisource/git",
+    "specversion": "1.0",
+    "ibmensourceid": "d6f08a53-05f6-465f-903e-03db3fa91b64:api",
+    "data": {
+      "greet": "Evening",
+      "severity": "LOW",
+      "short_description": "Success! Your Event Notifications instance is now able to send personalised notifications",
+      "transaction_id": "e539778e-4915-4586-b4c9-48e44af5c010",
+      "name": "IBM Cloud Event Notifications",
+      "price": "100",
+      "rating": "4.9"
+    },
+    "datacontenttype": "application/json",
+    "ibmendefaultlong": "This is a original long message",
+    "ibmendefaultshort": "IBM Cloud Event Notifications is a routing service that provides information about critical events in your IBM Cloud account",
+    "ibmenmailto": "[\"john.piquet@ibm.com\"]",
+    "personalization": {
+      "john.piquet@ibm.com": {
+        "name": "JOHN ALFA PIQUET"
       }
     }
+}
 ```
 
-- While creating template to enable personalisation add a placeholder in the html handlebars format
+2. While creating template to enable personalisation add a placeholder in the html handlebars format
 
-```
+```JSON
 {{ibmenreferer personalisation ibmenmailto 'name'}}
 ```
-    - The `ibmenreferer` field is used to identify where to enable the personalisation
-    - The second parameter `personalisation` helps to identify from where to pick personalisation values in the send notifications payload
-    - Third field `ibmenmailto` helps to iterate through array of emails to which mapping can be done for personalisation
-    - The last field helps to identify which value to pick from a key
+
+Full template payload
+
+```HTML
+<html lang="en">
+    <head>
+    </head>
+    <body>
+        <div class="container">
+            <h1>
+                New Product Information
+            </h1>
+            <p>
+                Hello {{ibmenreferer personalisation ibmenmailto 'name'}}, Good {{data.greet}}
+            </p>
+            <div class="product-info">
+                <h2>
+                    {{data.name}}
+                </h2>
+                <p>
+                    Price: ${{data.price}}
+                </p>
+                <p>
+                    Description: {{ibmendefaultshort}}
+                </p>
+                <p>
+                    Rating: {{data.rating}}
+                </p>
+            </div>
+            <p>
+                Thank you for your interest in our new product!
+            </p>
+            <p>
+                Best regards,
+            </p>
+            <p>
+                IBM Cloud
+            </p>
+            <h5>
+                If you don't wish to receive these messages click here:{{ibmen_unsubscription}}
+            </h5>
+        </div>
+    </body>
+</html>
+```
+
+3. Explanation about the personalisation tag
+
+- The `ibmenreferer` field is used to identify where to enable the personalisation
+- The second parameter `personalisation` helps to identify from where to pick personalisation values in the send notifications payload
+- Third field `ibmenmailto` helps to iterate through array of emails to which mapping can be done for personalisation
+- The last field helps to identify which value to pick from a key
