@@ -76,7 +76,7 @@ Email personalization refers to the practice of tailoring email content and mess
 
 Let's look at the detailed flow with an example
 
-1. Send Notification Payload
+**Step 1: Send Notification Payload**
 
 ```JSON
 {
@@ -106,7 +106,7 @@ Let's look at the detailed flow with an example
 }
 ```
 
-2. While creating template to enable personalisation add a placeholder in the html handlebars format
+**Step 2: While creating template to enable personalisation add a placeholder in the html handlebars format**
 
 ```JSON
 {{ibmenreferer personalisation ibmenmailto 'name'}}
@@ -157,7 +157,7 @@ Full template payload
 </html>
 ```
 
-3. Explanation about the personalisation tag
+**Step 3: Explanation about the personalisation tag**
 
 - The `ibmenreferer` field is used to identify where to enable the personalisation
 - The second parameter `personalisation` helps to identify from where to pick personalisation values in the send notifications payload
