@@ -74,7 +74,7 @@ Email personalization refers to the practice of tailoring email content and mess
 
 - In the send notification payload add a `personalisation` parameter to enable it
 
-Let's look at the detailed flow with an example
+**Let's look at the detailed flow with following examples:**
 
 - Send Notification Payload
 
