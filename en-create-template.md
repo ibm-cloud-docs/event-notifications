@@ -74,92 +74,92 @@ Email personalization refers to the practice of tailoring email content and mess
 
 - In the send notification payload add a `personalisation` parameter to enable it
 
-Let's look at the detailed flow with an example
+**Let's look at the detailed flow with following examples:**
 
-1. Send Notification Payload
+- Send Notification Payload
 
-```JSON
-{
-    "id": "b2198eb8-04b1-48ec-a78c-ee87694dd845",
-    "time": "06/06/2022, 14:23:01",
-    "source": "apisource/git",
-    "specversion": "1.0",
-    "ibmensourceid": "d6f08a53-05f6-465f-903e-03db3fa91b64:api",
-    "data": {
-      "greet": "Evening",
-      "severity": "LOW",
-      "short_description": "Success! Your Event Notifications instance is now able to send personalised notifications",
-      "transaction_id": "e539778e-4915-4586-b4c9-48e44af5c010",
-      "name": "IBM Cloud Event Notifications",
-      "price": "100",
-      "rating": "4.9"
-    },
-    "datacontenttype": "application/json",
-    "ibmendefaultlong": "This is a original long message",
-    "ibmendefaultshort": "IBM Cloud Event Notifications is a routing service that provides information about critical events in your IBM Cloud account",
-    "ibmenmailto": "[\"john.piquet@ibm.com\"]",
-    "personalization": {
-      "john.piquet@ibm.com": {
-        "name": "JOHN ALFA PIQUET"
-      }
+    ```JSON
+    {
+        "id": "b2198eb8-04b1-48ec-a78c-ee87694dd845",
+        "time": "06/06/2022, 14:23:01",
+        "source": "apisource/git",
+        "specversion": "1.0",
+        "ibmensourceid": "d6f08a53-05f6-465f-903e-03db3fa91b64:api",
+        "data": {
+        "greet": "Evening",
+        "severity": "LOW",
+        "short_description": "Success! Your Event Notifications instance is now able to send personalised notifications",
+        "transaction_id": "e539778e-4915-4586-b4c9-48e44af5c010",
+        "name": "IBM Cloud Event Notifications",
+        "price": "100",
+        "rating": "4.9"
+        },
+        "datacontenttype": "application/json",
+        "ibmendefaultlong": "This is a original long message",
+        "ibmendefaultshort": "IBM Cloud Event Notifications is a routing service that provides information about critical events in your IBM Cloud account",
+        "ibmenmailto": "[\"john.piquet@ibm.com\"]",
+        "personalization": {
+        "john.piquet@ibm.com": {
+            "name": "JOHN ALFA PIQUET"
+        }
+        }
     }
-}
-```
+    ```
 
-2. While creating template to enable personalisation add a placeholder in the html handlebars format
+- While creating template to enable personalisation add a placeholder in the html handlebars format
 
-```JSON
-{{ibmenreferer personalisation ibmenmailto 'name'}}
-```
+    ```JSON
+    {{ibmenreferer personalisation ibmenmailto 'name'}}
+    ```
 
-Full template payload
+    Full template payload
 
-```HTML
-<html lang="en">
-    <head>
-    </head>
-    <body>
-        <div class="container">
-            <h1>
-                New Product Information
-            </h1>
-            <p>
-                Hello {{ibmenreferer personalisation ibmenmailto 'name'}}, Good {{data.greet}}
-            </p>
-            <div class="product-info">
-                <h2>
-                    {{data.name}}
-                </h2>
+    ```HTML
+    <html lang="en">
+        <head>
+        </head>
+        <body>
+            <div class="container">
+                <h1>
+                    New Product Information
+                </h1>
                 <p>
-                    Price: ${{data.price}}
+                    Hello {{ibmenreferer personalisation ibmenmailto 'name'}}, Good {{data.greet}}
+                </p>
+                <div class="product-info">
+                    <h2>
+                        {{data.name}}
+                    </h2>
+                    <p>
+                        Price: ${{data.price}}
+                    </p>
+                    <p>
+                        Description: {{ibmendefaultshort}}
+                    </p>
+                    <p>
+                        Rating: {{data.rating}}
+                    </p>
+                </div>
+                <p>
+                    Thank you for your interest in our new product!
                 </p>
                 <p>
-                    Description: {{ibmendefaultshort}}
+                    Best regards,
                 </p>
                 <p>
-                    Rating: {{data.rating}}
+                    IBM Cloud
                 </p>
+                <h5>
+                    If you don't wish to receive these messages click here:{{ibmen_unsubscription}}
+                </h5>
             </div>
-            <p>
-                Thank you for your interest in our new product!
-            </p>
-            <p>
-                Best regards,
-            </p>
-            <p>
-                IBM Cloud
-            </p>
-            <h5>
-                If you don't wish to receive these messages click here:{{ibmen_unsubscription}}
-            </h5>
-        </div>
-    </body>
-</html>
-```
+        </body>
+    </html>
+    ```
 
-3. Explanation about the personalisation tag
+- Explanation about the personalisation tag
 
-- The `ibmenreferer` field is used to identify where to enable the personalisation
-- The second parameter `personalisation` helps to identify from where to pick personalisation values in the send notifications payload
-- Third field `ibmenmailto` helps to iterate through array of emails to which mapping can be done for personalisation
-- The last field helps to identify which value to pick from a key
+    - The `ibmenreferer` field is used to identify where to enable the personalisation
+    - The second parameter `personalisation` helps to identify from where to pick personalisation values in the send notifications payload
+    - Third field `ibmenmailto` helps to iterate through array of emails to which mapping can be done for personalisation
+    - The last field helps to identify which value to pick from a key
