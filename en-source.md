@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-09-12"
+lastupdated: "2023-09-19"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -30,7 +30,7 @@ The list of IBM provided sources is as follows:
 - [{{site.data.keyword.monitoringfull_notm}}](https://{DomainName}/docs/monitoring?topic=monitoring-eventnotif){: external}
 - [Security and Compliance](https://{DomainName}/docs/security-compliance?topic=security-compliance-event-notifications&interface=ui){: external}
 - [{{site.data.keyword.secrets-manager_short}}](https://{DomainName}/docs/secrets-manager?topic=secrets-manager-event-notifications&interface=ui){: external}
-- [{{site.data.keyword.appconfig_short}}](https://{DomainName}/docs/app-configuration?topic=app-configuration-getting-started){: external}
+- [{{site.data.keyword.appconfig_short}}](https://{DomainName}/docs/app-configuration?topic=app-configuration-ac-int-en){: external}
 - [IBM Cloud Projects](https://{DomainName}/docs/secure-enterprise?topic=secure-enterprise-event-notifications-events&interface=ui){: external}
 - [Toolchain](https://{DomainName}/docs/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-cd&interface=ui){: external}
 
