@@ -33,6 +33,7 @@ The list of IBM provided sources is as follows:
 - [{{site.data.keyword.appconfig_short}}](https://{DomainName}/docs/app-configuration?topic=app-configuration-ac-int-en){: external}
 - [IBM Cloud Projects](https://{DomainName}/docs/secure-enterprise?topic=secure-enterprise-event-notifications-events&interface=ui){: external}
 - [Toolchain](https://{DomainName}/docs/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-cd&interface=ui){: external}
+- [watsonx.data](https://{DomainName}/docs/watsonxdata?topic=watsonxdata-event-notifications-events){: external}
 
 ## API sources
 {: #en-api-sources}
