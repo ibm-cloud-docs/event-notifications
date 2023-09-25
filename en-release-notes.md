@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-09-19"
+lastupdated: "2023-09-25"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -19,6 +19,20 @@ content-type: release-note
 
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
+
+## 20 September 2023
+{: #event-notifications-Sept2023}
+{: release-note}
+
+Support for Email Personalisaiton in Email Templates 
+:  Event Notifications now provides the ability to apply Email templates to emails which are sent using Custom Domain Email destination. You can now create your own Email Templates and use these templates to send emails. For more information, see [Personalisation in templates](/docs/event-notifications?topic=event-notifications-en-create-en-template#personalisation-in-templates).
+
+## 31 August 2023
+{: #event-notifications-Aug3123}
+{: release-note}
+
+Support for Email Templates in Custom Domain Email Destination
+:  Event Notifications now provides the ability to apply Email templates to emails which are sent using Custom Domain Email destination. You can now create your own Email Templates and use these templates to send emails. For more information, see [Email Templates](/docs/event-notifications?topic=event-notifications-en-destinations-custom-email#en-destinations-custom-email-templates).
 
 ## 31 July 2023
 {: #event-notifications-Jul3123}
