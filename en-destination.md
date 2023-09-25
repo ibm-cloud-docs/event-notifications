@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-06-16"
+lastupdated: "2023-09-25"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, event destination
 
@@ -29,6 +29,7 @@ Destinations are of two categories: human and service.
 Human destinations are devices, servers, or applications that present notifications for human consumption. The following human destinations are supported by the {{site.data.keyword.en_short}} service:
 
 - [Inbuilt Email](/docs/event-notifications?topic=event-notifications-en-destinations-email)
+- [IBM Cloud Email service with custom domain](/docs/event-notifications?topic=event-notifications-en-destinations-custom-email)
 - [Inbuilt SMS](/docs/event-notifications?topic=event-notifications-en-destinations-sms)
 - [Microsoft&reg; Teams](/docs/event-notifications?topic=event-notifications-en-destinations-msteams)
 - [PagerDuty](/docs/event-notifications?topic=event-notifications-en-destinations-pagerduty)
