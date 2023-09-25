@@ -25,14 +25,14 @@ Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, sec
 {: release-note}
 
 Support for Email Personalisaiton in Email Templates 
-:  Event Notifications now has provides the ability to apply Email templates to emails which are sent using Custom Domain Email destination. You can now create your own Email Templates and use these templates to send emails. For more information, see [Personalisation in templates](/docs/event-notifications?topic=event-notifications-en-create-en-template#personalisation-in-templates).
+:  Event Notifications now provides the ability to apply Email templates to emails which are sent using Custom Domain Email destination. You can now create your own Email Templates and use these templates to send emails. For more information, see [Personalisation in templates](/docs/event-notifications?topic=event-notifications-en-create-en-template#personalisation-in-templates).
 
 ## 31 August 2023
 {: #event-notifications-Aug3123}
 {: release-note}
 
 Support for Email Templates in Custom Domain Email Destination
-:  Event Notifications now has provides the ability to apply Email templates to emails which are sent using Custom Domain Email destination. You can now create your own Email Templates and use these templates to send emails. For more information, see [Email Templates](/docs/event-notifications?topic=event-notifications-en-destinations-custom-email#en-destinations-custom-email-templates).
+:  Event Notifications now provides the ability to apply Email templates to emails which are sent using Custom Domain Email destination. You can now create your own Email Templates and use these templates to send emails. For more information, see [Email Templates](/docs/event-notifications?topic=event-notifications-en-destinations-custom-email#en-destinations-custom-email-templates).
 
 ## 31 July 2023
 {: #event-notifications-Jul3123}
