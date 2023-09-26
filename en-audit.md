@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-12-15"
+lastupdated: "2023-09-26"
 
 keywords: event notifications activity tracker events, event notifications events, event notifications audit, event notifications audit events, event notifications audit logs
 
@@ -53,6 +53,11 @@ The following list of {{site.data.keyword.en_short}} data events is sent to {{si
 | `event-notifications.integrations.read` | Get a single Key Management Services integration. |
 | `event-notifications.integrations.update` | Update an existing Key Management Services integration. |
 | `event-notifications.pre-prod-destination-billing.set` | Set the billing unit for pre-prod destination after crossing the usage in the current unit. |
+| `event-notifications.templates.create` | An event is generated when you create a template. |
+| `event-notifications.templates.list` | An event is generated when you retrieve the list of templates. |
+| `event-notifications.templates.update` | An event is generated when you update a template. |
+| `event-notifications.templates.delete` | An event is generated when you delete a template. |
+| `event-notifications.templates.read` | An event is generated when you get details of a template. |
 {: caption="Table 1. Overview of {{site.data.keyword.en_short}} actions that generate {{site.data.keyword.at_full_notm}} events" caption-side="top"}
 
 ## Viewing events
