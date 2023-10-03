@@ -144,6 +144,8 @@ Yes. You can send notifications to more than one destination.
 
 Emails sent via an IBM Cloud email destination are sent on behalf of IBM Cloud from a source (i.e., The sender's email domain will always have ".event-notifications.cloud.ibm.com"). On the other hand, a custom email destination allows you to add your own domain address through which a sender can send emails.
 
+Also, API sources cannot send notifications to IBM Cloud email destination, because of the security reasons, on the other hand, a custom domain email destination can receive notifications from any kind of source.
+
 ## What is SPF verification?
 {: #faq-en-notifications-spf-verification}
 {: faq}
