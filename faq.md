@@ -138,11 +138,11 @@ Make sure your {{site.data.keyword.en_short}} instance has a subscription create
 
 Yes. You can send notifications to more than one destination.
 
-## What is the difference between custom domain email destination and IBM cloud email destination for event notifications?
+## What is the difference between a custom domain email destination and an IBM Cloud email destination for event notifications?
 {: #faq-en-notifications-email-destinations}
 {: faq}
 
-Emails which are sent via IBM Cloud email destination, are sent on behalf of the IBM Cloud by a source (i.e. The sender email domain will always have .event-notifications.cloud.ibm.com), on the other hand the custom email destination has an ability to add own domain address through which a sender can send emails.
+Emails sent via an IBM Cloud email destination are sent on behalf of IBM Cloud from a source (i.e., The sender's email domain will always have ".event-notifications.cloud.ibm.com"). On the other hand, a custom email destination allows you to add your own domain address through which a sender can send emails.
 
 ## What is SPF verification?
 {: #faq-en-notifications-spf-verification}
@@ -162,13 +162,13 @@ DKIM verification provides a strong mechanism for email authentication because i
 
 By implementing DKIM, domain owners can increase the trustworthiness of their email communications, reduce the likelihood of their domain being used for phishing attacks, and improve email deliverability.
 
-## How SPF verification works?
+## How does SPF verification work?
 {: #faq-en-notifications-spf-verification-works}
 {: faq}
 
-1. Sender Publishes SPF Record: The owner of a domain (the sender) publishes an SPF record in their domain's DNS (Domain Name System) records. This SPF record specifies which mail servers are authorized to send email on behalf of that domain.
+1. The sender publishes an SPF Record: The owner of a domain (the sender) publishes an SPF record in their domain's DNS (Domain Name System) records. This SPF record specifies which mail servers are authorized to send email on behalf of that domain.
 
-2. Email Sent: When an email is sent from that domain, the recipient's mail server may perform an SPF check. It does this by looking up the SPF record for the sender's domain.
+2. Email Sent: When an email is sent from that domain, the recipient's mail server may perform an SPF check by looking up the SPF record for the sender's domain.
 
 3. SPF Record Check: The recipient's mail server checks if the IP address of the sending mail server is listed in the SPF record as an authorized sender. If it is, the email is considered legitimate; if not, it may be marked as suspicious or rejected.
 
@@ -178,7 +178,7 @@ By implementing DKIM, domain owners can increase the trustworthiness of their em
    - Fail: The sending server's IP address is not listed in the SPF record, suggesting that the email may be unauthorized.
    - Soft Fail: The SPF record suggests caution, but the email is not immediately rejected.
 
-## How DKIM verification works?
+## How does DKIM verification work?
 {: #faq-en-notifications-spf-verification-works}
 {: faq}
 
@@ -188,7 +188,7 @@ By implementing DKIM, domain owners can increase the trustworthiness of their em
 
 3. Email Transmission: The email is transmitted to the recipient's mail server.
 
-4. DKIM Verification: Upon receiving the email, the recipient's mail server performs DKIM verification. It retrieves the DKIM public key from the sender's DNS records using the domain found in the "From" header of the email.
+4. DKIM Verification: Upon receiving the email, the recipient's mail server performs DKIM verification by retrieving the DKIM public key from the sender's DNS records using the domain found in the "From" header of the email.
 
 5. Signature Verification: The recipient's mail server uses the DKIM public key to verify the digital signature on the email. If the signature is valid, it means that the email has not been tampered with during transit and that it originated from an authorized source.
 
@@ -203,10 +203,8 @@ By implementing DKIM, domain owners can increase the trustworthiness of their em
 
 Email personalization refers to the practice of tailoring email content and messaging to individual recipients or specific groups of recipients based on their preferences, behaviors, demographics, or other data. The goal of email personalization is to create more relevant and engaging email experiences for recipients, which can lead to higher open rates, click-through rates, and conversions.
 
-## What are two types of temaplates? Invitation temaplate and Notification temaplate?
+## What are two types of templates?
 {: #faq-en-notifications-template-types}
 {: faq}
 
-Two types of templates consists Invitation template and Notification template. Where Invitation template is used to send customised email invitations to all added in the subscriptions
-
-Notification template is used while sending an email for an event. It can have html tags, handlebars support, personalisation support.
+There are two types of templates: Invitation templates and Notification templates. An Invitation template is used to send customized email invitations to all those added to the subscriptions, while a Notification template is used when sending an email for an event. It can include HTML tags, handlebars support, and personalization support.
