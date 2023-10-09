@@ -66,6 +66,7 @@ This functionality allows you to test a destination with just a single click. Th
 4. Microsoft&reg; Teams
 5. IBM Cloud Code Engine
 6. IBM Cloud Functions
+7. IBM Cloud Object Storage
 
 By following the steps outlined below, you will be able to quickly and efficiently ensure the integrity of your connections.
 
