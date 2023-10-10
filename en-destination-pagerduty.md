@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-11-30"
+  years: 2022, 2023
+lastupdated: "2023-10-10"
 
 keywords: event-notifications, event notifications, destinations, pagerduty
 
@@ -83,6 +83,14 @@ To configure a PagerDuty destination, do the following steps:
 | Low | Info |
 | Anything Else | Info |
 {: caption="Table 2. {{site.data.keyword.en_short}} severity to PagerDuty severity mapping" caption-side="bottom"}
+
+## Testing a PagerDuty destination configuration
+{: #en-pd-test-destination}
+
+You can test a PagerDuty destination in the options menu provided againts the destination. You can effortlessly test a destination, whether the provided configuration is correct or not with a single click.
+
+For more information on testing a destination, see [here](/docs/event-notifications?topic=event-notifications-en-test-destination).
+
 
 ## PagerDuty retry policy
 {: #en-pd-retry-policy}

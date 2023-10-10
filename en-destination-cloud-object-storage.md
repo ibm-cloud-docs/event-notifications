@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-04-25"
+lastupdated: "2023-10-10"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, IBM Cloud Object Storage, cloud object storage, object storage
 
@@ -130,3 +130,10 @@ Endpoints are used with your credentials (Bucket name, API Key, SDK) to tell you
 1. Click the required **Bucket name** to view the **Bucket configuration** details.
 
 1. Navigate to **Endpoints** section and copy your public or private endpoints as required. Use this value as the **Endpoint** in the [Configuring a {{site.data.keyword.cos_full_notm}} destination](#en-destinations-cos-configure) section.
+
+## Testing a {{site.data.keyword.cos_full_notm}} destination configuration
+{: #en-cos-test-destination}
+
+You can test a {{site.data.keyword.cos_full_notm}} destination in the options menu provided againts the destination. You can effortlessly test a destination, whether the provided configuration is correct or not with a single click.
+
+For more information on testing a destination, see [here](/docs/event-notifications?topic=event-notifications-en-test-destination).
