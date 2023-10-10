@@ -91,7 +91,6 @@ You can test a PagerDuty destination in the options menu provided againts the de
 
 For more information on testing a destination, see [here](/docs/event-notifications?topic=event-notifications-en-test-destination).
 
-
 ## PagerDuty retry policy
 {: #en-pd-retry-policy}
 
