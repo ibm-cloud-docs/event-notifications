@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-09-25"
+lastupdated: "2023-10-12"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -19,6 +19,14 @@ content-type: release-note
 
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
+
+## 20 October 2023
+{: #event-notifications-Oct2023}
+{: release-note}
+
+IBM Cloud Event Notifications is now available in Madrid region
+:  Event Notifications now provides the ability to provision instance in Madrid region.
+
 
 ## 20 September 2023
 {: #event-notifications-Sept2023}
