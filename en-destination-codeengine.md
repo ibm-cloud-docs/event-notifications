@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-03-24"
+lastupdated: "2023-10-10"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, code engine
 
@@ -22,6 +22,13 @@ subcollection: event-notifications
 {: #en-codeengine-configure}
 
 You can configure a {{site.data.keyword.cloud_notm}} {{site.data.keyword.codeengineshort}} destination in the `Destinations` tab. As part of the configuration, enter the secured URL (only HTTPS), and select the Verb to be called (GET or POST). You can also enter authorization headers to the destination {{site.data.keyword.codeengineshort}}. Create a subscription to associate the {{site.data.keyword.codeengineshort}} destination to a topic.
+
+## Testing a {{site.data.keyword.codeengineshort}} destination configuration
+{: #en-codeengine-test-destination}
+
+You can test a {{site.data.keyword.codeengineshort}} destination in the options menu provided againts the destination. You can effortlessly test a destination, whether the provided configuration is correct or not with a single click.
+
+For more information on testing a destination, see [here](/docs/event-notifications?topic=event-notifications-en-test-destination).
 
 ## {{site.data.keyword.codeengineshort}} retry policy
 {: #en-codengine-retry}

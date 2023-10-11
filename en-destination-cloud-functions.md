@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-12-26"
+  years: 2022, 2023
+lastupdated: "2023-10-10"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, IBM Cloud Functions, cloud functions
 
@@ -76,6 +76,13 @@ To configure a {{site.data.keyword.openwhisk_short}} destination, do the followi
    - **API key** - Enter the API key that you have [generated](#en-generate-cf-api-key) earlier.
 
 1. Click **Add**.
+
+## Testing a {{site.data.keyword.openwhisk_short}} destination configuration
+{: #en-cf-test-destination}
+
+You can test a {{site.data.keyword.openwhisk_short}} destination in the options menu provided againts the destination. You can effortlessly test a destination, whether the provided configuration is correct or not with a single click.
+
+For more information on testing a destination, see [here](/docs/event-notifications?topic=event-notifications-en-test-destination).
 
 ## {{site.data.keyword.openwhisk_short}} retry policy
 {: #en-cf-retry}

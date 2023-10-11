@@ -22,10 +22,10 @@ toc:
           topics:
           - en-source.md
           - en-resource-lifcycle-events.md
-      - en-destination.md
       - topicgroup:
-          label: Supported destinations
+          label: Event Destinations
           topics:
+          - en-destination.md  
           - en-destination-email.md
           - en-destination-email-custom-domain.md
           - en-destination-sms.md
@@ -58,7 +58,8 @@ toc:
           - en-destination-cloud-functions.md
           - en-destination-servicenow.md
           - en-destination-codeengine.md
-          - en-destination-cloud-object-storage.md
+          - en-destination-cloud-object-storage.md  
+          - en-test-destination.md
       - en-integrations.md
       - en-cfe-integrations.md
       - topicgroup:
