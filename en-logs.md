@@ -62,6 +62,7 @@ The following table outlines the locations where you can view and analyze {{site
 | Locations in Europe | Platform logs available |
 |---------------------|---------------------------------|
 | `Frankfurt (eu-de)` | ![Checkmark icon](../icons/checkmark-icon.svg "checkmark") |
+| `Madrid (eu-es)` | ![Checkmark icon](../icons/checkmark-icon.svg "checkmark") |
 | `London (eu-gb)`    | ![Checkmark icon](../icons/checkmark-icon.svg "checkmark") |
 {: caption="Table 3. The automatic collection of {{site.data.keyword.registryshort_notm}} service metrics in Europe locations" caption-side="bottom"}
 

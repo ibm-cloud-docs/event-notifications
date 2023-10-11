@@ -194,7 +194,7 @@ The Chrome web SDK enables Chrome websites to receive push notifications. Comple
    enPush.initialize(initParams, callback)
    ```
 
-   * `region`: Region of the {{site.data.keyword.en_short}} instance. For example, `us-south`,`eu-gb`, `au-syd` or `eu-de`.
+   * `region`: Region of the {{site.data.keyword.en_short}} instance. For example, `us-south`,`eu-gb`, `au-syd`, `eu-de` or `eu-es`.
 
    * `deviceId`: Optional `deviceId` for device registration.
 
