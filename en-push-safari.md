@@ -238,7 +238,7 @@ The Safari web SDK enables Safari websites to receive push notifications. Comple
    enPush.initialize(initParams, callback)
    ```
 
-   * `region`: Region of the {{site.data.keyword.en_short}} instance. for example, `us-south`,`eu-gb`, `au-syd`, and `eu-de`.
+   * `region`: Region of the {{site.data.keyword.en_short}} instance. for example, `us-south`,`eu-gb`, `au-syd`, `eu-de` and `eu-es`.
 
    * `deviceId`: Optional `deviceId` for device registration.
 
