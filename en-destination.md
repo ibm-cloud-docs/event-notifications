@@ -12,7 +12,7 @@ subcollection: event-notifications
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Event destinations
+# Supported destinations
 {: #en-destination}
 
 A destination is a delivery target for a notification. In other contexts, destinations are also called channels, sinks, or consumers.
