@@ -12,7 +12,6 @@ subcollection: event-notifications
 {{site.data.keyword.attribute-definition-list}}
 
 # Test destinations
-
 {: #en-test-destination}
 
 This document explains a feature designed to streamline the way you validate the functionality and reliability of your critical connections. With this functionality, you can effortlessly test a destination with a single click, whether it's a Slack hook or complex ServiceNow configuration.

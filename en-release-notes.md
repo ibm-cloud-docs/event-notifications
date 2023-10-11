@@ -20,6 +20,7 @@ content-type: release-note
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
 
+
 ## 20 October 2023
 {: #event-notifications-Oct2023}
 {: release-note}
@@ -28,12 +29,20 @@ IBM Cloud Event Notifications is now available in Madrid region
 :  Event Notifications now provides the ability to provision instance in Madrid region.
 
 
+## 11 October 2023
+{: #event-notifications-Oct1123}
+{: release-note}
+
+Support for Testing a Destinations with a Single Click!
+:  Event Notifications now provides the ability to validate the functionality and reliability of your critical connections. With this functionality, you can effortlessly test a destination with a single click. For more information, see [Test Destinations](/docs/event-notifications?topic=event-notifications-en-test-destination).
+
+
 ## 20 September 2023
 {: #event-notifications-Sept2023}
 {: release-note}
 
 Support for Email Personalisaiton in Email Templates 
-:  Event Notifications now provides the ability to apply Email templates to emails which are sent using Custom Domain Email destination. You can now create your own Email Templates and use these templates to send emails. For more information, see [Personalisation in templates](/docs/event-notifications?topic=event-notifications-en-create-en-template#personalisation-in-templates).
+:  Event Notifications now provides the ability to apply Email templates to emails which are sent using Custom Domain Email destination. You can now create your own Email Templates and use these templates to send emails in a personalised way. For more information, see [Personalisation in templates](/docs/event-notifications?topic=event-notifications-en-create-en-template#personalisation-in-templates).
 
 ## 31 August 2023
 {: #event-notifications-Aug3123}
