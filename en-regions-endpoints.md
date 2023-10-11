@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-10-26"
+lastupdated: "2023-10-12"
 
 keywords: event-notifications, event notifications, regions, endpoints, private endpoints
 
