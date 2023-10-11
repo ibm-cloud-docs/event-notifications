@@ -42,6 +42,7 @@ Decide on a location where your service to be hosted. Currently, the following l
 * London (eu-gb)
 * Frankfurt (eu-de)
 * Sydney (au-syd)
+* Madrid (eu-es)
 
 ## Decide on a pricing plan
 {: #en-decide-pricing-plans}
