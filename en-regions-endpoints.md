@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-10-26"
+lastupdated: "2023-10-12"
 
 keywords: event-notifications, event notifications, regions, endpoints, private endpoints
 
@@ -27,6 +27,7 @@ Review region and connectivity options for interacting with {{site.data.keyword.
 - London (`eu-gb`)
 - Sydney (`au-syd`)
 - Frankfurt (`eu-de`)
+- Madrid (`eu-es`)
 
 You can create {{site.data.keyword.en_full_notm}} resources in one of the supported {{site.data.keyword.cloud_notm}} regions.
 
@@ -52,6 +53,7 @@ The following table contains the base URLs for the {{site.data.keyword.en_full_n
 | London |`https://eu-gb.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
 | Sydney |`https://au-syd.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
 | Frankfurt |`https://eu-de.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
+| Madrid |`https://eu-es.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
 {: caption="Table 1. Public endpoints for interacting with {{site.data.keyword.en_short}} by using APIs" caption-side="bottom"}
 
 ### Private endpoints
@@ -65,5 +67,6 @@ If you need to manage your {{site.data.keyword.en_short}} resources over a priva
 | London |`https://private.eu-gb.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
 | Sydney |`https://private.au-syd.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
 | Frankfurt |`https://private.eu-de.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
+| Madrid |`https://private.eu-es.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
 {: caption="Table 2. Private endpoints for interacting with {{site.data.keyword.en_short}} by using APIs" caption-side="bottom"}
 

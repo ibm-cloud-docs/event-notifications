@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-01-24"
+lastupdated: "2023-10-10"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, ServiceNow, servicenow
 
@@ -63,6 +63,13 @@ To configure a ServiceNow destination, do the following steps:
 | Low | 2 | 3 | 4 |
 | Anything Else | 3 | 3 | 4 |
 {: caption="Table 1. {{site.data.keyword.en_short}} severity (ibmenseverity) to ServiceNow severity mapping" caption-side="bottom"}
+
+## Testing a ServiceNow destination configuration
+{: #en-sn-test-destination}
+
+You can test a ServiceNow destination in the options menu provided againts the destination. You can effortlessly test a destination, whether the provided configuration is correct or not with a single click.
+
+For more information on testing a destination, see [here](/docs/event-notifications?topic=event-notifications-en-test-destination).
 
 ## ServiceNow retry policy
 {: #en-sn-retry}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-04-03"
+lastupdated: "2023-10-10"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, slack
 
@@ -74,6 +74,14 @@ Here -
 *attachment_color* is the color that is applied to the notification, which was provided during subscription.
 *ibmendefaultlong* is the default long payload that is provided in the incoming payload.
 *data* is the data JSON provided in the incoming payload and format as JSON in the slack notification.
+
+## Testing a Slack destination configuration
+{: #en-slack-test-destination}
+
+You can test a Slack destination in the options menu provided againts the destination. You can effortlessly test a destination, whether the provided configuration is correct or not with a single click.
+
+For more information on testing a destination, see [here](/docs/event-notifications?topic=event-notifications-en-test-destination).
+
 
 ## Slack retry policy
 {: #en-slack-retry}

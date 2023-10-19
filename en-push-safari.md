@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-10-26"
+  years: 2022, 2023
+lastupdated: "2023-10-12"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, push
 
@@ -238,7 +238,7 @@ The Safari web SDK enables Safari websites to receive push notifications. Comple
    enPush.initialize(initParams, callback)
    ```
 
-   * `region`: Region of the {{site.data.keyword.en_short}} instance. for example, `us-south`,`eu-gb`, `au-syd`, and `eu-de`.
+   * `region`: Region of the {{site.data.keyword.en_short}} instance. for example, `us-south`,`eu-gb`, `au-syd`, `eu-de` and `eu-es`.
 
    * `deviceId`: Optional `deviceId` for device registration.
 

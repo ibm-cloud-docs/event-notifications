@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-05-29"
+lastupdated: "2023-10-12"
 
 keywords: event notifications, IBM Cloud
 
@@ -42,6 +42,7 @@ Decide on a location where your service to be hosted. Currently, the following l
 * London (eu-gb)
 * Frankfurt (eu-de)
 * Sydney (au-syd)
+* Madrid (eu-es)
 
 ## Decide on a pricing plan
 {: #en-decide-pricing-plans}
