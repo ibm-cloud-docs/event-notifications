@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-10-26"
+lastupdated: "2023-10-12"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -34,7 +34,7 @@ In the {{site.data.keyword.cloud_notm}} [catalog](https://{DomainName}/catalog#s
 {: #en-select}
 {: step}
 
-Select a `Location`. Currently, Dallas (us-south), London (eu-gb), Sydney (au-syd), and Frankfurt (eu-de) locations are supported.
+Select a `Location`. Currently, Dallas (us-south), London (eu-gb), Sydney (au-syd), Frankfurt (eu-de) and Madrid (eu-es) locations are supported.
 
 ## Select a pricing plan
 {: #en-pricing}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-10-26"
+  years: 2022, 2023
+lastupdated: "2023-10-10"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, ms teams, Microsoft Teams
 
@@ -105,6 +105,13 @@ Here -
 *ibmendefaultshort* is the default short payload provided in the incoming payload.
 *ibmendefaultlong* is tbe default long payload provided in the incoming payload.
 *data* is the data JSON provided in the incoming payload and will be formated as json in the Microsoft Teams notification.
+
+## Testing a Microsoft&trade; Teams destination configuration
+{: #en-msteams-test-destination}
+
+You can test a Microsoft&trade; Teams destination in the options menu provided againts the destination. You can effortlessly test a destination, whether the provided configuration is correct or not with a single click.
+
+For more information on testing a destination, see [here](/docs/event-notifications?topic=event-notifications-en-test-destination).
 
 ## Microsoft Teams retry policy
 {: #en-msteams-retry}
