@@ -10,8 +10,9 @@ subcollection: event-notifications
 
 ---
 {{site.data.keyword.attribute-definition-list}}
+
 # Event Notifications Pricing
-{: #en-pricing}
+{: #en-new-pricing}
 
 ## New Pricing effective from 1 November 2023
 
