@@ -62,6 +62,7 @@ toc:
           - en-test-destination.md
       - en-integrations.md
       - en-cfe-integrations.md
+      - en-new-pricing.md
       - topicgroup:
           label: SDKs
           topics:
