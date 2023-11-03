@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-10-12"
+lastupdated: "2023-11-03"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -19,6 +19,14 @@ content-type: release-note
 
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
+
+
+## 01 Nov 2023
+{: #event-notifications-Nov0123}
+{: release-note}
+
+Support for tiered pricing for Push Notifications destinations
+:  Pricing for Outbound Push Notifications are now tiered. For more information, see [Pricing page](/docs/event-notifications?topic=event-notifications-en-new-pricing)
 
 
 ## 20 October 2023
