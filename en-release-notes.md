@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-11-01"
+lastupdated: "2023-11-03"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -26,10 +26,7 @@ Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, sec
 {: release-note}
 
 Support for tiered pricing for Push Notifications destinations
-:  Prices are reduced for Event Notifications Push effective November 1, 2023.
-Pre-production Push Destination monthly fee reduced from $15 to $10 per month.
-Production Push Destination monthly fee reduced from $50 to $35 per month.
-Pricing for Outbound Push Notifications are now tiered. For more information, see [Pricing page](/docs/event-notifications?topic=event-notifications-en-new-pricing)
+:  Pricing for Outbound Push Notifications are now tiered. For more information, see [Pricing page](/docs/event-notifications?topic=event-notifications-en-new-pricing)
 
 
 ## 20 October 2023
