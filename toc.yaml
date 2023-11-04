@@ -125,6 +125,10 @@ toc:
           - en-monitor.md
           - en-logs.md
       - topicgroup:
+          label: Email Best Practices
+          topics:
+          - en-email-best-practices.md 
+      - topicgroup:
           label: Enhancing security
           topics:
           - en-iam.md
