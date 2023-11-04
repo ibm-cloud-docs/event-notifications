@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-07-31"
+lastupdated: "2023-11-04"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email
 
@@ -48,7 +48,7 @@ You can either resend the invitation or remove the recipient from the **Invited*
 ## Using an {{site.data.keyword.cloud_notm}} email service with custom domain
 {: #en-destinations-custom-email}
 
-Event Notifications provides support for sending emails with custom domain using Custom Email destination. Using this destination any subscribed email recipients can be notified with the transactional and informational events that happen within the integrated source. These emails will originate from the custom domain configured for the destination. Follow [these steps](/docs/event-notifications?topic=event-notifications-en-destinations-custom-email) to get started with custom domain.
+Event Notifications provides support for sending emails with custom domain using Custom Email destination. Using this destination any subscribed email recipients can be notified with the transactional and informational events that happen within the integrated source. These emails will originate from the custom domain configured for the destination. Follow [the detailed steps](/docs/event-notifications?topic=event-notifications-en-destinations-custom-email) to get started with custom domain. We advise following [the suggested etiquettes](/docs/event-notifications?topic=event-notifications-service-access-management) when utilizing the IBM Cloud email service.
 
 ## Email charges
 {: #en-destinations-email-charge}
