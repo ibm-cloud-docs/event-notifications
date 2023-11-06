@@ -12,17 +12,22 @@ subcollection: event-notifications
 
 {{site.data.keyword.attribute-definition-list}}
 
-## 1. Introduction
+# Introduction
 {: #en-email-bestpractices}
 
 IBM {{site.data.keyword.en_short}} is a powerful tool for sending event-related emails to your customers. To ensure the smooth and reliable operation of the service, it is essential to follow best practices for email communication. In this documentation, we will provide guidelines and recommendations to help you make the most of the service while avoiding common pitfalls.
 
-## 2. Email Best Practices
+## Email Best Practices
+{: #en-email-practices}
 
 ### a. Use a Custom Email Domain
+{: #en-email-use-custom-email}
+
 - Using a custom email domain for sending {{site.data.keyword.en_short}} is highly recommended. This establishes trust and brand recognition, reducing the likelihood of your emails being flagged as spam.
 
 ### b. Monitor and Prevent Spam
+{: #en-email-preventspam}
+
 - The origin IP addresses could be blacklisted resulting in the emails being marked as spam, if the email service is not used responsibly:
   - Educate team on the importance of email etiquette.
   - Implement rate limits on email sends to avoid sending a high volume of emails in a short period.
@@ -77,19 +82,27 @@ It's important for users to understand that despite following best practices, so
 Understanding and actively managing emails in spam folders is essential to ensure the successful delivery of important {{site.data.keyword.en_short}}, even in cases where some recipients may mistakenly classify them as spam. It's a collaborative effort between senders and recipients to maintain an effective email communication channel.
 
 ### f. Content and Payload Checks
+{: #en-email-payloadcheck}
+
 - Be mindful of the content you send in your emails. Avoid common spam triggers, such as excessive use of capital letters, misleading subject lines, and poor grammar.
 - Prevent sending the same email multiple times to the same recipient, as this can be flagged as spam.
 
 It's important to note that the IBM {{site.data.keyword.en_short}} Service does not perform payload validation or check personal data within the email content. Therefore, it is your responsibility to ensure that the content of your emails complies with privacy regulations and best practices, especially if you are dealing with sensitive or personal information.
 
-## 3. Additional Recommendations
+## Additional Recommendations
 {: #en-email-recommendations}
 
 ### a. Opt-In Subscription
+{: #en-email-Opt-in}
+
 - Use a double opt-in process for subscribers, ensuring that they have explicitly requested to receive your {{site.data.keyword.en_short}}. This reduces the likelihood of sending emails to uninterested recipients.
 
 ### b. Email Frequency
+{: #en-email-frequency}
+
 - Maintain a reasonable email frequency. Sending too many emails in a short timeframe can result in recipients marking your emails as spam.
 
-## 4. Conclusion
+## Conclusion
+{: #en-email-conclusion}
+
 IBM {{site.data.keyword.en_short}} service provides a valuable platform for reaching your customers and users with important event-related emails. By following these email best practices and additional recommendations, you can improve the deliverability of your emails, maintain a positive sender reputation, and provide a better experience for your recipients. Remember that email communication should be respectful and valuable to your audience to build trust and engagement.
