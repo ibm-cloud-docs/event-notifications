@@ -9,6 +9,7 @@ keywords: event notifications, event notification, notifications, email, custom 
 subcollection: event-notifications
 
 ---
+
 {{site.data.keyword.attribute-definition-list}}
 
 ## 1. Introduction
