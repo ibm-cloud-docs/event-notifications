@@ -53,7 +53,6 @@ Thus, it is important to maintain a responsible and ethical approach to email co
 {: #en-email-authverification}
 
 - Implement DomainKeys Identified Mail (DKIM), Sender Policy Framework (SPF), and Domain-based Message Authentication, Reporting, and Conformance (DMARC) to authenticate your emails. Here's what you need to know about them:
-
   
   - **DomainKeys Identified Mail (DKIM)**: DKIM is an email authentication method that adds a digital signature to your outgoing emails. This signature is generated using a private key that only you have access to. The recipient's email service provider can then verify the signature using the public key stored in your DNS records. This verification ensures that the email hasn't been tampered with in transit and that it genuinely comes from your domain. Implementing DKIM helps prevent email spoofing and phishing, which can improve email deliverability.
 
@@ -72,10 +71,10 @@ It's important for users to understand that despite following best practices, so
     - Users should periodically check their spam or junk folders. If they find a legitimate email in these folders, they should take the following actions:
       - **Mark as "Not Spam"**: By marking an email as "Not Spam" or "Not Junk," users inform the email service provider that the message is not unwanted. This action signals that the sender is legitimate, and future emails from the same sender should be delivered to the inbox.
       - **Move to Inbox**: Users can also move legitimate emails from the spam/junk folder to their inbox. This helps train the email service provider to recognize these messages as wanted and trusted.
+
   - **Educate Recipients**:
     - If you are a sender of {{site.data.keyword.en_short}}, consider educating your recipients about the importance of checking their spam or junk folders for legitimate emails. Encourage them to mark your emails as "Not Spam" to ensure they receive important notifications.
 Understanding and actively managing emails in spam folders is essential to ensure the successful delivery of important {{site.data.keyword.en_short}}, even in cases where some recipients may mistakenly classify them as spam. It's a collaborative effort between senders and recipients to maintain an effective email communication channel.
-
 
 ### f. Content and Payload Checks
 - Be mindful of the content you send in your emails. Avoid common spam triggers, such as excessive use of capital letters, misleading subject lines, and poor grammar.
@@ -91,7 +90,6 @@ It's important to note that the IBM {{site.data.keyword.en_short}} Service does 
 
 ### b. Email Frequency
 - Maintain a reasonable email frequency. Sending too many emails in a short timeframe can result in recipients marking your emails as spam.
-
 
 ## 4. Conclusion
 IBM {{site.data.keyword.en_short}} service provides a valuable platform for reaching your customers and users with important event-related emails. By following these email best practices and additional recommendations, you can improve the deliverability of your emails, maintain a positive sender reputation, and provide a better experience for your recipients. Remember that email communication should be respectful and valuable to your audience to build trust and engagement.
