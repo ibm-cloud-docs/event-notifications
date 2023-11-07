@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-11-04"
+lastupdated: "2023-11-07"
 
 keywords: event notifications, event notification, notifications, email, custom domain, best practices
 
@@ -17,12 +17,12 @@ subcollection: event-notifications
 
 IBM {{site.data.keyword.en_short}} is a powerful tool for sending event-related emails to your customers. To ensure the smooth and reliable operation of the service, it is essential to follow best practices for email communication. In this documentation, we will provide guidelines and recommendations to help you make the most of the service while avoiding common pitfalls.
 
-### Use a Custom Email Domain
+## Use a Custom Email Domain
 {: #en-email-use-custom-email}
 
 - Using a custom email domain for sending {{site.data.keyword.en_short}} is highly recommended. This establishes trust and brand recognition, reducing the likelihood of your emails being flagged as spam.
 
-### Monitor and Prevent Spam
+## Monitor and Prevent Spam
 {: #en-email-preventspam}
 
 - The origin IP addresses could be blacklisted resulting in the emails being marked as spam, if the email service is not used responsibly:
@@ -30,7 +30,7 @@ IBM {{site.data.keyword.en_short}} is a powerful tool for sending event-related 
   - Implement rate limits on email sends to avoid sending a high volume of emails in a short period.
   - Regularly monitor email sending activity for any signs of abuse.
   
-### Shared IP Addresses
+## Shared IP Addresses
 {: #en-email-sharedip}
 
 {{site.data.keyword.en_short}} uses the following  Shared IPs to send Emails.
@@ -51,7 +51,7 @@ IBM {{site.data.keyword.en_short}} is a powerful tool for sending event-related 
 
 Thus, it is important to maintain a responsible and ethical approach to email communication, as the actions of one user on a shared IP address can impact the deliverability of all users. Regular monitoring, education, and adherence to email best practices are crucial to prevent such issues.
 
-### Authentication and Verification
+## Authentication and Verification
 {: #en-email-authverification}
 
 - Implement DomainKeys Identified Mail (DKIM), Sender Policy Framework (SPF), and Domain-based Message Authentication, Reporting, and Conformance (DMARC) to authenticate your emails. Here's what you need to know about them:
@@ -64,7 +64,7 @@ Thus, it is important to maintain a responsible and ethical approach to email co
   
 With the implementation of DMARC in addition to DKIM and SPF, your email messages will be more secure, and you'll have better control over how emails claiming to be from your domain are treated by email service providers, enhancing your email deliverability and security.
 
- ### Handling Emails in Spam/Junk Folders
+ ## Handling Emails in Spam/Junk Folders
  {: #en-email-spamhandling}
  
 It's important for users to understand that despite following best practices, some legitimate emails might still end up in their spam or junk folders. This can occur for various reasons, such as user preferences or the occasional marking of emails as spam by other recipients.
@@ -78,7 +78,7 @@ It's important for users to understand that despite following best practices, so
     - If you are a sender of {{site.data.keyword.en_short}}, consider educating your recipients about the importance of checking their spam or junk folders for legitimate emails. Encourage them to mark your emails as "Not Spam" to ensure they receive important notifications.
 Understanding and actively managing emails in spam folders is essential to ensure the successful delivery of important {{site.data.keyword.en_short}}, even in cases where some recipients may mistakenly classify them as spam. It's a collaborative effort between senders and recipients to maintain an effective email communication channel.
 
-### Content and Payload Checks
+## Content and Payload Checks
 {: #en-email-payloadcheck}
 
 - Be mindful of the content you send in your emails. Avoid common spam triggers, such as excessive use of capital letters, misleading subject lines, and poor grammar.
