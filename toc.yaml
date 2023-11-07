@@ -125,10 +125,6 @@ toc:
           - en-monitor.md
           - en-logs.md
       - topicgroup:
-          label: Email Best Practices
-          topics:
-          - en-email-best-practices.md 
-      - topicgroup:
           label: Enhancing security
           topics:
           - en-iam.md
@@ -139,6 +135,7 @@ toc:
           - en-managing-encryption.md
           - en-cipher.md
           - en-service-credentials.md
+          - en-email-best-practices.md 
           - topicgroup:
               label: Privately connecting to Event Notifications
               topics:
