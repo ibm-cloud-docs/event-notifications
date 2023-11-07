@@ -135,6 +135,7 @@ toc:
           - en-managing-encryption.md
           - en-cipher.md
           - en-service-credentials.md
+          - en-email-best-practices.md 
           - topicgroup:
               label: Privately connecting to Event Notifications
               topics:
