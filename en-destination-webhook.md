@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2022
-lastupdated: "2022-10-26"
+  years: 2020, 2023
+lastupdated: "2023-11-09"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, webhook
 
@@ -15,7 +15,7 @@ subcollection: event-notifications
 # Webhooks
 {: #en-destinations-webhook}
 
-A webhook represents a service destination, where an incoming notification can be consumed programmatically. For example, an incoming notification about an event can trigger a webhook destination to a backend microservice to act based on the content of the incoming notification.
+A webhook represents a service destination, where an incoming notification can be consumed programmatically. For example, an incoming notification about an event can trigger a webhook destination to a backend microservice to act based on the content of the incoming notification. You can allowlist the ranges of IP addresses to restrict access to your servers that receive webhooks. For more information, see [Webhook IP addresses](/docs/account?topic=account-webhook-ips).
 {: shortdesc}
 
 ## Configuring a webhook destination
