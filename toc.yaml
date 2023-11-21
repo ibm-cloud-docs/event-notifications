@@ -158,7 +158,10 @@ toc:
       - topicgroup:
           label: High availability and disaster recovery
           topics:
-          - en-high-availability.md
+            - topic: en-high-availability.md
+              navtitle: High availability
+            - topic: en-bc-dr.md
+              navtitle: Disaster recovery
       - en-regions-endpoints.md
       - en-payload.md
       - en-notices.md
