@@ -14,7 +14,7 @@ subcollection: event-notifications
 
 
 # Understanding high availability for {{site.data.keyword.en_short}}
-{: #ha}
+{: #en-high-availability}
 
 [High availability](#x2284708){: term} (HA) is a core discipline in an IT infrastructure to keep your apps up and running, even after a partial or full site failure. The main purpose of high availability is to eliminate potential points of failures in an IT infrastructure.
 {: shortdesc}
