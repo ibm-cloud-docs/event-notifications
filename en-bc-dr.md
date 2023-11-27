@@ -33,8 +33,8 @@ For more information about your responsibilities when using {{site.data.keyword.
 
 | Disaster recovery objective | Target Value   |
 |---|---|
-|  RPO |   |
-|  RTO |   |
+|  RPO | 9 hours |
+|  RTO | 24 hours |
 {: caption="Table 1. RPO and RTO for {{site.data.keyword.en_short}}" caption-side="bottom"}
 
 
