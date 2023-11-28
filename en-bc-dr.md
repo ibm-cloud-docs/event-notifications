@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-10-21"
+lastupdated: "2023-11-28"
 
 keywords: HA for Event Notifications, high availability for Event Notifications, Event Notifications, disaster recovery
 
