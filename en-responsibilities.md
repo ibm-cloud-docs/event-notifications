@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-11-30"
+lastupdated: "2022-11-28"
 
 keywords: event-notifications, event notifications, customer responsibilities, IBM responsibilities, terms and conditions, disaster recovery, toolchain backup
 
@@ -81,3 +81,18 @@ You are responsible for the recovery of the workloads that run {{site.data.keywo
 |-------------|-----------------------|-----------------------|
 |Availability | * Provide high availability capabilities, such as {{site.data.keyword.IBM_notm}}-owned infrastructure in multizone regions, to meet local access, and low latency requirements for each supported region. \n * Run {{site.data.keyword.en_full_notm}} deployments with three replicas in the same region for high availability. \n Continuously monitor {{site.data.keyword.en_full_notm}} infrastructure to ensure the reliability and availability of the service environment by site reliability engineers. \n Maintain service availability across [worldwide regions](/docs/event-notifications?topic=event-notifications-ac-regions-endpoints) so that customers can deploy projects across zones and regions for higher DR tolerance. |* Use the list of [available regions](/docs/event-notifications?topic=event-notifications-ac-regions-endpoints#ac-regions) to plan for and create new instances of the service to meet performance and availability requirements exceeding the default that is provided by {{site.data.keyword.IBM_notm}}. \n * Set up more {{site.data.keyword.en_full_notm}} instances across zones and regions to increase disaster recovery tolerance that exceeds the default that is provided by {{site.data.keyword.IBM_notm}}.
 {: caption="Table 5. Responsibilities for disaster recovery" caption-side="top"}
+
+If you need zero downtime during a regional disaster recovery, create and maintain backup instances in other regions. Review the API documentation and decide the data that you want backed up and restored if there is a disaster. To synchronize a service instance in one region with an instance in a different region, you can use the APIs mentioned [here](/apidocs/event-notifications).
+
+Some API examples are as follows:
+
+|Entity   | Endpoint | Description |
+|---------|--------|-----------|
+| sources | `/v1/instances/{instance_id}/sources` | Your platform sources |
+| topics | `/v1/instances/{instance_id}/topics` | All registered topics |
+| rules | `/v1/instances/{instance_id}/rules` | All rules created on topics |
+| destinations | `/v1/instances/{instance_id}/destinations` | All registered destinations |
+| subscriptions | `/v1/instances/{instance_id}/subscriptions` | All the subscriptions |
+{: caption="Table 2. Example API endpoints" caption-side="top"}
+
+For each data set that you need to back up and restore, use `GET` calls to get a copy of the data. And use the corresponding `PUT / POST API` to populate the new instance on a different region.
