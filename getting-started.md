@@ -100,6 +100,7 @@ Human destinations are devices, servers, or applications that present notificati
    - [Safari Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-safari)
    - [Huawei Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-huawei)
 - [{{site.data.keyword.cloud_notm}} SMS](/docs/event-notifications?topic=event-notifications-en-destinations-sms)
+   - [{{site.data.keyword.cloud_notm}} SMS with custom phone numbers](/docs/event-notifications?topic=event-notifications-en-destinations-sms-custom)
 - [Slack](/docs/event-notifications?topic=event-notifications-en-destinations-slack)
 - [Microsoft&reg; Teams](/docs/event-notifications?topic=event-notifications-en-destinations-msteams)
 - [ServiceNow](/docs/event-notifications?topic=event-notifications-en-destinations-servicenow)

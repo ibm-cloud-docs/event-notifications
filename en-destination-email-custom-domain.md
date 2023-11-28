@@ -1,5 +1,4 @@
 ---
-
 copyright:
   years: 2021, 2023
 lastupdated: "2023-08-29"
@@ -7,34 +6,41 @@ lastupdated: "2023-08-29"
 keywords: event-notifications, event notifications, about event notifications, destinations, email
 
 subcollection: event-notifications
-
 ---
 
 {{site.data.keyword.attribute-definition-list}}
 
 # {{site.data.keyword.cloud_notm}} Email service with custom domain
+
 {: #en-destinations-custom-email}
 
 This capability is available only for selected users. If you would like to leverage this capability, [contact us](mailto:mbluemix@in.ibm.com?subject=[Custom%20Email%20Domain]%20:%20%20Request%20for%20Allowlisting&body=Kindly%20provide%20the%20below%20details:%0D%0A%0D%0AEvent%20Notifications%20Instance%20ID:%0D%0AIBM%20Account%20ID:%0D%0AIBM%20User%20ID:%0D%0ARegion:).
 {: tip}
 
-## Configuring a webhook destination
-{: #en-destinations-custom-email-webhook}
+## Configuring a custom Email destination
+
+{: #en-destinations-custom-email}
 
 You can configure a custom email destination in the Destinations tab. As part of the configuration, enter the domain name to be used for sending emails.
 
 ## Custom domain name verification
+
 {: #en-destinations-custom-email-verify}
 
 After you create the destination with your domain name, make sure its validated for the right ownership. This will prevent misuse of your domain and to keep away from bad actors.
 To verify your custom domain name, follow these steps:
+
 1. Select the configure overflow menu for the destination you want to verify.
 2. Create Sender Policy Framework (SPF), which is used to authenticate the sender of an email. SPF specifies the mail servers that are allowed to send email for your domain.
-  * Open your DNS hosting provider for the domain name configured
-  * Create a new TXT record with your domain name registerer with the name and value provided in the configure screen for SPF
+
+- Open your DNS hosting provider for the domain name configured
+- Create a new TXT record with your domain name registerer with the name and value provided in the configure screen for SPF
+
 3. Create DomainKeys Identified Mail (DKIM), which allows an organization to take responsibility for transmitting a message by signing it. DKIM allows the receiver to check the email that claimed to have come from a specific domain, is authorized by the owner of that domain.
-  * Open your DNS hosting provider for the domain name configured
-  * Create a new TXT record with your domain name registerer with the name and value provided in the configure screen for DKIM
+
+- Open your DNS hosting provider for the domain name configured
+- Create a new TXT record with your domain name registerer with the name and value provided in the configure screen for DKIM
+
 4. Save the TXT records.
 5. In the destination verify screen, click on Verify buttons for both SPF and DKIM.
 
@@ -45,6 +51,7 @@ c. The DNS propagation may take up to 72 hours to be updated across the internet
 {: note}
 
 ## Using a Custom email destination
+
 {: #en-destinations-custom-email-use}
 
 To use the email service destination, add it to a subscription along with the email addresses of interest. Within a single subscription, you can add up to 100 email recipients. The subscription also needs a topic to filter events of interest from your sources. When an event lands in the topic, Event Notifications immediately routes the event notification to your email recipients.
@@ -63,6 +70,7 @@ The Event Notifications are only sent to the opted-in recipients.
 You can either resend the invitation or remove the recipient from the Invited list. In the Invited tab, click and select the three vertical dots (overflow menu) and select Resend invitation for the recipient email address, to whom you need to resend the invitation. For deleting a user from the invited list, in the Invited tab, click the three vertical dots (overflow menu) and select Delete for the recipient email address, to whom you need to remove from the Invited list. For adding back a recipient after opted-out or not responded within the stipulated time that is mentioned in the invite email, you need to send a mail to the Reply to email address mentioned in the initial invite mail.
 
 ## Email Templates
+
 {: #en-destinations-custom-email-templates}
 
 Event Notifications offers users the flexibility of utilizing custom email destinations along with templates. Users have the option to provide HTML templates containing a payload. When sending notifications, the service integrates these templates seamlessly, replacing template variables with corresponding variables from the payload. This allows for dynamic and personalized email content for recipients.
@@ -74,8 +82,8 @@ In the following example snippet, you can find a template with a minimal body th
 ```
 <html>
   <body>
-    {{event.custom_variable_from_payload}} 
-  </body> 
+    {{event.custom_variable_from_payload}}
+  </body>
 </html>
 ```
 
