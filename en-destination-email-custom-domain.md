@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2021, 2023
-lastupdated: "2023-08-29"
+lastupdated: "2023-11-29"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email
 
@@ -17,7 +17,7 @@ subcollection: event-notifications
 This capability is available only for selected users. If you would like to leverage this capability, [contact us](mailto:mbluemix@in.ibm.com?subject=[Custom%20Email%20Domain]%20:%20%20Request%20for%20Allowlisting&body=Kindly%20provide%20the%20below%20details:%0D%0A%0D%0AEvent%20Notifications%20Instance%20ID:%0D%0AIBM%20Account%20ID:%0D%0AIBM%20User%20ID:%0D%0ARegion:).
 {: tip}
 
-## Configuring a custom Email destination
+## Configuring a Custom Email destination
 
 {: #en-destinations-custom-email}
 

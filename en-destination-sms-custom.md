@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2021, 2023
-lastupdated: "2023-11-27"
+lastupdated: "2023-11-29"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, sms
 
@@ -10,13 +10,13 @@ subcollection: event-notifications
 
 {{site.data.keyword.attribute-definition-list}}
 
-# {{site.data.keyword.cloud_notm}} SMS service with custom SMS
+# {{site.data.keyword.cloud_notm}} SMS service with Custom SMS
 
-## Configuring a custom SMS destination
+## Configuring a Custom SMS destination
 
 {: #en-destinations-sms-custom}
 
-You can configure a custom SMS destination in the Destinations tab.
+You can configure a Custom SMS destination in the Destinations tab.
 
 ## Custom SMS personalised numbers
 
@@ -52,7 +52,7 @@ To comply with the regulatory standards, you may need to get a consent (opt-in) 
 
 1. Select a `Topic` from the list.
 
-1. Select custom SMS destination created as **Destination** from the list.
+1. Select Custom SMS destination created as **Destination** from the list.
 
 1. The **Recipients** section displays three tabs:
 

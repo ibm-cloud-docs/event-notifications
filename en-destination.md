@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-10-11"
+lastupdated: "2023-11-29"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, event destination
 
@@ -31,7 +31,7 @@ Human destinations are devices, servers, or applications that present notificati
 - [Inbuilt Email](/docs/event-notifications?topic=event-notifications-en-destinations-email)
 - [IBM Cloud Email service with custom domain](/docs/event-notifications?topic=event-notifications-en-destinations-custom-email)
 - [Inbuilt SMS](/docs/event-notifications?topic=event-notifications-en-destinations-sms)
-- [IBM Cloud Email service with custom domain](/docs/event-notifications?topic=event-notifications-en-destinations-sms-custom)
+- [Custom SMS](/docs/event-notifications?topic=event-notifications-en-destinations-sms-custom)
 - [Microsoft&reg; Teams](/docs/event-notifications?topic=event-notifications-en-destinations-msteams)
 - [PagerDuty](/docs/event-notifications?topic=event-notifications-en-destinations-pagerduty)
 - [Push notifications](/docs/event-notifications?topic=event-notifications-en-destinations-push)
