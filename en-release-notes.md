@@ -20,14 +20,20 @@ content-type: release-note
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
 
+## 29 Nov 2023
+{: #event-notifications-Nov2923}
+{: release-note}
+
+Support for personalised phone numbers via Custom SMS destination
+: Event Notifications provides support for sending SMS from personalised phone numbers using the new destination, Custom SMS. For more information, see [Custom SMS](/docs/event-notifications?topic=event-notifications-en-sms-custom).
+
+
 ## 16 Nov 2023
 {: #event-notifications-Nov1623}
 {: release-note}
 
 Support for IBM OpenPages as a IBM Cloud source
 :  OpenPages simplifies data governance, risk management, and regulatory compliance with its highly scalable, AI-powered, and unified GRC platform. You can now send specific events from OpenPages to Event Notifications and route them to various destinations. To know more about OpenPages, see [Enabling event notifications for OpenPages](/docs/openpages?topic=openpages-event-notifications-events).
-
-
 
 ## 01 Nov 2023
 {: #event-notifications-Nov0123}
