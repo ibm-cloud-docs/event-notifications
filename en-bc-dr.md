@@ -14,7 +14,7 @@ subcollection: event-notifications
 
 
 # Understanding business continuity and disaster recovery for {{site.data.keyword.en_short}}
-{: #bc-dr}
+{: #en-bc-dr}
 
 [Disaster recovery](#x2113280){: term} involves a set of policies, tools, and procedures for returning a system, an application, or an entire data center to full operation after a catastrophic interruption. It includes procedures for copying and storing an installed system's essential data in a secure location, and for recovering that data to restore normalcy of operation.
 {: shortdesc}
