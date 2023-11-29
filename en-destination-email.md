@@ -30,7 +30,7 @@ In the default mode, the emails originate from `no-reply@cloud.ibm.com` or `even
 ## Using an {{site.data.keyword.cloud_notm}} email service with default domain
 {: #en-destinations-email-use}
 
-To use the email service destination, add it to a subscription along with the email addresses of interest. Within a single subscription, you can add up to 100 email recipients. The subscription also needs a topic to filter events of interest from your sources. When an event lands in the topic, {{site.data.keyword.en_short}} immediately routes the event notification to your email recipients.
+To use the email service destination, add it to a subscription along with the email addresses of interest. Within a single subscription, you can add up to 10000 email recipients. The subscription also needs a topic to filter events of interest from your sources. When an event lands in the topic, {{site.data.keyword.en_short}} immediately routes the event notification to your email recipients.
 
 If you add an individual to the recipient list who does not want to receive email notifications, the recipient can opt out by clicking a link in the footer of the email. You can track recipients who opt into the {{site.data.keyword.en_short}} dashboard.
 
