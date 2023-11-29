@@ -21,7 +21,7 @@ You can configure a Custom SMS destination in the Destinations tab.
 ## Custom SMS personalised numbers
 {: #en-destinations-sms-custom-numbers}
 
-After creating the destination, you must explicitly request these numbers to use this destination for sending events. To request for numbers [contact us](mailto:mbluemix@in.ibm.com?subject=[Custom%20SMS]%20:%20%20Request%20for%20Presonalised%20numbers&body=Kindly%20provide%20the%20below%20details:%0D%0A%0D%0AInstance%20CRN:%0D%0ADestination%20ID:%0D%0ACountries:%0D%0ARegion:%0D%0APhone%20Number%20Type:%20[short-code,%20alphanumeric,%20long-code).
+After creating the destination, you must explicitly request these numbers to use this destination for sending events. To request for numbers [contact us](mailto:mbluemix@in.ibm.com?subject=[Custom%20SMS]%20:%20%20Request%20for%20Personalised%20numbers&body=Kindly%20provide%20the%20below%20details:%0D%0A%0D%0AInstance%20CRN:%0D%0ADestination%20ID:%0D%0ACountries:%0D%0ARegion:%0D%0APhone%20Number%20Type:%20[short-code,%20alphanumeric,%20long-code]).
 
 Provide the following details: the destination ID, CRN of the event notification instance, along with the list of countries for which you need to send notifications using this destination.
 
