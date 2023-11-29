@@ -97,7 +97,7 @@ SMS segments are character batches (of length 160 characters) of an SMS message,
 
 If a message contains less than 160 characters, then it is considered as one SMS segment. If a message contains more than 160 characters then it is considered as 2 segments, first segment has 160 character and the second segment has 40 characters.
 
-## SMS charges
+## Custom SMS charges
 
 {: #en-destinations-sms-custom-charge}
 
