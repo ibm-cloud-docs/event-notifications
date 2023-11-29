@@ -22,7 +22,7 @@ subcollection: event-notifications
 ## Responsibilities
 {: #ha-responsibilities}
 
-See [Your responsibilities with using {{site.data.keyword.en_short}}](/docs/event-notifications?topic=event-notifications-en-responsibilities).
+For more information about your responsibilities when using {{site.data.keyword.en_short}}, see [Shared responsibilities](/docs/event-notifications?topic=event-notifications-en-responsibilities).
 
 ## What level of availability do I need?
 {: #ha-level}

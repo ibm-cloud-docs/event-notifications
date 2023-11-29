@@ -22,7 +22,7 @@ subcollection: event-notifications
 ## Responsibilities
 {: #bc-dr-responsibilities}
 
-For more information about your responsibilities when using {{site.data.keyword.en_short}}, see [Shared responsibilities for {{site.data.keyword.{{site.data.keyword.en_short}}](/docs/{{site.data.keyword.en_short}}?topic=yourproduct-full-keyref-responsibilities).
+For more information about your responsibilities when using {{site.data.keyword.en_short}}, see [Shared responsibilities](/docs/event-notifications?topic=event-notifications-en-responsibilities).
 
 ## Disaster recovery strategy
 {: #bc-dr-strategy}
