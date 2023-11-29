@@ -11,15 +11,14 @@ subcollection: event-notifications
 {{site.data.keyword.attribute-definition-list}}
 
 # {{site.data.keyword.cloud_notm}} SMS service with Custom SMS
+{: #en-destinations-sms-custom}
 
 ## Configuring a Custom SMS destination
-
 {: #en-destinations-sms-custom}
 
 You can configure a Custom SMS destination in the Destinations tab.
 
 ## Custom SMS personalised numbers
-
 {: #en-destinations-sms-custom-numbers}
 
 After creating the destination, you must explicitly request these numbers to use this destination for sending events. To request for numbers [contact us](mailto:mbluemix@in.ibm.com?subject=[Custom%20SMS]%20:%20%20Request%20for%20Presonalised%20numbers&body=Kindly%20provide%20the%20below%20details:%0D%0A%0D%0AInstance%20CRN:%0D%0ADestination%20ID:%0D%0ACountries:%0D%0ARegion:%0D%0APhone%20Number%20Type:%20[short-code,%20alphanumeric,%20long-code).
@@ -30,7 +29,6 @@ Provisioning the phone numbers may take six to eight weeks depending on the coun
 {: note}
 
 ## Using a Custom SMS destination
-
 {: #en-destinations-sms-custom-use}
 
 To use the SMS service destination, add it to a subscription along with the phone numbers of the recipients. Within a single subscription, you can add up to 3 phone numbers for lite plan and 100 phone numbers for standard plan. The subscription also needs a topic to filter events of interest from your sources. When an event lands in the topic, {{site.data.keyword.en_short}} immediately routes the event notification to your SMS recipients.
@@ -38,7 +36,6 @@ To use the SMS service destination, add it to a subscription along with the phon
 To comply with the regulatory standards, you may need to get a consent (opt-in) from the SMS recipients to receive SMSes from each of the {{site.data.keyword.en_short}} subscriptions.
 
 ### Create a subscription with Custom SMS as destination
-
 {: #en-create-subscription-sms-custom-destination}
 
 1. From the {{site.data.keyword.en_short}} dashboard, click **Subscriptions** in the navigation menu.
@@ -90,7 +87,6 @@ By adding phone numbers, you affirm, on behalf of yourself and your company, tha
 {: note}
 
 ## SMS segment
-
 {: #en-destinations-sms-custom-segment}
 
 SMS segments are character batches (of length 160 characters) of an SMS message, used by carriers to measure the message size.
@@ -98,7 +94,6 @@ SMS segments are character batches (of length 160 characters) of an SMS message,
 If a message contains less than 160 characters, then it is considered as one SMS segment. If a message contains more than 160 characters then it is considered as 2 segments, first segment has 160 character and the second segment has 40 characters.
 
 ## Custom SMS charges
-
 {: #en-destinations-sms-custom-charge}
 
 The SMS charges will vary depending on the country and phone number type. The details will be provided in response to your email request.
