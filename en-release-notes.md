@@ -25,7 +25,7 @@ Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, sec
 {: release-note}
 
 Support for personalised phone numbers via Custom SMS destination
-: Event Notifications provides support for sending SMS from personalised phone numbers using the new destination, Custom SMS. For more information, see [Custom SMS](/docs/event-notifications?topic=event-notifications-en-sms-custom).
+: Event Notifications provides support for sending SMS from personalised phone numbers using the new destination, Custom SMS. For more information, see [Custom SMS](/docs/event-notifications?topic=event-notifications-en-destinations-sms-custom).
 
 
 ## 16 Nov 2023
