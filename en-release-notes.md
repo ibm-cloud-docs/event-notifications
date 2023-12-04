@@ -20,14 +20,6 @@ content-type: release-note
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
 
-## 29 Nov 2023
-{: #event-notifications-Nov2923}
-{: release-note}
-
-Support for personalised phone numbers via Custom SMS destination
-: Event Notifications provides support for sending SMS from personalised phone numbers using the new destination, Custom SMS. For more information, see [Custom SMS](/docs/event-notifications?topic=event-notifications-en-destinations-sms-custom).
-
-
 ## 16 Nov 2023
 {: #event-notifications-Nov1623}
 {: release-note}
