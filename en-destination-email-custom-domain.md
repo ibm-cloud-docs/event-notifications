@@ -100,7 +100,7 @@ When an email is successfully delivered, a "SENT" log is generated. This log pro
 
 Example Delivered Log:
 ```
-An email of size 1xxx bytes is sent to each of the following destinataries: [g*e*m*n*h*a*i@yahoo.co.in], from the sender: t*s*<*o*e*l*@gmail.event-notifications.test.cloud.ibm.com>
+An email of size 1xxx bytes is sent to each of the following destinataries: [g*e*m*n*h*a*i@yahoo.co.in], from the sender: t*s*<*o*e*l*@xyz.com>
 ```
 
 ### 2. Deferred Status
@@ -109,7 +109,7 @@ Emails may be deferred, indicating a temporary delay in delivery. In the context
 
 Example Deferred Log:
 ```
-An email of size 1xxx bytes is deferred to each of the following : [y*s@test.com], from the sender: A*h*i*<*e*t@ashwin.event-notifications.test.cloud.ibm.com>connect to test.com[x.x.x.x]:25: Connection timed out
+An email of size 1xxx bytes is deferred to each of the following : [y*s@test.com], from the sender: A*h*i*<*e*t@xyz.com>connect to test.com[x.x.x.x]:25: Connection timed out
 ```
 
 ### 3. Bounced Status
@@ -120,7 +120,7 @@ User needs to make corrective action in case of bounced emails, as this reduces 
 
 Example Bounced Log:
 ```
-An email of size 1xxx bytes is bounced ,Please check the authentacity of the emails: [g*a*g*n*1*3@in.ibm.com], from the sender: t*s*<*o*e*l*@xyz.event-notifications.test.cloud.ibm.com>host mx0b-001b2d01.pphosted.com[] said: 550 5.1.1 User Unknown (in reply to DATA command
+An email of size 1xxx bytes is bounced ,Please check the authentacity of the emails: [g*a*g*n*1*3@in.ibm.com], from the sender: t*s*<*o*e*l*@xyz.com>host mx0b-001b2d01.pphosted.com[] said: 550 5.1.1 User Unknown (in reply to DATA command
 ```
 
 Common SMTP Error Codes for Bounced Emails:
