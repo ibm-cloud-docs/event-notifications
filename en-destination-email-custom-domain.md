@@ -83,3 +83,67 @@ In the following example snippet, you can find a template with a minimal body th
 ```
 
 For more information on how to create custom templates, follow [these steps](/docs/event-notifications?topic=event-notifications-en-create-en-template).
+
+## Status Tracking for Emails
+
+# Status Tracking of Emails from Custom Domain via IBM Event Notification
+
+## Overview
+
+This section outlines the status tracking system for emails sent from a custom domain using IBM Event Notification. The system generates logs with essential information, including the size of the email and masked from/to email addresses. 
+
+Three primary states are tracked: Delivered, Deferred, and Bounced.
+
+### 1. Delivered Status
+
+When an email is successfully delivered, a "SENT" log is generated. This log provides information about the size of the delivered email and the masked from/to email addresses.
+
+Example Delivered Log:
+```
+An email of size 1xxx bytes is sent to each of the following destinataries: [g*e*m*n*h*a*i@yahoo.co.in], from the sender: t*s*<*o*e*l*@gmail.event-notifications.test.cloud.ibm.com>
+```
+
+### 2. Deferred Status
+
+Emails may be deferred, indicating a temporary delay in delivery. In the context of Postfix and SMTP, deferral occurs when the receiving mail server is temporarily unable to accept the email. The system generates deferred logs until the email is delivered or a timeout occurs. The timeout period for a deferred email is set to 5 days and is retried with exponential time out.
+
+Example Deferred Log:
+```
+An email of size 1xxx bytes is deferred to each of the following : [y*s@test.com], from the sender: A*h*i*<*e*t@ashwin.event-notifications.test.cloud.ibm.com>connect to test.com[x.x.x.x]:25: Connection timed out
+```
+
+### 3. Bounced Status
+
+If an email bounces, it means the delivery was unsuccessful. The log for a bounced email includes the error reason and SMTP error code. SMTP error codes provide specific details about the nature of the delivery failure. Event Notification DOES NOT retry bounced email.
+
+User needs to make corrective action in case of bounced emails, as this reduces the reputation of the sender.
+
+Example Bounced Log:
+```
+An email of size 1xxx bytes is bounced ,Please check the authentacity of the emails: [g*a*g*n*1*3@in.ibm.com], from the sender: t*s*<*o*e*l*@xyz.event-notifications.test.cloud.ibm.com>host mx0b-001b2d01.pphosted.com[] said: 550 5.1.1 User Unknown (in reply to DATA command
+```
+
+Common SMTP Error Codes for Bounced Emails:
+SMTP Code 500: Syntax error, command unrecognized.
+SMTP Code 501: Syntax error in parameters or arguments.
+SMTP Code 502: Command not implemented.
+SMTP Code 503: Bad sequence of commands.
+SMTP Code 504: Command parameter not implemented.
+SMTP Code 510: Bad email address.
+SMTP Code 511: Bad email address syntax.
+SMTP Code 512: DNS domain not found.
+SMTP Code 513: Bad address syntax.
+SMTP Code 523: Recipient mailbox full.
+SMTP Code 530: Access denied.
+SMTP Code 541: Recipient address rejected.
+SMTP Code 550: Requested action not taken: mailbox unavailable.
+SMTP Code 551: User not local; please try <forward-path>.
+SMTP Code 552: Requested mail action aborted: exceeded storage allocation.
+SMTP Code 553: Mailbox name not allowed.
+SMTP Code 554: Transaction failed.
+
+Refer to the SMTP error code to understand the reason for the bounce and take appropriate action, such as updating recipient email addresses or resolving issues with the recipient's mailbox.
+
+## Conclusion
+
+The status tracking system ensures users can monitor the delivery status of emails sent from a custom domain via IBM Event Notification. By examining the logs, users can swiftly identify and address any issues encountered during the email delivery process, promoting effective communication with recipients.
