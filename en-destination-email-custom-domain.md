@@ -1,13 +1,11 @@
 ---
-
 copyright:
   years: 2021, 2023
-lastupdated: "2023-08-29"
+lastupdated: "2023-11-29"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email
 
 subcollection: event-notifications
-
 ---
 
 {{site.data.keyword.attribute-definition-list}}
@@ -18,8 +16,8 @@ subcollection: event-notifications
 This capability is available only for selected users. If you would like to leverage this capability, [contact us](mailto:mbluemix@in.ibm.com?subject=[Custom%20Email%20Domain]%20:%20%20Request%20for%20Allowlisting&body=Kindly%20provide%20the%20below%20details:%0D%0A%0D%0AEvent%20Notifications%20Instance%20ID:%0D%0AIBM%20Account%20ID:%0D%0AIBM%20User%20ID:%0D%0ARegion:).
 {: tip}
 
-## Configuring a webhook destination
-{: #en-destinations-custom-email-webhook}
+## Configuring a Custom Email destination
+{: #en-destinations-custom-email}
 
 You can configure a custom email destination in the Destinations tab. As part of the configuration, enter the domain name to be used for sending emails.
 
@@ -28,13 +26,18 @@ You can configure a custom email destination in the Destinations tab. As part of
 
 After you create the destination with your domain name, make sure its validated for the right ownership. This will prevent misuse of your domain and to keep away from bad actors.
 To verify your custom domain name, follow these steps:
+
 1. Select the configure overflow menu for the destination you want to verify.
 2. Create Sender Policy Framework (SPF), which is used to authenticate the sender of an email. SPF specifies the mail servers that are allowed to send email for your domain.
-  * Open your DNS hosting provider for the domain name configured
-  * Create a new TXT record with your domain name registerer with the name and value provided in the configure screen for SPF
+
+- Open your DNS hosting provider for the domain name configured
+- Create a new TXT record with your domain name registerer with the name and value provided in the configure screen for SPF
+
 3. Create DomainKeys Identified Mail (DKIM), which allows an organization to take responsibility for transmitting a message by signing it. DKIM allows the receiver to check the email that claimed to have come from a specific domain, is authorized by the owner of that domain.
-  * Open your DNS hosting provider for the domain name configured
-  * Create a new TXT record with your domain name registerer with the name and value provided in the configure screen for DKIM
+
+- Open your DNS hosting provider for the domain name configured
+- Create a new TXT record with your domain name registerer with the name and value provided in the configure screen for DKIM
+
 4. Save the TXT records.
 5. In the destination verify screen, click on Verify buttons for both SPF and DKIM.
 
@@ -74,8 +77,8 @@ In the following example snippet, you can find a template with a minimal body th
 ```
 <html>
   <body>
-    {{event.custom_variable_from_payload}} 
-  </body> 
+    {{event.custom_variable_from_payload}}
+  </body>
 </html>
 ```
 
