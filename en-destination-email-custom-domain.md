@@ -120,7 +120,7 @@ User needs to make corrective action in case of bounced emails, as this reduces 
 
 Example Bounced Log:
 ```
-An email of size 1xxx bytes is bounced ,Please check the authentacity of the emails: [g*a*g*n*1*3@in.ibm.com], from the sender: t*s*<*o*e*l*@xyz.com>host mx0b-001b2d01.pphosted.com[] said: 550 5.1.1 User Unknown (in reply to DATA command
+An email of size 1xxx bytes is bounced ,Please check the authentacity of the emails: [g*a*g*n*1*3@in.ibm.com], from the sender: t*s*<*o*e*l*@xyz.com>host xyz.pphosted.com[] said: 550 5.1.1 User Unknown (in reply to DATA command
 ```
 
 Common SMTP Error Codes for Bounced Emails:
