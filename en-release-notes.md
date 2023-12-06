@@ -27,8 +27,6 @@ Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, sec
 Support for IBM OpenPages as a IBM Cloud source
 :  OpenPages simplifies data governance, risk management, and regulatory compliance with its highly scalable, AI-powered, and unified GRC platform. You can now send specific events from OpenPages to Event Notifications and route them to various destinations. To know more about OpenPages, see [Enabling event notifications for OpenPages](/docs/openpages?topic=openpages-event-notifications-events).
 
-
-
 ## 01 Nov 2023
 {: #event-notifications-Nov0123}
 {: release-note}
