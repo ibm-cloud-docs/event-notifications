@@ -50,9 +50,9 @@ c. The DNS propagation may take up to 72 hours to be updated across the internet
 ## Using a Custom email destination
 {: #en-destinations-custom-email-use}
 
-To use the email service destination, add it to a subscription along with the email addresses of interest. Within a single subscription, you can add up to 100 email recipients. The subscription also needs a topic to filter events of interest from your sources. When an event lands in the topic, Event Notifications immediately routes the event notification to your email recipients.
+To use the email service destination, add it to a subscription along with the email addresses of interest. Within a single subscription, you can add up to 100 email recipients. The subscription also needs a topic to filter events of interest from your sources. When an event lands in the topic, {{site.data.keyword.en_short}} immediately routes the event notification to your email recipients.
 
-If you add an individual to the recipient list who does not want to receive email notifications, the recipient can opt out by clicking a link in the footer of the email. You can track recipients who opt into the Event Notifications dashboard.
+If you add an individual to the recipient list who does not want to receive email notifications, the recipient can opt out by clicking a link in the footer of the email. You can track recipients who opt into the {{site.data.keyword.en_short}} dashboard.
 
 By adding email addresses, you represent on behalf of yourself and your company that you inform the individuals, to whom the added emails pertain, of their addition to this recipient list and purpose thereof, and have the required consents to do so.
 {: note}
@@ -61,14 +61,14 @@ After a subscription is created, the list of users in the Invited tab automatica
 
 Opt-in message contains user or account who invited the recipient, the name of the subscription, the purpose of the notifications, the frequency of expected notifications, a way to accept or reject the invitation, and expiration time for the invitation.
 
-The Event Notifications are only sent to the opted-in recipients.
+The {{site.data.keyword.en_short}} are only sent to the opted-in recipients.
 
 You can either resend the invitation or remove the recipient from the Invited list. In the Invited tab, click and select the three vertical dots (overflow menu) and select Resend invitation for the recipient email address, to whom you need to resend the invitation. For deleting a user from the invited list, in the Invited tab, click the three vertical dots (overflow menu) and select Delete for the recipient email address, to whom you need to remove from the Invited list. For adding back a recipient after opted-out or not responded within the stipulated time that is mentioned in the invite email, you need to send a mail to the Reply to email address mentioned in the initial invite mail.
 
 ## Email Templates
 {: #en-destinations-custom-email-templates}
 
-Event Notifications offers users the flexibility of utilizing custom email destinations along with templates. Users have the option to provide HTML templates containing a payload. When sending notifications, the service integrates these templates seamlessly, replacing template variables with corresponding variables from the payload. This allows for dynamic and personalized email content for recipients.
+{{site.data.keyword.en_short}} offers users the flexibility of utilizing custom email destinations along with templates. Users have the option to provide HTML templates containing a payload. When sending notifications, the service integrates these templates seamlessly, replacing template variables with corresponding variables from the payload. This allows for dynamic and personalized email content for recipients.
 
 In cases where a custom template is not available, the system automatically defaults to the "ibmenhtmlbody" template. If the "ibmenhtmlbody" template is also unavailable, the system gracefully fallbacks to the "ibmendefaultlong" template, ensuring a smooth and consistent user experience. This robust template selection mechanism guarantees that notifications are always dispatched with relevant and appealing content, maximizing their impact and effectiveness.
 
@@ -84,66 +84,58 @@ In the following example snippet, you can find a template with a minimal body th
 
 For more information on how to create custom templates, follow [these steps](/docs/event-notifications?topic=event-notifications-en-create-en-template).
 
-## Status Tracking for Emails
+## Tracking Email Status
 
-# Status Tracking of Emails from Custom Domain via IBM Event Notification
+This portion of the documentation provides an overview of the status tracking system that is integrated with {{site.data.keyword.en_short}} for emails sent from a custom domain. The system generates logs containing crucial data, such as the size of the email and masked sender and recipient email addresses, to ensure privacy and security.
+The system tracks three primary email statuses: Delivered, Deferred, and Bounced, providing valuable insights into the success and potential issues with email delivery.
 
-## Overview
+- ### Delivered
+When an email is delivered successfully, a "SENT" log is created. The log contains essential data, such as the size of the delivered email and the masked sender and recipient email addresses, to maintain privacy and security.
+For example, a delivered log may look like this:
 
-This section outlines the status tracking system for emails sent from a custom domain using IBM Event Notification. The system generates logs with essential information, including the size of the email and masked from/to email addresses. 
-
-Three primary states are tracked: Delivered, Deferred, and Bounced.
-
-### 1. Delivered Status
-
-When an email is successfully delivered, a "SENT" log is generated. This log provides information about the size of the delivered email and the masked from/to email addresses.
-
-Example Delivered Log:
 ```
 An email of size 1xxx bytes is sent to each of the following destinataries: [g*e*m*n*h*a*i@yahoo.co.in], from the sender: t*s*<*o*e*l*@xyz.com>
 ```
 
-### 2. Deferred Status
+- ### Deferred
 
-Emails may be deferred, indicating a temporary delay in delivery. In the context of Postfix and SMTP, deferral occurs when the receiving mail server is temporarily unable to accept the email. The system generates deferred logs until the email is delivered or a timeout occurs. The timeout period for a deferred email is set to 5 days and is retried with exponential time out.
+When an email delivery is temporarily delayed, it is considered deferred. In Postfix and SMTP contexts, deferral occurs when the receiving mail server cannot accept the email for a short period due to technical reasons. The system logs deferred emails until they are delivered or a timeout period of 5 days elapses. During this time, the email is retried with an exponential time out to ensure successful delivery.
+For example, a deferred log may look like this:
 
-Example Deferred Log:
 ```
 An email of size 1xxx bytes is deferred to each of the following : [y*s@test.com], from the sender: A*h*i*<*e*t@xyz.com>connect to test.com[x.x.x.x]:25: Connection timed out
 ```
 
-### 3. Bounced Status
+- ### Bounced
 
-If an email bounces, it means the delivery was unsuccessful. The log for a bounced email includes the error reason and SMTP error code. SMTP error codes provide specific details about the nature of the delivery failure. Event Notification DOES NOT retry bounced email.
+When an email fails to deliver successfully, it is marked as a bounce. The log for a bounced email contains information about the error reason and SMTP error code. SMTP error codes provide specific details about the nature of the delivery failure. {{site.data.keyword.en_short}} does not attempt to retry bounced emails.
+It is crucial for users to take corrective action in case of bounced emails, as this can negatively impact the sender's reputation.
+For example, a bounced log may look like this:
 
-User needs to make corrective action in case of bounced emails, as this reduces the reputation of the sender.
-
-Example Bounced Log:
 ```
 An email of size 1xxx bytes is bounced ,Please check the authentacity of the emails: [g*a*g*n*1*3@in.ibm.com], from the sender: t*s*<*o*e*l*@xyz.com>host xyz.pphosted.com[] said: 550 5.1.1 User Unknown (in reply to DATA command
 ```
 
-Common SMTP Error Codes for Bounced Emails:
-SMTP Code 500: Syntax error, command unrecognized.
-SMTP Code 501: Syntax error in parameters or arguments.
-SMTP Code 502: Command not implemented.
-SMTP Code 503: Bad sequence of commands.
-SMTP Code 504: Command parameter not implemented.
-SMTP Code 510: Bad email address.
-SMTP Code 511: Bad email address syntax.
-SMTP Code 512: DNS domain not found.
-SMTP Code 513: Bad address syntax.
-SMTP Code 523: Recipient mailbox full.
-SMTP Code 530: Access denied.
-SMTP Code 541: Recipient address rejected.
-SMTP Code 550: Requested action not taken: mailbox unavailable.
-SMTP Code 551: User not local; please try <forward-path>.
-SMTP Code 552: Requested mail action aborted: exceeded storage allocation.
-SMTP Code 553: Mailbox name not allowed.
-SMTP Code 554: Transaction failed.
 
-Refer to the SMTP error code to understand the reason for the bounce and take appropriate action, such as updating recipient email addresses or resolving issues with the recipient's mailbox.
+#### Common SMTP Error Codes for Bounced Emails:
+| SMTP Code | Description |
+| --- | --- | 
+| 500 | Syntax error, command unrecognised | 
+| 501 | Syntax error in parameters or arguments | 
+| 502 | Command not implemented | 
+| 503 | Bad sequence of commands | 
+| 504 | Command parameter not implemented | 
+| 510 | Bad email address | 
+| 511 | Bad email address syntax | 
+| 512 | DNS domain not found | 
+| 513 | Bad address syntax | 
+| 523 | Recipient mailbox full | 
+| 530 | Access denied | 
+| 541 | Recipient address rejected | 
+| 550 | Requested action not taken: mailbox unavailable | 
+| 551 | User not local; please try | 
+| 552 | Requested mail action aborted: exceeded storage allocation | 
+| 553 | Mailbox name not allowed | 
+| 554 | Transaction failed |
 
-## Conclusion
-
-The status tracking system ensures users can monitor the delivery status of emails sent from a custom domain via IBM Event Notification. By examining the logs, users can swiftly identify and address any issues encountered during the email delivery process, promoting effective communication with recipients.
+To understand the reason for the bounce, refer to the above table and take appropriate action, such as updating recipient email addresses or resolving issues with the recipient's mailbox.
