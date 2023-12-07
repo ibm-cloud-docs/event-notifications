@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2021, 2023
-lastupdated: "2023-11-29"
+lastupdated: "2023-12-07"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email
 
@@ -114,7 +114,7 @@ It is crucial for users to take corrective action in case of bounced emails, as 
 For example, a bounced log may look like this:
 
 ```
-An email of size 1xxx bytes is bounced ,Please check the authentacity of the emails: [g*a*g*n*1*3@in.ibm.com], from the sender: t*s*<*o*e*l*@xyz.com>host xyz.pphosted.com[] said: 550 5.1.1 User Unknown (in reply to DATA command
+An email of size 1xxx bytes is bounced ,Please check the authentacity of the emails: [g*a*g*n*1*3@in.ibm.com], from the sender: t*s*<*o*e*l*@xyz.com>host xyz.pphosted.com[] said: 550 5.1.1 User Unknown (in reply to DATA command )
 ```
 
 
@@ -123,23 +123,24 @@ An email of size 1xxx bytes is bounced ,Please check the authentacity of the ema
 
 | SMTP Code | Description |
 | --- | --- | 
-| 500 | Syntax error, command unrecognised | 
-| 501 | Syntax error in parameters or arguments | 
-| 502 | Command not implemented | 
-| 503 | Bad sequence of commands | 
-| 504 | Command parameter not implemented | 
-| 510 | Bad email address | 
-| 511 | Bad email address syntax | 
-| 512 | DNS domain not found | 
-| 513 | Bad address syntax | 
-| 523 | Recipient mailbox full | 
-| 530 | Access denied | 
-| 541 | Recipient address rejected | 
-| 550 | Requested action not taken: mailbox unavailable | 
-| 551 | User not local; please try | 
-| 552 | Requested mail action aborted: exceeded storage allocation | 
-| 553 | Mailbox name not allowed | 
-| 554 | Transaction failed |
+| `500` | Syntax error, command unrecognised | 
+| `501` | Syntax error in parameters or arguments | 
+| `502` | Command not implemented | 
+| `503` | Bad sequence of commands | 
+| `504` | Command parameter not implemented | 
+| `510` | Bad email address | 
+| `511` | Bad email address syntax | 
+| `512` | DNS domain not found | 
+| `513` | Bad address syntax | 
+| `523` | Recipient mailbox full | 
+| `530` | Access denied | 
+| `541` | Recipient address rejected | 
+| `550` | Requested action not taken: mailbox unavailable | 
+| `551` | User not local; please try | 
+| `552` | Requested mail action aborted: exceeded storage allocation | 
+| `553` | Mailbox name not allowed | 
+| `554` | Transaction failed |
 {: caption="Table 1. Common SMTP Error Codes for Bounced Emails" caption-side="top"}
+
 
 To understand the reason for the bounce, refer to the above table and take appropriate action, such as updating recipient email addresses or resolving issues with the recipient's mailbox.
