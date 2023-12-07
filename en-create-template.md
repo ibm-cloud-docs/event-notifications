@@ -22,11 +22,10 @@ completion-time: 10m
 {: toc-completion-time="10m"}
 
 Create an {{site.data.keyword.en_short}} template. Template is a pre-defined layout, that may include content like images, text and dynamic content based on event. Rather than creating a new content from scratch each time, you can use a template as a base and configure them in subscription. {{site.data.keyword.en_short}} supports the following templates:
+{: shortdesc}
 
 - Custom Email notification
 - Custom Email invitation
-
-{: shortdesc}
 
 ## Create a template
 {: #en-create-template}
