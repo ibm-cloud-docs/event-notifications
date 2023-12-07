@@ -35,6 +35,7 @@ Currently this functionality supports following destinations:
 By following the steps outlined below, you will be able to quickly and efficiently ensure the integrity of your connections.
 
 ## 1. Prerequisites
+{: #en-test-destination-prereqs}
 
 Before using this feature, ensure you have the following prerequisites:
 
@@ -42,15 +43,18 @@ Before using this feature, ensure you have the following prerequisites:
 - Access to the Event Notifications UI or valid credentials for the API calls
 
 ## 2. Accessing the Feature
+{: #en-test-destination-accessing-feature}
 
 1. Navigate to the destinations tab from the left navigation menu on the UI or get the required credentials to run the Test API.
 2. To test each destination, simply click on the three dots and select the 'Test' option.
 
 ## 3. Initiating the Test
+{: #en-test-destination-initiating-test}
 
 1. Select the 'Test' option and wait for the test to finish.
 
 ## 4. Reviewing Test Results
+{: #en-test-destination-reviewing-results}
 
 Once the test is completed, you will be presented with the results. These results will typically include:
 
