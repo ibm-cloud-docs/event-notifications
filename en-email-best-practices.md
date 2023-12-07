@@ -64,8 +64,8 @@ Thus, it is important to maintain a responsible and ethical approach to email co
   
 With the implementation of DMARC in addition to DKIM and SPF, your email messages will be more secure, and you'll have better control over how emails claiming to be from your domain are treated by email service providers, enhancing your email deliverability and security.
 
- ## Handling Emails in Spam/Junk Folders
- {: #en-email-spamhandling}
+## Handling Emails in Spam/Junk Folders
+{: #en-email-spamhandling}
  
 It's important for users to understand that despite following best practices, some legitimate emails might still end up in their spam or junk folders. This can occur for various reasons, such as user preferences or the occasional marking of emails as spam by other recipients.
 
