@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-10-10"
+lastupdated: "2023-12-07"
 
 keywords: event notifications, event notification, notifications, integrations, destinations, test destinations
 
