@@ -85,6 +85,7 @@ In the following example snippet, you can find a template with a minimal body th
 For more information on how to create custom templates, follow [these steps](/docs/event-notifications?topic=event-notifications-en-create-en-template).
 
 ## Tracking Email Status
+{: #en-destinations-custom-email-tracking-status}
 
 This portion of the documentation provides an overview of the status tracking system that is integrated with {{site.data.keyword.en_short}} for emails sent from a custom domain. The system generates logs containing crucial data, such as the size of the email and masked sender and recipient email addresses, to ensure privacy and security.
 The system tracks three primary email statuses: Delivered, Deferred, and Bounced, providing valuable insights into the success and potential issues with email delivery.
@@ -118,6 +119,8 @@ An email of size 1xxx bytes is bounced ,Please check the authentacity of the ema
 
 
 #### Common SMTP Error Codes for Bounced Emails:
+{: #en-destinations-custom-email-status-smtp-error-codes}
+
 | SMTP Code | Description |
 | --- | --- | 
 | 500 | Syntax error, command unrecognised | 
@@ -137,5 +140,6 @@ An email of size 1xxx bytes is bounced ,Please check the authentacity of the ema
 | 552 | Requested mail action aborted: exceeded storage allocation | 
 | 553 | Mailbox name not allowed | 
 | 554 | Transaction failed |
+{: caption="Table 1. Common SMTP Error Codes for Bounced Emails" caption-side="top"}
 
 To understand the reason for the bounce, refer to the above table and take appropriate action, such as updating recipient email addresses or resolving issues with the recipient's mailbox.
