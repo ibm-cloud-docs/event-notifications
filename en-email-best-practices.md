@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-11-07"
+lastupdated: "2023-12-07"
 
 keywords: event notifications, event notification, notifications, email, custom domain, best practices
 
