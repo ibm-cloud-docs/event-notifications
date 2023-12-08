@@ -211,27 +211,29 @@ Email personalization refers to the practice of tailoring email content and mess
 
 There are two types of templates: Invitation templates and Notification templates. An Invitation template is used to send customized email invitations to all those added to the subscriptions, while a Notification template is used when sending an email for an event. It can include HTML tags, handlebars support, and personalization support.
 
-**FAQs for Client Timeouts**
+## FAQs for Client Timeouts**
+{: #faq-en-notifications-client-timeout}
+{: faq}
 
-**1. What is a client timeout?**
+1. What is a client timeout?**
 A client timeout refers to the period during which a client (such as a web browser or application) waits for a response from a server. If the server fails to respond within this specified time frame, a timeout occurs, indicating that the connection has been lost or the server is unresponsive.
 
-**2. Why do client timeouts occur?**
+2. Why do client timeouts occur?**
 Client timeouts can occur due to various reasons, such as slow network connectivity, server overload, misconfigurations, or issues with the client-side application. When a client doesn't receive a response from the server within the defined timeout period, it assumes there's a problem and terminates the connection.
 
-**3. How can I determine if a client timeout is happening?**
+3. How can I determine if a client timeout is happening?**
 You may encounter client timeouts when trying to access a website, application, or service. Common indicators include error messages like "Connection Timed Out" or "Request Timed Out." Monitoring tools and logs on the server side may also provide insights into timeout occurrences.
 
-**4. How can I troubleshoot client timeouts?**
-- **Check your internet connection:** Ensure that your internet connection is stable and not experiencing any disruptions.
-- **Verify server status:** Confirm that Event Notification Service is available and no incidents have been reported.
-- **Adjust timeout settings:** Some applications allow users to adjust timeout settings. If possible, consider extending the timeout duration to accommodate potential delays.
+4. How can I troubleshoot client timeouts?**
+- Check your internet connection:** Ensure that your internet connection is stable and not experiencing any disruptions.
+- Verify server status:** Confirm that Event Notification Service is available and no incidents have been reported.
+- Adjust timeout settings:** Some applications allow users to adjust timeout settings. If possible, consider extending the timeout duration to accommodate potential delays.
 
-**5. How can developers address client timeouts in their applications?**
+5. How can developers address client timeouts in their applications?**
 Developers can implement various strategies, including optimizing code for better performance, utilizing asynchronous programming, and implementing retry mechanisms. Additionally, providing users with clear error messages and guidance on troubleshooting can enhance the overall user experience.
 
-**6. Are client timeouts always a result of server issues?**
+6. Are client timeouts always a result of server issues?**
 Not necessarily. While server-related problems are common causes of client timeouts, issues on the client side, such as network problems or misconfigured settings, can also contribute to timeouts. It's essential to investigate both client and server aspects when troubleshooting timeout issues.
 
-**7. What should I do if I frequently experience client timeouts?**
+7. What should I do if I frequently experience client timeouts?**
 If you consistently encounter client timeouts, consider reaching out to the support team.
