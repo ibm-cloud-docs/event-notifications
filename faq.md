@@ -211,10 +211,6 @@ Email personalization refers to the practice of tailoring email content and mess
 
 There are two types of templates: Invitation templates and Notification templates. An Invitation template is used to send customized email invitations to all those added to the subscriptions, while a Notification template is used when sending an email for an event. It can include HTML tags, handlebars support, and personalization support.
 
-## FAQs for Client Timeouts
-{: #faq-en-notifications-client-timeout}
-{: faq}
-
 ## What is a client timeout?
 {: #faq-en-notifications-timeout}
 {: faq}
