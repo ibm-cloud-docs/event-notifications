@@ -214,21 +214,25 @@ There are two types of templates: Invitation templates and Notification template
 ## What is a client timeout?
 {: #faq-en-notifications-timeout}
 {: faq}
+
 A client timeout refers to the period during which a client (such as a web browser or application) waits for a response from a server. If the server fails to respond within this specified time frame, a timeout occurs, indicating that the connection has been lost or the server is unresponsive.
 
 ## Why do client timeouts occur?
 {: #faq-en-notifications-why-timeout}
 {: faq}
+
 Client timeouts can occur due to various reasons, such as slow network connectivity, server overload, misconfigurations, or issues with the client-side application. When a client doesn't receive a response from the server within the defined timeout period, it assumes there's a problem and terminates the connection.
 
 ## How can I determine if a client timeout is happening?
 {: #faq-en-notifications-cause}
 {: faq}
+
 You may encounter client timeouts when trying to access a website, application, or service. Common indicators include error messages like "Connection Timed Out" or "Request Timed Out." Monitoring tools and logs on the server side may also provide insights into timeout occurrences.
 
 ## How can I troubleshoot client timeouts?
 {: #faq-en-notifications-client-timeout-troubleshoot}
 {: faq}
+
 - Check your internet connection: Ensure that your internet connection is stable and not experiencing any disruptions.
 - Verify server status: Confirm that Event Notification Service is available and no incidents have been reported.
 - Adjust timeout settings: Some applications allow users to adjust timeout settings. If possible, consider extending the timeout duration to accommodate potential delays.
@@ -236,14 +240,17 @@ You may encounter client timeouts when trying to access a website, application, 
 ## How can developers address client timeouts in their applications?
 {: #faq-en-notifications-timeout-address}
 {: faq}
+
 Developers can implement various strategies, including optimizing code for better performance, utilizing asynchronous programming, and implementing retry mechanisms. Additionally, providing users with clear error messages and guidance on troubleshooting can enhance the overall user experience.
 
 ## Are client timeouts always a result of server issues?
 {: #faq-en-notifications-client-timeout-server}
 {: faq}
+
 Not necessarily. While server-related problems are common causes of client timeouts, issues on the client side, such as network problems or misconfigured settings, can also contribute to timeouts. It's essential to investigate both client and server aspects when troubleshooting timeout issues.
 
 ## What should I do if I frequently experience client timeouts?
 {: #faq-en-notifications-client-timeout-action}
 {: faq}
+
 If you consistently encounter client timeouts, consider reaching out to the support team.
