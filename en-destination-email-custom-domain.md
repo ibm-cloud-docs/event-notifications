@@ -6,10 +6,6 @@ lastupdated: "2024-01-03"
 keywords: event-notifications, event notifications, about event notifications, destinations, email
 
 subcollection: event-notifications
-
-content-type: tutorial
-account-plan: lite, standard
-completion-time: 7m
 ---
 
 {{site.data.keyword.attribute-definition-list}}
@@ -66,6 +62,7 @@ The {{site.data.keyword.en_short}} are only sent to the opted-in recipients.
 You can either resend the invitation or remove the recipient from the Invited list. In the Invited tab, click and select the three vertical dots (overflow menu) and select Resend invitation for the recipient email address, to whom you need to resend the invitation. For deleting a user from the invited list, in the Invited tab, click the three vertical dots (overflow menu) and select Delete for the recipient email address, to whom you need to remove from the Invited list. For adding back a recipient after opted-out or not responded within the stipulated time that is mentioned in the invite email, you need to send a mail to the Reply to email address mentioned in the initial invite mail.
 
 ## Opting out of Event Notifications managed opt-in capability
+{: #en-destination-email-custom-domain-opt-out-desc}
 
 {{site.data.keyword.en_short}} provides users with the flexibility to bypass the traditional subscription flow by offering an opt-out capability. With this feature, users can conveniently send notifications by specifying the desired email addresses and templates through the send notifications payload, streamlining the process and enhancing user control over communication preferences. By default opting out functionality is not enabled for the security purposes and to prevent fraud, detection as well as it helps protect users's reputation as a sender. More information about it and to get it enabled follow [these steps](/docs/event-notifications?topic=event-notifications-en-destination-email-custom-domain-opt-out).
 
