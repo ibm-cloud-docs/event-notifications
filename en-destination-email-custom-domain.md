@@ -10,7 +10,7 @@ subcollection: event-notifications
 
 {{site.data.keyword.attribute-definition-list}}
 
-# {{site.data.keyword.cloud_notm}} Email service with custom domain
+# {{site.data.keyword.cloud_notm}} Email Service with Custom domain
 {: #en-destinations-custom-domain}
 
 This capability is available only for selected users. If you would like to leverage this capability, [contact us](mailto:mbluemix@in.ibm.com?subject=[Custom%20Email%20Domain]%20:%20%20Request%20for%20Allowlisting&body=Kindly%20provide%20the%20below%20details:%0D%0A%0D%0AEvent%20Notifications%20Instance%20ID:%0D%0AIBM%20Account%20ID:%0D%0AIBM%20User%20ID:%0D%0ARegion:).
@@ -64,7 +64,7 @@ You can either resend the invitation or remove the recipient from the Invited li
 ## Opting out of Event Notifications managed opt-in capability
 {: #en-destination-email-custom-domain-opt-out-desc}
 
-{{site.data.keyword.en_short}} provides users with the flexibility to bypass the traditional subscription flow by offering an opt-out capability. With this feature, users can conveniently send notifications by specifying the desired email addresses and templates through the send notifications payload, streamlining the process and enhancing user control over communication preferences. By default opting out functionality is not enabled for the security purposes and to prevent fraud, detection as well as it helps protect users's reputation as a sender. More information about it and to get it enabled follow [these steps](/docs/event-notifications?topic=event-notifications-en-destination-email-custom-domain-opt-out).
+{{site.data.keyword.en_short}} provides users with the flexibility to bypass the traditional subscription flow by offering an opt-out capability. With this feature, users can conveniently send notifications by specifying the desired email addresses and templates through the send notifications payload, streamlining the process and enhancing user control over communication preferences. By default opting out functionality is not enabled for the security purposes and to prevent fraud, detection as well as it helps protect users's reputation as a sender. More information about it and to get it enabled follow [this section](/docs/event-notifications?topic=event-notifications-en-destinations-custom-domain-opt-out).
 
 ## Email Templates
 {: #en-destinations-custom-email-templates}
