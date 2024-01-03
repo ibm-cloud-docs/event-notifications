@@ -34,7 +34,7 @@ toc:
             - en-destination-email-custom-domain.md
             - en-destination-email-custom-domain-status.md
             - en-destination-email-custom-domain-opt-out.md
-            - en-destination-sms.md
+          - en-destination-sms.md
           - topicgroup:
               label: Push Notifications
               topics:   

@@ -29,7 +29,7 @@ In the default mode, the emails originate from `no-reply@cloud.ibm.com` or `even
 ## Adding an email service destination
 {: #en-destinations-email-add}
 
-Upon the creation of a new instance, you will notice the presence of the  pre-configured `{{site.data.keyword.cloud_notm}} Email Service` in the destination tab. This pre-configured email destination is poised to meet your immediate communication needs, providing a hassle-free setup for instant usability. Follow [the detailed steps](/docs/event-notifications?topic=event-notifications-en-destinations-default-domain) to get started with default domain email destination
+Upon the creation of a new instance, you will notice the presence of the  pre-configured `{{site.data.keyword.cloud_notm}} Email Service` in the destination tab. This pre-configured email destination is poised to meet your immediate communication needs, providing a hassle-free setup for instant usability. Follow [the detailed steps](/docs/event-notifications?topic=event-notifications-en-destination-email-destination-default) to get started with default domain email destination
 
 Under Add destinations list, `Custom Email` destination is available to create. This unique option empowers you to tailor your communication by adding your own domain. You now have the flexibility to send emails using the email address associated with your specific domain, creating a personalized touch to your correspondence. Follow [the detailed steps](/docs/event-notifications?topic=event-notifications-en-destinations-custom-domain) to get started with custom domain email destination.
 

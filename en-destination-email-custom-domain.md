@@ -8,8 +8,8 @@ keywords: event-notifications, event notifications, about event notifications, d
 subcollection: event-notifications
 
 content-type: tutorial
-account-plan: standard
-completion-time: 10m
+account-plan: lite, standard
+completion-time: 7m
 ---
 
 {{site.data.keyword.attribute-definition-list}}
@@ -91,4 +91,4 @@ For more information on how to create custom templates, follow [these steps](/do
 ## Tracking Email Status
 {: #en-destinations-custom-email-tracking-status}
 
-This capability allows users to monitor the delivery status of emails sent through a Custom Email destination, ensuring transparency and enhancing the overall user experience. For more information, follow [these steps](/docs/event-notifications?topic=event-notifications-en-destinations-custom-email-status).
+This capability allows users to monitor the delivery status of emails sent through a Custom Email destination, ensuring transparency and enhancing the overall user experience. For more information, follow [these steps](/docs/event-notifications?topic=event-notifications-en-destination-custom-domain-status).

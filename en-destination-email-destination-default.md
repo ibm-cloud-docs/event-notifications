@@ -10,14 +10,14 @@ subcollection: event-notifications
 
 content-type: tutorial
 account-plan: lite, standard
-completion-time: 10m
+completion-time: 3m
 
 ---
 
 {{site.data.keyword.attribute-definition-list}}
 
 ## {{site.data.keyword.cloud_notm}} Email Service with default domain
-{: #en-destinations-default-domain}
+{: #en-destination-email-destination-default}
 
 To use the email service destination, add it to a subscription along with the email addresses of interest. Within a single subscription, you can add up to 100 email recipients. The subscription also needs a topic to filter events of interest from your sources. When an event lands in the topic, {{site.data.keyword.en_short}} immediately routes the event notification to your email recipients.
 
