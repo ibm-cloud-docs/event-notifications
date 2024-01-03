@@ -7,11 +7,6 @@ lastupdated: "2024-01-03"
 keywords: event-notifications, event notifications, about event notifications, destinations, email
 
 subcollection: event-notifications
-
-content-type: tutorial
-account-plan: lite, standard
-completion-time: 10m
-
 ---
 
 {{site.data.keyword.attribute-definition-list}}

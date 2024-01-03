@@ -6,15 +6,11 @@ lastupdated: "2024-01-03"
 keywords: event-notifications, event notifications, about event notifications, destinations, email
 
 subcollection: event-notifications
-
-content-type: tutorial
-account-plan: lite, standard
-completion-time: 10m
 ---
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Opting Out of Event Notifications with Custom Domain Email Opt-In
+# Custom domain Email Opt-out functionality
 {: #en-destinations-custom-domain-opt-out}
 
 {{site.data.keyword.en_short}} offers users a versatile option to deviate from the conventional subscription process by introducing an opt-out capability. This feature empowers users to seamlessly send notifications, allowing them to specify their preferred email addresses and templates within the send notifications payload. This not only simplifies the notification process but also elevates user control over their communication preferences.
@@ -77,6 +73,7 @@ This questionnaire ensures that users have the flexibility to tailor their subsc
 1. Add required email Ids in the **Watchlist** section. And to know more about other options while creating a support case refer [here](https://{DomainName}/docs/get-support?topic=get-support-open-case){: external}.
 
 ## Flexibility while using Opt-out flow
+{: #en-destinations-custom-email-opt-out-rules}
 
 Flexibility within the opt-out flow signifies a user-centric approach, granting individuals the autonomy to personalize their engagement with the service. This empowers users to selectively pick email ids, templates tailoring their experience to align with individual preferences, needs, or changing circumstances. The opt-out flow is designed to be intuitive and adaptable, providing users with seamless control over their interactions and ensuring a more personalized and user-friendly experience.
 
