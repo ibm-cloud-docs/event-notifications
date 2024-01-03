@@ -91,4 +91,4 @@ For more information on how to create custom templates, follow [these steps](/do
 ## Tracking Email Status
 {: #en-destinations-custom-email-tracking-status}
 
-This capability allows users to monitor the delivery status of emails sent through a Custom Email destination, ensuring transparency and enhancing the overall user experience. For more information, follow [these steps](/docs/event-notifications?topic=event-notifications-en-destination-custom-domain-status).
+This capability allows users to monitor the delivery status of emails sent through a Custom Email destination, ensuring transparency and enhancing the overall user experience. For more information, follow [these steps](/docs/event-notifications?topic=event-notifications-en-destination-email-custom-domain-status).

@@ -15,7 +15,7 @@ completion-time: 5m
 {{site.data.keyword.attribute-definition-list}}
 
 ## Tracking Email Status
-{: #en-destination-custom-domain-status}
+{: #en-destination-email-custom-domain-status}
 
 This portion of the documentation provides an overview of the status tracking system that is integrated with {{site.data.keyword.en_short}} for emails sent from a custom domain. The system generates logs containing crucial data, such as the size of the email and masked sender and recipient email addresses, to ensure privacy and security.
 The system tracks three primary email statuses: Delivered, Deferred, and Bounced, providing valuable insights into the success and potential issues with email delivery.
