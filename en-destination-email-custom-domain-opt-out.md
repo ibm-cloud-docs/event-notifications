@@ -8,7 +8,7 @@ keywords: event-notifications, event notifications, about event notifications, d
 subcollection: event-notifications
 
 content-type: tutorial
-account-plan: standard
+account-plan: lite, standard
 completion-time: 10m
 ---
 
