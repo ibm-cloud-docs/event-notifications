@@ -10,7 +10,7 @@ subcollection: event-notifications
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Custom domain Email Opt-out functionality
+# Custom Domain Email Opt-out functionality
 {: #en-destinations-custom-domain-opt-out}
 
 {{site.data.keyword.en_short}} offers users a versatile option to deviate from the conventional subscription process by introducing an opt-out capability. This feature empowers users to seamlessly send notifications, allowing them to specify their preferred email addresses and templates within the send notifications payload. This not only simplifies the notification process but also elevates user control over their communication preferences.
@@ -63,7 +63,7 @@ This questionnaire ensures that users have the flexibility to tailor their subsc
 1. Select under `Category`, `Topic` as Event Notifications and `Subtopic` as Others
 1. Under `Subject` add **Requesting for the Opt Out feature for the Custom Domain Email destination**
 1. In the 'Description' section, please include responses to the aforementioned questionnaire. While many questions are self-explanatory, we've provided explanations for a few to ensure clarity.
-    * Provide **Nature of email as `Marketing` or `Transactional`**
+    * Provide Nature of email as **`Marketing` or `Transactional`**
         * Marketing email - These emails are distributed to a broad audience. They are targeted list of prospects or customers containing marketing and promotional content such as to make a purchase, download information, etc.
         * Transactional email - These emails are individualized for each recipient, typically triggered by specific user actions like making a website purchase or requesting a password reset, etc.
     * **Website URL** is required to gain a clearer understanding of the type of content you intend to send.
