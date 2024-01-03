@@ -51,7 +51,7 @@ This questionnaire ensures that users have the flexibility to tailor their subsc
 
 6. Include a statement affirming your commitment to sending emails only to individuals who have explicitly requested them, and verify that you have established a procedure for managing bounce and complaint notifications.
 
-7. Provide the reason to use your own procedure to invite or subscribe email ids instead of using the Event Notifications provided  invitation or subscription flow?
+7. Provide the reason to use your own procedure to invite or subscribe email ids instead of using the Event Notifications provided  invitation or subscription flow.
 
 8. Whether you have a manual or automated process in place for handling unsubscribes, it's important to provide an "unsubscribe" link in the email payload you send. When recipients decide not to receive further emails, they can simply click on the 'unsubscribe' link and remove their email address from your mailing list. Add a statement that you agree to have an “unsubscribe” link in the email payload that you send.
 
@@ -74,7 +74,7 @@ This questionnaire ensures that users have the flexibility to tailor their subsc
     * A valid **Reply-To** email id is required to receive rejected or bounced emails' information.
     * Requirement of **Well Formatted** Email content is required to prevent emails classified as Spam at the receivers end. Email which are not well formatted (i.e not html) can result in Email Service Providers to classify the mails as spam.
 1. Add **Attachments** if you want to provide more evidences supporting your answers
-1. Add required email Ids in the **Watchlist** section. And to know more about other options while creating a support case refer [here](https://{DomainName}/docs/get-support?topic=get-support-open-case){: external}
+1. Add required email Ids in the **Watchlist** section. And to know more about other options while creating a support case refer [here](https://{DomainName}/docs/get-support?topic=get-support-open-case){: external}.
 
 ## Flexibility while using Opt-out flow
 
