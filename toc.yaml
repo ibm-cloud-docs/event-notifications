@@ -26,13 +26,26 @@ toc:
           label: Event Destinations
           topics:
           - en-destination.md  
-          - en-destination-email.md
-          - en-destination-email-custom-domain.md
+          - topicgroup:
+            label: Email Destinations
+            topics:
+            - en-destination-email.md
+            - link:
+                label: IBM Cloud Email Service
+                href: https://{DomainName}/docs/event-notifications?topic=event-notifications-en-destinations-default-domain
+            - link:
+                label: Custom Email Service
+                href: https://{DomainName}/docs/event-notifications?topic=event-notifications-en-destinations-custom-domain
+            - link:
+                label: Tracking Email Status
+                href: https://{DomainName}/docs/event-notifications?topic=event-notifications-en-destinations-custom-email-status
+            - link:
+                label: Opting Out of Event Notifications with Custom Domain Email Opt-In
+                href: https://{DomainName}/docs/event-notifications?topic=event-notifications-en-destinations-custom-domain-opt-out
           - en-destination-sms.md
-          - en-destination-sms-custom.md
           - topicgroup:
               label: Push Notifications
-              topics:
+              topics:   
               - en-destination-push.md
               - link:
                   label: Android Push Notifications (FCM)
@@ -159,10 +172,7 @@ toc:
       - topicgroup:
           label: High availability and disaster recovery
           topics:
-            - topic: en-high-availability.md
-              navtitle: High availability
-            - topic: en-bc-dr.md
-              navtitle: Disaster recovery
+          - en-high-availability.md
       - en-regions-endpoints.md
       - en-payload.md
       - en-notices.md
@@ -171,8 +181,7 @@ toc:
       id: help
       topics:
       - en-getting-support.md
-      - topic: en-responsibilities.md
-        navtitle: Your responsibilities
+      - en-responsibilities.md
       - en-migration.md
       - faq.md
       - topicgroup:
