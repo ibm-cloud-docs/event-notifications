@@ -16,7 +16,7 @@ completion-time: 10m
 
 {{site.data.keyword.attribute-definition-list}}
 
-# {{site.data.keyword.cloud_notm}} Email service
+# Email Destinations
 {: #en-destinations-email}
 
 {{site.data.keyword.en_short}} provides a built-in SMTP server for sending transactional and informational event notification emails to recipients who need to be aware of events that happen within your {{site.data.keyword.cloud_notm}} account.
