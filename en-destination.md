@@ -28,8 +28,10 @@ Destinations are of two categories: human and service.
 
 Human destinations are devices, servers, or applications that present notifications for human consumption. The following human destinations are supported by the {{site.data.keyword.en_short}} service:
 
-- [Inbuilt Email](/docs/event-notifications?topic=event-notifications-en-destinations-email)
-- [IBM Cloud Email service with custom domain](/docs/event-notifications?topic=event-notifications-en-destinations-custom-email)
+
+- [Email Destinations](/docs/event-notifications?topic=event-notifications-en-destinations-email)
+   - [Inbuilt Email](/docs/event-notifications?topic=event-notifications-en-destination-email-destination-default)
+   - [IBM Cloud Email service with custom domain](/docs/event-notifications?topic=event-notifications-en-destinations-custom-email)
 - [Inbuilt SMS](/docs/event-notifications?topic=event-notifications-en-destinations-sms)
 - [Custom SMS](/docs/event-notifications?topic=event-notifications-en-destinations-sms-custom)
 - [Microsoft&reg; Teams](/docs/event-notifications?topic=event-notifications-en-destinations-msteams)
@@ -44,7 +46,7 @@ Human destinations are devices, servers, or applications that present notificati
 - [Slack](/docs/event-notifications?topic=event-notifications-en-destinations-slack)
 - [ServiceNow](/docs/event-notifications?topic=event-notifications-en-destinations-servicenow)
 
-Both Email and SMS destinations are provided out of the box, and are available whenever you create an instance of {{site.data.keyword.en_short}}. {{site.data.keyword.cloud_notm}} push notification service must be added manually and requires configuration.
+The Inbuilt Email and Inbuilt SMS destinations are provided out of the box, and are available whenever you create an instance of {{site.data.keyword.en_short}}. Other destinations must be added manually and require configuration.
 
 ### Service destinations
 {: #en-destination-service-1}
