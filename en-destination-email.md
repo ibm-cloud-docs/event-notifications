@@ -17,8 +17,7 @@ subcollection: event-notifications
 {{site.data.keyword.en_short}} provides the followng two Email Destination types.
 {: shortdesc}
 
-
-- [Inbuilt Email](/docs/event-notifications?topic=event-notifications-en-destinations-email)
+- [Inbuilt Email](/docs/event-notifications?topic=en-destination-email-destination-default)
 Inbuilt Email destination provides a SMTP relay for sending transactional and informational event notification emails to recipients who need to be aware of events that happen within your {{site.data.keyword.cloud_notm}} account. This destination can be used to send email notifications for events originating only from IBM Cloud sources.  The content cannot be modified within {{site.data.keyword.en_short}}. This destination is provided out of the box, and is available whenever you create an instance of {{site.data.keyword.en_short}}. These emails originate from `no-reply@cloud.ibm.com` or `event-notifications@cloud.ibm.com`, while you can add your own reply-to address. 
 
 - [IBM Cloud Email service with custom domain](/docs/event-notifications?topic=event-notifications-en-destinations-custom-email)
