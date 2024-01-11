@@ -1,7 +1,7 @@
 ---
 copyright:
-  years: 2021, 2023
-lastupdated: "2023-12-07"
+  years: 2021, 2024
+lastupdated: "2024-01-03"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email
 
@@ -10,8 +10,8 @@ subcollection: event-notifications
 
 {{site.data.keyword.attribute-definition-list}}
 
-# {{site.data.keyword.cloud_notm}} Email service with custom domain
-{: #en-destinations-custom-email}
+# {{site.data.keyword.cloud_notm}} Email Service with Custom domain
+{: #en-destinations-custom-domain}
 
 This capability is available only for selected users. If you would like to leverage this capability, [contact us](mailto:mbluemix@in.ibm.com?subject=[Custom%20Email%20Domain]%20:%20%20Request%20for%20Allowlisting&body=Kindly%20provide%20the%20below%20details:%0D%0A%0D%0AEvent%20Notifications%20Instance%20ID:%0D%0AIBM%20Account%20ID:%0D%0AIBM%20User%20ID:%0D%0ARegion:).
 {: tip}
@@ -29,15 +29,11 @@ To verify your custom domain name, follow these steps:
 
 1. Select the configure overflow menu for the destination you want to verify.
 2. Create Sender Policy Framework (SPF), which is used to authenticate the sender of an email. SPF specifies the mail servers that are allowed to send email for your domain.
-
-- Open your DNS hosting provider for the domain name configured
-- Create a new TXT record with your domain name registerer with the name and value provided in the configure screen for SPF
-
+    * Open your DNS hosting provider for the domain name configured
+    * Create a new TXT record with your domain name registerer with the name and value provided in the configure screen for SPF
 3. Create DomainKeys Identified Mail (DKIM), which allows an organization to take responsibility for transmitting a message by signing it. DKIM allows the receiver to check the email that claimed to have come from a specific domain, is authorized by the owner of that domain.
-
-- Open your DNS hosting provider for the domain name configured
-- Create a new TXT record with your domain name registerer with the name and value provided in the configure screen for DKIM
-
+    * Open your DNS hosting provider for the domain name configured
+    * Create a new TXT record with your domain name registerer with the name and value provided in the configure screen for DKIM
 4. Save the TXT records.
 5. In the destination verify screen, click on Verify buttons for both SPF and DKIM.
 
@@ -65,6 +61,11 @@ The {{site.data.keyword.en_short}} are only sent to the opted-in recipients.
 
 You can either resend the invitation or remove the recipient from the Invited list. In the Invited tab, click and select the three vertical dots (overflow menu) and select Resend invitation for the recipient email address, to whom you need to resend the invitation. For deleting a user from the invited list, in the Invited tab, click the three vertical dots (overflow menu) and select Delete for the recipient email address, to whom you need to remove from the Invited list. For adding back a recipient after opted-out or not responded within the stipulated time that is mentioned in the invite email, you need to send a mail to the Reply to email address mentioned in the initial invite mail.
 
+## Opting out of Event Notifications managed opt-in capability
+{: #en-destination-email-custom-domain-opt-out-desc}
+
+{{site.data.keyword.en_short}} provides users with the flexibility to bypass the traditional subscription flow by offering an opt-out capability. With this feature, users can conveniently send notifications by specifying the desired email addresses and templates through the send notifications payload, streamlining the process and enhancing user control over communication preferences. By default opting out functionality is not enabled for the security purposes and to prevent fraud, detection as well as it helps protect users's reputation as a sender. More information about it and to get it enabled follow [this section](/docs/event-notifications?topic=event-notifications-en-destinations-custom-domain-opt-out).
+
 ## Email Templates
 {: #en-destinations-custom-email-templates}
 
@@ -74,7 +75,7 @@ In cases where a custom template is not available, the system automatically defa
 
 In the following example snippet, you can find a template with a minimal body that should not contain any line breaks (\n). The template includes a variable that will be replaced with its value in the email.
 
-```
+```html
 <html>
   <body>
     {{event.custom_variable_from_payload}}
@@ -87,60 +88,4 @@ For more information on how to create custom templates, follow [these steps](/do
 ## Tracking Email Status
 {: #en-destinations-custom-email-tracking-status}
 
-This portion of the documentation provides an overview of the status tracking system that is integrated with {{site.data.keyword.en_short}} for emails sent from a custom domain. The system generates logs containing crucial data, such as the size of the email and masked sender and recipient email addresses, to ensure privacy and security.
-The system tracks three primary email statuses: Delivered, Deferred, and Bounced, providing valuable insights into the success and potential issues with email delivery.
-
-- ### Delivered
-When an email is delivered successfully, a "SENT" log is created. The log contains essential data, such as the size of the delivered email and the masked sender and recipient email addresses, to maintain privacy and security.
-For example, a delivered log may look like this:
-
-```
-An email of size 1xxx bytes is sent to each of the following destinataries: [g*e*m*n*h*a*i@yahoo.co.in], from the sender: t*s*<*o*e*l*@xyz.com>
-```
-
-- ### Deferred
-
-When an email delivery is temporarily delayed, it is considered deferred. In Postfix and SMTP contexts, deferral occurs when the receiving mail server cannot accept the email for a short period due to technical reasons. The system logs deferred emails until they are delivered or a timeout period of 5 days elapses. During this time, the email is retried with an exponential time out to ensure successful delivery.
-For example, a deferred log may look like this:
-
-```
-An email of size 1xxx bytes is deferred to each of the following : [y*s@test.com], from the sender: A*h*i*<*e*t@xyz.com>connect to test.com[x.x.x.x]:25: Connection timed out
-```
-
-- ### Bounced
-
-When an email fails to deliver successfully, it is marked as a bounce. The log for a bounced email contains information about the error reason and SMTP error code. SMTP error codes provide specific details about the nature of the delivery failure. {{site.data.keyword.en_short}} does not attempt to retry bounced emails.
-It is crucial for users to take corrective action in case of bounced emails, as this can negatively impact the sender's reputation.
-For example, a bounced log may look like this:
-
-```
-An email of size 1xxx bytes is bounced ,Please check the authentacity of the emails: [g*a*g*n*1*3@in.ibm.com], from the sender: t*s*<*o*e*l*@xyz.com>host xyz.pphosted.com[] said: 550 5.1.1 User Unknown (in reply to DATA command )
-```
-
-
-#### Common SMTP Error Codes for Bounced Emails:
-{: #en-destinations-custom-email-status-smtp-error-codes}
-
-| SMTP Code | Description |
-| --- | --- | 
-| `500` | Syntax error, command unrecognised | 
-| `501` | Syntax error in parameters or arguments | 
-| `502` | Command not implemented | 
-| `503` | Bad sequence of commands | 
-| `504` | Command parameter not implemented | 
-| `510` | Bad email address | 
-| `511` | Bad email address syntax | 
-| `512` | DNS domain not found | 
-| `513` | Bad address syntax | 
-| `523` | Recipient mailbox full | 
-| `530` | Access denied | 
-| `541` | Recipient address rejected | 
-| `550` | Requested action not taken: mailbox unavailable | 
-| `551` | User not local; please try | 
-| `552` | Requested mail action aborted: exceeded storage allocation | 
-| `553` | Mailbox name not allowed | 
-| `554` | Transaction failed |
-{: caption="Table 1. Common SMTP Error Codes for Bounced Emails" caption-side="top"}
-
-
-To understand the reason for the bounce, refer to the above table and take appropriate action, such as updating recipient email addresses or resolving issues with the recipient's mailbox.
+This capability allows users to monitor the delivery status of emails sent through a Custom Email destination, ensuring transparency and enhancing the overall user experience. For more information, follow [these steps](/docs/event-notifications?topic=event-notifications-en-destination-email-custom-domain-status).
