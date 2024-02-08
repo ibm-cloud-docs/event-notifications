@@ -46,13 +46,13 @@ Click `Subscriptions` in the {{site.data.keyword.en_short}} console.
       - When a recipient clicks the **Unsubscribe** link, the recipients number is moved to the **Unsubscribed** tab. To restart the subscription, the recipient need to contact {{site.data.keyword.IBM_notm}} {{site.data.keyword.en_short}} service administrator to add the number back to subscription.
       - In some cases, the carrier service allows keywords like `START` and `STOP`. When a recipient sends a response `STOP`, sending notifications to the recipient gets immediately disabled. However, the phone number is moved to **Unsubscribed** tab only on the next attempt to send an SMS to the same number. The recipient can restart to receive the SMS by sending a response code `START` in some case where keyword use is permitted by the carrier service.
 
-   - `{{site.data.keyword.cloud_notm}} Email service` - When you select this option, you can add up to 100 email addresses of the recipient list. The **Invited** tab displays the list of users who not yet accepted the invitation to be a subscriber. The **Active** tab displays the list of recipients email addresses and the date activated. The **Unsubscribed** tab displays the list of recipients who don't want to receive any email notification for this subscription.
+   - `{{site.data.keyword.cloud_notm}} Email service` - When you select this option, you can add up to 10,000 email addresses of the recipient list. The **Invited** tab displays a list of users who have not yet accepted the invitation to be a subscriber. The **Active** tab displays a list of recipients' email addresses and the date they were activated. The **Unsubscribed** tab displays a list of recipients who have opted out of receiving any email notifications for this subscription.
 - Add additional information that is related to the respective destination type.
    - For `{{site.data.keyword.cloud_notm}} Email service`
       - Select **Add notification payload**, which is optional.
       - Add the sender's name in the **From name**.
       - Add **Reply to** information - Enter the reply to name, to whom the reply to be addressed, and Email of the reply to name.
-      - In the **Recipients**, select the **Invited** tab, and enter the Email of the recipient and click **Add +**. You can invite a maximum of 100 recipients.
+      - In the **Recipients** section, select the **Invited** tab, enter the email address of the recipient, and click **Add +** to proceed.
    - For `ServiceNow` destination
       - Add values for the following fields, which are optional:
          - **Assigned to** - User you want the incident to be assigned, and it can be left empty.
