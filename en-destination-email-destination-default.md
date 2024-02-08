@@ -13,7 +13,7 @@ subcollection: event-notifications
 # {{site.data.keyword.cloud_notm}} Inbuilt Email Service
 {: #en-destination-email-destination-default}
 
-To use the email service destination, add it to a subscription along with the email addresses of interest. Within a single subscription, you can add up to 100 email recipients. The subscription also needs a topic to filter events of interest from your sources. When an event lands in the topic, {{site.data.keyword.en_short}} immediately routes the event notification to your email recipients.
+To use the email service destination, add it to a subscription along with the email addresses of interest. For a single subscription, you can add up to 10,000 email addresses with the {{site.data.keyword.en_short}} managed email Opt-in capability. The subscription also needs a topic to filter events of interest from your sources. When an event lands in the topic, {{site.data.keyword.en_short}} immediately routes the event notification to your email recipients.
 
 If you add an individual to the recipient list who does not want to receive email notifications, the recipient can opt out by clicking a link in the footer of the email. You can track recipients who opt into the {{site.data.keyword.en_short}} dashboard.
 
