@@ -26,13 +26,18 @@ toc:
           label: Event Destinations
           topics:
           - en-destination.md  
-          - en-destination-email.md
-          - en-destination-email-custom-domain.md
+          - topicgroup:
+            label: Email Destinations
+            topics:
+            - en-destination-email.md
+            - en-destination-email-destination-default.md
+            - en-destination-email-custom-domain.md
+            - en-destination-email-custom-domain-status.md
+            - en-destination-email-custom-domain-opt-out.md
           - en-destination-sms.md
-          - en-destination-sms-custom.md
           - topicgroup:
               label: Push Notifications
-              topics:
+              topics:   
               - en-destination-push.md
               - link:
                   label: Android Push Notifications (FCM)
@@ -159,10 +164,7 @@ toc:
       - topicgroup:
           label: High availability and disaster recovery
           topics:
-            - topic: en-high-availability.md
-              navtitle: High availability
-            - topic: en-bc-dr.md
-              navtitle: Disaster recovery
+          - en-high-availability.md
       - en-regions-endpoints.md
       - en-payload.md
       - en-notices.md
@@ -171,8 +173,7 @@ toc:
       id: help
       topics:
       - en-getting-support.md
-      - topic: en-responsibilities.md
-        navtitle: Your responsibilities
+      - en-responsibilities.md
       - en-migration.md
       - faq.md
       - topicgroup:

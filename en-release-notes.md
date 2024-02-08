@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-11-16"
+lastupdated: "2023-12-12"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -27,7 +27,6 @@ Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, sec
 Support for personalised phone numbers via Custom SMS destination
 : Event Notifications provides support for sending SMS from personalised phone numbers using the new destination, Custom SMS. For more information, see [Custom SMS](/docs/event-notifications?topic=event-notifications-en-destinations-sms-custom).
 
-
 ## 16 Nov 2023
 {: #event-notifications-Nov1623}
 {: release-note}
@@ -42,7 +41,6 @@ Support for IBM OpenPages as a IBM Cloud source
 Support for tiered pricing for Push Notifications destinations
 :  Pricing for Outbound Push Notifications are now tiered. For more information, see [Pricing page](/docs/event-notifications?topic=event-notifications-en-new-pricing)
 
-
 ## 20 October 2023
 {: #event-notifications-Oct2023}
 {: release-note}
@@ -50,14 +48,12 @@ Support for tiered pricing for Push Notifications destinations
 IBM Cloud Event Notifications is now available in Madrid region
 :  Event Notifications now provides the ability to provision instance in Madrid region.
 
-
 ## 11 October 2023
 {: #event-notifications-Oct1123}
 {: release-note}
 
 Support for Testing a Destinations with a Single Click!
 :  Event Notifications now provides the ability to validate the functionality and reliability of your critical connections. With this functionality, you can effortlessly test a destination with a single click. For more information, see [Test Destinations](/docs/event-notifications?topic=event-notifications-en-test-destination).
-
 
 ## 20 September 2023
 {: #event-notifications-Sept2023}
