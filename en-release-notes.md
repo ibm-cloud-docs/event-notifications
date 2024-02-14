@@ -25,7 +25,7 @@ Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, sec
 {: release-note}
 
 Support for Opt Out cabality in the custom email subscription
-: Event Notifications offers users a versatile option to deviate from the conventional subscription process by introducing an opt-out capability, see [Custom SMS](/docs/event-notifications?topic=event-notifications-en-destinations-custom-domain-opt-out).
+: Event Notifications offers users a versatile option to deviate from the conventional subscription process by introducing an opt-out capability, see [Custom Email Subscription Opt Out](/docs/event-notifications?topic=event-notifications-en-destinations-custom-domain-opt-out).
 
 ## 29 Nov 2023
 {: #event-notifications-Nov2923}
