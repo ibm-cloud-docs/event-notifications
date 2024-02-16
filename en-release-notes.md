@@ -24,8 +24,8 @@ Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, sec
 {: #event-notifications-Jan1024}
 {: release-note}
 
-Support for Opt Out cabality in the custom email subscription
-: Event Notifications offers users a versatile option to deviate from the conventional subscription process by introducing an opt-out capability, see [Custom Email Subscription Opt Out](/docs/event-notifications?topic=event-notifications-en-destinations-custom-domain-opt-out).
+Support for Custom Domain Email Opt-out functionality
+: Event Notifications offers users a versatile option to deviate from the conventional subscription process by introducing an opt-out capability, see [Custom Domain Email Opt-out functionality](/docs/event-notifications?topic=event-notifications-en-destinations-custom-domain-opt-out).
 
 ## 29 Nov 2023
 {: #event-notifications-Nov2923}
@@ -59,7 +59,7 @@ IBM Cloud Event Notifications is now available in Madrid region
 {: #event-notifications-Oct1123}
 {: release-note}
 
-Support for Testing a Destinations with a Single Click!
+Support for Email Template Personalisation
 :  Event Notifications now provides the ability to validate the functionality and reliability of your critical connections. With this functionality, you can effortlessly test a destination with a single click. For more information, see [Test Destinations](/docs/event-notifications?topic=event-notifications-en-test-destination).
 
 ## 20 September 2023
