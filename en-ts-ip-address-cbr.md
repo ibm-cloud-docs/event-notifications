@@ -25,7 +25,7 @@ When you try to use {{site.data.keyword.en_short}} service instance you are unab
 When you try to access any feature in {{site.data.keyword.en_short}} service instance either through the console or API or CLI, you may encounter an error similar to any of the following examples:
 {: tsSymptoms}
 
-```json
+```text
 You do not have permission to perform this action. Contact your service Administrator.
 ```
 {: screen}
