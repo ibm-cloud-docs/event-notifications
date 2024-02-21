@@ -119,7 +119,7 @@ A success message is displayed to indicate that {{site.data.keyword.secrets-mana
 
 1. Open **Services and software**.
 
-1. Open the {{site.data.keyword.secrets-manager_short}} instance that you created. For more information, see [Sending email notifications to {{site.data.keyword.en_short}}](/docs/monitoring?topic=monitoring-tutorial-en#en-create-instance){: external}.
+1. Open the {{site.data.keyword.secrets-manager_short}} instance that you created. For more information, see [Sending email notifications to {{site.data.keyword.en_short}}](/docs/monitoring?topic=monitoring-tutorial-en).
 
 1. Click **Sources**.
 

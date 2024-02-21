@@ -158,6 +158,7 @@ The Chrome web SDK enables Chrome websites to receive push notifications. Comple
       "name": "YOUR_WEBSITE_NAME"
    }
    ```
+   {: codeblock}
 
 * Change the `manifest_Website.json` file name to `manifest.json`.
 
@@ -166,6 +167,7 @@ The Chrome web SDK enables Chrome websites to receive push notifications. Comple
    ```html
    <link rel="manifest" href="manifest.json">
    ```
+   {: codeblock}
 
 * Include {{site.data.keyword.cloud_notm}} web push SDK to the script.
 
@@ -232,7 +234,7 @@ The Chrome web SDK enables Chrome websites to receive push notifications. Comple
 {: #en-send-notifications-chrome}
 {: step}
 
-Use the [Send notification API](https://cloud.ibm.com/apidocs/event-notifications/event-notifications#send-notifications) to send the push notification for the Chrome web device. You can use the [Node](https://github.com/IBM/event-notifications-node-admin-sdk#send-notifications){: external} or [Go](https://github.com/IBM/event-notifications-go-admin-sdk#send-notifications){: external} admin SDK instead of calling the API directly.
+Use the [Send notification API](/apidocs/event-notifications) to send the push notification for the Chrome web device. You can use the [Node](https://github.com/IBM/event-notifications-node-admin-sdk#send-notifications){: external} or [Go](https://github.com/IBM/event-notifications-go-admin-sdk#send-notifications){: external} admin SDK instead of calling the API directly.
 
 Received notification on the chrome website in MacOS.
 

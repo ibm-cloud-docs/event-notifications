@@ -90,4 +90,4 @@ API Sources cannot be used to send notifications to out of the box destinations 
 - Go to the `Sources` section of the {{site.data.keyword.en_short}} dashboard.
 - Click `Add` and select `API Source`.
 - Type a name and an optional description and click `Add`.
-- Because you are connecting from your own application or service, follow the instructions in the [{{site.data.keyword.en_short}} API documentation](https://cloud.ibm.com/apidocs/event-notifications/event-notifications?code=node), or in the SDK documentation for your programming language to configure the connection.
+- Because you are connecting from your own application or service, follow the instructions in the [{{site.data.keyword.en_short}} API documentation](/apidocs/event-notifications), or in the SDK documentation for your programming language to configure the connection.
