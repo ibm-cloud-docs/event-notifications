@@ -72,7 +72,7 @@ Add the following rules to your topic:
 }
 ```
 
-Based on the above input JSON following valid JSONPaths can be constructed:
+Based on the previous input JSON following valid JSONPaths can be constructed:
 
 ```bash
 1. $.data.severity=='LOW'

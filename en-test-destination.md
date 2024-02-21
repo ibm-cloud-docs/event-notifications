@@ -32,7 +32,7 @@ Currently this functionality supports following destinations:
 6. IBM Cloud Functions
 7. IBM Cloud Object Storage
 
-By following the steps outlined below, you will be able to quickly and efficiently ensure the integrity of your connections.
+By using the following outlined steps, you can quickly and efficiently ensure the integrity of your connections.
 
 ## 1. Prerequisites
 {: #en-test-destination-prereqs}
