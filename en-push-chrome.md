@@ -52,7 +52,7 @@ This tutorial shows you how to send push notifications as follows:
 
 You must have the following prerequisites in place:
 
-* Download and install any code editor to right website code by using HTML, CSS, and js.
+* Download and install any code editor to correct website code by using HTML, CSS, and js.
 * A Google account to log in to Firebase console to get your Sender ID and Server API Key.
 * An {{site.data.keyword.cloud_notm}} account. If you do not have one, [create an IBM Cloud account](https://cloud.ibm.com/){: external}.
 
