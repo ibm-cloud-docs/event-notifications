@@ -38,9 +38,9 @@ Platform logs are logs that are exposed by logging-enabled services and the plat
 
    To enable platform logs, see:
 
-   - [Configuring platform logs through the Observability dashboard](/docs/log-analysis?topic=log-analysis-config_svc_logs#config_svc_logs_ui)
+   - [Configuring platform logs through the Observability dashboard](/docs/log-analysis?topic=log-analysis-config_svc_logs#config_svc_logs_ui&interface=ui)
 
-   - [Configuring platform logs from the command line](/docs/log-analysis?topic=log-analysis-config_svc_logs#platform_logs_enabling_cli)
+   - [Configuring platform logs from the command line](/docs/log-analysis?topic=log-analysis-config_svc_logs#platform_logs_enabling_cli&interface=cli)
 
 For more information about platform logs, see [Configuring IBM Cloud platform logs](/docs/log-analysis?topic=log-analysis-config_svc_logs).
 

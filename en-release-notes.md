@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2023-12-12"
+  years: 2021, 2024
+lastupdated: "2024-02-21"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -59,22 +59,23 @@ IBM Cloud Event Notifications is now available in Madrid region
 {: #event-notifications-Oct1123}
 {: release-note}
 
-Support for Email Template Personalisation
+Validate connections
 :  Event Notifications now provides the ability to validate the functionality and reliability of your critical connections. With this functionality, you can effortlessly test a destination with a single click. For more information, see [Test Destinations](/docs/event-notifications?topic=event-notifications-en-test-destination).
 
 ## 20 September 2023
 {: #event-notifications-Sept2023}
 {: release-note}
 
-Support for Email Personalisaiton in Email Templates
-:  Event Notifications now provides the ability to apply Email templates to emails which are sent using Custom Domain Email destination. You can now create your own Email Templates and use these templates to send emails in a personalised way. For more information, see [Personalisation in templates](/docs/event-notifications?topic=event-notifications-en-create-en-template#personalisation-in-templates).
+Email template personalization
+:  Event Notifications now provides the ability to apply Email templates to emails which are sent using Custom Domain Email destination. You can now create your own Email Templates and use these templates to send emails in a personalised way. For more information, see [Personalization in templates](/docs/event-notifications?topic=event-notifications-en-create-en-template#personalization-in-templates).
 
 ## 31 August 2023
 {: #event-notifications-Aug3123}
 {: release-note}
 
 Support for Email Templates in Custom Domain Email Destination
-:  Event Notifications now provides the ability to apply Email templates to emails which are sent using Custom Domain Email destination. You can now create your own Email Templates and use these templates to send emails. For more information, see [Email Templates](/docs/event-notifications?topic=event-notifications-en-destinations-custom-email#en-destinations-custom-email-templates).
+:  Event Notifications now provides the ability to apply Email templates to emails which are sent using Custom Domain Email destination. You can now create your own Email Templates and use these templates to send emails. For more information, see [Email Templates](/docs/event-notifications?topic=event-notifications-en-destinations-custom-domain#en-destinations-custom-email-templates). 
+
 
 ## 31 July 2023
 {: #event-notifications-Jul3123}
@@ -84,7 +85,7 @@ New supported {{site.data.keyword.cloud_notm}} source: watsonx.data
 :  IBM watsonx.data is an open, hybrid, and governed fit-for-purpose data store optimized to scale all data, analytics and AI workloads available as a Event Notifications source under IBM Cloud Sources. For more information, see [Enabling event notifications for watsonx.data](/docs/watsonxdata?topic=watsonxdata-event-notifications-events).
 
 Support for Custom Domain Email Service
-:  Event Notifications provides support for sending emails from custom domain using the new destination, email service with custom domain name. For more information, see [Using an IBM Cloud email service with custom domain](/docs/event-notifications?topic=event-notifications-en-destinations-email#en-destinations-custom-email).
+:  Event Notifications provides support for sending emails from custom domain using the new destination, email service with custom domain name. For more information, see [Using an IBM Cloud email service with custom domain](/docs/event-notifications?topic=event-notifications-en-destinations-custom-domain).
 
 ## 14 June 2023
 {: #event-notifications-Jun1423}
@@ -105,7 +106,7 @@ Support for collecting failed events details
 {: release-note}
 
 New supported {{site.data.keyword.cloud_notm}} source: IBM Cloud Projects
-:  IBM Cloud Projects is now available as new supported {{site.data.keyword.cloud_notm}} source. For more information, see [IBM Cloud Projects](/docs/allowlist/projects?topic=projects-event-notifications-events&interface=ui).
+:  IBM Cloud Projects is now available as new supported {{site.data.keyword.cloud_notm}} source. For more information, see [IBM Cloud Projects](/docs/secure-enterprise?topic=secure-enterprise-setup-project).
 
 New supported {{site.data.keyword.cloud_notm}} source: Toolchain
 :  Toolchain is now available as new supported {{site.data.keyword.cloud_notm}} source. For more information, see [Toolchain](/docs/ContinuousDelivery?topic=ContinuousDelivery-getting-started&interface=ui).

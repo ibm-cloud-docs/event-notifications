@@ -56,7 +56,7 @@ Sometimes, devices are marked as invalid and deleted from the database, if they 
    - `NotFound` - the subscription is expired and can’t be used.
    - `Gone` - the subscription is no longer valid.
 
-   For more information, see [web push protocol](https://web.dev/push-notifications-web-push-protocol/).
+   For more information, see [web push protocol](https://web.dev/articles/push-notifications-web-push-protocol){: external}.
 
 
 ## What is the difference between {{site.data.keyword.en_short}} Topic Subscriptions and {{site.data.keyword.en_short}} Tag Subscriptions to push devices?
@@ -181,7 +181,7 @@ By implementing DKIM, domain owners can increase the trustworthiness of their em
    - Soft Fail: The SPF record suggests caution, but the email is not immediately rejected.
 
 ## How does DKIM verification work?
-{: #faq-en-notifications-spf-verification-works}
+{: #faq-en-notifications-dkim-verification-works}
 {: faq}
 
 1. Message Signing: When an email is sent from a domain that has DKIM enabled, the sending mail server digitally signs the email message using a private key. This signature includes information about the email's content and the sender's domain.

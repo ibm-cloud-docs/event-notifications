@@ -11,9 +11,6 @@ subcollection: event-notifications
 {{site.data.keyword.attribute-definition-list}}
 
 # {{site.data.keyword.cloud_notm}} Email Service with Custom domain
-{: #en-destinations-custom-domain}
-
-## Configuring a Custom Email destination
 {: #en-destinations-custom-email}
 
 You can configure a custom email destination in the Destinations tab. As part of the configuration, enter the domain name to be used for sending emails.

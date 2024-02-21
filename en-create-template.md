@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2023
-lastupdated: "2023-12-07"
+  years: 2021, 2024
+lastupdated: "2024-02-21"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -56,8 +56,9 @@ Click `Templates` in the {{site.data.keyword.en_short}} console.
       - Click on Add.
 
 
-## Personalisation in templates
-{: #en-template-personalisation} {: step}
+## Personalization in templates
+{: #en-template-personalization}
+{: step}
 
 Email personalization refers to the practice of tailoring email content and messaging to individual recipients or specific segments of your email list based on their personal preferences, behaviors, demographics, or interactions with your brand. The goal of email personalization is to create a more engaging and relevant email experience for each recipient, which can lead to higher open rates, click-through rates, and conversions. Here are some common ways email personalization can be implemented:
 

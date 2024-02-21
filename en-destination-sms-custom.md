@@ -13,9 +13,6 @@ subcollection: event-notifications
 # {{site.data.keyword.cloud_notm}} SMS service with Custom SMS
 {: #en-destinations-sms-custom}
 
-## Configuring a Custom SMS destination
-{: #en-destinations-sms-custom}
-
 You can configure a Custom SMS destination in the Destinations tab.
 
 ## Custom SMS personalised numbers

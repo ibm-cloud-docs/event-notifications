@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2022-12-04"
+  years: 2021, 2024
+lastupdated: "2024-02-21"
 
 keywords: event-notifications, event notifications, customer responsibilities, IBM responsibilities, terms and conditions, disaster recovery, toolchain backup
 
@@ -20,7 +20,7 @@ subcollection: event-notifications
 Learn about the management responsibilities and applicable terms and conditions when you use {{site.data.keyword.en_full_notm}}. For a high-level view of the service types in {{site.data.keyword.cloud_notm}} and the breakdown of responsibilities between the customer and {{site.data.keyword.IBM_notm}} for each type, see [Shared responsibilities for {{site.data.keyword.cloud_notm}} offerings](/docs/overview?topic=overview-shared-responsibilities).
 {: shortdesc}
 
-Review the following sections for demarcation of responsibilities between you and {{site.data.keyword.IBM_notm}} when you use {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}}. For the overall terms of use, see [{{site.data.keyword.cloud}} Terms and Notices](/docs/overview/terms-of-use?topic=overview-terms).
+Review the following sections for demarcation of responsibilities between you and {{site.data.keyword.IBM_notm}} when you use {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}}. For the overall terms of use, see [{{site.data.keyword.cloud}} Terms and Notices](/docs/overview?topic=overview-terms).
 
 ## Incident and operations management
 {: #en-incident-and-ops}
@@ -79,7 +79,7 @@ You are responsible for the recovery of the workloads that run {{site.data.keywo
 
 |Task     |{{site.data.keyword.IBM_notm}} Responsibilities |Your Responsibilities |
 |-------------|-----------------------|-----------------------|
-|Availability | * Provide high availability capabilities, such as {{site.data.keyword.IBM_notm}}-owned infrastructure in multizone regions, to meet local access, and low latency requirements for each supported region. \n * Run {{site.data.keyword.en_full_notm}} deployments with three replicas in the same region for high availability. \n Continuously monitor {{site.data.keyword.en_full_notm}} infrastructure to ensure the reliability and availability of the service environment by site reliability engineers. \n Maintain service availability across [worldwide regions](/docs/event-notifications?topic=event-notifications-ac-regions-endpoints) so that customers can deploy projects across zones and regions for higher DR tolerance. |* Use the list of [available regions](/docs/event-notifications?topic=event-notifications-ac-regions-endpoints#ac-regions) to plan for and create new instances of the service to meet performance and availability requirements exceeding the default that is provided by {{site.data.keyword.IBM_notm}}. \n * Set up more {{site.data.keyword.en_full_notm}} instances across zones and regions to increase disaster recovery tolerance that exceeds the default that is provided by {{site.data.keyword.IBM_notm}}.
+|Availability | * Provide high availability capabilities, such as {{site.data.keyword.IBM_notm}}-owned infrastructure in multizone regions, to meet local access, and low latency requirements for each supported region. \n * Run {{site.data.keyword.en_full_notm}} deployments with three replicas in the same region for high availability. \n Continuously monitor {{site.data.keyword.en_full_notm}} infrastructure to ensure the reliability and availability of the service environment by site reliability engineers. \n Maintain service availability across [worldwide regions](/docs/event-notifications?topic=event-notifications-en-regions-endpoints) so that customers can deploy projects across zones and regions for higher DR tolerance. |* Use the list of [available regions](/docs/event-notifications?topic=event-notifications-en-regions-endpoints#en-regions) to plan for and create new instances of the service to meet performance and availability requirements exceeding the default that is provided by {{site.data.keyword.IBM_notm}}. \n * Set up more {{site.data.keyword.en_full_notm}} instances across zones and regions to increase disaster recovery tolerance that exceeds the default that is provided by {{site.data.keyword.IBM_notm}}.
 {: caption="Table 5. Responsibilities for disaster recovery" caption-side="top"}
 
 If you need zero downtime during a regional disaster recovery, create and maintain backup instances in other regions. Review the API documentation and decide the data that you want backed up and restored if there is a disaster. To synchronize a service instance in one region with an instance in a different region, you can use the APIs mentioned [here](/apidocs/event-notifications).
