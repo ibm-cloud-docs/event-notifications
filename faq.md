@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2023
-lastupdated: "2023-11-20"
+  years: 2020, 2024
+lastupdated: "2024-02-21"
 
 keywords: event-notification, event notification, faqs, Frequently Asked Questions, question, billing, service, invalid devices, device deletion, database
 
@@ -36,7 +36,7 @@ A resolution is to add any `TransactionID` or `ReferenceID` to the message body.
 
 Sometimes, devices are marked as invalid and deleted from the database, if they meet these invalid conditions:
 
-- **FCM or Android devices**:
+- FCM or Android devices:
 
    - `invalidRegistration` - might be due to incorrect registration token format passed to the server.
    - `MismatchSenderID` - a mismatch in the senderID who is not part of the user group that is tied to a registration token.
@@ -44,7 +44,7 @@ Sometimes, devices are marked as invalid and deleted from the database, if they 
 
    For more information, see [FCM error response codes for downstream messages](https://firebase.google.com/docs/cloud-messaging/http-server-ref#error-codes){: external}.
 
-- **APNS or Safari devices**:
+- APNS or Safari devices:
 
    - `Unregistered` - the device token is not active for the specified topic.
    - `BadDeviceToken` - the specified device token is invalid.
@@ -52,18 +52,18 @@ Sometimes, devices are marked as invalid and deleted from the database, if they 
 
    For more information on how to handle notification responses from apps, see [here](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/handling_notification_responses_from_apns){: external}.
 
-- **Chrome or Firefox devices**:
+- Chrome or Firefox devices:
    - `NotFound` - the subscription is expired and can’t be used.
    - `Gone` - the subscription is no longer valid.
 
    For more information, see [web push protocol](https://web.dev/articles/push-notifications-web-push-protocol){: external}.
 
 
-## What is the difference between {{site.data.keyword.en_short}} Topic Subscriptions and {{site.data.keyword.en_short}} Tag Subscriptions to push devices?
+## What is the difference between topic subscriptions and tag subscriptions to push devices?
 {: #faq-en-topic-tag-subscriptions}
 {: faq}
 
-- **{{site.data.keyword.en_short}} Topic subscriptions**:
+- {{site.data.keyword.en_short}} topic subscriptions:
 
    For the topic subscriptions, start by creating a **Topic** and write conditions on that topic. This topic is responsible for routing the incoming notification that satisfies the topic conditions.
 
@@ -82,7 +82,7 @@ Sometimes, devices are marked as invalid and deleted from the database, if they 
    All push devices will get registered under {{site.data.keyword.en_short}} destination of type push. For example, `push-android`, `push-ios`, and others.
    {: note}
 
-- **{{site.data.keyword.en_short}} Tag subscriptions to push devices**
+- {{site.data.keyword.en_short}} tag subscriptions to push devices:
 
    For example, `ACME` Bank wants to route maintenance event notifications to customers by using android and iOS devices. ACME Bank maintenance usually takes place in one region at a time.
 
