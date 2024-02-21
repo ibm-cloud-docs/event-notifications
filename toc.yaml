@@ -27,18 +27,18 @@ toc:
           topics:
           - en-destination.md  
           - topicgroup:
-            label: Email Destinations
-            topics:
-            - en-destination-email.md
-            - en-destination-email-destination-default.md
-            - en-destination-email-custom-domain.md
-            - en-destination-email-custom-domain-status.md
-            - en-destination-email-custom-domain-opt-out.md
+              label: Email Destinations
+              topics:
+              - en-destination-email.md
+              - en-destination-email-destination-default.md
+              - en-destination-email-custom-domain.md
+              - en-destination-email-custom-domain-status.md
+              - en-destination-email-custom-domain-opt-out.md
           - topicgroup:
-            label: SMS Destinations
-            topics:
-            - en-destination-sms.md
-            - en-destination-sms-custom.md
+              label: SMS Destinations
+              topics:
+              - en-destination-sms.md
+              - en-destination-sms-custom.md
           - topicgroup:
               label: Push Notifications
               topics:   
