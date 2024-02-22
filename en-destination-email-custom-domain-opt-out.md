@@ -55,8 +55,9 @@ This questionnaire ensures that users have the flexibility to tailor their subsc
 
 10. Provide your Event Notifications Instance/s and Destination-ID/s in which you want to enable Customer managed email Opt-in.
 ```
+{: codeblock}
 
-**Upon receiving answers to the aforementioned questions and if users wish to proceed with modifying their email preferences, we encourage them to initiate the next step by opening a support case with {{site.data.keyword.en_short}}:**
+Upon receiving answers to the aforementioned questions and if users wish to proceed with modifying their email preferences, we encourage them to initiate the next step by opening a support case with {{site.data.keyword.en_short}}:
 
 1. From the {{site.data.keyword.cloud_notm}} console menu bar, click the **Help** icon > **Support center**.
 1. From the Contact support section, click **Create a case**.
@@ -77,11 +78,11 @@ This questionnaire ensures that users have the flexibility to tailor their subsc
 
 Flexibility within the opt-out flow signifies a user-centric approach, granting individuals the autonomy to personalize their engagement with the service. This empowers users to selectively pick email ids, templates tailoring their experience to align with individual preferences, needs, or changing circumstances. The opt-out flow is designed to be intuitive and adaptable, providing users with seamless control over their interactions and ensuring a more personalized and user-friendly experience.
 
-* **Email-Ids handling rules**
+* Email ID handling rules
     1. Email Ids sent via send notifications payload under `ibmenmailto` key gets preference, even if subscribed email list is already present under connected subscription
     2. If the key `ibmenmailto` is **Absent** in the payload then preference is given to the subscribed email list
-* **Template handling rules**
-    1. Template Ids sent via send notifcations payload under `ibmentemplates` key gets preference, even if a Notification Template is attached to the subscription.
+* Template handling rules
+    1. Template IDs sent via send notifcations payload under `ibmentemplates` key gets preference, even if a Notification Template is attached to the subscription.
     2. If the key `ibmentemplates` is **Absent** in the payload then preference is given to the Notification Template in the subscription
     3. If Template is **Absent** in the send notifications payload and also **Absent** in the subscription, then **Email Body** is picked from the `ibmendefaultlong` field from the send notifications payload and **Subject** is picked from the `ibmendefaultshort` field.
-    4. If `ibmensubject` field is present in the send notifications payload then the Subject will be picked from the field irrespective of any of the above conditions.
+    4. If `ibmensubject` field is present in the send notifications payload then the Subject will be picked from the field irrespective of any of the previously described conditions.

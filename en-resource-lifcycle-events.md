@@ -96,8 +96,8 @@ The following table describes the fields of a Resource Lifecycle event:
 | `event_type` | String | Identifies the type of event. It can be any of the events specified [here](/docs/event-notifications?topic=event-notifications-en-resource-lifecycle-events#en-supported-resource-types). |
 | `timestamp` | String | Time when the Event occurred. |
 | `context` | Object | This JSON gives the context in which the event occurred. |
-| `context.subject_id` | String | The IAM ID of the initiator of the Event. Note below to find your {{site.data.keyword.cloud_notm}} IAM ID. |
-| `context.subject_name` | String | The email ID of the initiator of the email. Note below to find your {{site.data.keyword.cloud_notm}} subject_name. |
+| `context.subject_id` | String | The IAM ID of the initiator of the Event. Find your {{site.data.keyword.cloud_notm}} IAM ID. |
+| `context.subject_name` | String | The email ID of the initiator of the email. Find your {{site.data.keyword.cloud_notm}} subject_name. |
 | `context.activity` | Object | This JSON gives details of the activity performed. |
 | `context.activity.action` | String | Identifies the action taken by the user to trigger an event. |
 | `context.activity.message` | String | A message describing the event. |

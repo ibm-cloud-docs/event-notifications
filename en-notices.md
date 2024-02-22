@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2022-10-26"
+  years: 2022, 2024
+lastupdated: "2024-02-22"
 
 keywords: notices for event notifications, creative commons, notices, attributions, license
 

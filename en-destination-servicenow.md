@@ -24,7 +24,7 @@ An event which is routed to a ServiceNow destination will trigger creation of an
 ## Configuring a ServiceNow destination
 {: #en-sn-configure-destination}
 
-The ServiceNow name follows the standard `https://xxx.service-now.com`, where `xxx` is your instance name. The ServiceNow instance name, Username, and Password can be fetched from your ServiceNow console. Navigate to your ServiceNow profile and go to "Manage Instance Password" to get the details.
+The ServiceNow name follows the standard `https://xxx.service-now.com`, where `xxx` is your instance name. The ServiceNow instance name, Username, and Password can be fetched from your ServiceNow console. Navigate to your ServiceNow profile and go to **Manage Instance Password** to get the details.
 {: important}
 
 To configure a ServiceNow destination, do the following steps:

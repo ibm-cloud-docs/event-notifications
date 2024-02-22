@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2022-10-26"
+  years: 2022, 2024
+lastupdated: "2024-02-21"
 
 keywords: event-notifications, event notifications migration, notifications, destinations, push, migration
 
@@ -115,7 +115,7 @@ The package name for the {{site.data.keyword.mobilepushshort}} SDK was `com.ibm.
 1. Change the Module’s `build.gradlefile`to include the new SDKs.
 
    ```groovy
-   // Replace the below section
+   // Replace the following section
 
    dependencies {
       ........
@@ -143,7 +143,7 @@ The package name for the {{site.data.keyword.mobilepushshort}} SDK was `com.ibm.
 
       ```groovy
 
-      // Replace the below section
+      // Replace the following section
 
       <service android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushIntentService" android:exported="true" >
          <intent-filter>
@@ -178,7 +178,7 @@ The package name for the {{site.data.keyword.mobilepushshort}} SDK was `com.ibm.
 
       ```groovy
 
-      // Replace the below section
+      // Replace the following section
 
       <activity  android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.    MFPPushNotificationHandler" android:theme="@android:style/Theme.NoDisplay"/>
 
@@ -191,7 +191,7 @@ The package name for the {{site.data.keyword.mobilepushshort}} SDK was `com.ibm.
 1. Change the import statements in the code. The new package name is `com.ibm.cloud.eventnotifications.destination.android.*`. Replace the old push import as shown:
 
    ```java
-   // Replace the below section
+   // Replace the following section
 
    import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPush;
 
@@ -204,7 +204,7 @@ The package name for the {{site.data.keyword.mobilepushshort}} SDK was `com.ibm.
 1. Initialize the new SDK
 
    ```java
-   // Replace the below section
+   // Replace the following section
 
    BMSClient.getInstance().initialize(this, "ibmCloudRegionSuffix");
    MFPPush push = MFPPush.getInstance();
@@ -230,7 +230,7 @@ The package name for the {{site.data.keyword.mobilepushshort}} SDK was `com.ibm.
 1. The callback class in the new SDK has changes. Make these changes in the listener.
 
    ```java
-   // Replace the below section
+   // Replace the following section
 
    MFPPushNotificationListener notificationListener = new MFPPushNotificationListener() {
 
@@ -260,7 +260,7 @@ The package name for the {{site.data.keyword.mobilepushshort}} SDK was `com.ibm.
 
    - If you are registering without `userID`
       ```java
-         // Replace the below section
+         // Replace the following section
 
       push.registerDevice(new MFPPushResponseListener<String>() {
 
@@ -295,7 +295,7 @@ The package name for the {{site.data.keyword.mobilepushshort}} SDK was `com.ibm.
    - If you are using `registerDeviceWithUserId`
 
       ```java
-      // Replace the below section
+      // Replace the following section
 
       push.registerDeviceWithUserId("userId", new MFPPushResponseListener<String>() {
 
@@ -330,7 +330,7 @@ The package name for the {{site.data.keyword.mobilepushshort}} SDK was `com.ibm.
 1. Make changes to the unregister API call.
 
       ```java
-      // Replace the below section
+      // Replace the following section
 
       push.unregister(new MFPPushResponseListener<String>() {
 
@@ -367,7 +367,7 @@ The package name for the {{site.data.keyword.mobilepushshort}} SDK was `com.ibm.
    - Change the tag subscriptions as follows:
 
       ```java
-      // Replace the below section
+      // Replace the following section
 
       push.subscribe("tagName", new MFPPushResponseListener<String>() {
 
@@ -404,7 +404,7 @@ The package name for the {{site.data.keyword.mobilepushshort}} SDK was `com.ibm.
    - Changes to get all the tag subscription for the device
 
       ```java
-      // Replace the below section
+      // Replace the following section
 
       push.getSubscriptions(new MFPPushResponseListener<List<String>>() {
 
@@ -441,7 +441,7 @@ The package name for the {{site.data.keyword.mobilepushshort}} SDK was `com.ibm.
    - Make changes to tag unsubscribe
 
       ```java
-      // Replace the below section
+      // Replace the following section
 
       push.unsubscribe("tagName", new MFPPushResponseListener<String>() {
 
@@ -480,7 +480,7 @@ The package name for the {{site.data.keyword.mobilepushshort}} SDK was `com.ibm.
 1. Changes to the Notification actions listener
 
       ```java
-      // Replace the below section
+      // Replace the following section
 
       notificationListener = new MFPPushNotificationListener() {
          @Override
@@ -815,9 +815,9 @@ Create a destination of type Safari Push Notification for the Web app. Provide t
 ### Edit the Web application
 {: #en-migrate-edit-web-app}
 
-The web application needs to be updated with the latest SDK. Follow the below steps,
+Update your web application with the latest SDK by using the following steps.
 
-1. Change the import statement
+1. Change the import statement.
 
    ```js
       // Replace this
@@ -828,7 +828,7 @@ The web application needs to be updated with the latest SDK. Follow the below st
    ```
    {: codeblock}
 
-1. Replace SDK Initialization code
+1. Replace SDK Initialization code.
 
    ```js
       // Replace this
@@ -987,7 +987,7 @@ Migrate the existing Node SDK to the new {{site.data.keyword.en_full}} SDK. Foll
 1. Changes to importing the SDK
 
    ```js
-   // Replace the below section
+   // Replace the following section
 
    var PushNotifications = require('ibm-push-notifications').PushNotifications;
    var Notification = require('ibm-push-notifications').Notification;
@@ -1003,7 +1003,7 @@ Migrate the existing Node SDK to the new {{site.data.keyword.en_full}} SDK. Foll
 1. Changes to initializing the SDK
 
 ```js
-// Replace the below section
+// Replace the following section
 
 var myPushNotifications = new PushNotificationsApiKey(PushNotifications.Region.US_SOUTH, "appGUID","apikey");
 
@@ -1026,7 +1026,7 @@ const eventNotificationsService = EventNotificationsV1.newInstance({
 1. Changes to creating notification targets
 
 ```js
-// Replace the below section
+// Replace the following section
 
 var target = PushMessageBuilder.Target
   .deviceIds(["deviceID1", "deviceID2"])
@@ -1054,7 +1054,7 @@ const notificationDevicesModel = {
 1. Changes to the FCM style payload
 
 ```js
-// Replace the below section
+// Replace the following section
 
 var style = PushMessageBuilder.FCMStyle
     .type(Notification.FCMStyleTypes
@@ -1091,7 +1091,7 @@ const lightsModel = {
 1. Changes to FCM message body
 
 ```js
-// Replace the below section
+// Replace the following section
 
 var fcm = PushMessageBuilder.FCM
    .collapseKey("ping")
@@ -1138,7 +1138,7 @@ const notificationBodyMessageModel = {
 1. Changes to Send notification method
 
 ```js
-// Replace the below section
+// Replace the following section
 
 var settings = PushMessageBuilder.Settings
     .fcm(fcm)

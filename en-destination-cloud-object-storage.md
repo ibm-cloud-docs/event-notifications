@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2023-10-10"
+  years: 2022, 2024
+lastupdated: "2024-02-21"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, IBM Cloud Object Storage, cloud object storage, object storage
 
@@ -50,7 +50,7 @@ To configure a {{site.data.keyword.cos_full_notm}} destination, do the following
 
       You can get the bucket name from your {{site.data.keyword.cos_full_notm}} instance. For more information, see [Bucket name](#en-cos-bucket-name).
 
-      The pattern (is a combination of destination name and notification ID) that {{site.data.keyword.en_short}} uses to store the object in {{site.data.keyword.cos_full_notm}} bucket is similar to the example below:
+      The pattern (is a combination of destination name and notification ID) that {{site.data.keyword.en_short}} uses to store the object in {{site.data.keyword.cos_full_notm}} bucket is similar to the following example:
 
       `Rhonda Macejkovic/013f87bc-0537-4dad-8511-8cb054890ffc.json`,
 

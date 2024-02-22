@@ -21,7 +21,7 @@ Microsoft&trade; Teams is an enterprise collaboration and communication platform
 ## Create an incoming webhook URL
 {: #en-create-an-incoming-webhook-url}
 
-To post a Microsoft Teams notification, you need to create an incoming webhook URL. To create the incoming webhook URL, follow the steps mentioned [here](https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook){: external}.
+To post a Microsoft Teams notification, you need to create an incoming webhook URL. To create the incoming webhook URL, follow the steps mentioned [here](https://learn.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook){: external}.
 
 ## Configuring a Microsoft Teams destination
 {: #en-msteams-configure}

@@ -72,11 +72,13 @@ Email personalization refers to the practice of tailoring email content and mess
 
 - Location-Based Personalization: Customizing content or promotions based on the recipient's geographic location or time zone.
 
-- In the send notification payload add a `personalisation` parameter to enable it
+- In the send notification payload add a `personalization` parameter to enable it
 
-**Let's look at the detailed flow with following examples:**
 
-- Send Notification Payload
+
+Let's look at the detailed flow with following examples:
+
+- Send notification payload
 
     ```JSON
     {
