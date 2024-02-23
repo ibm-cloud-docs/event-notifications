@@ -11,9 +11,6 @@ subcollection: event-notifications
 {{site.data.keyword.attribute-definition-list}}
 
 # {{site.data.keyword.cloud_notm}} Email Service with Custom domain
-{: #en-destinations-custom-domain}
-
-## Configuring a Custom Email destination
 {: #en-destinations-custom-email}
 
 You can configure a custom email destination in the Destinations tab. As part of the configuration, enter the domain name to be used for sending emails.
@@ -21,7 +18,7 @@ You can configure a custom email destination in the Destinations tab. As part of
 ## Custom domain name verification
 {: #en-destinations-custom-email-verify}
 
-After you create the destination with your domain name, make sure its validated for the right ownership. This will prevent misuse of your domain and to keep away from bad actors.
+After you create the destination with your domain name, make sure its validated for ownership. This will prevent misuse of your domain and to keep away from bad actors.
 To verify your custom domain name, follow these steps:
 
 1. Select the configure overflow menu for the destination you want to verify.

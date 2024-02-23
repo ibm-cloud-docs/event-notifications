@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2023
-lastupdated: "2023-12-07"
+  years: 2021, 2024
+lastupdated: "2024-02-21"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -56,8 +56,9 @@ Click `Templates` in the {{site.data.keyword.en_short}} console.
       - Click on Add.
 
 
-## Personalisation in templates
-{: #en-template-personalisation} {: step}
+## Personalization in templates
+{: #en-template-personalization}
+{: step}
 
 Email personalization refers to the practice of tailoring email content and messaging to individual recipients or specific segments of your email list based on their personal preferences, behaviors, demographics, or interactions with your brand. The goal of email personalization is to create a more engaging and relevant email experience for each recipient, which can lead to higher open rates, click-through rates, and conversions. Here are some common ways email personalization can be implemented:
 
@@ -71,11 +72,13 @@ Email personalization refers to the practice of tailoring email content and mess
 
 - Location-Based Personalization: Customizing content or promotions based on the recipient's geographic location or time zone.
 
-- In the send notification payload add a `personalisation` parameter to enable it
+- In the send notification payload add a `personalization` parameter to enable it
 
-**Let's look at the detailed flow with following examples:**
 
-- Send Notification Payload
+
+Let's look at the detailed flow with following examples:
+
+- Send notification payload
 
     ```JSON
     {

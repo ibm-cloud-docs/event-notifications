@@ -28,7 +28,7 @@ Take the steps that get you started by creating an {{site.data.keyword.en_short}
 {: #en-log-in}
 {: step}
 
-In the {{site.data.keyword.cloud_notm}} [catalog](https://{DomainName}/catalog#services), search and select [{{site.data.keyword.en_short}}](https://{DomainName}/catalog/services/event-notifications). The service configuration screen opens.
+In the {{site.data.keyword.cloud_notm}} [catalog](/catalog#services), search and select [{{site.data.keyword.en_short}}](/catalog/services/event-notifications). The service configuration screen opens.
 
 ## Select a location
 {: #en-select}

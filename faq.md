@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2023
-lastupdated: "2023-11-20"
+  years: 2020, 2024
+lastupdated: "2024-02-21"
 
 keywords: event-notification, event notification, faqs, Frequently Asked Questions, question, billing, service, invalid devices, device deletion, database
 
@@ -36,7 +36,7 @@ A resolution is to add any `TransactionID` or `ReferenceID` to the message body.
 
 Sometimes, devices are marked as invalid and deleted from the database, if they meet these invalid conditions:
 
-- **FCM or Android devices**:
+- FCM or Android devices:
 
    - `invalidRegistration` - might be due to incorrect registration token format passed to the server.
    - `MismatchSenderID` - a mismatch in the senderID who is not part of the user group that is tied to a registration token.
@@ -44,7 +44,7 @@ Sometimes, devices are marked as invalid and deleted from the database, if they 
 
    For more information, see [FCM error response codes for downstream messages](https://firebase.google.com/docs/cloud-messaging/http-server-ref#error-codes){: external}.
 
-- **APNS or Safari devices**:
+- APNS or Safari devices:
 
    - `Unregistered` - the device token is not active for the specified topic.
    - `BadDeviceToken` - the specified device token is invalid.
@@ -52,18 +52,18 @@ Sometimes, devices are marked as invalid and deleted from the database, if they 
 
    For more information on how to handle notification responses from apps, see [here](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/handling_notification_responses_from_apns){: external}.
 
-- **Chrome or Firefox devices**:
+- Chrome or Firefox devices:
    - `NotFound` - the subscription is expired and can’t be used.
    - `Gone` - the subscription is no longer valid.
 
-   For more information, see [web push protocol](https://web.dev/push-notifications-web-push-protocol/).
+   For more information, see [web push protocol](https://web.dev/articles/push-notifications-web-push-protocol){: external}.
 
 
-## What is the difference between {{site.data.keyword.en_short}} Topic Subscriptions and {{site.data.keyword.en_short}} Tag Subscriptions to push devices?
+## What is the difference between topic subscriptions and tag subscriptions to push devices?
 {: #faq-en-topic-tag-subscriptions}
 {: faq}
 
-- **{{site.data.keyword.en_short}} Topic subscriptions**:
+- {{site.data.keyword.en_short}} topic subscriptions:
 
    For the topic subscriptions, start by creating a **Topic** and write conditions on that topic. This topic is responsible for routing the incoming notification that satisfies the topic conditions.
 
@@ -75,14 +75,14 @@ Sometimes, devices are marked as invalid and deleted from the database, if they 
 
    1. Create a topic named `ACME-Maintenance`.
    1. Write Advance condition `$.notification-type == 'maintenance'`.
-   1. Subscribe push android and push iOS destinations to the above topic.
+   1. Subscribe push android and push iOS destinations to your topic.
    1. Next, send an event notification with payload containing attribute ``"notification-type":"maintenance"``and ``"ibmenpushto": "{\"platforms\":[\"push_android\",\"push_ios\"]]}"``, `notification-type` attribute is added so that it matches against the topic condition and `ibmenpushto` for targeting customers with android and iOS devices.
    1. {{site.data.keyword.en_short}} will get routed to customers with android and iOS devices, since its payload contains ``"notification-type":"maintenance"`` which matches the condition for Topic `ACME-Maintenance` and ``"ibmenpushto": "{\"platforms\":[\"push_android\",\"push_ios\"]]}"`` as `ibmenpushto` is mandatory for push type {{site.data.keyword.en_short}} destinations.
 
    All push devices will get registered under {{site.data.keyword.en_short}} destination of type push. For example, `push-android`, `push-ios`, and others.
    {: note}
 
-- **{{site.data.keyword.en_short}} Tag subscriptions to push devices**
+- {{site.data.keyword.en_short}} tag subscriptions to push devices:
 
    For example, `ACME` Bank wants to route maintenance event notifications to customers by using android and iOS devices. ACME Bank maintenance usually takes place in one region at a time.
 
@@ -90,15 +90,14 @@ Sometimes, devices are marked as invalid and deleted from the database, if they 
 
    1. To achieve this the bank can use {{site.data.keyword.en_short}} Android Client SDK and iOS Client SDK to subscribe to `Asia Pacific` customers' android and iOS devices under the `AP` tag.
 
-   Follow the below links on how to subscribe tag to push devices by using {{site.data.keyword.en_short}} client SDKs:
-   - [Android Push Notifications (FCM)](/docs/event-notifications?topic=event-notifications-en-push-fcm)
-   - [iOS Push Notifications (APNs)](/docs/event-notifications?topic=event-notifications-en-push-apns)
-   - [Chrome Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-chrome)
-   - [Firefox Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-firefox)
-   - [Safari Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-safari)
-   {: note}
-
-   1. Next, the bank sends a notification with payload containing attribute ``"notification-type":"maintenance"``and ``"ibmenpushto": "{\"tags\":[\"AP\""]]}"``, `notification-type` attributes is added so that it matches against the topic condition and `ibmenpushto` as the message is for targeting push customers with android and iOS devices in Asia Pacific region `AP`.
+      Use the following links to learn more about how to subscribe to push devices by using the {{site.data.keyword.en_short}} client SDKs:
+      - [Android Push Notifications (FCM)](/docs/event-notifications?topic=event-notifications-en-push-fcm)
+      - [iOS Push Notifications (APNs)](/docs/event-notifications?topic=event-notifications-en-push-apns)
+      - [Chrome Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-chrome)
+      - [Firefox Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-firefox)
+      - [Safari Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-safari)
+      
+   1. Next, the bank sends a notification with payload containing attribute `"notification-type":"maintenance"` and `"ibmenpushto": "{\"tags\":[\"AP\""]]}"`, `notification-type` attributes is added so that it matches against the topic condition and `ibmenpushto` as the message is for targeting push customers with android and iOS devices in Asia Pacific region `AP`.
 
 ## Why don't I see Email or SMS notifications that I have sent after configuring {{site.data.keyword.en_short}} for Email and SMS?
 {: #faq-en-message-email-sms}
@@ -181,7 +180,7 @@ By implementing DKIM, domain owners can increase the trustworthiness of their em
    - Soft Fail: The SPF record suggests caution, but the email is not immediately rejected.
 
 ## How does DKIM verification work?
-{: #faq-en-notifications-spf-verification-works}
+{: #faq-en-notifications-dkim-verification-works}
 {: faq}
 
 1. Message Signing: When an email is sent from a domain that has DKIM enabled, the sending mail server digitally signs the email message using a private key. This signature includes information about the email's content and the sender's domain.

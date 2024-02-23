@@ -263,7 +263,7 @@ The Android SDK enables Android apps to receive push notifications. Complete the
 {: #en-send-notifications-fcm}
 {: step}
 
-Use the [Send notification API](https://cloud.ibm.com/apidocs/event-notifications/event-notifications#send-notifications) to send the push notification for the Android device. You can use the [Node](mailto:https://github.com/IBM/event-notifications-node-admin-sdk#send-notifications) or [Go](https://github.com/IBM/event-notifications-go-admin-sdk#send-notifications) admin SDK instead of calling the API directly.
+Use the [Send notification API](/apidocs/event-notifications) to send the push notification for the Android device. You can use the [Node](mailto:https://github.com/IBM/event-notifications-node-admin-sdk#send-notifications) or [Go](https://github.com/IBM/event-notifications-go-admin-sdk#send-notifications) admin SDK instead of calling the API directly.
 
 ![Send notifications](images/en-send-notifications.png "Send notifications"){: caption="Figure 6. Send notifications" caption-side="bottom"}
 

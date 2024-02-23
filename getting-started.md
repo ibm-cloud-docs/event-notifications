@@ -74,10 +74,10 @@ An `{{site.data.keyword.cloud_notm}} source` indicates a service on {{site.data.
 
 The list of IBM provided sources is as follows:
 - [IBM Cloud Monitoring](/docs/monitoring?topic=monitoring-tutorial-en)
-- [IBM Cloud Security and Compliance Center](/docs/security-compliance?topic=security-compliance-event-notifications&interface=ui)
-- [IBM Cloud Secrets Manager](/docs/secrets-manager?topic=secrets-manager-event-notifications&interface=ui)
-- [IBM Cloud Projects](/docs/allowlist/projects?topic=projects-event-notifications-events&interface=ui)
-- [Toolchain](/docs/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-cd&interface=ui)
+- [IBM Cloud Security and Compliance Center](/docs/security-compliance?topic=security-compliance-event-notifications)
+- [IBM Cloud Secrets Manager](/docs/secrets-manager?topic=secrets-manager-event-notifications)
+- [IBM Cloud Projects](/docs/secure-enterprise?topic=secure-enterprise-setup-project)
+- [Toolchain](/docs/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-cd)
 
 ## Choose an event destination
 {: #en-decide-event-destination}

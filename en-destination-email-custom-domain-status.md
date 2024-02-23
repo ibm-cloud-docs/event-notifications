@@ -72,4 +72,4 @@ An email of size 1xxx bytes is bounced ,Please check the authentacity of the ema
 | `554` | Transaction failed |
 {: caption="Table 1. Common SMTP Error Codes for Bounced Emails" caption-side="top"}
 
-To understand the reason for the bounce, refer to the above table and take appropriate action, such as updating recipient email addresses or resolving issues with the recipient's mailbox.
+To understand the reason for the bounce, refer to the table and take appropriate action, such as updating recipient email addresses or resolving issues with the recipient's mailbox.
