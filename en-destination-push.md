@@ -44,7 +44,7 @@ The push service works along with an app on your users' mobile devices. You must
 ## Push troubleshooting and telemetry
 {: #en-destinations-push-ts-and-telemetry}
 
-Troubleshooting and telemetry information for push notifications is available in the {{site.data.keyword.la_full}} service. You can see the dispatch status as well as *delivered* and *opened* information for individual devices. For more information, see [Logging for {{site.data.keyword.en_short}}](/docs/event-notifications?topic=event-notifications-en-logs).
+Troubleshooting and telemetry information for push notifications is available in the {{site.data.keyword.la_full}} service. You can see the dispatch status as well as *delivered* and *opened* information for individual devices. For more information, see [Logging for {{site.data.keyword.en_short}}](/docs/event-notifications?topic=event-notifications-logging).
 
 ## Push charges
 {: #en-destinations-push-charge}
