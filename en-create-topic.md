@@ -50,7 +50,7 @@ Add the following rules to your topic:
 - `Event type`: select event type from the list.
 - `Event subtype`: select event sub type from the event sub type list.
 - `Severity`: select severity from the severity list.
-- `Advanced conditions`: create your own custom conditions, which must follow [jsonpath specifications](https://github.com/spyzhov/ajson). In the jsonpath specifications, many operators support is provided but currently support for `==` operator enabled. Example:
+- `Advanced conditions`: create your own custom conditions, which must follow [JSONpath specifications](https://github.com/spyzhov/ajson). In the JSONpath specifications, many operators support is provided but currently support for `==` operator enabled. Example:
 
 ```JSON
 {
