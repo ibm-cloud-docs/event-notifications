@@ -20,6 +20,13 @@ content-type: release-note
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
 
+## 29 Feb 2024
+{: #event-notifications-Feb2924}
+{: release-note}
+
+Support for Code Engine Jobs
+: Event Notifications now includes support for code engine jobs as a destination option., see [Code Engine jobs](/docs/event-notifications?topic=event-notifications-en-destinations-codeengine).
+
 ## 10 Jan 2024
 {: #event-notifications-Jan1024}
 {: release-note}
