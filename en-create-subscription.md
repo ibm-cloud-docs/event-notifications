@@ -55,8 +55,8 @@ Click `Subscriptions` in the {{site.data.keyword.en_short}} console.
       - In the **Recipients** section, select the **Invited** tab, enter the email address of the recipient, and click **Add +** to proceed.
    - For `ServiceNow` destination
       - Add values for the following fields, which are optional:
-         - **Assigned to** - User you want the incident to be assigned, and it can be left empty.
-         - **Assignment group** - Group you want the incident to be assigned, and can be left empty.
+         - **Assigned to** - User you want the incident to be assigned.
+         - **Assignment group** - Group you want the incident to be assigned.
 
          If you are providing **Assigned to** and **Assignment group** values, make sure they have proper settings and linked otherwise ServiceNow will reject requests with 403. Also make sure there are no Business Rule blocking assignment to these groups and users.
          {: note}

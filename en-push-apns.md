@@ -204,7 +204,7 @@ You must obtain separate certificates for your development and distribution envi
 
    ![Certificates, Identifiers & Profiles](images/en-apns-cert-tab.png "App ID"){: caption="Figure 23. Certificates, Identifiers & Profiles" caption-side="bottom"}
 
-* Go to `Keys` tab on Left Navigation.
+* Go to `Keys` tab.
 
    ![Keys tab](images/en-apns-keys-tab.png "Keys tab"){: caption="Figure 24. Keys tab" caption-side="bottom"}
 
