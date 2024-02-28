@@ -47,7 +47,6 @@ For example, a bounced log may look like this:
 An email of size 1xxx bytes is bounced ,Please check the authentacity of the emails: [g*a*g*n*1*3@in.ibm.com], from the sender: t*s*<*o*e*l*@xyz.com>host xyz.pphosted.com[] said: 550 5.1.1 User Unknown (in reply to DATA command )
 ```
 
-
 ### Common SMTP Error Codes for Bounced Emails:
 {: #en-destinations-custom-email-status-smtp-error-codes}
 
@@ -73,3 +72,6 @@ An email of size 1xxx bytes is bounced ,Please check the authentacity of the ema
 {: caption="Table 1. Common SMTP Error Codes for Bounced Emails" caption-side="top"}
 
 To understand the reason for the bounce, refer to the table and take appropriate action, such as updating recipient email addresses or resolving issues with the recipient's mailbox.
+
+### Maximal duration of mail in the queue
+At times, Email Service Providers receiving emails from the Event Notifications service may respond with a `DEFERRED` status. In such scenarios, Event Notifications will make delivery attempts for up to one day. The statuses of these notifications will be logged by Event Notifications into IBM Cloud Log Analysis. Please review the email status logs and contact the email administrator of the recipient email address for further assistance. If the SMTP server is unreachable from the IBM Cloud network, please open a support ticket for IBM Cloud Event Notifications for assistance.
