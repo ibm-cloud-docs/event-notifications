@@ -24,7 +24,7 @@ subcollection: event-notifications
 Before you configure {{site.data.keyword.codeengineshort}} as a destination for `run type` Job, make sure that you have a {{site.data.keyword.codeengineshort}} project [created and job configured](https://cloud.ibm.com/codeengine/projects) in the same account as your {{site.data.keyword.en_short}} instance.
 {: note}
 
-In case of `run type` Job, If you are using {{site.data.keyword.en_short}} CLI or API to configure {{site.data.keyword.codeengineshort}} job as a destination, ensure that you have enabled authorization to grant access between services. For more information, see [Using authorizations to grant access between services](#en-using-s2s-auth1).
+In case of `run type` Job, if you are using {{site.data.keyword.en_short}} CLI or API to configure {{site.data.keyword.codeengineshort}} job as a destination, ensure that you have enabled authorization to grant access between services. For more information, see [Using authorizations to grant access between services](#en-using-s2s-auth1).
 {: important}
 
 To configure a {{site.data.keyword.codeengineshort}} destination, do the following steps:
@@ -38,7 +38,7 @@ To configure a {{site.data.keyword.codeengineshort}} destination, do the followi
   - **Name** - Enter a name for your destination.
   - **Description** - Optionally, enter a description for your destination.
   - **Type** - Under **Destination**, for the **Type**, select **{{site.data.keyword.codeengineshort}}** from the list as your destination type.
-  - **Run Type** - Select one of run type **{{site.data.keyword.codeengineshort}}** job or **{{site.data.keyword.codeengineshort}}** application.
+  - **Run Type** - Select one of the run type **{{site.data.keyword.codeengineshort}}** job or **{{site.data.keyword.codeengineshort}}** application.
   
   If selected run type is job then provide the following details:
   - **Project name** - Select the {{site.data.keyword.codeengineshort}} project name from the list, if you already have a {{site.data.keyword.codeengineshort}} project. Otherwise, click the **Create new project** link, to create an {{site.data.keyword.codeengineshort}} project.
@@ -72,7 +72,7 @@ Use {{site.data.keyword.cloud}} Identity and Access Management (IAM) to create o
 
 1. Select a **Source service** as **Event Notifications**.
 
-1. Specify whether you want the authorization to be for all resources or Resources based on selected attributes. If you selected Resources based on selected attributes, then specify the **Add attributes**: only source resource group or only source service instance.
+1. Specify whether you want the authorization to be for all resources or Resources based on selected attributes. If you have chosen Resources based on selected attributes, then specify the **Add attributes**: only source resource group or only source service instance.
 
 1. Select a **Target service** as **{{site.data.keyword.codeengineshort}}**.
 
