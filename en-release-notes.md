@@ -28,7 +28,7 @@ Support for Code Engine Jobs
 : Event Notifications now includes support for code engine jobs as a destination option., see [Code Engine jobs](/docs/event-notifications?topic=event-notifications-en-destinations-codeengine).
 
 Support of additional countries for SMS notification using IBM Cloud SMS service destination
-:  You can now send SMS notifications to countries listed [here](/docs/event-notifications?topic=event-notifications-en-destinations-sms).
+:  You can now send SMS notifications to countries listed [here](/docs/event-notifications?topic=event-notifications-en-destinations-sms#en-destinations-sms-charge).
 
 ## 10 Jan 2024
 {: #event-notifications-Jan1024}
