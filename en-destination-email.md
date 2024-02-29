@@ -20,7 +20,7 @@ subcollection: event-notifications
 - [Inbuilt Email](/docs/event-notifications?topic=event-notifications-en-destination-email-destination-default)
 Inbuilt Email destination provides a SMTP relay for sending transactional and informational event notification emails to recipients who need to be aware of events that happen within your {{site.data.keyword.cloud_notm}} account. This destination can be used to send email notifications for events originating only from IBM Cloud sources.  The content cannot be modified within {{site.data.keyword.en_short}}. This destination is provided out of the box, and is available whenever you create an instance of {{site.data.keyword.en_short}}. These emails originate from `no-reply@cloud.ibm.com` or `event-notifications@cloud.ibm.com`, while you can add your own reply-to address. 
 
-- [IBM Cloud Email service with custom domain](/docs/event-notifications?topic=event-notifications-en-destinations-custom-domain)
+- [IBM Cloud Email service with custom domain](/docs/event-notifications?topic=event-notifications-en-destinations-custom-email)
 Custom Domain Email destination empowers you to tailor your communication by adding your own domain. You now have the flexibility to send emails using the email address associated with your specific domain, creating a personalized touch to your correspondence, by sending your own email content. In addition, this destination type also supports Email Templates and Personalization. 
 
 
@@ -29,7 +29,7 @@ Custom Domain Email destination empowers you to tailor your communication by add
 
 Upon the creation of a new {{site.data.keyword.en_short}} instance, you will notice the presence of the  pre-configured `{{site.data.keyword.cloud_notm}} Email Service` in the destination tab. This pre-configured email destination is poised to meet your immediate communication needs, providing a hassle-free setup for instant usability. Follow [the detailed steps](/docs/event-notifications?topic=event-notifications-en-destination-email-destination-default) to get started with default domain email destination.
 
-If you would like to send your own content in the email or send emails from your own domain, then choose `Custom Email`. Click on  Add destinations, and select`Custom Email` destination to create a new destination. Follow [the detailed steps](/docs/event-notifications?topic=event-notifications-en-destinations-custom-domain) to get started with custom domain email destination.
+If you would like to send your own content in the email or send emails from your own domain, then choose `Custom Email`. Click on  Add destinations, and select`Custom Email` destination to create a new destination. Follow [the detailed steps](/docs/event-notifications?topic=event-notifications-en-destinations-custom-email) to get started with custom domain email destination.
 
 Read through and follow [the suggested etiquettes](/docs/event-notifications?topic=event-notifications-en-email-bestpractices) when utilizing the IBM Cloud email service.
 

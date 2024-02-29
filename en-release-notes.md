@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-02-21"
+lastupdated: "2024-02-29"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -19,6 +19,16 @@ content-type: release-note
 
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
+
+## 29 Feb 2024
+{: #event-notifications-Feb2924}
+{: release-note}
+
+Support for Code Engine Jobs
+: Event Notifications now includes support for code engine jobs as a destination option., see [Code Engine jobs](/docs/event-notifications?topic=event-notifications-en-destinations-codeengine).
+
+Support of additional countries for SMS notification using IBM Cloud SMS service destination
+:  You can now send SMS notifications to countries listed [here](/docs/event-notifications?topic=event-notifications-en-destinations-sms#en-destinations-sms-charge).
 
 ## 10 Jan 2024
 {: #event-notifications-Jan1024}
@@ -67,14 +77,14 @@ Validate connections
 {: release-note}
 
 Email template personalization
-:  Event Notifications now provides the ability to apply Email templates to emails which are sent using Custom Domain Email destination. You can now create your own Email Templates and use these templates to send emails in a personalised way. For more information, see [Personalization in templates](/docs/event-notifications?topic=event-notifications-en-create-en-template#personalization-in-templates).
+:  Event Notifications now provides the ability to apply Email templates to emails which are sent using Custom Domain Email destination. You can now create your own Email Templates and use these templates to send emails in a personalised way. For more information, see [Personalization in templates](/docs/event-notifications?topic=event-notifications-en-destinations-custom-email#en-destinations-custom-email-templates).
 
 ## 31 August 2023
 {: #event-notifications-Aug3123}
 {: release-note}
 
 Support for Email Templates in Custom Domain Email Destination
-:  Event Notifications now provides the ability to apply Email templates to emails which are sent using Custom Domain Email destination. You can now create your own Email Templates and use these templates to send emails. For more information, see [Email Templates](/docs/event-notifications?topic=event-notifications-en-destinations-custom-domain#en-destinations-custom-email-templates). 
+:  Event Notifications now provides the ability to apply Email templates to emails which are sent using Custom Domain Email destination. You can now create your own Email Templates and use these templates to send emails. For more information, see [Email Templates](/docs/event-notifications?topic=event-notifications-en-destinations-custom-email#en-destination-email-custom-domain-opt-out-desc). 
 
 
 ## 31 July 2023
@@ -85,7 +95,7 @@ New supported {{site.data.keyword.cloud_notm}} source: watsonx.data
 :  IBM watsonx.data is an open, hybrid, and governed fit-for-purpose data store optimized to scale all data, analytics and AI workloads available as a Event Notifications source under IBM Cloud Sources. For more information, see [Enabling event notifications for watsonx.data](/docs/watsonxdata?topic=watsonxdata-event-notifications-events).
 
 Support for Custom Domain Email Service
-:  Event Notifications provides support for sending emails from custom domain using the new destination, email service with custom domain name. For more information, see [Using an IBM Cloud email service with custom domain](/docs/event-notifications?topic=event-notifications-en-destinations-custom-domain).
+:  Event Notifications provides support for sending emails from custom domain using the new destination, email service with custom domain name. For more information, see [Using an IBM Cloud email service with custom domain](/docs/event-notifications?topic=event-notifications-en-destinations-custom-email).
 
 ## 14 June 2023
 {: #event-notifications-Jun1423}
