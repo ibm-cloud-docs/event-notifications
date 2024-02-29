@@ -162,7 +162,7 @@ Because SMS delivery rates vary widely with location, SMS text messages are char
 | +98 (Iran) | 7.46 units | 
 | +353 (Ireland) | 2.68 units | 
 | +972 (Israel) | 3.9 units | 
-|(Italy) | 3.08 units | 
+| +39 (Italy) | 3.08 units | 
 | +81 (Japan) | 2.75 units | 
 | +962 (Jordan) | 1.1 units | 
 | +7 (Kazakhstan) | 10.5 units | 
