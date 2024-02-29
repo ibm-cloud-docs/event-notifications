@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-05-30"
+lastupdated: "2024-02-29"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, sms
 
@@ -100,7 +100,6 @@ Because SMS delivery rates vary widely with location, SMS text messages are char
 | +376 (Andorra) | 0.64 units | 
 | +54 (Argentina) | 2.67 units | 
 | +247 (Ascension Island) | 7.32 units | 
-| +61 (Australia) | 2.2 units | 
 | +43 (Austria) | 3.43 units | 
 | +994 (Azerbaijan) | 3.74 units | 
 | +1242 (Bahamas) | 1.03 units | 
