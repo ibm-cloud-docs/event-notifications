@@ -226,7 +226,7 @@ Client timeouts can occur due to various reasons, such as slow network connectiv
 {: #faq-en-notifications-cause}
 {: faq}
 
-You may encounter client timeouts when trying to access a website, application, or service. Common indicators include error messages like "Connection Timed Out" or "Request Timed Out." Monitoring tools and logs on the server side may also provide insights into timeout occurrences.
+You may encounter client timeouts when trying to access a website, application, or service. Common indicators include error messages like `Connection Timed Out` or `Request Timed Out`. Monitoring tools and logs on the server side may also provide insights into timeout occurrences.
 
 ## How can I troubleshoot client timeouts?
 {: #faq-en-notifications-client-timeout-troubleshoot}

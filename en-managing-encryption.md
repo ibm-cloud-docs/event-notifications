@@ -82,7 +82,7 @@ To remove access permanently, you can delete the key. However, you must take ext
 
 In both cases, the {{site.data.keyword.en_short}} instance shuts down and no longer accepts or processes connections. An activity tracker event is generated to report the action. For more information, see [{{site.data.keyword.en_short}} events](/docs/event-notifications?topic=event-notifications-en-at_events).
 
-The authorization should be left in place between your {{site.data.keyword.en_short}} and the key management service instance at all times. While removing this authorization prevents {{site.data.keyword.en_short}} from future access to your data, already in-use data will continue to be available for a period of time.
+The authorization should remain in place between your {{site.data.keyword.en_short}} and the key management service instance at all times. While removing this authorization prevents {{site.data.keyword.en_short}} from future access to your data, already in-use data will continue to be available for a period of time.
 {: note}
 
 You are charged for your instance of {{site.data.keyword.en_short}} until you deprovision it using the {{site.data.keyword.cloud_notm}} console or CLI. These charges are still applied even if you chose to prevent access to your data.
