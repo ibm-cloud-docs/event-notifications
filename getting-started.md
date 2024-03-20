@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2023-12-12"
+  years: 2021, 2024
+lastupdated: "2024-03-20"
 
 keywords: event notifications, IBM Cloud
 
@@ -70,14 +70,20 @@ An `API source` indicates that the Event originated outside of {{site.data.keywo
 
 An `{{site.data.keyword.cloud_notm}} source` indicates a service on {{site.data.keyword.cloud_notm}} that can emit events to {{site.data.keyword.en_short}} service.
 
-`{{site.data.keyword.cloud_notm}} platform sources` indicates a {{site.data.keyword.cloud_notm}} resource that emits resource lifecycle events around the {{site.data.keyword.cloud_notm}} resources.
+The source `{{site.data.keyword.cloud_notm}} Resource Lifecycle Events` is a built-in source.  This source emits resource lifecycle events to {{site.data.keyword.en_short}} service. This is disabled by default and needs to be enabled.
+
+The other {{site.data.keyword.cloud_notm}} sources have to be first integrated from the respectice services to start emitting events to {{site.data.keyword.en_short}} service.
 
 The list of IBM provided sources is as follows:
-- [IBM Cloud Monitoring](/docs/monitoring?topic=monitoring-tutorial-en)
-- [IBM Cloud Security and Compliance Center](/docs/security-compliance?topic=security-compliance-event-notifications)
-- [IBM Cloud Secrets Manager](/docs/secrets-manager?topic=secrets-manager-event-notifications)
-- [IBM Cloud Projects](/docs/secure-enterprise?topic=secure-enterprise-setup-project)
-- [Toolchain](/docs/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-cd)
+- [{{site.data.keyword.monitoringfull_notm}}](https://{DomainName}/docs/monitoring?topic=monitoring-eventnotif){: external}
+- [Security and Compliance](https://{DomainName}/docs/security-compliance?topic=security-compliance-event-notifications&interface=ui){: external}
+- [{{site.data.keyword.secrets-manager_short}}](https://{DomainName}/docs/secrets-manager?topic=secrets-manager-event-notifications&interface=ui){: external}
+- [{{site.data.keyword.appconfig_short}}](https://{DomainName}/docs/app-configuration?topic=app-configuration-ac-int-en){: external}
+- [IBM Cloud Projects](https://{DomainName}/docs/secure-enterprise?topic=secure-enterprise-event-notifications-events&interface=ui){: external}
+- [Toolchain](https://{DomainName}/docs/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-cd&interface=ui){: external}
+- [watsonx.data](https://{DomainName}/docs/watsonxdata?topic=watsonxdata-event-notifications-events){: external}
+- [OpenPages](https://{DomainName}/docs/openpages?topic=openpages-event-notifications-events){: external}
+
 
 ## Choose an event destination
 {: #en-decide-event-destination}
@@ -90,8 +96,13 @@ A destination is a delivery target for a notification. Two destination categorie
 
 Human destinations are devices, servers, or applications that present notifications for human consumption. The following human destinations are supported:
 
-- [{{site.data.keyword.cloud_notm}} Email](/docs/event-notifications?topic=event-notifications-en-destinations-email)
-   - [{{site.data.keyword.cloud_notm}} Email with custom domain](/docs/event-notifications?topic=event-notifications-en-destinations-custom-email)
+- [Email Destinations](/docs/event-notifications?topic=event-notifications-en-destinations-email)
+   - [Inbuilt Email](/docs/event-notifications?topic=event-notifications-en-destination-email-destination-default)
+   - [IBM Cloud Email service with custom domain](/docs/event-notifications?topic=event-notifications-en-destinations-custom-email)
+- [Inbuilt SMS](/docs/event-notifications?topic=event-notifications-en-destinations-sms)
+- [Custom SMS](/docs/event-notifications?topic=event-notifications-en-destinations-sms-custom)
+- [Microsoft&reg; Teams](/docs/event-notifications?topic=event-notifications-en-destinations-msteams)
+- [PagerDuty](/docs/event-notifications?topic=event-notifications-en-destinations-pagerduty)
 - [Push notifications](/docs/event-notifications?topic=event-notifications-en-destinations-push)
    - [Android Push Notifications (FCM)](/docs/event-notifications?topic=event-notifications-en-push-fcm)
    - [iOS Push Notifications (APNs)](/docs/event-notifications?topic=event-notifications-en-push-apns)
@@ -99,10 +110,7 @@ Human destinations are devices, servers, or applications that present notificati
    - [Firefox Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-firefox)
    - [Safari Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-safari)
    - [Huawei Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-huawei)
-- [{{site.data.keyword.cloud_notm}} SMS](/docs/event-notifications?topic=event-notifications-en-destinations-sms)
--  - [Custom SMS](/docs/event-notifications?topic=event-notifications-en-destinations-sms-custom) 
 - [Slack](/docs/event-notifications?topic=event-notifications-en-destinations-slack)
-- [Microsoft&reg; Teams](/docs/event-notifications?topic=event-notifications-en-destinations-msteams)
 - [ServiceNow](/docs/event-notifications?topic=event-notifications-en-destinations-servicenow)
 
 ### Service destinations
@@ -112,4 +120,5 @@ Service destinations are cloud services or applications where notifications are 
 
 - [Webhook](/docs/event-notifications?topic=event-notifications-en-destinations-webhook)
 - [{{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}](/docs/event-notifications?topic=event-notifications-en-destinations-cloud-functions)
+- [{{site.data.keyword.codeengineshort}}](/docs/event-notifications?topic=event-notifications-en-destinations-codeengine)
 - [{{site.data.keyword.cos_full_notm}}](/docs/event-notifications?topic=event-notifications-en-destinations-cloud-object-storage)
