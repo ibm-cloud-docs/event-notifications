@@ -23,15 +23,25 @@ toc:
           - en-source.md
           - en-resource-lifcycle-events.md
       - topicgroup:
-          label: Event Destinations
+          label: Event destinations
           topics:
           - en-destination.md  
-          - en-destination-email.md
-          - en-destination-email-custom-domain.md
-          - en-destination-sms.md
           - topicgroup:
-              label: Push Notifications
+              label: Email destinations
               topics:
+              - en-destination-email.md
+              - en-destination-email-destination-default.md
+              - en-destination-email-custom-domain.md
+              - en-destination-email-custom-domain-status.md
+              - en-destination-email-custom-domain-opt-out.md
+          - topicgroup:
+              label: SMS destinations
+              topics:
+              - en-destination-sms.md
+              - en-destination-sms-custom.md
+          - topicgroup:
+              label: Push notifications
+              topics:   
               - en-destination-push.md
               - link:
                   label: Android Push Notifications (FCM)
@@ -120,7 +130,7 @@ toc:
       id: howto
       topics:
       - topicgroup:
-          label: Logging and Monitoring
+          label: Logging and monitoring
           topics:
           - en-monitor.md
           - en-logs.md

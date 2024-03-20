@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2023
-lastupdated: "2023-09-20"
+  years: 2021, 2024
+lastupdated: "2024-02-21"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -22,11 +22,10 @@ completion-time: 10m
 {: toc-completion-time="10m"}
 
 Create an {{site.data.keyword.en_short}} template. Template is a pre-defined layout, that may include content like images, text and dynamic content based on event. Rather than creating a new content from scratch each time, you can use a template as a base and configure them in subscription. {{site.data.keyword.en_short}} supports the following templates:
+{: shortdesc}
 
 - Custom Email notification
 - Custom Email invitation
-
-{: shortdesc}
 
 ## Create a template
 {: #en-create-template}
@@ -57,8 +56,9 @@ Click `Templates` in the {{site.data.keyword.en_short}} console.
       - Click on Add.
 
 
-## Personalisation in templates
-{: #en-template-personalisation} {: step}
+## Personalization in templates
+{: #en-template-personalization}
+{: step}
 
 Email personalization refers to the practice of tailoring email content and messaging to individual recipients or specific segments of your email list based on their personal preferences, behaviors, demographics, or interactions with your brand. The goal of email personalization is to create a more engaging and relevant email experience for each recipient, which can lead to higher open rates, click-through rates, and conversions. Here are some common ways email personalization can be implemented:
 
@@ -72,11 +72,13 @@ Email personalization refers to the practice of tailoring email content and mess
 
 - Location-Based Personalization: Customizing content or promotions based on the recipient's geographic location or time zone.
 
-- In the send notification payload add a `personalisation` parameter to enable it
+- In the send notification payload add a `personalization` parameter to enable it
 
-**Let's look at the detailed flow with following examples:**
 
-- Send Notification Payload
+
+Let's look at the detailed flow with following examples:
+
+- Send notification payload
 
     ```JSON
     {

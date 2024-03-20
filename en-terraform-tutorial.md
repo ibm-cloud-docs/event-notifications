@@ -29,7 +29,7 @@ This tutorial shows you how to use Terraform to configure files like `provider.t
 
 Ensure that the following prerequisites are in place:
 
-* Install Terraform. For more information, see [Download Terraform](https://www.terraform.io/downloads.html){: external}.
+* Install Terraform. For more information, see [Download Terraform](https://developer.hashicorp.com/terraform/install){: external}.
 * Either deploy Terraform to a specific folder or add it to your `PATH`.
 
 * Check your version of Terraform:
@@ -508,7 +508,7 @@ Terraform will perform the following actions:
 Plan: 4 to add, 0 to change, 0 to destroy.
 
 Do you want to perform these actions?
-  Terraform will perform the actions described above.
+  Terraform will perform the actions described.
   Only 'yes' will be accepted to approve.
 
   Enter a value: yes

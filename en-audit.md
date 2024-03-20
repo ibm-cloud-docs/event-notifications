@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2019, 2022
-lastupdated: "2023-09-26"
+  years: 2019, 2024
+lastupdated: "2024-02-21"
 
 keywords: event notifications activity tracker events, event notifications events, event notifications audit, event notifications audit events, event notifications audit logs
 
-subcollection: event notifications
+subcollection: event-notifications
 
 ---
 

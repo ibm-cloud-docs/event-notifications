@@ -21,7 +21,7 @@ completion-time: 10m
 {: toc-content-type="tutorial"}
 {: toc-completion-time="10m"}
 
-Create an {{site.data.keyword.en_short}} topic. Topics are based on a publish and subscription model. You can send notifications or alerts to multiple destination types, (for example, email, SMS, and others that are subscribed to a particular topic. Configure topics as needed and {{site.data.keyword.en_short}} handles the routing and delivering of alerts reliably to the right destinations.
+Create an {{site.data.keyword.en_short}} topic. Topics are based on a publish and subscription model. You can send notifications or alerts to multiple destination types, (for example, email, SMS, and others that are subscribed to a particular topic. Configure topics as needed and {{site.data.keyword.en_short}} handles the routing and delivering of alerts reliably to the correct destinations.
 {: shortdesc}
 
 - Each topic is created under a registered source.
@@ -50,7 +50,7 @@ Add the following rules to your topic:
 - `Event type`: select event type from the list.
 - `Event subtype`: select event sub type from the event sub type list.
 - `Severity`: select severity from the severity list.
-- `Advanced conditions`: create your own custom conditions, which must follow [jsonpath specifications](https://github.com/spyzhov/ajson). In the jsonpath specifications, many operators support is provided but currently support for `==` operator enabled. Example:
+- `Advanced conditions`: create your own custom conditions, which must follow [JSONpath specifications](https://github.com/spyzhov/ajson). In the JSONpath specifications, many operators support is provided but currently support for `==` operator enabled. Example:
 
 ```JSON
 {
@@ -72,7 +72,7 @@ Add the following rules to your topic:
 }
 ```
 
-Based on the above input JSON following valid JSONPaths can be constructed:
+Based on the previous input JSON following valid JSONPaths can be constructed:
 
 ```bash
 1. $.data.severity=='LOW'

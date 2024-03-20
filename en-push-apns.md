@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2022-10-26"
+  years: 2021, 2024
+lastupdated: "2024-02-21"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, push
 
@@ -204,7 +204,7 @@ You must obtain separate certificates for your development and distribution envi
 
    ![Certificates, Identifiers & Profiles](images/en-apns-cert-tab.png "App ID"){: caption="Figure 23. Certificates, Identifiers & Profiles" caption-side="bottom"}
 
-* Go to `Keys` tab on Left Navigation.
+* Go to `Keys` tab.
 
    ![Keys tab](images/en-apns-keys-tab.png "Keys tab"){: caption="Figure 24. Keys tab" caption-side="bottom"}
 
@@ -392,7 +392,7 @@ enPush.unregisterDevice { response, statusCode, error in
 }
 ```
 
-To unregister from the `UserId` based registration, you must call the registration method. See the `Register without userId option` in [Register for notifications](#register-for-notifications).
+To unregister from the `UserId` based registration, you must call the registration method. See the `Register without userId option` in [Register for notifications](#en-reg-nots).
 {: note}
 
 ## {{site.data.keyword.en_short}} destination tags subscriptions
@@ -519,7 +519,7 @@ override func didReceive(_ request: UNNotificationRequest, withContentHandler co
 {: #en-send-notifications-apns}
 {: step}
 
-Use the [Send Notification API](https://cloud.ibm.com/apidocs/event-notifications/event-notifications#send-notifications) to send the push notification for the iOS device. You can use the [Node](mailto:https://github.com/IBM/event-notifications-node-admin-sdk#send-notifications) or [Go](https://github.com/IBM/event-notifications-go-admin-sdk#send-notifications) admin SDK instead of calling the API directly.
+Use the [Send Notification API](/apidocs/event-notifications) to send the push notification for the iOS device. You can use the [Node](mailto:https://github.com/IBM/event-notifications-node-admin-sdk#send-notifications) or [Go](https://github.com/IBM/event-notifications-go-admin-sdk#send-notifications) admin SDK instead of calling the API directly.
 
 ![Send notifications](images/en-send-notifications.png "Send notifications"){: caption="Figure 27. Send notifications" caption-side="bottom"}
 

@@ -29,7 +29,7 @@ To post a {{site.data.keyword.openwhisk_short}} notification, you need to genera
 
 1. Create an **Action**. For more information, see [here](https://{DomainName}/docs/openwhisk?topic=openwhisk-actions).
 
-1. Select **Endpoints** from the left menu.
+1. Select **Endpoints** from the menu.
 
    Make sure to uncheck `Enable as Web Action` and `Raw HTTP handling` options in the Web Action section for an effective usage of {{site.data.keyword.openwhisk_short}} as a destination.
    {: note}

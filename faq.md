@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2023
-lastupdated: "2023-10-03"
+  years: 2020, 2024
+lastupdated: "2024-02-21"
 
 keywords: event-notification, event notification, faqs, Frequently Asked Questions, question, billing, service, invalid devices, device deletion, database
 
@@ -30,13 +30,13 @@ A resolution is to add any `TransactionID` or `ReferenceID` to the message body.
 
 - The user opts out. If the user opts out from messaging by sending opt-out text like `Opt Out`, `Stop`, or `Exit`, then messages do not reach that user and the status report states that. The user can send an `Opt in` message to the same source to restart receiving messages.
 
-## Why do some devices are marked invalid and deleted from database?
+## Why are some devices marked invalid and deleted from the database?
 {: #faq-en-invalid-device-deletion}
 {: faq}
 
-Sometimes the devices are marked invalid and deleted from database, if they meet these invalid conditions:
+Sometimes, devices are marked as invalid and deleted from the database, if they meet these invalid conditions:
 
-- **FCM or Android devices**:
+- FCM or Android devices:
 
    - `invalidRegistration` - might be due to incorrect registration token format passed to the server.
    - `MismatchSenderID` - a mismatch in the senderID who is not part of the user group that is tied to a registration token.
@@ -44,7 +44,7 @@ Sometimes the devices are marked invalid and deleted from database, if they meet
 
    For more information, see [FCM error response codes for downstream messages](https://firebase.google.com/docs/cloud-messaging/http-server-ref#error-codes){: external}.
 
-- **APNS or Safari devices**:
+- APNS or Safari devices:
 
    - `Unregistered` - the device token is not active for the specified topic.
    - `BadDeviceToken` - the specified device token is invalid.
@@ -52,18 +52,18 @@ Sometimes the devices are marked invalid and deleted from database, if they meet
 
    For more information on how to handle notification responses from apps, see [here](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/handling_notification_responses_from_apns){: external}.
 
-- **Chrome or Firefox devices**:
+- Chrome or Firefox devices:
    - `NotFound` - the subscription is expired and can’t be used.
    - `Gone` - the subscription is no longer valid.
 
-   For more information, see [web push protocol](https://web.dev/push-notifications-web-push-protocol/).
+   For more information, see [web push protocol](https://web.dev/articles/push-notifications-web-push-protocol){: external}.
 
 
-## What is the difference between {{site.data.keyword.en_short}} Topic Subscriptions and {{site.data.keyword.en_short}} Tag Subsciptions to push devices?
+## What is the difference between topic subscriptions and tag subscriptions to push devices?
 {: #faq-en-topic-tag-subscriptions}
 {: faq}
 
-- **{{site.data.keyword.en_short}} Topic subscriptions**:
+- {{site.data.keyword.en_short}} topic subscriptions:
 
    For the topic subscriptions, start by creating a **Topic** and write conditions on that topic. This topic is responsible for routing the incoming notification that satisfies the topic conditions.
 
@@ -75,14 +75,14 @@ Sometimes the devices are marked invalid and deleted from database, if they meet
 
    1. Create a topic named `ACME-Maintenance`.
    1. Write Advance condition `$.notification-type == 'maintenance'`.
-   1. Subscribe push android and push iOS destinations to the above topic.
+   1. Subscribe push android and push iOS destinations to your topic.
    1. Next, send an event notification with payload containing attribute ``"notification-type":"maintenance"``and ``"ibmenpushto": "{\"platforms\":[\"push_android\",\"push_ios\"]]}"``, `notification-type` attribute is added so that it matches against the topic condition and `ibmenpushto` for targeting customers with android and iOS devices.
    1. {{site.data.keyword.en_short}} will get routed to customers with android and iOS devices, since its payload contains ``"notification-type":"maintenance"`` which matches the condition for Topic `ACME-Maintenance` and ``"ibmenpushto": "{\"platforms\":[\"push_android\",\"push_ios\"]]}"`` as `ibmenpushto` is mandatory for push type {{site.data.keyword.en_short}} destinations.
 
    All push devices will get registered under {{site.data.keyword.en_short}} destination of type push. For example, `push-android`, `push-ios`, and others.
    {: note}
 
-- **{{site.data.keyword.en_short}} Tag subscriptions to push devices**
+- {{site.data.keyword.en_short}} tag subscriptions to push devices:
 
    For example, `ACME` Bank wants to route maintenance event notifications to customers by using android and iOS devices. ACME Bank maintenance usually takes place in one region at a time.
 
@@ -90,15 +90,14 @@ Sometimes the devices are marked invalid and deleted from database, if they meet
 
    1. To achieve this the bank can use {{site.data.keyword.en_short}} Android Client SDK and iOS Client SDK to subscribe to `Asia Pacific` customers' android and iOS devices under the `AP` tag.
 
-   Follow the below links on how to subscribe tag to push devices by using {{site.data.keyword.en_short}} client SDKs:
-   - [Android Push Notifications (FCM)](/docs/event-notifications?topic=event-notifications-en-push-fcm)
-   - [iOS Push Notifications (APNs)](/docs/event-notifications?topic=event-notifications-en-push-apns)
-   - [Chrome Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-chrome)
-   - [Firefox Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-firefox)
-   - [Safari Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-safari)
-   {: note}
-
-   1. Next, the bank sends a notification with payload containing attribute ``"notification-type":"maintenance"``and ``"ibmenpushto": "{\"tags\":[\"AP\""]]}"``, `notification-type` attributes is added so that it matches against the topic condition and `ibmenpushto` as the message is for targeting push customers with android and iOS devices in Asia Pacific region `AP`.
+      Use the following links to learn more about how to subscribe to push devices by using the {{site.data.keyword.en_short}} client SDKs:
+      - [Android Push Notifications (FCM)](/docs/event-notifications?topic=event-notifications-en-push-fcm)
+      - [iOS Push Notifications (APNs)](/docs/event-notifications?topic=event-notifications-en-push-apns)
+      - [Chrome Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-chrome)
+      - [Firefox Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-firefox)
+      - [Safari Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-safari)
+      
+   1. Next, the bank sends a notification with payload containing attribute `"notification-type":"maintenance"` and `"ibmenpushto": "{\"tags\":[\"AP\""]]}"`, `notification-type` attributes is added so that it matches against the topic condition and `ibmenpushto` as the message is for targeting push customers with android and iOS devices in Asia Pacific region `AP`.
 
 ## Why don't I see Email or SMS notifications that I have sent after configuring {{site.data.keyword.en_short}} for Email and SMS?
 {: #faq-en-message-email-sms}
@@ -112,11 +111,11 @@ Email and SMS are supported only for {{site.data.keyword.IBM_notm}} Managed Sour
 
 {{site.data.keyword.en_short}} supports the Slack destination using Slack's “Incoming Webhook” feature. An incoming webhook is linked directly to a Slack channel. Hence, there is no need to separately specify the Slack channel.
 
-## Is it possible to customize the message that is generated from {{site.data.keyword.cloud_notm}} services (({{site.data.keyword.cloud_notm}} sources)?
+## Is it possible to customize the message that is generated from {{site.data.keyword.cloud_notm}} services ({{site.data.keyword.cloud_notm}} sources)?
 {: #faq-en-sms-customize}
 {: faq}
 
-You cannot customize messages that are generated from {{site.data.keyword.cloud_notm}} services (({{site.data.keyword.cloud_notm}} sources). These notifications are generated by the respective {{site.data.keyword.cloud_notm}} service such as {{site.data.keyword.secrets-manager_short}}, and {{site.data.keyword.compliance_short}}. The message content cannot be modified by the end user before it is sent out to a destination.
+You cannot customize messages that are generated from {{site.data.keyword.cloud_notm}} services ({{site.data.keyword.cloud_notm}} sources). These notifications are generated by the respective {{site.data.keyword.cloud_notm}} service such as {{site.data.keyword.secrets-manager_short}}, and {{site.data.keyword.compliance_short}}. The message content cannot be modified by the end user before it is sent out to a destination.
 
 ## Why do I get a 422 error response for the Send Notifications API call?
 {: #faq-en-send-notification-error-422}
@@ -181,7 +180,7 @@ By implementing DKIM, domain owners can increase the trustworthiness of their em
    - Soft Fail: The SPF record suggests caution, but the email is not immediately rejected.
 
 ## How does DKIM verification work?
-{: #faq-en-notifications-spf-verification-works}
+{: #faq-en-notifications-dkim-verification-works}
 {: faq}
 
 1. Message Signing: When an email is sent from a domain that has DKIM enabled, the sending mail server digitally signs the email message using a private key. This signature includes information about the email's content and the sender's domain.
@@ -210,3 +209,47 @@ Email personalization refers to the practice of tailoring email content and mess
 {: faq}
 
 There are two types of templates: Invitation templates and Notification templates. An Invitation template is used to send customized email invitations to all those added to the subscriptions, while a Notification template is used when sending an email for an event. It can include HTML tags, handlebars support, and personalization support.
+
+## What is a client timeout?
+{: #faq-en-notifications-timeout}
+{: faq}
+
+A client timeout refers to the period during which a client (such as a web browser or application) waits for a response from a server. If the server fails to respond within this specified time frame, a timeout occurs, indicating that the connection has been lost or the server is unresponsive.
+
+## Why do client timeouts occur?
+{: #faq-en-notifications-why-timeout}
+{: faq}
+
+Client timeouts can occur due to various reasons, such as slow network connectivity, server overload, misconfigurations, or issues with the client-side application. When a client doesn't receive a response from the server within the defined timeout period, it assumes there's a problem and terminates the connection.
+
+## How can I determine if a client timeout is happening?
+{: #faq-en-notifications-cause}
+{: faq}
+
+You may encounter client timeouts when trying to access a website, application, or service. Common indicators include error messages like `Connection Timed Out` or `Request Timed Out`. Monitoring tools and logs on the server side may also provide insights into timeout occurrences.
+
+## How can I troubleshoot client timeouts?
+{: #faq-en-notifications-client-timeout-troubleshoot}
+{: faq}
+
+- Check your internet connection: Ensure that your internet connection is stable and not experiencing any disruptions.
+- Verify server status: Confirm that Event Notification Service is available and no incidents have been reported.
+- Adjust timeout settings: Some applications allow users to adjust timeout settings. If possible, consider extending the timeout duration to accommodate potential delays.
+
+## How can developers address client timeouts in their applications?
+{: #faq-en-notifications-timeout-address}
+{: faq}
+
+Developers can implement various strategies, including optimizing code for better performance, utilizing asynchronous programming, and implementing retry mechanisms. Additionally, providing users with clear error messages and guidance on troubleshooting can enhance the overall user experience.
+
+## Are client timeouts always a result of server issues?
+{: #faq-en-notifications-client-timeout-server}
+{: faq}
+
+Not necessarily. While server-related problems are common causes of client timeouts, issues on the client side, such as network problems or misconfigured settings, can also contribute to timeouts. It's essential to investigate both client and server aspects when troubleshooting timeout issues.
+
+## What should I do if I frequently experience client timeouts?
+{: #faq-en-notifications-client-timeout-action}
+{: faq}
+
+If you consistently encounter client timeouts, consider reaching out to the support team.

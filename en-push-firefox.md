@@ -129,6 +129,7 @@ The Firefox web SDK enables Firefox websites to receive push notifications. Comp
       "name": "YOUR_WEBSITE_NAME"
    }
    ```
+   {: codeblock}
 
 * Change the `manifest_Website.json` file name to `manifest.json`.
 
@@ -137,12 +138,14 @@ The Firefox web SDK enables Firefox websites to receive push notifications. Comp
    ```html
    <link rel="manifest" href="manifest.json">
    ```
+   {: codeblock}
 
 * Include {{site.data.keyword.cloud_notm}} web push SDK to the script.
 
    ```html
    <script src="ENPushSDK.js" async></script>
    ```
+   {: codeblock}
 
 * Complete the following steps to enable the website to initialize the SDK.
 
@@ -164,6 +167,7 @@ The Firefox web SDK enables Firefox websites to receive push notifications. Comp
 
    enPush.initialize(initParams, callback)
    ```
+   {: codeblock}
 
    * `region`: Region of the {{site.data.keyword.en_short}} instance. eg; `us-south`,`eu-gb`, `au-syd`, `eu-de` and `eu-es`.
 
@@ -178,6 +182,7 @@ The Firefox web SDK enables Firefox websites to receive push notifications. Comp
          alert(response.response)
       })
       ```
+      {: codeblock}
 
    * Register with `UserId`. For `userId` based notification, the register method will accept one more parameter - `userId`.
 
@@ -186,6 +191,7 @@ The Firefox web SDK enables Firefox websites to receive push notifications. Comp
          alert(response.response)
       })
       ```
+      {: codeblock}
 
       `UserId` is the user identifier value with which you want to register devices in the push service instance.
 
@@ -196,6 +202,7 @@ The Firefox web SDK enables Firefox websites to receive push notifications. Comp
       alert(response.response)
    })
    ```
+   {: codeblock}
 
 * When the setup is complete, run your application and register for push notifications.
 
@@ -203,6 +210,6 @@ The Firefox web SDK enables Firefox websites to receive push notifications. Comp
 {: #en-send-notifications-ff}
 {: step}
 
-Use the [Send Notification API](https://cloud.ibm.com/apidocs/event-notifications/event-notifications#send-notifications) to send the push notification for the Firefox device. You can use the [Node](https://github.com/IBM/event-notifications-node-admin-sdk#send-notifications){: external} or [Go](https://github.com/IBM/event-notifications-go-admin-sdk#send-notifications){: external} admin SDK instead of calling the API directly.
+Use the [Send Notification API](/apidocs/event-notifications) to send the push notification for the Firefox device. You can use the [Node](https://github.com/IBM/event-notifications-node-admin-sdk#send-notifications){: external} or [Go](https://github.com/IBM/event-notifications-go-admin-sdk#send-notifications){: external} admin SDK instead of calling the API directly.
 
 ![Receive notifications](images/en-receive-push-firefox.png "Receive notifications"){: caption="Figure 4. Receive notifications" caption-side="bottom"}
