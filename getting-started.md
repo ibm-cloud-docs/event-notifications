@@ -90,8 +90,13 @@ A destination is a delivery target for a notification. Two destination categorie
 
 Human destinations are devices, servers, or applications that present notifications for human consumption. The following human destinations are supported:
 
-- [{{site.data.keyword.cloud_notm}} Email](/docs/event-notifications?topic=event-notifications-en-destinations-email)
-   - [{{site.data.keyword.cloud_notm}} Email with custom domain](/docs/event-notifications?topic=event-notifications-en-destinations-custom-email)
+- [Email Destinations](/docs/event-notifications?topic=event-notifications-en-destinations-email)
+   - [Inbuilt Email](/docs/event-notifications?topic=event-notifications-en-destination-email-destination-default)
+   - [IBM Cloud Email service with custom domain](/docs/event-notifications?topic=event-notifications-en-destinations-custom-email)
+- [Inbuilt SMS](/docs/event-notifications?topic=event-notifications-en-destinations-sms)
+- [Custom SMS](/docs/event-notifications?topic=event-notifications-en-destinations-sms-custom)
+- [Microsoft&reg; Teams](/docs/event-notifications?topic=event-notifications-en-destinations-msteams)
+- [PagerDuty](/docs/event-notifications?topic=event-notifications-en-destinations-pagerduty)
 - [Push notifications](/docs/event-notifications?topic=event-notifications-en-destinations-push)
    - [Android Push Notifications (FCM)](/docs/event-notifications?topic=event-notifications-en-push-fcm)
    - [iOS Push Notifications (APNs)](/docs/event-notifications?topic=event-notifications-en-push-apns)
@@ -99,10 +104,7 @@ Human destinations are devices, servers, or applications that present notificati
    - [Firefox Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-firefox)
    - [Safari Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-safari)
    - [Huawei Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-huawei)
-- [{{site.data.keyword.cloud_notm}} SMS](/docs/event-notifications?topic=event-notifications-en-destinations-sms)
--  - [Custom SMS](/docs/event-notifications?topic=event-notifications-en-destinations-sms-custom) 
 - [Slack](/docs/event-notifications?topic=event-notifications-en-destinations-slack)
-- [Microsoft&reg; Teams](/docs/event-notifications?topic=event-notifications-en-destinations-msteams)
 - [ServiceNow](/docs/event-notifications?topic=event-notifications-en-destinations-servicenow)
 
 ### Service destinations
@@ -112,4 +114,5 @@ Service destinations are cloud services or applications where notifications are 
 
 - [Webhook](/docs/event-notifications?topic=event-notifications-en-destinations-webhook)
 - [{{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}](/docs/event-notifications?topic=event-notifications-en-destinations-cloud-functions)
+- [{{site.data.keyword.codeengineshort}}](/docs/event-notifications?topic=event-notifications-en-destinations-codeengine)
 - [{{site.data.keyword.cos_full_notm}}](/docs/event-notifications?topic=event-notifications-en-destinations-cloud-object-storage)
