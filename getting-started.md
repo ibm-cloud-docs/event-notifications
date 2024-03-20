@@ -70,14 +70,20 @@ An `API source` indicates that the Event originated outside of {{site.data.keywo
 
 An `{{site.data.keyword.cloud_notm}} source` indicates a service on {{site.data.keyword.cloud_notm}} that can emit events to {{site.data.keyword.en_short}} service.
 
-`{{site.data.keyword.cloud_notm}} platform sources` indicates a {{site.data.keyword.cloud_notm}} resource that emits resource lifecycle events around the {{site.data.keyword.cloud_notm}} resources.
+The source `{{site.data.keyword.cloud_notm}} Resource Lifecycle Events` is a built-in source.  This source emits resource lifecycle events to {{site.data.keyword.en_short}} service. This is disabled by default and needs to be enabled.
+
+The other {{site.data.keyword.cloud_notm}} sources have to be first integrated from the respectice services to start emitting events to {{site.data.keyword.en_short}} service.
 
 The list of IBM provided sources is as follows:
-- [IBM Cloud Monitoring](/docs/monitoring?topic=monitoring-tutorial-en)
-- [IBM Cloud Security and Compliance Center](/docs/security-compliance?topic=security-compliance-event-notifications)
-- [IBM Cloud Secrets Manager](/docs/secrets-manager?topic=secrets-manager-event-notifications)
-- [IBM Cloud Projects](/docs/secure-enterprise?topic=secure-enterprise-setup-project)
-- [Toolchain](/docs/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-cd)
+- [{{site.data.keyword.monitoringfull_notm}}](https://{DomainName}/docs/monitoring?topic=monitoring-eventnotif){: external}
+- [Security and Compliance](https://{DomainName}/docs/security-compliance?topic=security-compliance-event-notifications&interface=ui){: external}
+- [{{site.data.keyword.secrets-manager_short}}](https://{DomainName}/docs/secrets-manager?topic=secrets-manager-event-notifications&interface=ui){: external}
+- [{{site.data.keyword.appconfig_short}}](https://{DomainName}/docs/app-configuration?topic=app-configuration-ac-int-en){: external}
+- [IBM Cloud Projects](https://{DomainName}/docs/secure-enterprise?topic=secure-enterprise-event-notifications-events&interface=ui){: external}
+- [Toolchain](https://{DomainName}/docs/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-cd&interface=ui){: external}
+- [watsonx.data](https://{DomainName}/docs/watsonxdata?topic=watsonxdata-event-notifications-events){: external}
+- [OpenPages](https://{DomainName}/docs/openpages?topic=openpages-event-notifications-events){: external}
+
 
 ## Choose an event destination
 {: #en-decide-event-destination}
