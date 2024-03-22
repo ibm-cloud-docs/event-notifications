@@ -259,7 +259,7 @@ Select `Topics` in the {{site.data.keyword.en_short}} console and click `Create`
 * `Event type`: select event type from the dropdown list.
 * `Event sub type` select event sub type from the event sub type dropdown list.
 * `Severity`: select severity from the severity dropdown list.
-* `Advanced conditions`: write your own custom conditions, which must follow [jsonpath specifications](https://jsonpath.com/).
+* `Advanced conditions`: write your own custom conditions, which must follow [jsonpath specifications](https://www.rfc-editor.org/rfc/rfc9535.html). Jsonpath expressions can be validated at [jsonpath.com](https://jsonpath.com) or [extendsclass.com](https://extendsclass.com/jsonpath-tester.html).
 
 ## Create an {{site.data.keyword.en_short}} subscription
 {: #en-create-sub-apns}
