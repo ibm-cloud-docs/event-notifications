@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2024-02-29"
+lastupdated: "2024-03-26"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, sms
 
