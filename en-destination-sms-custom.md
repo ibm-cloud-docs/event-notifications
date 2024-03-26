@@ -40,6 +40,7 @@ To comply with the regulatory standards, you may need to get a consent (opt-in) 
 1. Click `Create +` to display **Create a Subscription** side panel.
 
 1. Complete the following subscription details:
+
    - `Name`: name of the subscription.
    - `Description`: add an optional description for this subscription
 
