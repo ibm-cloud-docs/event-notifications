@@ -266,21 +266,35 @@ Total SMS price = (Number of Segments) x (Number of phone numbers) x (Price In D
 In the example, of the five subscribed numbers, two belong to the United States, two to Mexico, and one to France, then
 
 the total SMS units for messages that are sent to destination numbers will be,
+
    SMS units for United States is: 3 x 2 x 0.61 = 3.66 SMS units
+
    SMS units for Mexico is: 3 x 2 x 1.93 = 11.58 SMS units
+
    SMS units for France is: 3 x 1 x 2.48 = 7.44 SMS units
+
 Total SMS units: 22.68 SMS units
 
 and
+
 the total SMS price for messages that are sent to destination numbers will be,
+
    SMS price for United States is: 3 x 2 x 0.0098515 = 0.059109 Dollars
+
    SMS price for Mexico is: 3 x 2 x 0.0311695 = 0.187017 Dollars
+
    SMS price for France is: 3 x 1 x 0.040052 = 0.120156 Dollars
+
 Total SMS price: 0.366282 Dollars
+
 Or 
+
 the total SMS price can also be calulated using
+
 Total SMS price: Total SMS units x 0.01615 ($0.01615 USD/Outbound Digital Message SMS Unit)
+
 Total SMS price: 22.68 x 0.01615 = 0.366282 Dollars
+
 
 You are charged for messages that are successfully sent by the {{site.data.keyword.cloud_notm}} SMS service to the local SMS provider regardless of whether the message was successfully delivered to the local device. So verify your phone number list carefully to prevent unnecessary charges.
 
