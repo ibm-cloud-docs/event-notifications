@@ -254,49 +254,54 @@ Because SMS delivery rates vary widely with location, SMS text messages are char
 | +967 (Yemen) | 2.65 units | 0.0427975 USD
 {: caption="Table 1. Destination country, unit per segment and price per segment" caption-side="bottom"}
 
-Longer notifications (notifications greater than 160 characters) might be split into multiple segments. Each segment is considered a message, as is each recipient phone number. For example, if an incoming notification is split into three SMS segments, and the message is sent to five subscribed phone numbers then,
+## Calculating SMS Units and Price
+{: #en-destinations-sms-charge-calculations}
 
-The total consumed SMS units for the incoming message is:
-Total SMS units = (Number of Segments) x (Number of phone numbers) x (SMS Unit for the country)
+If a notification is longer (notifications greater than 160 characters) might be split into multiple segments. Each segment is considered a message, as is each recipient phone number. For example, if an incoming notification is split into three SMS segments and the message is sent to five subscribed phone numbers
 
-and
-The total price of SMS for the incoming message is:
-Total SMS price = (Number of Segments) x (Number of phone numbers) x (Price In Dollars for the country)
+### Total SMS Units
 
-In the example, of the five subscribed numbers, two belong to the United States, two to Mexico, and one to France, then
+The total number of SMS units consumed for the notification is calculated as follows:
 
-the total SMS units for messages that are sent to destination numbers will be,
+`Total SMS units = (Number of Segments) x (Number of phone numbers) x (SMS Unit for the country)`
 
-   SMS units for United States is: 3 x 2 x 0.61 = 3.66 SMS units
+In this example, with five subscribed phone numbers - two in the United States, two in Mexico, and one in France - the total number of SMS units would be:
 
-   SMS units for Mexico is: 3 x 2 x 1.93 = 11.58 SMS units
+```
+SMS units for United States is: 3 x 2 x 0.61 = 3.66 SMS units
+SMS units for Mexico is: 3 x 2 x 1.93 = 11.58 SMS units
+SMS units for France is: 3 x 1 x 2.48 = 7.44 SMS units
+```
+Total SMS units = 22.68 SMS units
 
-   SMS units for France is: 3 x 1 x 2.48 = 7.44 SMS units
+### Total SMS Price
 
-Total SMS units: 22.68 SMS units
+The total cost of SMS messages sent is calculated as follows:
 
-and
+`Total SMS price = (Number of Segments) x (Number of phone numbers) x (Price In Dollars for the country)`
 
-the total SMS price for messages that are sent to destination numbers will be,
+In this example, the total cost of SMS messages sent would be:
 
-   SMS price for United States is: 3 x 2 x 0.0098515 = 0.059109 Dollars
+```
+SMS price for United States is: 3 x 2 x 0.0098515 = 0.059109 Dollars
+SMS price for Mexico is: 3 x 2 x 0.0311695 = 0.187017 Dollars
+SMS price for France is: 3 x 1 x 0.040052 = 0.120156 Dollars
+```
 
-   SMS price for Mexico is: 3 x 2 x 0.0311695 = 0.187017 Dollars
+Total SMS price = 0.366282 Dollars
 
-   SMS price for France is: 3 x 1 x 0.040052 = 0.120156 Dollars
+### Alternative Calculation
 
-Total SMS price: 0.366282 Dollars
+Alternatively, the total cost of SMS messages sent can be calculated using:
 
-Or 
+`Total SMS Price = Total SMS units x 0.01615 ($0.01615 USD/Outbound Digital Message SMS Unit)`
 
-the total SMS price can also be calulated using
+Total SMS price = 22.68 x 0.01615 = 0.366282 Dollars
 
-Total SMS price: Total SMS units x 0.01615 ($0.01615 USD/Outbound Digital Message SMS Unit)
+### Charging for Successfully Sent Messages
 
-Total SMS price: 22.68 x 0.01615 = 0.366282 Dollars
+Regardless of whether the message was successfully delivered to the local device, you are charged for messages that are successfully sent by the {{site.data.keyword.cloud_notm}} SMS service to the local SMS provider. Therefore, it is essential to verify your phone number list carefully to prevent unnecessary charges
 
-
-You are charged for messages that are successfully sent by the {{site.data.keyword.cloud_notm}} SMS service to the local SMS provider regardless of whether the message was successfully delivered to the local device. So verify your phone number list carefully to prevent unnecessary charges.
 
 For personalized numbers or if you're looking for higher volume and price negotiations, you can find more details [here](/docs/event-notifications?topic=eevent-notifications-en-destinations-sms-custom).
 {: note}
