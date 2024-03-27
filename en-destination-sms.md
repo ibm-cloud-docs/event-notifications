@@ -94,7 +94,7 @@ If a message contains less than 160 characters, then it is considered as one SMS
 
 Because SMS delivery rates vary widely with location, SMS text messages are charged in terms of `SMS Units`. An SMS unit is a fixed unit of cost. Therefore, the number of units that are consumed by a message varies based on the destination country, and {{site.data.keyword.en_short}} service charges vary. Table 1 shows the current SMS Units by country.
 
-| Supported Country Code        | SMS Units | Price In Dollars |
+| Supported Country Code        | SMS Units | Price In USD |
 |-------------------------------|-----------|------------------|
 | +1684 (American Samoa) | 9.77 units | 0.1577855 USD
 | +376 (Andorra) | 0.64 units | 0.010336 USD
@@ -270,29 +270,29 @@ Total SMS units = (Number of Segments) x (Number of phone numbers) x (SMS Unit f
 In this example, with five subscribed phone numbers - two in the United States, two in Mexico, and one in France - the total number of SMS units would be:
 
 ```
-SMS units for United States is: 3 x 2 x 0.61 = 3.66 SMS units
-SMS units for Mexico is: 3 x 2 x 1.93 = 11.58 SMS units
-SMS units for France is: 3 x 1 x 2.48 = 7.44 SMS units
+SMS units for United States is: 3 x 2 x 0.61 = 3.66
+SMS units for Mexico is: 3 x 2 x 1.93 = 11.58
+SMS units for France is: 3 x 1 x 2.48 = 7.44
 ```
-Total SMS units = 22.68 SMS units
+Total SMS units = 22.68
 
 ### Total SMS Price
 
 The total cost of SMS messages sent is calculated as follows:
 
 ```
-Total SMS price = (Number of Segments) x (Number of phone numbers) x (Price In Dollars for the country)
+Total SMS price = (Number of Segments) x (Number of phone numbers) x (Price In USD for the country)
 ```
 
 In this example, the total cost of SMS messages sent would be:
 
 ```
-SMS price for United States is: 3 x 2 x 0.0098515 = 0.059109 Dollars
-SMS price for Mexico is: 3 x 2 x 0.0311695 = 0.187017 Dollars
-SMS price for France is: 3 x 1 x 0.040052 = 0.120156 Dollars
+SMS price for United States is: 3 x 2 x 0.0098515 = 0.059109 USD
+SMS price for Mexico is: 3 x 2 x 0.0311695 = 0.187017 USD
+SMS price for France is: 3 x 1 x 0.040052 = 0.120156 USD
 ```
 
-Total SMS price = 0.366282 Dollars
+Total SMS price = 0.366282 USD
 
 ### Alternative Calculation
 
@@ -302,7 +302,7 @@ Alternatively, the total cost of SMS messages sent can be calculated using:
 Total SMS Price = Total SMS units x 0.01615 ($0.01615 USD/Outbound Digital Message SMS Unit)
 ```
 
-Total SMS price = 22.68 x 0.01615 = 0.366282 Dollars
+Total SMS price = 22.68 x 0.01615 = 0.366282 USD
 
 ### Charging for Successfully Sent Messages
 
