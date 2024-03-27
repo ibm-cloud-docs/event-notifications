@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2024-03-26"
+lastupdated: "2024-03-27"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, sms
 
@@ -263,7 +263,9 @@ If a notification is longer (notifications greater than 160 characters) might be
 
 The total number of SMS units consumed for the notification is calculated as follows:
 
-`Total SMS units = (Number of Segments) x (Number of phone numbers) x (SMS Unit for the country)`
+```
+Total SMS units = (Number of Segments) x (Number of phone numbers) x (SMS Unit for the country)
+```
 
 In this example, with five subscribed phone numbers - two in the United States, two in Mexico, and one in France - the total number of SMS units would be:
 
@@ -278,7 +280,9 @@ Total SMS units = 22.68 SMS units
 
 The total cost of SMS messages sent is calculated as follows:
 
-`Total SMS price = (Number of Segments) x (Number of phone numbers) x (Price In Dollars for the country)`
+```
+Total SMS price = (Number of Segments) x (Number of phone numbers) x (Price In Dollars for the country)
+```
 
 In this example, the total cost of SMS messages sent would be:
 
@@ -294,7 +298,9 @@ Total SMS price = 0.366282 Dollars
 
 Alternatively, the total cost of SMS messages sent can be calculated using:
 
-`Total SMS Price = Total SMS units x 0.01615 ($0.01615 USD/Outbound Digital Message SMS Unit)`
+```
+Total SMS Price = Total SMS units x 0.01615 ($0.01615 USD/Outbound Digital Message SMS Unit)
+```
 
 Total SMS price = 22.68 x 0.01615 = 0.366282 Dollars
 
