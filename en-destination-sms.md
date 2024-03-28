@@ -309,7 +309,7 @@ Total SMS price = 22.68 x 0.01615 = 0.366282 USD
 Regardless of whether the message was successfully delivered to the local device, you are charged for messages that are successfully sent by the {{site.data.keyword.cloud_notm}} SMS service to the local SMS provider. Therefore, it is essential to verify your phone number list carefully to prevent unnecessary charges
 
 
-For personalized numbers or if you're looking for higher volume and price negotiations, you can find more details [here](/docs/event-notifications?topic=eevent-notifications-en-destinations-sms-custom).
+For personalized numbers or if you're looking for higher volume and price negotiations, you can find more details [here](/docs/event-notifications?topic=event-notifications-en-destinations-sms-custom).
 {: note}
 
 You can monitor your SMS usage by setting up a monitoring dashboard through the `Actions` menu in the {{site.data.keyword.en_short}} dashboard. See [Monitor {{site.data.keyword.en_short}} service metrics with {{site.data.keyword.monitoringfull_notm}}](/docs/event-notifications?topic=event-notifications-en-monitoring) for details.
