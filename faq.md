@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-02-21"
+lastupdated: "2024-04-19"
 
 keywords: event-notification, event notification, faqs, Frequently Asked Questions, question, billing, service, invalid devices, device deletion, database
 
@@ -50,7 +50,7 @@ Sometimes, devices are marked as invalid and deleted from the database, if they 
    - `BadDeviceToken` - the specified device token is invalid.
    - `DeviceTokenNotForTopic` - the device token doesn’t match the specified topic (bundle ID).
 
-   For more information on how to handle notification responses from apps, see [here](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/handling_notification_responses_from_apns){: external}.
+   For more information on how to handle notification responses from apps, see [here](https://developer.apple.com/documentation/usernotifications/handling-notification-responses-from-apns){: external}.
 
 - Chrome or Firefox devices:
    - `NotFound` - the subscription is expired and can’t be used.
