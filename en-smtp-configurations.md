@@ -55,9 +55,7 @@ After creating a SMTP configuration in an IBM Cloud Event Notifications instance
 
     8. Whether you have a manual or automated process in place for handling unsubscribes, it's important to provide an "unsubscribe" link in the email payload you send. When recipients decide not to receive further emails, they can simply click on the 'unsubscribe' link and remove their email address from your mailing list. Add a statement that you agree to have an “unsubscribe” link in the email payload that you send.
 
-    9. Do you have a process in place to validate that the email templates that you use are well formatted? Alternatively, if you send the html content in the notification payload, do you have a process to validate this content is well formatted?
-
-    10. Provide your Event Notifications Instance/s and Destination-ID/s in which you want to enable Customer managed email Opt-in.
+    9. If you send the html content in the notification payload, do you have a process to validate this content is well formatted? Ill formatted HTML content may descrese the server reputation.
     ```
     {: codeblock}
 
@@ -116,6 +114,7 @@ After successful verification of a SMTP configuration in an IBM Cloud Event Noti
     {: caption="Table 1. IBM Cloud Event Notifications SMTP endpoints" caption-side="bottom"}
 
     Based on the above table it can be depicted as instances created in the London and Sydney also connects to the Dallas SMTP endpoint and instances created in the Madrid also conencts to the Frankfurt SMTP endpoint.
+    {: note}
 
 2. The SMTP interface port number. As of now, we are supporting port 587.
 
