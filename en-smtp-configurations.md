@@ -10,7 +10,7 @@ subcollection: event-notifications
 
 {{site.data.keyword.attribute-definition-list}}
 
-# {{site.data.keyword.cloud_notm}} Event Notifications SMTP Interface
+# Event Notifications SMTP Interface
 {: #en-smtp-configurations}
 
 IBM Cloud Event Notifications supports SMTP, which is the most common email protocol on the internet. You can send email using variety of clients, softwares or programming languages which supports SMTP by connecting to the IBM Cloud Event Notifications SMTP interface. This document explains how you can setup SMTP configuration, get user credentials and allowlist IPs to send emails.
