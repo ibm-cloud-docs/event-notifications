@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2021, 2024
-lastupdated: "2024-05-01"
+lastupdated: "2024-05-02"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email, smtp
 
@@ -73,19 +73,19 @@ After creating a SMTP configuration in an IBM Cloud Event Notifications instance
 
     1. Via Support Ticket:
         1. From the {{site.data.keyword.cloud_notm}} console menu bar, click the **Help** icon > **Support center**.
-        1. From the Contact support section, click **Create a case**.
+        1. From the Contact Support section, click **Create a case**.
         1. Select under `Category`, `Topic` as Event Notifications and `Subtopic` as Others
-        1. Under `Subject` add **Requesting for the Opt Out feature for the Custom Domain Email destination**
+        1. Under `Subject` add **SMTP Configuration Event Notifications Verification**
         1. In the 'Description' section firstly provide IBM Cloud Event Notifications instance id, region in which instance is created, and a DKIM Name which is in the format of `{{uuid}}._domainkey.{{domain}}`
-        1. Later, please include responses to the aforementioned questionnaire.
-        1. Add **Attachments** if you want to provide more evidences supporting your answers
-        1. Add required email Ids in the **Watchlist** section. And to know more about other options while creating a support case refer [here](https://{DomainName}/docs/get-support?topic=get-support-open-case){: external}.
+        1. Next, include responses to the aforementioned questionnaire.
+        1. Add **Attachments** if you'd like to provide additional evidence to support your answers.
+        1. Add the required email IDs to the **Watchlist** section. And to know more about other options while creating a support case refer [here](https://{DomainName}/docs/get-support?topic=get-support-open-case){: external}.
 
     2. Via opening a new issue in the IBM Cloud Event Notifications [Adopters repository](https://github.ibm.com/Notification-Hub/adopters/issues)
         1. Open a new Issue named as `SMTP Configuration Event Notifications Verification`
-        2. In the description provide IBM Cloud Event Notifications instance id, region in which instance is created, and a DKIM Name which is in the format of `{{uuid}}._domainkey.{{domain}}`
-        3. Later, please include responses to the aforementioned questionnaire.
-        4. Add **Attachments** if you want to provide more evidences supporting your answers
+        2. In the description, provide IBM Cloud Event Notifications instance id, region in which instance is created, and a DKIM Name which is in the format of `{{uuid}}._domainkey.{{domain}}`
+        3. Next, include responses to the aforementioned questionnaire.
+        4. Add **Attachments** if you'd like to provide additional evidence to support your answers
 
 Some of the common verification issues could be:
 
@@ -96,7 +96,7 @@ Some of the common verification issues could be:
 It's worth noting that we perform periodic checks on the SPF and DKIM TXT records of the domain provided. To ensure uninterrupted email delivery, we recommend keeping the records inserted in the DNS even after verifying them once. If the SPF or DKIM fails in the periodic check, we will suspend email sending.
 {: note}
 
-Upon successfully completing all three verification methods, `Setiings` option will be enabled under `⋮`.
+Upon successfully completing all three verification methods, `Settings` option will be enabled under `⋮`.
 
 ## Requirements to send email over SMTP Interface
 {: #en-smtp-configurations-requirements}
