@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2021, 2024
-lastupdated: "2024-05-01"
+lastupdated: "2024-05-02"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email, smtp
 
@@ -89,7 +89,7 @@ Some of the common verification issues could be:
 It's worth noting that we perform periodic checks on the SPF and DKIM TXT records of the domain provided. To ensure uninterrupted email delivery, we recommend keeping the records inserted in the DNS even after verifying them once. If the SPF or DKIM fails in the periodic check, we will suspend email sending.
 {: note}
 
-Upon successfully completing all three verification methods, `Setiings` option will be enabled under `⋮`.
+Upon successfully completing all three verification methods, `Settings` option will be enabled under `⋮`.
 
 ## Requirements to send email over SMTP Interface
 {: #en-smtp-configurations-requirements}
