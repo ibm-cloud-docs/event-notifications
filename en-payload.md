@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-04-19"
+lastupdated: "2024-04-18"
 
 keywords: event-notifications, event notifications migration, notifications, destinations, specification
 
@@ -374,7 +374,7 @@ To customize your APNs push notifications, you can provide APNs headers. Some of
 "ibmenapnsheaders": "{\"apns-priority\":10, \"apns-collapse-id\": \"collapse\"}"
 ```
 
-To get more details on APNs headers, you can check out [here](https://developer.apple.com/documentation/usernotifications/sending-notification-requests-to-apns).
+To get more details on APNs headers, you can check out [here](https://developer.apple.com/documentation/usernotifications/sending-notification-requests-to-apns){: external}.
 
 #### ibmenchromebody(string/json)
 {: #en-ibmenchromebody-string-json}
@@ -481,7 +481,7 @@ To customize your APNs push notifications, you can provide APNs headers. Some of
 "ibmenapnsheaders": "{\"apns-priority\":10, \"apns-collapse-id\": \"collapse\"}"
 ```
 
-To get more details on APNs headers, you can check out [here](https://developer.apple.com/documentation/usernotifications/sending-notification-requests-to-apns).
+To get more details on APNs headers, you can check out [here](https://developer.apple.com/documentation/usernotifications/sending-notification-requests-to-apns){: external}.
 
 ##### ibmenchromebody(string/json)
 {: #en-ibmenchromebody-string-json1}

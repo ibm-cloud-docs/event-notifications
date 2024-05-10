@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-02-29"
+lastupdated: "2024-05-01"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -19,6 +19,13 @@ content-type: release-note
 
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
+
+## 01 May 2024
+{: #event-notifications-May0124}
+{: release-note}
+
+IBM Cloud Event Notifications SMTP Interface
+: Event Notifications now includes support for SMTP configration and sending emails via connecting to the SMTP interface., see [Event Notifications SMTP Interface](https://test.cloud.ibm.com/docs-draft/event-notifications?topic=event-notifications-en-smtp-configurations).
 
 ## 29 Feb 2024
 {: #event-notifications-Feb2924}
