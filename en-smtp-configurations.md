@@ -69,29 +69,22 @@ After creating a SMTP configuration in an IBM Cloud Event Notifications instance
     * A valid Reply-To email ID is required to receive information about rejected or bounced emails.
     * Well-formatted Email content is required to prevent emails from being classified as Spam at the recipient's end. Emails that are not well-formatted (i.e., not in HTML) can result in Email Service Providers classifying the emails as Spam.
 
-    Upon filling out answers to the aforementioned questions, users have 2 methods to request for the enablement of SMTP interface Event Notifications verification:
+    Upon filling out answers to the aforementioned questions, users have to request for the enablement of SMTP interface Event Notifications verification via Support Ticket:
 
-    1. Via Support Ticket:
-        1. From the {{site.data.keyword.cloud_notm}} console menu bar, click the **Help** icon > **Support center**.
-        1. From the Contact support section, click **Create a case**.
-        1. Select under `Category`, `Topic` as Event Notifications and `Subtopic` as Others
-        1. Under `Subject` add **Requesting for the Opt Out feature for the Custom Domain Email destination**
-        1. In the 'Description' section firstly provide IBM Cloud Event Notifications instance id, region in which instance is created, and a DKIM Name which is in the format of `{{uuid}}._domainkey.{{domain}}`
-        1. Later, please include responses to the aforementioned questionnaire.
-        1. Add **Attachments** if you want to provide more evidences supporting your answers
-        1. Add required email Ids in the **Watchlist** section. And to know more about other options while creating a support case refer [here](https://{DomainName}/docs/get-support?topic=get-support-open-case){: external}.
-
-    2. Via opening a new issue in the IBM Cloud Event Notifications [Adopters repository](https://github.ibm.com/Notification-Hub/adopters/issues)
-        1. Open a new Issue named as `SMTP Configuration Event Notifications Verification`
-        2. In the description provide IBM Cloud Event Notifications instance id, region in which instance is created, and a DKIM Name which is in the format of `{{uuid}}._domainkey.{{domain}}`
-        3. Later, please include responses to the aforementioned questionnaire.
-        4. Add **Attachments** if you want to provide more evidences supporting your answers
+    1. From the {{site.data.keyword.cloud_notm}} console menu bar, click the **Help** icon > **Support center**.
+    1. From the Contact support section, click **Create a case**.
+    1. Select under `Category`, `Topic` as Event Notifications and `Subtopic` as Others
+    1. Under `Subject` add **Requesting for the Opt Out feature for the Custom Domain Email destination**
+    1. In the 'Description' section firstly provide IBM Cloud Event Notifications instance id, region in which instance is created, and a DKIM Name which is in the format of `{{uuid}}._domainkey.{{domain}}`
+    1. Later, please include responses to the aforementioned questionnaire.
+    1. Add **Attachments** if you want to provide more evidences supporting your answers
+    1. Add required email Ids in the **Watchlist** section. And to know more about other options while creating a support case refer [here](https://{DomainName}/docs/get-support?topic=get-support-open-case){: external}.
 
 Some of the common verification issues could be:
 
 1. Ensure that the domain name is spelled correctly.
 2. Verify that the DNS record for the domain is updated correctly, including SPF/DKIM values.
-3. In rare cases, DNS propagation may take up to 72 hours to be updated across the internet.
+3. DNS propagation may take up to 72 hours to be updated across the internet.
 
 It's worth noting that we perform periodic checks on the SPF and DKIM TXT records of the domain provided. To ensure uninterrupted email delivery, we recommend keeping the records inserted in the DNS even after verifying them once. If the SPF or DKIM fails in the periodic check, we will suspend email sending.
 {: note}
@@ -112,13 +105,12 @@ After successful verification of a SMTP configuration in an IBM Cloud Event Noti
     | eu-gb (London)                      | smtp.us-south.event-notifications.cloud.ibm.com |
     | eu-de (Frankfurt)                   | smtp.eu-de.event-notifications.cloud.ibm.com    |
     | eu-es (Madrid)                      | smtp.eu-de.event-notifications.cloud.ibm.com    |
-    | eu-fr2 (France dMZR)                | smtp.eu-fr2.event-notifications.cloud.ibm.com   |
     {: caption="Table 1. IBM Cloud Event Notifications SMTP endpoints" caption-side="bottom"}
 
     Based on the above table, it can be seen as instances created in London and Sydney also connect to the Dallas SMTP endpoint, and instances created in Madrid also connect to the Frankfurt SMTP endpoint.
     {: note}
 
-2. The SMTP interface port number. We currently support port 587.
+2. The SMTP interface port number. Currently supported port 587.
 
 3. An SMTP username and password. Usernames and passwords are unique across the SMTP configurations, and passwords are encrypted using single-way hashing. A maximum of 5 users can be created in a single SMTP configuration. We are currently supporting `Login` and `Plain` authentication methods from the SMTP protocol.
 
@@ -130,6 +122,16 @@ After successful verification of a SMTP configuration in an IBM Cloud Event Noti
    * Source address: The source address should be from the domain you configured; otherwise, the sender address will be rejected.
    * Destination address: The destination address can be any valid email address or set of email addresses
    * Message data: Ensure that the message data is spam-free, clean, and sensible.
+
+7. The outgoing IP address list based on the SMTP endpoint is mentioned below. These IPs will be listed on the receiver's email clients:
+
+    | SMTP Endpoint                                   | Outgoing IP addresses                                                                         |
+    |-------------------------------------------------|-----------------------------------------------------------------------------------------------|
+    | smtp.us-south.event-notifications.cloud.ibm.com | 150.240.68.207, 52.118.103.220, 169.47.95.114, 169.59.33.169, 150.239.167.120, 52.118.185.176 |
+    | smtp.eu-de.event-notifications.cloud.ibm.com    | 149.81.218.203, 158.177.6.24, 149.81.39.14, 158.176.12.194, 149.81.164.10, 161.156.160.31     |
+    {: caption="Table 2. IBM Cloud Event Notifications OUtgoing IP addresses" caption-side="bottom"}
+
+8. As per the current configurations, attachments are not supported in Event Notifications SMTP interface.
 
 ## Using SMTP interface for sending emails
 {: #en-smtp-configurations-send-emails}
