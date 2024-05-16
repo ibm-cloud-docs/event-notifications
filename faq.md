@@ -2,7 +2,8 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-04-19"
+lastupdated: "2024-04-18"
+
 
 keywords: event-notification, event notification, faqs, Frequently Asked Questions, question, billing, service, invalid devices, device deletion, database
 
