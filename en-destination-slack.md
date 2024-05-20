@@ -36,7 +36,7 @@ You can configure a slack destination in the `Destinations` tab. As part of the 
 
 You can add attachment color to individual slack subscription based on hex code, for example, "#0000FF" for blue.
 
-## How a slack notification from Event Notifications looks
+## How a default slack notification (without template) from Event Notifications looks
 {: #en-how-a-slack-notification-from-en-looks}
 
 Event notification generates slack notifications from incoming payload. The template event notification use to send to slack looks like following -
@@ -81,6 +81,120 @@ Here -
 You can test a Slack destination in the options menu provided againts the destination. You can effortlessly test a destination, whether the provided configuration is correct or not with a single click.
 
 For more information on testing a destination, see [here](/docs/event-notifications?topic=event-notifications-en-test-destination).
+
+
+## Handlebars Integration
+
+Handlebars is a templating language that allows for dynamic content generation within templates. In the context of IBM Event Notification Slack Destination, Handlebars can be used to customize notification messages using template variables and conditional logic.
+
+### Template Variables
+
+Template variables are placeholders within the notification message templates that get replaced with actual data when a notification is triggered. These variables allow users to personalize messages and include relevant information from the event being notified.
+
+#### Usage:
+
+```handlebars
+{{variable_name}}
+```
+
+Example:
+```handlebars
+Event Name: {{event_name}}
+```
+
+### Conditional Logic Helper
+
+Conditional logic allows users to define conditions within the message templates, enabling dynamic content generation based on the values of variables. This feature is useful for creating flexible notification messages that adapt to different scenarios.
+
+#### Usage:
+
+```handlebars
+{{#if condition}}
+   <!-- Content to display if condition is true -->
+{{else}}
+   <!-- Content to display if condition is false -->
+{{/if}}
+```
+
+Example:
+```handlebars
+{{#if severity}}
+   Severity: {{severity}}
+{{else}}
+   No severity information available
+{{/if}}
+```
+### Equal Logic Helper
+
+Equal logic helper allows you to perform conditional checks within your templates. Here's a brief overview of how to use the Equal helper in Handlebars:
+
+```handlebars
+{{#ifEqual status 'active'}}
+    <span>User is active</span>
+{{else}}
+    <span>User is inactive</span>
+{{/ifEqual}}
+```
+
+
+Note - There are more helpers available for use that can be referenced from here - https://github.com/aymerick/raymond?tab=readme-ov-file#built-in-helpers
+
+## Input API for Templates
+
+The Input API for Templates provides a mechanism for users to define notification message templates programmatically. Users can generate JSON blocks representing Block Kit layouts using the Block Kit Builder and encode them in base64 format to include in their templates.
+
+### JSON Blocks
+
+JSON blocks represent the layout and structure of notification messages using the Slack Block Kit format. Users can create rich and interactive message layouts by defining various block types such as sections, actions, and buttons. Handlebars can be used with json blocks for powerful integration.You can design your json blocks via following builder - https://app.slack.com/block-kit-builder
+
+#### Usage:
+
+```json
+{
+   "blocks": [
+      {
+         "type": "section",
+         "text": {
+            "type": "mrkdwn",
+            "text": "This is a notification message."
+         }
+      },
+      {
+         "type": "divider"
+      },
+      {
+         "type": "actions",
+         "elements": [
+            {
+               "type": "button",
+               "text": {
+                  "type": "plain_text",
+                  "text": "View Details",
+                  "emoji": true
+               },
+               "url": "https://example.com/details"
+            }
+         ]
+      }
+   ]
+}
+```
+
+### Base64 Encoding
+
+To include JSON blocks in the template, they need to be encoded in base64 format. This ensures that the data is transmitted safely and can be decoded accurately when rendering the notification message.
+
+#### Example Create Template Usage:
+
+```plaintext
+{
+	"name": "Template for",
+	"params": {
+		"body": "eyJibG9ja3MiOlt7InR5cGUiOiJzZWN0aW9uIiwidGV4dCI6eyJ0eXBlIjoibXJrZG93biIsInRleHQiOiJUaGlzIGlzIGEgbm90aWZ5aW5nIG1lc3NhZ2UuIn19LHsidHlwZSI6ImRpdmlkZXIiLCJ0ZXh0Ijp7InR5cGUiOiJtbmF2IiwidGV4dCI6IlRoaXMgaXMgYSBuZXcgbm90aWZ5aW5nIG1lc3NhZ2UuIiwiZW1vamkiOnRydWV9fV0seyJ0eXBlIjoiYWN0aW9ucyIsImVsZW1lbnRzIjpbeyJ0eXBlIjoicGxhaW5fdGV4dCIsInRleHQiOnsic2VsZWN0aW9yIjp7InR5cGUiOiJwbGFpbl90ZXh0IiwidGV4dCI6IlZpZXcgRGV0YWlscyIsImVtb2ppIjp0cnVlfX19XX0="
+	},
+	"type": "slack.notification"
+}
+```
 
 
 ## Slack retry policy
