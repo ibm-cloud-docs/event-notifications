@@ -26,7 +26,6 @@ Consider using customer-managed keys if you require the following features:
 
 - Encryption of data at-rest controlled by your own key.
 - Explicit control of the lifecycle of data stored at rest.
-{: #considerations_keys notoc}
 
 Customer-managed keys is available on the Standard plan only.
 {: note}
