@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-05-01"
+lastupdated: "2024-05-24"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -20,12 +20,19 @@ content-type: release-note
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
 
+## 22 May 2024
+{: #event-notifications-May2224}
+{: release-note}
+
+Support for templates on Slack
+: IBM Event Notifications now supports templates on Slack, enabling users to quickly set up and customize notifications for different events, see [Event Notifications Slack Template](https://cloud.ibm.com/docs/event-notifications?topic=event-notifications-en-destinations-slack#handlebars-integration).
+
 ## 01 May 2024
 {: #event-notifications-May0124}
 {: release-note}
 
 IBM Cloud Event Notifications SMTP Interface
-: Event Notifications now includes support for SMTP configration and sending emails via connecting to the SMTP interface., see [Event Notifications SMTP Interface](https://test.cloud.ibm.com/docs-draft/event-notifications?topic=event-notifications-en-smtp-configurations).
+: Event Notifications now includes support for SMTP configration and sending emails via connecting to the SMTP interface., see [Event Notifications SMTP Interface](/docs/event-notifications?topic=event-notifications-en-smtp-configurations).
 
 ## 29 Feb 2024
 {: #event-notifications-Feb2924}
