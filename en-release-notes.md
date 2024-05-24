@@ -25,7 +25,7 @@ Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, sec
 {: release-note}
 
 Support for templates on Slack
-: IBM Event Notifications now supports templates on Slack, enabling users to quickly set up and customize notifications for different events, see [Event Notifications Slack Template](https://cloud.ibm.com/docs/event-notifications?topic=event-notifications-en-destinations-slack#handlebars-integration).
+: IBM Event Notifications now supports templates on Slack, enabling users to quickly set up and customize notifications for different events, see [Event Notifications Slack Template](/docs/event-notifications?topic=event-notifications-en-destinations-slack#handlebars-integration).
 
 ## 01 May 2024
 {: #event-notifications-May0124}
