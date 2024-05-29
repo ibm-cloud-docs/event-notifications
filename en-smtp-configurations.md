@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2021, 2024
-lastupdated: "2024-05-28"
+lastupdated: "2024-05-29"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email, smtp
 
