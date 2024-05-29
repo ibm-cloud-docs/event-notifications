@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2021, 2024
-lastupdated: "2024-05-02"
+lastupdated: "2024-05-29"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email, smtp
 
@@ -74,8 +74,8 @@ After creating a SMTP configuration in an IBM Cloud Event Notifications instance
     1. From the {{site.data.keyword.cloud_notm}} console menu bar, click the **Help** icon > **Support center**.
     1. From the Contact support section, click **Create a case**.
     1. Select under `Category`, `Topic` as Event Notifications and `Subtopic` as Others
-    1. Under `Subject` add **Requesting for the Opt Out feature for the Custom Domain Email destination**
-    1. In the 'Description' section firstly provide IBM Cloud Event Notifications instance id, region in which instance is created, and a DKIM Name which is in the format of `{{uuid}}._domainkey.{{domain}}`
+    1. Under `Subject` add **Requesting for the Authorization to Enable SMTP Interface for Event Notifications**
+    1. In the 'Description' section firstly provide IBM Cloud Event Notifications `instance id`, `region` in which instance is created, and a `DKIM Name` which is in the format of `{{uuid}}._domainkey.{{domain}}`
     1. Later, please include responses to the aforementioned questionnaire.
     1. Add **Attachments** if you want to provide more evidences supporting your answers
     1. Add required email Ids in the **Watchlist** section. And to know more about other options while creating a support case refer [here](https://{DomainName}/docs/get-support?topic=get-support-open-case){: external}.
