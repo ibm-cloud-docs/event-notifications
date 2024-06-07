@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2024
-lastupdated: "2024-05-24"
+  years: 2019, 2022
+lastupdated: "2022-10-26"
 
 keywords: question about event notifications, permission, integrating, authorization, authorize
 
@@ -25,7 +25,7 @@ You are denied permission while integrating an {{site.data.keyword.en_short}} se
 You get a 'Permission denied' message, while integrating {{site.data.keyword.en_short}} service instance with IBM Cloud service.
 {: tsSymptoms}
 
-{{site.data.keyword.en_short}} integration APIs use Service to Service authorization.
+{{site.data.keyword.en_short}} integration APIs use Service to Service [authorization](/docs/get-coding?topic=get-coding-grant-access){: external}.
 {: tsCauses}
 
 Grant authorization between the IBM Cloud Service (for example: Security and Compliance Center) and {{site.data.keyword.en_short}} service instance.

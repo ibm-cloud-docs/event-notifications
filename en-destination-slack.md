@@ -110,9 +110,9 @@ Conditional logic allows users to define conditions within the message templates
 
 ```handlebars
 {{#if condition}}
-   <!-- Content to display if condition is true -->
+   
 {{else}}
-   <!-- Content to display if condition is false -->
+   
 {{/if}}
 ```
 

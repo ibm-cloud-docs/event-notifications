@@ -8,7 +8,6 @@ toc:
     console-page: /catalog/services/event-notifications#about
     path: event-notifications
     label: Event Notifications
-
   entries:
   - navgroup:
       id: learn
@@ -97,7 +96,6 @@ toc:
               href: https://github.com/IBM/event-notifications-destination-ios-sdk#ios-destination-sdk-for-ibm-cloud-event-notifications-service-version-0041
       - topic: en-release-notes.md
         navtitle: Release notes
-
   - navgroup:
       id: tutorial
       topics:
@@ -106,7 +104,6 @@ toc:
       - en-create-destination.md
       - en-create-subscription.md
       - en-create-source.md
-
       - topicgroup:
          label: Create and send push notifications
          topics:
@@ -122,11 +119,9 @@ toc:
               navtitle: Safari Push Notifications
             - topic: en-push-huawei.md
               navtitle: Huawei Push Notifications
-
       - en-create-template.md
       - en-terraform-tutorial.md
       - en-ts-monitor-secrets.md
-
   - navgroup:
       id: howto
       topics:
@@ -151,7 +146,6 @@ toc:
               label: Privately connecting to Event Notifications
               topics:
               - en-cse.md
-
   - navgroup:
       id: reference
       topics:
@@ -173,7 +167,6 @@ toc:
       - en-regions-endpoints.md
       - en-payload.md
       - en-notices.md
-
   - navgroup:
       id: help
       topics:
