@@ -11,16 +11,6 @@ subcollection: event-notifications
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:external: target="_blank" .external}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:preview: .preview}
 
 # Monitoring {{site.data.keyword.en_full}} metrics
 {: #en-manage-monitor-metrics}
