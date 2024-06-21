@@ -24,7 +24,7 @@ toc:
       - topicgroup:
           label: Event destinations
           topics:
-          - en-destination.md  
+          - en-destination.md
           - topicgroup:
               label: Email destinations
               topics:
@@ -40,7 +40,7 @@ toc:
               - en-destination-sms-custom.md
           - topicgroup:
               label: Push notifications
-              topics:   
+              topics:
               - en-destination-push.md
               - link:
                   label: Android Push Notifications (FCM)
@@ -67,8 +67,9 @@ toc:
           - en-destination-cloud-functions.md
           - en-destination-servicenow.md
           - en-destination-codeengine.md
-          - en-destination-cloud-object-storage.md  
+          - en-destination-cloud-object-storage.md
           - en-test-destination.md
+      - en-monitoring-metrics.md
       - en-smtp-configurations.md
       - en-integrations.md
       - en-cfe-integrations.md
@@ -141,7 +142,7 @@ toc:
           - en-managing-encryption.md
           - en-cipher.md
           - en-service-credentials.md
-          - en-email-best-practices.md 
+          - en-email-best-practices.md
           - topicgroup:
               label: Privately connecting to Event Notifications
               topics:
