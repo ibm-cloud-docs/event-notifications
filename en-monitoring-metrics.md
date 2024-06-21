@@ -45,29 +45,29 @@ Before you enable operational metrics for your
 {{site.data.keyword.en_short}} instance, keep in mind the
 following considerations:
 
+- **Enable your {{site.data.keyword.cloud_notm}} Monitoring for your {{site.data.keyword.en_full_notm}} instance.**
+    You need to [provision {{site.data.keyword.cloud_notm}} Monitoring](https://cloud.ibm.com/catalog/services/ibm-cloud-monitoring?callback=/observe/monitoring/create) instance on your {{site.data.keyword.IBM}} account.
+
 - **When you enable metrics for your {{site.data.keyword.en_full_notm}} instance, metrics are only reported after the time that the policy is enabled.**
     Once your metrics policy is enabled, you can then customize and monitor your metrics.
 
 - **Ensure you have the required level of access to view the metrics.**
     To view the metrics, you need the [**Operator** platform role or higher]({[link]}-access-management). You must also have access to the credentials that are needed to access your resource configurations.
 
-### Enabling metrics for your {{site.data.keyword.keymanagementserviceshort}} instance with the Console
+### Set up metrics for your {{site.data.keyword.keymanagementserviceshort}} instance with the Console
 {: #enable-metrics-instance-policy-ui}
 
-After creating a {{site.data.keyword.en_short}} instance,
-provisioning a {{site.data.keyword.mon_short}}, and enabling monitoring metrics,
-complete the following steps to enable a metrics policy:
+After creating a {{site.data.keyword.en_short}} instance, complete the following steps to enable the metrics:
 
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](/login/){: external}.
 
-2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
+1. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 
-3. From your {{site.data.keyword.cloud_notm}} resource list, select your
-    provisioned instance of {{site.data.keyword.keymanagementserviceshort}}.
+1. From your {{site.data.keyword.cloud_notm}} resource list, select your
+    provisioned instance of {{site.data.keyword.en_short}}.
+    Otherwise, you can [create a new {{site.data.keyword.en_short}} service instance](/docs/event-notifications?topic=event-notifications-en-create-en-instance).
 
-4. On the **Instance policies** page, click the **Enable** button
-    in the metrics policy section.
-
+1. Click `Metrics` in the {{site.data.keyword.en_short}} console.
 
 ## Understanding the dashboard
 {: #understand-dashboard}
