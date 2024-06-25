@@ -64,15 +64,25 @@ After creating a {{site.data.keyword.en_short}} instance, complete the following
 
 As you evaluate your resources, the results are returned via the service UI in graphical and detailed formats.
 
-![A visual representation of the service dashboard. The concepts are fully explained in the surrounding text.](images/dashboard.svg){: caption="Figure 2. Example dashboard" caption-side="bottom"}
+![A visual representation of the service dashboard.](images/dashboard.svg){: caption="Figure 1. Example dashboard" caption-side="bottom"}
 
-When you visit the dashboard, there are three graphical representations of data that has been aggregated from your scans. You see the:
+Filter your metrics
 
-Success rate
+
+
+
+Use the following types of attributes to filter you results in the dashbaord
+
+When you visit the dashboard, there are three visual representations of data that has been aggregated from your scans. You see the:
+
+Select the required time period tab on the right to filter and view your metrics graphs.
+{:tip: .tip}
+
+Notification Status
 :   The rate at which your configurations pass the evaluation that is conducted. **Note:** The number of evaluations conducted does not always match the number of billable evaluations, as there is no charge for assessments evaluated as unable to perform. Be sure to look for the billable evaluations in each scan result if you need to estimate your cost.
 
-Total controls
+Notification metrics Graph
 :   The total number of controls that have been evaluated in the past 30 days.
 
-Total evaluations
-:   The total number of evaluations that have been run in the past 30 days. An evaluation is the check of one resource against one assessment.
+Bounced and Open table
+:   The total number of evaluations that have been run in the past 30 days.
