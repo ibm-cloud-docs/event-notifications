@@ -72,6 +72,7 @@ Use the listed attributes to filter you results in the dashbaord:
  * **Destination Type**
 
    Select the type of destination set for your notification to filter.
+
    This is currently available for Custom Email Domains.
    {:note: .note}
 
@@ -103,7 +104,7 @@ Select the required time period tab on the right to filter and view your metrics
 {:note: .note}
 
 Notification Status
-:   The section provides you with various metrics according to your selected filter attributes. The metrics tiles are:
+   The section provides you with various metrics according to your selected filter attributes. The metrics tiles are:
 
    * **Emails sent**
 
@@ -130,7 +131,7 @@ Notification Status
    :   The percentage of emails that are returned to the sender because they failed to be delivered to the intended recipient.
 
 Notification metrics Graph
-:   The total number of controls that have been evaluated in the past 30 days.
+   The total number of controls that have been evaluated in the past 30 days.
 
 Bounced and Opened notification
-:   The total number of notification bounces or fail per day for the selected time period.
+   The total number of notification bounces or fail per day for the selected time period.
