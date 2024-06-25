@@ -64,8 +64,6 @@ After creating a {{site.data.keyword.en_short}} instance, complete the following
 
 As you evaluate your resources, the results are returned via the service UI in graphical and detailed formats.
 
-![A visual representation of the service dashboard.](images/dashboard.svg){: caption="Figure 1. Example dashboard" caption-side="bottom"}
-
 ### Filter your metrics
 {: #en-understand-dashboard-attributes}
 
@@ -101,14 +99,38 @@ Use the listed attributes to filter you results in the dashbaord:
 
 When you visit the dashboard, there are three visual representations of data that has been aggregated from your scans. You see the:
 
+Select the required time period tab on the right to filter and view your metrics graphs. The default time period is X days.
+{:note: .note}
+
 Notification Status
-:   The rate at which your configurations pass the evaluation that is conducted. **Note:** The number of evaluations conducted does not always match the number of billable evaluations, as there is no charge for assessments evaluated as unable to perform. Be sure to look for the billable evaluations in each scan result if you need to estimate your cost.
+:   The section provides you with various metrics according to your selected filter attributes. The metrics tiles are:
+
+   * **Emails sent**
+
+   :   The total number of emails sent for the selected time period.
+
+   * **Delivered**
+
+   :   The total number of emails succesfully delivered for the selected time period.
+
+   * **Failed**
+
+   :   The total number of emails that did not deliver succesfully for the selected time period.
+
+   * **Queued**
+
+   :   The total number of emails that are pending for the selected time period.
+
+   * **Open rate**
+
+   :   The percentage of delivered emails that have been opened by the recievers.
+
+   * **Bounce rate**
+
+   :   The percentage of emails that are returned to the sender because they failed to be delivered to the intended recipient.
 
 Notification metrics Graph
 :   The total number of controls that have been evaluated in the past 30 days.
 
-Bounced and Open table
-:   The total number of evaluations that have been run in the past 30 days.
-
-Select the required time period tab on the right to filter and view your metrics graphs.
-{:tip: .tip}
+Bounced and Opened notification
+:   The total number of notification bounces or fail per day for the selected time period.
