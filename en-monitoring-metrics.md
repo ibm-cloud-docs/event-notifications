@@ -60,23 +60,46 @@ After creating a {{site.data.keyword.en_short}} instance, complete the following
 1. Click `Metrics` in the {{site.data.keyword.en_short}} console.
 
 ## Understanding the dashboard
-{: #understand-dashboard}
+{: #en-understand-dashboard}
 
 As you evaluate your resources, the results are returned via the service UI in graphical and detailed formats.
 
 ![A visual representation of the service dashboard.](images/dashboard.svg){: caption="Figure 1. Example dashboard" caption-side="bottom"}
 
-Filter your metrics
+### Filter your metrics
+{: #en-understand-dashboard-attributes}
+
+Use the listed attributes to filter you results in the dashbaord:
+
+ * **Destination Type**
+
+ :   Select the type of destination set for your notification to filter.
+   This is currently available for Custom Email Domains.
+   {:note: .note}
+
+* **Destination name**
+
+:   Select the destination.
+
+* **Subject**
+
+ :   Enter the subject line of the email notification sent.
 
 
+* **Notification ID**
 
+ :   Enter the notification ID.
 
-Use the following types of attributes to filter you results in the dashbaord
+* **Source name**
+
+ :   Select the source name of the event notification.
+
+* **Email to**
+
+ :  Enter the reciever's email address.
+
 
 When you visit the dashboard, there are three visual representations of data that has been aggregated from your scans. You see the:
-
-Select the required time period tab on the right to filter and view your metrics graphs.
-{:tip: .tip}
 
 Notification Status
 :   The rate at which your configurations pass the evaluation that is conducted. **Note:** The number of evaluations conducted does not always match the number of billable evaluations, as there is no charge for assessments evaluated as unable to perform. Be sure to look for the billable evaluations in each scan result if you need to estimate your cost.
@@ -86,3 +109,6 @@ Notification metrics Graph
 
 Bounced and Open table
 :   The total number of evaluations that have been run in the past 30 days.
+
+Select the required time period tab on the right to filter and view your metrics graphs.
+{:tip: .tip}
