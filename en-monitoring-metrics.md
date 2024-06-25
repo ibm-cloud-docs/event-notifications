@@ -71,30 +71,30 @@ Use the listed attributes to filter you results in the dashbaord:
 
  * **Destination Type**
 
- :   Select the type of destination set for your notification to filter.
+   Select the type of destination set for your notification to filter.
    This is currently available for Custom Email Domains.
    {:note: .note}
 
-* **Destination name**
 
-:   Select the destination.
+ * **Destination name**
+   Select the destination.
 
-* **Subject**
+ * **Subject**
 
- :   Enter the subject line of the email notification sent.
+   Enter the subject line of the email notification sent.
 
 
-* **Notification ID**
+ * **Notification ID**
 
- :   Enter the notification ID.
+   Enter the notification ID.
 
-* **Source name**
+ * **Source name**
 
- :   Select the source name of the event notification.
+   Select the source name of the event notification.
 
-* **Email to**
+ * **Email to**
 
- :  Enter the reciever's email address.
+   Enter the reciever's email address.
 
 
 When you visit the dashboard, there are three visual representations of data that has been aggregated from your scans. You see the:
