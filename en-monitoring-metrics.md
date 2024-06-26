@@ -103,35 +103,38 @@ When you visit the dashboard, there are three visual representations of data tha
 Select the required time period tab on the right to filter and view your metrics graphs. The default time period is X days.
 {:note: .note}
 
-Notification Status
+* **Notification Status**
+
    The section provides you with various metrics according to your selected filter attributes. The metrics tiles are:
 
-   * **Emails sent**
+    * **Emails sent**
 
-   :   The total number of emails sent for the selected time period.
+        The total number of emails sent for the selected time period.
 
-   * **Delivered**
+    * **Delivered**
 
-   :   The total number of emails succesfully delivered for the selected time period.
+        The total number of emails succesfully delivered for the selected time period.
 
-   * **Failed**
+    * **Failed**
 
-   :   The total number of emails that did not deliver succesfully for the selected time period.
+        The total number of emails that did not deliver succesfully for the selected time period.
 
-   * **Queued**
+    * **Queued**
 
-   :   The total number of emails that are pending for the selected time period.
+        The total number of emails that are pending for the selected time period.
 
-   * **Open rate**
+    * **Open rate**
 
-   :   The percentage of delivered emails that have been opened by the recievers.
+        The percentage of delivered emails that have been opened by the recievers.
 
-   * **Bounce rate**
+    * **Bounce rate**
 
-   :   The percentage of emails that are returned to the sender because they failed to be delivered to the intended recipient.
+        The percentage of emails that are returned to the sender because they failed to be delivered to the intended recipient.
 
-Notification metrics Graph
-   The total number of controls that have been evaluated in the past 30 days.
+* **Notification metrics Graph**
 
-Bounced and Opened notification
-   The total number of notification bounces or fail per day for the selected time period.
+   This is graohical reperesntation of the percentage of Delivered, Failed, and Opened mails for the selected time period.
+
+* **Bounced and Opened notification**
+
+    The total number of notification bounces or fail per day for the selected time period.
