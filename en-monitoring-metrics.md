@@ -67,7 +67,7 @@ As you evaluate your resources, the results are returned via the service UI in g
 ### Filter your metrics
 {: #en-understand-dashboard-attributes}
 
-Use the listed attributes to filter you results in the dashbaord:
+Use the listed attributes to filter your results in the dashbaord:
 
  * **Destination Type**
 
@@ -83,7 +83,6 @@ Use the listed attributes to filter you results in the dashbaord:
  * **Subject**
 
    Enter the subject line of the email notification sent.
-
 
  * **Notification ID**
 
