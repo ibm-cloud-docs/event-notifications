@@ -31,19 +31,6 @@ Enabling {{site.data.keyword.en_short}} metrics is currently only available
 Custom Email Domains.
 {: preview}
 
-Before you enable operational metrics for your
-{{site.data.keyword.en_short}} instance, keep in mind the
-following considerations:
-
-- **Enable your {{site.data.keyword.cloud_notm}} Monitoring for your {{site.data.keyword.en_full_notm}} instance.**
-    You need to [provision {{site.data.keyword.cloud_notm}} Monitoring](https://cloud.ibm.com/catalog/services/ibm-cloud-monitoring?callback=/observe/monitoring/create) instance on your {{site.data.keyword.IBM}} account.
-
-- **When you enable metrics for your {{site.data.keyword.en_full_notm}} instance, metrics are only reported after the time that the policy is enabled.**
-    Once your metrics policy is enabled, you can then customize and monitor your metrics.
-
-- **Ensure you have the required level of access to view the metrics.**
-    To view the metrics, you need the [**Operator** platform role or higher]({[link]}-access-management). You must also have access to the credentials that are needed to access your resource configurations.
-
 ### Set up metrics for your {{site.data.keyword.keymanagementserviceshort}} instance with the Console
 {: #enable-metrics-instance-policy-ui}
 
