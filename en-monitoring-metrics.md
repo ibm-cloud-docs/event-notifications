@@ -31,7 +31,7 @@ Enabling {{site.data.keyword.en_short}} metrics is currently only available
 Custom Email Domains.
 {: preview}
 
-### Set up metrics for your {{site.data.keyword.keymanagementserviceshort}} instance with the Console
+### Set up metrics for your {{site.data.keyword.en_short}} instance with the Console
 {: #enable-metrics-instance-policy-ui}
 
 After creating a {{site.data.keyword.en_short}} instance, complete the following steps to enable the metrics:
@@ -107,7 +107,7 @@ Select the required time period tab on the right to filter and view your metrics
 
     * **Queued**
 
-        The total number of emails that are pending for the selected time period.
+        The total number of undelivered emails
 
     * **Open rate**
 
@@ -119,7 +119,7 @@ Select the required time period tab on the right to filter and view your metrics
 
 * **Notification metrics Graph**
 
-   This is graohical reperesntation of the percentage of Delivered, Failed, and Opened mails for the selected time period.
+   This is graphical reperesntation of the percentage of Delivered, Failed, and Opened mails for the selected time period.
 
 * **Bounced and Opened notification**
 
