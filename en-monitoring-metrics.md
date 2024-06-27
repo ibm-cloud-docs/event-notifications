@@ -108,7 +108,7 @@ Select the required time period tab on the right to filter and view your metrics
 
     * **Queued**
 
-        The total number of undelivered emails
+        The total number of undelivered emails sent in the last 24 hours that are waiting to be sent by the server.
 
     * **Open rate**
 
