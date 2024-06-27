@@ -65,7 +65,8 @@ Use the listed attributes to filter your results in the dashbaord:
 
 
  * **Destination name**
-   Select the destination.
+
+    Select the destination.
 
  * **Subject**
 
