@@ -27,7 +27,7 @@ a policy that allows you to receive the notfication metrics for your
 {{site.data.keyword.en_short}} instance. When you enable this
 policy, {{site.data.keyword.en_short}} can be used to track your notifications metrics in real-time.
 
-Enabling {{site.data.keyword.en_short}} metrics is currently only available
+{{site.data.keyword.en_short}} metrics is currently only available
 Custom Email Domains.
 {: preview}
 
