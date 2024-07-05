@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-11-18"
+  years: 2024
+lastupdated: "024-05-24"
 
 keywords: event-notifications, event notifications, about event notifications, data security, compliance, data security and compliance, ciphers
 
