@@ -20,6 +20,13 @@ content-type: release-note
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
 
+## 5 July 2024
+{: #event-notifications-May2224}
+{: release-note}
+
+Support for metrics acesss of custom email domain
+: IBM Event Notifications now provides accces to view the notitfication performance metrics for custom email domains, see [Monitoring {{site.data.keyword.en_full}} metrics](https://cloud.ibm.com/docs/event-notifications?topic=event-notifications-en-manage-monitor-metrics).
+
 ## 22 May 2024
 {: #event-notifications-May2224}
 {: release-note}
@@ -98,7 +105,7 @@ Email template personalization
 {: release-note}
 
 Support for Email Templates in Custom Domain Email Destination
-:  Event Notifications now provides the ability to apply Email templates to emails which are sent using Custom Domain Email destination. You can now create your own Email Templates and use these templates to send emails. For more information, see [Email Templates](/docs/event-notifications?topic=event-notifications-en-destinations-custom-email#en-destination-email-custom-domain-opt-out-desc). 
+:  Event Notifications now provides the ability to apply Email templates to emails which are sent using Custom Domain Email destination. You can now create your own Email Templates and use these templates to send emails. For more information, see [Email Templates](/docs/event-notifications?topic=event-notifications-en-destinations-custom-email#en-destination-email-custom-domain-opt-out-desc).
 
 
 ## 31 July 2023

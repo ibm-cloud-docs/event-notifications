@@ -31,7 +31,7 @@ Enabling {{site.data.keyword.en_short}} metrics is currently only available
 Custom Email Domains.
 {: preview}
 
-### Access metrics for your {{site.data.keyword.en_short}} instance with the Console
+### View metrics for your {{site.data.keyword.en_short}} instance with the Console
 {: #enable-metrics-instance-policy-ui}
 
 After creating a {{site.data.keyword.en_short}} instance, complete the following steps to enable the metrics:
