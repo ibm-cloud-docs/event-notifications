@@ -114,9 +114,14 @@ Select the required time period tab on the right to filter and view your metrics
 
         The percentage of emails that are returned to the sender because they failed to be delivered to the intended recipient.
 
+
 * **Notification metrics Graph**
 
    This is graphical reperesntation of the percentage of Delivered, Failed, and Opened mails for the selected time period.
+
+   To download the metrics in your local system, go to **More** &gt; **Export to [desired format]**. Currently, you can export the graphs in CSV, PNG, and JPG formats.
+{:note: .note}
+
 
 * **Bounced and Opened notification**
 
