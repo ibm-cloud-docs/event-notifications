@@ -25,7 +25,7 @@ Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, sec
 {: release-note}
 
 Support to acesss {{site.data.keyword.en_full}} metrics of custom email domains
-: IBM Event Notifications now provides access to view the notitfication performance metrics for custom email domains, see [Monitoring {{site.data.keyword.en_full}} metrics](/docs/event-notifications?topic=topic=event-notifications-en-manage-monitor-metric).
+: IBM Event Notifications now provides access to view the notitfication performance metrics for custom email domains, see [Monitoring {{site.data.keyword.en_full}} metrics](/docs/event-notifications?topic=event-notifications-en-manage-monitor-metrics).
 
 ## 22 May 2024
 {: #event-notifications-May2224}
