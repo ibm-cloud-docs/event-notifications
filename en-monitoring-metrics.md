@@ -42,7 +42,6 @@ After creating a {{site.data.keyword.en_short}} instance, complete the following
 
 1. From your {{site.data.keyword.cloud_notm}} resource list, select your
     provisioned instance of {{site.data.keyword.en_short}}.
-    Otherwise, you can [create a new {{site.data.keyword.en_short}} service instance](/docs/event-notifications?topic=event-notifications-en-create-en-instance).
 
 1. Click `Metrics` in the {{site.data.keyword.en_short}} console.
 
