@@ -87,7 +87,7 @@ Use the listed attributes to filter your results in the dashbaord:
 
 When you visit the dashboard, there are three visual representations of data that has been aggregated from your scans. You see the:
 
-Select the required time period tab on the right to filter and view your metrics graphs. The default time period is X days.
+Select the required time period tab on the right to filter and view your metrics graphs. The default time period is **24 hours**.
 {:note: .note}
 
 * **Notification Status**
@@ -106,9 +106,6 @@ Select the required time period tab on the right to filter and view your metrics
 
         The total number of emails that did not deliver succesfully for the selected time period.
 
-    * **Queued**
-
-        The total number of undelivered emails sent in the last 24 hours that are waiting to be sent by the server.
 
     * **Open rate**
 
