@@ -15,16 +15,84 @@ subcollection: event-notifications
 # Managing access with context-based restrictions
 {: #en-access-control-cbr}
 
+Context-based restrictions give account owners and administrators the ability to define and enforce access restrictions for IBM Cloud® resources based on the context of access requests. Access to IBM Cloud Event Notifications resources can be controlled with context-based restrictions and identity and access management policies.
+
+These restrictions work with traditional IAM policies, which are based on identity, to provide an extra layer of protection. Unlike IAM policies, context-based restrictions don't assign access. Context-based restrictions check that an access request comes from an allowed context that you configure. Since both IAM access and context-based restrictions enforce access, context-based restrictions offer protection even in the face of compromised or mismanaged credentials.
+
 After you set up your {{site.data.keyword.en_short}} service instance, you can manage access by using [context-based restrictions (CBR)](https://cloud.ibm.com/context-based-restrictions/overview){: external}.
 {: shortdesc}
 
-## Managing CBR settings
+Any Activity Tracker or audit log events generated come from the context-based restrictions service, and not IBM Cloud Event Notifications. For more information, see [Monitoring context-based restrictions](https://cloud.ibm.com/docs/account?topic=account-cbr-monitor).
+
+## How IBM Cloud Event Notifications Service integrates with context-based restrictions
 {: #en-manage-cbr-settings}
 
 With [context-based restrictions](/docs/account?topic=account-context-restrictions-whatis), you can define and enforce user and service access restrictions to {{site.data.keyword.en_short}} resources based on specified criteria. These resources include Internet Protocol (IP) addresses that are linked to your {{site.data.keyword.en_short}} instance.
 
 To restrict access, you must be the account owner or have an access policy with the administrator role on all account management services.
 {: note}
+
+You can create context-based restrictions (CBR) for IBM Cloud Event Notifications Service resources or for specific APIs. With Context-based restrictions, you can protect the following resources.
+
+**Protect IBM Cloud Event Notifications service resources**
+
+Restrict access to resource groups, regions, or instances.
+
+**Protect specific APIs**
+
+Restrict access to the resources of Event Notifications by applying CBR on Control Plane APIs or restrict access to the SMTP interface connection.
+
+### Protecting cluster resources
+{: #en-manage-cbr-cluster-resources}
+
+You can create CBR rules on resource groups, regions, or instances.
+
+**Regions**
+
+Protects IBM Cloud Event Notifications Service resources in a specific region. If you select a region in your CBR rule, then only traffic from resources in the network zones that you associate with the rule can interact with resources in that region.
+
+If you use the CLI, you can specify the `--region REGION` option to protect resources in a specific region.
+
+If you use the API, you can specify `"name": "region","value": "REGION"` field in the resource attributes.
+
+**Resource group**
+
+Protects IBM Cloud Event Notifications Service resources in a specific resource group.
+
+If you use the CLI, you can specify the -`-resource-group-id RESOURCE-GROUP-ID` option to protect resources in a specific resource group.
+
+If you use the API, you can specify `"name": "resourceGroupId","value": "RESOURCE-GROUP-ID"` field in the resource attributes.
+
+**Instances**
+
+Protects specific instances of IBM Cloud Event Notifications Service.
+
+If you use the CLI, you can specify the -`-service-instance INSTANCE-ID` option to protect a specific instance
+
+If you use the API, you can specify `"name": "serviceInstance","value": "INSTANCE-ID"` field in the resource attributes.
+
+### Protecting specific APIs
+{: #en-manage-cbr-apis}
+
+You can create CBR rules to protect the following API types for IBM Cloud Event Notifications.
+
+**Control plane APIs**
+
+Protects access to the APIs of the service, such as the APIs for doing CRUD operations on all the available entities in Event Notifications such as sources, topics, subscriptions and more. Also, it protects access while sending notifications and Push Destinations APIs as well. Full list of APIs is mentioned [here](https://cloud.ibm.com/apidocs/event-notifications).
+
+If you select the cluster control plane APIs in your CBR rule, then only traffic from resources in the network zones that associate with that rule can interact with the cluster control plane APIs. All other requests are blocked.
+
+If you use the CLI, you can specify the `--api-types` option and the `crn:v1:bluemix:public:context-based-restrictions::::api-type:control-plane` type.
+
+If you use the API, you can specify `"api_type_id": "crn:v1:bluemix:public:context-based-restrictions::::api-type:control-plane"` in the `"operations"` spec.
+
+**SMTP Configuration**
+
+Protects access to the [SMTP interface](https://cloud.ibm.com/docs/event-notifications?topic=event-notifications-en-smtp-configurations). If you select the SMTP configuration in your CBR rule, then only traffic from resources in the network zones that associate with that rule can interact with the SMTP configuration. All other requests are blocked. Since SMTP interface works based on username-password pair over the direct connectivity to the cluster, setting up CBR rule is mandatory for this functionality.
+
+If you use the CLI, you can specify the `--api-types` option and the `crn:v1:bluemix:public:event-notifications-dev::::api-type:smtp-configuration` type.
+
+If you use the API, you can specify `"api_type_id": "crn:v1:bluemix:public:event-notifications-dev::::api-type:smtp-configuration"` in the `"operations"` spec.
 
 ## Overview
 {: #en-cbr-overview}

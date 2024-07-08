@@ -199,8 +199,8 @@ By implementing DKIM, domain owners can increase the trustworthiness of their em
    - Pass: The email's DKIM signature is valid, indicating that the email is legitimate and hasn't been tampered with.
    - Fail: The DKIM signature is invalid or missing, suggesting that the email may be suspicious or forged.
 
-## What is Email personalisation?
-{: #faq-en-notifications-email-personalisation}
+## What is Email personalization?
+{: #faq-en-notifications-email-personalization}
 {: faq}
 
 Email personalization refers to the practice of tailoring email content and messaging to individual recipients or specific groups of recipients based on their preferences, behaviors, demographics, or other data. The goal of email personalization is to create more relevant and engaging email experiences for recipients, which can lead to higher open rates, click-through rates, and conversions.
