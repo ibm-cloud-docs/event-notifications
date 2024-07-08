@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-07-05"
+lastupdated: "2024-07-08"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -20,8 +20,15 @@ content-type: release-note
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
 
+## 10 July 2024
+{: #event-notifications-Jul1024}
+{: release-note}
+
+Support Context-Based restictions for SMTP Interface
+: IBM Event Notifications now supports the ability to enforce context-based restrictions for the direct connection to SMTP interface, see [SMTP interface CBR support](/docs/event-notifications?topic=event-notifications-en-smtp-configurations#en-smtp-configurations-cbr).
+
 ## 5 July 2024
-{: #event-notifications-May2224}
+{: #event-notifications-Jul0524}
 {: release-note}
 
 Support to acesss {{site.data.keyword.en_full}} metrics of custom email domains

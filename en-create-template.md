@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-02-21"
+lastupdated: "2024-07-08"
 
 keywords: event notifications, event-notifications, tutorials
 

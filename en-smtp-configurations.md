@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2021, 2024
-lastupdated: "2024-05-29"
+lastupdated: "2024-07-08"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email, smtp
 
@@ -90,7 +90,7 @@ It's worth noting that we perform periodic checks on the SPF and DKIM TXT record
 ## Enabling context-based restrictions to access the SMTP interface
 {: #en-smtp-configurations-cbr}
 
-By default access to the SMTP interface is restricted from any IP addresses. To allow access to the SMTP interface, you must enable [context-based restrictions](https://cloud.ibm.com/docs/event-notifications?topic=event-notifications-en-access-control-cbr). Specifically to access the SMTP interface, you must select the [API type as SMTP Configuration](https://cloud.ibm.com/docs/event-notifications?topic=event-notifications-en-manage-cbr-apis) while setting up the CBR rule. 
+By default access to the SMTP interface is restricted from any IP addresses. To allow access to the SMTP interface, you must enable [context-based restrictions](/docs/event-notifications?topic=event-notifications-en-access-control-cbr). Specifically to access the SMTP interface, you must select the [API type as SMTP Configuration](/docs/event-notifications?topic=event-notifications-en-manage-cbr-apis) while setting up the CBR rule.
 
 All the set of IPs associated in the network zone selected while setting up the CBR rule will be automatically allowlisted to connect to the SMTP server.
 
