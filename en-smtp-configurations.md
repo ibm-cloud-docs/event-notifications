@@ -118,14 +118,14 @@ After successful verification of a SMTP configuration in an IBM Cloud Event Noti
 
 2. The SMTP interface port number. Currently supported port 587.
 
-3. An SMTP username and password. Usernames and passwords are unique across the SMTP configurations, and passwords are encrypted using single-way hashing. A maximum of 5 users can be created in a single SMTP configuration. We are currently supporting `Login` and `Plain` authentication methods from the SMTP protocol.
+3. An SMTP username and password. Usernames and passwords are unique across SMTP configurations and passwords are encrypted using single-way hashing. A maximum of 5 users can be created in a single SMTP configuration. We are currently supporting `Login` and `Plain` authentication methods from the SMTP protocol.
 
 4. Client software or program can communicate strictly using Transport Layer Security (TLS).
 
 5. Valid IP addresses or subnets can be provided from which the client is connecting to the SMTP interface.
 
-6. When accessing IBM Cloud Event Notifications through the SMTP interface, your SMTP client application assembles the message. The information you need to provide may vary depending on the application you're using. The following are the minimum requirements for an SMTP exchange between a client and a server:
-   * Source address: The source address should be from the domain you configured; otherwise, the sender address will be rejected.
+6. When accessing IBM Cloud Event Notifications through the SMTP interface, your SMTP client application assembles the message. The information you need to provide may vary depending on the application you are using. The following are the minimum requirements for an SMTP exchange between a client and a server:
+   * Source address: The source address must belong to the configured domain; otherwise, the sender address will be rejected.
    * Destination address: The destination address can be any valid email address or set of email addresses
    * Message data: Ensure that the message data is spam-free, clean, and sensible.
 
