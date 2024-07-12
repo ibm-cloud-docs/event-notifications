@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2021, 2024
-lastupdated: "2024-05-29"
+lastupdated: "2024-07-08"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email, smtp
 
@@ -13,7 +13,7 @@ subcollection: event-notifications
 # Event Notifications SMTP Interface
 {: #en-smtp-configurations}
 
-IBM Cloud Event Notifications supports SMTP, the most common email protocol on the internet. You can send email using a variety of clients, software, or programming languages that support SMTP by connecting to the IBM Cloud Event Notifications SMTP interface. This document explains how to set up SMTP configuration, obtain user credentials, and allowlist IPs to send emails.
+IBM Cloud Event Notifications supports SMTP, the most common email protocol on the internet. You can send email using a variety of clients, software, or programming languages that support SMTP by connecting to the IBM Cloud Event Notifications SMTP interface. This document explains how to set up SMTP configuration, obtain user credentials, and setup a CBR rule to access the SMTP server.
 
 ## Domain name verification
 {: #en-smtp-configurations-verify}
@@ -51,11 +51,9 @@ After creating a SMTP configuration in an IBM Cloud Event Notifications instance
 
     6. Include a statement affirming your commitment to sending emails only to individuals who have explicitly requested them, and verify that you have established a procedure for managing bounce and complaint notifications.
 
-    7. Provide the reason to use your own procedure to invite or subscribe email ids instead of using the Event Notifications provided  invitation or subscription flow.
+    7. Whether you have a manual or automated process in place for handling unsubscribes, it's important to provide an "unsubscribe" link in the email payload you send. When recipients decide not to receive further emails, they can simply click on the 'unsubscribe' link and remove their email address from your mailing list. Add a statement that you agree to have an “unsubscribe” link in the email payload that you send.
 
-    8. Whether you have a manual or automated process in place for handling unsubscribes, it's important to provide an "unsubscribe" link in the email payload you send. When recipients decide not to receive further emails, they can simply click on the 'unsubscribe' link and remove their email address from your mailing list. Add a statement that you agree to have an “unsubscribe” link in the email payload that you send.
-
-    9. If you send the html content in the notification payload, do you have a process to validate this content is well formatted? Ill formatted HTML content may descrese the server reputation.
+    8. If you send the html content in the notification payload, do you have a process to validate this content is well formatted? Ill formatted HTML content may descrese the server reputation.
     ```
     {: codeblock}
 
@@ -89,7 +87,15 @@ Some of the common verification issues could be:
 It's worth noting that we perform periodic checks on the SPF and DKIM TXT records of the domain provided. To ensure uninterrupted email delivery, we recommend keeping the records inserted in the DNS even after verifying them once. If the SPF or DKIM fails in the periodic check, we will suspend email sending.
 {: note}
 
-Upon successfully completing all three verification methods, `Settings` option will be enabled under `⋮`.
+## Enabling context-based restrictions to access the SMTP interface
+{: #en-smtp-configurations-cbr}
+
+By default access to the SMTP interface is restricted from any IP addresses. To allow access to the SMTP interface, you must enable [context-based restrictions](/docs/event-notifications?topic=event-notifications-en-access-control-cbr). Specifically to access the SMTP interface, you must select the [API type as SMTP Configuration](/docs/event-notifications?topic=event-notifications-en-access-control-cbr#en-manage-cbr-apis) while setting up the CBR rule.
+
+All the set of IPs associated in the network zone selected while setting up the CBR rule will be automatically allowlisted to connect to the SMTP server.
+
+It is mandatory to setup CBR rules for the IBM Cloud Event Notifications instances you intend to use for SMTP interface feature
+{: note}
 
 ## Requirements to send email over SMTP Interface
 {: #en-smtp-configurations-requirements}
@@ -112,14 +118,14 @@ After successful verification of a SMTP configuration in an IBM Cloud Event Noti
 
 2. The SMTP interface port number. Currently supported port 587.
 
-3. An SMTP username and password. Usernames and passwords are unique across the SMTP configurations, and passwords are encrypted using single-way hashing. A maximum of 5 users can be created in a single SMTP configuration. We are currently supporting `Login` and `Plain` authentication methods from the SMTP protocol.
+3. An SMTP username and password. Usernames and passwords are unique across SMTP configurations and passwords are encrypted using single-way hashing. A maximum of 5 users can be created in a single SMTP configuration. We are currently supporting `Login` and `Plain` authentication methods from the SMTP protocol.
 
 4. Client software or program can communicate strictly using Transport Layer Security (TLS).
 
 5. Valid IP addresses or subnets can be provided from which the client is connecting to the SMTP interface.
 
-6. When accessing IBM Cloud Event Notifications through the SMTP interface, your SMTP client application assembles the message. The information you need to provide may vary depending on the application you're using. The following are the minimum requirements for an SMTP exchange between a client and a server:
-   * Source address: The source address should be from the domain you configured; otherwise, the sender address will be rejected.
+6. When accessing IBM Cloud Event Notifications through the SMTP interface, your SMTP client application assembles the message. The information you need to provide may vary depending on the application you are using. The following are the minimum requirements for an SMTP exchange between a client and a server:
+   * Source address: The source address must belong to the configured domain; otherwise, the sender address will be rejected.
    * Destination address: The destination address can be any valid email address or set of email addresses
    * Message data: Ensure that the message data is spam-free, clean, and sensible.
 

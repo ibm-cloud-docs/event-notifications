@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-02-21"
+lastupdated: "2024-07-08"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -108,10 +108,10 @@ Let's look at the detailed flow with following examples:
     }
     ```
 
-- While creating template to enable personalisation add a placeholder in the html handlebars format
+- While creating template to enable personalization add a placeholder in the html handlebars format
 
     ```JSON
-    {{ibmenreferer personalisation ibmenmailto 'name'}}
+    {{ibmenreferer personalization ibmenmailto 'name'}}
     ```
 
     Full template payload
@@ -126,7 +126,7 @@ Let's look at the detailed flow with following examples:
                     New Product Information
                 </h1>
                 <p>
-                    Hello {{ibmenreferer personalisation ibmenmailto 'name'}}, Good {{data.greet}}
+                    Hello {{ibmenreferer personalization ibmenmailto 'name'}}, Good {{data.greet}}
                 </p>
                 <div class="product-info">
                     <h2>
@@ -159,9 +159,9 @@ Let's look at the detailed flow with following examples:
     </html>
     ```
 
-- Explanation about the personalisation tag
+- Explanation about the personalization tag
 
-    - The `ibmenreferer` field is used to identify where to enable the personalisation
-    - The second parameter `personalisation` helps to identify from where to pick personalisation values in the send notifications payload
-    - Third field `ibmenmailto` helps to iterate through array of emails to which mapping can be done for personalisation
+    - The `ibmenreferer` field is used to identify where to enable the personalization
+    - The second parameter `personalization` helps to identify from where to pick personalization values in the send notifications payload
+    - Third field `ibmenmailto` helps to iterate through array of emails to which mapping can be done for personalization
     - The last field helps to identify which value to pick from a key
