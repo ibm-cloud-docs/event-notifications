@@ -21,6 +21,7 @@ IBM Cloud Event Notifications supports SMTP, the most common email protocol on t
 After creating a SMTP configuration in an IBM Cloud Event Notifications instance, you need to perform three types of verifications to get the required parameters to send email via the SMTP Interface. These verifications are located under the 'Verify' tab, accessible by clicking the `⋮` menu.
 
 1. Create Sender Policy Framework (SPF), which is used to authenticate the sender of an email. SPF specifies the mail servers that are allowed to send email for your domain.
+    * Make sure the domain already exists as an A record in the DNS records.
     * Open your DNS hosting provider for the domain name configured
     * Create a new TXT record with your domain name registerer with the name and value provided in the configure screen for SPF
 2. Create DomainKeys Identified Mail (DKIM), which allows an organization to take responsibility for transmitting a message by signing it. DKIM allows the receiver to check the email that claimed to have come from a specific domain, is authorized by the owner of that domain.
@@ -90,6 +91,9 @@ It's worth noting that we perform periodic checks on the SPF and DKIM TXT record
 ## Enabling context-based restrictions to access the SMTP interface
 {: #en-smtp-configurations-cbr}
 
+The legacy IP-based allowlisting for the SMTP interface is now deprecated. It is mandatory to migrate to context-based restrictions when connecting to the SMTP interface. Current allowlisted IPs will remain functional for the next six months, allowing time for this transition.
+{: note}
+
 By default access to the SMTP interface is restricted from any IP addresses. To allow access to the SMTP interface, you must enable [context-based restrictions](/docs/event-notifications?topic=event-notifications-en-access-control-cbr). Specifically to access the SMTP interface, you must select the [API type as SMTP Configuration](/docs/event-notifications?topic=event-notifications-en-access-control-cbr#en-manage-cbr-apis) while setting up the CBR rule.
 
 All the set of IPs associated in the network zone selected while setting up the CBR rule will be automatically allowlisted to connect to the SMTP server.
@@ -120,16 +124,18 @@ After successful verification of a SMTP configuration in an IBM Cloud Event Noti
 
 3. An SMTP username and password. Usernames and passwords are unique across SMTP configurations and passwords are encrypted using single-way hashing. A maximum of 5 users can be created in a single SMTP configuration. We are currently supporting `Login` and `Plain` authentication methods from the SMTP protocol.
 
-4. Client software or program can communicate strictly using Transport Layer Security (TLS).
+4. IBM Cloud Event Notifications SMTP interface currently supports connection over `StartTLS` method for secure data transmission over networks.
 
-5. Valid IP addresses or subnets can be provided from which the client is connecting to the SMTP interface.
+5. Client software or program can communicate strictly using Transport Layer Security (TLS).
 
-6. When accessing IBM Cloud Event Notifications through the SMTP interface, your SMTP client application assembles the message. The information you need to provide may vary depending on the application you are using. The following are the minimum requirements for an SMTP exchange between a client and a server:
+6. Valid IP addresses or subnets can be provided from which the client is connecting to the SMTP interface.
+
+7. When accessing IBM Cloud Event Notifications through the SMTP interface, your SMTP client application assembles the message. The information you need to provide may vary depending on the application you are using. The following are the minimum requirements for an SMTP exchange between a client and a server:
    * Source address: The source address must belong to the configured domain; otherwise, the sender address will be rejected.
    * Destination address: The destination address can be any valid email address or set of email addresses
    * Message data: Ensure that the message data is spam-free, clean, and sensible.
 
-7. The outgoing IP address list based on the SMTP endpoint is mentioned below. These IPs will be listed on the receiver's email clients:
+8. The outgoing IP address list based on the SMTP endpoint is mentioned below. These IPs will be listed on the receiver's email clients:
 
     | SMTP Endpoint                                   | Outgoing IP addresses                                                                         |
     |-------------------------------------------------|-----------------------------------------------------------------------------------------------|
@@ -137,7 +143,7 @@ After successful verification of a SMTP configuration in an IBM Cloud Event Noti
     | smtp.eu-de.event-notifications.cloud.ibm.com    | 149.81.218.203, 158.177.6.24, 149.81.39.14, 158.176.12.194, 149.81.164.10, 161.156.160.31     |
     {: caption="Table 2. IBM Cloud Event Notifications OUtgoing IP addresses" caption-side="bottom"}
 
-8. As per the current configurations, attachments are not supported in Event Notifications SMTP interface.
+9. As per the current configurations, attachments are not supported in Event Notifications SMTP interface.
 
 ## Using SMTP interface for sending emails
 {: #en-smtp-configurations-send-emails}
