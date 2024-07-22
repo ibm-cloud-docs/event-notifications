@@ -31,7 +31,7 @@ Support Context-Based restictions for SMTP Interface
 {: #event-notifications-Jul0524}
 {: release-note}
 
-Support to acesss {{site.data.keyword.en_full}} metrics of custom email domains
+Support for acesss {{site.data.keyword.en_full}} metrics of custom email domains
 : IBM Event Notifications now provides access to view the notitfication performance metrics for custom email domains, see [Monitoring {{site.data.keyword.en_full}} metrics](/docs/event-notifications?topic=event-notifications-en-manage-monitor-metrics).
 
 ## 22 May 2024
