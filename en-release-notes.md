@@ -32,14 +32,14 @@ Support Context-Based restictions for SMTP Interface
 {: release-note}
 
 Support for acesss {{site.data.keyword.en_full}} metrics of custom email domains
-: IBM Event Notifications now provides access to view the notitfication performance metrics for custom email domains, see [Monitoring {{site.data.keyword.en_full}} metrics](/docs/event-notifications?topic=event-notifications-en-manage-monitor-metrics).
+: IBM Event Notifications now provides access to view the notitfication performance metrics for custom email domains, see [Monitoring {{site.data.keyword.en_full}} metrics](/docs/event-notifications?topic=event-notifications-en-view-manage-monitor-metrics).
 
 ## 22 May 2024
 {: #event-notifications-May2224}
 {: release-note}
 
 Support for templates on Slack
-: IBM Event Notifications now supports templates on Slack, enabling users to quickly set up and customize notifications for different events, see [Event Notifications Slack Template](https://cloud.ibm.com/docs/event-notifications?topic=event-notifications-en-destinations-slack#handlebars-integration).
+: IBM Event Notifications now supports templates on Slack, enabling users to quickly set up and customize notifications for different events, see [Event Notifications Slack Template](/docs/event-notifications?topic=event-notifications-en-smtp-configurations).
 
 ## 01 May 2024
 {: #event-notifications-May0124}
