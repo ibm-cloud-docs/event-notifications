@@ -28,7 +28,7 @@ Generate the PagerDuty API key as per the guidance [here](https://support.pagerd
 ## Generate PagerDuty routing key
 {: #en-pd-generate-routing-key}
 
-To integrate your PagerDuty service to {{site.data.keyword.en_short}} service destination, you need to generate a PagerDuty routing key. To generate a PagerDuty routing key, follow these steps: [Generate a new Integration Key](https://support.pagerduty.com/docs/services-and-integrations#generate-a-new-integration-key){: external}.
+To integrate your PagerDuty service to {{site.data.keyword.en_short}} service destination, you need to generate a PagerDuty routing key. To generate a PagerDuty routing key, follow these steps: [Generate a new Integration Key](https://support.pagerduty.com/main/docs/services-and-integrations#generate-a-new-integration-key){: external}.
 
 If you already integrated EventsV2 api with your PagerDuty service, jump to service directory, select **More** and select **View Integrations**. You will find the Integration key inside this view.
 {: note}
