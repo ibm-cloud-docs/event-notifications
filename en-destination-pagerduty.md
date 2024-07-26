@@ -23,7 +23,7 @@ When you select PagerDuty as service destination, any subscribed notification ab
 ## Generate PagerDuty API key
 {: #en-pd-generate-api-key}
 
-Generate the PagerDuty API key as per the guidance [here](https://support.pagerduty.com/docs/api-access-keys){: external}.
+Generate the PagerDuty API key as per the guidance [here](https://support.pagerduty.com/main/docs/api-access-keys){: external}.
 
 ## Generate PagerDuty routing key
 {: #en-pd-generate-routing-key}
