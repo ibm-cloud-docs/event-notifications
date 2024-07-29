@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2021, 2023
-lastupdated: "2023-12-12"
+lastupdated: "2024-07-29"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, sms
 
@@ -10,7 +10,7 @@ subcollection: event-notifications
 
 {{site.data.keyword.attribute-definition-list}}
 
-# {{site.data.keyword.cloud_notm}} SMS service with Custom SMS
+# {{site.data.keyword.cloud_notm}} SMS and MMS service with Custom SMS
 {: #en-destinations-sms-custom}
 
 You can configure a Custom SMS destination in the Destinations tab.
@@ -94,3 +94,19 @@ If a message contains less than 160 characters, then it is considered as one SMS
 {: #en-destinations-sms-custom-charge}
 
 The SMS charges will vary depending on the country and phone number type. The details will be provided in response to your email request.
+
+## MMS Service
+{: #en-destinations-sms-custom-mms}
+
+The Custom SMS destination supports Multimedia Messaging Service (MMS) along with SMS to the subscribed phone numbers. MMS recommended limit is 500kb and 1,600 characters.
+
+## MMS Supported countries and charges
+{: #en-destinations-mms-custom-charge}
+
+MMS messages are charged in terms of `SMS Units`.An SMS unit is a fixed unit of cost. Therefore, the number of units that are consumed by a message varies based on the destination country, and Event Notifications service charges vary.
+The table below shows SMS Units charged for each MMS sent.
+
+| Supported Country Code        | SMS Units |
+|-------------------------------|-----------|
+| +1 (Canada) | 2.11847 units |
+| +1 (United States) | 2.11847 units |
