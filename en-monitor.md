@@ -21,7 +21,7 @@ Use {{site.data.keyword.mon_full_notm}} to gain operational visibility into the 
 ## Set up your {{site.data.keyword.mon_full_notm}} service instance
 {: #en-setup-monitor}
 
-To get started, you need to [provision {{site.data.keyword.cloud_notm}} Monitoring](https://cloud.ibm.com/catalog/services/ibm-cloud-monitoring?callback=/observe/monitoring/create) instance on your {{site.data.keyword.IBM}} account. See [Provisioning an instance](https://cloud.ibm.com/docs/monitoring?topic=monitoring-provision) for more details.
+To get started, you need to [provision {{site.data.keyword.cloud_notm}} Monitoring](https://cloud.ibm.com/catalog) instance on your {{site.data.keyword.IBM}} account. See [Provisioning an instance](https://cloud.ibm.com/docs/monitoring?topic=monitoring-provision) for more details.
 
 Currently, {{site.data.keyword.mon_full_notm}} integration is available for {{site.data.keyword.en_short}} service deployments in the following regions:
 

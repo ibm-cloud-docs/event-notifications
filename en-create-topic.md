@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-10-26"
+  years: 2015, 2024
+lastupdated: "2024-07-31"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -50,7 +50,9 @@ Add the following rules to your topic:
 - `Event type`: select event type from the list.
 - `Event subtype`: select event sub type from the event sub type list.
 - `Severity`: select severity from the severity list.
-- `Advanced conditions`: create your own custom conditions, which must follow [JSONpath specifications](https://github.com/spyzhov/ajson). In the JSONpath specifications, many operators support is provided but currently support for `==` operator enabled. Example:
+- `Advanced conditions`: create your own custom conditions, which must follow [JSONpath specifications](https://goessner.net/articles/JsonPath/). The correctly written rule will extract the appropriate data from the incoming request payload. {{site.data.keyword.en_short}} supports the == operator for JSONPath evaluation. You can validate your JSONPath [here](https://jsonpath.com/).
+
+Example:
 
 ```JSON
 {

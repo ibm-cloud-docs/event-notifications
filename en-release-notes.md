@@ -31,15 +31,15 @@ Support Context-Based restictions for SMTP Interface
 {: #event-notifications-Jul0524}
 {: release-note}
 
-Support to acesss {{site.data.keyword.en_full}} metrics of custom email domains
-: IBM Event Notifications now provides access to view the notitfication performance metrics for custom email domains, see [Monitoring {{site.data.keyword.en_full}} metrics](/docs/event-notifications?topic=event-notifications-en-manage-monitor-metrics).
+Support for acesss {{site.data.keyword.en_full}} metrics of custom email domains
+: IBM Event Notifications now provides access to view the notitfication performance metrics for custom email domains, see [Monitoring {{site.data.keyword.en_full}} metrics](/docs/event-notifications?topic=event-notifications-en-view-manage-monitor-metrics).
 
 ## 22 May 2024
 {: #event-notifications-May2224}
 {: release-note}
 
 Support for templates on Slack
-: IBM Event Notifications now supports templates on Slack, enabling users to quickly set up and customize notifications for different events, see [Event Notifications Slack Template](https://cloud.ibm.com/docs/event-notifications?topic=event-notifications-en-destinations-slack#handlebars-integration).
+: IBM Event Notifications now supports templates on Slack, enabling users to quickly set up and customize notifications for different events, see [Event Notifications Slack Template](/docs/event-notifications?topic=event-notifications-en-smtp-configurations).
 
 ## 01 May 2024
 {: #event-notifications-May0124}
@@ -76,7 +76,7 @@ Support for personalised phone numbers via Custom SMS destination
 {: #event-notifications-Nov1623}
 {: release-note}
 
-Support for IBM OpenPages as a IBM Cloud source
+Support for IBM OpenPages as an IBM Cloud source
 :  OpenPages simplifies data governance, risk management, and regulatory compliance with its highly scalable, AI-powered, and unified GRC platform. You can now send specific events from OpenPages to Event Notifications and route them to various destinations. To know more about OpenPages, see [Enabling event notifications for OpenPages](/docs/openpages?topic=openpages-event-notifications-events).
 
 ## 01 Nov 2023

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2022
+  years: 2015, 2024
 lastupdated: "2023-10-12"
 
 keywords: event notifications, event-notifications, tutorials

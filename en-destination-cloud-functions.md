@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-10-10"
+lastupdated: "2024-07-29"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, IBM Cloud Functions, cloud functions
 
@@ -12,11 +12,15 @@ subcollection: event-notifications
 
 {{site.data.keyword.attribute-definition-list}}
 
+
 # {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}
 {: #en-destinations-cloud-functions}
 
 A {{site.data.keyword.openwhisk_short}} represents a service destination, where an incoming notification can be consumed programmatically to actions.
 {: shortdesc}
+
+## Deprecation Overview
+The IBM Cloud Function service is now [deprecated.](/docs/openwhisk?topic=openwhisk-dep-overview)
 
 ## Generate {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}} endpoint
 {: #en-generate-cf-incoming-webhook-url}

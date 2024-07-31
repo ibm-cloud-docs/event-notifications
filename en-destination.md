@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-12-12"
+lastupdated: "2024-07-29"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, event destination
 
@@ -13,6 +13,7 @@ subcollection: event-notifications
 {{site.data.keyword.attribute-definition-list}}
 
 # Supported destinations
+
 {: #en-destination}
 
 A destination is a delivery target for a notification. In other contexts, destinations are also called channels, sinks, or consumers.
@@ -54,6 +55,6 @@ The Inbuilt Email and Inbuilt SMS destinations are provided out of the box, and 
 Service destinations are cloud services or application where notifications are consumed programmatically. The following service destination is supported by the {{site.data.keyword.en_short}} service:
 
 - [Webhook](/docs/event-notifications?topic=event-notifications-en-destinations-webhook)
-- [{{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}](/docs/event-notifications?topic=event-notifications-en-destinations-cloud-functions)
+- [{{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}](/docs/event-notifications?topic=event-notifications-en-destinations-cloud-functions) (Deprecated)
 - [{{site.data.keyword.codeengineshort}}](/docs/event-notifications?topic=event-notifications-en-destinations-codeengine)
 - [{{site.data.keyword.cos_full_notm}}](/docs/event-notifications?topic=event-notifications-en-destinations-cloud-object-storage)

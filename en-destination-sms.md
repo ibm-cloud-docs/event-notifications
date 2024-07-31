@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2024-03-27"
+lastupdated: "2024-07-29"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, sms
 
@@ -96,162 +96,203 @@ Because SMS delivery rates vary widely with location, SMS text messages are char
 
 | Supported Country Code        | SMS Units | Price In USD |
 |-------------------------------|-----------|------------------|
-| +1684 (American Samoa) | 9.77 units | 0.1577855 USD
-| +376 (Andorra) | 0.64 units | 0.010336 USD
-| +54 (Argentina) | 2.67 units | 0.0431205 USD
-| +247 (Ascension Island) | 7.32 units | 0.118218 USD
-| +43 (Austria) | 3.43 units | 0.0553945 USD
-| +994 (Azerbaijan) | 3.74 units | 0.060401 USD
-| +1242 (Bahamas) | 1.03 units | 0.0166345 USD
-| +973 (Bahrain) | 0.96 units | 0.015504 USD
-| +880 (Bangladesh) | 6.33 units | 0.1022295 USD
-| +375 (Belarus) | 3.03 units | 0.0489345 USD
-| +32 (Belgium) | 4.39 units | 0.0708985 USD
-| +229 (Benin) | 2.67 units | 0.0431205 USD
-| +1441 (Bermuda) | 2.01 units | 0.0324615 USD
-| +975 (Bhutan) | 1.65 units | 0.0266475 USD
-| +591 (Bolivia) | 2.48 units | 0.040052 USD
-| +387 (Bosnia and Herzegovina) | 3.18 units | 0.051357 USD
-| +267 (Botswana) | 1.65 units | 0.0266475 USD
-| +55 (Brazil) | 3.03 units | 0.0489345 USD
-| +673 (Brunei) | 1.19 units | 0.0192185 USD
-| +359 (Bulgaria) | 3.33 units | 0.0537795 USD
-| +855 (Cambodia) | 6.89 units | 0.1112735 USD
-| +1 (Canada) | 0.97 units | 0.0156655 USD
-| +238 (Cape Verde) | 3.24 units | 0.052326 USD
-| +56 (Chile) | 2.4 units | 0.03876 USD
-| +86 (China) | 2.75 units | 0.0444125 USD
-| +57 (Colombia) | 3.3 units | 0.053295 USD
-| +682 (Cook Islands) | 1.15 units | 0.0185725 USD
-| +506 (Costa Rica) | 2.1 units | 0.033915 USD
-| +385 (Croatia) | 2.13 units | 0.0343995 USD
-| +53 (Cuba) | 1.87 units | 0.0302005 USD
-| +5999 (Curacao) | 10.25 units | 0.1655375 USD
-| +357 (Cyprus) | 2.66 units | 0.042959 USD
-| +420 (Czechia) | 2.2 units | 0.03553 USD
-| +45 (Denmark) | 0.91 units | 0.0146965 USD
-| +1809 (Dominican Republic) | 3.19 units | 0.0515185 USD
-| +593 (Ecuador) | 3.59 units | 0.0579785 USD
-| +20 (Egypt) | 4.18 units | 0.067507 USD
-| +291 (Eritrea) | 6.59 units | 0.1064285 USD
-| +372 (Estonia) | 3.73 units | 0.0602395 USD
-| +268 (Eswatini) | 0.57 units | 0.0092055 USD
-| +251 (Ethiopia) | 6.15 units | 0.0993225 USD
-| +500 (Falkland Islands) | 3.66 units | 0.059109 USD
-| +298 (Faroe Islands) | 0.72 units | 0.011628 USD
-| +679 (Fiji) | 2.2 units | 0.03553 USD
-| +358 (Finland) | 3.63 units | 0.0586245 USD
-| +33 (France) | 2.48 units | 0.040052 USD
-| +594 (French Guiana) | 6.76 units | 0.109174 USD
-| +689 (French Polynesia) | 7.54 units | 0.121771 USD
-| +995 (Georgia) | 1.1 units | 0.017765 USD
-| +49 (Germany) | 6.52 units | 0.105298 USD
-| +350 (Gibraltar) | 0.61 units | 0.0098515 USD
-| +30 (Greece) | 2.75 units | 0.0444125 USD
-| +299 (Greenland) | 0.61 units | 0.0098515 USD
-| +590 (Guadeloupe) | 4.39 units | 0.0708985 USD
-| +1671 (Guam) | 0.78 units | 0.012597 USD
-| +502 (Guatemala) | 2.2 units | 0.03553 USD
-| +504 (Honduras) | 1.91 units | 0.0308465 USD
-| +852 (Hong Kong) | 1.93 units | 0.0311695 USD
-| +36 (Hungary) | 3.46 units | 0.055879 USD
-| +354 (Iceland) | 1.25 units | 0.0201875 USD
-| +91 (India) | 3.34 units | 0.053941 USD
-| +62 (Indonesia) | 25.02 units | 0.404073 USD
-| +98 (Iran) | 7.46 units | 0.120479 USD
-| +353 (Ireland) | 2.68 units | 0.043282 USD
-| +972 (Israel) | 3.9 units | 0.062985 USD
-| +39 (Italy) | 3.08 units | 0.049742 USD
-| +81 (Japan) | 2.75 units | 0.0444125 USD
-| +962 (Jordan) | 1.1 units | 0.017765 USD
-| +7 (Kazakhstan) | 10.5 units | 0.169575 USD
-| +254 (Kenya) | 12.69 units | 0.2049435 USD
-| +686 (Kiribati) | 1.19 units | 0.0192185 USD
-| +383 (Kosovo) | 4.18 units | 0.067507 USD
-| +965 (Kuwait) | 2.12 units | 0.034238 USD
-| +996 (Kyrgyzstan) | 1.76 units | 0.028424 USD
-| +856 (Laos) | 1.73 units | 0.0279395 USD
-| +371 (Latvia) | 2.56 units | 0.041344 USD
-| +961 (Lebanon) | 1.69 units | 0.0272935 USD
-| +266 (Lesotho) | 3.85 units | 0.0621775 USD
-| +218 (Libya) | 11.08 units | 0.178942 USD
-| +423 (Liechtenstein) | 1.33 units | 0.0214795 USD
-| +370 (Lithuania) | 0.7 units | 0.011305 USD
-| +352 (Luxembourg) | 0.7 units | 0.011305 USD
-| +853 (Macau) | 1.44 units | 0.023256 USD
-| +60 (Malaysia) | 2.48 units | 0.040052 USD
-| +356 (Malta) | 1.38 units | 0.022287 USD
-| +692 (Marshall Islands) | 10.99 units | 0.1774885 USD
-| +596 (Martinique) | 8.85 units | 0.1429275 USD
-| +230 (Mauritius) | 1.14 units | 0.018411 USD
-| +262 (Mayotte) | 9.52 units | 0.153748 USD
-| +52 (Mexico) | 1.93 units | 0.0311695 USD
-| +691 (Micronesia) | 4.97 units | 0.0802655 USD
-| +373 (Moldova) | 2.35 units | 0.0379525 USD
-| +976 (Mongolia) | 1.03 units | 0.0166345 USD
-| +212 (Morocco) | 2.98 units | 0.048127 USD
-| +95 (Myanmar) | 4.75 units | 0.0767125 USD
-| +264 (Namibia) | 1.76 units | 0.028424 USD
-| +674 (Nauru) | 10.41 units | 0.1681215 USD
-| +977 (Nepal) | 1.91 units | 0.0308465 USD
-| +31 (Netherlands) | 3.63 units | 0.0586245 USD
-| +687 (New Caledonia) | 6.59 units | 0.1064285 USD
-| +64 (New Zealand) | 3.68 units | 0.059432 USD
-| +505 (Nicaragua) | 2.61 units | 0.0421515 USD
-| +234 (Nigeria) | 9.36 units | 0.151164 USD
-| +850 (North Korea) | 0.42 units | 0.006783 USD
-| +1670 (Northern Mariana Islands) | 0.78 units | 0.012597 USD
-| +47 (Norway) | 2.48 units | 0.040052 USD
-| +968 (Oman) | 2.94 units | 0.047481 USD
-| +92 (Pakistan) | 5.39 units | 0.0870485 USD
-| +507 (Panama) | 3.03 units | 0.0489345 USD
-| +595 (Paraguay) | 0.78 units | 0.012597 USD
-| +51 (Peru) | 2.2 units | 0.03553 USD
-| +63 (Philippines) | 1.65 units | 0.0266475 USD
-| +48 (Poland) | 2.64 units | 0.042636 USD
-| +351 (Portugal) | 2.48 units | 0.040052 USD
-| +1787 (Puerto Rico) | 0.44 units | 0.007106 USD
-| +974 (Qatar) | 2.39 units | 0.0385985 USD
-| +262 (Réunion Island) | 7.42 units | 0.119833 USD
-| +40 (Romania) | 3.24 units | 0.052326 USD
-| +7 (Russia) | 35.34 units | 0.570741 USD
-| +250 (Rwanda) | 1.53 units | 0.0247095 USD
-| +290 (Saint Helena) | 7.32 units | 0.118218 USD
-| +508 (Saint Pierre and Miquelon) | 3.66 units | 0.059109 USD
-| +378 (San Marino) | 3.44 units | 0.055556 USD
-| +966 (Saudi Arabia) | 1.85 units | 0.0298775 USD
-| +381 (Serbia) | 1 units | 0.01615 USD
-| +65 (Singapore) | 1.32 units | 0.021318 USD
-| +421 (Slovakia) | 3.3 units | 0.053295 USD
-| +386 (Slovenia) | 1.17 units | 0.0188955 USD
-| +27 (South Africa) | 1.78 units | 0.028747 USD
-| +82 (South Korea) | 1.54 units | 0.024871 USD
-| +34 (Spain) | 3.3 units | 0.053295 USD
-| +94 (Sri Lanka) | 4.78 units | 0.077197 USD
-| +249 (Sudan) | 8.26 units | 0.133399 USD
-| +597 (Suriname) | 0.88 units | 0.014212 USD
-| +46 (Sweden) | 2.22 units | 0.035853 USD
-| +41 (Switzerland) | 2.67 units | 0.0431205 USD
-| +963 (Syria) | 12.28 units | 0.198322 USD
-| +886 (Taiwan) | 1.97 units | 0.0318155 USD
-| +255 (Tanzania) | 2.09 units | 0.0337535 USD
-| +66 (Thailand) | 1.1 units | 0.017765 USD
-| +1868 (Trinidad and Tobago) | 1.52 units | 0.024548 USD
-| +90 (Turkey) | 1.16 units | 0.018734 USD
-| +993 (Turkmenistan) | 3.85 units | 0.0621775 USD
-| +688 (Tuvalu) | 0.42 units | 0.006783 USD
-| +256 (Uganda) | 7.56 units | 0.122094 USD
-| +380 (Ukraine) | 9.56 units | 0.154394 USD
-| +971 (United Arab Emirates) | 1.1 units | 0.017765 USD
-| +44 (United Kingdom) | 1.6 units | 0.02584 USD
-| +1 (United States) | 0.61 units | 0.0098515 USD
-| +598 (Uruguay) | 4.39 units | 0.0708985 USD
-| +998 (Uzbekistan) | 13.71 units | 0.2214165 USD
-| +58 (Venezuela) | 1.8 units | 0.02907 USD
-| +84 (Vietnam) | 3.61 units | 0.0583015 USD
-| +1340 (Virgin Islands, US) | 2.39 units | 0.0385985 USD
-| +681 (Wallis and Futuna) | 7.84 units | 0.126616 USD
-| +967 (Yemen) | 2.65 units | 0.0427975 USD
+|"+93"(Afghanistan) | 3.14706 units | 0.050825019 USD
+|"+355"(Albania) | 4.31478 units | 0.069683697 USD
+|"+213"(Algeria) | 4.14087 units | 0.0668750505 USD
+|"+1684"(American Samoa) | 9.77 units | 0.1577855 USD
+|"+376"(Andorra) | 0.72879 units | 0.0117699585 USD
+|"+244"(Angola) | 1.86339 units | 0.0300937485 USD
+|"+1264"(Anguilla) | 2.48452 units | 0.040124998 USD
+|"+1268"(Antigua and Barbuda) | 2.2692 units | 0.03664758 USD
+|"+54"(Argentina) | 3.02283 units | 0.0488187045 USD
+|"+374"(Armenia) | 4.34791 units | 0.0702187465 USD
+|"+297"(Aruba) | 2.48452 units | 0.040124998 USD
+|"+247"(Ascension Island) | 7.32 units | 0.118218 USD
+|"+61"(Australia) | 2.48452 units | 0.040124998 USD
+|"+43"(Austria) | 3.87585 units | 0.0625949775 USD
+|"+994"(Azerbaijan) | 4.22368 units | 0.068212432 USD
+|"+1242"(Bahamas) | 1.15944 units | 0.018724956 USD
+|"+973"(Bahrain) | 1.08491 units | 0.0175212965 USD
+|"+880"(Bangladesh) | 2.79923 units | 0.0452075645 USD
+|"+1246"(Barbados) | 2.48452 units | 0.040124998 USD
+|"+375"(Belarus) | 3.42864 units | 0.055372536 USD
+|"+32"(Belgium) | 4.96904 units | 0.080249996 USD
+|"+501"(Belize) | 0.68738 units | 0.011101187 USD
+|"+229"(Benin) | 3.02283 units | 0.0488187045 USD
+|"+1441"(Bermuda) | 1.73088 units | 0.027953712 USD
+|"+975"(Bhutan) | 1.86339 units | 0.0300937485 USD
+|"+591"(Bolivia) | 2.79923 units | 0.0452075645 USD
+|"+387"(Bosnia and Herzegovina) | 3.59427 units | 0.0580474605 USD
+|"+267"(Botswana) | 1.86339 units | 0.0300937485 USD
+|"+55"(Brazil) | 3.42036 units | 0.055238814 USD
+|"+673"(Brunei) | 1.19 units | 0.0192185 USD
+|"+359"(Bulgaria) | 3.76819 units | 0.0608562685 USD
+|"+226"(Burkina Faso) | 1.73088 units | 0.027953712 USD
+|"+257"(Burundi) | 4.34791 units | 0.0702187465 USD
+|"+855"(Cambodia) | 0.81161 units | 0.0131075015 USD
+|"+237"(Cameroon) | 3.77647 units | 0.0609899905 USD
+|"+1"(Canada) | 0.29814 units | 0.004814961 USD
+|"+238"(Cape Verde) | 3.66881 units | 0.0592512815 USD
+|"+1345"(Cayman Islands) | 2.15325 units | 0.0347749875 USD
+|"+236"(Central African Republic) | 0.82817 units | 0.0133749455 USD
+|"+235"(Chad) | 1.39961 units | 0.0226037015 USD
+|"+56"(Chile) | 2.71641 units | 0.0438700215 USD
+|"+86"(China) | 3.10565 units | 0.0501562475 USD
+|"+57"(Colombia) | 3.76819 units | 0.0608562685 USD
+|"+269"(Comoros) | 0.69567 units | 0.0112350705 USD
+|"+682"(Cook Islands) | 1.30023 units | 0.0209987145 USD
+|"+506"(Costa Rica) | 2.37686 units | 0.038386289 USD
+|"+385"(Croatia) | 2.40998 units | 0.038921177 USD
+|"+53"(Cuba) | 2.111847 units | 0.03410632905 USD
+|"+5999"(Curacao) | 2.15325 units | 0.0347749875 USD
+|"+357"(Cyprus) | 3.00627 units | 0.0485512605 USD
+|"+420"(Czechia) | 2.48452 units | 0.040124998 USD
+|"+243"(Democratic Republic of the Congo) | 2.48452 units | 0.040124998 USD
+|"+45"(Denmark) | 1.02693 units | 0.0165849195 USD
+|"+253"(Djibouti) | 5.2589 units | 0.084931235 USD
+|"+1767"(Dominica) | 2.15325 units | 0.0347749875 USD
+|"+1809"(Dominican Republic) | 3.60255 units | 0.0581811825 USD
+|"+670"(East Timor) | 4.31478 units | 0.069683697 USD
+|"+593"(Ecuador) | 3.69365 units | 0.0596524475 USD
+|"+20"(Egypt) | 4.18 units | 0.067507 USD
+|"+503"(El Salvador) | 2.02074 units | 0.032634951 USD
+|"+291"(Eritrea) | 6.59 units | 0.1064285 USD
+|"+372"(Estonia) | 4.2154 units | 0.06807871 USD
+|"+268"(Eswatini) | 0.57 units | 0.0092055 USD
+|"+251"(Ethiopia) | 6.15 units | 0.0993225 USD
+|"+500"(Falkland Islands) | 3.66 units | 0.059109 USD
+|"+298"(Faroe Islands) | 0.81161 units | 0.0131075015 USD
+|"+679"(Fiji) | 2.48452 units | 0.040124998 USD
+|"+358"(Finland) | 4.10774 units | 0.066340001 USD
+|"+33"(France) | 2.79923 units | 0.0452075645 USD
+|"+594"(French Guiana) | 7.64404 units | 0.123451246 USD
+|"+689"(French Polynesia) | 8.53019 units | 0.1377625685 USD
+|"+995"(Georgia) | 1.24226 units | 0.020062499 USD
+|"+49"(Germany) | 3.42036 units | 0.055238814 USD
+|"+350"(Gibraltar) | 0.68738 units | 0.011101187 USD
+|"+30"(Greece) | 3.10565 units | 0.0501562475 USD
+|"+299"(Greenland) | 0.68738 units | 0.011101187 USD
+|"+1473"(Grenada) | 2.48452 units | 0.040124998 USD
+|"+590"(Guadeloupe) | 4.96904 units | 0.080249996 USD
+|"+1671"(Guam) | 0.87786 units | 0.014177439 USD
+|"+502"(Guatemala) | 2.48452 units | 0.040124998 USD
+|"+592"(Guyana) | 2.65015 units | 0.0427999225 USD
+|"+509"(Haiti) | 1.4493 units | 0.023406195 USD
+|"+504"(Honduras) | 2.16153 units | 0.0349087095 USD
+|"+852"(Hong Kong) | 2.1781 units | 0.035176315 USD
+|"+36"(Hungary) | 3.90898 units | 0.063130027 USD
+|"+354"(Iceland) | 1.40789 units | 0.0227374235 USD
+|"+91"(India) | 0.4969 units | 0.008024935 USD
+|"+62"(Indonesia) | 1.7226 units | 0.02781999 USD
+|"+98"(Iran) | 7.46 units | 0.120479 USD
+|"+353"(Ireland) | 3.03111 units | 0.0489524265 USD
+|"+972"(Israel) | 3.9 units | 0.062985 USD
+|"+39"(Italy) | 3.47833 units | 0.0561750295 USD
+|"+1876"(Jamaica) | 2.48452 units | 0.040124998 USD
+|"+81"(Japan) | 2.75 units | 0.0444125 USD
+|"+962"(Jordan) | 1.1 units | 0.017765 USD
+|"+7"(Kazakhstan) | 1.9048 units | 0.03076252 USD
+|"+254"(Kenya) | 12.69 units | 0.2049435 USD
+|"+686"(Kiribati) | 1.34164 units | 0.021667486 USD
+|"+383"(Kosovo) | 4.18 units | 0.067507 USD
+|"+965"(Kuwait) | 2.12 units | 0.034238 USD
+|"+996"(Kyrgyzstan) | 1.98762 units | 0.032100063 USD
+|"+856"(Laos) | 1.95449 units | 0.0315650135 USD
+|"+371"(Latvia) | 2.89861 units | 0.0468125515 USD
+|"+961"(Lebanon) | 1.69 units | 0.0272935 USD
+|"+266"(Lesotho) | 3.85 units | 0.0621775 USD
+|"+218"(Libya) | 11.08 units | 0.178942 USD
+|"+423"(Liechtenstein) | 1.50728 units | 0.024342572 USD
+|"+370"(Lithuania) | 0.78676 units | 0.012706174 USD
+|"+352"(Luxembourg) | 0.79505 units | 0.0128400575 USD
+|"+853"(Macau) | 1.62322 units | 0.026215003 USD
+|"+389"(Macedonia) | 0.87786 units | 0.014177439 USD
+|"+60"(Malaysia) | 1.83026 units | 0.029558699 USD
+|"+960"(Maldives) | 0.64598 units | 0.010432577 USD
+|"+356"(Malta) | 1.55697 units | 0.0251450655 USD
+|"+692"(Marshall Islands) | 10.99 units | 0.1774885 USD
+|"+596"(Martinique) | 5.78065 units | 0.0933574975 USD
+|"+222"(Mauritania) | 4.34791 units | 0.0702187465 USD
+|"+230"(Mauritius) | 1.14 units | 0.018411 USD
+|"+262"(Mayotte) | 9.52 units | 0.153748 USD
+|"+52"(Mexico) | 2.1781 units | 0.035176315 USD
+|"+691"(Micronesia) | 4.97 units | 0.0802655 USD
+|"+373"(Moldova) | 2.65844 units | 0.042933806 USD
+|"+377"(Monaco) | 4.72059 units | 0.0762375285 USD
+|"+976"(Mongolia) | 1.15944 units | 0.018724956 USD
+|"+382"(Montenegro) | 0.81161 units | 0.0131075015 USD
+|"+1644"(Montserrat) | 1.15944 units | 0.018724956 USD
+|"+212"(Morocco) | 2.98 units | 0.048127 USD
+|"+95"(Myanmar) | 5.36656 units | 0.086669944 USD
+|"+264"(Namibia) | 1.76 units | 0.028424 USD
+|"+674"(Nauru) | 10.41 units | 0.1681215 USD
+|"+977"(Nepal) | 2.16153 units | 0.0349087095 USD
+|"+31"(Netherlands) | 4.09946 units | 0.066206279 USD
+|"+687"(New Caledonia) | 7.45356 units | 0.120374994 USD
+|"+64"(New Zealand) | 4.15743 units | 0.0671424945 USD
+|"+505"(Nicaragua) | 2.9483 units | 0.047615045 USD
+|"+234"(Nigeria) | 9.36 units | 0.151164 USD
+|"+850"(North Korea) | 0.42 units | 0.006783 USD
+|"+1670"(Northern Mariana Islands) | 0.78 units | 0.012597 USD
+|"+47"(Norway) | 2.80751 units | 0.0453412865 USD
+|"+968"(Oman) | 2.94 units | 0.047481 USD
+|"+92"(Pakistan) | 0.74536 units | 0.012037564 USD
+|"+680"(Palau) | 4.3065 units | 0.069549975 USD
+|"+507"(Panama) | 3.42036 units | 0.055238814 USD
+|"+675"(Papua New Guinea) | 2.38514 units | 0.038520011 USD
+|"+595"(Paraguay) | 0.87786 units | 0.014177439 USD
+|"+51"(Peru) | 2.48452 units | 0.040124998 USD
+|"+63"(Philippines) | 1.59009 units | 0.0256799535 USD
+|"+48"(Poland) | 2.11184 units | 0.034106216 USD
+|"+351"(Portugal) | 2.79923 units | 0.0452075645 USD
+|"+1787"(Puerto Rico) | 0.4969 units | 0.008024935 USD
+|"+974"(Qatar) | 2.39 units | 0.0385985 USD
+|"+262"(Réunion Island) | 7.42 units | 0.119833 USD
+|"+40"(Romania) | 3.66881 units | 0.0592512815 USD
+|"+7"(Russia) | 1.60666 units | 0.025947559 USD
+|"+250"(Rwanda) | 1.53 units | 0.0247095 USD
+|"+290"(Saint Helena) | 7.32 units | 0.118218 USD
+|(Saint Lucia) | 0.57972 units | 0.009362478 USD
+|"+508"(Saint Pierre and Miquelon) | 4.14087 units | 0.0668750505 USD
+|"+1784"(Saint Vincent and The Grenadines) | 0.28986 units | 0.004681239 USD
+|"+685"(Samoa) | 1.86339 units | 0.0300937485 USD
+|"+378"(San Marino) | 3.89241 units | 0.0628624215 USD
+|"+966"(Saudi Arabia) | 1.85 units | 0.0298775 USD
+|"+381"(Serbia) | 1.1346 units | 0.01832379 USD
+|"+65"(Singapore) | 1.49071 units | 0.0240749665 USD
+|"+421"(Slovakia) | 3.72678 units | 0.060187497 USD
+|"+386"(Slovenia) | 1.32508 units | 0.021400042 USD
+|(Solomon Islands) | 3.9918 units | 0.06446757 USD
+|"+27"(South Africa) | 1.78 units | 0.028747 USD
+|"+82"(South Korea) | 1.73916 units | 0.028087434 USD
+|"+34"(Spain) | 3.72678 units | 0.060187497 USD
+|"+94"(Sri Lanka) | 1.86339 units | 0.0300937485 USD
+|"+249"(Sudan) | 8.26 units | 0.133399 USD
+|"+597"(Suriname) | 0.99381 units | 0.0160500315 USD
+|"+46"(Sweden) | 2.50937 units | 0.0405263255 USD
+|"+41"(Switzerland) | 3.02283 units | 0.0488187045 USD
+|"+963"(Syria) | 12.28 units | 0.198322 USD
+|"+886"(Taiwan) | 2.22779 units | 0.0359788085 USD
+|"+255"(Tanzania) | 2.09 units | 0.0337535 USD
+|"+66"(Thailand) | 1.24226 units | 0.020062499 USD
+|"+1868"(Trinidad and Tobago) | 1.71432 units | 0.027686268 USD
+|"+90"(Turkey) | 1.16 units | 0.018734 USD
+|"+993"(Turkmenistan) | 4.34791 units | 0.0702187465 USD
+|"+1649"(Turks and Caicos Islands) | 2.31889 units | 0.0374500735 USD
+|"+688"(Tuvalu) | 0.42 units | 0.006783 USD
+|"+256"(Uganda) | 7.56 units | 0.122094 USD
+|"+380"(Ukraine) | 3.859296 units | 0.0623276304 USD
+|"+971"(United Arab Emirates) | 1.1 units | 0.017765 USD
+|"+44"(United Kingdom) | 1.80542 units | 0.029157533 USD
+|"+1"(United States) | 0.29814 units | 0.004814961 USD
+|"+598"(Uruguay) | 4.96904 units | 0.080249996 USD
+|"+998"(Uzbekistan) | 3.10565 units | 0.0501562475 USD
+|"+678"(Vanuatu) | 2.65015 units | 0.0427999225 USD
+|"+58"(Venezuela) | 2.03731 units | 0.0329025565 USD
+|"+84"(Vietnam) | 4.08289 units | 0.0659386735 USD
+|"+1340"(Virgin Islands, US) | 2.39 units | 0.0385985 USD
+|"+681"(Wallis and Futuna) | 7.84 units | 0.126616 USD
+|"+967"(Yemen) | 2.65 units | 0.0427975 USD
 {: caption="Table 1. Destination country, unit per segment and price per segment" caption-side="bottom"}
 
 ## Calculating SMS Units and Price
