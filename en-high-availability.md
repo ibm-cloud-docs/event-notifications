@@ -33,9 +33,9 @@ A region (location) is a geographically and physically separate group of one or 
 
 ## Availability zones for {{site.data.keyword.en_short}}
 {: #en-zones-ha}
-{{site.data.keyword.en_notm}} service is a highly available, regional service. In each supported region, the service exists in multiple availability zones with no single point of failure. 
+{{site.data.keyword.en_full_notm}} service is a highly available, regional service. In each supported region, the service exists in multiple availability zones with no single point of failure. 
 
-The following table lists the high-availability (HA) status for the regions (locations) where the {{site.data.keyword.en_notm}} service is available:
+The following table lists the high-availability (HA) status for the regions (locations) where the {{site.data.keyword.en_full_notm}} service is available:
 
 | Geography| Region| HA Status |
 |----------|-------|-----------|
@@ -97,4 +97,4 @@ If an entire MZR becomes inoperative (usually due to a catastrophic disaster or 
 
 When the primary MZR is restored, the secondary deployment is migrated back to the primary site. After the migration is complete, the DNS is restored to its original routing.
 
-If you need zero downtime during a regional disaster recovery, create and maintain backup instances in other regions. To synchronize a service instance in one region with an instance in a different region, you can use the APIs mentioned [here](/apidocs/app-configuration).
+If you need zero downtime during a regional disaster recovery, create and maintain backup instances in other regions. To synchronize a service instance in one region with an instance in a different region, you can use the APIs mentioned [here](/apidocs/event-notifications).
