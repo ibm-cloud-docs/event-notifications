@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2023-12-04"
+  years: 2021, 2024
+lastupdated: "2024-08-01"
 
 keywords: HA for Event Notifications, high availability for Event Notifications, Event Notifications, disaster recovery
 
@@ -18,6 +18,48 @@ subcollection: event-notifications
 
 [High availability](#x2284708){: term} (HA) is a core discipline in an IT infrastructure to keep your apps up and running, even after a partial or full site failure. The main purpose of high availability is to eliminate potential points of failures in an IT infrastructure.
 {: shortdesc}
+
+An availability zone is a logically and physically isolated location within an {{site.data.keyword.cloud_notm}} region where your data is processed and hosted.
+
+- An availability zone has independent power, cooling, and network infrastructures that are isolated from other zones to strengthen fault tolerance by avoiding single points of failure between zones.
+- An availability zone offers high bandwidth and low inter-zone latency within a region.
+
+A region (location) is a geographically and physically separate group of one or more availability zones with independent electrical and network infrastructures that are isolated from other regions.
+
+- Regions are designed to remove shared single points of failure with other regions and provide low inter-zone latency within the region.
+- Each region has three different data centers (DC) for redundancy.
+- In each supported region, traffic is load balanced across infrastructure in multiple availability zones, with no single point of failure.
+- If all the data centers in a region fail, {{site.data.keyword.en_short}} becomes unavailable in that region.
+
+## Availability zones for {{site.data.keyword.en_short}}
+{: #en-zones-ha}
+{{site.data.keyword.en_notm}} service is a highly available, regional service. In each supported region, the service exists in multiple availability zones with no single point of failure. 
+
+The following table lists the high-availability (HA) status for the regions (locations) where the {{site.data.keyword.en_notm}} service is available:
+
+| Geography| Region| HA Status |
+|----------|-------|-----------|
+| Asia-Pacific| Sydney (au-syd)|MZR|
+| Europe | London (eu-gb)|MZR|
+| Europe | Frankfurt (eu-de)|MZR|
+| Europe | Madrid (eu-es)|MZR|
+| North America| Dallas (us-south)|MZR|
+
+{: caption="Table 1. HA status for the regions" caption-side="bottom"}
+
+Where:
+
+- A *geography* is a geographic area or larger political body that contains one or more regions.
+- A *region* is a defined geographic territory.
+   - A region might be a specific postal code area, a town, a city, a state, a group of states, or even a group of countries.
+   - A region contains [multiple availability zones](https://www.ibm.com/cloud/data-centers/) to meet local access, low latency, and security requirements for the region.
+- `MZR` means multi-zone region. [Learn more](/docs/overview?topic=overview-locations#table-mzr).
+
+## Locations
+{: #ha-locations}
+
+For more information about service availability within regions and data centers, see [Service and infrastructure availability by location](/docs/event-notifications?topic=event-notifications-en-regions-endpoints).
+
 
 ## Responsibilities
 {: #ha-responsibilities}
@@ -44,8 +86,15 @@ Service level objectives (SLOs) describe the design points that the {{site.data.
 The SLO is not a warranty and {{site.data.keyword.IBM_notm}} will not issue credits for failure to meet an objective. Refer to the SLAs for commitments and credits that are issued for failure to meet any committed SLAs. For a summary of all SLOs, see [{{site.data.keyword.cloud_notm}} service level objectives](/docs/overview?topic=overview-slo).
 
 
-## Locations
-{: #ha-locations}
 
-For more information about service availability within regions and data centers, see [Service and infrastructure availability by location](/docs/event-notifications?topic=event-notifications-en-regions-endpoints).
+## Disaster recovery (DR) for {{site.data.keyword.en_short}} service in a region
+{: #ac-dr}
 
+{{site.data.keyword.en_short}} is a regional service, and does not offer automatic cross-regional failover or cross-regional disaster recovery. If all of the availability zones in a region fail, {{site.data.keyword.en_short}} becomes unavailable in that region.
+{: important}
+
+If an entire MZR becomes inoperative (usually due to a catastrophic disaster or failure), {{site.data.keyword.IBM_notm}} runs disaster-recovery plans to restore service within 24 hours or less. {{site.data.keyword.IBM_notm}} restores the service in an alternative MZR from an IBM-managed backup. Existing DNS names are migrated to the backup deployment. When the disaster recovery process is complete, API traffic resumes automatically.
+
+When the primary MZR is restored, the secondary deployment is migrated back to the primary site. After the migration is complete, the DNS is restored to its original routing.
+
+If you need zero downtime during a regional disaster recovery, create and maintain backup instances in other regions. To synchronize a service instance in one region with an instance in a different region, you can use the APIs mentioned [here](/apidocs/app-configuration).
