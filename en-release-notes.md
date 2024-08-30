@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-07-08"
+lastupdated: "2024-08-30"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -19,6 +19,13 @@ content-type: release-note
 
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
+
+## 30 August 2024
+{: #event-notifications-Aug3024}
+{: release-note}
+
+Support direct message for Slack
+: IBM Event Notifications now supports the ability to send direct messages to Slack, see [Slack direct message](/docs/event-notifications?topic=event-notifications-en-destinations-slack).
 
 ## 10 July 2024
 {: #event-notifications-Jul1024}

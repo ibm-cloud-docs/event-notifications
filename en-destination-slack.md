@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2023
-lastupdated: "2023-10-10"
+  years: 2020, 2024
+lastupdated: "2024-08-30"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, slack
 
@@ -29,12 +29,33 @@ To post a slack notification, that you need to generate an incoming webhook URL.
 ## Configuring a slack destination
 {: #en-slack-configure-destination}
 
-You can configure a slack destination in the `Destinations` tab. As part of the configuration, enter the Slack Incoming Webhook URL. Create a subscription to associate the slack destination to a topic.
+Before you configure Slack as a destination for Direct Messages, ensure you have created and configured a Slack app with a bot token scope of `chat:write`. Refer to the Slack API documentation for more information: (https://api.slack.com/quickstart#creating).
+{: note}
+
+
+To configure a Slack destination, follow these steps:
+
+1. Log in to your {{site.data.keyword.en_short}} instance dashboard and navigate to Destinations.
+
+1. Click **Add** to add a new destination.
+
+1. In the Add a destination side panel, provide the following details:
+
+  - **Name**: Enter a name for your destination.
+  - **Description**: Optionally, enter a description for your destination.
+  - **Type**: Under Destination, select Slack from the list as your destination type.
+  - **Send messages:** Choose one of the following options:
+      - **Using incoming webhooks**: Provide the Slack Incoming Webhook URL.
+      - **Using direct messages:** Provide the Bot User OAuth Token.
+
 
 ## Configuring a slack subscription
 {: #en-slack-configure-sub}
 
-You can add attachment color to individual slack subscription based on hex code, for example, "#0000FF" for blue.
+1. Using Incoming Webhooks
+   - You can add attachment color to individual Slack subscriptions based on a hex code. For example, use #0000FF to set the color to blue.
+1. Using Direct Messages
+   - You can provide a list of member ids and channel ids. If channel ids are provide then the application shall be integrated into the specified channels.
 
 ## How a default slack notification (without template) from Event Notifications looks
 {: #en-how-a-slack-notification-from-en-looks}
