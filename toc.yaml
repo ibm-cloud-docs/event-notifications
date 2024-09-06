@@ -130,13 +130,16 @@ toc:
           label: Logging and monitoring
           topics:
           - en-monitor.md
+          - monitoring.md
           - en-logs.md
+          - logging.md
       - topicgroup:
           label: Enhancing security
           topics:
           - en-iam.md
           - en-cbr.md
           - en-audit.md
+          - at-events.md
           - en-data-security-compliance.md
           - en-data-security.md
           - en-managing-encryption.md
