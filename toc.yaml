@@ -2,9 +2,10 @@
 toc:
   properties:
     subcollection: event-notifications
+    service-name: event-notifications
     category: dev_ops
     audience: service
-    href: /docs/event-notifications?topic=event-notifications-getting-started
+    href: /docs/event-notifications
     console-page: /catalog/services/event-notifications#about
     path: event-notifications
     label: Event Notifications
