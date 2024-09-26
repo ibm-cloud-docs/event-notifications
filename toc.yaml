@@ -2,9 +2,10 @@
 toc:
   properties:
     subcollection: event-notifications
+    service-name: event-notifications
     category: dev_ops
     audience: service
-    href: /docs/event-notifications?topic=event-notifications-getting-started
+    href: /docs/event-notifications
     console-page: /catalog/services/event-notifications#about
     path: event-notifications
     label: Event Notifications
@@ -130,13 +131,16 @@ toc:
           label: Logging and monitoring
           topics:
           - en-monitor.md
+          - monitoring.md
           - en-logs.md
+          - logging.md
       - topicgroup:
           label: Enhancing security
           topics:
           - en-iam.md
           - en-cbr.md
           - en-audit.md
+          - at-events.md
           - en-data-security-compliance.md
           - en-data-security.md
           - en-managing-encryption.md
