@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2021, 2024
-lastupdated: "2024-07-08"
+lastupdated: "2024-09-30"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email, smtp
 
@@ -106,15 +106,17 @@ It is mandatory to setup CBR rules for the IBM Cloud Event Notifications instanc
 
 After successful verification of a SMTP configuration in an IBM Cloud Event Notifications instance, to send email using SMTP Interface you need following parameters:
 
-1. The SMTP endpoint address. A list of IBM Cloud Event Notifications SMTP endpoints is mentioned below:
-
-    | Event Notifications Instance Region | SMTP Endpoint                                   |
-    |-------------------------------------|-------------------------------------------------|
-    | us-south (Dallas)                   | smtp.us-south.event-notifications.cloud.ibm.com |
-    | au-syd (Sydney)                     | smtp.us-south.event-notifications.cloud.ibm.com |
-    | eu-gb (London)                      | smtp.us-south.event-notifications.cloud.ibm.com |
-    | eu-de (Frankfurt)                   | smtp.eu-de.event-notifications.cloud.ibm.com    |
-    | eu-es (Madrid)                      | smtp.eu-de.event-notifications.cloud.ibm.com    |
+1. The SMTP features are available in following regions `us-south` and `eu-de`
+    
+   The list of IBM Cloud Event Notifications SMTP endpoints for each region is mentioned in below table:
+    
+    | Event Notifications Instance Region | SMTP Public Endpoint                                   | SMTP Private Endpoint
+    |-------------------------------------|-------------------------------------------------|---------------------------------------------------------|
+    | us-south (Dallas)                   | smtp.us-south.event-notifications.cloud.ibm.com | private.smtp.us-south.event-notifications.cloud.ibm.com |
+    | au-syd (Sydney)                     | smtp.us-south.event-notifications.cloud.ibm.com | private.smtp.us-south.event-notifications.cloud.ibm.com |
+    | eu-gb (London)                      | smtp.us-south.event-notifications.cloud.ibm.com | private.smtp.us-south.event-notifications.cloud.ibm.com |
+    | eu-de (Frankfurt)                   | smtp.eu-de.event-notifications.cloud.ibm.com    | private.smtp.eu-de.event-notifications.cloud.ibm.com    |
+    | eu-es (Madrid)                      | smtp.eu-de.event-notifications.cloud.ibm.com    | private.smtp.eu-de.event-notifications.cloud.ibm.com    |
     {: caption="Table 1. IBM Cloud Event Notifications SMTP endpoints" caption-side="bottom"}
 
     Based on the above table, it can be seen as instances created in London and Sydney also connect to the Dallas SMTP endpoint, and instances created in Madrid also connect to the Frankfurt SMTP endpoint.
@@ -177,6 +179,29 @@ After successful verification of a SMTP configuration in an IBM Cloud Event Noti
     .
     ```
     {: codeblock}
+
+### Using SMTP Private Endpoint for sending emails
+{: #en-smtp-configurations-send-emails-using-private-endpoint}
+
+1. To send mail via Private SMTP endpoint, you have to create/attach VPE(Virtual Private Endpoint Gateway) to your IBM Cloud VPC(Virtual Private Cloud)
+2. Make sure to attach VPE gateway in respective VPC, where your IKS VPC clusters (OR) VSI's(Virtual Service Instance) are deployed.
+3. While creating VPE:
+
+   
+   1. Select the required `Region` and `VPC`, from where you want to connect to SMTP Private endpoint
+   2. Under **Request connection to a service** select **Event Notifications** service
+   3. Enable the **endpoint** with **type**: `VPE`
+   4. Select the required subnet (You can bind only one IP address per VPC zone to an endpoint gateway)
+   
+<img width="863" alt="image" src="https://media.github.ibm.com/user/401572/files/cb82b5bf-60ba-479d-bce4-4583a8dbac59">
+
+4. Create a **Network Zone** in **CBR** for your VPC 
+5. Add above **Network Zone** to the **CBR Rule** that you already created for **Event-Notifications SMTP service**
+6. Try using the respective SMTP Private Endpoint listed below:
+
+ 
+   
+
 
 
 
