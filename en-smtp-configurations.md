@@ -193,7 +193,7 @@ After successful verification of a SMTP configuration in an IBM Cloud Event Noti
    3. Enable the **endpoint** with **type**: `VPE`
    4. Select the required subnet (You can bind only one IP address per VPC zone to an endpoint gateway)
    
-<img width="863" alt="image" src="https://media.github.ibm.com/user/401572/files/cb82b5bf-60ba-479d-bce4-4583a8dbac59">
+![{{site.data.keyword.en_short}}](images/smtp-private-endpoint.png "SMTP Private Endpoint VPE"){: caption="Figure 1. SMTP Private Endpoint VPE" caption-side="bottom"}
 
 4. Create a **Network Zone** in **CBR** for your VPC 
 5. Add above **Network Zone** to the **CBR Rule** that you already created for **Event-Notifications SMTP service**
