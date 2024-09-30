@@ -196,7 +196,7 @@ After successful verification of a SMTP configuration in an IBM Cloud Event Noti
 
 4. Create a **Network Zone** in **CBR** for your VPC.
 5. Create **CBR Rule** for **Event-Notifications Instance** and add above created **Network zone** (OR) Add above **Network Zone** to existing **CBR Rule** that you already created for **Event-Notifications Instance**.
-6. Try using the respective SMTP Private Endpoint listed [here](/docs/event-notifications?topic=event-notifications-en-smtp-configurations##en-smtp-configurations-requirements).
+6. Try using the respective SMTP Private Endpoint listed [here](/docs/event-notifications?topic=event-notifications-en-smtp-configurations#en-smtp-configurations-requirements).
 
  
    
