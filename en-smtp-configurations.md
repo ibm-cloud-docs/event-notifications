@@ -180,24 +180,23 @@ After successful verification of a SMTP configuration in an IBM Cloud Event Noti
     ```
     {: codeblock}
 
-### Using SMTP Private Endpoint for sending emails
+### **Using SMTP Private Endpoint for sending emails**
 {: #en-smtp-configurations-send-emails-using-private-endpoint}
 
-1. To send mail via Private SMTP endpoint, you have to create/attach VPE(Virtual Private Endpoint Gateway) to your IBM Cloud VPC(Virtual Private Cloud)
-2. Make sure to attach VPE gateway in respective VPC, where your IKS VPC clusters (OR) VSI's(Virtual Service Instance) are deployed.
+1. To send emails via the SMTP Private Endpoint, you need to create or attach a Virtual Private Endpoint (VPE) to your IBM Cloud Virtual Private Cloud (VPC).
+2. Make sure to attach the VPE gateway to the same VPC where your IKS (IBM Kubernetes Service) clusters or VSI (Virtual Service Instance) are deployed.
 3. While creating VPE:
-
    
-   1. Select the required `Region` and `VPC`, from where you want to connect to SMTP Private endpoint
-   2. Under **Request connection to a service** select **Event Notifications** service
-   3. Enable the **endpoint** with **type**: `VPE`
-   4. Select the required subnet (You can bind only one IP address per VPC zone to an endpoint gateway)
+   1. Select the required Region and VPC where you want to connect to the SMTP Private Endpoint.
+   2. Under "Request connection to a service", select "Event Notifications".
+   3. Enable the endpoint with the type "VPE".
+   4. Select the required subnet (Note: You can bind only one IP address per VPC zone to an endpoint gateway).
    
-![{{site.data.keyword.en_short}}](images/smtp-private-endpoint.png "SMTP Private Endpoint VPE"){: caption="Figure 1. SMTP Private Endpoint VPE" caption-side="bottom"}
+![SMTP Private Endpoint VPE](images/smtp-private-endpoint.png "SMTP Private Endpoint VPE"){: caption="Figure 1. SMTP Private Endpoint VPE" caption-side="bottom"}
 
-4. Create a **Network Zone** in **CBR** for your VPC 
-5. Add above **Network Zone** to the **CBR Rule** that you already created for **Event-Notifications SMTP service**
-6. Try using the respective SMTP Private Endpoint listed below:
+4. Create a **Network Zone** in **CBR** for your VPC.
+5. Create **CBR Rule** for **Event-Notifications Instance** and add above created **Network zone** (OR) Add above **Network Zone** to existing **CBR Rule** that you already created for **Event-Notifications Instance**.
+6. Try using the respective SMTP Private Endpoint listed [here](/docs/event-notifications?topic=event-notifications-en-smtp-configurations##en-smtp-configurations-requirements).
 
  
    

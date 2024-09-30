@@ -24,8 +24,8 @@ Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, sec
 {: #event-notifications-Sep3024}
 {: release-note}
 
-Support for Smtp Private Endpoint
-: IBM Event Notifications now supports the ability to send e-mails via SMTP Private Endpoint, see [Smtp Private Endpoint](/docs/event-notifications?topic=event-notifications-en-smtp-configurations#en-smtp-configurations-send-emails-using-private-endpoint).
+Support for SMTP Private Endpoint
+: IBM Event Notifications now supports the ability to send e-mails via SMTP Private Endpoint, see [SMTP Private Endpoint](/docs/event-notifications?topic=event-notifications-en-smtp-configurations#en-smtp-configurations-send-emails-using-private-endpoint).
 
 ## 30 August 2024
 {: #event-notifications-Aug3024}
