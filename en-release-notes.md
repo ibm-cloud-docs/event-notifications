@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-08-30"
+lastupdated: "2024-09-30"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -19,6 +19,13 @@ content-type: release-note
 
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
+
+## 30 September 2024
+{: #event-notifications-Sep3024}
+{: release-note}
+
+Support for SMTP Private Endpoint
+: IBM Event Notifications now supports the ability to send e-mails via SMTP Private Endpoint, see [SMTP Private Endpoint](/docs/event-notifications?topic=event-notifications-en-smtp-configurations#en-smtp-configurations-send-emails-using-private-endpoint).
 
 ## 30 August 2024
 {: #event-notifications-Aug3024}
