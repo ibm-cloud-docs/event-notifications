@@ -102,10 +102,10 @@ toc:
       id: tutorial
       topics:
       - en-create-instance.md
+      - en-create-source.md
       - en-create-topic.md
       - en-create-destination.md
       - en-create-subscription.md
-      - en-create-source.md
       - topicgroup:
          label: Create and send push notifications
          topics:
