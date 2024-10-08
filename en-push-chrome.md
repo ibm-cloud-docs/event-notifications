@@ -165,7 +165,7 @@ The Chrome web SDK enables Chrome websites to receive push notifications. Comple
 * Include the `manifest.json` in `<head>` tag of your html file.
 
    ```html
-   <link rel="manifest" href="manifest.json">
+   <link rel="manifest" href="https://github.com/IBM/event-notifications-destination-webpush-sdk/blob/main/manifest_Website.json">
    ```
    {: codeblock}
 
