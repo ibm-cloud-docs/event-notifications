@@ -66,7 +66,7 @@ To configure a {{site.data.keyword.cos_full_notm}} destination, do the following
 Use {{site.data.keyword.cloud}} Identity and Access Management (IAM) to create or remove an authorization that grants one service access to another service.
 
 ### Creating an authorization in the console
-{: #en-using-s2s-console}
+{: #en-using-s2s-console-cos}
 
 1. In the {{site.data.keyword.cloud_notm}} console, click **Manage** > **Access (IAM)**, and select **Authorizations**.
 

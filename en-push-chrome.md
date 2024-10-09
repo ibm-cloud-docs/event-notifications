@@ -172,7 +172,7 @@ The Chrome web SDK enables Chrome websites to receive push notifications. Comple
 * Include {{site.data.keyword.cloud_notm}} web push SDK to the script.
 
    ```html
-   <script src="ENPushSDK.js" async></script>
+   <script src="https://github.com/IBM/event-notifications-destination-webpush-sdk/blob/main/ENPushSDK.js" async></script>
    ```
 
 * Complete the following steps to enable website to initialize the SDK.

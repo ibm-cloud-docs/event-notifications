@@ -141,7 +141,7 @@ You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on event
 
 
 ### Launching {{site.data.keyword.logs_full_notm}} from the Observability page
-{: #log-launch-standalone}
+{: #logevents-launch-standalone}
 
 
 
@@ -227,5 +227,3 @@ The following table lists the actions that generate an event for managing servic
 
 ## Analyzing _service-name_ activity tracking events
 {: #at_events_iam_analyze}
-
-

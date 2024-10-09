@@ -39,9 +39,6 @@ For more information about your responsibilities when using {{site.data.keyword.
 
 
 ## Locations
-{: #ha-locations}
+{: #ha-locations-dr}
 
 For more information about service availability within regions and data centers, see [Service and infrastructure availability by location](/docs/event-notifications?topic=event-notifications-en-regions-endpoints).
-
-
-

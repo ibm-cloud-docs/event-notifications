@@ -24,7 +24,7 @@ subcollection: event-notifications
 Before you configure {{site.data.keyword.codeengineshort}} as a destination for `run type` Job, make sure that you have a {{site.data.keyword.codeengineshort}} project [created and job configured](https://cloud.ibm.com/codeengine/projects) in the same account as your {{site.data.keyword.en_short}} instance.
 {: note}
 
-In case of `run type` Job, if you are using {{site.data.keyword.en_short}} CLI or API to configure {{site.data.keyword.codeengineshort}} job as a destination, ensure that you have enabled authorization to grant access between services. For more information, see [Using authorizations to grant access between services](#en-using-s2s-auth1).
+In case of `run type` Job, if you are using {{site.data.keyword.en_short}} CLI or API to configure {{site.data.keyword.codeengineshort}} job as a destination, ensure that you have enabled authorization to grant access between services. For more information, see [Using authorizations to grant access between services](#en-using-s2s-auth1-ce).
 {: important}
 
 To configure a {{site.data.keyword.codeengineshort}} destination, do the following steps:
@@ -55,13 +55,13 @@ To configure a {{site.data.keyword.codeengineshort}} destination, do the followi
 4. Click **Add**.
 
 ## Using authorizations to grant access between services
-{: #en-using-s2s-auth1}
+{: #en-using-s2s-auth1-ce}
 
 Use {{site.data.keyword.cloud}} Identity and Access Management (IAM) to create or remove an authorization that grants one service access to another service.
 
 
 ### Creating an authorization in the console
-{: #en-using-s2s-console}
+{: #en-using-s2s-console-ce}
 
 1. In the {{site.data.keyword.cloud_notm}} console, click **Manage** > **Access (IAM)**, and select **Authorizations**.
 
@@ -86,7 +86,7 @@ Use {{site.data.keyword.cloud}} Identity and Access Management (IAM) to create o
 1. Click **Authorize**.
 
 ### Creating an authorization by using the CLI
-{: #en-create-auth-cli1}
+{: #en-create-auth-cli1-ce}
 
 To authorize a source service to access a target service, run the `ibmcloud iam authorization-policy-create` command.
 
