@@ -40,7 +40,7 @@ Create an instance of the {{site.data.keyword.en_short}} service. This procedure
 
 For a more detailed explanation of the concepts of {{site.data.keyword.en_short}}, see [Getting started with {{site.data.keyword.en_full}}](/docs/event-notifications?topic=event-notifications-getting-started).
 
-![Push capability in {{site.data.keyword.en_short}}](images/en-how-push-en.png "Push capability in {{site.data.keyword.en_short}}"){: caption="Figure 1. Push capability in {{site.data.keyword.en_short}}" caption-side="bottom"}
+![Push capability in {{site.data.keyword.en_short}}](images/en-how-push-en.png "Push capability in {{site.data.keyword.en_short}}"){: caption="Push capability in {{site.data.keyword.en_short}}" caption-side="bottom"}
 
 ### Create a source
 {: #en-migrate-create-source}
@@ -78,7 +78,7 @@ Modify the mobile app source code to use the new {{site.data.keyword.en_short}} 
 
 Create a destination of type `Android Push Notification` (FCM) for the Android app. Provide the Sender ID and Server Key from your Google console.
 
-![Create Android destination](images/en-migration-android.png "Create Android destination"){: caption="Figure 2. Create Android destination" caption-side="bottom"}
+![Create Android destination](images/en-migration-android.png "Create Android destination"){: caption="Create Android destination" caption-side="bottom"}
 
 ### Modify your project in Firebase console
 {: #en-migrate-modify-project-firebase}
@@ -87,15 +87,15 @@ The package name for the {{site.data.keyword.mobilepushshort}} SDK was `com.ibm.
 
 1. Go to the [Firebase Console](https://console.firebase.google.com)
 
-   ![Firebase console](images/en-migration-firebase-console.png "Firebase console"){: caption="Figure 3. Firebase Console" caption-side="bottom"}
+   ![Firebase console](images/en-migration-firebase-console.png "Firebase console"){: caption="Firebase Console" caption-side="bottom"}
 
 1. Select the project that you are using for {{site.data.keyword.mobilepushshort}}.
 
-   ![Select project](images/en-migration-firebase-project.png "Select project"){: caption="Figure 4. Select project" caption-side="bottom"}
+   ![Select project](images/en-migration-firebase-project.png "Select project"){: caption="Select project" caption-side="bottom"}
 
 1. In the navigation panel, select the **Settings** icon next to the **Project Overview** and select **Settings > Project settings**. Scroll down to locate **Your apps**.
 
-   ![Project setting](images/en-migration-firebase-setting.png "Project setting"){: caption="Figure 5. Project setting" caption-side="bottom"}
+   ![Project setting](images/en-migration-firebase-setting.png "Project setting"){: caption="Project setting" caption-side="bottom"}
 
 1. Find an app with package name `com.ibm.mobilefirstplatform.clientsdk.android.push` and click **Remove this app**.
 
@@ -103,7 +103,7 @@ The package name for the {{site.data.keyword.mobilepushshort}} SDK was `com.ibm.
 
 1. Enter `com.ibm.cloud.eventnotifications.destination.android` as the package name and click **Register App**.
 
-   ![Register app](images/en-migration-firebase-addapp.png "Project setting"){: caption="Figure 6. Register app" caption-side="bottom"}
+   ![Register app](images/en-migration-firebase-addapp.png "Project setting"){: caption="Register app" caption-side="bottom"}
 
 1. Download `google-services.json`. You use this file later when you modify the app.
 
@@ -525,7 +525,7 @@ Modify the mobile app source code to use the new {{site.data.keyword.en_short}} 
 
 Create a destination of type Apple Push Notification (APNs) for the iOS app. Provide the P12 or P8 and their configurations.
 
-![Create iOS destination](images/en-migration-apns.png "Create iOS destination"){: caption="Figure 7. Create iOS destination" caption-side="bottom"}
+![Create iOS destination](images/en-migration-apns.png "Create iOS destination"){: caption="Create iOS destination" caption-side="bottom"}
 
 ### Edit the iOS application
 {: #en-migrate-edit-ios-app}
@@ -796,21 +796,21 @@ Modify the Web app source code to use the new {{site.data.keyword.en_short}} SDK
 
 Create a destination of type Chrome Push Notification for the Web app. Provide the Website URL and FCM Server key.
 
-![Create Chrome destination](images/en-migration-chrome.png "Create Chrome destination"){: caption="Figure 8. Create Chrome destination" caption-side="bottom"}
+![Create Chrome destination](images/en-migration-chrome.png "Create Chrome destination"){: caption="Create Chrome destination" caption-side="bottom"}
 
 #### Firefox Destination
 {: #en-migrate-create-web-firefox-destination}
 
 Create a destination of type Firefox Push Notification for the Web app. Provide the Website URL.
 
-![Create Firefox destination](images/en-migration-firefox.png "Create Firefox destination"){: caption="Figure 9. Create Firefox destination" caption-side="bottom"}
+![Create Firefox destination](images/en-migration-firefox.png "Create Firefox destination"){: caption="Create Firefox destination" caption-side="bottom"}
 
 #### Safari Destination
 {: #en-migrate-create-web-safari-destination}
 
 Create a destination of type Safari Push Notification for the Web app. Provide the Website name, Website push ID, Website URL, URL format string, p12 file, Password and icons.
 
-![Create Safari destination](images/en-migration-safari.png "Create Safari destination"){: caption="Figure 10. Create Safari destination" caption-side="bottom"}
+![Create Safari destination](images/en-migration-safari.png "Create Safari destination"){: caption="Create Safari destination" caption-side="bottom"}
 
 ### Edit the Web application
 {: #en-migrate-edit-web-app}

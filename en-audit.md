@@ -58,7 +58,7 @@ The following list of {{site.data.keyword.en_short}} data events is sent to {{si
 | `event-notifications.templates.update` | An event is generated when you update a template. |
 | `event-notifications.templates.delete` | An event is generated when you delete a template. |
 | `event-notifications.templates.read` | An event is generated when you get details of a template. |
-{: caption="Table 1. Overview of {{site.data.keyword.en_short}} actions that generate {{site.data.keyword.at_full_notm}} events" caption-side="top"}
+{: caption="Overview of {{site.data.keyword.en_short}} actions that generate {{site.data.keyword.at_full_notm}} events" caption-side="top"}
 
 ## Viewing events
 {: #at_ui}
@@ -80,4 +80,4 @@ Deleting some {{site.data.keyword.en_short}} resources causes associated resourc
 | Source | DELETE | Topics | Topics are updated and filters configured on them deleted. |
 | Destination | DELETE | Subscription | All subscriptions that are associated with the deleted destination are deleted |
 | Topic | DELETE | Subscription | All subscriptions that are associated with the deleted topic are deleted. |
-{: caption="Table 2. User action initiated update and delete" caption-side="top"}
+{: caption="User action initiated update and delete" caption-side="top"}

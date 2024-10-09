@@ -34,7 +34,7 @@ Create an {{site.data.keyword.en_short}} service, add a push destination for App
 
 The following diagram shows you how clients use iOS Push Notifications.
 
-![How clients use push notifications](images/en-how-send-safari.svg "How clients use push notifications"){: caption="Figure 1. How clients use push notifications" caption-side="bottom"}
+![How clients use push notifications](images/en-how-send-safari.svg "How clients use push notifications"){: caption="How clients use push notifications" caption-side="bottom"}
 
 ## Objectives
 {: #en-objectives-safari}
@@ -73,9 +73,9 @@ You must have the following prerequisites in place:
 
 * Add Apple Worldwide intermediate certificate to your Key Chain, you can find the certificate [here](https://www.apple.com/certificateauthority/){: external}.
 
-   ![Certificates, Apple Worldwide Intermediate certificate Site](images/en_apple_intermediate.png "App ID"){: caption="Figure 2. Certificates, Identifiers & Profiles" caption-side="bottom"}
+   ![Certificates, Apple Worldwide Intermediate certificate Site](images/en_apple_intermediate.png "App ID"){: caption="Certificates, Identifiers & Profiles" caption-side="bottom"}
 
-   ![Certificates, Apple Worldwide Intermediate certificate Add](images/en_apple_intermediate_add.png "App ID"){: caption="Figure 3. Certificates, Identifiers & Profiles" caption-side="bottom"}
+   ![Certificates, Apple Worldwide Intermediate certificate Add](images/en_apple_intermediate_add.png "App ID"){: caption="Certificates, Identifiers & Profiles" caption-side="bottom"}
 
 * Create Web Push ID in your [Apple Developer account](https://developer.apple.com/account/){: external}.
 
@@ -83,49 +83,49 @@ You must have the following prerequisites in place:
 
 * Go to the [Apple developer portal](https://developer.apple.com/){: external} and select `Certificates, Identifiers & Profiles`.
 
-   ![Certificates, Identifiers & Profiles](images/en-apns-cert-tab.png "Web Push ID"){: caption="Figure 4. Certificates, Identifiers & Profiles" caption-side="bottom"}
+   ![Certificates, Identifiers & Profiles](images/en-apns-cert-tab.png "Web Push ID"){: caption="Certificates, Identifiers & Profiles" caption-side="bottom"}
 
 * Go to `Identifiers > Add identifier button`.
 
-   ![Identifier button](images/en-apns-identifier-button.png "Identifier button"){: caption="Figure 5. Identifier Button" caption-side="bottom"}
+   ![Identifier button](images/en-apns-identifier-button.png "Identifier button"){: caption="Identifier Button" caption-side="bottom"}
 
 * Click `Add a new Identifier` button.
 
-   ![Add new Identifier button](images/en-apns-new-identifier-button.png "Add new Identifier button"){: caption="Figure 6. Add new Identifier button" caption-side="bottom"}
+   ![Add new Identifier button](images/en-apns-new-identifier-button.png "Add new Identifier button"){: caption="Add new Identifier button" caption-side="bottom"}
 
 * Select the Web Push IDs option.
 
-   ![Web Push IDs option](images/en_safari_webpushid_option.png "Web Push IDs option"){: caption="Figure 7. Web Push IDs option" caption-side="bottom"}
+   ![Web Push IDs option](images/en_safari_webpushid_option.png "Web Push IDs option"){: caption="Web Push IDs option" caption-side="bottom"}
 
 * Provide Identifier and description for your Web Push ID, identifier is unique reverse-domain string for your Web Push ID such as **web.com.example.domain** (the string must start with **web**). If your website is yourwebsite.com add the identifier as **web.com.yourwebsite**.
 
-   ![Web Push IDs](images/en_safari_webpushid.png "Web Push IDs"){: caption="Figure 8. Web Push IDs" caption-side="bottom"}
+   ![Web Push IDs](images/en_safari_webpushid.png "Web Push IDs"){: caption="Web Push IDs" caption-side="bottom"}
 
 * Continue and then click `Create certificate` on the next page.
 
-   ![Create Certificate Button](images/en_createcertificate_button.png "Create Certificate Button"){: caption="Figure 9. Create Certificate Button" caption-side="bottom"}
+   ![Create Certificate Button](images/en_createcertificate_button.png "Create Certificate Button"){: caption="Create Certificate Button" caption-side="bottom"}
 
-   ![Create Certificate Page](images/en_createcertificate_page.png "Create Certificate Page"){: caption="Figure 10. Create Certificate Page" caption-side="bottom"}
+   ![Create Certificate Page](images/en_createcertificate_page.png "Create Certificate Page"){: caption="Create Certificate Page" caption-side="bottom"}
 
 * Create a Certificate Signing Request by using KeyChain and save it to disk. For more information, see [here](https://help.apple.com/developer-account/#/devbfa00fef7){: external}.
 
-   ![Certificate Signing](images/en_safari_certificate_request_creation.png "Certificate Signing"){: caption="Figure 11. Create Certificate Signing" caption-side="bottom"}
+   ![Certificate Signing](images/en_safari_certificate_request_creation.png "Certificate Signing"){: caption="Create Certificate Signing" caption-side="bottom"}
 
-   ![Certificate Signing](images/en_safari_save_certificate_signing.png "Certificate Signing"){: caption="Figure 12. Create Certificate Signing" caption-side="bottom"}
+   ![Certificate Signing](images/en_safari_save_certificate_signing.png "Certificate Signing"){: caption="Create Certificate Signing" caption-side="bottom"}
 
 * Upload the **CertificateSigningRequest.certSigningRequest** and click **Continue**.
 
-   ![Signing Certificate Upload](images/en_safari_upload_signing.png "Signing Certificate Upload"){: caption="Figure 13. Upload Certificate Signing" caption-side="bottom"}
+   ![Signing Certificate Upload](images/en_safari_upload_signing.png "Signing Certificate Upload"){: caption="Upload Certificate Signing" caption-side="bottom"}
 
-   ![Certificate Download Page](images/en_safari_download_page.png "Certificate Download Page"){: caption="Figure 14. Upload Certificate Signing" caption-side="bottom"}
+   ![Certificate Download Page](images/en_safari_download_page.png "Certificate Download Page"){: caption="Upload Certificate Signing" caption-side="bottom"}
 
 * Download the certificate with `.cer` extension and double-click it. It adds it to **Keychain Access → My Certificates**.
 
 * Got to your **Keychain Access→ My Certificate**, select your certificate export it.
 
-   ![Export Certificate](images/en_safari_export_p12.png "Export Certificate"){: caption="Figure 15. Upload Certificate Signing" caption-side="bottom"}
+   ![Export Certificate](images/en_safari_export_p12.png "Export Certificate"){: caption="Upload Certificate Signing" caption-side="bottom"}
 
-   ![Export Certificate Add Password](images/en_safari_add_password_p12.png "Export Certificate Add Password"){: caption="Figure 13. Upload Certificate Signing" caption-side="bottom"}
+   ![Export Certificate Add Password](images/en_safari_add_password_p12.png "Export Certificate Add Password"){: caption="Upload Certificate Signing" caption-side="bottom"}
 
 * Add a password (Don't Forget it) and save as p12 certificate.
 
@@ -285,4 +285,4 @@ The Safari web SDK enables Safari websites to receive push notifications. Comple
 
 Use the [Send Notification API](/apidocs/event-notifications) to send the push notification for the Firefox device. You can use the [Node](https://github.com/IBM/event-notifications-node-admin-sdk#send-notifications){: external} or [Go](https://github.com/IBM/event-notifications-go-admin-sdk#send-notifications){: external} admin SDK instead of calling the API directly.
 
-![Receive notifications](images/en_receive_safari_push_notification.png "Receive notifications"){: caption="Figure 16. Receive notifications" caption-side="bottom"}
+![Receive notifications](images/en_receive_safari_push_notification.png "Receive notifications"){: caption="Receive notifications" caption-side="bottom"}

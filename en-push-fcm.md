@@ -34,7 +34,7 @@ Create an {{site.data.keyword.en_short}} service, add a push destination for Fir
 
 The following diagram shows you how clients use Android Push Notifications.
 
-![How clients use push notifications](images/en-how-send.svg "How clients use push notifications"){: caption="Figure 1. How clients use push notifications" caption-side="bottom"}
+![How clients use push notifications](images/en-how-send.svg "How clients use push notifications"){: caption="How clients use push notifications" caption-side="bottom"}
 
 ## Objectives
 {: #en-objectives-fcm}
@@ -85,7 +85,7 @@ Firebase Cloud Messaging (FCM) is the gateway that delivers push notifications t
 * In the navigation panel, select the `settings` icon next to the `Project Overview` and select `Settings > Project settings`.
 * Click the `Service Accounts` tab.
 
-   ![FCM credentials](images/en-fcm-credentials.png "FCM credentials"){: caption="Figure 2. FCM credentials" caption-side="bottom"}
+   ![FCM credentials](images/en-fcm-credentials.png "FCM credentials"){: caption="FCM credentials" caption-side="bottom"}
 
 * Click **Generate new private key** to generate your project credentials. The downloaded file will contain: `project_id`, `private_key`, and `client_email`.
 
@@ -97,19 +97,19 @@ You also need to generate the `google-services.json` file. Complete the followin
 
 * In the Firebase console Project overview section, under `Get started by adding Firebase to your app` section click the `Android` icon.
 
-   ![Firebase getting started](images/en-firebase-get-started.png "Firebase getting started"){: caption="Figure 3. Firebase getting started" caption-side="bottom"}
+   ![Firebase getting started](images/en-firebase-get-started.png "Firebase getting started"){: caption="Firebase getting started" caption-side="bottom"}
 
 * In the `Add Firebase to your Android app` window, add `com.ibm.cloud.eventnotifications.destination.android` as the Package Name. The `App nickname` field is optional.
 
 * Click **Register app**.
 
-   ![Add Firebase to your Android app](images/en-add-firebase.png "Add Firebase to your Android app"){: caption="Figure 4. Add Firebase to your Android app" caption-side="bottom"}
+   ![Add Firebase to your Android app](images/en-add-firebase.png "Add Firebase to your Android app"){: caption="Add Firebase to your Android app" caption-side="bottom"}
 
 * Include the package name of your application. Enter the package name in `Add Firebase to your Android app` window. The `App nickname` field is optional.
 
 * Click **Register app**. See the following example:
 
-   ![Register Android app](images/en-add-firebase.png "Register Android app"){: caption="Figure 5. Register Android app" caption-side="bottom"}
+   ![Register Android app](images/en-add-firebase.png "Register Android app"){: caption="Register Android app" caption-side="bottom"}
 
 * The `google-services.json` file is generated.
 
@@ -265,9 +265,9 @@ The Android SDK enables Android apps to receive push notifications. Complete the
 
 Use the [Send notification API](/apidocs/event-notifications) to send the push notification for the Android device. You can use the [Node](mailto:https://github.com/IBM/event-notifications-node-admin-sdk#send-notifications) or [Go](https://github.com/IBM/event-notifications-go-admin-sdk#send-notifications) admin SDK instead of calling the API directly.
 
-![Send notifications](images/en-send-notifications.png "Send notifications"){: caption="Figure 6. Send notifications" caption-side="bottom"}
+![Send notifications](images/en-send-notifications.png "Send notifications"){: caption="Send notifications" caption-side="bottom"}
 
-![Receive notifications](images/en-receive-push.png "Receive notifications"){: caption="Figure 7. Receive notifications" caption-side="bottom"}
+![Receive notifications](images/en-receive-push.png "Receive notifications"){: caption="Receive notifications" caption-side="bottom"}
 
 ## Migrating FCM legacy HTTP API to HTTP v1 API
 {: #en-fcm-http-migration}
@@ -353,4 +353,3 @@ Here's how you can migrate from an old configuration to a new one.
    }
    ```
    {: codeblock}
-

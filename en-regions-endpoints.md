@@ -54,7 +54,7 @@ The following table contains the base URLs for the {{site.data.keyword.en_full_n
 | Sydney |`https://au-syd.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
 | Frankfurt |`https://eu-de.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
 | Madrid |`https://eu-es.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
-{: caption="Table 1. Public endpoints for interacting with {{site.data.keyword.en_short}} by using APIs" caption-side="bottom"}
+{: caption="Public endpoints for interacting with {{site.data.keyword.en_short}} by using APIs" caption-side="bottom"}
 
 ### Private endpoints
 {: #en-private-endpoints}
@@ -68,5 +68,4 @@ If you need to manage your {{site.data.keyword.en_short}} resources over a priva
 | Sydney |`https://private.au-syd.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
 | Frankfurt |`https://private.eu-de.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
 | Madrid |`https://private.eu-es.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
-{: caption="Table 2. Private endpoints for interacting with {{site.data.keyword.en_short}} by using APIs" caption-side="bottom"}
-
+{: caption="Private endpoints for interacting with {{site.data.keyword.en_short}} by using APIs" caption-side="bottom"}

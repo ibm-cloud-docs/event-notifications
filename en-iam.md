@@ -42,7 +42,7 @@ Platform management roles enable users to perform tasks on service resources at 
 | Editor | View and bind {{site.data.keyword.en_short}} instances. | You can bind applications to an instance of {{site.data.keyword.en_short}}. |
 | Operator | Create, delete, edit, suspend, resume, view, or bind {{site.data.keyword.en_short}} instances. | You can create or delete an {{site.data.keyword.en_short}} instance from the catalog. |
 | Administrator | All management actions for all services in the account. | You can perform all operator actions and the ability to assign policies to other users. |
-{: caption="Table 1. Platform management roles and permissions" caption-side="top"}
+{: caption="Platform management roles and permissions" caption-side="top"}
 
 The following table details actions that are mapped to service access roles. Service access roles enable users to access {{site.data.keyword.en_short}} and also call the {{site.data.keyword.en_short}} API.
 
@@ -56,7 +56,7 @@ The following table details actions that are mapped to service access roles. Ser
 | Event Source Manager | Source integration with {{site.data.keyword.en_short}} by using service to service authorization | * Perform service to service registration, of source \n * View, edit, and delete sources and events \n * Send notifications |
 | {{site.data.keyword.en_short}} Publisher | Create notification and view notifications count | Send notifications and view notifications count |
 | Device Manager | Custom role to handle push device registration with the {{site.data.keyword.en_short}} service | * View, create, edit, and delete Push Devices by using {{site.data.keyword.en_short}} client SDKs. \n *View, create, and delete Tags for Push Devices by using [{{site.data.keyword.en_short}} API](/apidocs/event-notifications). \n * View, Create, and Delete Channel Groups for Push Devices by using [{{site.data.keyword.en_short}} API](/apidocs/event-notifications). \n * View, create and delete Channels for Push Devices by using [{{site.data.keyword.en_short}} APIs](/apidocs/event-notifications).|
-{: caption="Table 2. Actions mapping to service access roles" caption-side="top"}
+{: caption="Actions mapping to service access roles" caption-side="top"}
 
 For more information about assigning user roles in the UI, see [Managing IAM access](/docs/account?topic=account-assign-access-resources).
 
@@ -126,7 +126,7 @@ The actions are customized and defined by the {{site.data.keyword.cloud_notm}} s
 | `event-notifications.integrations.list`| `GET /event-notifications/v1/instances/{instance_id}/integrations` | Manager, Administrator, Device-Manager | List all Key Management Services integrations |
 | `event-notifications.integrations.read`| `GET /event-notifications/v1/instances/{instance_id}/integrations/{id}` | Manager, Administrator, Device-Manager | Get a single Key Management Services integration |
 | `event-notifications.integrations.update`| `PUT /event-notifications/v1/instances/{instance_id}/integrations/{id}` | Manager, Administrator, Device-Manager | Update an existing Key Management Services integration |
-{: caption="Table 3. Actions mapped to different roles" caption-side="top"}
+{: caption="Actions mapped to different roles" caption-side="top"}
 
 ## Working with API keys
 {: #apikeys}

@@ -73,7 +73,7 @@ To configure a PagerDuty destination, do the following steps:
 | NA | `payload.class` | No |
 | NA | `images` | No |
 | NA | `links` | No |
-{: caption="Table 1. Supported PagerDuty alert events" caption-side="bottom"}
+{: caption="Supported PagerDuty alert events" caption-side="bottom"}
 
 | {{site.data.keyword.en_short}} severity | PagerDuty severity |
 | :---------- | :---------- |
@@ -82,7 +82,7 @@ To configure a PagerDuty destination, do the following steps:
 | Medium | Warning |
 | Low | Info |
 | Anything Else | Info |
-{: caption="Table 2. {{site.data.keyword.en_short}} severity to PagerDuty severity mapping" caption-side="bottom"}
+{: caption="{{site.data.keyword.en_short}} severity to PagerDuty severity mapping" caption-side="bottom"}
 
 ## Testing a PagerDuty destination configuration
 {: #en-pd-test-destination}

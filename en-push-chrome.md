@@ -35,7 +35,7 @@ Create an {{site.data.keyword.en_short}} service, add a push destination for Chr
 
 The following diagram shows you how clients use Chrome web Push Notifications.
 
-![How clients use push notifications](images/en-how-send-chrome.svg "How clients use push notifications"){: caption="Figure 1. How clients use push notifications" caption-side="bottom"}
+![How clients use push notifications](images/en-how-send-chrome.svg "How clients use push notifications"){: caption="How clients use push notifications" caption-side="bottom"}
 
 ## Objectives
 {: #en-objectives-chrome}
@@ -83,7 +83,7 @@ Firebase Cloud Messaging (FCM) is the gateway that delivers push notifications t
 * In the navigation panel, select the `settings` icon next to the `Project Overview` and select `Settings > Project settings`.
 * Click the `Cloud Messaging` tab to view your project credentials: `Server Key`.
 
-![FCM credentials](images/en-fcm-credentials.png "FCM credentials"){: caption="Figure 2. FCM credentials" caption-side="bottom"}
+![FCM credentials](images/en-fcm-credentials.png "FCM credentials"){: caption="FCM credentials" caption-side="bottom"}
 
 ## Add a generic API source
 {: #en-add-gen-api-chrome}
@@ -112,9 +112,9 @@ Click `Destinations` in the {{site.data.keyword.en_short}} console and add the f
 * Click **Add**.
 * When Chrome destination is created, edit the created destination to get public vapId key required for web sdk.
 
-![Destination Edit](images/en-push-chrome-destination-edit.png "Destination Edit"){: caption="Figure 3. Receive notifications" caption-side="bottom"}
+![Destination Edit](images/en-push-chrome-destination-edit.png "Destination Edit"){: caption="Receive notifications" caption-side="bottom"}
 
-![Destination](images/en-push-chrome-destination.png "Destination"){: caption="Figure 4. Receive notifications" caption-side="bottom"}
+![Destination](images/en-push-chrome-destination.png "Destination"){: caption="Receive notifications" caption-side="bottom"}
 
 ## Create an {{site.data.keyword.en_short}} topic
 {: #en-create-topic-chrome}
@@ -238,4 +238,4 @@ Use the [Send notification API](/apidocs/event-notifications) to send the push n
 
 Received notification on the chrome website in MacOS.
 
-![Receive notifications](images/en-receive-chrome-notification.png "Receive notifications"){: caption="Figure 3. Receive notifications" caption-side="bottom"}
+![Receive notifications](images/en-receive-chrome-notification.png "Receive notifications"){: caption="Receive notifications" caption-side="bottom"}

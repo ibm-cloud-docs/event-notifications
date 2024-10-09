@@ -130,7 +130,7 @@ Next, change the scope or make a copy of the default dashboard to monitor an {{s
 | [ibm_eventnotifications_total](#ibm_eventnotifications_total)|
 | [ibm_eventnotifications_failed](#ibm_eventnotifications_failed)|
 | [ibm_eventnotifications_devices](#ibm_eventnotifications_devices)|
-{: caption="Table 2. Metrics available by service plan" caption-side="bottom"}
+{: caption="Metrics available by service plan" caption-side="bottom"}
 
 ### ibm_eventnotifications_total_ingested_notifications
 {: #ibm_eventnotifications_total_ingested_notifications-old}
@@ -143,7 +143,7 @@ Total number of notifications that are ingested. Ingested notifications are even
 | `Metric Type` | `gauge`|
 | `Value Type` | `none`|
 | `Segment By` | `ibm_scope`, `ibm_ctype`, `ibm_location`, `ibm_service_name`, `ibm_service_instance`, `ibm_eventnotifications_source`  |
-{: caption="Table 3. Ingestion metadata" caption-side="bottom"}
+{: caption="Ingestion metadata" caption-side="bottom"}
 
 ### ibm_eventnotifications_total
 {: #ibm_eventnotifications_total-old}
@@ -156,7 +156,7 @@ Total number of notifications for a particular type includes successful and fail
 | `Metric Type` | `gauge`|
 | `Value Type` | `none`|
 | `Segment By` | `ibm_scope`, `ibm_ctype`, `ibm_location`, `ibm_service_name`, `ibm_service_instance`, `ibm_eventnotifications_source`, `ibm_eventnotifications_destination`, `ibm_eventnotifications_source`, `ibm_eventnotifications_type`|
-{: caption="Table 4. Notifications metadata" caption-side="bottom"}
+{: caption="Notifications metadata" caption-side="bottom"}
 
 ### ibm_eventnotifications_failed
 {: #ibm_eventnotifications_failed-old}
@@ -169,7 +169,7 @@ Total number of failed notifications of a particular type.
 | `Metric Type` | `gauge`|
 | `Value Type` | `none`|
 | `Segment By` | `ibm_scope`, `ibm_ctype`, `ibm_location`, `ibm_service_name`, `ibm_service_instance`, `ibm_eventnotifications_destination`, `ibm_eventnotifications_source`, `ibm_eventnotifications_type`,  |
-{: caption="Table 5. Failed notifications metadata" caption-side="bottom"}
+{: caption="Failed notifications metadata" caption-side="bottom"}
 
 ### ibm_eventnotifications_devices
 {: #ibm_eventnotifications_devices-old}
@@ -182,7 +182,7 @@ Total number of push notification devices registered.
 | `Metric Type` | `gauge`|
 | `Value Type` | `none`|
 | `Segment By` | `ibm_scope`, `ibm_ctype`, `ibm_location`, `ibm_service_name`, `ibm_service_instance`, `ibm_eventnotifications_destination`, `ibm_eventnotifications_device_type`,  |
-{: caption="Table 6. Total devices registered" caption-side="bottom"}
+{: caption="Total devices registered" caption-side="bottom"}
 
 
 
@@ -203,7 +203,7 @@ The following attributes are available for segmenting all of the metrics previou
 | `Location` | `ibm_location` | The location of the monitored resource, which can be a region, data center, or global. |
 | `Scope` | `ibm_scope` | The scope is the account, organization, or space GUID associated with this metric. |
 | `Service instance` | `ibm_service_instance` | The service instance segment identifies the instance that the metric is associated with. |
-{: caption="Table 7. Segmentation attributes" caption-side="bottom"}
+{: caption="Segmentation attributes" caption-side="bottom"}
 
 ### Additional attributes
 {: #monitoring-attributes-add}
@@ -216,4 +216,4 @@ The following attributes are available for segmenting one or more attributes as 
 | `Name of the source` | `ibm_eventnotifications_source` | A source name with its associated ID. |
 | `Type of event notification` | `ibm_eventnotifications_type` | The type of supported destination types. (email, SMS, or webhook) |
 | `Type of push notification device` | `ibm_eventnotifications_device_type` | The type of supported push notification device.(push_android, push_ios) |
-{: caption="Table 8. More attributes" caption-side="bottom"}
+{: caption="More attributes" caption-side="bottom"}

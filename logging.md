@@ -174,7 +174,7 @@ Table 4 outlines the fields that are included in each log record:
 | `notificationID`  | Optional   | ID of the notification that is sent to a destination. |
 | `destinationID`   | Optional   | ID of the destination for which the status is being reported. |
 | `level`           | Required   | Type of log. Valid values are `INFO`, `WARN`, `ERROR` |
-{: caption="Table 4. Log record fields" caption-side="top"}
+{: caption="Log record fields" caption-side="top"}
 
 
 ## Log messages

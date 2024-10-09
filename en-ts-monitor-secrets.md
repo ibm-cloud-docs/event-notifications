@@ -24,7 +24,7 @@ completion-time: 30m
 This tutorial shows you how to monitor the expiry date or any updates on the secrets or certificates by using TLS certificates or secrets.
 {: shortdesc}
 
-![{{site.data.keyword.secrets-manager_short}} and {{site.data.keyword.en_short}}](images/en-secrets-manager.png "Secrets manager and {{site.data.keyword.en_short}}"){: caption="Figure 1. {{site.data.keyword.secrets-manager_short}} and {{site.data.keyword.en_short}}" caption-side="bottom"}
+![{{site.data.keyword.secrets-manager_short}} and {{site.data.keyword.en_short}}](images/en-secrets-manager.png "Secrets manager and {{site.data.keyword.en_short}}"){: caption="{{site.data.keyword.secrets-manager_short}} and {{site.data.keyword.en_short}}" caption-side="bottom"}
 
 ## How {{site.data.keyword.secrets-manager_short}} sends events
 {: #tutorial-en-how-send}

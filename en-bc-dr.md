@@ -35,7 +35,7 @@ For more information about your responsibilities when using {{site.data.keyword.
 |---|---|
 |  RPO | 24 hours |
 |  RTO | 9 hours |
-{: caption="Table 1. RPO and RTO for {{site.data.keyword.en_short}}" caption-side="bottom"}
+{: caption="RPO and RTO for {{site.data.keyword.en_short}}" caption-side="bottom"}
 
 
 ## Locations

@@ -33,4 +33,4 @@ Grant authorization between the IBM Cloud Service (for example: Security and Com
 
 Manage --> Access (IAM) --> Authorization --> Create
 
-![Create authorization](images/en-ts-authorize.png "Authorize event notifications in SCC"){: caption="Figure 1. Grant authorization" caption-side="bottom"}
+![Create authorization](images/en-ts-authorize.png "Authorize event notifications in SCC"){: caption="Grant authorization" caption-side="bottom"}

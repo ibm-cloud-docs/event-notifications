@@ -32,4 +32,4 @@ Find a summary of changes for each version of {{site.data.keyword.en_short}} plu
 | 0.1.4      | 28 February 2023 | Support for ServiceNow destination and FCM Http v1 config changes. |
 | 0.1.5      | 31 March 2023    | Support for Code Engine destination. |
 | 0.2.0      | 25 April 2023    | Support for {{site.data.keyword.cos_full_notm}} destination. |
-{: caption="Table 1. Changes in the {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} CLI" caption-side="bottom"}
+{: caption="Changes in the {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} CLI" caption-side="bottom"}
