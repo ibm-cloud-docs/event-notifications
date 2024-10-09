@@ -133,7 +133,7 @@ Next, change the scope or make a copy of the default dashboard to monitor an {{s
 {: caption="Table 2. Metrics available by service plan" caption-side="bottom"}
 
 ### ibm_eventnotifications_total_ingested_notifications
-{: #ibm_eventnotifications_total_ingested_notifications}
+{: #ibm_eventnotifications_total_ingested_notifications-old}
 
 Total number of notifications that are ingested. Ingested notifications are events from a source that has at least one condition that is defined on them for filtering.
 
@@ -146,7 +146,7 @@ Total number of notifications that are ingested. Ingested notifications are even
 {: caption="Table 3. Ingestion metadata" caption-side="bottom"}
 
 ### ibm_eventnotifications_total
-{: #ibm_eventnotifications_total}
+{: #ibm_eventnotifications_total-old}
 
 Total number of notifications for a particular type includes successful and failed notifications.
 
@@ -159,7 +159,7 @@ Total number of notifications for a particular type includes successful and fail
 {: caption="Table 4. Notifications metadata" caption-side="bottom"}
 
 ### ibm_eventnotifications_failed
-{: #ibm_eventnotifications_failed}
+{: #ibm_eventnotifications_failed-old}
 
 Total number of failed notifications of a particular type.
 
@@ -172,7 +172,7 @@ Total number of failed notifications of a particular type.
 {: caption="Table 5. Failed notifications metadata" caption-side="bottom"}
 
 ### ibm_eventnotifications_devices
-{: #ibm_eventnotifications_devices}
+{: #ibm_eventnotifications_devices-old}
 
 Total number of push notification devices registered.
 
@@ -217,4 +217,3 @@ The following attributes are available for segmenting one or more attributes as 
 | `Type of event notification` | `ibm_eventnotifications_type` | The type of supported destination types. (email, SMS, or webhook) |
 | `Type of push notification device` | `ibm_eventnotifications_device_type` | The type of supported push notification device.(push_android, push_ios) |
 {: caption="Table 8. More attributes" caption-side="bottom"}
-

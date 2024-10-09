@@ -824,7 +824,7 @@ Update your web application with the latest SDK by using the following steps.
       <script src="BMSPushSDK.js" async></script>
 
       // with this
-      <script src="ENPushSDK.js" async></script>
+      <script src="https://github.com/IBM/event-notifications-destination-webpush-sdk/blob/main/ENPushSDK.js" async></script>
    ```
    {: codeblock}
 
