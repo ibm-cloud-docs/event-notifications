@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-02-21"
+lastupdated: "2024-10-08"
 
 keywords: event-notifications, event notifications, about event notifications, troubleshooting, faqs, Frequently Asked Questions, question, can't create IAM credentials, can't regenerate IAM credentials, IAM credentials not working, IP address restrictions enabled, IP address not allowed
 
@@ -14,7 +14,7 @@ content-type: troubleshoot
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Why am I unable to perform an action when working with Event Notifications?
+# Why can't I perform an action when working with {{site.data.keyword.en_short}}?
 {: #en-ip-address-not-allowed}
 {: troubleshoot}
 {: support}

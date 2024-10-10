@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2022
-lastupdated: "2022-10-26"
+  years: 2019, 2024
+lastupdated: "2024-10-08"
 
 keywords: question about event notifications, notification, notifications
 
@@ -14,7 +14,7 @@ content-type: troubleshoot
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Why is notification absent at the destinations?
+# Why is the notification absent from the destinations?
 {: #troubleshoot-notification-topic}
 {: troubleshoot}
 {: support}

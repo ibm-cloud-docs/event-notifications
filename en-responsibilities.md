@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-02-21"
+lastupdated: "2024-10-07"
 
 keywords: event-notifications, event notifications, customer responsibilities, IBM responsibilities, terms and conditions, disaster recovery, toolchain backup
 
@@ -12,7 +12,7 @@ subcollection: event-notifications
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Understanding your responsibilities with {{site.data.keyword.en_full_notm}}
+# Your responsibilities with {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_full_notm}}
 {: #en-responsibilities}
 {: help}
 {: support}

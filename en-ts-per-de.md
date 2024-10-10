@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2022
-lastupdated: "2022-10-26"
+  years: 2019, 2024
+lastupdated: "2024-10-08"
 
 keywords: question about event notifications, permission, integrating, authorization, authorize
 
@@ -14,7 +14,7 @@ content-type: troubleshoot
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Why am I denied permission to integrate an {{site.data.keyword.en_short}} instance?
+# Why don't I have permissions to integrate an {{site.data.keyword.en_short}} instance?
 {: #troubleshoot-integrate}
 {: troubleshoot}
 {: support}

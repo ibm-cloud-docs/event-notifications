@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2022
-lastupdated: "2022-11-18"
+  years: 2020, 2024
+lastupdated: "2024-10-07"
 
 keywords: event-notifications, event notification, getting help and support
 
@@ -12,7 +12,7 @@ subcollection: event-notifications
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Getting help and support
+# Getting help and support for {{site.data.keyword.en_short}}
 {: #en-getting-help-and-support}
 
 {{site.data.keyword.en_full}} provides troubleshooting information to isolate and resolve problems, and also offers support. If you cannot resolve your issue with the troubleshooting guide, open an IBM support case.
