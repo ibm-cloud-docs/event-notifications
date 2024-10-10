@@ -19,7 +19,7 @@
       "href": "/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_about"
     },
     {
-      "title": "Deploy an app on Kubernetes", 
+      "title": "Deploy an app on Kubernetes",
       "description": "Learn how to create an open toolchain by using deployment strategies that have Kubernetes as the deployment target.",
       "href": "/docs/ContinuousDelivery?topic=ContinuousDelivery-tutorial-cd-kubernetes"
     }
