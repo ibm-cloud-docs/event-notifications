@@ -15,8 +15,25 @@ toc:
       topics:
       - getting-started.md
       - en-about.md
-      - en-concepts.md
-      - en-reln-model.md
+      - en-create-instance.md
+      - en-migration.md
+      - en-responsibilities.md
+      - en-new-pricing.md
+      - topic: en-release-notes.md
+      - navtitle: Release notes
+  - navgroup:
+      id: tutorial
+      topics:
+      - en-create-source.md
+      - en-create-topic.md
+      - en-create-destination.md
+      - en-create-subscription.md
+      - en-create-template.md
+      - en-terraform-tutorial.md
+      - en-ts-monitor-secrets.md
+  - navgroup:
+      id: howto
+      topics:
       - topicgroup:
           label: Event sources
           topics:
@@ -70,68 +87,15 @@ toc:
           - en-destination-codeengine.md
           - en-destination-cloud-object-storage.md
           - en-test-destination.md
-      - en-monitoring-metrics.md
-      - en-smtp-configurations.md
-      - en-integrations.md
-      - en-cfe-integrations.md
-      - en-new-pricing.md
-      - topicgroup:
-          label: SDKs
-          topics:
-          - link:
-              label: Go Admin SDK
-              href: https://github.com/IBM/event-notifications-go-admin-sdk#ibm-cloud-event-notifications-go-admin-sdk-018
-          - link:
-              label: Node Admin SDK
-              href: https://github.com/IBM/event-notifications-node-admin-sdk#ibm-cloud-event-notifications-nodejs-sdk
-          - link:
-              label: Java Admin SDK
-              href: https://github.com/IBM/event-notifications-java-admin-sdk#java-server-sdk-for-ibm-cloud-event-notifications-service-version-018
-          - link:
-              label: Python Admin SDK
-              href: https://github.com/IBM/event-notifications-python-admin-sdk#ibm-cloud-event-notifications-python-admin-sdk-018
-          - link:
-              label: Android Client SDK
-              href: https://github.com/IBM/event-notifications-destination-android-sdk#android-destination-sdk-for-ibm-cloud-event-notifications-service-version-001
-          - link:
-              label: iOS Client SDK
-              href: https://github.com/IBM/event-notifications-destination-ios-sdk#ios-destination-sdk-for-ibm-cloud-event-notifications-service-version-0041
-      - topic: en-release-notes.md
-        navtitle: Release notes
-  - navgroup:
-      id: tutorial
-      topics:
-      - en-create-instance.md
-      - en-create-source.md
-      - en-create-topic.md
-      - en-create-destination.md
-      - en-create-subscription.md
-      - topicgroup:
-         label: Create and send push notifications
-         topics:
-            - topic: en-push-fcm.md
-              navtitle: Android Push Notifications (FCM)
-            - topic: en-push-apns.md
-              navtitle: iOS Push Notifications (APNs)
-            - topic: en-push-chrome.md
-              navtitle: Chrome Push Notifications
-            - topic: en-push-firefox.md
-              navtitle: Firefox Push Notifications
-            - topic: en-push-safari.md
-              navtitle: Safari Push Notifications
-            - topic: en-push-huawei.md
-              navtitle: Huawei Push Notifications
-      - en-create-template.md
-      - en-terraform-tutorial.md
-      - en-ts-monitor-secrets.md
-  - navgroup:
-      id: howto
-      topics:
+          - en-smtp-configurations.md
+          - en-integrations.md
+          - en-cfe-integrations.md
       - topicgroup:
           label: Logging and monitoring
           topics:
           - en-monitor.md
           - monitoring.md
+          - en-monitoring-metrics.md
           - en-logs.md
           - logging.md
       - topicgroup:
@@ -172,6 +136,27 @@ toc:
             navtitle: High availability
           - topic: en-bc-dr.md
             navtitle: Disaster recovery
+      - topicgroup:
+          label: SDKs
+          topics:
+          - link:
+              label: Go Admin SDK
+              href: https://github.com/IBM/event-notifications-go-admin-sdk#ibm-cloud-event-notifications-go-admin-sdk-018
+          - link:
+              label: Node Admin SDK
+              href: https://github.com/IBM/event-notifications-node-admin-sdk#ibm-cloud-event-notifications-nodejs-sdk
+          - link:
+              label: Java Admin SDK
+              href: https://github.com/IBM/event-notifications-java-admin-sdk#java-server-sdk-for-ibm-cloud-event-notifications-service-version-018
+          - link:
+              label: Python Admin SDK
+              href: https://github.com/IBM/event-notifications-python-admin-sdk#ibm-cloud-event-notifications-python-admin-sdk-018
+          - link:
+              label: Android Client SDK
+              href: https://github.com/IBM/event-notifications-destination-android-sdk#android-destination-sdk-for-ibm-cloud-event-notifications-service-version-001
+          - link:
+              label: iOS Client SDK
+              href: https://github.com/IBM/event-notifications-destination-ios-sdk#ios-destination-sdk-for-ibm-cloud-event-notifications-service-version-0041
       - en-regions-endpoints.md
       - en-payload.md
       - en-notices.md
@@ -179,8 +164,6 @@ toc:
       id: help
       topics:
       - en-getting-support.md
-      - en-responsibilities.md
-      - en-migration.md
       - faq.md
       - topicgroup:
           label: Troubleshooting

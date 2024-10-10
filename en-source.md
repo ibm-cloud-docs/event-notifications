@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2023
-lastupdated: "2023-11-16"
+  years: 2020, 2023, 2024
+lastupdated: "2024-10-07"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -12,7 +12,7 @@ subcollection: event-notifications
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Event sources
+# Registering event sources
 {: #en-source}
 
 An event source is a service or application on {{site.data.keyword.cloud_notm}} that emits event notifications and publishes them to a topic within the {{site.data.keyword.en_short}} service. A source is a registered entity in an {{site.data.keyword.en_short}} service instance. A source can be registered to an {{site.data.keyword.en_short}} service instance either as an `{{site.data.keyword.cloud_notm}} source` or an `API source` or an `{{site.data.keyword.cloud_notm}} platform source`.
