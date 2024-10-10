@@ -1,76 +1,61 @@
 ---
 
 copyright:
-  years: 2020, 2023
-lastupdated: "2023-01-24"
+  years: 2020, 2024
+lastupdated: "2024-10-07"
 
 keywords: event notifications, event-notifications, tutorials
 
 subcollection: event-notifications
 
-content-type: tutorial
-account-plan: lite, standard
-completion-time: 10m
-
 ---
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Create an {{site.data.keyword.en_short}} subscription
+# Creating an {{site.data.keyword.en_short}} subscription
 {: #en-create-en-subscription}
-{: toc-content-type="tutorial"}
-{: toc-completion-time="10m"}
 
-Create an {{site.data.keyword.en_short}} subscription. Destinations subscribe to topics. Multiple destinations can subscribe to a single topic. An email subscription is a list of all emails IDs, and an SMS subscription is a list of all phone numbers that a notification is routed to. A webhook subscription links a webhook destination to a topic.
+Destinations subscribe to topics. Multiple destinations can subscribe to a single topic. An email subscription is a list of all emails IDs, and an SMS subscription is a list of all phone numbers that a notification is routed to. A webhook subscription links a webhook destination to a topic.
 {: shortdesc}
 
 Of these, {{site.data.keyword.cloud_notm}} Email service and {{site.data.keyword.cloud_notm}} SMS service are supported out-of-the box.
 
-## Create a subscription
-{: #en-create-subscription}
-{: step}
+1. Click **Subscriptions** in the {{site.data.keyword.en_short}} console.
 
-Click `Subscriptions` in the {{site.data.keyword.en_short}} console.
+1. Enter subscription details: 
 
-## Add subscription details
-{: #en-subscription-details}
-{: step}
+   - Click **Create** to display the subscription side panel.
+   - Enter the following subscription details.
+   - Select a topic. 
+   - Select a destination type. For more information on how to select a destination, see [Selecti9ng a destination type](/docs/event-notifications?topic=event-notifications-en-create-en-subscription). 
 
-- Click `Create` to display subscription side panel.
-- Complete the following subscription details:
-    - `Name`: name of the subscription.
-    - `Description`: add an optional description.
-- Select a `Topic` from the list.
-- Select a Destination type from the **Destination** list.
-   - `{{site.data.keyword.cloud_notm}} SMS service` - When you select this option, you can add up to 3 phone numbers for lite plan and 100 phone numbers for standard plan to the recipient list. After adding phone number and when you click **Create** subscription, the number are added to the **Invited** tab. The **Active** tab, displays the phone number of recipients who confirmed receiving SMS notifications for the topic selected in the invite.
-      - When a recipient clicks the **Unsubscribe** link, the recipients number is moved to the **Unsubscribed** tab. To restart the subscription, the recipient need to contact {{site.data.keyword.IBM_notm}} {{site.data.keyword.en_short}} service administrator to add the number back to subscription.
-      - In some cases, the carrier service allows keywords like `START` and `STOP`. When a recipient sends a response `STOP`, sending notifications to the recipient gets immediately disabled. However, the phone number is moved to **Unsubscribed** tab only on the next attempt to send an SMS to the same number. The recipient can restart to receive the SMS by sending a response code `START` in some case where keyword use is permitted by the carrier service.
+1. Click **Create**.
 
-   - `{{site.data.keyword.cloud_notm}} Email service` - When you select this option, you can add up to 10,000 email addresses of the recipient list. The **Invited** tab displays a list of users who have not yet accepted the invitation to be a subscriber. The **Active** tab displays a list of recipients' email addresses and the date they were activated. The **Unsubscribed** tab displays a list of recipients who have opted out of receiving any email notifications for this subscription.
-- Add additional information that is related to the respective destination type.
-   - For `{{site.data.keyword.cloud_notm}} Email service`
-      - Select **Add notification payload**, which is optional.
-      - Add the sender's name in the **From name**.
-      - Add **Reply to** information - Enter the reply to name, to whom the reply to be addressed, and Email of the reply to name.
-      - In the **Recipients** section, select the **Invited** tab, enter the email address of the recipient, and click **Add +** to proceed.
-   - For `ServiceNow` destination
-      - Add values for the following fields, which are optional:
-         - **Assigned to** - User you want the incident to be assigned.
-         - **Assignment group** - Group you want the incident to be assigned.
-
-         If you are providing **Assigned to** and **Assignment group** values, make sure they have proper settings and linked otherwise ServiceNow will reject requests with 403. Also make sure there are no Business Rule blocking assignment to these groups and users.
-         {: note}
-
-- Click **Create**.
-
-## Enable the subscription
+## Enabling the subscription
 {: #en-subscription-finish}
-{: step}
 
-- Click `Create` in the subscription side panel.
-
-## Unsubscribe
-{: #en-unsubscribe-finish}
-{: step}
+Click **Create** in the subscription side panel to enable the subscription.
 
 You can subscribe to or unsubscribe from specific {{site.data.keyword.en_short}} subscription. Also, users can opt out of receiving notifications for any subscription.
+{: note}
+
+## Selecting a destination type
+{: #en-select-destination}
+
+### {{site.data.keyword.cloud_notm}} SMS service
+{: #en-SMS-destination}
+
+- You can add up to 3 phone numbers for the lite plan, and 100 phone numbers for stsandard plan to the recipient list. 
+- When you click **Create** subscription after adding the phone numbers, the number are added to the **Invited** tab. The **Active** tab, displays the phone number of recipients who confirmed receiving SMS notifications for the topic selected in the invite.
+- When a recipient clicks the **Unsubscribe** link, the recipients number is moved to the **Unsubscribed** tab. To restart the subscription, the recipient should contact {{site.data.keyword.IBM_notm}} {{site.data.keyword.en_short}} service administrator to add the number back to subscription.
+- In some cases, the carrier service allows keywords like `START` and `STOP`. When a recipient sends a response `STOP`, the services for recipient is disabled immediately. However, the phone number is moved to **Unsubscribed** tab only on the next attempt to send an SMS to the same number. The recipient can restart to receive the SMS by sending a response code `START`. 
+
+### {{site.data.keyword.cloud_notm}} Email service
+{: #en-Email-destination}
+   
+- You can add up to 10,000 email addresses of the recipient list. The **Invited** tab displays a list of users who have not yet accepted the invitation to be a subscriber. The **Active** tab displays a list of recipients email addresses and the date they were activated. The **Unsubscribed** tab displays a list of recipients who have opted out of receiving any email notifications for this subscription.
+- Add additional information that is related to the respective destination type as required.
+
+If you are providing **Assigned to** and **Assignment group** values, make sure they have proper settings and linked otherwise ServiceNow will reject requests with 403. Also make sure there are no Business Rule blocking assignment to these groups and users.
+{: note}
+         

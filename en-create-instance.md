@@ -7,11 +7,6 @@ lastupdated: "2024-10-07"
 keywords: event notifications, event-notifications, tutorials
 
 subcollection: event-notifications
-
-content-type: tutorial
-account-plan: lite, standard
-completion-time: 10m
-
 ---
 
 {{site.data.keyword.attribute-definition-list}}
@@ -19,10 +14,10 @@ completion-time: 10m
 # Creating an {{site.data.keyword.en_short}} service instance
 {: #en-create-en-instance}
 
-Take the steps that get you started by creating an {{site.data.keyword.en_short}} service instance.
+Get started by creating an {{site.data.keyword.en_short}} service instance.
 {: shortdesc}
 
-1. Log in to your {{site.data.keyword.cloud_notm}} account
+1. Log in to your {{site.data.keyword.cloud_notm}} account.
 1. In the {{site.data.keyword.cloud_notm}} [catalog](/catalog#services), search and select [{{site.data.keyword.en_short}}](/catalog/services/event-notifications). The service configuration screen opens.
 1. Select a `Location`. Currently, Dallas (us-south), London (eu-gb), Sydney (au-syd), Frankfurt (eu-de) and Madrid (eu-es) locations are supported.
 1. Select a pricing plan. Currently, only `Lite` and `Standard` pricing plans are defined as follows:
@@ -33,7 +28,9 @@ Take the steps that get you started by creating an {{site.data.keyword.en_short}
    {: note}
 
 1. Configure your resource with a `Service name`, or use the preset name.
-1. Select a resource group. The resource group selection organizes your resources in your account. The resource group that you select cannot be changed after the service instance is created.
+1. Select a resource group. The resource group selection organizes your resources in your account. 
+   Once the service instance is created, the selected resource group cannot be changed.
+   {: note}
 1. Define optional tags that identify this service instance.
-1. Create the {{site.data.keyword.en_short}} service instance. Accept the licensing agreements and terms by clicking the checkbox.
-1. Click `Create`. A new service instance is created and the {{site.data.keyword.en_short}} console is displayed.
+1. Accept the licensing agreements and terms by clicking the checkbox.
+1. Click **Create**

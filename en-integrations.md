@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2022, 2023, 2024
+  years:  2022, 2024
 lastupdated: "2024-10-07"
 
 keywords: event notifications, event notification, notifications, integrations, key protect, key management, hyper protect, hpcs, Collect Failed events
@@ -11,10 +11,10 @@ subcollection: event-notifications
 ---
 {{site.data.keyword.attribute-definition-list}}
 
-# Integrating with other {{site.data.keyword.cloud_notm}} services 
+# Integrating {{site.data.keyword.en_short}} with other {{site.data.keyword.cloud_notm}} services
 {: #en-integrations}
 
-Integrations in {{site.data.keyword.en_short}} represent list of other {{site.data.keyword.cloud_notm}} services that are connected to your {{site.data.keyword.en_short}} instance. You can encrypt the data that you store in {{site.data.keyword.cloud_notm}} databases by using encryption keys that you can control. For more information, see [Integrating with a Key management service](#en-int-key-management). You can also collect failed events and take appropriate action. For more information, see [Collect failed events](/docs/event-notifications?topic=event-notifications-en-cfe-integrations).
+Integrations in {{site.data.keyword.en_short}} represent list of other {{site.data.keyword.cloud_notm}} services that are connected to your {{site.data.keyword.en_short}} instance. You can encrypt the data that you store in {{site.data.keyword.cloud_notm}} databases by using encryption keys that you can control. For more information, see [Integrating with a Key management service](#en-int-key-management). You can also collect failed events and take appropriate action. For more information, see [Collecting failed events](/docs/event-notifications?topic=event-notifications-en-cfe-integrations).
 {: shortdesc}
 
 ## Integrating with a Key management service
