@@ -20,7 +20,7 @@ subcollection: event-notifications
 
 The text messages originate from IBM-owned phone numbers or alphanumeric sender IDs. Except for test messages, the content cannot be modified within {{site.data.keyword.en_short}}.
 
-![SMS state-diagram](images/en-sms-state-diagram.png "SMS state diagram"){: caption="Figure 1. SMS state diagram" caption-side="bottom"}
+![SMS state-diagram](images/en-sms-state-diagram.png "SMS state diagram"){: caption="SMS state diagram" caption-side="bottom"}
 
 ## Adding an SMS destination
 {: #en-destinations-sms-add}
@@ -293,7 +293,7 @@ Because SMS delivery rates vary widely with location, SMS text messages are char
 |"+1340"(Virgin Islands, US) | 2.39 units | 0.0385985 USD
 |"+681"(Wallis and Futuna) | 7.84 units | 0.126616 USD
 |"+967"(Yemen) | 2.65 units | 0.0427975 USD
-{: caption="Table 1. Destination country, unit per segment and price per segment" caption-side="bottom"}
+{: caption="Destination country, unit per segment and price per segment" caption-side="bottom"}
 
 ## Calculating SMS Units and Price
 {: #en-destinations-sms-charge-calculations}

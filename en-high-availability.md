@@ -49,7 +49,7 @@ The following table lists the high-availability (HA) status for the regions (loc
 | Europe | Madrid (eu-es)|MZR|
 | North America| Dallas (us-south)|MZR|
 
-{: caption="Table 1. HA status for the regions" caption-side="bottom"}
+{: caption="HA status for the regions" caption-side="bottom"}
 
 Where:
 
@@ -85,7 +85,7 @@ Service level objectives (SLOs) describe the design points that the {{site.data.
 | Availability target | Target Value   |
 |---|---|
 |  Availability % | 99.99% |
-{: caption="Table 1. SLO for {{site.data.keyword.en_short}}" caption-side="bottom"}
+{: caption="SLO for {{site.data.keyword.en_short}}" caption-side="bottom"}
 
 The SLO is not a warranty and {{site.data.keyword.IBM_notm}} will not issue credits for failure to meet an objective. Refer to the SLAs for commitments and credits that are issued for failure to meet any committed SLAs. For a summary of all SLOs, see [{{site.data.keyword.cloud_notm}} service level objectives](/docs/overview?topic=overview-slo).
 

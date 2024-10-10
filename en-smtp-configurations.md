@@ -115,7 +115,7 @@ After successful verification of a SMTP configuration in an IBM Cloud Event Noti
     | eu-gb (London)                      | smtp.us-south.event-notifications.cloud.ibm.com | private.smtp.us-south.event-notifications.cloud.ibm.com |
     | eu-de (Frankfurt)                   | smtp.eu-de.event-notifications.cloud.ibm.com    | private.smtp.eu-de.event-notifications.cloud.ibm.com    |
     | eu-es (Madrid)                      | smtp.eu-de.event-notifications.cloud.ibm.com    | private.smtp.eu-de.event-notifications.cloud.ibm.com    |
-    {: caption="Table 1. IBM Cloud Event Notifications SMTP endpoints" caption-side="bottom"}
+    {: caption="IBM Cloud Event Notifications SMTP endpoints" caption-side="bottom"}
 
     The SMTP Endpoints are available in following regions: `us-south` and `eu-de`. For example, it can be seen as instances created in London and Sydney also connect to the Dallas SMTP endpoint, and instances created in Madrid also connect to the Frankfurt SMTP endpoint.
     {: note}
@@ -141,7 +141,7 @@ After successful verification of a SMTP configuration in an IBM Cloud Event Noti
     |-------------------------------------------------|-----------------------------------------------------------------------------------------------|
     | smtp.us-south.event-notifications.cloud.ibm.com | 150.240.68.207, 52.118.103.220, 169.47.95.114, 169.59.33.169, 150.239.167.120, 52.118.185.176 |
     | smtp.eu-de.event-notifications.cloud.ibm.com    | 149.81.218.203, 158.177.6.24, 149.81.39.14, 158.176.12.194, 149.81.164.10, 161.156.160.31     |
-    {: caption="Table 2. IBM Cloud Event Notifications OUtgoing IP addresses" caption-side="bottom"}
+    {: caption="IBM Cloud Event Notifications OUtgoing IP addresses" caption-side="bottom"}
 
 9. As per the current configurations, attachments are not supported in Event Notifications SMTP interface.
 
@@ -190,7 +190,7 @@ After successful verification of a SMTP configuration in an IBM Cloud Event Noti
    3. Enable the endpoint: `private.smtp.<region>.event-notifications.cloud.ibm.com`
    4. Select the required subnet for the Reserved IP(Note: You can bind only one IP address per VPC zone to an endpoint gateway).
    
-    ![SMTP Private Endpoint VPE](images/smtp-private-endpoint.png "SMTP Private Endpoint VPE"){: caption="Figure 1. SMTP Private Endpoint VPE" caption-side="bottom"}
+    ![SMTP Private Endpoint VPE](images/smtp-private-endpoint.png "SMTP Private Endpoint VPE"){: caption="SMTP Private Endpoint VPE" caption-side="bottom"}
 
 4. Create a **Network Zone** in **Context-Based-Restrictions(CBR)** for your VPC.
 5. Create **CBR Rule** for **Event-Notifications Instance** and add above created **Network zone** (OR) Add above **Network Zone** to existing **CBR Rule** that you already created for **Event-Notifications Instance**.

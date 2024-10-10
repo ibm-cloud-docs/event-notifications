@@ -34,7 +34,7 @@ Create an {{site.data.keyword.en_short}} service, add a push destination for Fir
 
 The following diagram shows you how clients use Firefox web Push Notifications.
 
-![How clients use push notifications](images/en-how-send-mozilla.svg "How clients use push notifications"){: caption="Figure 1. How clients use push notifications" caption-side="bottom"}
+![How clients use push notifications](images/en-how-send-mozilla.svg "How clients use push notifications"){: caption="How clients use push notifications" caption-side="bottom"}
 
 ## Objectives
 {: #en-objectives-ff}
@@ -84,9 +84,9 @@ Click `Destinations` in the {{site.data.keyword.en_short}} console and add the f
 * Click **Add**.
 * Once Firefox destination is created. Edit the created destination to get `public vapId key` required for web sdk.
 
-![Destination Edit](images/en-push-firefox-destination-edit.png "Destination Edit"){: caption="Figure 2. Receive notifications" caption-side="bottom"}
+![Destination Edit](images/en-push-firefox-destination-edit.png "Destination Edit"){: caption="Receive notifications" caption-side="bottom"}
 
-![Destination](images/en-push-firefox-destination.png "Destination"){: caption="Figure 3. Receive notifications" caption-side="bottom"}
+![Destination](images/en-push-firefox-destination.png "Destination"){: caption="Receive notifications" caption-side="bottom"}
 
 ## Create an {{site.data.keyword.en_short}} topic
 {: #en-create-topic-ff}
@@ -212,4 +212,4 @@ The Firefox web SDK enables Firefox websites to receive push notifications. Comp
 
 Use the [Send Notification API](/apidocs/event-notifications) to send the push notification for the Firefox device. You can use the [Node](https://github.com/IBM/event-notifications-node-admin-sdk#send-notifications){: external} or [Go](https://github.com/IBM/event-notifications-go-admin-sdk#send-notifications){: external} admin SDK instead of calling the API directly.
 
-![Receive notifications](images/en-receive-push-firefox.png "Receive notifications"){: caption="Figure 4. Receive notifications" caption-side="bottom"}
+![Receive notifications](images/en-receive-push-firefox.png "Receive notifications"){: caption="Receive notifications" caption-side="bottom"}

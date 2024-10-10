@@ -62,7 +62,7 @@ To configure a ServiceNow destination, do the following steps:
 | Medium | 2 | 2 | 3 |
 | Low | 2 | 3 | 4 |
 | Anything Else | 3 | 3 | 4 |
-{: caption="Table 1. {{site.data.keyword.en_short}} severity (ibmenseverity) to ServiceNow severity mapping" caption-side="bottom"}
+{: caption="{{site.data.keyword.en_short}} severity (ibmenseverity) to ServiceNow severity mapping" caption-side="bottom"}
 
 ## Testing a ServiceNow destination configuration
 {: #en-sn-test-destination}

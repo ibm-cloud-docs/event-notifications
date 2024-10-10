@@ -40,7 +40,7 @@ Both the {{site.data.keyword.en_short}} Email Destinations support a subscriptio
 
 The followiing diagram shows depicts the workflow, from invited to subscribed and to unsubsubscribed.
 
-![Email state-diagram](images/en-email-state-diagram.png "Email state diagram"){: caption="Figure 1. Email state diagram" caption-side="bottom"}
+![Email state-diagram](images/en-email-state-diagram.png "Email state diagram"){: caption="Email state diagram" caption-side="bottom"}
 
 
 ## Unsubscribe

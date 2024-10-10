@@ -18,7 +18,7 @@ subcollection: event-notifications
 {{site.data.keyword.en_full}} is a routing service that provides you information about critical events that occur in your {{site.data.keyword.cloud_notm}} account or triggers automated actions by using webhooks. You can filter and route event notifications from {{site.data.keyword.cloud_notm}} services like monitoring, to communication channels like email, SMS, and webhooks.
 {: shortdesc}
 
-![{{site.data.keyword.en_short}}](images/en-topleveldiagram.png "{{site.data.keyword.en_short}} top-level diagram"){: caption="Figure 1. {{site.data.keyword.en_short}}" caption-side="bottom"}
+![{{site.data.keyword.en_short}}](images/en-topleveldiagram.png "{{site.data.keyword.en_short}} top-level diagram"){: caption="{{site.data.keyword.en_short}}" caption-side="bottom"}
 
 ## Features
 {: #en-features}

@@ -54,7 +54,7 @@ Some example of Resource lifecycle events are:
    | `instance` | `update_plan_inprogress` | An event is generated when a service instance plan updation is in progress. |
    | `instance` | `update_state` | An event is generated when a service instance state get updated. |
    | `instance` | `update_state_failure` | An event is generated when a service instance state updation failed. |
-   {: caption="Table 1. Supported service instance type and sub-types" caption-side="bottom"}
+   {: caption="Supported service instance type and sub-types" caption-side="bottom"}
 
 1. Service key type resources
 
@@ -64,7 +64,7 @@ Some example of Resource lifecycle events are:
    | `key` | `create_failure` | An event is generated when a service instance credentials creation failed. |
    | `key` | `delete` | An event is generated when a service instance credentials deleted successfully. |
    | `key` | `delete_failure` | An event is generated when a service instance credentials deletion failed. |
-   {: caption="Table 2. Supported key credentials type and sub-types" caption-side="bottom"}
+   {: caption="Supported key credentials type and sub-types" caption-side="bottom"}
 
 1. Resource Group resources
 
@@ -73,7 +73,7 @@ Some example of Resource lifecycle events are:
    | `Resource_group` | `create` | An event is generated when a resource group get created. |
    | `Resource_group` | `delete` | An event is generated when a resource group get deleted. |
    | `Resource_group` | `update` | An event is generated when a resource group get updated. |
-   {: caption="Table 3. Supported resource group type and sub-types" caption-side="bottom"}
+   {: caption="Supported resource group type and sub-types" caption-side="bottom"}
 
 ## Enabling resource lifecycle events
 {: #en-enabling-resource-lifecycle-events}
@@ -124,7 +124,7 @@ The following table describes the fields of a Resource Lifecycle event:
 | `event_properties.scheduled_reclaim_at` | String | Timestamp when the resource was reclaimed. Available for reclaim resource action. |
 | `event_properties.scheduled_reclaim_by` | String | IAM ID who restored the resource. Available for restore resource action. |
 | `event_properties.updated_at` | String | Timestamp which the last update on the resource was done. |
-{: caption="Table 4. Event Schma for Resource Lifecycle Events" caption-side="bottom"}
+{: caption="Event Schma for Resource Lifecycle Events" caption-side="bottom"}
 
 ### Example event
 {: #en-example-event}
