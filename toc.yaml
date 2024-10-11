@@ -20,7 +20,7 @@ toc:
       - en-responsibilities.md
       - en-new-pricing.md
       - topic: en-release-notes.md
-      - navtitle: Release notes
+        navtitle: Release notes
   - navgroup:
       id: tutorial
       topics:
