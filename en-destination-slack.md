@@ -64,14 +64,16 @@ Event notification generates slack notifications from incoming payload. The temp
 
 ```sh
 {
-   "text": "*{{event.ibmendefaultshort}}*",
+   "text": "{{ibmendefaultshort}}",  // Read from event payload
    "attachments": [{
-      "color": "{{config.subscription.attachment_color}}",
-      "blocks": [{
+      "color": "{{subscriptions.attachment_color}}",  // Read from subscription
+      "blocks": 
+      [
+         {
          "type": "section",
          "text": {
             "type": "mrkdwn",
-            "text": "{{event.ibmendefaultlong}}"
+            "text": "{{ibmendefaultlong}}" // Read from event payload
          }
       },
       {
@@ -79,12 +81,14 @@ Event notification generates slack notifications from incoming payload. The temp
       },
       {
          "type": "section",
-         "text": {
+         "text": 
+         {
             "type": "mrkdwn",
-            "text": "```{{event.data}} ```"
+            "text": "{{event_payload}}" // Full notification payload sent to /notifications endpoint
          }
       }
       ]
+   
    }]
 }
 ```
@@ -145,18 +149,6 @@ Example:
    No severity information available
 {{/if}}
 ```
-### Equal Logic Helper
-
-Equal logic helper allows you to perform conditional checks within your templates. Here's a brief overview of how to use the Equal helper in Handlebars:
-
-```handlebars
-{{#ifEqual status 'active'}}
-    <span>User is active</span>
-{{else}}
-    <span>User is inactive</span>
-{{/ifEqual}}
-```
-
 
 Note - There are more helpers available for use that can be referenced from here - https://github.com/aymerick/raymond?tab=readme-ov-file#built-in-helpers
 
