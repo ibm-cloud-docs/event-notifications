@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2024-07-29"
+  years: 2021, 2023, 2024
+lastupdated: "2024-10-07"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, event destination
 
@@ -12,8 +12,7 @@ subcollection: event-notifications
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Supported destinations
-
+# Working with event destinations
 {: #en-destination}
 
 A destination is a delivery target for a notification. In other contexts, destinations are also called channels, sinks, or consumers.

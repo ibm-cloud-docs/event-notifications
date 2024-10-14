@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-02-21"
+lastupdated: "2024-10-08"
 
 keywords: event-notifications, event notifications migration, notifications, destinations, push, migration
 
@@ -12,7 +12,7 @@ subcollection: event-notifications
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Migrate your apps from {{site.data.keyword.mobilepushfull}} service to {{site.data.keyword.en_full}}
+# Migrating your apps from {{site.data.keyword.mobilepushfull}} to {{site.data.keyword.en_full}}
 {: #en-migrate-apps}
 
 You can migrate your mobile apps from the deprecated IBM Cloud Push Notifications service to {{site.data.keyword.en_short}} to continue to use Push.

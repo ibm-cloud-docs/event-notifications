@@ -2,63 +2,47 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-07-08"
+lastupdated: "2024-10-07"
 
 keywords: event notifications, event-notifications, tutorials
 
 subcollection: event-notifications
 
-content-type: tutorial
-account-plan: lite
-completion-time: 10m
-
 ---
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Create an {{site.data.keyword.en_short}} template
+# Creating an {{site.data.keyword.en_short}} template
 {: #en-create-en-template}
-{: toc-content-type="tutorial"}
-{: toc-completion-time="10m"}
 
-Create an {{site.data.keyword.en_short}} template. Template is a pre-defined layout, that may include content like images, text and dynamic content based on event. Rather than creating a new content from scratch each time, you can use a template as a base and configure them in subscription. {{site.data.keyword.en_short}} supports the following templates:
+An {{site.data.keyword.en_short}} template is a pre-defined layout that includes images, text and dynamic content based on an event. You can use a template as a base and customize it rather than creating a new content from scratch each time. {{site.data.keyword.en_short}} supports the following templates:
 {: shortdesc}
 
 - Custom Email notification
 - Custom Email invitation
 
-## Create a template
+## Creating a template
 {: #en-create-template}
-{: step}
 
-Click `Templates` in the {{site.data.keyword.en_short}} console.
+1. In the {{site.data.keyword.cloud_notm}} [catalog](/catalog#services), search and select [{{site.data.keyword.en_short}}](/catalog/services/event-notifications) and create a service instance.
+1. Click **Templates** in the {{site.data.keyword.en_short}} console.
+1. Click **Create** to add template details. The template side panel is diaplyed.
 
-## Add template details
-{: #en-template-details}
-{: step}
+     - Enter name and description in the template. 
 
-- Click `Create` to display template side panel.
-- Complete the following template details:
-    - `Name`: name of the template.
-    - `Description`: add an optional description.
-- Select a Template type from the **Template** list.
-   - For `Custom Email notification` template
-      - Enter **Subject**, which is optional.
-      - Enter **Body**, which is an html template.
-      - The HTML template must include a placeholder for inserting the unsubscribe text, along with the unsubscription URL. This placeholder, represented as `{{ ibmen_unsubscription }}`, will be utilized to substitute the unsubscription URL.
-      - Click on **Preview** to see the template preview.
-      - Click on Add.
-   - For `Custom Email invitation` template
-      - Enter **Subject**, which is optional.
-      - Enter **Body**, which is an html template.
-      - The HTML template must include a placeholder for inserting the invitation text, accompanied by the subscription URL. This placeholder, represented as `{{ ibmen_invitation }}`, will be utilized to substitute the invitation URL.
-      - Click on **Preview** to see the template preview.
-      - Click on Add.
+     - Select a template type. 
+
+         - **Custom Email notification** template: The HTML template must include a placeholder for inserting the unsubscribe text, along with the unsubscription URL. This placeholder, represented as `{{ ibmen_unsubscription }}`, will be utilized to substitute the unsubscription URL.
+      
+         - **Custom Email invitation** template: The HTML template must include a placeholder for inserting the invitation text, accompanied by the subscription URL. This placeholder, represented as `{{ ibmen_invitation }}`, will be utilized to substitute the invitation URL.
+     
+     - Click **Preview** to view the template preview.
+
+     - Click **Add**.
 
 
-## Personalization in templates
+## Personalizing templates
 {: #en-template-personalization}
-{: step}
 
 Email personalization refers to the practice of tailoring email content and messaging to individual recipients or specific segments of your email list based on their personal preferences, behaviors, demographics, or interactions with your brand. The goal of email personalization is to create a more engaging and relevant email experience for each recipient, which can lead to higher open rates, click-through rates, and conversions. Here are some common ways email personalization can be implemented:
 
@@ -74,9 +58,7 @@ Email personalization refers to the practice of tailoring email content and mess
 
 - In the send notification payload add a `personalization` parameter to enable it
 
-
-
-Let's look at the detailed flow with following examples:
+Examples:
 
 - Send notification payload
 
@@ -159,9 +141,12 @@ Let's look at the detailed flow with following examples:
     </html>
     ```
 
-- Explanation about the personalization tag
+    The following describe the personalization tags for the JSON example: 
 
-    - The `ibmenreferer` field is used to identify where to enable the personalization
-    - The second parameter `personalization` helps to identify from where to pick personalization values in the send notifications payload
-    - Third field `ibmenmailto` helps to iterate through array of emails to which mapping can be done for personalization
-    - The last field helps to identify which value to pick from a key
+    - The `ibmenreferer` parameter allows you to identify where to enable the personalization. 
+
+    - The `personalization` parameter helps to identify from where to pick personalization values in the send notifications payload.
+
+    - Third `ibmenmailto` parameter helps to iterate through array of emails to which mapping can be done for personalization. 
+
+    - The `name` parameter helps to identify which value to pick from a key. 

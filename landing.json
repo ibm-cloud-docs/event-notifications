@@ -1,0 +1,53 @@
+
+{
+  "title": "IBM Cloud Continuous Delivery docs",
+  "lastupdated": "2022-08-11",
+  "introduction": "Adopt a DevOps or DevSecOps approach by using Continuous Delivery, which includes open toolchains that automate the building and deploying of applications. Use the documentation, architetcure references, and more to support your build and deploy needs.",
+  "section_devtools": {
+    "api": "/apidocs/toolchain",
+    "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest"
+  },
+  "section_recommended": [
+    {
+      "title": "Getting started with Continuous Delivery",
+      "description": "Learn how to create a simple deployment toolchain that supports development, deployment, and operations tasks.",
+      "href": "/docs/ContinuousDelivery?topic=ContinuousDelivery-getting-started"
+    },
+    {
+      "title": "Toolchain availability, templates, and tutorials",
+      "description": "Learn about the available toolchain templates, and related tutorials, that include specific sets of tool integrations to support development, deployment, and operations tasks.",
+      "href": "/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_about"
+    },
+    {
+      "title": "Deploy an app on Kubernetes",
+      "description": "Learn how to create an open toolchain by using deployment strategies that have Kubernetes as the deployment target.",
+      "href": "/docs/ContinuousDelivery?topic=ContinuousDelivery-tutorial-cd-kubernetes"
+    }
+  ],
+  "section_learn": {
+    "developer": "https://developer.ibm.com/depmodels/cloud/",
+    "architecture": "https://www.ibm.com/architectures/hybrid",
+    "training": "https://www.ibm.com/training/cloud",
+    "community": "https://community.ibm.com/community/user/cloud/home"
+  },
+  "section_updates": {
+    "view_more": "/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-relnotes",
+    "tiles": [
+      {
+        "date": "22 July 2022",
+        "title": "Beta Terraform resources and data sources, Go SDKs, and HTTP APIs",
+        "description": "The Beta Terraform resources and data sources, Go SDKs, and HTTP APIs are now available for working with Toolchains and Tekton Pipelines."
+      },
+      {
+        "date": "20 July 2022",
+        "title": "Git Repos and Issue Tracking",
+        "description": "Upgraded to GitLab 15.0.4."
+      },
+      {
+        "date": "12 July 2022",
+        "title": "Git Repos and Issue Tracking",
+        "description": "Upgraded to GitLab 14.10.5."
+      }
+    ]
+  }
+}

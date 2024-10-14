@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2022
-lastupdated: "2022-10-26"
+  years: 2019, 2024
+lastupdated: "2024-10-07"
 
 keywords: question about event notifications, permission, destination, authorization, notification
 
@@ -14,7 +14,7 @@ content-type: troubleshoot
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Why am I denied permission to create a destination or send notifications?
+# Why don't I have permissions to create a destination or send notifications?
 {: #troubleshoot-create-destination}
 {: troubleshoot}
 {: support}

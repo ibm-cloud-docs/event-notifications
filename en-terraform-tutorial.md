@@ -8,47 +8,42 @@ keywords: event notifications, event-notifications, tutorials, terraform
 
 subcollection: event-notifications
 
-content-type: tutorial
-account-plan: standard
-completion-time: 30m
-
 ---
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Working with Terraform in {{site.data.keyword.en_short}}
+# Setting up Terraform for {{site.data.keyword.en_short}}
 {: #en-tera-workwith}
-{: toc-content-type="tutorial"}
-{: toc-completion-time="30m"}
 
-This tutorial shows you how to use Terraform to configure files like `provider.tf` to declare {{site.data.keyword.en_short}} resources for deployment.
+Use Terraform to configure files like `provider.tf` to declare {{site.data.keyword.en_short}} resources for deployment.
 {: shortdesc}
 
 ## Before you begin
 {: #en-prereqs}
 
-Ensure that the following prerequisites are in place:
+Make sure that the following prerequisites are in place:
 
 * Install Terraform. For more information, see [Download Terraform](https://developer.hashicorp.com/terraform/install){: external}.
+
 * Either deploy Terraform to a specific folder or add it to your `PATH`.
 
-* Check your version of Terraform:
+* Check the Terraform version:
 
    ```bash
    terraform –version
    ```
    {: codeblock}
 
-* You need an {{site.data.keyword.cloud_notm}} account. If you don't have an account, then [Create an IBM Cloud account](https://cloud.ibm.com/registration/){: external}.
+* You need an {{site.data.keyword.cloud_notm}} account. If you don't have an account, then create an {{site.data.keyword.cloud_notm}} account. For more information on how to create an account, see[Create an IBM Cloud account](https://cloud.ibm.com/registration/){: external}.
+
 * Log in to your {{site.data.keyword.cloud_notm}} account.
 
 ## Working with Terraform in {{site.data.keyword.cloud_notm}}
 {: #en-work-terraform-cloud}
-{: step}
 
-Take the following steps:
+To work with Terraform and the {{site.data.keyword.cloud_notm}}, a plug-in is required to extend the current functions. For more information on how to install and configure the {{site.data.keyword.cloud_notm}} plug-in, see [terraform-provider-ibm](https://github.com/IBM-Cloud/terraform-provider-ibm){: external}. 
 
-1. To work with Terraform and the {{site.data.keyword.cloud_notm}}, a plug-in is required to extend the current functionality. For more information on how to install and configure the {{site.data.keyword.cloud_notm}} plug-in, see [terraform-provider-ibm](https://github.com/IBM-Cloud/terraform-provider-ibm){: external}. This tutorial uses {{site.data.keyword.cloud_notm}} Provider 1.38.2. For more information, see [{{site.data.keyword.cloud_notm}} Provider](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs){: external}.
+The following instructions use Provider 1.38.2. For more information, see [{{site.data.keyword.cloud_notm}} Provider](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs){: external}.
 
 1. Create a hidden directory from the home directory:
 
@@ -66,19 +61,17 @@ Take the following steps:
 
 1. Connect to your {{site.data.keyword.cloud_notm}} account with {{site.data.keyword.cloud_notm}} API Key.
 
-1. Login to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/login){: external} and go to the **Manage** tile and select **Access(IAM)**, and then select **{{site.data.keyword.cloud_notm}} API Keys**.
+1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/login){: external} and go to the **Managed** tile and select **Access(IAM)**, and then select **{{site.data.keyword.cloud_notm}} API Keys**.
 
 1. Create an {{site.data.keyword.cloud_notm}} API Key and save the password.
 
 ## Deploying resources
 {: #en-resources-deploy}
-{: step}
 
 Create an {{site.data.keyword.en_short}} resource. For more information, see [Getting started with {{site.data.keyword.en_short}}](/docs/event-notifications?topic=event-notifications-getting-started).
 
 ## Building Infrastructure-as-Code
 {: #en-infrastructure-as-code}
-{: step}
 
 The `tf-template` directory contains the following Terraform configuration files:
 
@@ -221,14 +214,13 @@ resource "ibm_en_subscription" "subscription1" {
 
 ## Running your Terraform
 {: #en-execute-tf}
-{: step}
 
-Before running any Terraform scripts, learn about the following Terraform commands:
+Before you run any Terraform scripts, learn the following Terraform commands:
 
 ### Terraform **init**
 {: #en-init-tf}
 
-The Terraform **init** command prepares the environment by ensuring the directory is properly configured:
+The Terraform **init** command prepares the environment to make sure that the directory is configured properly:
 
 ```bash
 bash-5.1# terraform init
@@ -254,7 +246,7 @@ commands will detect it and remind you to do so if necessary.
 ### Terraform **plan**
 {: #en-plan-tf}
 
-The Terraform **plan** command compares the declared resources with the state file to print the resources to be created, altered, or destroyed. This step shows you the impact of the `main.tf` file.
+The Terraform **plan** command compares the declared resources with the state file to print the resources to be created, altered, or deleted. This step shows you the impact of the `main.tf` file.
 
 ```bash
 bash-5.1# terraform plan
@@ -375,9 +367,8 @@ Terraform will perform the following actions:
 
 ## Exporting an API key
 {: #en-exportkey-tf}
-{: step}
 
-Export your {{site.data.keyword.cloud_notm}} API Key before running the **apply** command:
+Export your {{site.data.keyword.cloud_notm}} API Key before you run the **apply** command:
 
 ```bash
 export IBMCLOUD_API_KEY={Your IBM Cloud API Key}
@@ -386,7 +377,6 @@ export IBMCLOUD_API_KEY={Your IBM Cloud API Key}
 
 ## Running Terraform **apply**
 {: #en-apply-tf}
-{: step}
 
 The Terraform **apply** command implements the changes that are declared during the **plan** step and deploys the resource to the {{site.data.keyword.cloud_notm}}.
 
@@ -535,7 +525,6 @@ Apply complete! Resources: 4 added, 0 changed, 0 destroyed..
 
 ## Validating resources
 {: #en-validate-tf}
-{: step}
 
 Validate resources within the {{site.data.keyword.cloud_notm}} by selecting the resource list in [resources](https://cloud.ibm.com/resources){: external}.
 

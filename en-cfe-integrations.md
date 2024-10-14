@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023
-lastupdated: "2023-05-26"
+  years:  2023, 2024
+lastupdated: "2024-10-07"
 
 keywords: event notifications, event notification, notifications, integrations, collect failed events
 
@@ -11,7 +11,7 @@ subcollection: event-notifications
 ---
 {{site.data.keyword.attribute-definition-list}}
 
-# Collect failed events
+# Collecting failed events
 {: #en-cfe-integrations}
 
 As part of the Integrations in {{site.data.keyword.en_short}}, you can enable collecting failed events and take appropriate action.
@@ -131,4 +131,3 @@ Endpoints are used with your credentials (Bucket name, API Key, SDK) to tell you
 1. Click the required **Bucket name** to view the **Bucket configuration** details.
 
 1. Navigate to **Endpoints** section and copy your public or private endpoints as required.
-

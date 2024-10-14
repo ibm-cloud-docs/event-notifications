@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2021, 2024
-lastupdated: "2024-09-30"
+lastupdated: "2024-10-07"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email, smtp
 
@@ -10,7 +10,7 @@ subcollection: event-notifications
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Event Notifications SMTP Interface
+# Using the {{site.data.keyword.en_short}} SMTP Interface
 {: #en-smtp-configurations}
 
 IBM Cloud Event Notifications supports SMTP, the most common email protocol on the internet. You can send email using a variety of clients, software, or programming languages that support SMTP by connecting to the IBM Cloud Event Notifications SMTP interface. This document explains how to set up SMTP configuration, obtain user credentials, and setup a CBR rule to access the SMTP server.
