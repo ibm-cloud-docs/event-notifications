@@ -20,16 +20,14 @@ Find a summary of changes for each version of {{site.data.keyword.en_short}} plu
 
 | Version    | Release date     | Changes                                                                  |
 | ---------- | ---------------- | ------------------------------------------------------------------------ |
-| 0.0.2      | 28 October 2021  | {{site.data.keyword.en_short}} CLI release with webhook destination support, topic, and subscription configuration feature. |
-| 0.0.6      | 3 February 2022  | Android destination support.                                             |
-| 0.0.7      | 28 February 2022 | iOS Destination support and send notification capability from cli.       |
-| 0.0.8      | 4 May 2022       | Chrome and Firefox destination support and Send notification cloud spec. |
-| 0.1.0      | 6 June 2022      | Slack and Safari destination support.                                    |
-| 0.1.1      | 27 June 2022     | Microsoft&trade; Teams destination support.                                     |
-| 0.1.1      | 16 August 2022   | Support for Private endpoint.                                            |
-| 0.1.2      | 29 August 2022   | Support for {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}} as a destination.  \n Upgrading a **Pre-production destination** to **Production destination**. |
-| 0.1.3      | 08 December 2022 | Support for high-level encryption (BYOK and KYOK), and PagerDuty destination. |
-| 0.1.4      | 28 February 2023 | Support for ServiceNow destination and FCM Http v1 config changes. |
-| 0.1.5      | 31 March 2023    | Support for Code Engine destination. |
-| 0.2.0      | 25 April 2023    | Support for {{site.data.keyword.cos_full_notm}} destination. |
+| 1.0.1      | 17 July 2023     | Support for Huawei Destination and New CLI Support                       |
+| 1.1.0      | 5 October 2023   | Support for Custom Email                                                 |
+| 1.2.0      | 9 October 2023   | Support for Email Templates                                              |
+| 1.3.0      | 1 December 2023  | Support for COS integration                                              |
+| 1.4.0      | 14 March 2024    | Code engine destination configuration support for job and application    |
+| 1.5.0      | 10 May 2024      | Support for SMTP Configuration and Slack Templates                       |
+| 1.6.0      | 1 August 2024    | CF destination deprecated and MMS supported                              |
+| 1.7.0      | 9 August 2024    | Support for Metrics and removed support for SMTP allowed IPs from STMP configuration |
+| 1.8.0      | 9 September 2024 | Support for Slack DM destination                                         |
+| 1.8.0      | 11 October 2024  | Support for Webhook templates                                            |
 {: caption="Changes in the {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} CLI" caption-side="bottom"}
