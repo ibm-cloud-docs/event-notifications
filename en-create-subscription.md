@@ -27,7 +27,7 @@ Of these, {{site.data.keyword.cloud_notm}} Email service and {{site.data.keyword
    - Click **Create** to display the subscription side panel.
    - Enter the following subscription details.
    - Select a topic. 
-   - Select a destination type. For more information on how to select a destination, see [Selecti9ng a destination type](/docs/event-notifications?topic=event-notifications-en-create-en-subscription). 
+   - Select a destination type. For more information on how to select a destination, see [Selecting a destination type](/docs/event-notifications?topic=event-notifications-en-create-en-subscription#en-select-destination). 
 
 1. Click **Create**.
 

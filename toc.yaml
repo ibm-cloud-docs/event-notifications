@@ -106,22 +106,22 @@ toc:
       id: reference
       topics:
       - topicgroup:
-          label: API Reference
-          links:
-          - link:
-              label: API Explorer
-              href: https://{DomainName}/apidocs/event-notifications
-      - topicgroup:
-          label: CLI Reference
-          topics:
-          - include: ../event-notifications-cli-plugin/event-notifications-cli.md
-      - topicgroup:
           label: High availability and disaster recovery
           topics:
           - topic: en-high-availability.md
             navtitle: High availability
           - topic: en-bc-dr.md
             navtitle: Disaster recovery
+      - topicgroup:
+          label: API Reference
+          links:
+          - link:
+              label: Event Notifications API
+              href: https://{DomainName}/apidocs/event-notifications
+      - topicgroup:
+          label: CLI Reference
+          topics:
+          - include: ../event-notifications-cli-plugin/event-notifications-cli.md
       - topicgroup:
           label: SDKs
           topics:

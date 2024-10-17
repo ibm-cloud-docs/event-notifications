@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-08-01"
+lastupdated: "2024-10-10"
 
 keywords: HA for Event Notifications, high availability for Event Notifications, Event Notifications, disaster recovery
 
@@ -13,7 +13,7 @@ subcollection: event-notifications
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Understanding high availability for {{site.data.keyword.en_short}}
+# {{site.data.keyword.en_short}} high availability and disaster recovery
 {: #en-high-availability}
 
 [High availability](#x2284708){: term} (HA) is a core discipline in an IT infrastructure to keep your apps up and running, even after a partial or full site failure. The main purpose of high availability is to eliminate potential points of failures in an IT infrastructure.
@@ -22,6 +22,7 @@ subcollection: event-notifications
 IBM Event Notifications is a highly available, multi-tenant, regional service.
 
 ## Service High Availability (HA)
+{: #en-service-high-availability}
 
 An availability zone is a logically and physically isolated location within an {{site.data.keyword.cloud_notm}} region where your data is processed and hosted.
 
@@ -37,6 +38,7 @@ A region (location) is a geographically and physically separate group of one or 
 
 ## Availability zones for {{site.data.keyword.en_short}}
 {: #en-zones-ha}
+
 {{site.data.keyword.en_full_notm}} service is a highly available, regional service. In each supported region, the service exists in multiple availability zones with no single point of failure. 
 
 The following table lists the high-availability (HA) status for the regions (locations) where the {{site.data.keyword.en_full_notm}} service is available:
