@@ -12,7 +12,7 @@ subcollection: event-notifications
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Create and send push notifications to Chrome web by using {{site.data.keyword.en_short}}
+# Creating and sending push notifications to Chrome web by using {{site.data.keyword.en_short}}
 {: #en-push-chrome}
 
 Create an {{site.data.keyword.en_short}} service, add a push destination for Chrome Push Notifications, and send messages to Chrome web devices.

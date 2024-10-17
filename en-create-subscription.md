@@ -20,6 +20,9 @@ Destinations subscribe to topics. Multiple destinations can subscribe to a singl
 
 Of these, {{site.data.keyword.cloud_notm}} Email service and {{site.data.keyword.cloud_notm}} SMS service are supported out-of-the box.
 
+## Creating a subscription
+{: #en-create-subscription}
+
 1. Click **Subscriptions** in the {{site.data.keyword.en_short}} console.
 
 1. Enter subscription details: 
@@ -31,7 +34,7 @@ Of these, {{site.data.keyword.cloud_notm}} Email service and {{site.data.keyword
 
 1. Click **Create**.
 
-## Enabling the subscription
+### Enabling the subscription
 {: #en-subscription-finish}
 
 Click **Create** in the subscription side panel to enable the subscription.

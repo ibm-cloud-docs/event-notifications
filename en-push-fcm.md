@@ -12,7 +12,7 @@ subcollection: event-notifications
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Create and send push notifications to Android mobile using {{site.data.keyword.en_short}}
+# Creating and sending push notifications to Android mobile using {{site.data.keyword.en_short}}
 {: #en-push-fcm}
 
 Create an {{site.data.keyword.en_short}} service, add a push destination for Firebase Cloud Messaging (FCM), and send messages to Android devices.
@@ -347,4 +347,3 @@ Here's how you can migrate from an old configuration to a new one.
    }
    ```
    {: codeblock}
-

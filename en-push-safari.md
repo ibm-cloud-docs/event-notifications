@@ -12,7 +12,7 @@ subcollection: event-notifications
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Create and send push notifications to Safari web by using {{site.data.keyword.en_short}}
+# Creating and sending push notifications to Safari web by using {{site.data.keyword.en_short}}
 {: #en-push-safari}
 
 Create an {{site.data.keyword.en_short}} service, add a push destination for Apple Push Notification service (Safari), and send messages to iOS devices.

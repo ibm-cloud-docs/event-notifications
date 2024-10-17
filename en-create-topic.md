@@ -17,6 +17,9 @@ subcollection: event-notifications
 You can send notifications or alerts to multiple destination types, for example, email, SMS, and others that are subscribed to a particular topic. Configure topics as needed and {{site.data.keyword.en_short}} handles the routing and delivering of alerts reliably to the correct destinations.
 {: shortdesc}
 
+## Creating a topic
+{: #en-create-topic}
+
 1. Select **Topics** in the {{site.data.keyword.en_short}} console.
 
 1. Click **Create**, and enter the following topic details:

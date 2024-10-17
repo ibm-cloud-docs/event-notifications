@@ -12,13 +12,13 @@ subcollection: event-notifications
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Huawei Cloud Push
+# Creating push notifications to Huawei using {{site.data.keyword.en_short}}
 {: #en-push-huawei}
 
 {{site.data.keyword.en_short}} provides a push notification service for sending transactional and informational event notifications to Huawei mobile devices.
 {: shortdesc}
 
-## Create a Huawei Push Destination
+## Creating a Huawei Push Destination
 {: #en-create-destination-huawei}
 
 To create a Huawei Push Destination, perform the following steps:
@@ -76,4 +76,3 @@ To modify the destination,
 
 You cannot change a **Production destination** to **Pre-production destination**.
 {: important}
-
