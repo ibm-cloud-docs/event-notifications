@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2022-10-26"
+  years: 2022, 2024
+lastupdated: "2024-10-10"
 
 keywords: event notifications, event-notifications, tutorials, terraform
 

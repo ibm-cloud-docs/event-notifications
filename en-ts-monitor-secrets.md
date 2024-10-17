@@ -1,8 +1,8 @@
 ---
 
 copyright:
-   years: 2022, 2023
-lastupdated: "2022-10-26"
+   years: 2022, 2024
+lastupdated: "2024-10-10"
 
 keywords: event-notifications, event notifications, about event notifications, secrets manager certificates, secrets expiry
 
@@ -16,7 +16,7 @@ completion-time: 30m
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Monitor {{site.data.keyword.secrets-manager_full}} certificates and secrets expiry
+# Monitoring {{site.data.keyword.secrets-manager_full}} certificates and secrets expiry
 {: #tutorial-en-monitor-secret}
 {: toc-content-type="tutorial"}
 {: toc-completion-time="30m"}

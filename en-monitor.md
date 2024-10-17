@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2023-10-12"
+  years: 2021, 2024
+lastupdated: "2024-10-11"
 
 keywords: event-notification, event notification, high availability, ha, monitoring, metrics, monitor apps
 
@@ -12,7 +12,7 @@ subcollection: event-notifications
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Monitor {{site.data.keyword.en_short}} service metrics with {{site.data.keyword.mon_full_notm}}
+# Monitoring {{site.data.keyword.en_short}} service metrics with {{site.data.keyword.mon_full_notm}}
 {: #en-monitoring}
 
 Use {{site.data.keyword.mon_full_notm}} to gain operational visibility into the performance and health of your applications, services, and platforms. It offers administrators, DevOps teams, and developers full stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards.
