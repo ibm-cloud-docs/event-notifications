@@ -35,5 +35,5 @@ The CLI Plugin versions from 0.0.5 to 1.0.0 is deprecated.
 | 1.6.0      | 1 August 2024    | CF destination deprecated and MMS supported                              |
 | 1.7.0      | 9 August 2024    | Support for Metrics and removed support for SMTP allowed IPs from STMP configuration |
 | 1.8.0      | 9 September 2024 | Support for Slack DM destination                                         |
-| 1.8.0      | 11 October 2024  | Support for Webhook templates                                            |
+| 1.9.0      | 11 October 2024  | Support for Webhook templates                                            |
 {: caption="Changes in the {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} CLI" caption-side="bottom"}

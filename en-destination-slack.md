@@ -84,7 +84,7 @@ Event notification generates slack notifications from incoming payload. The temp
          "text": 
          {
             "type": "mrkdwn",
-            "text": "{{event_payload}}" // Full notification payload sent to /notifications endpoint
+            "text": "```{{event_payload}}```" // Full notification payload sent to /notifications endpoint
          }
       }
       ]
