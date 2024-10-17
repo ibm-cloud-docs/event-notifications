@@ -62,12 +62,12 @@ toc:
               label: Push notifications destinations
               topics:
               - en-destination-push.md
-              - en-push-fcm
-              - en-push-apns
-              - en-push-chrome
-              - en-push-firefox
-              - en-push-safari
-              - en-push-huawei
+              - en-push-fcm.md
+              - en-push-apns.md
+              - en-push-chrome.md
+              - en-push-firefox.md
+              - en-push-safari.md
+              - en-push-huawei.md
           - topicgroup:
               label: Event destinations
               topics:
