@@ -87,9 +87,9 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 |---------------------|-------------------------|-------------------|----------------------|
 | [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} |
 {: caption="Regions where platform logs are sent in Americas locations" caption-side="top"}
-{: #la-table-1}
+{: #lr-table-1}
 {: tab-title="Americas"}
-{: tab-group="la"}
+{: tab-group="lr"}
 {: class="simple-tab-table"}
 {: row-headers}
 
@@ -97,9 +97,9 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 |---------------------|------------------|------------------|--------------------|
 | [No]{: tag-red} | [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} |
 {: caption="Regions where platform logs are sent in Asia Pacific locations" caption-side="top"}
-{: #la-table-2}
+{: #lr-table-2}
 {: tab-title="Asia Pacific"}
-{: tab-group="la"}
+{: tab-group="lr"}
 {: class="simple-tab-table"}
 {: row-headers}
 
@@ -107,9 +107,9 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 |---------------------------------------------------------------|---------------------|------------------|
 | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} |
 {: caption="Regions where platform logs are sent in Europe locations" caption-side="top"}
-{: #la-table-3}
+{: #lr-table-3}
 {: tab-title="Europe"}
-{: tab-group="la"}
+{: tab-group="lr"}
 {: class="simple-tab-table"}
 {: row-headers}
 

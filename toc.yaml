@@ -97,11 +97,25 @@ toc:
       - topicgroup:
           label: Logging and monitoring
           topics:
-          - en-monitor.md
           - monitoring.md
           - en-monitoring-metrics.md
-          - en-logs.md
           - logging.md
+      - topicgroup:
+          label: Enhancing security
+          topics:
+          - en-iam.md
+          - en-cbr.md
+          - at-events.md
+          - en-data-security-compliance.md
+          - en-data-security.md
+          - en-managing-encryption.md
+          - en-cipher.md
+          - en-service-credentials.md
+          - en-email-best-practices.md
+          - topicgroup:
+              label: Privately connecting to Event Notifications
+              topics:
+              - en-cse.md
   - navgroup:
       id: reference
       topics:
