@@ -20,6 +20,8 @@ An {{site.data.keyword.en_short}} template is a pre-defined layout that includes
 
 - Custom Email notification
 - Custom Email invitation
+- Webhook notification
+- Slack notification
 
 ## Creating a template
 {: #en-create-template}
