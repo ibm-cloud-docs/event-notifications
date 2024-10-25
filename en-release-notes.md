@@ -26,7 +26,7 @@ Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, sec
 {: release-note}
 
 Support for templates on Webhook
-: IBM Event Notifications now supports templates on Webhook, enabling users to quickly set up notifications for different events, see [Event Notifications Templates](/event-notifications?topic=event-notifications-en-create-en-template).
+: IBM Event Notifications now supports templates on Webhook, enabling users to quickly set up notifications for different events, see [Event Notifications Templates](/docs/event-notifications?topic=event-notifications-en-create-en-template).
 
 ## 30 September 2024
 {: #event-notifications-Sep3024}
