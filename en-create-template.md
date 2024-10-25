@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-10-07"
+lastupdated: "2024-10-25"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -35,7 +35,11 @@ An {{site.data.keyword.en_short}} template is a pre-defined layout that includes
          - **Custom Email notification** template: The HTML template must include a placeholder for inserting the unsubscribe text, along with the unsubscription URL. This placeholder, represented as `{{ ibmen_unsubscription }}`, will be utilized to substitute the unsubscription URL.
       
          - **Custom Email invitation** template: The HTML template must include a placeholder for inserting the invitation text, accompanied by the subscription URL. This placeholder, represented as `{{ ibmen_invitation }}`, will be utilized to substitute the invitation URL.
-     
+
+         - **Webhook notification** template: The template must be a well-formed JSON that adheres to the Handlebars template syntax and semantics.
+
+         - **Slack notification** template: The JSON template must conform to the valid Slack formatting standards and adhere to the proper Handlebars syntax and structure.
+
      - Click **Preview** to view the template preview.
 
      - Click **Add**.
@@ -90,6 +94,10 @@ Examples:
     }
     ```
 
+    
+
+
+
 - While creating template to enable personalization add a placeholder in the html handlebars format
 
     ```JSON
@@ -140,6 +148,67 @@ Examples:
         </body>
     </html>
     ```
+
+
+
+- Notification payload for Webhook and Slack notifications
+    ```JSON
+    {
+        {{#equal data.alert_definition.severity "Critical"}}
+                "severity": 1,
+            {{/equal}}
+        {{#equal data.alert_definition.severity "Info"}}
+                "severity": 2,
+            {{/equal}}
+        {{#equal data.alert_definition.severity "Error"}}
+                "severity": 2,
+            {{/equal}}
+        "console": "toc",
+        "version": "1.0",
+        "crn": {
+            "version": "v1",
+            "ctype": "public",
+            "cname": "bluemix",
+            "resource_type": "object",
+            "resource": "event-notifications",
+            "service_name": "event-notifications"
+            },
+        "alert_id": "{{data.alert_definition.id}}",
+        "tribe_name": "Mobile",
+        "disable_pager": "false",
+        "source": "{{source}}",
+        "tip_msg_type": "create.notice",
+        "situation": "{{ibmendefaultshort}}",
+        "customer_impacting": "false",
+        "runbook_toc_enabled": "false",
+        "short_description": "{{ibmendefaultshort}}",
+        "product_ready_compliance": "true",
+        "long_description": "{{data.alert_definition.description}}",
+        "timestamp": "{{time}}",
+        "alert_ui_url": "{{data.links.view_alert}}",
+        "runbook_url": "{{data.alert_definition.meta_labels.runbook}}"
+    }
+    ```
+
+-  Webhook notification template
+    ```JSON
+    {
+	"name": "Template for TIP",
+	"params": {
+		"body": "ewogIHt7I2VxdWFsIGRhdGEuYWxlcnRfZGVmaW5pdGlvbi5zZXZlcml0eSAiQ3JpdGljYWwifX0KCQkic2V2ZXJpdHkiOiAxLAoJe3svZXF1YWx9fQogIHt7I2VxdWFsIGRhdGEuYWxlcnRfZGVmaW5pdGlvbi5zZXZlcml0eSAiSW5mbyJ9fQoJCSJzZXZlcml0eSI6IDIsCgl7ey9lcXVhbH19CiAge3sjZXF1YWwgZGF0YS5hbGVydF9kZWZpbml0aW9uLnNldmVyaXR5ICJFcnJvciJ9fQoJCSJzZXZlcml0eSI6IDIsCgl7ey9lcXVhbH19CiAgImNvbnNvbGUiOiAidG9jIiwKICAidmVyc2lvbiI6ICIxLjAiLAogICJjcm4iOiB7CiAgICAgICJ2ZXJzaW9uIjogInYxIiwKICAgICJjdHlwZSI6ICJwdWJsaWMiLAogICAgImNuYW1lIjogImJsdWVtaXgiLAogICAgInJlc291cmNlX3R5cGUiOiAib2JqZWN0IiwKICAgICJyZXNvdXJjZSI6ICJldmVudC1ub3RpZmljYXRpb25zIiwKICAgICJzZXJ2aWNlX25hbWUiOiAiZXZlbnQtbm90aWZpY2F0aW9ucyIKICAgIH0sCiAgImFsZXJ0X2lkIjogInt7ZGF0YS5hbGVydF9kZWZpbml0aW9uLmlkfX0iLAogICJ0cmliZV9uYW1lIjogIk1vYmlsZSIsCiAgImRpc2FibGVfcGFnZXIiOiAiZmFsc2UiLAogICJzb3VyY2UiOiAie3tzb3VyY2V9fSIsCiAgInRpcF9tc2dfdHlwZSI6ICJjcmVhdGUubm90aWNlIiwKICAic2l0dWF0aW9uIjogInt7aWJtZW5kZWZhdWx0c2hvcnR9fSIsCiAgImN1c3RvbWVyX2ltcGFjdGluZyI6ICJmYWxzZSIsCiAgInJ1bmJvb2tfdG9jX2VuYWJsZWQiOiAiZmFsc2UiLAogICJzaG9ydF9kZXNjcmlwdGlvbiI6ICJ7e2libWVuZGVmYXVsdHNob3J0fX0iLAogICJwcm9kdWN0X3JlYWR5X2NvbXBsaWFuY2UiOiAidHJ1ZSIsCiAgImxvbmdfZGVzY3JpcHRpb24iOiAie3tkYXRhLmFsZXJ0X2RlZmluaXRpb24uZGVzY3JpcHRpb259fSIsCiAgInRpbWVzdGFtcCI6ICJ7e3RpbWV9fSIsCiAgImFsZXJ0X3VpX3VybCI6ICJ7e2RhdGEubGlua3Mudmlld19hbGVydH19IiwKICAicnVuYm9va191cmwiOiAie3tkYXRhLmFsZXJ0X2RlZmluaXRpb24ubWV0YV9sYWJlbHMucnVuYm9va319Igp9"
+	},
+	"type": "webhook.notification"
+    }
+
+-  Slack notification template
+    ```JSON
+    {
+	"name": "Template for TIP",
+	"params": {
+        "body": "eyJibG9ja3MiOlt7InR5cGUiOiJzZWN0aW9uIiwidGV4dCI6eyJ0eXBlIjoibXJrZG93biIsInRleHQiOiJUaGlzIGlzIGEgbm90aWZ5aW5nIG1lc3NhZ2UuIn19LHsidHlwZSI6ImRpdmlkZXIiLCJ0ZXh0Ijp7InR5cGUiOiJtbmF2IiwidGV4dCI6IlRoaXMgaXMgYSBuZXcgbm90aWZ5aW5nIG1lc3NhZ2UuIiwiZW1vamkiOnRydWV9fV0seyJ0eXBlIjoiYWN0aW9ucyIsImVsZW1lbnRzIjpbeyJ0eXBlIjoicGxhaW5fdGV4dCIsInRleHQiOnsic2VsZWN0aW9yIjp7InR5cGUiOiJwbGFpbl90ZXh0IiwidGV4dCI6IlZpZXcgRGV0YWlscyIsImVtb2ppIjp0cnVlfX19XX0="
+	},
+	"type": "slack.notification"
+    }
 
     The following describe the personalization tags for the JSON example: 
 

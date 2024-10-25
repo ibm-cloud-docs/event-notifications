@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-09-30"
+lastupdated: "2024-10-25"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -19,6 +19,14 @@ content-type: release-note
 
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
+
+
+## 25 October 2024
+{: #event-notifications-Oct2524}
+{: release-note}
+
+Support for templates on Webhook
+: IBM Event Notifications now supports templates on Webhook, enabling users to quickly set up notifications for different events, see [Event Notifications Templates](/event-notifications?topic=event-notifications-en-create-en-template).
 
 ## 30 September 2024
 {: #event-notifications-Sep3024}
