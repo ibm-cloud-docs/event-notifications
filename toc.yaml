@@ -75,7 +75,6 @@ toc:
               - en-destination-msteams.md
               - en-destination-pagerduty.md
               - en-destination-webhook.md
-              - en-destination-cloud-functions.md
               - en-destination-servicenow.md
               - en-destination-codeengine.md
               - en-destination-cloud-object-storage.md
