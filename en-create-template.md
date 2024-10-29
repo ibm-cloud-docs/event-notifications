@@ -201,6 +201,7 @@ Examples:
 	},
 	"type": "webhook.notification"
     }
+    ```
 
 -  Slack notification template
     ```JSON
@@ -211,6 +212,7 @@ Examples:
 	},
 	"type": "slack.notification"
     }
+    ```
 
     The following describe the personalization tags for the JSON example: 
 
