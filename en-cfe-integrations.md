@@ -56,6 +56,23 @@ To configure and collect failed events, do the following steps:
 
 1. Click the toggle switch to **ON** status under the **Collect failed events** column for the destination for which you want to collect the failed events. A success message is displayed for switching ON for collecting failed events for the selected destination.
 
+### Available list of destinations for collecting failed events
+
+* [Slack](/docs/event-notifications?topic=event-notifications-en-destinations-slack)
+* [MSTeams](/docs/event-notifications?topic=event-notifications-en-destinations-msteams)
+* [PagerDuty](/docs/event-notifications?topic=event-notifications-en-destinations-pagerduty)
+* [ServiceNow](/docs/event-notifications?topic=event-notifications-en-destinations-servicenow)
+* [CodeEngine](/docs/event-notifications?topic=event-notifications-en-destinations-codeengine)
+* [IBM Cloud Object Storage](/docs/event-notifications?topic=event-notifications-en-destinations-cloud-object-storage)
+* Push Notifications
+   * [Android Push Notifications(FCM)](/docs/event-notifications?topic=event-notifications-en-push-fcm)
+   * [iOS Push Notifications(APN's)](/docs/event-notifications?topic=event-notifications-en-push-apns)
+   * [Chrome Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-chrome)
+   * [Firefox Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-firefox)
+   * [Safari Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-safari)
+   * [Huawei Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-huawei)
+
+
 After configuration and enabling collecting of failed events for a destination, the failed events gets added to the {{site.data.keyword.cos_full_notm}} bucket. You can take further action on the failed events as per your requirements.
 
 If you disconnect **Collect Failed Events** from the **Integrations** > **Collect Failed Events** overflow menu option, then all the destinations that are enabled to collect the failed events, will be switched to **OFF** state.
