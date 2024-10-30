@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-08-30"
+lastupdated: "2024-10-30"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, slack
 
@@ -64,39 +64,51 @@ Event notification generates slack notifications from incoming payload. The temp
 
 ```sh
 {
-   "text": "{{ibmendefaultshort}}",  // Read from event payload
-   "attachments": [{
-      "color": "{{subscriptions.attachment_color}}",  // Read from subscription
-      "blocks": 
-      [
-         {
-         "type": "section",
-         "text": {
-            "type": "mrkdwn",
-            "text": "{{ibmendefaultlong}}" // Read from event payload
-         }
-      },
-      {
-         "type": "divider"
-      },
-      {
-         "type": "section",
-         "text": 
-         {
-            "type": "mrkdwn",
-            "text": "```{{event_payload}}```" // Full notification payload sent to /notifications endpoint
-         }
-      }
+  "blocks": [
+    {
+      "type": "rich_text",
+      "elements": [
+        {
+          "type": "rich_text_section",
+          "elements": [
+            {
+              "type": "text",
+              "text": "{{ibmendefaultshort}}", // Read from event payload
+              "style": {
+                "bold": true
+              }
+            }
+          ]
+        }
       ]
-   
-   }]
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "plain_text",
+        "text": "{{ibmendefaultlong}}", // Read from event payload
+        "emoji": true
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "context",
+      "elements": [
+        {
+          "type": "mrkdwn",
+          "text": "```{{event_payload}}```" // Full notification payload sent to /notifications endpoint
+        }
+      ]
+    }
+  ]
 }
 ```
 
 Here -
 
 *ibmendefaultshort* is the default short payload that is provided in the incoming payload.
-*attachment_color* is the color that is applied to the notification, which was provided during subscription.
 *ibmendefaultlong* is the default long payload that is provided in the incoming payload.
 *data* is the data JSON provided in the incoming payload and format as JSON in the slack notification.
 
