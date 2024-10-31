@@ -119,6 +119,6 @@ Human destinations are devices, servers, or applications that present notificati
 Service destinations are cloud services or applications where notifications are consumed programmatically. The following service destinations are supported:
 
 - [Webhook](/docs/event-notifications?topic=event-notifications-en-destinations-webhook)
-- [{{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}](/docs/event-notifications?topic=event-notifications-en-destinations-cloud-functions)
+- 
 - [{{site.data.keyword.codeengineshort}}](/docs/event-notifications?topic=event-notifications-en-destinations-codeengine)
 - [{{site.data.keyword.cos_full_notm}}](/docs/event-notifications?topic=event-notifications-en-destinations-cloud-object-storage)

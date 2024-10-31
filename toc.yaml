@@ -24,25 +24,27 @@ toc:
   - navgroup:
       id: tutorial
       topics:
-      - en-create-source.md
-      - en-create-topic.md
-      - en-create-destination.md
-      - en-create-subscription.md
-      - en-create-template.md
-      - en-terraform-tutorial.md
       - en-ts-monitor-secrets.md
   - navgroup:
       id: howto
       topics:
+      - en-terraform-tutorial.md
+      - en-create-topic.md
+      - en-create-subscription.md
+      - en-create-template.md
+      - en-integrations.md
+      - en-smtp-configurations.md
       - topicgroup:
           label: Event sources
           topics:
-          - en-source.md
           - en-resource-lifcycle-events.md
+          - en-create-source.md
+          - en-source.md
       - topicgroup:
           label: Event destinations
           topics:
           - en-destination.md
+          - en-create-destination.md
           - topicgroup:
               label: Email destinations
               topics:
@@ -57,53 +59,51 @@ toc:
               - en-destination-sms.md
               - en-destination-sms-custom.md
           - topicgroup:
-              label: Push notifications
+              label: Push notifications destinations
               topics:
               - en-destination-push.md
-              - link:
-                  label: Android Push Notifications (FCM)
-                  href: https://{DomainName}/docs/event-notifications?topic=event-notifications-en-push-fcm
-              - link:
-                  label: iOS Push Notifications (APNs)
-                  href: https://{DomainName}/docs/event-notifications?topic=event-notifications-en-push-apns
-              - link:
-                  label: Chrome Push Notifications
-                  href: https://{DomainName}/docs/event-notifications?topic=event-notifications-en-push-chrome
-              - link:
-                  label: Firefox Push Notifications
-                  href: https://{DomainName}/docs/event-notifications?topic=event-notifications-en-push-firefox
-              - link:
-                  label: Safari Push Notifications
-                  href: https://{DomainName}/docs/event-notifications?topic=event-notifications-en-push-safari
-              - link:
-                  label: Huawei Push Notifications
-                  href: https://{DomainName}/docs/event-notifications?topic=event-notifications-en-push-huawei
-          - en-destination-slack.md
-          - en-destination-msteams.md
-          - en-destination-pagerduty.md
-          - en-destination-webhook.md
-          - en-destination-cloud-functions.md
-          - en-destination-servicenow.md
-          - en-destination-codeengine.md
-          - en-destination-cloud-object-storage.md
-          - en-test-destination.md
-          - en-smtp-configurations.md
-          - en-integrations.md
-          - en-cfe-integrations.md
+              - en-push-fcm.md
+              - en-push-apns.md
+              - en-push-chrome.md
+              - en-push-firefox.md
+              - en-push-safari.md
+              - en-push-huawei.md
+          - topicgroup:
+              label: Event destinations
+              topics:
+              - en-destination-slack.md
+              - en-destination-msteams.md
+              - en-destination-pagerduty.md
+              - en-destination-webhook.md
+              - en-destination-servicenow.md
+              - en-destination-codeengine.md
+              - en-destination-cloud-object-storage.md
+              - en-managing-encryption.md
+              - en-test-destination.md
+      - en-cfe-integrations.md
+      - topicgroup:
+          label: Enhancing security
+          topics:
+          - en-iam.md
+          - en-cbr.md
+          - en-service-credentials.md
+          - en-managing-encryption.md
+          - en-data-security.md
+          - en-audit.md
+          - en-email-best-practices.md
+          - en-cse.md
+          - en-cipher.md
       - topicgroup:
           label: Logging and monitoring
           topics:
-          - en-monitor.md
           - monitoring.md
           - en-monitoring-metrics.md
-          - en-logs.md
           - logging.md
       - topicgroup:
           label: Enhancing security
           topics:
           - en-iam.md
           - en-cbr.md
-          - en-audit.md
           - at-events.md
           - en-data-security-compliance.md
           - en-data-security.md
@@ -119,23 +119,22 @@ toc:
       id: reference
       topics:
       - topicgroup:
-          label: API Reference
-          links:
-          - link:
-              label: API Explorer
-              href: https://{DomainName}/apidocs/event-notifications
-      - topicgroup:
-          label: CLI Reference
-          topics:
-          - include: ../event-notifications-cli-plugin/event-notifications-cli.md
-          - en-cli.md
-      - topicgroup:
           label: High availability and disaster recovery
           topics:
           - topic: en-high-availability.md
             navtitle: High availability
           - topic: en-bc-dr.md
             navtitle: Disaster recovery
+      - topicgroup:
+          label: API Reference
+          links:
+          - link:
+              label: Event Notifications API
+              href: https://{DomainName}/apidocs/event-notifications
+      - topicgroup:
+          label: CLI Reference
+          topics:
+          - include: ../event-notifications-cli-plugin/event-notifications-cli.md
       - topicgroup:
           label: SDKs
           topics:

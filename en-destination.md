@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2021, 2023, 2024
+  years: 2021, 2024
 lastupdated: "2024-10-07"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, event destination
@@ -54,6 +54,5 @@ The Inbuilt Email and Inbuilt SMS destinations are provided out of the box, and 
 Service destinations are cloud services or application where notifications are consumed programmatically. The following service destination is supported by the {{site.data.keyword.en_short}} service:
 
 - [Webhook](/docs/event-notifications?topic=event-notifications-en-destinations-webhook)
-- [{{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}](/docs/event-notifications?topic=event-notifications-en-destinations-cloud-functions) (Deprecated)
 - [{{site.data.keyword.codeengineshort}}](/docs/event-notifications?topic=event-notifications-en-destinations-codeengine)
 - [{{site.data.keyword.cos_full_notm}}](/docs/event-notifications?topic=event-notifications-en-destinations-cloud-object-storage)

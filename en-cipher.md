@@ -15,7 +15,11 @@ subcollection: event-notifications
 # TLS cipher support
 {: #en-cipher-support}
 
-{{site.data.keyword.en_short}} API endpoints support the following TLS versions. Additionally, {{site.data.keyword.en_short}} API end points allows only the following cipher suites:
+{{site.data.keyword.en_short}} API endpoints support the following TLS versions:
+- `TLS 1.3`
+- `TLS 1.2`
+
+Additionally, {{site.data.keyword.en_short}} API end points allows only the following cipher suites:
 {: shortdesc}
 
 - `ECDHE-ECDSA-AES256-GCM-SHA384`

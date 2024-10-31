@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2017, 2022
-lastupdated: "2022-11-28"
+  years:  2017, 2024
+lastupdated: "2024-10-11"
 
 keywords: event notifications, event notification, notifications, service access, manage, user roles
 
@@ -11,7 +11,7 @@ subcollection: event-notifications
 ---
 {{site.data.keyword.attribute-definition-list}}
 
-# Managing service access
+# Managing IAM access for {{site.data.keyword.en_short}}
 {: #service-access-management}
 
 With {{site.data.keyword.en_short}} and {{site.data.keyword.iamlong}}, {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) account owners can manage user access in your account.

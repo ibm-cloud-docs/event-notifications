@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-10-07"
+lastupdated: "2024-10-31"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -26,7 +26,7 @@ subcollection: event-notifications
 ### Centralized alert routing
 {: #en-features-routing}
 
-From a single dashboard, you can route event notifications from {{site.data.keyword.compliance_long}} (SCC), {{site.data.keyword.secrets-manager_full_notm}}, or {{site.data.keyword.monitoringfull_notm}} to relevant stakeholders. You can also filter alerts by severity and choose a communication channel that is most appropriate, for example SMS or push for immediate priority or email for lesser priority alerts.
+From a single dashboard, you can route event notifications from {{site.data.keyword.compliance_long}}, {{site.data.keyword.secrets-manager_full_notm}}, or {{site.data.keyword.monitoringfull_notm}} to relevant stakeholders. You can also filter alerts by severity and choose a communication channel that is most appropriate, for example SMS or push, for immediate priority or email for lesser priority alerts.
 
 ### Filtered source events
 {: #en-features-filter}

@@ -17,6 +17,9 @@ subcollection: event-notifications
 You can send notifications or alerts to multiple destination types, for example, email, SMS, and others that are subscribed to a particular topic. Configure topics as needed and {{site.data.keyword.en_short}} handles the routing and delivering of alerts reliably to the correct destinations.
 {: shortdesc}
 
+## Creating a topic
+{: #en-create-topic}
+
 1. Select **Topics** in the {{site.data.keyword.en_short}} console.
 
 1. Click **Create**, and enter the following topic details:
@@ -24,8 +27,8 @@ You can send notifications or alerts to multiple destination types, for example,
    - **Description**: add an optional description for the topic.
    - **Source**: select a source from the list.
 
-Step 1 created a topic, step 2 provisions optional custom rules for the topic.
-{: note}
+    Step 1 created a topic, step 2 provisions optional custom rules for the topic.
+    {: note}
 
 1. Add the following rules to your topic:
 
@@ -34,38 +37,38 @@ Step 1 created a topic, step 2 provisions optional custom rules for the topic.
    - **Severity**: select severity from the severity list.
    - **Advanced conditions**: create your own custom conditions, which must follow [JSONpath specifications](https://goessner.net/articles/JsonPath/). The correctly written rule will extract the appropriate data from the incoming request payload. {{site.data.keyword.en_short}} supports the == operator for JSONPath evaluation. You can validate your JSONPath [here](https://jsonpath.com/).
 
-Example:
+      Example:
 
-```JSON
-{
-   "data": {
-      "findings": [
-         {
+      ```JSON
+      {
+         "data": {
+            "findings": [
+               {
+                  "severity": "LOW",
+                  "provider": "cert-mgr"
+               },
+               {
+                  "severity": "HIGH",
+                  "provider": "secrets-mgr"
+               }
+            ],
             "severity": "LOW",
-            "provider": "cert-mgr"
-         },
-         {
-            "severity": "HIGH",
-            "provider": "secrets-mgr"
+            "payloadType": "findings",
+            "issuer": "IBM Cloud Security Advisor",
          }
-      ],
-      "severity": "LOW",
-      "payloadType": "findings",
-      "issuer": "IBM Cloud Security Advisor",
-   }
-}
-```
+      }
+      ```
 
-Based on the previous JSON input, the following valid JSONPaths can be constructed:
+      Based on the previous JSON input, the following valid JSONPaths can be constructed:
 
-```bash
-1. $.data.severity=='LOW'
-Output: True
+      ```bash
+      1. $.data.severity=='LOW'
+      Output: True
 
-2. $.data.findings[1].severity == 'HIGH'
-Output: True
-```
-{: codeblock}
+      2. $.data.findings[1].severity == 'HIGH'
+      Output: True
+      ```
+      {: codeblock}
 
 1. Click **Add a condition**.
 

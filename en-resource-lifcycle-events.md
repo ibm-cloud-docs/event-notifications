@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2022-11-30"
+  years: 2022, 2024
+lastupdated: "2024-10-11"
 
 keywords: event notifications, Resource lifecycle events
 
@@ -12,7 +12,7 @@ subcollection: event-notifications
 
 {{site.data.keyword.attribute-definition-list}}
 
-# {{site.data.keyword.cloud_notm}} Resource lifecycle events
+# Working with {{site.data.keyword.cloud_notm}} Resource lifecycle events
 {: #en-resource-lifecycle-events}
 
 {{site.data.keyword.en_short}} service uses the {{site.data.keyword.cloud_notm}} platform for authentication, access, self-service instance creation, metering, and billing.

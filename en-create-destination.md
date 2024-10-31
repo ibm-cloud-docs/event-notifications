@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-10-07"
+lastupdated: "2024-10-25"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -14,19 +14,8 @@ subcollection: event-notifications
 # Creating an {{site.data.keyword.en_short}} destination
 {: #en-create-en-destination}
 
-Destinations are custom protocols, which are either services or user reachable entities. {{site.data.keyword.en_short}} supports the following destinations:
+Destinations are custom protocols, which are either services or user reachable entities. Refer [here](/docs/event-notifications?topic=event-notifications-en-destination) to find the list of destinations supported by {{site.data.keyword.en_short}}.
 
-- {{site.data.keyword.cloud_notm}} Email
-- {{site.data.keyword.cloud_notm}} SMS
-- Push notifications (Android, iOS, Chrome, Firefox, Safari and Huawei)
-- Slack
-- Microsoft&trade; Teams
-- PagerDuty
-- Webhook
-- {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}
-- ServiceNow
-- {{site.data.keyword.cloud_notm}} {{site.data.keyword.codeengineshort}}
-- {{site.data.keyword.cos_full_notm}}
 {: shortdesc}
 
 **{{site.data.keyword.cloud_notm}} SMS service** and **{{site.data.keyword.cloud_notm}} Email service** are supported out of the box.
