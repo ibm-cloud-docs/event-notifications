@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-10-31"
+lastupdated: "2024-11-04"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -51,7 +51,7 @@ Route a single event notification to many destinations with just a few clicks. S
 ### Governance
 {: #en-features-governance}
 
-{{site.data.keyword.en_short}} user and notification activity can be tracked through {{site.data.keyword.cloudaccesstraillong_notm}} and {{site.data.keyword.loganalysislong_notm}} so you can find out what happened and when.
+{{site.data.keyword.en_short}} user and notification activity can be tracked through {{site.data.keyword.cloudaccesstraillong_notm}} and {{site.data.keyword.logs_full_notm}} so you can find out what happened and when.
 
 
 ## Concepts

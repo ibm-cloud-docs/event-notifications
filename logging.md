@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-09-05"
+lastupdated: "2024-11-04"
 
 keywords: event notifications cloud logs, event notifications logging, event notifications external logs
 
@@ -12,11 +12,10 @@ subcollection: event-notifications
 
 {{site.data.keyword.attribute-definition-list}}
 
-
 # Logging for {{site.data.keyword.en_short}}
-{: #logging-old}
+{: #logging}
 
-{{site.data.keyword.cloud_notm}} services, such as {{site.data.keyword.en_short}}, generate platform logs that you can use to investigate abnormal activity and critical actions in your account, and troubleshoot problems.
+{{site.data.keyword.cloud}} services, such as {{site.data.keyword.en_short}}, generate platform logs that you can use to investigate abnormal activity and critical actions in your account, and troubleshoot problems.
 {: shortdesc}
 
 You can use {{site.data.keyword.logs_routing_full_notm}}, a platform service, to route platform logs in your account to a destination of your choice by configuring a tenant that defines where platform logs are sent. For more information, see [About Logs Routing](/docs/logs-router?topic=logs-router-about).
@@ -29,20 +28,17 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 ## Locations where platform logs are generated
 {: #log-locations}
 
-
-
-| Field                  | Type                 |
+| Region                  | Supported                 |
 |------------------------|----------------------|
 | Dallas (`us-south`)    | [Yes]{: tag-green}   |
 | Sydney (`au-syd`)      | [Yes]{: tag-green}   |
 | Frankfurt (`eu-de`)    | [Yes]{: tag-green}   |
 | Madrid (`eu-es`)       | [Yes]{: tag-green}   |
 | London (`eu-gb`)       | [Yes]{: tag-green}   |
+{: caption="Locations where platform logs are generated" caption-side="top"}
 
 ### Locations where logs are sent to {{site.data.keyword.la_full_notm}}
 {: #la-legacy-locations}
-
-
 
 {{site.data.keyword.en_short}} sends platform logs to {{site.data.keyword.la_full_notm}} in the regions indicated in the following table.
 
@@ -76,10 +72,43 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 {: class="simple-tab-table"}
 {: row-headers}
 
+### Locations where logs are sent to {{site.data.keyword.logs_full_notm}}
+{: #la-legacy-locations}
+
+{{site.data.keyword.en_short}} sends platform logs to {{site.data.keyword.logs_full_notm}} in the regions indicated in the following table.
+
+| Dallas (`us-south`) | Washington (`us-east`)  | Toronto (`ca-tor`) | Sao Paulo (`br-sao`) |
+|---------------------|-------------------------|-------------------|----------------------|
+| [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} |
+{: caption="Regions where platform logs are sent in Americas locations" caption-side="top"}
+{: #la-table-1}
+{: tab-title="Americas"}
+{: tab-group="la"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+| Tokyo (`jp-tok`)    | Sydney (`au-syd`) |  Osaka (`jp-osa`) | Chennai (`in-che`) |
+|---------------------|------------------|------------------|--------------------|
+| [No]{: tag-red} | [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} |
+{: caption="Regions where platform logs are sent in Asia Pacific locations" caption-side="top"}
+{: #la-table-2}
+{: tab-title="Asia Pacific"}
+{: tab-group="la"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+| Frankfurt (`eu-de`)  | London (`eu-gb`) | Madrid (`eu-es`) |
+|---------------------------------------------------------------|---------------------|------------------|
+| [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} |
+{: caption="Regions where platform logs are sent in Europe locations" caption-side="top"}
+{: #la-table-3}
+{: tab-title="Europe"}
+{: tab-group="la"}
+{: class="simple-tab-table"}
+{: row-headers}
+
 ## Locations where logs are sent by {{site.data.keyword.logs_routing_full_notm}}
 {: #lr-locations}
-
-
 
 {{site.data.keyword.en_short}} sends logs by {{site.data.keyword.logs_routing_full_notm}} in the regions that are indicated in the following table.
 
@@ -116,49 +145,25 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 ## Enabling logging
 {: #log-enable}
 
-Platform logs are logs that are exposed by logging-enabled services and the platform in {{site.data.keyword.cloud_notm}}.
-
-- Platform logs are regional.
-
-   You can monitor logs from enabled services on the {{site.data.keyword.cloud_notm}} in the region where the service is available.
-
-- You can configure one instance only of the {{site.data.keyword.la_short}} service per region to collect platform logs in that location.
-
-   You can have multiple {{site.data.keyword.la_short}} instances in a location. However, only one instance in a location (region) can be configured to receive logs from [enabled services](/docs/log-analysis?topic=log-analysis-cloud_services) in that {{site.data.keyword.cloud_notm}} location.
-
-- To configure a {{site.data.keyword.la_short}} instance, you must set on the `platform logs` configuration setting. Also, you must have the platform role `editor` or higher for the {{site.data.keyword.la_short}} service in your account.
-
-   To enable platform logs, see:
-
-   - [Configuring platform logs through the Observability dashboard](/docs/log-analysis?topic=log-analysis-config_svc_logs&interface=ui)
-
-   - [Configuring platform logs from the command line](/docs/log-analysis?topic=log-analysis-config_svc_logs&interface=cli)
-
-For more information about platform logs, see [Configuring IBM Cloud platform logs](/docs/log-analysis?topic=log-analysis-config_svc_logs).
+Platform logs are logs that are exposed by logging-enabled services and the platform in {{site.data.keyword.cloud_notm}}. You can configure {{site.data.keyword.cloud_notm}} logs instance to receive the logs sent by service. See [{{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-getting-started) for more information.
 
 ## Viewing logs
 {: #logging_view-old}
 
-If a {{site.data.keyword.la_short}} instance in a region is already enabled to collect platform logs, logs from the {{site.data.keyword.en_short}} service in that region are collected automatically and available for analysis through this instance.
-
-To view and analyze platform logs for an {{site.data.keyword.en_short}} instance, check that the {{site.data.keyword.la_short}} instance is provisioned in the same region where the {{site.data.keyword.en_short}} instance that you want to monitor is available.
+To view and analyze platform logs for an {{site.data.keyword.en_short}} instance, check that the {{site.data.keyword.logs_routing_full_notm}} instance is provisioned and target is set for the same region where the {{site.data.keyword.en_short}} instance that you want to monitor is available.
 {: note}
 
-To start the {{site.data.keyword.la_short}} web UI to view logs, see [Navigating to the web UI](/docs/log-analysis?topic=log-analysis-launch).
-
-
+To start the {{site.data.keyword.logs_routing_full_notm}} web UI to view logs, see [Navigating to the web UI](/docs/cloud-logs?topic=cloud-logs-instance-launch).
 
 ### Launching {{site.data.keyword.logs_full_notm}} from the Observability page
 {: #log-launch-standalone}
-
-
 
 For more information about launching the {{site.data.keyword.logs_full_notm}} UI, see [Launching the UI in the {{site.data.keyword.logs_full_notm}} documentation.](/docs/cloud-logs?topic=cloud-logs-instance-launch)
 
 ## Fields per log type
 {: #logging_fields-old}
 
-Table 4 outlines the fields that are included in each log record:
+See the following table for the list of fields that are included in each log record:
 
 | Field             | Type       | Description             |
 |-------------------|------------|-------------------------|
@@ -176,11 +181,12 @@ Table 4 outlines the fields that are included in each log record:
 | `level`           | Required   | Type of log. Valid values are `INFO`, `WARN`, `ERROR` |
 {: caption="Log record fields" caption-side="top"}
 
+For information about fields included in every platform log, see [Fields for platform logs](/docs/logs-router?topic=logs-router-about-platform-logs#platform_reqd). 
 
 ## Log messages
 {: #log_messages}
 
-The following table lists the message IDs that are generated by the {{site.data.keyword.en_short}} service:
+The following table lists the message IDs that are generated by {{site.data.keyword.en_short}}:
 
 | Message ID | Log type    | Description |
 |------------|-------------|-------------|
@@ -229,25 +235,15 @@ The following table lists the message IDs that are generated by the {{site.data.
 | `event-notifications.00010E` | `ERROR` | `Service Now API returned with an error response: Unauthorised with the status code: 401`|
 {: caption="Additional information about message IDs" caption-side="top"}
 
-
- -->
-
 ### List logs generated by a service
 {: #logging_analyze_1-old}
 
-If you want to view all the logs that are being generated for a particular source, get the `sourceID` from the {{site.data.keyword.en_short}} service dashboard and use the following query in {{site.data.keyword.la_short}}:
-
-```bash
-sourceID:<source_crn>
-```
-{: codeblock}
+If you want to view all the logs that are being generated for a particular instance, select the `guid` of {{site.data.keyword.en_short}} instance from left panel under subsystems and search the source in serach bar.
 
 ### List logs for a notification request
 {: #logging_analyze_2-old}
 
-If you know the notification ID that is generated for a request from a service or source to the {{site.data.keyword.en_short}} service, use the following query in {{site.data.keyword.la_short}} to list all logs for that particular notification ID:
+If you know the notification ID that is generated for a request from a service or source to the {{site.data.keyword.en_short}} service, use the following query in {{site.data.keyword.logs_full_notm}} to list all logs for that particular notification ID:
 
-```bash
-notificationID:<notification Id>
-```
+<notification Id>
 {: codeblock}
