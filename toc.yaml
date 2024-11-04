@@ -82,22 +82,9 @@ toc:
               - en-test-destination.md
       - en-cfe-integrations.md
       - topicgroup:
-          label: Enhancing security
+          label: Observability
           topics:
-          - en-iam.md
-          - en-cbr.md
-          - en-service-credentials.md
-          - en-managing-encryption.md
-          - en-data-security.md
-          - en-audit.md
-          - en-email-best-practices.md
-          - en-cse.md
-          - en-cipher.md
-      - topicgroup:
-          label: Logging and monitoring
-          topics:
-          - monitoring.md
-          - en-monitoring-metrics.md
+          - monitoring.md 
           - logging.md
       - topicgroup:
           label: Enhancing security
