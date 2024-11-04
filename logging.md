@@ -28,13 +28,14 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 ## Locations where platform logs are generated
 {: #log-locations}
 
-| Field                  | Type                 |
+| Region                  | Supported                 |
 |------------------------|----------------------|
 | Dallas (`us-south`)    | [Yes]{: tag-green}   |
 | Sydney (`au-syd`)      | [Yes]{: tag-green}   |
 | Frankfurt (`eu-de`)    | [Yes]{: tag-green}   |
 | Madrid (`eu-es`)       | [Yes]{: tag-green}   |
 | London (`eu-gb`)       | [Yes]{: tag-green}   |
+{: caption="Locations where platform logs are generated" caption-side="top"}
 
 ### Locations where logs are sent to {{site.data.keyword.la_full_notm}}
 {: #la-legacy-locations}
@@ -73,8 +74,6 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 
 ### Locations where logs are sent to {{site.data.keyword.logs_full_notm}}
 {: #la-legacy-locations}
-
-
 
 {{site.data.keyword.en_short}} sends platform logs to {{site.data.keyword.logs_full_notm}} in the regions indicated in the following table.
 
@@ -146,13 +145,10 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 ## Enabling logging
 {: #log-enable}
 
-Platform logs are logs that are exposed by logging-enabled services and the platform in {{site.data.keyword.cloud_notm}}.
-
-- You can configure IBM Cloud logs instance to receive the logs sent by service. Leran how to enable [Cloud Logs](/docs/cloud-logs?topic=cloud-logs-getting-started)
+Platform logs are logs that are exposed by logging-enabled services and the platform in {{site.data.keyword.cloud_notm}}. You can configure {{site.data.keyword.cloud_notm}} logs instance to receive the logs sent by service. See [{{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-getting-started) for more information.
 
 ## Viewing logs
 {: #logging_view-old}
-
 
 To view and analyze platform logs for an {{site.data.keyword.en_short}} instance, check that the {{site.data.keyword.logs_routing_full_notm}} instance is provisioned and target is set for the same region where the {{site.data.keyword.en_short}} instance that you want to monitor is available.
 {: note}
@@ -185,6 +181,7 @@ See the following table for the list of fields that are included in each log rec
 | `level`           | Required   | Type of log. Valid values are `INFO`, `WARN`, `ERROR` |
 {: caption="Log record fields" caption-side="top"}
 
+For information about fields included in every platform log, see [Fields for platform logs](/docs/logs-router?topic=logs-router-about-platform-logs#platform_reqd). 
 
 ## Log messages
 {: #log_messages}

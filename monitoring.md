@@ -59,7 +59,7 @@ You can use {{site.data.keyword.mon_full}} to visualize and alert on metrics tha
 {: class="simple-tab-table"}
 {: row-headers}
 
-## Enabling platform metrics for {{site.data.keyword.en_full}}
+## Enabling platform metrics for {{site.data.keyword.en_short}}
 {: #monitoring-enable}
 
 Before you can start with {{site.data.keyword.en_short}} monitoring metrics, you must first opt in and [enable platform metrics](https://cloud.ibm.com/docs/monitoring?topic=monitoring-platform_metrics_enabling).
@@ -76,7 +76,7 @@ To monitor platform metrics, check that the {{site.data.keyword.mon_full_notm}} 
 ## Viewing metrics
 {: #monitoring-view}
 
-To monitor {{site.data.keyword.en_full}} metrics, you must launch the {{site.data.keyword.mon_full_notm}} web UI for the instance that is enabled for platform metrics in the region where your {{site.data.keyword.en_full}} instance is provisioned.
+To monitor {{site.data.keyword.en_short}} metrics, you must launch the {{site.data.keyword.mon_full_notm}} web UI for the instance that is enabled for platform metrics in the region where your service instance is created.
 {: important}
 
 ### Launching {{site.data.keyword.mon_full}} from the Observability page
@@ -84,7 +84,7 @@ To monitor {{site.data.keyword.en_full}} metrics, you must launch the {{site.dat
 
 For more information about launching the {{site.data.keyword.mon_full_notm}} UI, see [Launching the UI in the {{site.data.keyword.mon_full_notm}} documentation.](/docs/monitoring?topic=monitoring-launch)
 
-## Monitoring {{site.data.keyword.en_full}}
+## Monitoring {{site.data.keyword.en_short}}
 {: #monitoring-monitor}
 
 1. Start the [{{site.data.keyword.mon_full_notm}} web UI](https://cloud.ibm.com/docs/monitoring?topic=monitoring-launch) from the Observability page.
@@ -92,7 +92,7 @@ For more information about launching the {{site.data.keyword.mon_full_notm}} UI,
 1. In the Default Dashboards section, expand **{{site.data.keyword.IBM_notm}}**.
 1. Select the {{site.data.keyword.en_short}} dashboard from the list.
 1. Access your deployment's monitoring dashboard from {{site.data.keyword.mon_full_notm}} located in the sidebar under **{{site.data.keyword.IBM_notm}}**.
-1. Change the scope or make a copy of the default dashboard to monitor an {{site.data.keyword.en_short}} service instance.
+1. Change the scope or make a copy of the default dashboard to monitor a service instance.
 
 ## Metrics available by service plan
 {: #monitoring-metrics-by-plan}
@@ -121,7 +121,7 @@ The following attributes are available for segmenting all of the metrics previou
 | `Location` | `ibm_location` | The location of the monitored resource, which can be a region, data center, or global. |
 | `Scope` | `ibm_scope` | The scope is the account, organization, or space GUID associated with this metric. |
 | `Service instance` | `ibm_service_instance` | The service instance segment identifies the instance that the metric is associated with. |
-{: caption="Segmentation attributes" caption-side="bottom"}
+{: caption="Global segmentation attributes" caption-side="bottom"}
 
 ### Additional attributes
 {: #monitoring-attributes-add}
@@ -134,4 +134,4 @@ The following attributes are available for segmenting one or more attributes as 
 | `Name of the source` | `ibm_eventnotifications_source` | A source name with its associated ID. |
 | `Type of event notification` | `ibm_eventnotifications_type` | The type of supported destination types. (email, SMS, or webhook) |
 | `Type of push notification device` | `ibm_eventnotifications_device_type` | The type of supported push notification device.(push_android, push_ios) |
-{: caption="More attributes" caption-side="bottom"}
+{: caption="Additional segmentation" caption-side="bottom"}
