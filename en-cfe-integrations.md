@@ -27,6 +27,9 @@ Before you enable collecting failed events in **Destinations**, make sure that y
 If you are using {{site.data.keyword.en_short}} CLI or API to configure {{site.data.keyword.cos_full_notm}} service instance, ensure that you have enabled authorization to grant access between services before integrating with {{site.data.keyword.cos_full_notm}}. For more information, see [Using authorizations to grant access between services](#en-using-s2s-auth2).
 {: important}
 
+If you want to enforce access restrictions based on IP addresses, it is recommended to use context-based restrictions instead of a legacy bucket firewall.  For details, see [Restricting access by network context](/docs/cloud-object-storage?topic=cloud-object-storage-setting-a-firewall) in the Object Storage documentation.  If your setup must continue use of a legacy firewall, use the [Support Center](/unifiedsupport/supportcenter){: external} to create a support case for assistance with the IP range information.
+{: note}
+
 To configure and collect failed events, do the following steps:
 
 1. From your {{site.data.keyword.en_short}} instance dashboard, click **Integrations**. By default, Key Management and Collect Failed Events tile will be displayed.
