@@ -22,7 +22,7 @@ subcollection: observability-ibm
 
 You can use {{site.data.keyword.metrics_router_full_notm}}, a platform service, to route platform metrics in your account to a destination of your choice by configuring targets and routes that define where platform metrics are sent. For more information, see [About {{site.data.keyword.metrics_router_full_notm}} in {{site.data.keyword.cloud_notm}}](/docs/metrics-router?topic=metrics-router-about).
 
-You can use {{site.data.keyword.mon_full}} to visualize and alert on metrics that are generated in your account and routed by {{site.data.keyword.metrics_router_full_notm}} to an {{site.data.keyword.mon_full_notm}} instance.
+You can use {{site.data.keyword.mon_full_notm}} to visualize and alert on metrics that are generated in your account and routed by {{site.data.keyword.metrics_router_full_notm}} to an {{site.data.keyword.mon_full_notm}} instance.
 
 ## Locations where metrics are generated
 {: #mon-locations}
@@ -134,4 +134,4 @@ The following attributes are available for segmenting one or more attributes as 
 | `Name of the source` | `ibm_eventnotifications_source` | A source name with its associated ID. |
 | `Type of event notification` | `ibm_eventnotifications_type` | The type of supported destination types. (email, SMS, or webhook) |
 | `Type of push notification device` | `ibm_eventnotifications_device_type` | The type of supported push notification device.(push_android, push_ios) |
-{: caption="Additional segmentation" caption-side="bottom"}
+{: caption="Additional segmentation attributes" caption-side="bottom"}
