@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-11-04"
+lastupdated: "2024-11-05"
 
 keywords: event notifications cloud logs, event notifications logging, event notifications external logs
 
@@ -73,7 +73,7 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 {: row-headers}
 
 ### Locations where logs are sent to {{site.data.keyword.logs_full_notm}}
-{: #la-legacy-locations}
+{: #logs-locations}
 
 {{site.data.keyword.en_short}} sends platform logs to {{site.data.keyword.logs_full_notm}} in the regions indicated in the following table.
 
