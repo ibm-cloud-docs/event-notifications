@@ -30,7 +30,7 @@ The customer is responsible for the use of the exported data and configuration f
 - The planning and execution for the porting of the required application code on the alternative infrastructure, including the adaptation of customer's application code, deployment automation.
 - The conversion of the exported data and configuration to the format that is required by the alternative infrastructure and adapted applications.
 
-For more information about your responsibilities for {{site.data.keyword.bplong_notm}}, see [Shared responsibilities for {{site.data.keyword.en_full}}](https://cloud.ibm.com/docs/schematics?topic=schematics-sc-responsibilities).
+For more information about your responsibilities for {{site.data.keyword.en_full}}, see [Shared responsibilities for {{site.data.keyword.en_full}}](/docs/event-notifications?topic=event-notifications-en-responsibilities).
 
 ## Data export procedures
 {: #data-portability-procedures}
