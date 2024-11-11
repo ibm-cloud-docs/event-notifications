@@ -6,7 +6,7 @@ lastupdated: "2024-11-11"
 
 keywords:
 
-subcollection: schematics
+subcollection: event-notifications
 
 ---
 
