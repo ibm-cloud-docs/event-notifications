@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-11-04"
+lastupdated: "2024-11-05"
 
 keywords: event notifications cloud logs, event notifications logging, event notifications external logs
 
@@ -73,7 +73,7 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 {: row-headers}
 
 ### Locations where logs are sent to {{site.data.keyword.logs_full_notm}}
-{: #la-legacy-locations}
+{: #logs-locations}
 
 {{site.data.keyword.en_short}} sends platform logs to {{site.data.keyword.logs_full_notm}} in the regions indicated in the following table.
 
@@ -81,9 +81,9 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 |---------------------|-------------------------|-------------------|----------------------|
 | [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} |
 {: caption="Regions where platform logs are sent in Americas locations" caption-side="top"}
-{: #la-table-1}
+{: #logs-table-1}
 {: tab-title="Americas"}
-{: tab-group="la"}
+{: tab-group="logs"}
 {: class="simple-tab-table"}
 {: row-headers}
 
@@ -91,9 +91,9 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 |---------------------|------------------|------------------|--------------------|
 | [No]{: tag-red} | [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} |
 {: caption="Regions where platform logs are sent in Asia Pacific locations" caption-side="top"}
-{: #la-table-2}
+{: #logs-table-2}
 {: tab-title="Asia Pacific"}
-{: tab-group="la"}
+{: tab-group="logs"}
 {: class="simple-tab-table"}
 {: row-headers}
 
@@ -101,9 +101,9 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 |---------------------------------------------------------------|---------------------|------------------|
 | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} |
 {: caption="Regions where platform logs are sent in Europe locations" caption-side="top"}
-{: #la-table-3}
+{: #logs-table-3}
 {: tab-title="Europe"}
-{: tab-group="la"}
+{: tab-group="logs"}
 {: class="simple-tab-table"}
 {: row-headers}
 
