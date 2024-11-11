@@ -144,6 +144,7 @@ toc:
               label: iOS Client SDK
               href: https://github.com/IBM/event-notifications-destination-ios-sdk#ios-destination-sdk-for-ibm-cloud-event-notifications-service-version-0041
       - en-regions-endpoints.md
+      - data-portability.md
       - en-payload.md
       - en-notices.md
   - navgroup:
