@@ -2,11 +2,11 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-11-11"
+lastupdated: "2024-11-12"
 
 keywords:
 
-subcollection: event-notifications
+subcollection: schematics
 
 ---
 
@@ -37,10 +37,29 @@ For more information about your responsibilities for {{site.data.keyword.en_full
 
 {{site.data.keyword.en_full_notm}} provides the mechanisms to export your content that is uploaded, stored, and processed when you use the service.
 
+For each data set that you need to export, use `GET` calls to get a copy of the data. And use the corresponding `PUT / POST API` to populate the new instance at the place where the data is copied.
+
+|Entity   | Endpoint | Description |
+|---------|--------|-----------|
+| sources | `/v1/instances/{instance_id}/sources` | Your platform sources |
+| topics | `/v1/instances/{instance_id}/topics` | All registered topics |
+| destinations | `/v1/instances/{instance_id}/destinations` | All registered destinations |
+| subscriptions | `/v1/instances/{instance_id}/subscriptions` | All the subscriptions |
+| metrics | `/v1/instances/{instance_id}/metrics` | All the metrics |
+| templates | `/v1/instances/{instance_id}/templates` | All the templates |
+| SMTP configurations| `/v1/instances/{instance_id}/smtp/config` | All the smtp configurations|
+| integrations | `/v1/instances/{instance_id}/integrations` | All the integrations|
+{: caption="Example API endpoints" caption-side="top"}
+
+For more information about all available APIs for exporting data, see [API documentation](https://cloud.ibm.com/apidocs/event-notifications).
+
+/metrics does not have have a POST/PUT api as its metrics of usage of the service.
+{: note}
+
 ## Exported data formats
 {: #data-portability-data-formats}
 
-{{site.data.keyword.en_full_notm}} supports the following data format and schema of the exported data, configuration, and application.
+{{site.data.keyword.en_full_notm}} resources export the data via Service APIs in JSON format. The schema of the exported data is described in the {{site.data.keyword.en_full_notm}} service [API documentation](https://cloud.ibm.com/apidocs/event-notifications).
 
 ## Data ownership
 {: #data-portability-ownership}

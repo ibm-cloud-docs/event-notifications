@@ -90,7 +90,6 @@ Some API examples are as follows:
 |---------|--------|-----------|
 | sources | `/v1/instances/{instance_id}/sources` | Your platform sources |
 | topics | `/v1/instances/{instance_id}/topics` | All registered topics |
-| rules | `/v1/instances/{instance_id}/rules` | All rules created on topics |
 | destinations | `/v1/instances/{instance_id}/destinations` | All registered destinations |
 | subscriptions | `/v1/instances/{instance_id}/subscriptions` | All the subscriptions |
 {: caption="Example API endpoints" caption-side="top"}
