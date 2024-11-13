@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-11-12"
+lastupdated: "2024-11-13"
 
 keywords:
 
@@ -53,7 +53,7 @@ For each data set that you need to export, use `GET` calls to get a copy of the 
 
 For more information about all available APIs for exporting data, see [API documentation](https://cloud.ibm.com/apidocs/event-notifications).
 
-/metrics does not have have a POST/PUT api as its metrics of usage of the service.
+/metrics does not have have a POST/PUT api as they are the metrics of usage of the service.
 {: note}
 
 ## Exported data formats
