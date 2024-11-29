@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-10-07"
+lastupdated: "2024-11-28"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -82,6 +82,7 @@ You can send notifications or alerts to multiple destination types, for example,
 
       4. $.data.details[0].name=="Bob" || $.data.location=="New york"
          Output: True
+         
       5. $.data.details[1].age>20 && $.data.company=="IBM"
          Output: True
 
