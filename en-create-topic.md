@@ -35,40 +35,69 @@ You can send notifications or alerts to multiple destination types, for example,
    - **Event type**: select event type from the list.
    - **Event subtype**: select event sub type from the event sub type list.
    - **Severity**: select severity from the severity list.
-   - **Advanced conditions**: create your own custom conditions, which must follow [JSONpath specifications](https://goessner.net/articles/JsonPath/). The correctly written rule will extract the appropriate data from the incoming request payload. {{site.data.keyword.en_short}} supports the == operator for JSONPath evaluation. You can validate your JSONPath [here](https://jsonpath.com/).
+   - **Advanced conditions**: create your own custom conditions, which must follow [JSONpath specifications](https://goessner.net/articles/JsonPath/). The correctly written rule will extract the appropriate data from the incoming request payload. {{site.data.keyword.en_short}} supports conditional operators >=,<=,==,>,<,!= and logical operators ||,&& for JSONPath evaluation. You can validate your JSONPath [here](https://jsonpath.com/).
 
       Example:
 
       ```JSON
-      {
-         "data": {
-            "findings": [
                {
-                  "severity": "LOW",
-                  "provider": "cert-mgr"
-               },
-               {
-                  "severity": "HIGH",
-                  "provider": "secrets-mgr"
-               }
-            ],
-            "severity": "LOW",
-            "payloadType": "findings",
-            "issuer": "IBM Cloud Security Advisor",
-         }
+      "data": {
+         "details": [
+            {
+               "id": 1,
+               "name": "Bob",
+               "gender": "male",
+               "age": 30
+            },
+            {
+               "id": 2,
+               "name": "Alice",
+               "gender": "female",
+               "age": 25
+            },
+            {
+               "id": 3,
+               "name": "Charlie",
+               "gender": "male",
+               "age": 35
+            }
+         ],
+         "location": "London",
+         "company": "IBM"
+      }
       }
       ```
 
       Based on the previous JSON input, the following valid JSONPaths can be constructed:
 
       ```bash
-      1. $.data.severity=='LOW'
-      Output: True
+      1. $.data.details[1].age>=25
+         Output: True
 
-      2. $.data.findings[1].severity == 'HIGH'
-      Output: True
+      2. $.data.details[0].name=="Bob"
+         Output: True
+
+      3. $.data.details[2].name!="unknown"
+         Output: True
+
+      4. $.data.details[0].name=="Bob" || $.data.location=="New york"
+         Output: True
+      5. $.data.details[1].age>20 && $.data.company=="IBM"
+         Output: True
+
+      6. $.data.details[0].age<=30  || $.data.details[1].id>=3
+         Output: True
+
+      7. $.data.details[2].id<4
+         Output: True
+
+      8. $.data.location=="London"
+         Output: True
       ```
       {: codeblock}
+
+
+
 
 1. Click **Add a condition**.
 

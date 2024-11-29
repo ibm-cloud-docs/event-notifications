@@ -20,6 +20,13 @@ content-type: release-note
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
 
+## 28 November 2024
+{: #event-notifications-Nov2824}
+{: release-note}
+
+Enhanced Filtering Criteria
+: IBM Event Notifications now supports advanced filtering criteria that can be used to add rules when creating a topic , see [Advanced Conditions](/docs/event-notifications?topic=event-notifications-en-create-en-topic).
+
 ## 30 September 2024
 {: #event-notifications-Sep3024}
 {: release-note}
