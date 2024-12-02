@@ -27,6 +27,8 @@ Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, sec
 Enhanced Filtering Criteria
 : IBM Event Notifications now supports advanced filtering criteria that can be used to add rules when creating a topic , see [Advanced Conditions](/docs/event-notifications?topic=event-notifications-en-create-en-topic).
 
+
+
 ## 30 September 2024
 {: #event-notifications-Sep3024}
 {: release-note}
