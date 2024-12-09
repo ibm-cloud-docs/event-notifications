@@ -12,7 +12,7 @@ subcollection: event-notifications
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Migrating your apps from {{site.data.keyword.mobilepushfull}} to {{site.data.keyword.en_full}}
+# Migrating your apps from Push Notifications to {{site.data.keyword.en_short}}
 {: #en-migrate-apps}
 
 You can migrate your mobile apps from the deprecated IBM Cloud Push Notifications service to {{site.data.keyword.en_short}} to continue to use Push.
