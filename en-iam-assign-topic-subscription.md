@@ -20,8 +20,13 @@ completion-time: 15m
 {: toc-content-type="tutorial"}
 {: toc-completion-time="15m"}
 
-This tutorial shows you how to assign access roles for Users against Topics and Subscriptions, by creating and modifying IAM access policies.
-{: shortdesc}
+This tutorial shows you how to assign access roles for Users against Topics and Subscriptions, by creating and modifying IAM access policies. The details of the IAM roles are as follows: 
+**Applicable roles:**
+1. Reader: To enable access to topics/subscriptions in an instance, the user must at least have **Reader** level privileges to the particular {{site.data.keyword.en_short}} instance. With only Reader access, shared User can only view and cannot edit any resources in the {{site.data.keyword.en_short}} instance.
+1. Writer: Only **Writer** role is applicable for given topics/subscriptions. When an {{site.data.keyword.en_short}} instance is accessed by shared user with Writer role, user can only update topics and/or subscriptions.
+
+**Manager** Role is not applicable for topics/subscriptions. So shared user cannot be assigned access to delete topics/subscriptions.
+ {: note}
 
 ## Before you begin
 {: #topics-subscriptions-access-step-0}
@@ -41,9 +46,6 @@ For this tutorial, you need:
 To enable access to topics/subscriptions in an instance, the user must at least have **Reader** level privileges to the particular {{site.data.keyword.en_short}} instance.
 {: note}
 
-Only **Writer** role is applicable for given topics/subscriptions.
-{: important}
-
 1. Navigate to IAM by following the **Manage** drop-down menu, and selecting **Access (IAM)**. Follow the **Users** link in the navigation menu, and select the user requiring limited access.
 2. Click on **Access** tab. Click on the **Assign access** button. Select the **Access policy** tile and select **{{site.data.keyword.en_short}}**.
 3. Select the radio toggle next to **Specific resources**. Select **Service Instance** from the _Attribute type_ drop-down menu. Select the {{site.data.keyword.en_short}} instance which you want to assign access. ![Create a new policy](images/en-assign-access-instance.png){: caption="Selecting Event Notifications Instance."}
@@ -60,9 +62,7 @@ We'll repeat the step 1, but this time we'll use **Topic ID/Subscription ID** re
 In an access policy , we can have either Topic ID **or** Subscription ID. Both cannot be present in the same access policy. If you want an access policy for more than 1 topic/subscription , create separate access policies for each topic/subscription.
 {: note}
 
-1. Only **Writer** role is applicable for given Topics/Subscriptions.
-2. Reader Role is already assigned at instance level in Step 1. So we do not need to assign Reader role for given topics/subscriptions
-3. Manager Role is **not** applicable for topics/subscriptions
+Only **Writer** role is applicable for given Topics/Subscriptions. **Reader** Role is already assigned at instance level in Step 1. So we do not need to assign Reader role for given topics/subscriptions. **Manager** Role is **not** applicable for topics/subscriptions.
 {: important}
 
 1. Navigate to the Topics/Subscriptions section of your {{site.data.keyword.en_short}} instance and copy
