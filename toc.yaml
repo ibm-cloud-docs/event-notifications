@@ -85,11 +85,12 @@ toc:
           label: Observability
           topics:
           - logging.md
-          - monitoring.md 
+          - monitoring.md
       - topicgroup:
           label: Enhancing security
           topics:
           - en-iam.md
+          - en-iam-assign-topic-subscription.md
           - en-cbr.md
           - at-events.md
           - en-data-security-compliance.md
