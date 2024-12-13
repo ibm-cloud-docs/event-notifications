@@ -90,6 +90,7 @@ toc:
           label: Enhancing security
           topics:
           - en-iam.md
+          - en-iam-assign-topic-subscription.md
           - en-cbr.md
           - at-events.md
           - en-data-security-compliance.md
