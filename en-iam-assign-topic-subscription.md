@@ -15,13 +15,14 @@ completion-time: 15m
 ---
 {{site.data.keyword.attribute-definition-list}}
 
-# Assigning access to an individual topics and subscriptions
+# Assigning access to individual topics and subscriptions
 {: #en-assign-access-to-topics-subscriptions}
 {: toc-content-type="tutorial"}
 {: toc-completion-time="15m"}
 
 This tutorial shows you how to assign access roles for Users against Topics and Subscriptions, by creating and modifying IAM access policies. The details of the IAM roles are as follows: 
-**Applicable roles:**
+
+##### Applicable roles:
 1. Reader: To enable access to topics/subscriptions in an instance, the user must at least have **Reader** level privileges to the particular {{site.data.keyword.en_short}} instance. With only Reader access, shared User can only view and cannot edit any resources in the {{site.data.keyword.en_short}} instance.
 1. Writer: Only **Writer** role is applicable for given topics/subscriptions. When an {{site.data.keyword.en_short}} instance is accessed by shared user with Writer role, user can only update topics and/or subscriptions.
 
