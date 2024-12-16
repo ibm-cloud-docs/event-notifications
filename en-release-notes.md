@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-09-30"
+lastupdated: "2024-12-16"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -19,6 +19,14 @@ content-type: release-note
 
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
+
+## 13 December 2024
+{: #event-notifications-Dec1324}
+{: release-note}
+
+Assigning Access to Topics and Subscriptons
+: {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_full}} now allows a user to grant access to topics and subscriptions , see [Assigning Access to individual Topics and Subscriptions](/docs/event-notifications?topic=event-notifications-en-assign-access-to-topics-subscriptions).
+
 
 ## 28 November 2024
 {: #event-notifications-Nov2824}
