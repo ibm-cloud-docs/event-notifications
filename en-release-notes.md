@@ -25,7 +25,7 @@ Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, sec
 {: release-note}
 
 Assigning Access to Topics and Subscriptons
-: {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_full}} now allows a user to grant access to topics and subscriptions , see [Assigning Access to individual Topics and Subscriptions](/docs/event-notifications?topic=event-notifications-en-assign-access-to-topics-subscriptions).
+: {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now allows a user to grant access to topics and subscriptions , see [Assigning Access to individual Topics and Subscriptions](/docs/event-notifications?topic=event-notifications-en-assign-access-to-topics-subscriptions).
 
 
 ## 28 November 2024
