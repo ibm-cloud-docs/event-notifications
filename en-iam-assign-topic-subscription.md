@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-12-13"
+lastupdated: "2024-12-16"
 
 keywords: event-notifications, event notifications, managing service access, iam, account, topics, subscriptions
 
@@ -20,13 +20,13 @@ completion-time: 15m
 {: toc-content-type="tutorial"}
 {: toc-completion-time="15m"}
 
-This tutorial shows you how to assign access roles for Users against Topics and Subscriptions, by creating and modifying IAM access policies. The details of the IAM roles are as follows: 
+This tutorial shows you how to assign access roles for users against Topics and Subscriptions, by creating and modifying IAM access policies. The details of the IAM roles are as follows: 
 
 ##### Applicable roles:
-1. Reader: To enable access to topics/subscriptions in an instance, the user must at least have **Reader** level privileges to the particular {{site.data.keyword.en_short}} instance. With only Reader access, shared User can only view and cannot edit any resources in the {{site.data.keyword.en_short}} instance.
-1. Writer: Only **Writer** role is applicable for given topics/subscriptions. When an {{site.data.keyword.en_short}} instance is accessed by shared user with Writer role, user can only update topics and/or subscriptions.
+1. Reader: To enable access to topics/subscriptions in an instance, a user must at least have **Reader** level privileges to the particular {{site.data.keyword.en_short}} instance. With only Reader access, the user can only view and cannot edit any resources in the {{site.data.keyword.en_short}} instance.
+1. Writer: Only **Writer** role is applicable for given topics/subscriptions. When an {{site.data.keyword.en_short}} instance is accessed by a user with Writer role,the user can only update topics and/or subscriptions.
 
-**Manager** Role is not applicable for topics/subscriptions. So shared user cannot be assigned access to delete topics/subscriptions.
+A user cannot be assigned **Manager** Role to delete specific topics/subscriptions. This action can be carried out by a user who is assigned the Manager role to the whole Event Notifications instance.
  {: note}
 
 ## Before you begin
@@ -94,10 +94,16 @@ At this stage, you should have two access policies created as shown below. One a
 {: #topics-subscriptions-access-step-4}
 {: step}
 
-When this {{site.data.keyword.en_short}} instance is accessed by shared user with Writer role, user can only update topics and/or subscriptions.
+When this {{site.data.keyword.en_short}} instance is accessed by a user with Writer role, the user can only update topics and/or subscriptions.
 
-When a shared user tries to perform any action such as editing other topics/subscriptions using API/CLI/Terrform, the action is denied with **403** status code as shown below.
+When a user tries to perform any action such as editing topics or subscriptions, for which the user is not assigned Writer Role, the action is denied as shown below.
 {: note}
+
+- **UI output:**
+
+![Create a new policy](images/en-ui-access-denied.png){: caption="Access denied to Topic/Subscription as shown in the UI"}
+
+- **API/CLI/Terraform output with status code 403:**
 
 ```javascript
 {
