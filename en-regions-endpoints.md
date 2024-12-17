@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2023-10-12"
+lastupdated: "2024-12-20"
 
 keywords: event-notifications, event notifications, regions, endpoints, private endpoints
 
@@ -28,6 +28,9 @@ Review region and connectivity options for interacting with {{site.data.keyword.
 - Sydney (`au-syd`)
 - Frankfurt (`eu-de`)
 - Madrid (`eu-es`)
+- Toronto (`ca-tor`)
+- Tokyo (`jp-tok`)
+- Osaka (`jp-osa`)
 
 You can create {{site.data.keyword.en_full_notm}} resources in one of the supported {{site.data.keyword.cloud_notm}} regions.
 
@@ -54,6 +57,9 @@ The following table contains the base URLs for the {{site.data.keyword.en_full_n
 | Sydney |`https://au-syd.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
 | Frankfurt |`https://eu-de.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
 | Madrid |`https://eu-es.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
+| Toronto |`https://ca-tor.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
+| Tokyo |`https://jp-tok.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
+| Osaka |`https://jp-osa.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
 {: caption="Public endpoints for interacting with {{site.data.keyword.en_short}} by using APIs" caption-side="bottom"}
 
 ### Private endpoints
@@ -68,4 +74,7 @@ If you need to manage your {{site.data.keyword.en_short}} resources over a priva
 | Sydney |`https://private.au-syd.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
 | Frankfurt |`https://private.eu-de.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
 | Madrid |`https://private.eu-es.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
+| Toronto |`https://private.ca-tor.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
+| Tokyo |`https://private.jp-tok.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
+| Osaka |`https://private.jp-osa.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
 {: caption="Private endpoints for interacting with {{site.data.keyword.en_short}} by using APIs" caption-side="bottom"}
