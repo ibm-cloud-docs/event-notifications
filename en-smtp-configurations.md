@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2021, 2024
-lastupdated: "2024-10-07"
+lastupdated: "2024-12-20"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email, smtp
 
@@ -111,6 +111,9 @@ After successful verification of a SMTP configuration in an IBM Cloud Event Noti
     | Event Notifications Instance Region | SMTP Public Endpoint                                   | SMTP Private Endpoint
     |-------------------------------------|-------------------------------------------------|---------------------------------------------------------|
     | us-south (Dallas)                   | smtp.us-south.event-notifications.cloud.ibm.com | private.smtp.us-south.event-notifications.cloud.ibm.com |
+    | ca-tor (Toronto)                   | smtp.us-south.event-notifications.cloud.ibm.com | private.smtp.us-south.event-notifications.cloud.ibm.com |
+    | jp-tok (Tokyo)                   | smtp.us-south.event-notifications.cloud.ibm.com | private.smtp.us-south.event-notifications.cloud.ibm.com |
+    | jp-osa (Osaka)                   | smtp.us-south.event-notifications.cloud.ibm.com | private.smtp.us-south.event-notifications.cloud.ibm.com |
     | au-syd (Sydney)                     | smtp.us-south.event-notifications.cloud.ibm.com | private.smtp.us-south.event-notifications.cloud.ibm.com |
     | eu-gb (London)                      | smtp.us-south.event-notifications.cloud.ibm.com | private.smtp.us-south.event-notifications.cloud.ibm.com |
     | eu-de (Frankfurt)                   | smtp.eu-de.event-notifications.cloud.ibm.com    | private.smtp.eu-de.event-notifications.cloud.ibm.com    |
