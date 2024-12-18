@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-09-30"
+lastupdated: "2024-12-20"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -19,6 +19,15 @@ content-type: release-note
 
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
+
+## 20 December 2024
+{: #event-notifications-Dec2024}
+{: release-note}
+Tokyo, Osaka and Toronto availability
+You can now create a Event Notifications service instance in the Tokyo (jp-tok), Osaka (jp-osa) and Toronto (ca-tor) regions.
+
+For more information, see [Regions and endpoints](/docs/event-notifications?topic=event-notifications-en-regions-endpoints).
+
 
 ## 28 November 2024
 {: #event-notifications-Nov2824}
