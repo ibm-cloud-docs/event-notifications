@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-11-05"
+lastupdated: "2024-12-19"
 
 keywords: event notifications cloud logs, event notifications logging, event notifications external logs
 
@@ -35,6 +35,9 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 | Frankfurt (`eu-de`)    | [Yes]{: tag-green}   |
 | Madrid (`eu-es`)       | [Yes]{: tag-green}   |
 | London (`eu-gb`)       | [Yes]{: tag-green}   |
+| Toronto (`ca-tor`)     | [Yes]{: tag-green}   |
+| Tokyo (`jp-tok`)       | [Yes]{: tag-green}   |
+| Osaka (`jp-osa`)       | [Yes]{: tag-green}   |
 {: caption="Locations where platform logs are generated" caption-side="top"}
 
 ### Locations where logs are sent to {{site.data.keyword.la_full_notm}}
@@ -44,7 +47,7 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 
 | Dallas (`us-south`) | Washington (`us-east`)  | Toronto (`ca-tor`) | Sao Paulo (`br-sao`) |
 |---------------------|-------------------------|-------------------|----------------------|
-| [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} |
+| [Yes]{: tag-green} | [No]{: tag-red} | [Yes]{: tag-green} | [No]{: tag-red} |
 {: caption="Regions where platform logs are sent in Americas locations" caption-side="top"}
 {: #la-table-1}
 {: tab-title="Americas"}
@@ -54,7 +57,7 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 
 | Tokyo (`jp-tok`)    | Sydney (`au-syd`) |  Osaka (`jp-osa`) | Chennai (`in-che`) |
 |---------------------|------------------|------------------|--------------------|
-| [No]{: tag-red} | [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} |
+| [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [No]{: tag-red} |
 {: caption="Regions where platform logs are sent in Asia Pacific locations" caption-side="top"}
 {: #la-table-2}
 {: tab-title="Asia Pacific"}
@@ -79,7 +82,7 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 
 | Dallas (`us-south`) | Washington (`us-east`)  | Toronto (`ca-tor`) | Sao Paulo (`br-sao`) |
 |---------------------|-------------------------|-------------------|----------------------|
-| [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} |
+| [Yes]{: tag-green} | [No]{: tag-red} | [Yes]{: tag-green} | [No]{: tag-red} |
 {: caption="Regions where platform logs are sent in Americas locations" caption-side="top"}
 {: #logs-table-1}
 {: tab-title="Americas"}
@@ -89,7 +92,7 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 
 | Tokyo (`jp-tok`)    | Sydney (`au-syd`) |  Osaka (`jp-osa`) | Chennai (`in-che`) |
 |---------------------|------------------|------------------|--------------------|
-| [No]{: tag-red} | [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} |
+| [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [No]{: tag-red} |
 {: caption="Regions where platform logs are sent in Asia Pacific locations" caption-side="top"}
 {: #logs-table-2}
 {: tab-title="Asia Pacific"}
@@ -114,7 +117,7 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 
 | Dallas (`us-south`) | Washington (`us-east`)  | Toronto (`ca-tor`) | Sao Paulo (`br-sao`) |
 |---------------------|-------------------------|-------------------|----------------------|
-| [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} |
+| [Yes]{: tag-green} | [No]{: tag-red} | [Yes]{: tag-green} | [No]{: tag-red} |
 {: caption="Regions where platform logs are sent in Americas locations" caption-side="top"}
 {: #lr-table-1}
 {: tab-title="Americas"}
@@ -124,7 +127,7 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 
 | Tokyo (`jp-tok`)    | Sydney (`au-syd`) |  Osaka (`jp-osa`) | Chennai (`in-che`) |
 |---------------------|------------------|------------------|--------------------|
-| [No]{: tag-red} | [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} |
+| [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [No]{: tag-red} |
 {: caption="Regions where platform logs are sent in Asia Pacific locations" caption-side="top"}
 {: #lr-table-2}
 {: tab-title="Asia Pacific"}
