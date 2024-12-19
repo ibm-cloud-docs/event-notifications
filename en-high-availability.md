@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-10-10"
+lastupdated: "2024-12-20"
 
 keywords: HA for Event Notifications, high availability for Event Notifications, Event Notifications, disaster recovery
 
@@ -43,14 +43,16 @@ A region (location) is a geographically and physically separate group of one or 
 
 The following table lists the high-availability (HA) status for the regions (locations) where the {{site.data.keyword.en_full_notm}} service is available:
 
-| Geography| Region| HA Status |
+ Geography| Region| HA Status |
 |----------|-------|-----------|
 | Asia-Pacific| Sydney (au-syd)|MZR|
+| Asia-Pacific| Tokyo (jp-tok)|MZR|
+| Asia-Pacific| Osaka (jp-osa)|MZR|
 | Europe | London (eu-gb)|MZR|
 | Europe | Frankfurt (eu-de)|MZR|
 | Europe | Madrid (eu-es)|MZR|
 | North America| Dallas (us-south)|MZR|
-
+| North America| Toronto (ca-tor)|MZR|
 {: caption="HA status for the regions" caption-side="bottom"}
 
 Where:
@@ -73,12 +75,8 @@ For more information about service availability within regions and data centers,
 For more information about your responsibilities when using {{site.data.keyword.en_short}}, see [Shared responsibilities](/docs/event-notifications?topic=event-notifications-en-responsibilities).
 
 
-
-
 ## What level of availability does {{site.data.keyword.cloud_notm}} offer?
 {: #ha-service}
-
-
 
 To learn more about the high availability and disaster recovery standards in {{site.data.keyword.cloud_notm}}, see [How do I ensure zero downtime?](/docs/overview?topic=overview-zero-downtime) or [Service Level Agreements](/docs/overview?topic=overview-slas).
 
