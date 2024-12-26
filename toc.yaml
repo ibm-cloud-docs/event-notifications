@@ -31,7 +31,6 @@ toc:
       - en-terraform-tutorial.md
       - en-create-topic.md
       - en-create-subscription.md
-      - en-create-template.md
       - en-integrations.md
       - en-smtp-configurations.md
       - topicgroup:
@@ -103,6 +102,13 @@ toc:
               label: Privately connecting to Event Notifications
               topics:
               - en-cse.md
+      - topicgroup:
+          label: Event Notification Templates
+          topics:
+          - en-templates.md
+          - en-email-templates.md
+          - en-webhook-notifications-template.md
+          - en-slack-notification-template.md
   - navgroup:
       id: reference
       topics:
