@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024
-lastupdated: "2024-12-26"
+  years: 2025
+lastupdated: "2025-01-01"
 
 keywords: event-notifications, event notifications, about event notifications, templates, webhook
 
@@ -31,7 +31,7 @@ Handlebars is a templating language that allows for dynamic content generation w
 ### Webhook notification template example
 {: #webhook-template}
 
-    ```json
+```json
     {
 	"name": "Template for TIP",
 	"params": {
@@ -39,9 +39,6 @@ Handlebars is a templating language that allows for dynamic content generation w
 	},
 	"type": "webhook.notification"
     }
-    ```
+ ```
+ 
 ![Create Webhook Template](images/en-webhook-template.png "Creating Webhook Template"){: caption="Creating Webhook Template" caption-side="bottom"}
-
-
-
-

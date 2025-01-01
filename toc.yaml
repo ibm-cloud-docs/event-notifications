@@ -81,6 +81,13 @@ toc:
               - en-test-destination.md
       - en-cfe-integrations.md
       - topicgroup:
+          label: Event Notifications Templates
+          topics:
+          - en-templates.md
+          - en-email-templates.md
+          - en-webhook-notifications-template.md
+          - en-slack-notification-template.md
+      - topicgroup:
           label: Observability
           topics:
           - logging.md
@@ -102,13 +109,6 @@ toc:
               label: Privately connecting to Event Notifications
               topics:
               - en-cse.md
-      - topicgroup:
-          label: Event Notification Templates
-          topics:
-          - en-templates.md
-          - en-email-templates.md
-          - en-webhook-notifications-template.md
-          - en-slack-notification-template.md
   - navgroup:
       id: reference
       topics:

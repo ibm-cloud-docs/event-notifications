@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2024
-lastupdated: "2024-12-26"
+  years: 2021, 2025
+lastupdated: "2025-01-01"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -26,10 +26,10 @@ An {{site.data.keyword.en_full_notm}} template is a pre-defined layout that incl
 1. Click on **Create** on the top right.
 1. Enter details about the template such as the name and description, and select a template type. Event Notifications currently supports 4 templates:
 
-    * Custom Email Notification
-    * Custom Email Invitation
-    * Webhook Notification
-    * Slack Notification
+    * [Custom Email Notification](/docs/event-notifications?topic=event-notifications-en-email-templates)
+    * [Custom Email Invitation](/docs/event-notifications?topic=event-notifications-en-email-templates)
+    * [Webhook Notification](/docs/event-notifications?topic=event-notifications-en-webhook-notifications-template)
+    * [Slack Notification](/docs/event-notifications?topic=event-notifications-en-slack-notification-template)
    
 1. Click **Add** to save your updates. 
 
@@ -82,17 +82,20 @@ The contains helper allows users to check if there is a specific word in any of 
 
 #### Example:
 
-
+```
 "data": 
 {
 	"message": "this is test alert from dev account"
 }
+```
+Use the contains helpers like below:
+```handlebars
 {
 {{#contains data.message "dev"}}
 "environment": "development"
 {{/contains}}
 }
-{: codeblock}
+```
 
 There are more helpers available for use that can be referenced from [here](https://github.com/aymerick/raymond?tab=readme-ov-file#built-in-helpers)
 {: note}

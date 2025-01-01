@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024
-lastupdated: "2024-12-26"
+  years: 2025
+lastupdated: "2025-01-01"
 
 keywords: event-notifications, event notifications, about event notifications, templates, slack
 
@@ -88,4 +88,4 @@ To include JSON blocks in the template, they need to be encoded in base64 format
 	"type": "slack.notification"
 }
 ```
-![Create Slack Template](en-slack-template.png "Create Slack Template"){: caption="Create Slack Template" caption-side:"bottom"}
+![Create Slack Template](images/en-slack-template.png "Create Slack Template"){: caption="Create Slack Template" caption-side:"bottom"}
