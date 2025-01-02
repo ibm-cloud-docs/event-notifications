@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2024
-lastupdated: "2024-12-26"
+  years: 2021, 2025
+lastupdated: "2025-01-02"
 
 keywords: event notifications, event-notifications, email.templates
 subcollection: event-notifications
@@ -14,7 +14,7 @@ subcollection: event-notifications
 # Email Templates
 {: #en-email-templates}
 
-There are 2 types of Email templates that is supported by {{site.data.keyword.en_short}}:
+There are 2 types of Email templates that are supported by {{site.data.keyword.en_short}}:
 
    * **Custom Email notification**: Provide a subject and construct the body. Include a placeholder for inserting the unsubscribe text, along with the unsubscription URL. This placeholder, represented as `{{ibmen_unsubscription}}`, is used to substitute the unsubscription URL.
 
@@ -37,7 +37,7 @@ In the send notification payload, add a `personalization` parameter to enable it
 ### Send notification payload example
 {: #send-payload}
 
-    ```json
+```json
     {
         "id": "b2198eb8-04b1-48ec-a78c-ee87694dd845",
         "time": "06/06/2022, 14:23:01",
@@ -63,13 +63,13 @@ In the send notification payload, add a `personalization` parameter to enable it
         }
         }
     }
-    ```
-    {: codeblock}
+```
+
 
 ### Full template payload example
 {: #full-payload}
 
-    ```
+``` html
     <html lang="en">
         <head>
         </head>
@@ -110,8 +110,8 @@ In the send notification payload, add a `personalization` parameter to enable it
             </div>
         </body>
     </html>
-    ```
-    {: codeblock}
+ ```
+
 
 When you create a template to enable personalization, add a placeholder in the HTML Handlebars format, for example: 
 
@@ -133,4 +133,3 @@ The personalization tags are described in the following list:
 ##### Email Notification Template
 
 ![Create Email Notification Template](images/en-email-notification.png "Creating Email Notification Template"){: caption="Creating Email Notification Template" caption-side="bottom"}
-

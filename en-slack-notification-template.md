@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-01-01"
+lastupdated: "2025-01-02"
 
 keywords: event-notifications, event notifications, about event notifications, templates, slack
 
@@ -19,7 +19,7 @@ subcollection: event-notifications
 Slack is a messaging platform that helps teams to connect and collaborate. When you select slack as a service destination, any subscribed notification about an event can be sent as a message to slack channels.
 {: shortdesc}
 
-For more information about the Webhook destination, see [here](/docs/event-notifications?topic=event-notifications-en-destinations-slack).
+For more information about the Slack destination, see [here](/docs/event-notifications?topic=event-notifications-en-destinations-slack).
 
 ## How to create a Slack Notification Template
 {: #en-create-slack-template}
