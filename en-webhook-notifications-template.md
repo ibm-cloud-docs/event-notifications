@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-01-01"
+lastupdated: "2025-01-02"
 
 keywords: event-notifications, event notifications, about event notifications, templates, webhook
 
@@ -13,7 +13,7 @@ subcollection: event-notifications
 {{site.data.keyword.attribute-definition-list}}
 
 # Webhook Notification Template
-{: #en-webhook-notification-template}
+{: #en-webhook-notifications-template}
 
 A webhook represents a service destination, where an incoming notification can be consumed programmatically. 
 For example, an incoming notification about an event can trigger a webhook destination to a backend microservice to act based on the content of the incoming notification.
@@ -40,5 +40,5 @@ Handlebars is a templating language that allows for dynamic content generation w
 	"type": "webhook.notification"
     }
  ```
- 
+
 ![Create Webhook Template](images/en-webhook-template.png "Creating Webhook Template"){: caption="Creating Webhook Template" caption-side="bottom"}
