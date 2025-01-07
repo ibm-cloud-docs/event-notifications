@@ -25,7 +25,7 @@ Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, sec
 {: release-note}
 
 Periodic Timer
-: {{site.data.keyword.IBM_notm}}{{site.data.keyword.en_short}} now supports periodic timer for event scheduling , see [Periodic Timer](docs/event-notifications?topic=event-notifications-en-cron-periodic-timer)
+: {{site.data.keyword.IBM_notm}} {{site.data.keyword.en_short}} now supports periodic timer for event scheduling , see [Periodic Timer](docs/event-notifications?topic=event-notifications-en-periodic-timer)
 
 ## 20 December 2024
 {: #event-notifications-Dec202024}

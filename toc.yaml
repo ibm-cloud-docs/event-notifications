@@ -113,7 +113,7 @@ toc:
       - topicgroup:
           label: Scheduling Events
           topics:
-          - en-cron-periodic-timer
+          - en-cron-periodic-timer.md
       
   - navgroup:
       id: reference

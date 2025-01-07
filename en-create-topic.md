@@ -26,9 +26,9 @@ You can send notifications or alerts to multiple destination types, for example,
    - **Name**: enter a name for the topic.
    - **Description**: add an optional description for the topic.
    - **Source**: select a source from the list. Sources are of 3 types: 
-                  1. IBM Source
-                  2. API Source
-                  3. Periodic Timer Source
+      - IBM Source
+      - API Source
+      - Periodic Timer Source
 
     Step 1 created a topic, step 2 provisions optional custom rules for the topic.
     {: note}
@@ -45,44 +45,44 @@ You can send notifications or alerts to multiple destination types, for example,
       The "=~" operator is a powerful tool that helps you search for patterns in strings using regular expressions.
       {: note}
 
-         Example:
+      Example:
 
-         ```JSON
-         {
-         "data": {
-            "details": [
-               {
-                  "id": 1,
-                  "name": "Bob",
-                  "gender": "male",
-                  "age": 30,
-                  "country": "China"
-               },
-               {
-                  "id": 2,
-                  "name": "Alice",
-                  "gender": "female",
-                  "age": 25,
-                  "country": "India"
-               },
-               {
-                  "id": 3,
-                  "name": "Charlie",
-                  "gender": "male",
-                  "age": 35,
-                  "country": "USA"
-               }
-            ],
-            "location": "London",
-            "company": "IBM",
-            "region": "london"
-         }
-         }
-         ```
+      ```JSON
+      {
+      "data": {
+         "details": [
+            {
+               "id": 1,
+               "name": "Bob",
+               "gender": "male",
+               "age": 30,
+               "country": "China"
+            },
+            {
+               "id": 2,
+               "name": "Alice",
+               "gender": "female",
+               "age": 25,
+               "country": "India"
+            },
+            {
+               "id": 3,
+               "name": "Charlie",
+               "gender": "male",
+               "age": 35,
+               "country": "USA"
+            }
+         ],
+         "location": "London",
+         "company": "IBM",
+         "region": "london"
+      }
+      }
+   ```
 
-         Based on the previous JSON input, the following valid JSONPaths can be constructed:
+      Based on the previous JSON input, the following valid JSONPaths can be constructed:
 
-         ```bash
+      ```bash
          1. $.data.details[1].age >= 25
             Output: True
 
@@ -112,10 +112,10 @@ You can send notifications or alerts to multiple destination types, for example,
 
          10. $.data.details[?(@.country == "India")].name == "Alice"
             Output: True 
-         ```
-         {: codeblock}
+      ```
+      
 
-   If your chosen source is an **API source** , then you can only add the "Advanced Conditions" rule to your topic.
+If your chosen source is an **API source** , then you can only add the "Advanced Conditions" rule to your topic.
    {: note}
 
    If your chosen source is a **Periodic Timer Source** , then refer [here](/docs/event-notifications?topic=event-notifications-en-periodic-timer) for steps to set rules for your topic. 
