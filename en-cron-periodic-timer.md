@@ -18,7 +18,7 @@ The Periodic timer is an event scheduler in the {{site.data.keyword.cloud_notm}}
 
 ## Scheduling an Event
 
-### Step 1 : Creating a topic using the Periodic Timer as a source
+### **Step 1 : Creating a topic using the Periodic Timer as a source**
 
 1. Navigate to your {{site.data.keyword.en_short}} instance and click on Topics. Click on **Add**. Provide the name and description of the topic. Select Periodic Timer as the source.
 
@@ -26,11 +26,11 @@ The Periodic timer is an event scheduler in the {{site.data.keyword.cloud_notm}}
 
 2. Now you have to define the time window and the cron expression for Event Scheduling. The periodic timer will operate within the time window you specify. If no start time is provided, the timer starts immediately, and if no end time is set, it will continue to trigger until manually disabled. At first you will see the default cron expression and time window as highlighted below:
 
-![Cron Default Expression](images/en-cron-default.png "Cron Default Expression"){: caption= "Cron Default Expression" caption-side="bottom"}
+![Cron Default Expression](images/en-cron-default.png "Cron Default Expression"){: caption="Cron Default Expression" caption-side="bottom"}
 
 Once you have set the time window and defined the cron expression, you will see the events scheduled as shown below:
 
-![Setting the time period and defining Cron Expression ](images/en-cron-expression.png "Setting the time period and defining Cron Expression"){: caption= "Setting the time period and defining Cron Expression" caption-side="bottom"}
+![Setting the time period and defining Cron Expression ](images/en-cron-expression.png "Setting the time period and defining Cron Expression"){: caption="Setting the time period and defining Cron Expression" caption-side="bottom"}
 
 #### Cron Expressions 
 
@@ -43,6 +43,8 @@ Syntax : <MINUTE> <HOUR> <DAY-OF-MONTH> <MONTH> <DAY-OF-WEEK>
 | Day of month | 1-31            | , - * / ? L W              |
 | Month        | 0-11 or JAN-DEC | , - * /                    |
 | Day of week  | 1-7 or SUN-SAT  | , - * / ? L #              |
+
+{: caption="Cron Expressions" caption-side="bottom"}
 
 **Allowed Special Characters**
 
@@ -66,37 +68,20 @@ Click **Create**.
 
 3. Review the newly created topic. 
 
-![Reviewing Topic](images/en-cron-review.png "Reviewing Topic"){: caption= "Reviewing Topic" caption-side="bottom"}
+![Reviewing Topic](images/en-cron-review.png "Reviewing Topic"){: caption="Reviewing Topic" caption-side="bottom"}
 
 
-### Step 2 : Creating a subscription
+### **Step 2 : Creating a subscription**
 
 Refer [here](/docs/event-notifications?topic=event-notifications-en-create-en-subscription) to see how to create a subscription. 
 
 Once a subscription has been created, an invitation Email/SMS will be sent to subscribe to the {{site.data.keyword.en_short}} topic. 
 
-![Invitation Email](images/en-invitation-email.png "Invitation Email to subscribe to topic"){: caption= "Invitation Email to subscribe to topic" caption-side="bottom"}
+![Invitation Email](images/en-invitation-email.png "Invitation Email to subscribe to topic"){: caption="Invitation Email to subscribe to topic" caption-side="bottom"}
 
 
-### Step 3 : Verifying that an Event occurs at scheduled time
+### **Step 3 : Verifying that an Event occurs at scheduled time**
 
 Once the event has been scheduled, the next step would be to verify that an event occurs at the scheduled time and a notification is sent to the destination. 
 
-![Verifying Event](images/en-verifying-notification.png "Email Notification when Event takes place at scheduled time"){: caption= "Email Notification when Event takes place at scheduled time" caption-side="bottom"}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![Verifying Event](images/en-verifying-notification.png "Email Notification when Event takes place at scheduled time"){: caption="Email Notification when Event takes place at scheduled time" caption-side="bottom"}

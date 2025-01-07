@@ -25,7 +25,8 @@ You can send notifications or alerts to multiple destination types, for example,
 1. Click **Create**, and enter the following topic details:
    - **Name**: enter a name for the topic.
    - **Description**: add an optional description for the topic.
-   - **Source**: select a source from the list. Sources are of 3 types: 
+   - **Source**: select a source from the list. Sources are of 3 types:
+    
       - IBM Source
       - API Source
       - Periodic Timer Source
