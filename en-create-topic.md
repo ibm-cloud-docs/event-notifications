@@ -26,15 +26,13 @@ You can send notifications or alerts to multiple destination types, for example,
    - **Name**: enter a name for the topic.
    - **Description**: add an optional description for the topic.
    - **Source**: select a source from the list. Sources are of 3 types:
-    
-      - IBM Source
+
+      - {{site.data.keyword.IBM_notm}} Source
       - API Source
       - Periodic Timer Source
 
-    Step 1 created a topic, step 2 provisions optional custom rules for the topic.
-    {: note}
-
-1. If your chosen source is an **IBM Source**: 
+   
+1. If your chosen source is an **{{site.data.keyword.IBM_notm}} Source**: 
 
    Add the following rules to your topic:
 
@@ -117,10 +115,12 @@ You can send notifications or alerts to multiple destination types, for example,
       
 
 If your chosen source is an **API source** , then you can only add the "Advanced Conditions" rule to your topic.
-   {: note}
+{: note}
 
-   If your chosen source is a **Periodic Timer Source** , then refer [here](/docs/event-notifications?topic=event-notifications-en-periodic-timer) for steps to set rules for your topic. 
+If your chosen source is a **Periodic Timer Source** , then refer [here](/docs/event-notifications?topic=event-notifications-en-periodic-timer) for steps to set rules for your topic. 
 
+Step 2 created a topic, step 3 provisions optional custom rules for the topic.
+{: note}
 
 1. Click **Add a condition**.
 

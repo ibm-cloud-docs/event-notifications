@@ -14,7 +14,7 @@ subcollection: event-notifications
 # Periodic Timer
 {: #en-periodic-timer}
 
-The Periodic timer is an event scheduler in the {{site.data.keyword.cloud_notm}}{{site.data.keyword.en_short}} service that generates events periodically based on the cron expressions. Periodic Event scheduling is important in large-scale applications where the client cannot maintain the periodic timer. Therefore rather than relying on the client to schedule events, {{site.data.keyword.en_short}} will manage the scheduling of events based on a certain period defined by the user. 
+The Periodic timer is an event scheduler in the {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} service that generates events periodically based on the cron expressions. Periodic Event scheduling is important in large-scale applications where the client cannot maintain the periodic timer. Therefore rather than relying on the client to schedule events, {{site.data.keyword.en_short}} will manage the scheduling of events based on a certain period defined by the user. 
 
 ## Scheduling an Event
 
@@ -34,7 +34,7 @@ Once you have set the time window and defined the cron expression, you will see 
 
 #### Cron Expressions 
 
-Syntax : <MINUTE> <HOUR> <DAY-OF-MONTH> <MONTH> <DAY-OF-WEEK>
+Syntax : `<MINUTE> <HOUR> <DAY-OF-MONTH> <MONTH> <DAY-OF-WEEK>`
 
 | Name         | Allowed values  | Allowed Special Characters |
 |--------------|-----------------|----------------------------|
