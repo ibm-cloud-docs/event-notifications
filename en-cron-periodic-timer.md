@@ -24,7 +24,7 @@ The Periodic timer is an event scheduler in the {{site.data.keyword.cloud_notm}}
 
 ![Creating a topic](images/en-creating-topic.png "Creating a topic"){: caption="Creating a topic" caption-side="bottom"}
 
-2. Now you have to define the time window and the cron expression for Event Scheduling. The periodic timer will operate within the time window you specify. If no start time is provided, the timer starts immediately, and if no end time is set, it will continue to trigger until manually disabled. At first you will see the default cron expression and time window as highlighted below:
+1. Now you have to define the time window and the cron expression for Event Scheduling. The periodic timer will operate within the time window you specify. If no start time is provided, the timer starts immediately, and if no end time is set, it will continue to trigger until manually disabled. At first you will see the default cron expression and time window as highlighted below:
 
 ![Cron Default Expression](images/en-cron-default.png "Cron Default Expression"){: caption="Cron Default Expression" caption-side="bottom"}
 
@@ -66,7 +66,7 @@ Syntax : `<MINUTE> <HOUR> <DAY-OF-MONTH> <MONTH> <DAY-OF-WEEK>`
 
 Click **Create**.
 
-3. Review the newly created topic. 
+1. Review the newly created topic. 
 
 ![Reviewing Topic](images/en-cron-review.png "Reviewing Topic"){: caption="Reviewing Topic" caption-side="bottom"}
 
