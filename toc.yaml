@@ -31,6 +31,7 @@ toc:
       - en-terraform-tutorial.md
       - en-create-topic.md
       - en-create-subscription.md
+      - en-create-subscription.md
       - en-integrations.md
       - en-smtp-configurations.md
       - topicgroup:
@@ -109,6 +110,11 @@ toc:
               label: Privately connecting to Event Notifications
               topics:
               - en-cse.md
+      - topicgroup:
+          label: Scheduling Events
+          topics:
+          - en-cron-periodic-timer
+      
   - navgroup:
       id: reference
       topics:

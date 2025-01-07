@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-12-19"
+lastupdated: "2025-01-07"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -19,6 +19,13 @@ content-type: release-note
 
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
+
+## December 2024
+{: #event-notifications-Dec2024}
+{: release-note}
+
+Periodic Timer
+: {{site.data.keyword.IBM_notm}}{{site.data.keyword.en_short}} now supports periodic timer for event scheduling , see [Periodic Timer](docs/event-notifications?topic=event-notifications-en-cron-periodic-timer)
 
 ## 20 December 2024
 {: #event-notifications-Dec202024}
