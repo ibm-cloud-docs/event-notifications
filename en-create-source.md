@@ -21,7 +21,7 @@ Various services produce events that can be consumed by {{site.data.keyword.en_s
 ## Types of sources
 {: #en-add-source-types}
 
-There are three types of sources that are supported for {{site.data.keyword.en_short}}: {{site.data.keyword.cloud_notm}} sources, generic API sources, and {{site.data.keyword.cloud_notm}} platform sources.
+There are now four types of sources that are supported for {{site.data.keyword.en_short}}: {{site.data.keyword.cloud_notm}} sources, generic API sources, {{site.data.keyword.cloud_notm}} platform sources and the Periodic Timer.
 
 With {{site.data.keyword.cloud_notm}} sources, events emit from managed services on {{site.data.keyword.cloud_notm}}. For example, {{site.data.keyword.monitoringfull_notm}}, {{site.data.keyword.cloud_notm}} Security and Compliance Center, {{site.data.keyword.secrets-manager_full_notm}}, {{site.data.keyword.appconfig_short}}, IBM Cloud Projects, and Toolchain can all be added to {{site.data.keyword.en_short}} {{site.data.keyword.cloud_notm}} sources.
 
@@ -31,6 +31,8 @@ API sources cannot route notifications to the {{site.data.keyword.cloud_notm}} e
 {: note}
 
 By default, {{site.data.keyword.cloud_notm}} Resource lifecycle events is provided as a source and is disabled. You can enable it, if you like to monitor the {{site.data.keyword.cloud_notm}} Resource lifecycle events, which you need to incur more charges. {{site.data.keyword.cloud_notm}} Resource lifecycle events are events around the {{site.data.keyword.cloud_notm}} resources like instance creation, updating an instance, deleting an instance and other events related to {{site.data.keyword.cloud_notm}} resources.
+
+The Periodic Timer source is also provided as a default source. It is used to schedule events based on a period defined by the user. It is disabled by deafult and you can enable it to schedule events periodically. 
 
 To see the current list of {{site.data.keyword.cloud_notm}} services available as {{site.data.keyword.en_short}} sources, go to the **Sources** section of your {{site.data.keyword.en_short}} dashboard, click **Add**, and select **{{site.data.keyword.cloud_notm}} sources**.
 

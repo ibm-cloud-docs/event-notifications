@@ -31,7 +31,7 @@ toc:
       - en-terraform-tutorial.md
       - en-create-topic.md
       - en-create-subscription.md
-      - en-create-template.md
+      - en-create-subscription.md
       - en-integrations.md
       - en-smtp-configurations.md
       - topicgroup:
@@ -82,6 +82,13 @@ toc:
               - en-test-destination.md
       - en-cfe-integrations.md
       - topicgroup:
+          label: Event Notifications Templates
+          topics:
+          - en-templates.md
+          - en-email-templates.md
+          - en-webhook-notifications-template.md
+          - en-slack-notification-template.md
+      - topicgroup:
           label: Observability
           topics:
           - logging.md
@@ -103,6 +110,11 @@ toc:
               label: Privately connecting to Event Notifications
               topics:
               - en-cse.md
+      - topicgroup:
+          label: Scheduling Events
+          topics:
+          - en-cron-periodic-timer.md
+      
   - navgroup:
       id: reference
       topics:
