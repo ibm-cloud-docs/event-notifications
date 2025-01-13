@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-01-07"
+lastupdated: "2025-01-13"
 
 keywords: event-notifications, event notifications, about event notifications, cron scheduler, topics, sources
 
@@ -12,7 +12,7 @@ subcollection: event-notifications
 {{site.data.keyword.attribute-definition-list}}
 
 # Periodic Timer
-{: #en-periodic-timer}
+{: #en-cron-periodic-timer}
 
 The Periodic timer is an event scheduler in the {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} service that generates events periodically based on the cron expressions. Periodic Event scheduling is important in large-scale applications where the client cannot maintain the periodic timer. Therefore rather than relying on the client to schedule events, {{site.data.keyword.en_short}} will manage the scheduling of events based on a certain period defined by the user. 
 
