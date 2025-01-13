@@ -53,7 +53,7 @@ Decide on a location where your service to be hosted. Currently, the following l
 
 Based on your business requirements, decide on a pricing plan. Currently, the following plans are available: Lite, and Standard.
 
-- `Lite`: This plan gives you unlimited ingested events, 10 topics, 2 filters per topic, 5 destinations, 20 outbound emails, 20 outbound SMSes, 20 outbound webhooks, and 1000 notifications per push destination. 10 subscriptions are allowed, and a subscription can have a maximum of 3 email recipients.
+- `Lite`: This plan gives you unlimited ingested events, 10 topics, two filters per topic, five destinations, 20 outbound emails, 20 outbound SMSes, 20 outbound webhooks (including Slack, with a limit of 20 Slack messages), and 1000 notifications per push destination (cumulative per instance, including Android, iOS, Huawei devices, and Chrome, Firefox, Safari browsers; the instance will be disabled once the limit is reached). Ten subscriptions are allowed, and a subscription can have a maximum of three email recipients.
 
 - `Standard`: You are charged for ingested events and for outbound digital messages. An ingested event is one that is received and filtered. If a source is connected but no filters are defined for it (that is, the source is not associated with any topic), the incoming events are dropped, and you are not charged. Outbound digital messages come in various types, and each type is priced separately.
 

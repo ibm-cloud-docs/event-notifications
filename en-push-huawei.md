@@ -25,7 +25,7 @@ To create a Huawei Push Destination, perform the following steps:
 
 1. Login to your {{site.data.keyword.cloud_notm}} account.
 
-1. If you already have an {{site.data.keyword.en_short}} service instance, navigate to your {{site.data.keyword.en_short}} service instance from the **Resource list** and select the required {{site.data.keyword.en_short}} service instance. Otherwise, you can [create a new {{site.data.keyword.en_short}} service instance](/docs/event-notifications?topic=event-notifications-en-create-en-instance).
+1. If you already have an {{site.data.keyword.en_short}} service instance, navigate to your {{site.data.keyword.en_short}} service instance from the **Resource list** and select the required {{site.data.keyword.en_short}} service instance. Otherwise, you can [create a new {{site.data.keyword.en_short}} service instance](/docs/event-notifications?topic=event-notifications-getting-started#en-cloud-ac).
 
 1. Click `Destinations` in the {{site.data.keyword.en_short}} console. By default, **{{site.data.keyword.cloud_notm}} SMS service** and **{{site.data.keyword.cloud_notm}} Email service** are included, with their `Destination ID`.
 
