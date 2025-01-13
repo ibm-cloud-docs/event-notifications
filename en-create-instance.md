@@ -19,7 +19,7 @@ Get started by creating an {{site.data.keyword.en_short}} service instance.
 
 1. Log in to your {{site.data.keyword.cloud_notm}} account.
 1. In the {{site.data.keyword.cloud_notm}} [catalog](/catalog#services), search and select [{{site.data.keyword.en_short}}](/catalog/services/event-notifications). The service configuration screen opens.
-1. Select a **Location**. Currently, Dallas (us-south), London (eu-gb), Sydney (au-syd), Frankfurt (eu-de) and Madrid (eu-es) locations are supported.
+1. Select a **Location**. Currently, Dallas (us-south), London (eu-gb), Sydney (au-syd), Frankfurt (eu-de), Madrid (eu-es), Toronto (ca-tor), Tokyo (jp-tok), Osaka (jp-osa) locations are supported.
 1. Select a pricing plan. 
    * **Lite** plan: This plan gives you unlimited ingested events, 10 topics, two filters per topic, five destinations, 20 outbound emails, 20 outbound SMSes, 20 outbound webhooks (including Slack, with a limit of 20 Slack messages), and 1000 notifications per push destination (cumulative per instance, including Android, iOS, Huawei devices, and Chrome, Firefox, Safari browsers; the instance will be disabled once the limit is reached). Ten subscriptions are allowed, and a subscription can have a maximum of three email recipients.
    

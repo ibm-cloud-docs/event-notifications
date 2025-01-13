@@ -43,6 +43,9 @@ Decide on a location where your service to be hosted. Currently, the following l
 * Frankfurt (eu-de)
 * Sydney (au-syd)
 * Madrid (eu-es)
+* Toronto (ca-tor)
+* Tokyo (jp-tok)
+* Osaka (jp-osa)
 
 ## Decide on a pricing plan
 {: #en-decide-pricing-plans}
