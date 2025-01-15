@@ -65,7 +65,7 @@ Complete the following steps to provision your {{site.data.keyword.en_short}} in
 
 1. Retrieve the Cloud Resource Name (CRN) of the key using the **View CRN** option in the key management service instance GUI.
 
-1. Provision an instance of [{{site.data.keyword.en_short}}](/docs/event-notifications?topic=event-notifications-en-create-en-instance). This feature is supported on the Standard plan only.
+1. Provision an instance of [{{site.data.keyword.en_short}}](/docs/event-notifications?topic=event-notifications-getting-started#en-cloud-ac). This feature is supported on the Standard plan only.
 
 ## Using a customer-managed key
 {: #en-using-encryption}

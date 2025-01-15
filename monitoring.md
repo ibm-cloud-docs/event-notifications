@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2024
-lastupdated: "2024-11-04"
+  years: 2018, 2025
+lastupdated: "2025-01-13"
 
 keywords: IBM Cloud, observability
 
@@ -31,7 +31,7 @@ You can use {{site.data.keyword.mon_full_notm}} to visualize and alert on metric
 
 | Dallas (`us-south`) | Washington (`us-east`)  | Toronto (`ca-tor`) | Sao Paulo (`br-sao`) |
 |---------------------|-------------------------|-------------------|----------------------|
-| [Yes]{: tag-green}| [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} |
+| [Yes]{: tag-green}| [No]{: tag-red} | [Yes]{: tag-green} | [No]{: tag-red} |
 {: caption="Regions where metrics are sent in Americas locations" caption-side="top"}
 {: #mon-table-1}
 {: tab-title="Americas"}
@@ -41,7 +41,7 @@ You can use {{site.data.keyword.mon_full_notm}} to visualize and alert on metric
 
 | Tokyo (`jp-tok`)    | Sydney (`au-syd`) |  Osaka (`jp-osa`) | Chennai (`in-che`) |
 |---------------------|------------------|------------------|--------------------|
-| [No]{: tag-red} | [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} |
+| [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [No]{: tag-red} |
 {: caption="Regions where metrics are sent in Asia Pacific locations" caption-side="top"}
 {: #mon-table-2}
 {: tab-title="Asia Pacific"}

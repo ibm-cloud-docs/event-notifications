@@ -15,7 +15,6 @@ toc:
       topics:
       - getting-started.md
       - en-about.md
-      - en-create-instance.md
       - en-migration.md
       - en-responsibilities.md
       - en-new-pricing.md
@@ -134,7 +133,8 @@ toc:
       - topicgroup:
           label: CLI Reference
           topics:
-          - include: ../event-notifications-cli-plugin/event-notifications-cli.md
+          - topic: en-cli.md
+            navtitle: Event Notifications CLI
       - topicgroup:
           label: SDKs
           topics:
