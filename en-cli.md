@@ -1080,7 +1080,7 @@ ibmcloud event-notifications topic --help
 - **Example:**
 {: #en-cli-topic-example-schema}
 
- - The following example shows the format of the `TopicCreateSourcesItem[]` object for the Periodic Timer source.
+  - The following example shows the format of the `TopicCreateSourcesItem[]` object for the Periodic Timer source.
 
       ```json
        [

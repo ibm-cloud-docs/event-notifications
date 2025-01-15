@@ -134,7 +134,7 @@ toc:
           label: CLI Reference
           topics:
           - topic: en-cli.md
-            navtitle: CLI
+            navtitle: Event Notifications CLI
       - topicgroup:
           label: SDKs
           topics:
