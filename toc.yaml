@@ -133,7 +133,8 @@ toc:
       - topicgroup:
           label: CLI Reference
           topics:
-          - include: ../event-notifications-cli-plugin/event-notifications-cli.md
+          - topic: en-cli.md
+            navtitle: CLI
       - topicgroup:
           label: SDKs
           topics:
