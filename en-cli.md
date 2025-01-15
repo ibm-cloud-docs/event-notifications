@@ -87,6 +87,9 @@ export IBMCLOUD_EN_ENDPOINT=<https://au-syd.event-notifications.cloud.ibm.com/ev
   - **Sydney:** `https://au-syd.event-notifications.cloud.ibm.com/event-notifications`
   - **Frankfurt:** `https://eu-de.event-notifications.cloud.ibm.com/event-notifications`
   - **Madrid:** `https://eu-es.event-notifications.cloud.ibm.com/event-notifications`
+  - **Osaka:** `https://jp-osa.event-notifications.cloud.ibm.com/event-notifications`
+  - **Tokyo:** `https://jp-tok.event-notifications.cloud.ibm.com/event-notifications`
+  - **Toronto:** `https://ca-tor.event-notifications.cloud.ibm.com/event-notifications`
 
 - export **IBMCLOUD_EN_ENDPOINT** variable to set the {{site.data.keyword.en_short}} region private endpoint.
 
@@ -95,6 +98,9 @@ export IBMCLOUD_EN_ENDPOINT=<https://au-syd.event-notifications.cloud.ibm.com/ev
   - **Sydney:** `https://private.au-syd.event-notifications.cloud.ibm.com/event-notifications`
   - **Frankfurt:** `https://private.eu-de.event-notifications.cloud.ibm.com/event-notifications`
   - **Madrid:** `https://private.eu-es.event-notifications.cloud.ibm.com/event-notifications`
+  - **Osaka:** `https://private.jp-osa.event-notifications.cloud.ibm.com/event-notifications`
+  - **Tokyo:** `https://private.jp-tok.event-notifications.cloud.ibm.com/event-notifications`
+  - **Toronto:** `https://private.ca-tor.event-notifications.cloud.ibm.com/event-notifications`
 
 - export **EVENT_NOTIFICATIONS_API_KEY** variable to set the {{site.data.keyword.en_short}} instance `apikey`.
 
@@ -1073,6 +1079,26 @@ ibmcloud event-notifications topic --help
 
 - **Example:**
 {: #en-cli-topic-example-schema}
+
+ - The following example shows the format of the `TopicCreateSourcesItem[]` object for the Periodic Timer source.
+
+      ```json
+       [
+          {
+             "id" : "exampleString",
+             "rules" : [
+                {
+                   "enabled" : true,
+                   "event_schedule_filter": {
+                      "starts_at": "2024-12-23T12:00:00.000Z",
+                      "ends_at": "2024-12-23T20:00:00.000Z",
+                      "expression": "* * * * *"
+                      }
+                }
+             ]
+          }
+       ]
+      ```
 
   - The following example shows the format of the `TopicCreateSourcesItem[]` object.
 
