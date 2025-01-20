@@ -117,7 +117,7 @@ You can send notifications or alerts to multiple destination types, for example,
 If your chosen source is an **API source** , then you can only add the "Advanced Conditions" rule to your topic.
 {: note}
 
-If your chosen source is a **Periodic Timer Source** , then refer [here](/docs/event-notifications?topic=event-notifications-en-periodic-timer) for steps to set rules for your topic. 
+If your chosen source is a **Periodic Timer Source** , then refer [here](/docs/event-notifications?topic=event-notifications-en-cron-periodic-timer) for steps to set rules for your topic. 
 
 Step 2 created a topic, step 3 provisions optional custom rules for the topic.
 {: note}
