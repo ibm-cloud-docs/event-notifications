@@ -87,6 +87,7 @@ toc:
           - en-email-templates.md
           - en-webhook-notifications-template.md
           - en-slack-notification-template.md
+          - en-pager-duty-notification.md
       - topicgroup:
           label: Observability
           topics:
