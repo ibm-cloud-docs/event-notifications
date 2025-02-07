@@ -67,6 +67,7 @@ To configure a PagerDuty destination, do the following steps:
 | `critical` - HIGH, `error` - MEDIUM, `warning` - LOW, `info` - INFO, `Default Severity` - LOW | `payload.severity` | Yes |
 | `time` (cloud events) | `payload.timestamp` | Yes |
 | `data` | `payload.custom_details` | Yes |
+| `source` | `payload.source` | Yes |
 | NA | `dedup_key` | No |
 | NA | `payload.component` | No |
 | NA | `payload.group` | No |

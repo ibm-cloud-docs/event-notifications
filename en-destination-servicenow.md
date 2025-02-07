@@ -47,7 +47,7 @@ To configure a ServiceNow destination, do the following steps:
    - **Client ID** - Enter the client ID needed to retrieve the OAuth access token.
    - **Client secret** - Enter the client secret required for authenticating the Client ID provided earlier.
 
-      **Client ID** and **Client secret** can be fetched from `System Oauth` -> `Application Registries`. This is inside your {{site.data.keyword.en_short}} instance console (you can search by clicking on "All"). Make sure it is in active state and applicable for connecting to external clients.
+      **Client ID** and **Client secret** can be fetched from `System Oauth` -> `Application Registries`. This is inside your ServiceNow instance console (you can search by clicking on "All"). Make sure it is in active state and applicable for connecting to external clients.
       {: note}
 
 1. Click **Add**.
