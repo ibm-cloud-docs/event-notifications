@@ -79,7 +79,7 @@ To temporarily prevent access, you can disable your root key. As a consequence, 
 
 To remove access permanently, you can delete the key. However, you must take extreme caution because this operation is non-recoverable. You will lose access to any data stored in your {{site.data.keyword.en_short}} instance. There is no way to recover this data.
 
-In both cases, the {{site.data.keyword.en_short}} instance shuts down and no longer accepts or processes connections. An activity tracker event is generated to report the action. For more information, see [{{site.data.keyword.en_short}} events](/docs/event-notifications?topic=event-notifications-en-at_events).
+In both cases, the {{site.data.keyword.en_short}} instance shuts down and no longer accepts or processes connections. An activity tracker event is generated to report the action. For more information, see [{{site.data.keyword.en_short}} events](/docs/event-notifications?topic=event-notifications-at_events).
 
 The authorization should remain in place between your {{site.data.keyword.en_short}} and the key management service instance at all times. While removing this authorization prevents {{site.data.keyword.en_short}} from future access to your data, already in-use data will continue to be available for a period of time.
 {: note}
@@ -92,14 +92,14 @@ You are charged for your instance of {{site.data.keyword.en_short}} until you de
 
 Access can be restored only if the key was not deleted. To restore access, re-enable your root key. After a short period of initialization, your {{site.data.keyword.en_short}} instance is restarted and starts accepting connections again. All data is retained, subject to the normal retention limits configured in your instance.
 
-An activity tracker event is generated to report the action. For more information, see [{{site.data.keyword.cloudaccesstrailshort}} events](/docs/event-notifications?topic=event-notifications-en-at_events).
+An activity tracker event is generated to report the action. For more information, see [{{site.data.keyword.cloudaccesstrailshort}} events](/docs/event-notifications?topic=event-notifications-at_events).
 
 ### Rotating the key
 {: #rotating_key}
 
 {{site.data.keyword.keymanagementserviceshort}} and {{site.data.keyword.hscrypto}} support the rotation of root keys, either on demand or on a schedule. When this occurs, {{site.data.keyword.en_short}} adopts the new key by rewrapping the DEK as described in [how customer-managed encryption works](#en-encryption-how).
 
-An activity tracker event is generated to report the action. For more information, see [{{site.data.keyword.cloudaccesstrailshort}} events](/docs/event-notifications?topic=event-notifications-en-at_events).
+An activity tracker event is generated to report the action. For more information, see [{{site.data.keyword.cloudaccesstrailshort}} events](/docs/event-notifications?topic=event-notifications-at_events).
 
 ## Disabling customer-managed encryption
 {: #stop_customer_encryption}

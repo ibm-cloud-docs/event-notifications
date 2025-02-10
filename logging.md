@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2025
-lastupdated: "2025-01-07"
+lastupdated: "2025-01-23"
 
 keywords: event notifications cloud logs, event notifications logging, event notifications external logs
 
@@ -248,5 +248,6 @@ If you want to view all the logs that are being generated for a particular insta
 
 If you know the notification ID that is generated for a request from a service or source to the {{site.data.keyword.en_short}} service, use the following query in {{site.data.keyword.logs_full_notm}} to list all logs for that particular notification ID:
 
+```
 <notification Id>
-{: codeblock}
+```

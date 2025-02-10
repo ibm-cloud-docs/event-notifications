@@ -353,4 +353,4 @@ Regardless of whether the message was successfully delivered to the local device
 For personalized numbers or if you're looking for higher volume and price negotiations, you can find more details [here](/docs/event-notifications?topic=event-notifications-en-destinations-sms-custom).
 {: note}
 
-You can monitor your SMS usage by setting up a monitoring dashboard through the `Actions` menu in the {{site.data.keyword.en_short}} dashboard. See [Monitor {{site.data.keyword.en_short}} service metrics with {{site.data.keyword.monitoringfull_notm}}](/docs/event-notifications?topic=event-notifications-en-monitoring) for details.
+You can monitor your SMS usage by setting up a monitoring dashboard through the `Actions` menu in the {{site.data.keyword.en_short}} dashboard. See [Monitor {{site.data.keyword.en_short}} service metrics with {{site.data.keyword.monitoringfull_notm}}](/docs/event-notifications?topic=event-notifications-monitoring) for details.

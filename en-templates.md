@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-01-01"
+lastupdated: "2025-02-03"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -30,6 +30,7 @@ An {{site.data.keyword.en_full_notm}} template is a pre-defined layout that incl
     * [Custom Email Invitation](/docs/event-notifications?topic=event-notifications-en-email-templates)
     * [Webhook Notification](/docs/event-notifications?topic=event-notifications-en-webhook-notifications-template)
     * [Slack Notification](/docs/event-notifications?topic=event-notifications-en-slack-notification-template)
+    * [PagerDuty Notification](/docs/event-notifications?topic=event-notifications-en-pagerduty-notification-template)
    
 1. Click **Add** to save your updates. 
 

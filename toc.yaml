@@ -30,7 +30,6 @@ toc:
       - en-terraform-tutorial.md
       - en-create-topic.md
       - en-create-subscription.md
-      - en-create-subscription.md
       - en-integrations.md
       - en-smtp-configurations.md
       - topicgroup:
@@ -87,6 +86,7 @@ toc:
           - en-email-templates.md
           - en-webhook-notifications-template.md
           - en-slack-notification-template.md
+          - en-pager-duty-notification.md
       - topicgroup:
           label: Observability
           topics:

@@ -67,7 +67,7 @@ In the example, the total outbound digital messages are:
 
 You are charged for messages that are successfully sent by the {{site.data.keyword.cloud_notm}} push service to the push provider regardless of whether the message was successfully delivered to the local device. So vet your device list carefully to prevent unnecessary charges.
 
-You can monitor your push usage by setting up a monitoring dashboard through the `Actions` menu in the {{site.data.keyword.en_short}} dashboard. For more information, see [Monitor {{site.data.keyword.en_short}} service metrics with {{site.data.keyword.monitoringfull_notm}}](/docs/event-notifications?topic=event-notifications-en-monitoring).
+You can monitor your push usage by setting up a monitoring dashboard through the `Actions` menu in the {{site.data.keyword.en_short}} dashboard. For more information, see [Monitor {{site.data.keyword.en_short}} service metrics with {{site.data.keyword.monitoringfull_notm}}](/docs/event-notifications?topic=event-notifications-monitoring).
 
 ### Push charges for pre-production destination
 {: #en-destinations-push-charge-preprod-destination}

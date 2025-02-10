@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2025-01-07"
+lastupdated: "2025-02-03"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -20,12 +20,19 @@ content-type: release-note
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
 
+## January 2025
+{: #event-notifications-Jan232024}
+{: release-note}
+
+Custom Templates for PagerDuty
+: {{site.data.keyword.IBM_notm}} {{site.data.keyword.en_short}} now supports custom templates for PagerDuty , enabling users to quickly set up and customize the PagerDuty alert notifications , see [PagerDuty Notification Template](/docs/event-notifications?topic=event-notifications-en-pagerduty-notification-template)
+
 ## December 2024
 {: #event-notifications-Dec2024}
 {: release-note}
 
 Periodic Timer
-: {{site.data.keyword.IBM_notm}} {{site.data.keyword.en_short}} now supports periodic timer for event scheduling , see [Periodic Timer](/docs/event-notifications?topic=event-notifications-en-periodic-timer)
+: {{site.data.keyword.IBM_notm}} {{site.data.keyword.en_short}} now supports periodic timer for event scheduling , see [Periodic Timer](/docs/event-notifications?topic=event-notifications-en-cron-periodic-timer)
 
 ## 20 December 2024
 {: #event-notifications-Dec202024}
@@ -47,7 +54,7 @@ Assigning Access to Topics and Subscriptons
 {: release-note}
 
 Enhanced Filtering Criteria
-: IBM Event Notifications now supports advanced filtering criteria that can be used to add rules when creating a topic , see [Advanced Conditions](/docs/event-notifications?topic=event-notifications-en-create-en-topic).
+: {{site.data.keyword.IBM_notm}} {{site.data.keyword.en_short}}s now supports advanced filtering criteria that can be used to add rules when creating a topic , see [Advanced Conditions](/docs/event-notifications?topic=event-notifications-en-create-en-topic).
 
 
 
@@ -58,56 +65,56 @@ For more information, see [Regions and endpoints](/docs/event-notifications?topi
 {: release-note}
 
 Support for SMTP Private Endpoint
-: IBM Event Notifications now supports the ability to send e-mails via SMTP Private Endpoint, see [SMTP Private Endpoint](/docs/event-notifications?topic=event-notifications-en-smtp-configurations#en-smtp-configurations-send-emails-using-private-endpoint).
+: {{site.data.keyword.IBM_notm}} {{site.data.keyword.en_short}} now supports the ability to send e-mails via SMTP Private Endpoint, see [SMTP Private Endpoint](/docs/event-notifications?topic=event-notifications-en-smtp-configurations#en-smtp-configurations-send-emails-using-private-endpoint).
 
 ## 16 September 2024
 {: #event-notifications-Sep1624}
 {: release-note}
 
 Support for templates on Webhook
-: IBM Event Notifications now supports templates on Webhook, enabling users to quickly set up notifications for different events, see [Event Notifications Templates](/docs/event-notifications?topic=event-notifications-en-create-en-template).
+: {{site.data.keyword.IBM_notm}} {{site.data.keyword.en_short}} now supports templates on Webhook, enabling users to quickly set up notifications for different events, see [Event Notifications Templates](/docs/event-notifications?topic=event-notifications-en-create-en-template).
 
 ## 30 August 2024
 {: #event-notifications-Aug3024}
 {: release-note}
 
 Support direct message for Slack
-: IBM Event Notifications now supports the ability to send direct messages to Slack, see [Slack direct message](/docs/event-notifications?topic=event-notifications-en-destinations-slack).
+: {{site.data.keyword.IBM_notm}} {{site.data.keyword.en_short}} now supports the ability to send direct messages to Slack, see [Slack direct message](/docs/event-notifications?topic=event-notifications-en-destinations-slack).
 
 ## 10 July 2024
 {: #event-notifications-Jul1024}
 {: release-note}
 
 Support Context-Based restictions for SMTP Interface
-: IBM Event Notifications now supports the ability to enforce context-based restrictions for the direct connection to SMTP interface, see [SMTP interface CBR support](/docs/event-notifications?topic=event-notifications-en-smtp-configurations#en-smtp-configurations-cbr).
+: {{site.data.keyword.IBM_notm}} {{site.data.keyword.en_short}} now supports the ability to enforce context-based restrictions for the direct connection to SMTP interface, see [SMTP interface CBR support](/docs/event-notifications?topic=event-notifications-en-smtp-configurations#en-smtp-configurations-cbr).
 
 ## 5 July 2024
 {: #event-notifications-Jul0524}
 {: release-note}
 
 Support for acesss {{site.data.keyword.en_full}} metrics of custom email domains
-: IBM Event Notifications now provides access to view the notitfication performance metrics for custom email domains, see [Monitoring {{site.data.keyword.en_full}} metrics](/docs/event-notifications?topic=event-notifications-en-view-manage-monitor-metrics).
+: {{site.data.keyword.IBM_notm}} {{site.data.keyword.en_short}} now provides access to view the notitfication performance metrics for custom email domains, see [Monitoring {{site.data.keyword.en_full}} metrics](/docs/event-notifications?topic=event-notifications-en-view-manage-monitor-metrics).
 
 ## 22 May 2024
 {: #event-notifications-May2224}
 {: release-note}
 
 Support for templates on Slack
-: IBM Event Notifications now supports templates on Slack, enabling users to quickly set up and customize notifications for different events, see [Event Notifications Slack Template](/docs/event-notifications?topic=event-notifications-en-smtp-configurations).
+: {{site.data.keyword.IBM_notm}} {{site.data.keyword.en_short}} now supports templates on Slack, enabling users to quickly set up and customize notifications for different events, see [Event Notifications Slack Template](/docs/event-notifications?topic=event-notifications-en-smtp-configurations).
 
 ## 01 May 2024
 {: #event-notifications-May0124}
 {: release-note}
 
 IBM Cloud Event Notifications SMTP Interface
-: Event Notifications now includes support for SMTP configration and sending emails via connecting to the SMTP interface., see [Event Notifications SMTP Interface](/docs/event-notifications?topic=event-notifications-en-smtp-configurations).
+: {{site.data.keyword.IBM_notm}} {{site.data.keyword.en_short}}now includes support for SMTP configration and sending emails via connecting to the SMTP interface., see [Event Notifications SMTP Interface](/docs/event-notifications?topic=event-notifications-en-smtp-configurations).
 
 ## 29 Feb 2024
 {: #event-notifications-Feb2924}
 {: release-note}
 
 Support for Code Engine Jobs
-: Event Notifications now includes support for code engine jobs as a destination option., see [Code Engine jobs](/docs/event-notifications?topic=event-notifications-en-destinations-codeengine).
+: {{site.data.keyword.IBM_notm}} {{site.data.keyword.en_short}} now includes support for code engine jobs as a destination option., see [Code Engine jobs](/docs/event-notifications?topic=event-notifications-en-destinations-codeengine).
 
 Support of additional countries for SMS notification using IBM Cloud SMS service destination
 :  You can now send SMS notifications to countries listed [here](/docs/event-notifications?topic=event-notifications-en-destinations-sms#en-destinations-sms-charge).
@@ -117,14 +124,14 @@ Support of additional countries for SMS notification using IBM Cloud SMS service
 {: release-note}
 
 Support for Custom Domain Email Opt-out functionality
-: Event Notifications offers users a versatile option to deviate from the conventional subscription process by introducing an opt-out capability, see [Custom Domain Email Opt-out functionality](/docs/event-notifications?topic=event-notifications-en-destinations-custom-domain-opt-out).
+: {{site.data.keyword.IBM_notm}} {{site.data.keyword.en_short}} offers users a versatile option to deviate from the conventional subscription process by introducing an opt-out capability, see [Custom Domain Email Opt-out functionality](/docs/event-notifications?topic=event-notifications-en-destinations-custom-domain-opt-out).
 
 ## 29 Nov 2023
 {: #event-notifications-Nov2923}
 {: release-note}
 
 Support for personalised phone numbers via Custom SMS destination
-: Event Notifications provides support for sending SMS from personalised phone numbers using the new destination, Custom SMS. For more information, see [Custom SMS](/docs/event-notifications?topic=event-notifications-en-destinations-sms-custom).
+: {{site.data.keyword.IBM_notm}} {{site.data.keyword.en_short}} provides support for sending SMS from personalised phone numbers using the new destination, Custom SMS. For more information, see [Custom SMS](/docs/event-notifications?topic=event-notifications-en-destinations-sms-custom).
 
 ## 16 Nov 2023
 {: #event-notifications-Nov1623}
@@ -145,28 +152,28 @@ Support for tiered pricing for Push Notifications destinations
 {: release-note}
 
 IBM Cloud Event Notifications is now available in Madrid region
-:  Event Notifications now provides the ability to provision instance in Madrid region.
+:  {{site.data.keyword.IBM_notm}} {{site.data.keyword.en_short}} now provides the ability to provision instance in Madrid region.
 
 ## 11 October 2023
 {: #event-notifications-Oct1123}
 {: release-note}
 
 Validate connections
-:  Event Notifications now provides the ability to validate the functionality and reliability of your critical connections. With this functionality, you can effortlessly test a destination with a single click. For more information, see [Test Destinations](/docs/event-notifications?topic=event-notifications-en-test-destination).
+:  {{site.data.keyword.IBM_notm}} {{site.data.keyword.en_short}} now provides the ability to validate the functionality and reliability of your critical connections. With this functionality, you can effortlessly test a destination with a single click. For more information, see [Test Destinations](/docs/event-notifications?topic=event-notifications-en-test-destination).
 
 ## 20 September 2023
 {: #event-notifications-Sept2023}
 {: release-note}
 
 Email template personalization
-:  Event Notifications now provides the ability to apply Email templates to emails which are sent using Custom Domain Email destination. You can now create your own Email Templates and use these templates to send emails in a personalised way. For more information, see [Personalization in templates](/docs/event-notifications?topic=event-notifications-en-destinations-custom-email#en-destinations-custom-email-templates).
+:  {{site.data.keyword.IBM_notm}} {{site.data.keyword.en_short}} now provides the ability to apply Email templates to emails which are sent using Custom Domain Email destination. You can now create your own Email Templates and use these templates to send emails in a personalised way. For more information, see [Personalization in templates](/docs/event-notifications?topic=event-notifications-en-destinations-custom-email#en-destinations-custom-email-templates).
 
 ## 31 August 2023
 {: #event-notifications-Aug3123}
 {: release-note}
 
 Support for Email Templates in Custom Domain Email Destination
-:  Event Notifications now provides the ability to apply Email templates to emails which are sent using Custom Domain Email destination. You can now create your own Email Templates and use these templates to send emails. For more information, see [Email Templates](/docs/event-notifications?topic=event-notifications-en-destinations-custom-email#en-destination-email-custom-domain-opt-out-desc).
+:  {{site.data.keyword.IBM_notm}} {{site.data.keyword.en_short}} now provides the ability to apply Email templates to emails which are sent using Custom Domain Email destination. You can now create your own Email Templates and use these templates to send emails. For more information, see [Email Templates](/docs/event-notifications?topic=event-notifications-en-destinations-custom-email#en-destination-email-custom-domain-opt-out-desc).
 
 
 ## 31 July 2023
@@ -177,7 +184,7 @@ New supported {{site.data.keyword.cloud_notm}} source: watsonx.data
 :  IBM watsonx.data is an open, hybrid, and governed fit-for-purpose data store optimized to scale all data, analytics and AI workloads available as a Event Notifications source under IBM Cloud Sources. For more information, see [Enabling event notifications for watsonx.data](/docs/watsonxdata?topic=watsonxdata-event-notifications-events).
 
 Support for Custom Domain Email Service
-:  Event Notifications provides support for sending emails from custom domain using the new destination, email service with custom domain name. For more information, see [Using an IBM Cloud email service with custom domain](/docs/event-notifications?topic=event-notifications-en-destinations-custom-email).
+:  {{site.data.keyword.IBM_notm}} {{site.data.keyword.en_short}} provides support for sending emails from custom domain using the new destination, email service with custom domain name. For more information, see [Using an IBM Cloud email service with custom domain](/docs/event-notifications?topic=event-notifications-en-destinations-custom-email).
 
 ## 14 June 2023
 {: #event-notifications-Jun1423}
@@ -276,7 +283,7 @@ New supported {{site.data.keyword.cloud_notm}} source: {{site.data.keyword.cloud
 {: release-note}
 
 New destination: {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}
-:  {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}} is now available as a destination. You can send notifications to your {{site.data.keyword.openwhisk_short}} instance by using Event Notifications. [Send notifications to your {{site.data.keyword.openwhisk_short}} instance by using Event Notifications](/docs/event-notifications?topic=event-notifications-en-destinations-cloud-functions).
+:  {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}} is now available as a destination. You can send notifications to your {{site.data.keyword.openwhisk_short}} instance by using Event Notifications. Send notifications to your {{site.data.keyword.openwhisk_short}} instance by using Event Notifications.
 
 Support for changing a **Pre-production destination** to **Production destination**
 :  You can now change a **Pre-production destination** to **Production destination** after your development and testing. For more information, see [Modify a Pre-production destination to Production destination](/docs/event-notifications?topic=event-notifications-en-create-en-destination#en-destination-preprod-prod).

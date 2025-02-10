@@ -23,7 +23,7 @@ Various services produce events that can be consumed by {{site.data.keyword.en_s
 
 There are now four types of sources that are supported for {{site.data.keyword.en_short}}: {{site.data.keyword.cloud_notm}} sources, generic API sources, {{site.data.keyword.cloud_notm}} platform sources and the Periodic Timer.
 
-With {{site.data.keyword.cloud_notm}} sources, events emit from managed services on {{site.data.keyword.cloud_notm}}. For example, {{site.data.keyword.monitoringfull_notm}}, {{site.data.keyword.cloud_notm}} Security and Compliance Center, {{site.data.keyword.secrets-manager_full_notm}}, {{site.data.keyword.appconfig_short}}, IBM Cloud Projects, and Toolchain can all be added to {{site.data.keyword.en_short}} {{site.data.keyword.cloud_notm}} sources.
+With {{site.data.keyword.cloud_notm}} sources, events emit from managed services on {{site.data.keyword.cloud_notm}}. The following sources For example, {{site.data.keyword.monitoringfull_notm}}, {{site.data.keyword.cloud_notm}} Security and Compliance Center, {{site.data.keyword.secrets-manager_full_notm}}, {{site.data.keyword.appconfig_short}}, IBM Cloud Projects,Toolchain and {{site.data.keyword.lakehouse_full_notm}} can all be added to {{site.data.keyword.en_short}} {{site.data.keyword.cloud_notm}} sources.
 
 With generic API sources, events emanate from services or applications that are not managed by IBM. For example, if you create your own application that sends events to {{site.data.keyword.en_short}}, your application can be added as an API source.
 
@@ -37,6 +37,9 @@ The Periodic Timer source is also provided as a default source. It is used to sc
 To see the current list of {{site.data.keyword.cloud_notm}} services available as {{site.data.keyword.en_short}} sources, go to the **Sources** section of your {{site.data.keyword.en_short}} dashboard, click **Add**, and select **{{site.data.keyword.cloud_notm}} sources**.
 
 The connection protocols differ between source types, so the procedure for adding is different as described in the following sections.
+
+To integrate a source with {{site.data.keyword.en_short}}, an instance of that source also needs to be created. For more information on how the supported sources can be integrated with {{site.data.keyword.en_short}}, refer [here](/docs/event-notifications?topic=event-notifications-en-source).
+{: note}
 
 ## Adding a source
 {: #en-add-source-IBM-managed}
