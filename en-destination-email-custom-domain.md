@@ -15,6 +15,9 @@ subcollection: event-notifications
 
 You can configure a custom email destination in the Destinations tab. As part of the configuration, enter the domain name to be used for sending emails.
 
+Custom email destination is not supported by Lite Plan. To know more about the plans and destinations available, refer [here](/docs/event-notifications?topic=event-notifications-getting-started)
+{: note}
+
 ## Custom domain name verification
 {: #en-destinations-custom-email-verify}
 

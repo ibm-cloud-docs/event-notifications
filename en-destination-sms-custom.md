@@ -15,6 +15,9 @@ subcollection: event-notifications
 
 You can configure a Custom SMS destination in the Destinations tab.
 
+Custom SMS destination is not supported by Lite Plan. To know more about the plans and destinations available, refer [here](/docs/event-notifications?topic=event-notifications-getting-started)
+{: note}
+
 ## Custom SMS personalised numbers
 {: #en-destinations-sms-custom-numbers}
 

@@ -3,7 +3,7 @@
 copyright:
 
   years: 2021, 2025
-lastupdated: "2025-01-23"
+lastupdated: "2025-02-11"
 
 keywords: event notifications, IBM Cloud
 
@@ -55,6 +55,9 @@ Decide on a location where your service to be hosted. Currently, the following l
 Based on your business requirements, decide on a pricing plan. Currently, the following plans are available: Lite, and Standard.
 
 - `Lite`: This plan gives you unlimited ingested events, 10 topics, two filters per topic, five destinations, 20 outbound emails, 20 outbound SMSes, 20 outbound webhooks (including Slack, with a limit of 20 Slack messages), and 1000 notifications per push destination (cumulative per instance, including Android, iOS, Huawei devices, and Chrome, Firefox, Safari browsers; the instance will be disabled once the limit is reached). Ten subscriptions are allowed, and a subscription can have a maximum of three email recipients.
+
+   Custom Email and Custom SMS destinations are not supported by Lite Plan.
+   {: note}
 
 - `Standard`: You are charged for ingested events and for outbound digital messages. An ingested event is one that is received and filtered. If a source is connected but no filters are defined for it (that is, the source is not associated with any topic), the incoming events are dropped, and you are not charged. Outbound digital messages come in various types, and each type is priced separately.
 
