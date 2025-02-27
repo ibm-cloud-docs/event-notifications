@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2025-02-03"
+lastupdated: "2025-02-25"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -100,7 +100,7 @@ Support for acesss {{site.data.keyword.en_full}} metrics of custom email domains
 {: release-note}
 
 Support for templates on Slack
-: {{site.data.keyword.IBM_notm}} {{site.data.keyword.en_short}} now supports templates on Slack, enabling users to quickly set up and customize notifications for different events, see [Event Notifications Slack Template](/docs/event-notifications?topic=event-notifications-en-smtp-configurations).
+: {{site.data.keyword.IBM_notm}} {{site.data.keyword.en_short}} now supports templates on Slack, enabling users to quickly set up and customize notifications for different events, see [Event Notifications Slack Template](/docs/event-notifications?topic=event-notifications-en-slack-notification-template).
 
 ## 01 May 2024
 {: #event-notifications-May0124}

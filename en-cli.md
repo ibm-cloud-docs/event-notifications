@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-01-15"
+lastupdated: "2025-02-27"
 
 keywords: event notifications CLI plug-in, CLI reference, en cli reference, event notifications cli reference, event notifications, command line reference
 
@@ -2061,7 +2061,7 @@ ibmcloud event-notifications template-create --instance-id INSTANCE-ID --name NA
 ibmcloud event-notifications template-create \
     --instance-id exampleString \
     --name exampleString \
-    --type exampleString \
+    --type smtp_custom.notification \
     --params '{"body": "exampleString", "subject": "exampleString"}' \
     --description exampleString
 ```
@@ -2072,7 +2072,7 @@ ibmcloud event-notifications template-create \
 ibmcloud event-notifications template-create \
     --instance-id exampleString \
     --name exampleString \
-    --type exampleString \
+    --type slack.notification \
     --params '{"body": "ewoJImJsb2NrcyI6IFsKCQl7CgkJCSJ0eXBlIjogInNlY3Rpb24iLAoJCQkidGV4dCI6IHsKCQkJCSJ0eXBlIjogIm1ya2R3biIsCgkJCQkidGV4dCI6ICJOZXcgUGFpZCBUaW1lIE9mZiByZXF1ZXN0IGZyb20gPGV4YW1wbGUuY29tfEZyZWQgRW5yaXF1ZXo+XG5cbjxodHRwczovL2V4YW1wbGUuY29tfFZpZXcgcmVxdWVzdD4iCgkJCX0KCQl9CgldCn0="}' \
     --description exampleString
 ```
@@ -2083,12 +2083,21 @@ ibmcloud event-notifications template-create \
 ibmcloud event-notifications template-create \
     --instance-id exampleString \
     --name exampleString \
-    --type exampleString \
+    --type webhook.notification \
     --params '{"body": "ewoJImJsb2NrcyI6IFsKCQl7CgkJCSJ0eXBlIjogInNlY3Rpb24iLAoJCQkidGV4dCI6IHsKCQkJCSJ0eXBlIjogIm1ya2R3biIsCgkJCQkidGV4dCI6ICJOZXcgUGFpZCBUaW1lIE9mZiByZXF1ZXN0IGZyb20gPGV4YW1wbGUuY29tfEZyZWQgRW5yaXF1ZXo+XG5cbjxodHRwczovL2V4YW1wbGUuY29tfFZpZXcgcmVxdWVzdD4iCgkJCX0KCQl9CgldCn0="}' \
     --description exampleString
 ```
+- The following example shows the format of the `TemplateConfig` object for Pagerduty. The supported type is `pagerduty.notification`
 
-{: pre}
+```sh
+ibmcloud event-notifications template-create \
+    --instance-id exampleString \
+    --name exampleString \
+    --type pagerduty.notification \
+    --params '{"body": "ewogICJwYXlsb2FkIjogewogICAgInN1bW1hcnkiOiAie3sgZGF0YS5hbGVydF9kZWZpbml0aW9uLm5hbWV9fSIsCiAgICAidGltZXN0YW1wIjogInt7dGltZX19IiwKICAgICJzZXZlcml0eSI6ICJpbmZvIiwKICAgICJzb3VyY2UiOiAie3sgc291cmNlIH19IgogIH0sCiAgImRlZHVwX2tleSI6ICJ7eyBpZCB9fSIsCiAge3sjZXF1YWwgZGF0YS5zdGF0dXMgInRyaWdnZXJlZCJ9fQogICJldmVudF9hY3Rpb24iOiAidHJpZ2dlciIKICAge3svZXF1YWx9fQoKICB7eyNlcXVhbCBkYXRhLnN0YXR1cyAicmVzb2x2ZWQifX0KICAiZXZlbnRfYWN0aW9uIjogInJlc29sdmUiCiAge3svZXF1YWx9fQoKICAge3sjZXF1YWwgZGF0YS5zdGF0dXMgImFja25vd2xlZGdlZCJ9fQogICAiZXZlbnRfYWN0aW9uIjogImFja25vd2xlZGdlIgogICB7ey9lcXVhbH19Cn0="}' \
+    --description exampleString
+```
+
 
 {: pre}
 
@@ -3099,4 +3108,5 @@ The CLI Plugin versions from 0.0.5 to 1.0.0 is deprecated.
 | 1.9.0 | 11 October 2024 | Support for Webhook templates. |
 | 1.10.0 | 4 November 2024 | Removed support for Cloud Functions |
 | 1.11.0 | 7 January 2025 | Support for Periodic Timer |
+| 1.12.0 | 27 February 2025 | Support for Pagerduty template |
 {: caption="Changes in the {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} CLI" caption-side="bottom"}
