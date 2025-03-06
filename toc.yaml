@@ -77,6 +77,7 @@ toc:
               - en-destination-servicenow.md
               - en-destination-codeengine.md
               - en-destination-cloud-object-storage.md
+              - en-destination-event-streams.md
               - en-managing-encryption.md
               - en-test-destination.md
       - en-cfe-integrations.md
@@ -98,6 +99,7 @@ toc:
           topics:
           - en-iam.md
           - en-iam-assign-topic-subscription.md
+          - en-iam-authorization.md
           - en-cbr.md
           - at-events.md
           - en-data-security-compliance.md
