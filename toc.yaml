@@ -99,6 +99,7 @@ toc:
           topics:
           - en-iam.md
           - en-iam-assign-topic-subscription.md
+          - en-iam-authorization.md
           - en-cbr.md
           - at-events.md
           - en-data-security-compliance.md
