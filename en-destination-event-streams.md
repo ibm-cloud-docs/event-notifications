@@ -44,11 +44,12 @@ To configure an {{site.data.keyword.messagehub}} destination, do the following s
    - **Type** - Under **Destination**, for the **Type**, select **{{site.data.keyword.messagehub}}** from the list as your destination type.
    - **Account** - Select the account in which the {{site.data.keyword.messagehub}} instance is located. 
 
-        If the {{site.data.keyword.messagehub}} instance is located in the same account as your {{ite.data.keyword.en_short}} instance:
+        If the {{site.data.keyword.messagehub}} instance is located in the same account as your {{site.data.keyword.en_short}} instance:
 
         - **Instance Name** - Select the name of the {{site.data.keyword.messagehub}} instance to send notifications to. 
         - **Endpoint** - Once the instance is selected, the **Endpoint** field will be filled automatically by pulling it from the selected instance. 
         - **Topic** - Select the **Topic** to send/receive messages from. To select the topic ,see [Topic](#en-select-topic). 
+
 
         If the {{site.data.keyword.messagehub}} instance is located in a different account, provide the following details :
 
