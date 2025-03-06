@@ -45,18 +45,20 @@ To configure an {{site.data.keyword.messagehub}} destination, do the following s
    - **Account** - Select the account in which the {{site.data.keyword.messagehub}} instance is located. 
 
         If the {{site.data.keyword.messagehub}} instance is located in the same account as your {{ite.data.keyword.en_short}} instance:
-         - **Instance Name** - Select the name of the {{site.data.keyword.messagehub}} instance to send notifications to. 
-         - **Endpoint** - Once the instance is selected, the **Endpoint** field will be filled automatically by pulling it from the selected instance. 
-         - **Topic** - Select the **Topic** to send/receive messages from. To select the topic ,see [Topic](#en-select-topic). 
+
+        - **Instance Name** - Select the name of the {{site.data.keyword.messagehub}} instance to send notifications to. 
+        - **Endpoint** - Once the instance is selected, the **Endpoint** field will be filled automatically by pulling it from the selected instance. 
+        - **Topic** - Select the **Topic** to send/receive messages from. To select the topic ,see [Topic](#en-select-topic). 
 
         If the {{site.data.keyword.messagehub}} instance is located in a different account, provide the following details :
-         - **CRN** - Enter the {{site.data.keyword.messagehub}} CRN . For more information, see [CRN](#en-crn).
-         - **Endpoint** - Enter the {{site.data.keyword.messagehub}} endpoint URL. For more information, see [Endpoint url](#en-endpoint-url).
-         - **Topic** - Select the topic to send/receive messages from. To select the topic ,see [Topic](#en-select-topic).
+
+        - **CRN** - Enter the {{site.data.keyword.messagehub}} CRN . For more information, see [CRN](#en-crn).
+        - **Endpoint** - Enter the {{site.data.keyword.messagehub}} endpoint URL. For more information, see [Endpoint url](#en-endpoint-url).
+        - **Topic** - Select the topic to send/receive messages from. To select the topic ,see [Topic](#en-select-topic).
 
 1. Click **Add**.
 
-### Creating an authorization in the console
+## Creating an authorization in the console
 {: #en-using-s2s-console-event-streams}
 
 To learn the process to create an authorization between {{site.data.keyword.en_short}} and {{site.data.keyword.messagehub}}, refer [Authorization between services](/docs/event-notifications?topic=event-notifications-en-using-s2s-authorization). 
@@ -106,4 +108,3 @@ To learn the process to create an authorization between {{site.data.keyword.en_s
 1. Navigate to **Topics** in the menu. You will find the list of available topics. Select the topic you want to send messages to or receive messages from. 
 
 1. Copy the **Topic Name** that needs to used in the destination creation process. Use this copied name in the destination creation screen.
-
