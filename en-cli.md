@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-02-27"
+lastupdated: "2025-03-07"
 
 keywords: event notifications CLI plug-in, CLI reference, en cli reference, event notifications cli reference, event notifications, command line reference
 
@@ -385,9 +385,9 @@ ibmcloud event-notifications destination --help
       The maximum length is `255` characters. The minimum length is `1` character. The value must match regular expression `/[a-zA-Z 0-9-_\/.?:'";,+=!#@$%^&*() ]*/`.
 
    `--type TYPE` (string)
-   :  The type of the destination. The options available are webhook, push_android, push_ios. Required.
+   :  The type of the destination. The options available are webhook, push_android, push_ios,push_chrome,push_firefox,push_huawei,push_safari,ibmce,  ibmcos,msteams,pagerduty,servicenow,slack,smtp_custom,sms_custom, event_streams. Required.
 
-      Allowable values are: `webhook`. The minimum length is `1` character.
+      Allowable values are: `webhook`, `push_android`, `push_ios`,`push_chrome`,`push_firefox`,`push_huawei`,`push_safari`,`ibmce`,  `ibmcos`,`msteams`,`pagerduty`,`servicenow`,`slack`,`smtp_custom`,`sms_custom`,event_streams. The minimum length is `1` character.
 
    `--collect-failed-events` (bool)
    :   Whether to collect the failed event in Cloud Object Storage bucket.
@@ -472,7 +472,7 @@ ibmcloud event-notifications destination --help
 - **Examples:**
 {: #en-cli-destination-config-example-schema}
 
-  - The following example shows format of the `DestinationConfig` object for iOS destination with P8 certificate. Set `pre_prod` Boolean parameter to *true* to configure destination as pre-production destination else set the value as *false*:
+  - The following example shows format of the `DestinationConfig` object for iOS destination(push_ios) with P8 certificate. Set `pre_prod` Boolean parameter to *true* to configure destination as pre-production destination else set the value as *false*:
 
       ```json
       {
@@ -487,7 +487,7 @@ ibmcloud event-notifications destination --help
       }
       ```
 
-  - The following example shows format of the `DestinationConfig` object for iOS destination with P12 certificate. Set `pre_prod` Boolean parameter to *true* to configure destination as pre-production destination else set the value as *false*.
+  - The following example shows format of the `DestinationConfig` object for iOS destination(push_ios) with P12 certificate. Set `pre_prod` Boolean parameter to *true* to configure destination as pre-production destination else set the value as *false*.
 
       ```json
       {
@@ -500,7 +500,7 @@ ibmcloud event-notifications destination --help
       }
       ```
 
-  - The following example shows the format of the `DestinationConfig` object for Chrome destination. Set `pre_prod` Boolean parameter to *true* to configure destination as pre-production destination else set the value as *false*.
+  - The following example shows the format of the `DestinationConfig` object for Chrome destination(push_chrome). Set `pre_prod` Boolean parameter to *true* to configure destination as pre-production destination else set the value as *false*.
 
       ```json
       {
@@ -512,7 +512,7 @@ ibmcloud event-notifications destination --help
       }
       ```
 
-  - The following example shows format of the `DestinationConfig` object for Firefox destination. Set `pre_prod` Boolean parameter to *true* to configure destination as pre-production destination else set the value as *false*.
+  - The following example shows format of the `DestinationConfig` object for Firefox destination(push_firefox). Set `pre_prod` Boolean parameter to *true* to configure destination as pre-production destination else set the value as *false*.
 
       ```json
       {
@@ -523,7 +523,7 @@ ibmcloud event-notifications destination --help
       }
       ```
 
-  - The following example shows format of the `DestinationConfig` object for Slack destination with type as incoming_webhook.
+  - The following example shows format of the `DestinationConfig` object for Slack destination(slack) with type as incoming_webhook.
 
       ```json
       {
@@ -534,7 +534,7 @@ ibmcloud event-notifications destination --help
       }
       ```
 
-    - The following example shows format of the `DestinationConfig` object for Slack destination with type as direct_message.
+    - The following example shows format of the `DestinationConfig` object for Slack destination(slack) with type as direct_message.
 
       ```json
       {
@@ -545,7 +545,7 @@ ibmcloud event-notifications destination --help
       }
       ```
 
-  - The following example shows format of the `DestinationConfig` object for Safari destination. Set `pre_prod` Boolean parameter to *true* to configure destination as pre-production destination else set the value as *false*.
+  - The following example shows format of the `DestinationConfig` object for Safari destination(push_safari). Set `pre_prod` Boolean parameter to *true* to configure destination as pre-production destination else set the value as *false*.
 
       ```json
       {
@@ -562,7 +562,7 @@ ibmcloud event-notifications destination --help
       }
       ```
 
-  - The following example shows format of the `DestinationConfig` object for MS Teams destination.
+  - The following example shows format of the `DestinationConfig` object for MS Teams(msteams) destination.
 
       ```json
       {
@@ -572,7 +572,7 @@ ibmcloud event-notifications destination --help
       }
       ```
 
-  - The following example shows format of the `DestinationConfig` object for PagerDuty destination.
+  - The following example shows format of the `DestinationConfig` object for PagerDuty(pagerduty) destination.
 
       ```json
       {
@@ -583,7 +583,7 @@ ibmcloud event-notifications destination --help
       }
       ```
 
-  - The following example shows the format of the `DestinationConfig` object for webhook.
+  - The following example shows the format of the `DestinationConfig` object for Webhook(webhook).
 
       ```json
       {
@@ -596,7 +596,7 @@ ibmcloud event-notifications destination --help
       }
       ```
 
-  - The following example shows the format of the `DestinationConfig` object for push_android destination.
+  - The following example shows the format of the `DestinationConfig` object for Android(push_android) destination.
 
       ```json
       {
@@ -609,7 +609,7 @@ ibmcloud event-notifications destination --help
       }
       ```
 
-  - The following example shows the format of the `DestinationConfig` object for ServiceNow destination.
+  - The following example shows the format of the `DestinationConfig` object for ServiceNow(servicenow) destination.
 
       ```json
       {
@@ -623,7 +623,7 @@ ibmcloud event-notifications destination --help
       }
       ```
 
-  - The following example shows the format of the `DestinationConfig` object for Code Engine destination.
+  - The following example shows the format of the `DestinationConfig` object for Code Engine(ibmce) destination.
 
       code engine destination type: application
 
@@ -652,7 +652,7 @@ ibmcloud event-notifications destination --help
       }
       ```
 
-  - The following example shows the format of the `DestinationConfig` object for {{site.data.keyword.cos_full_notm}} destination.
+  - The following example shows the format of the `DestinationConfig` object for {{site.data.keyword.cos_full_notm}}(ibmcos) destination.
 
       ```json
       {
@@ -664,7 +664,7 @@ ibmcloud event-notifications destination --help
       }
       ```
 
-  - The following example shows the format of the `DestinationConfig` object for Huawei destination.
+  - The following example shows the format of the `DestinationConfig` object for Huawei(push_huawei) destination.
 
       ```json
       {
@@ -676,7 +676,7 @@ ibmcloud event-notifications destination --help
       }
       ```  
 
-  - The following example shows the format of the `DestinationConfig` object for Custom Email destination.
+  - The following example shows the format of the `DestinationConfig` object for Custom Email(smtp_custom) destination.
 
       Process To do the Custom Domain Configuration and Verification: <https://cloud.ibm.com/docs/event-notifications?topic=event-notifications-en-destinations-custom-email#en-destinations-custom-email-verify>
 
@@ -687,6 +687,18 @@ ibmcloud event-notifications destination --help
          }
       }
       ```  
+
+       - The following example shows the format of the `DestinationConfig` object for {{site.data.keyword.messagehub}}(event_streams) destination.
+
+      ```json
+      {
+         "params" : {
+           "crn": "crn:v1:bluemix:public:messagehub:us-south:a/9f007405a9fe4a5d9345fa8c13357373:a292db6e-af78-4c0b-b3db-7d6794b637g::",
+           "endpoint": "https://n6627w6t7dgeh2cfgd.svc09.us-south.eventstreams.cloud.ibm.com",
+           "topic": "demo_topic"
+         }
+      }
+      ```
 
    Note: The Custom SMS Destination does not require any Destination Config To be set up.
 
@@ -1431,6 +1443,13 @@ ibmcloud event-notifications subscription --help
          "template_id_invitation": "f1ef32fb-b7dd-4405-xxxx-7b6719cee8aa"
       }
       ```
+      - The following example shows the format of the `SubscriptionCreateAttributes` object for Pagerduty/Event Streams.
+
+      ```json
+      {
+         "template_id_notification": "a59f6e38-7a48-xxxx-b665-3724afc58b13",
+      }
+      ```
 
 ### ibmcloud event-notifications subscription list
 
@@ -1684,6 +1703,14 @@ ibmcloud event-notifications subscription --help
       {
          "assigned_to" : "serviceuser@gmail.com",
          "assignment_group" : "incidentgroup"
+      }
+      ```
+
+      - The following example shows the format of the `SubscriptionUpdateAttributes` object for Pagerduty/Event Streams.
+
+      ```json
+      {
+         "template_id_notification": "a59f6e38-7a48-xxxx-b665-3724axx58b13",
       }
       ```
 
@@ -2095,6 +2122,17 @@ ibmcloud event-notifications template-create \
     --name exampleString \
     --type pagerduty.notification \
     --params '{"body": "ewogICJwYXlsb2FkIjogewogICAgInN1bW1hcnkiOiAie3sgZGF0YS5hbGVydF9kZWZpbml0aW9uLm5hbWV9fSIsCiAgICAidGltZXN0YW1wIjogInt7dGltZX19IiwKICAgICJzZXZlcml0eSI6ICJpbmZvIiwKICAgICJzb3VyY2UiOiAie3sgc291cmNlIH19IgogIH0sCiAgImRlZHVwX2tleSI6ICJ7eyBpZCB9fSIsCiAge3sjZXF1YWwgZGF0YS5zdGF0dXMgInRyaWdnZXJlZCJ9fQogICJldmVudF9hY3Rpb24iOiAidHJpZ2dlciIKICAge3svZXF1YWx9fQoKICB7eyNlcXVhbCBkYXRhLnN0YXR1cyAicmVzb2x2ZWQifX0KICAiZXZlbnRfYWN0aW9uIjogInJlc29sdmUiCiAge3svZXF1YWx9fQoKICAge3sjZXF1YWwgZGF0YS5zdGF0dXMgImFja25vd2xlZGdlZCJ9fQogICAiZXZlbnRfYWN0aW9uIjogImFja25vd2xlZGdlIgogICB7ey9lcXVhbH19Cn0="}' \
+    --description exampleString
+```
+
+- The following example shows the format of the `TemplateConfig` object for Event Streams. The supported type is `event_streams.notification`
+
+```sh
+ibmcloud event-notifications template-create \
+    --instance-id exampleString \
+    --name exampleString \
+    --type event_streams.notification \
+    --params '{"body": "eyJuYW1lIjoie3tkYXRhLm5hbWV9fSIifQ=="}' \
     --description exampleString
 ```
 
@@ -3109,4 +3147,5 @@ The CLI Plugin versions from 0.0.5 to 1.0.0 is deprecated.
 | 1.10.0 | 4 November 2024 | Removed support for Cloud Functions |
 | 1.11.0 | 7 January 2025 | Support for Periodic Timer |
 | 1.12.0 | 27 February 2025 | Support for Pagerduty template |
+| 1.13.0 | 6 March 2025 | Support for {{site.data.keyword.messagehub}} destination, subscription and Templates
 {: caption="Changes in the {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} CLI" caption-side="bottom"}
