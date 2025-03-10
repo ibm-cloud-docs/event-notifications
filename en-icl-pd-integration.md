@@ -2,7 +2,7 @@
 
 copyright:
    years: 2025
-lastupdated: "2025-03-04"
+lastupdated: "2025-03-10"
 
 keywords: event-notifications, event notifications, about event notifications, cloud logs, pagerduty
 
@@ -112,7 +112,7 @@ You need an {{site.data.keyword.cloud}} account. If you don't have an account, t
 
 1. Go to **topics** and click **Create**. Name your topic, and select your Cloud Logs instance as the Source. To learn more about creating a topic and providing filters that can be used in your instance, see [Creating an Event notifications topic](/docs/event-notifications?topic=event-notifications-en-create-en-topic). Click **Create**. 
 
-1. Navigate to **Destinations** and click Create. Name your destination and select destination type as **PagerDuty**. Provide the API key and Routing key, then click Add. See here for process to generate the [API Key](https://support.pagerduty.com/main/docs/api-access-keys) and [Routing key](https://support.pagerduty.com/main/docs/services-and-integrations#generate-a-new-integration-key).
+1. Navigate to **Destinations** and click Create. Name your destination and select destination type as **PagerDuty**. Provide the and Routing key, then click Add. See here for process to generate the [Routing key](https://support.pagerduty.com/main/docs/services-and-integrations#generate-a-new-integration-key).
 
 1. Create a template for your PagerDuty alert by navigating to Templates > Create. Name your template, select the template type as PagerDuty notification, and provide your template. 
 
