@@ -20,11 +20,6 @@ PagerDuty empowers users and organizations to prevent and resolve business-impac
 
 When you select PagerDuty as service destination, any subscribed notification about an event can be sent as an **alert** to PagerDuty channels.
 
-## Generate PagerDuty API key
-{: #en-pd-generate-api-key}
-
-Generate the PagerDuty API key as per the guidance [here](https://support.pagerduty.com/main/docs/api-access-keys){: external}.
-
 ## Generate PagerDuty routing key
 {: #en-pd-generate-routing-key}
 
@@ -49,7 +44,6 @@ To configure a PagerDuty destination, do the following steps:
    - **Name** - Enter a name for your destination.
    - **Description** - Optionally, enter a description for your destination.
    - **Type** - Under **Destination**, for the **Type**, select **Pagerduty** from the drop-down as your destination type.
-   - **API key** - Enter the API key that you have [generated](#en-pd-generate-api-key) earlier.
    - **Routing key** - Enter the routing key [generated](#en-pd-generate-routing-key) earlier.
 
 1. Click **Add**.
