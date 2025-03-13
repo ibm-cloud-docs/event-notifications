@@ -11,7 +11,7 @@ subcollection: event-notifications
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Map Event notification payloads to destination fields
+# Transforming messages with notification payloads for destinations
 {: #en-map-notificationpayload-destination-params}
 
 Event notification payloads include a set of default parameters that are consistently mapped across all destinations.
@@ -76,25 +76,23 @@ The **data** key here has alert definition values. They are alert ID, name, aler
 
 To help you to develop a notification payload to send to any of the destinations, understand the following mapping.
 
-## Map notification payload to default email destination
+## Transforming messages for default email
 {: #en-map-notificationpayload-destination-deEmail}
 
 For default emails, users cannot modify the email template and it is dedicated to the events sourced from IBM Cloud sources only.
 Also, API sources cannot send notifications to IBM Cloud email destination.
-These emails originate from no-reply@cloud.ibm.com or eventnotifications@cloud.ibm.com, while you can add your own reply-to address
+These emails originate from no-reply@cloud.ibm.com or eventnotifications@cloud.ibm.com, while you can add your own reply-to address.
 {: important}
 
 **ibmendefaultshort** maps to the subject of the email.
 **ibmendefaultlong** maps to email body.
 
-## Map notification payload to default SMS destination
+## Transforming messages for default SMS
 {: #en-map-notificationpayload-destination-deSMS}
 
-**ibmendefaultshort** is a part of the subject of SMS.
 **ibmendefaultlong** is a part of the SMS body.
 
-
-## Map notification payload to custom email destination
+## Transforming messages for custom email
 {: #en-map-notificationpayload-destination-cuEmail}
 
 Use email Template to personalize the messages transformed from events. Also email templates are supported for Custom Domain email destination. You can use any of the keys that are defined under the **data** key as an input to the template.
@@ -103,20 +101,20 @@ To understand more about email templates, [see](/docs/event-notifications?topic=
 **ibmendefaultshort** maps to the subject of the email.
 In cases where a custom template is not available, the system automatically defaults to the **ibmenhtmlbody** template. If the **ibmenhtmlbody** template is also unavailable, the system gracefully fallbacks to the **ibmendefaultlong**, ensuring a smooth and consistent user experience.
 
-## Map notification payload to custom SMS destination
+## Transforming messages for custom SMS
 {: #en-map-notificationpayload-destination-cuSMS}
 
 **ibmensmstext** is a part of the SMS body. If not specified, the SMS body constitutes of **ibmendefaultlong**.
 **ibmensmsto** has a list of destination numbers. If not specified, the events route to the phone numbers in the recipient list defined in the SMS destination.
 **ibmenmms** maps to the MMS body if you use Multimedia Messaging Service (MMS). 
 
-# Map notification payload to Webhooks destination
+## Transforming messages for Webhooks
 {: #en-map-notificationpayload-destination-webHook}
 
 Use the Webhook notification Template to transform event notifications to be consumed programmatically.
 The keys that are defined as part of a **data** block maps to specific properties in the template block. To understand more about the Webhook notification Template, [see](/docs/event-notifications?topic=event-notifications-en-webhook-notifications-template).
 
-## Map notification payload to Slack destination
+## Transforming messages for Slack
 {: #en-map-notificationpayload-destination-slack}
 
 Use Slack Template to transform event notification to Slack.
@@ -125,7 +123,7 @@ The keys that are defined as part of a **data** block maps to specific propertie
 If a template is not defined, the system gracefully fallbacks to the **ibmendefaultlong** for the body of the message.
 
 
-## Map notification payload to Microsoft&reg; Teams destination
+## Transforming messages for Microsoft&reg; Teams
 {: #en-map-notificationpayload-destination-teams}
 
 To post a Microsoft Teams notification, you need to create an incoming webhook URL. To understand more about the Microsoft Teams notification, (see)[/docs/event-notifications?topic=event-notifications-en-destinations-msteams].
@@ -134,7 +132,7 @@ To post a Microsoft Teams notification, you need to create an incoming webhook U
 **ibmendefaultlong** maps to the default long payload.
 **data** block maps to data JSON which is formatted as JSON in the Microsoft Teams notification.
 
-## Map notification payload to ServiceNow destination
+## Transforming messages for ServiceNow
 {: #en-map-notificationpayload-destination-SNow}
 
 The event notification payload keys are mapped to destination fields of ServiceNow fields.
@@ -144,7 +142,7 @@ The event notification payload keys are mapped to destination fields of ServiceN
 **urgency** and **priority** to the respective fields of ServiceNow fields.
 
 
-## Map notification payload to PagerDuty destination
+## Transforming messages for PagerDuty
 {: #en-map-notificationpayload-destination-pagerDuty}
 
 Use PagerDuty Template to transform event notification to PagerDuty.
@@ -157,14 +155,14 @@ If a template is not defined, the event notification payload keys are mapped to 
 **data** maps to the **payload.custom_details** field.
 **source** maps to **payload.source** field.
 
-## Map notification payload to Push Android destination
+## Transforming messages for Push Android
 {: #en-map-notificationpayload-destination-pushAndroid}
 
 **ibmenfcmbody** maps to the body of the messase sent to the FCM server.
 **ibmenfcmbody** is used only if **ibmenpushto** has a targeted Android device, otherwise it is ignored.
 If **ibmenfcmbody** is not specified, **ibmendefaultlong** is used as the notification body.
 
-## Map notification payload to Push IOS destination
+## Transforming messages for Push IOS
 {: #en-map-notificationpayload-destination-pushIOS}
 
 **ibmenapnsbody** maps to the body of the messase sent to the APNs server.
@@ -172,32 +170,30 @@ If **ibmenfcmbody** is not specified, **ibmendefaultlong** is used as the notifi
 If **ibmenapnsbody** is not specified, **ibmendefaultlong** is used as the notification body.
 
 
-## Map notification payload to Push Chrome destination
+## Transforming messages for Push Chrome
 {: #en-map-notificationpayload-destination-pushChrome}
 
 **ibmenchromebody** maps to the body of the messase sent to a web server.
 **ibmenchromebody** is used only if **ibmenpushto** has a targeted an Chrome device, otherwise it is ignored.
 If **ibmenchromebody** is not specified, **ibmendefaultlong** is used as the notification body.
 
-## Map notification payload to Push Firefox destination
+## Transforming messages for Push Firefox
 {: #en-map-notificationpayload-destination-pushFirefox}
 
 **ibmenfirefoxbody** maps to the body of the message sent to a web server.
 **ibmenfirefoxbody** is used only if **ibmenpushto** has a targeted an Firefox device, otherwise it is ignored.
 If **ibmenfirefoxbody** is not specified, **ibmendefaultlong** is used as the notification body.
 
-## Map notification payload to Push Safari destination
+## Transforming messages for Push Safari
 {: #en-map-notificationpayload-destination-pushSafari}
 
 **ibmensafaribody** maps to the body of the message sent to the web server.
 **ibmensafaribody** is used only if **ibmenpushto** has a targeted a Safari device, otherwise it is ignored.
 If **ibmensafaribody** is not specified, **ibmendefaultlong** is used as the notification body.
 
-## Map notification payload to Push Huawei destination
+## Transforming messages for Push Huawei
 {: #en-map-notificationpayload-destination-pushHuawei}
 
 **ibmenhuaweibody** maps to the body of the message sent to the web server.
 **ibmenhuaweibody** is used only if **ibmenpushto** has a targeted a Huawei device, otherwise it is ignored.
-If **ibmensafaribody** is not specified, **ibmendefaultlong** is used as the notification body.
-
-
+If **ibmenhuaweibody** is not specified, **ibmendefaultlong** is used as the notification body.
