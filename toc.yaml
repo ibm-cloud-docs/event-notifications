@@ -116,7 +116,6 @@ toc:
           label: Scheduling Events
           topics:
           - en-cron-periodic-timer.md
-      
   - navgroup:
       id: reference
       topics:
@@ -162,7 +161,9 @@ toc:
       - en-regions-endpoints.md
       - data-portability.md
       - en-payload.md
+      - en-map-notification-payload.md
       - en-notices.md
+
   - navgroup:
       id: help
       topics:
