@@ -19,11 +19,11 @@ subcollection: event-notifications
 
 Use {{site.data.keyword.cloud}} Identity and Access Management (IAM) to create or remove an authorization that grants one service access to another service.
 
-## Creating an authorization in the console
-{: #en-using-s2s-console}
-
 If the source service that needs access to the target service is in the same account, select **This account**. The service-to-service authorization is created when the integration is created from the console. If the integration is being created by using the API, the users need to create the service-to-service authorization manually.
 {: note}
+
+## Creating an authorization in the console
+{: #en-using-s2s-console}
 
 If the source and target services are in different accounts or if the authorization is created manually, follow the steps listed below : 
 

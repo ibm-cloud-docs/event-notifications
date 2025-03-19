@@ -39,18 +39,18 @@ To configure an {{site.data.keyword.messagehub}} destination, do the following s
 
 1. In the **Add a destination** side panel, provide the name, description(optional) and select the destination type and the account where the {{site.data.keyword.messagehub}} instance is located. 
 
-        If the {{site.data.keyword.messagehub}} instance is located in the same account as your {{site.data.keyword.en_short}} instance:
+      If the {{site.data.keyword.messagehub}} instance is located in the same account as your {{site.data.keyword.en_short}} instance:
 
-        - **Instance Name** - Select the name of the {{site.data.keyword.messagehub}} instance to send notifications to. 
-        - **Endpoint** - Once the instance is selected, the **Endpoint** field will be filled automatically by pulling it from the selected instance. 
-        - **Topic** - Select the **Topic** to send/receive messages from. To select the topic, see [Topic](#en-select-topic). 
+      - **Instance Name** - Select the name of the {{site.data.keyword.messagehub}} instance to send notifications to. 
+      - **Endpoint** - Once the instance is selected, the **Endpoint** field will be filled automatically by pulling it from the selected instance. 
+      - **Topic** - Select the **Topic** to send/receive messages from. To select the topic, see [Topic](#en-select-topic). 
 
 
-        If the {{site.data.keyword.messagehub}} instance is located in a different account, provide the following details :
+      If the {{site.data.keyword.messagehub}} instance is located in a different account, provide the following details :
 
-        - **CRN** - Enter the {{site.data.keyword.messagehub}} CRN . For more information, see [CRN](#en-crn).
-        - **Endpoint** - Enter the {{site.data.keyword.messagehub}} endpoint URL. For more information, see [Endpoint url](#en-endpoint-url).
-        - **Topic** - Select the topic to send/receive messages from. To select the topic, see [Topic](#en-select-topic).
+      - **CRN** - Enter the {{site.data.keyword.messagehub}} CRN . For more information, see [CRN](#en-crn).
+      - **Endpoint** - Enter the {{site.data.keyword.messagehub}} endpoint URL. For more information, see [Endpoint url](#en-endpoint-url).
+      - **Topic** - Select the topic to send/receive messages from. To select the topic, see [Topic](#en-select-topic).
 
 1. Click **Add**.
 
@@ -73,17 +73,17 @@ To learn the process to create an authorization between {{site.data.keyword.en_s
 
 1. From the {{site.data.keyword.messagehub}} console : 
 
-   ### CRN 
-   {: #en-crn}
+    **CRN**
+    {: #en-crn}
     
     Copy the **CRN**, that is used in the destination creation process. Use this copied CRN in the destination creation screen.
 
-   ### Endpoint URL 
-   {: #en-endpoint-url}
+    **Endpoint URL**
+    {: #en-endpoint-url}
 
     Copy the **HTTP API endpoint** that needs to be used in the destination creation process. Use this copied endpoint in the destination creation screen.
 
-   ### Topic
-   {: #en-topic}
+    **Topic**
+    {: #en-topic}
 
     Navigate to **Topics** in the menu. You will find the list of available topics. Select the topic that you want to send messages to or receive messages from. Copy the **Topic Name** that needs to be used in the destination creation process. Use this copied name in the destination creation screen.
