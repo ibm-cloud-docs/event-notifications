@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-03-07"
+lastupdated: "2025-03-19"
 
 keywords: event notifications CLI plug-in, CLI reference, en cli reference, event notifications cli reference, event notifications, command line reference
 
@@ -130,7 +130,6 @@ Operate on {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} sourc
 ibmcloud event-notifications source --help
 ```
 
-{: pre}
 
 ### ibmcloud event-notifications source create
 
@@ -149,8 +148,6 @@ ibmcloud event-notifications source --help
    ```sh
    ibmcloud event-notifications sources-create --instance-id INSTANCE-ID --name NAME --description DESCRIPTION [--enabled ENABLED]
    ```
-
-   {: pre}
 
 - **Parameters to provide:**
 
@@ -191,7 +188,6 @@ ibmcloud event-notifications source --help
    ibmcloud event-notifications source-update --instance-id INSTANCE-ID --id ID [--name NAME] [--description DESCRIPTION] [--enabled ENABLED]
    ```
 
-   {: pre}
 
 - **Parameters to provide:**
 
@@ -237,7 +233,6 @@ ibmcloud event-notifications source --help
    ibmcloud event-notifications sources [--limit LIMIT] [--offset OFFSET] [--search SEARCH] [--instance-id INSTANCE-ID]
    ```
 
-   {: pre}
 
 - **Parameters to provide:**
 
@@ -1054,14 +1049,6 @@ ibmcloud event-notifications topic --help
 {: #en-cli-topic-create-command}
 
 - **Action:** Create new `Topic`.
-
-   [Supported till version 0.2.0]
-
-   ```sh
-   ibmcloud event-notifications topic create --name NAME [--description DESCRIPTION] [--sources SOURCES] [--instance-id INSTANCE-ID]
-   ```
-
-   [From version 1.0.0]
 
    ```sh
    ibmcloud event-notifications topic-create --name NAME [--description DESCRIPTION] [--sources SOURCES] [--instance-id INSTANCE-ID]
