@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2025-03-19"
+lastupdated: "2025-03-20"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -64,6 +64,12 @@ Enhanced Filtering Criteria
 : {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now supports advanced filtering criteria that can be used to add rules when creating a topic , see [Advanced Conditions](/docs/event-notifications?topic=event-notifications-en-create-en-topic).
 
 
+## 15 December 2024
+{: #event-notifications-dec1524}
+{: release-note}
+
+{{site.data.keyword.cloud_notm}} {{site.data.keyword.en_full}} is available as a deployable architecture for use in projects
+:   Cloud automation for deploying {{site.data.keyword.en_full}} by using {{site.data.keyword.cloud_notm}} projects is now available. The Cloud automation for {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_full}} deployable architecture from the {{site.data.keyword.cloud_notm}} catalog, helps you to automate {{site.data.keyword.cloud_notm}} projects through configuring, deploying, and monitoring your resource deployments by using DevOps best practices. For more information, see [Working with the {{site.data.keyword.en_full}} deployable architecture](/docs/event-notifications?topic=event-notifications-deployable-architecture).
 
 For more information, see [Regions and endpoints](/docs/event-notifications?topic=event-notifications-en-regions-endpoints).
 
