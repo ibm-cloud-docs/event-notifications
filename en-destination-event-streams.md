@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-03-19"
+lastupdated: "2025-03-21"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, Event Streams, event streams
 
@@ -43,14 +43,14 @@ To configure an {{site.data.keyword.messagehub}} destination, do the following s
 
       - **Instance Name** - Select the name of the {{site.data.keyword.messagehub}} instance to send notifications to. 
       - **Endpoint** - Once the instance is selected, the **Endpoint** field will be filled automatically by pulling it from the selected instance. 
-      - **Topic** - Select the **Topic** to send/receive messages from. To select the topic, see [Topic](#en-select-topic). 
+      - **Topic** - Select the **Topic** to send/receive messages from. To select the topic, see [Topic](#en-topic). 
 
 
       If the {{site.data.keyword.messagehub}} instance is located in a different account, provide the following details :
 
       - **CRN** - Enter the {{site.data.keyword.messagehub}} CRN . For more information, see [CRN](#en-crn).
       - **Endpoint** - Enter the {{site.data.keyword.messagehub}} endpoint URL. For more information, see [Endpoint url](#en-endpoint-url).
-      - **Topic** - Select the topic to send/receive messages from. To select the topic, see [Topic](#en-select-topic).
+      - **Topic** - Select the topic to send/receive messages from. To select the topic, see [Topic](#en-topic).
 
 1. Click **Add**.
 

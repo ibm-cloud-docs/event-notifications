@@ -18,13 +18,13 @@ subcollection: event-notifications
 {{site.data.keyword.en_full}} provides troubleshooting information to isolate and resolve problems, and also offers support. If you cannot resolve your issue with the troubleshooting guide, open an IBM support case.
 {: shortdesc}
 
-By default, account users don't have access to create, update, search, or view cases. The account owner must provide users access by assigning an {{site.data.keyword.iamlong}} (IAM) access policy. For more information, see [Assigning user access for working with support cases](/docs/get-support?topic=get-support-access#access){: external}.
+By default, account users don't have access to create, update, search, or view cases. The account owner must provide users access by assigning an {{site.data.keyword.iamlong}} (IAM) access policy. For more information, see [Assigning user access for working with support cases](/docs/account?topic=account-access-cases){: external}.
 {: tip}
 
 ## Creating a cloud support case
 {: #en-cloud-support-case}
 
-For more information, see [Using the Support Center](/docs/get-support?topic=get-support-using-avatar){: external}.
+For more information, see [Using the Support Center](/docs/account?topic=account-using-avatar){: external}.
 
 ### Creating a support case for a UI issue
 {: #ac-ui-support-case}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2025-03-20"
+lastupdated: "2025-03-21"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -25,7 +25,7 @@ Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, sec
 {: release-note}
 
 New destination : {{site.data.keyword.messagehub}}
-{{site.data.keyword.messagehub}} is now available as a destination. You can [send notifications to your {{site.data.keyword.messagehub}} destination by using {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}}](/docs/event-notifications?topic=event-notifications-en-destinations-event-streams).
+: {{site.data.keyword.messagehub}} is now available as a destination. You can [send notifications to your {{site.data.keyword.messagehub}} destination by using {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}}](/docs/event-notifications?topic=event-notifications-en-destinations-event-streams).
 
 ## 30 January 2025
 {: #event-notifications-Jan302025}

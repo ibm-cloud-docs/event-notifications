@@ -77,7 +77,7 @@ After creating a SMTP configuration in an IBM Cloud Event Notifications instance
     1. In the 'Description' section firstly provide IBM Cloud Event Notifications `instance id`, `region` in which instance is created, and a `DKIM Name` which is in the format of `{{uuid}}._domainkey.{{domain}}`
     1. Later, please include responses to the aforementioned questionnaire.
     1. Add **Attachments** if you want to provide more evidences supporting your answers
-    1. Add required email Ids in the **Watchlist** section. And to know more about other options while creating a support case refer [here](https://{DomainName}/docs/get-support?topic=get-support-open-case){: external}.
+    1. Add required email Ids in the **Watchlist** section. And to know more about other options while creating a support case refer [here](https://{DomainName}/docs/account?topic=account-open-case&interface=ui){: external}.
 
 Some of the common verification issues could be:
 
