@@ -88,7 +88,7 @@ Use {{site.data.keyword.cloud}} Identity and Access Management (IAM) to create o
 
 1. Select both the roles (Reader, and Object Writer) to assign access to the source service that accesses the target service.
 
-   If you have selected only one of these two roles (Reader or Object Writer) during the service to service authorization, you may endup with not able to write or read from the {{site.data.keyword.cos_full_notm}} bucket. You will get an error for service to service authorization failure in these cases. Make sure to recreate an authorization between the services with both the roles selected.
+   If you have selected only one of these two roles (Reader or Object Writer) during the service to service authorization, you cannot write or read from the {{site.data.keyword.cos_full_notm}} bucket. You will get an error for service to service authorization failure in these cases. Make sure to recreate an authorization between the services with both the roles selected.
 {: important}
 
 1. Click **Authorize**.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2025
-lastupdated: "2025-02-07"
+lastupdated: "2025-03-14"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -36,6 +36,7 @@ The list of IBM provided sources is as follows:
 - [Toolchain](https://{DomainName}/docs/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-cd&interface=ui){: external}
 - [watsonx.data](https://{DomainName}/docs/watsonxdata?topic=watsonxdata-event-notifications-events){: external}
 - [OpenPages](https://{DomainName}/docs/openpages?topic=openpages-event-notifications-events){: external}
+- [IBM Cloud Backup for VPC ](/docs/vpc?topic=vpc-event-notifications-events){: external}
 
 ## API sources
 {: #en-api-sources}

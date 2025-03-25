@@ -80,7 +80,7 @@ Some example of Resource lifecycle events are:
 
 {{site.data.keyword.cloud_notm}} Resource lifecycle events is a pre-defined source which publishes resource lifecycle events from {{site.data.keyword.cloud_notm}}. {{site.data.keyword.cloud_notm}} Resource lifecycle events is *Disabled* by default. You can go to the **Sources** page and enable it by using the toggle switch.
 
-After enabling the source, you can publish the lifecycle events to the [Topic](/docs/event-notifications?topic=event-notifications-en-overview#en-topics) of your choice.
+After enabling the source, you can publish the lifecycle events to the [Topic](/docs/event-notifications?topic=event-notifications-en-about#en-topics) of your choice.
 
 To learn more about working with **Topics**, see [here](/docs/event-notifications?topic=event-notifications-en-create-en-topic).
 

@@ -18,8 +18,7 @@ toc:
       - en-migration.md
       - en-responsibilities.md
       - en-new-pricing.md
-      - topic: en-release-notes.md
-        navtitle: Release notes
+      - en-release-notes.md
   - navgroup:
       id: tutorial
       topics:
@@ -116,7 +115,6 @@ toc:
           label: Scheduling Events
           topics:
           - en-cron-periodic-timer.md
-      
   - navgroup:
       id: reference
       topics:
@@ -162,7 +160,9 @@ toc:
       - en-regions-endpoints.md
       - data-portability.md
       - en-payload.md
+      - en-map-notification-payload.md
       - en-notices.md
+
   - navgroup:
       id: help
       topics:

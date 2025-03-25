@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2025-03-06"
+lastupdated: "2025-03-21"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -25,7 +25,7 @@ Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, sec
 {: release-note}
 
 New destination : {{site.data.keyword.messagehub}}
-{{site.data.keyword.messagehub}} is now available as a destination. You can [send notifications to your {{site.data.keyword.messagehub}} destination by using {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}}](/docs/event-notifications?topic=event-notifications-en-destinations-event-streams).
+: {{site.data.keyword.messagehub}} is now available as a destination. You can [send notifications to your {{site.data.keyword.messagehub}} destination by using {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}}](/docs/event-notifications?topic=event-notifications-en-destinations-event-streams).
 
 ## 30 January 2025
 {: #event-notifications-Jan302025}
@@ -64,6 +64,12 @@ Enhanced Filtering Criteria
 : {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now supports advanced filtering criteria that can be used to add rules when creating a topic , see [Advanced Conditions](/docs/event-notifications?topic=event-notifications-en-create-en-topic).
 
 
+## 15 December 2024
+{: #event-notifications-dec1524}
+{: release-note}
+
+{{site.data.keyword.cloud_notm}} {{site.data.keyword.en_full}} is available as a deployable architecture for use in projects
+:   Cloud automation for deploying {{site.data.keyword.en_full}} by using {{site.data.keyword.cloud_notm}} projects is now available. The Cloud automation for {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_full}} deployable architecture from the {{site.data.keyword.cloud_notm}} catalog, helps you to automate {{site.data.keyword.cloud_notm}} projects through configuring, deploying, and monitoring your resource deployments by using DevOps best practices. For more information, see [Working with the {{site.data.keyword.en_full}} deployable architecture](/docs/event-notifications?topic=event-notifications-deployable-architecture).
 
 For more information, see [Regions and endpoints](/docs/event-notifications?topic=event-notifications-en-regions-endpoints).
 
@@ -293,7 +299,7 @@ New destination: {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_sh
 :  {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}} is now available as a destination. You can send notifications to your {{site.data.keyword.openwhisk_short}} instance by using {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}}. Send notifications to your {{site.data.keyword.openwhisk_short}} instance by using {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}}.
 
 Support for changing a **Pre-production destination** to **Production destination**
-:  You can now change a **Pre-production destination** to **Production destination** after your development and testing. For more information, see [Modify a Pre-production destination to Production destination](/docs/event-notifications?topic=event-notifications-en-create-en-destination#en-destination-preprod-prod).
+:  You can now change a **Pre-production destination** to **Production destination** after your development and testing. For more information, see [Modify a Pre-production destination to Production destination](/docs/event-notifications?topic=event-notifications-en-create-en-destination#en-destination-preprod-prod1).
 
 ## 16 Aug 2022
 {: #event-notifications-Aug1622}

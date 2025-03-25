@@ -78,7 +78,7 @@ For more information about your responsibilities when using {{site.data.keyword.
 ## What level of availability does {{site.data.keyword.cloud_notm}} offer?
 {: #ha-service}
 
-To learn more about the high availability and disaster recovery standards in {{site.data.keyword.cloud_notm}}, see [How do I ensure zero downtime?](/docs/overview?topic=overview-zero-downtime) or [Service Level Agreements](/docs/overview?topic=overview-slas).
+To learn more about the high availability and disaster recovery standards in {{site.data.keyword.cloud_notm}}, see [How do I ensure zero downtime?](/docs/resiliency?topic=resiliency-ha-redundancy) or [Service Level Agreements](/docs/overview?topic=overview-slas).
 
 
 ## Disaster recovery (DR) for {{site.data.keyword.en_short}} service in a region
