@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-02-03"
+lastupdated: "2025-03-25"
 
 keywords: event-notifications, event notifications, about event notifications, templates, pagerduty
 
@@ -52,5 +52,3 @@ To learn more about the fields that can be used to construct the template block,
    {{/equal}}
 }
 ```
-
-![Create PagerDuty Template](images/en-pager-duty-template.png "Creating PagerDuty Template"){: caption="Creating PagerDuty Template" caption-side="bottom"}

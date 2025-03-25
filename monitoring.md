@@ -2,11 +2,11 @@
 
 copyright:
   years: 2018, 2025
-lastupdated: "2025-01-13"
+lastupdated: "2025-03-25"
 
 keywords: IBM Cloud, observability
 
-subcollection: observability-ibm
+subcollection: event-notifications
 
 ---
 

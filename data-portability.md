@@ -2,11 +2,11 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-12-02"
+lastupdated: "2025-03-25"
 
 keywords:
 
-subcollection: schematics
+subcollection: event-notifications
 
 ---
 

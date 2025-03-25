@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-03-19"
+lastupdated: "2025-03-25"
 
 keywords: event-notifications, event notifications, about event notifications, templates, slack
 
@@ -33,14 +33,17 @@ This is added as a slack template in Event Notifications.
 {: #en-slack-template}
 
 #### Input API for Templates
+{: #en-input-api}
 
 The Input API for Templates provides a mechanism for users to define notification message templates programmatically. Users can generate JSON blocks representing Block Kit layouts using the Block Kit Builder and encode them in base64 format to include in their templates.
 
 #### JSON Blocks
+{: #en-json-blocks}
 
 JSON blocks represent the layout and structure of notification messages using the Slack Block Kit format. Users can create rich and interactive message layouts by defining various block types such as sections, actions, and buttons. Handlebars can be used with json blocks for powerful integration.You can design your json blocks via following builder - https://app.slack.com/block-kit-builder
 
 ##### Usage:
+{: #en-usage}
 
 ```json
 {
@@ -74,10 +77,12 @@ JSON blocks represent the layout and structure of notification messages using th
 ```
 
 #### Base64 Encoding
+{: #en-encoding}
 
 To include JSON blocks in the template, they need to be encoded in base64 format. This ensures that the data is transmitted safely and can be decoded accurately when rendering the notification message.
 
 ##### Example Create Template Usage:
+{: #en-slack-template-example}
 
 ```plaintext
 {
@@ -88,4 +93,3 @@ To include JSON blocks in the template, they need to be encoded in base64 format
 	"type": "slack.notification"
 }
 ```
-![Create Slack Template](images/en-slack-template.png "Create Slack Template"){: caption="Create Slack Template" caption-side:"bottom"}
