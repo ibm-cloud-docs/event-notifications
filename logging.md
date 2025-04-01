@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2025
-lastupdated: "2025-01-23"
+lastupdated: "2025-03-25"
 
 keywords: event notifications cloud logs, event notifications logging, event notifications external logs
 
@@ -184,7 +184,7 @@ See the following table for the list of fields that are included in each log rec
 | `level`           | Required   | Type of log. Valid values are `INFO`, `WARN`, `ERROR` |
 {: caption="Log record fields" caption-side="top"}
 
-For information about fields included in every platform log, see [Fields for platform logs](/docs/logs-router?topic=logs-router-about-platform-logs#platform_reqd). 
+For information about fields included in every platform log, see [Fields for platform logs](/docs/logs-router?topic=logs-router-about-platform-logs#platform_reqd)
 
 ## Log messages
 {: #log_messages}

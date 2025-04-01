@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-01-02"
+lastupdated: "2025-03-25"
 
 keywords: event-notifications, event notifications, about event notifications, templates, webhook
 
@@ -21,7 +21,7 @@ For example, an incoming notification about an event can trigger a webhook desti
 
 For more information about the Webhook destination, see [here](/docs/event-notifications?topic=event-notifications-en-destinations-webhook).
 
-## How to construct a webhook notification template:
+## Constructing a webhook notification template
 {: #en-construct-webhook-template}
 
 Construct the template block. Make sure the template is a well-formed JSON that adheres to the Handlebars template syntax and semantics.
@@ -40,5 +40,4 @@ Handlebars is a templating language that allows for dynamic content generation w
 	"type": "webhook.notification"
     }
  ```
-
-![Create Webhook Template](images/en-webhook-template.png "Creating Webhook Template"){: caption="Creating Webhook Template" caption-side="bottom"}
+ 

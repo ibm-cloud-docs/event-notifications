@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-03-21"
+lastupdated: "2025-03-25"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, Event Streams, event streams
 
@@ -19,49 +19,53 @@ subcollection: event-notifications
 {: shortdesc}
 
 {{site.data.keyword.messagehub}} represents a service destination. Since {{site.data.keyword.messagehub}} is a Kafka managed service, incoming notifications cannot be stored and consumed programmatically because Kafka does not store the data once it has been read.
-{: note}
 
+## Before you begin 
+{: #en-event-streams-prerequisites}
+
+- Make sure that an {{site.data.keyword.messagehub}} instance is [created and configured](/docs/EventStreams?topic=EventStreams-quick_setup_guide&interface=ui).
+
+- To create and configure an {{site.data.keyword.en_short}} instance, see [Getting started with {{site.data.keyword.en_short}}](/docs/event-notifications?topic=event-notifications-getting-started)
 
 ## Configuring an {{site.data.keyword.messagehub}} destination in the console
 {: #en-destinations-event-streams-configure}
 
-Before you configure {{site.data.keyword.messagehub}} as a destination, make sure that an {{site.data.keyword.messagehub}} instance is [created and configured](/docs/EventStreams?topic=EventStreams-quick_setup_guide&interface=ui).
-{: note}
-
-If you are using {{site.data.keyword.en_short}} CLI or API to configure {{site.data.keyword.messagehub}} service instance as a destination, ensure that you have enabled authorization to grant access between services before integrating with {{site.data.keyword.messagehub}}. For more information, see [Using authorizations to grant access between services](#en-using-s2s-console-event-streams).
+If you are using {{site.data.keyword.en_short}} CLI or API to configure an {{site.data.keyword.messagehub}} service instance as a destination, ensure that you have enabled authorization to grant access between services before integrating with {{site.data.keyword.messagehub}}. For more information, see [Using authorizations to grant access between services](#en-using-s2s-console-event-streams).
 {: important}
 
-To configure an {{site.data.keyword.messagehub}} destination, do the following steps:
+To configure an {{site.data.keyword.messagehub}} destination, complete the following steps:
 
 1. From your {{site.data.keyword.en_short}} instance dashboard, click **Destinations**.
 
 1. Click **Add +** to add a new destination.
 
-1. In the **Add a destination** side panel, provide the name, description(optional) and select the destination type and the account where the {{site.data.keyword.messagehub}} instance is located. 
+1. Provide the name, description (optional) and select the destination type as {{site.data.keyword.messagehub}} and the account where the {{site.data.keyword.messagehub}} instance is located. 
 
       If the {{site.data.keyword.messagehub}} instance is located in the same account as your {{site.data.keyword.en_short}} instance:
 
-      - **Instance Name** - Select the name of the {{site.data.keyword.messagehub}} instance to send notifications to. 
-      - **Endpoint** - Once the instance is selected, the **Endpoint** field will be filled automatically by pulling it from the selected instance. 
-      - **Topic** - Select the **Topic** to send/receive messages from. To select the topic, see [Topic](#en-topic). 
+       1. Select the name of the {{site.data.keyword.messagehub}} instance to send notifications to. 
+       2. Once the instance is selected, the **Endpoint** field will be filled automatically by pulling it from the selected instance. 
+       3. Select the **Topic** to send/receive messages from. To select the topic, see [Topic](#en-topic). 
 
 
-      If the {{site.data.keyword.messagehub}} instance is located in a different account, provide the following details :
+      If the {{site.data.keyword.messagehub}} instance is located in a different account, provide the following details:
 
-      - **CRN** - Enter the {{site.data.keyword.messagehub}} CRN . For more information, see [CRN](#en-crn).
-      - **Endpoint** - Enter the {{site.data.keyword.messagehub}} endpoint URL. For more information, see [Endpoint url](#en-endpoint-url).
-      - **Topic** - Select the topic to send/receive messages from. To select the topic, see [Topic](#en-topic).
+       1. Enter the {{site.data.keyword.messagehub}} CRN . For more information, see [CRN](#en-crn).
+       2. Enter the {{site.data.keyword.messagehub}} endpoint URL. For more information, see [Endpoint url](#en-endpoint-url).
+       3. Select the topic to send/receive messages from. To select the topic, see [Topic](#en-topic).
 
 1. Click **Add**.
 
 ## Creating an authorization in the console
 {: #en-using-s2s-console-event-streams}
 
+An authorization is required to grant one service access to another service.You must grant Event Notifications the appropriate IAM service-to-service access so that it can publish messages to Event Streams.
+
 To learn the process to create an authorization between {{site.data.keyword.en_short}} and {{site.data.keyword.messagehub}}, refer [Authorization between services](/docs/event-notifications?topic=event-notifications-en-using-s2s-authorization). 
 
 
-## How to find the CRN,Endpoint URL and the Topic in the {{site.data.keyword.messagehub}} service instance?
-{: #en-details}
+### Finding the {{site.data.keyword.messagehub}} service instance details
+{: #en-event-streams-details}
 
 1. Login to your {{site.data.keyword.cloud_notm}} account.
 
@@ -71,19 +75,19 @@ To learn the process to create an authorization between {{site.data.keyword.en_s
 
 1. Click the {{site.data.keyword.messagehub}} name that displays your {{site.data.keyword.messagehub}} console.
 
-1. From the {{site.data.keyword.messagehub}} console : 
+1. From the {{site.data.keyword.messagehub}} console: 
 
-    **CRN**
-    {: #en-crn}
+#### CRN
+{: #en-crn}
     
-    Copy the **CRN**, that is used in the destination creation process. Use this copied CRN in the destination creation screen.
+Copy the **CRN**, that is used in the destination creation process. Use this copied CRN in the destination creation screen.
 
-    **Endpoint URL**
-    {: #en-endpoint-url}
+#### Endpoint URL
+{: #en-endpoint-url}
 
-    Copy the **HTTP API endpoint** that needs to be used in the destination creation process. Use this copied endpoint in the destination creation screen.
+Copy the **HTTP API endpoint** that needs to be used in the destination creation process. Use this copied endpoint in the destination creation screen.
 
-    **Topic**
-    {: #en-topic}
+#### Topic
+{: #en-topic}
 
-    Navigate to **Topics** in the menu. You will find the list of available topics. Select the topic that you want to send messages to or receive messages from. Copy the **Topic Name** that needs to be used in the destination creation process. Use this copied name in the destination creation screen.
+Navigate to **Topics** in the menu. You will find the list of available topics. Select the topic that you want to send messages to or receive messages from. Copy the **Topic Name** that needs to be used in the destination creation process. Use this copied name in the destination creation screen.

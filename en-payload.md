@@ -21,9 +21,9 @@ This document outlines the {{site.data.keyword.en_short}} specification.
 ## Introduction
 {: #en-spec-payloadintro}
 
-This document describes the payload details for sending events by using the API sources in {{site.data.keyword.en_short}}. API sources can be used to send events from your backend applications. You can use this to send Push notifications from business backends.
+This document describes the payload details for sending events notifications by using the API sources in {{site.data.keyword.en_short}}. API sources can be used to send events from your backend applications. You can use this document to send Push notifications from business backends.
 
-Events from API sources cannot be routed to {{site.data.keyword.IBM_notm}} Email and {{site.data.keyword.IBM_notm}} SMS destinations.
+Events from API sources cannot be routed to {{site.data.keyword.IBM_notm}} email and {{site.data.keyword.IBM_notm}} SMS destinations.
 {: important}
 
 ```sh
@@ -42,11 +42,11 @@ The Events adhere to Cloud Event standard. You can find more information about C
 ### Binary Mode
 {: #en-binary-mode}
 
-In the binary content mode, the value of the event `data` is placed into the HTTP request, or response, body as-is, with the `datacontenttype` attribute value declaring its media type in the HTTP `Content-Type` header; all other event attributes are mapped to HTTP headers.
+In the binary content mode, the value of the event `data` is placed into the HTTP request, or response, body as-is. The `datacontenttype` attribute value declares its media type in the HTTP `Content-Type` header. All other event attributes are mapped to HTTP headers.
 
 All the attribute names are prefixed with `ce-` and added to the header (except for the `data` and `datacontenttype`).
 
-Binary Mode is recommended way to send notifications.
+Binary Mode is the recommended way to send notifications.
 {: note}
 
 ### Structured Mode
@@ -65,9 +65,9 @@ The following attributes are mandatory for the event request to be accepted.
 #### ID (String)
 {: #en-id-string}
 
-A unique identifier that identifies each event. `source+id` must be unique. The backend should be able to uniquely track this ID in logs and other records. Send unique ID for each send notification. Same ID can be sent in case of failure of send notification.
+A unique identifier that identifies each event. `source+id` must be unique. The backend shall be able to uniquely track this ID in logs and other records. Send a unique ID for each send notification. The same ID can be sent in case of failure of send notification.
 
-`source+id` is logged in {{site.data.keyword.cloud_notm}} Logging service. Using these combination {{site.data.keyword.IBM_notm}} customers are able to trace the event movement from one system to another and will aid in debugging and tracing.
+`source+id` is logged in {{site.data.keyword.cloud_notm}} Logging service. Using these combination {{site.data.keyword.IBM_notm}} customers are able to trace the event movement from one system to another and aids in debugging and tracing.
 
 ##### Example
 {: #en-example1}
@@ -86,7 +86,7 @@ ce-id: qwer-1234-1qsd-po94
 #### source (URI-reference)
 {: #en-source-uri-reference}
 
-This is the identifier of the event producer. A way to uniquely identify the source of the event. For {{site.data.keyword.cloud_notm}} services this is the crn of the service instance producing the events. For API sources this can be something the event producer backend can uniquely identify itself with.
+This is the identifier of the event producer. A way to uniquely identify the source of the event. For {{site.data.keyword.cloud_notm}} services this is the crn of the service instance that produces the events. For API sources this can be something the event producer backend can uniquely identify itself with.
 
 ##### Example
 {: #en-example2a}
@@ -105,7 +105,7 @@ ce-source: com.mybank.customerbanking.accountmanagement
 #### specversion (string)
 {: #en-specversion-string}
 
-This is the version of Cloud Events specification that {{site.data.keyword.en_short}} currently supports. This value must be set to "1.0".
+It is the version of the Cloud Events specification that {{site.data.keyword.en_short}} currently supports. This value must be set to "1.0".
 
 ##### Example
 {: #en-example3}
@@ -163,7 +163,7 @@ Sub type: N/A
 ### CE optional attributes
 {: #en-ce-optional-attributes}
 
-Following attributes are optional but highly recommended to take full advantage of {{site.data.keyword.en_short}}.
+The following attributes are optional but highly recommended to take full advantage of {{site.data.keyword.en_short}}.
 
 #### time (timestamp)
 {: #en-time-timestamp}
@@ -329,7 +329,7 @@ ce-ibmendefaultlong: "Password will expire in 10 Days. Please log in to the Bank
 #### ibmenfcmbody(string/json)
 {: #en-ibmenfcmbody-string-json}
 
-This attribute is needed if you want to send push notification to an Android device. This is the body that you want to send to FCM server, this must be JSON in string format. For more information regarding FCM body, see [here](https://firebase.google.com/docs/cloud-messaging/concept-options){: external}.
+This attribute is needed if you want to send a push notification to an Android device. This is the body that you want to send to FCM (Firebase Cloud Messaging) server, this must be JSON in string format. For more information regarding the FCM body, see [REST Resource: projects.messages](https://firebase.google.com/docs/reference/fcm/rest/v1/projects.messages){: external}.
 
 For compatibility with an earlier version for existing Push notification customers, the previous unified data format is still supported but is deprecated.
 
@@ -337,35 +337,28 @@ For compatibility with an earlier version for existing Push notification custome
 {: #en-example13}
 
 ```JSON
-"ibmenfcmbody": "{\"en_data\":{\"alert\":\" Password will expire in 10 Days. Please log in to the Bank home page and click on Change Password link to change your password. \", \"android_title\":\"Change Password\"}}"
+"ibmenfcmbody": "{\"message\":{\"android\":{\"ttl\":\"86400s\",\"notification\":{\"click_action\":\"OPEN_ACTIVITY_1\"},\"data\":{\"id\":\"test_id\"}}}}"
 ```
 
 ##### Binary mode header
 {: #en-binary-mode-header12}
 
 ```JSON
-ce-ibmenfcmbody: {"en_data":{"alert":" Password will expire in 10 Days. Please log in to the Bank home page and click on Change Password link to change your password. ", "android_title":"Change Password"}}
+ce-ibmenfcmbody: {"message":{"android":{"ttl":"86400s","notification":{"click_action":"OPEN_ACTIVITY_1"},"data":{"id":"test_id"}}}}
 ```
 
 #### ibmenapnsbody(string/json)
 {: #en-ibmenapnsbody-string-json}
 
-This attribute is needed if you want to send push notification to an iOS device. This is the body that you want to send to APNs server, this must be JSON in string format. For more information regarding APNs body, follow this documentation [here](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html){: external}.
+This attribute is needed if you want to send a push notification to an iOS device. This is the body that you want to send to the APNs (Apple Push Notification Service) server, this must be JSON in string format. For more information regarding APNs body, see [Creating the Remote Notification Payload](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html){: external}.
 
 For compatibility with an earlier version for existing Push notification customers, the previous unified data format is still supported but is deprecated.
 
-##### Example: Deprecated Push notification service compatible format:
+##### Sample notification payload:
 {: #en-example14}
 
 ```JSON
-"ibmenapnsbody": "{\"en_data\":{\"alert\":\"alert\",\"url\":\"https\",\"badge\":9,\"sound\":\"bingbong.aiff\",\"payload\":{\"myaarray\":[\"cc75e4a6-edd8-3bec-a7c3-dfca6572a03b\"]},\"type\":\"DEFAULT\",\"subtitle\":\"dummy\",\"title\":\"dummy1\",\"body\":\"body\",\"ios_action_key\":\"key\",\"interactive_category\":\"interactiveCategory\",\"title_loc_key\":\"titleLocKey\",\"loc_key\":\"GAME_PLAY_REQUEST_FORMAT\",\"launch_image\":\"image.png\",\"title_loc_args\":[\"Shelly\",\"Rick\"],\"loc_args\":[\"Shelly\",\"Rick\"],\"attachment_url\":\"some url\",\"apns_collapse_id\":\"12\",\"apns_thread_id\":\"1\",\"apns_group_summary_arg\":\"apnsGroupSummaryArg\",\"apns_group_summary_arg_count\":1}}"
-```
-
-##### Binary mode header
-{: #en-binary-mode-header13}
-
-```JSON
-ce-ibmenapnsbody: {"en_data":{"alert":"alert","url":"https","badge":9,"sound":"bingbong.aiff","payload":{"myaarray":["cc75e4a6-edd8-3bec-a7c3-dfca6572a03b"]},"type":"DEFAULT","subtitle":"dummy","title":"dummy1","body":"body","ios_action_key":"key","interactive_category":"interactiveCategory","title_loc_key":"titleLocKey","loc_key":"GAME_PLAY_REQUEST_FORMAT","launch_image":"image.png","title_loc_args":["Shelly","Rick"],"loc_args":["Shelly","Rick"],"attachment_url":"some url","apns_collapse_id":"12","apns_thread_id":"1","apns_group_summary_arg":"apnsGroupSummaryArg","apns_group_summary_arg_count":1}}
+"ibmenapnsbody": {"aps":{"alert":{"title":"Game Request","subtitle":"Five Card Draw","body":"Bob wants to play poker"},"category":"GAME_INVITATION"},"gameID":"12345678"}
 ```
 
 To customize your APNs push notifications, you can provide APNs headers. Some of them are mandatory to deliver a notification if key is present. The required body as follows:
@@ -374,17 +367,30 @@ To customize your APNs push notifications, you can provide APNs headers. Some of
 "ibmenapnsheaders": "{\"apns-priority\":10, \"apns-collapse-id\": \"collapse\"}"
 ```
 
-To get more details on APNs headers, you can check out [here](https://developer.apple.com/documentation/usernotifications/sending-notification-requests-to-apns){: external}.
+To get more details on APNs headers, see [Generating a remote notification](https://developer.apple.com/documentation/usernotifications/generating-a-remote-notification){: external}.
+
+##### Binary mode header
+{: #en-binary-mode-header13}
+
+```JSON
+ce-ibmenapnsbody: {"en_data":{"alert":"alert","url":"https","badge":9,"sound":"bingbong.aiff","payload":{"myaarray":["cc75e4a6-edd8-3bec-a7c3-dfca6572a03b"]},"type":"DEFAULT","subtitle":"dummy","title":"dummy1","body":"body","ios_action_key":"key","interactive_category":"interactiveCategory","title_loc_key":"titleLocKey","loc_key":"GAME_PLAY_REQUEST_FORMAT","launch_image":"image.png","title_loc_args":["Shelly","Rick"],"loc_args":["Shelly","Rick"],"attachment_url":"some url","apns_collapse_id":"12","apns_thread_id":"1","apns_group_summary_arg":"apnsGroupSummaryArg","apns_group_summary_arg_count":1}}
+```
+
 
 #### ibmenchromebody(string/json)
 {: #en-ibmenchromebody-string-json}
 
-This attribute is needed if you want to send push notification to a chrome device. This is the body that you want to send to web server, this must be JSON in string format. For more information regarding chrome body, follow this documentation [here](https://developer.mozilla.org/en-US/docs/Web/API/Notification){: external}.
+This attribute is needed if you want to send a push notification to a chrome device. This is the body that you want to send to the FCM server, this must be JSON in string format. For more information regarding chrome body, see [Notification](https://developer.mozilla.org/en-US/docs/Web/API/Notification){: external}.
 
 You can follow these examples for quick start:
 
 ```JSON
 "ibmenchromebody": "{\"title\":\"Hello Chrome\", \"options\": {}}"
+```
+To customize your chrome push notifications, you can provide chrome headers. Some of them are mandatory to deliver a notification if key is present. The example body as follows:
+
+```JSON
+"ibmenchromeheaders":"{\"TTL\":100}"
 ```
 
 ##### Binary mode header
@@ -394,15 +400,6 @@ You can follow these examples for quick start:
 ce-ibmenchromebody: {"title":"Hello Chrome", "options": {}}
 ```
 
-To customize your chrome push notifications, you can provide chrome headers. Some of them are mandatory to deliver a notification if key is present. The example body as follows:
-
-```JSON
-"ibmenchromeheaders":"{\"TTL\":100}"
-```
-
-###### Binary mode header
-{: #en-binary-mode-header15}
-
 ```JSON
 ce-ibmenchromeheaders: "{"TTL":100}"
 ```
@@ -410,12 +407,18 @@ ce-ibmenchromeheaders: "{"TTL":100}"
 #### ibmenfirefoxbody(string/json)
 {: #en-ibmenfirefoxbody-string-json}
 
-This attribute is needed if you want to send push notification to a Firefox device. This is the body that you want to send to web server, this must be JSON in string format. For more information regarding Firefox body, follow this documentation [here](https://developer.mozilla.org/en-US/docs/Web/API/Notification).
+This attribute is needed if you want to send a push notification to a Firefox device. This is the body that you want to send to the Firefox Push server, this must be JSON in string format. For more information regarding the Firefox body, see [Notification](https://developer.mozilla.org/en-US/docs/Web/API/Notification).
 
 You can follow these examples for quick start:
 
 ```JSON
 "ibmenfirefoxbody": "{\"title\":\"Hello Firefox\", \"options\": {}}"
+```
+
+To customize your chrome push notifications, you can provide Firefox headers. Some of them are mandatory to deliver a notification if key is present. The example body as follows:
+
+```JSON
+"ibmenfirefoxheaders": "{\"TTL\":100, \"Urgency\": \"low\" , \"Topic\": \"Test Firefox Notifications\"}",
 ```
 
 ##### Binary mode header
@@ -425,130 +428,14 @@ You can follow these examples for quick start:
 ce-ibmenfirefoxbody: {"title":"Hello Firefox", "options": {}}
 ```
 
-To customize your chrome push notifications, you can provide Firefox headers. Some of them are mandatory to deliver a notification if key is present. The example body as follows:
-
-```JSON
-"ibmenfirefoxheaders": "{\"TTL\":100, \"Urgency\": \"low\" , \"Topic\": \"Test Firefox Notifications\"}",
-```
-
-###### Binary mode header
-{: #en-binary-mode-header17}
-
 ```JSON
 ce-ibmenfirefoxheaders: {"TTL":100, "Urgency": "low" , "Topic": "Test Firefox Notifications"}
 ```
 
-```JSON
-"ibmenapnsbody": "{\"en_data\":{\"alert\":\"alert\",\"url\":\"https\",\"badge\":9,\"sound\":\"bingbong.aiff\",\"payload\":{\"myaarray\":[\"cc75e4a6-edd8-3bec-a7c3-dfca6572a03b\"]},\"type\":\"DEFAULT\",\"subtitle\":\"dummy\",\"title\":\"dummy1\",\"body\":\"body\",\"ios_action_key\":\"key\",\"interactive_category\":\"interactiveCategory\",\"title_loc_key\":\"titleLocKey\",\"loc_key\":\"GAME_PLAY_REQUEST_FORMAT\",\"launch_image\":\"image.png\",\"title_loc_args\":[\"Shelly\",\"Rick\"],\"loc_args\":[\"Shelly\",\"Rick\"],\"attachment_url\":\"some url\",\"apns_collapse_id\":\"12\",\"apns_thread_id\":\"1\",\"apns_group_summary_arg\":\"apnsGroupSummaryArg\",\"apns_group_summary_arg_count\":1}}"
-```
-
-####### Binary mode header
-{: #en-binary-mode-header18}
-
-This contains details about the destination where you want to send push notification. This field is also string format of JSON and further contains following field
-
-- `user_id` – Useridto be associated with the device. where you want to target your notification
-- `tag` – This is used to send notifications on registered tags
-- `platform` - For FCM you can target all registered device by giving platform as "G"
-- `fcm_devices` – Unique identifier of the FCM device where you want to target your notification
-- `apns_devices` - Unique identifier of the APNS device where you want to target your notification
-
-##### Example
-{: #en-example15}
-
-```JSON
-ibmenpushto: "{\"fcm_devices\": [\"9c75975a-37d0-3898-905d-3b5ee0d7c172\",\"C9CACDF5-6EBF-49E1-AD60-E25BA23E954C\"]}"`
-`ibmenpushto: "{\"apns_devices\": [\"1c75972a-37d0-3898-905d-3b5ee0d7c172\",\"M9CACDF5-1EBF-49E1-AD60-E25BA23E954C\"]}"
-```
-
-Multiple destinations can be targeted by using following methods:
-
-```JSON
-ibmenpushto: "{\"fcm_devices\": [\"9c75975a-37d0-3898-905d-3b5ee0d7c172\",\"C9CACDF5-6EBF-49E1-AD60-E25BA23E954C\"],\"apns_devices\": [\"1c75972a-37d0-3898-905d-3b5ee0d7c172\",\"M9CACDF5-1EBF-49E1-AD60-E25BA23E954C\"]}"
-```
-
-```JSON
-ibmenpushto: "{\"user_id\": [\" ajay@accts.acmebank.com \",\" ankit@accts.acmebank.com \"]}"**Binary mode header**ce-ibmenpushto: "{\"user_id\": [\"ajay@accts.acmebank.com\",\"ankit@accts.acmebank.com\"]}"
-```
-
-```JSON
-ce-ibmenapnsbody: {"en_data":{"alert":"alert","url":"https","badge":9,"sound":"bingbong.aiff","payload":{"myaarray":["cc75e4a6-edd8-3bec-a7c3-dfca6572a03b"]},"type":"DEFAULT","subtitle":"dummy","title":"dummy1","body":"body","ios_action_key":"key","interactive_category":"interactiveCategory","title_loc_key":"titleLocKey","loc_key":"GAME_PLAY_REQUEST_FORMAT","launch_image":"image.png","title_loc_args":["Shelly","Rick"],"loc_args":["Shelly","Rick"],"attachment_url":"some url","apns_collapse_id":"12","apns_thread_id":"1","apns_group_summary_arg":"apnsGroupSummaryArg","apns_group_summary_arg_count":1}}
-```
-
-To customize your APNs push notifications, you can provide APNs headers. Some of them are mandatory to deliver a notification if key is present. The required body as follows:
-
-```JSON
-"ibmenapnsheaders": "{\"apns-priority\":10, \"apns-collapse-id\": \"collapse\"}"
-```
-
-To get more details on APNs headers, you can check out [here](https://developer.apple.com/documentation/usernotifications/sending-notification-requests-to-apns){: external}.
-
-##### ibmenchromebody(string/json)
-{: #en-ibmenchromebody-string-json1}
-
-This attribute is needed if you want to send push notification to a chrome device. This is the body that you want to send to web server, this must be JSON in string format. For more information regarding chrome body, follow this documentation [here](https://developer.mozilla.org/en-US/docs/Web/API/Notification){: external}.
-
-You can follow these examples for quick start:
-
-```JSON
-"ibmenchromebody": "{\"title\":\"Hello Chrome\", \"options\": {}}"
-```
-
-###### Binary mode header
-{: #en-binary-mode-header19}
-
-```JSON
-ce-ibmenchromebody: {"title":"Hello Chrome", "options": {}}
-```
-
-To customize your chrome push notifications, you can provide chrome headers. Some of them are mandatory to deliver a notification if key is present. The example body as follows:
-
-```JSON
-"ibmenchromeheaders":"{\"TTL\":100}"
-```
-
-####### Binary mode header
-{: #en-binary-mode-header20}
-
-```JSON
-ce-ibmenchromeheaders: "{"TTL":100}"
-```
-
-##### ibmenfirefoxbody(string/json)
-{: #en-ibmenfirefoxbody-string-json1}
-
-This attribute is needed if you want to send push notification to a Firefox device. This is the body that you want to send to web server, this must be JSON in string format. For more information regarding Firefox body, follow this documentation [here](https://developer.mozilla.org/en-US/docs/Web/API/Notification).
-
-You can follow these examples for quick start:
-
-```JSON
-"ibmenfirefoxbody": "{\"title\":\"Hello Firefox\", \"options\": {}}"
-```
-
-###### Binary mode header
-{: #en-binary-mode-header21}
-
-```JSON
-ce-ibmenfirefoxbody: {"title":"Hello Firefox", "options": {}}
-```
-
-To customize your chrome push notifications, you can provide Firefox headers. Some of them are mandatory to deliver a notification if key is present. The example body as follows:
-
-```JSON
-"ibmenfirefoxheaders": "{\"TTL\":100, \"Urgency\": \"low\" , \"Topic\": \"Test Firefox Notifications\"}",
-```
-
-####### Binary mode header
-{: #en-binary-mode-header22}
-
-```JSON
-ce-ibmenfirefoxheaders: {"TTL":100, "Urgency": "low" , "Topic": "Test Firefox Notifications"}
-```
-
-##### ibmensafaribody(string/json)
+#### ibmensafaribody(string/json)
 {: #en-ibmensafaribody-string-json1}
 
-This attribute is needed if you want to send push notification to a Safari device. This is the body that you want to send to web server, this must be JSON in string format. For more information regarding Safari body, follow this documentation [here](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/NotificationProgrammingGuideForWebsites/PushNotifications/PushNotifications.html#//apple_ref/doc/uid/TP40013225-CH3-SW1){: external}.
+This attribute is needed if you want to send a push notification to a Safari device. This is the body that you want to send to Apple Push Notification Server, this must be JSON in string format. For more information regarding the Safari body, see [Configuring Safari Push Notifications](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/NotificationProgrammingGuideForWebsites/PushNotifications/PushNotifications.html#//apple_ref/doc/uid/TP40013225-CH3-SW1){: external}.
 
 You can follow these examples for quick start:
 
@@ -556,21 +443,39 @@ You can follow these examples for quick start:
 "ibmensafaribody": "{\"aps\":{\"alert\":{\"title\":\"Shipment Order 1832128321 Delevered\",\"body\":\"Shipment Order 1832128321 Delevered.\",\"action\":\"View\"},\"url-args\":[\"1832128321\"]}}"
 ```
 
-###### Binary mode header
+##### Binary mode header
 {: #en-binary-mode-header23}
 
 ```JSON
 ce-ibmensafaribody: {"aps":{"alert":{"title":"Shipment Order 1832128321 Delevered","body":"Shipment Order 1832128321 Delevered.","action":"View"},"url-args":["1832128321"]}}
 ```
 
-##### ibmenpushto(string/json)
+#### ibmenhuaweibody(string/json)
+{: #en-ibmenhuaweibody-string-json}
+
+This attribute is needed if you want to send a push notification to a Huawei device. This is the body that you want to send to the Huawei Push Kit server, this must be JSON in string format. For more information regarding the Huawei body, see, [Huawei Push Notification payload](https://developer.huawei.com/consumer/en/doc/HMSCore-References/https-send-api-0000001050986197#EN-US_TOPIC_0000001562768322__p1324218481619).
+
+You can follow these example for quick start:
+
+```JSON
+"ibmenhuaweibody":"{\"message\":{\"android\":{\"notification\":{\"title\":\"New Message\",\"body\":\"Hello World\",\"click_action\":{\"type\":3}}}}}"
+```
+
+##### Binary mode header
+{: #en-binary-mode-header24}
+
+```JSON
+ce-ibmenhuaweibody: {"aps":{"alert":{"title":"Shipment Order 1832128321 Delevered","body":"Shipment Order 1832128321 Delevered.","action":"View"},"url-args":["1832128321"]}}
+```
+
+#### ibmenpushto(string/json)
 {: #en-ibmenpushto-string-json}
 
-This attribute is mandatory for successful delivery from an Android FCM or APNS destination
+This attribute is mandatory for successful delivery to an Android, FCM, APNS or Huawei destination.
 
-This contains details about the destination where you want to send push notification. This field is also string format of JSON and further contains following field
+This contains details about the destination where you want to send a push notification. This field is also the string format of JSON and further contains the following field
 
-- `user_id` – Useridto be associated with the device. where you want to target your notification
+- `user_id` – Userid to be associated with the device. where you want to target your notification
 - `tag` – This is used to send notifications on registered tags
 - `platform` - You can target all registered device by platforms.
 
@@ -581,21 +486,24 @@ Following are the corresponding platform values for each type of target.
 - `Chrome`: push_chrome
 - `Firefox`: push_firefox
 - `Safari`: push_safari
+- `Huawei` : push_huawei
 - `fcm_devices` – Unique identifier of the FCM device where you want to target your notification
 - `apns_devices` - Unique identifier of the APNS device where you want to target your notification
 - `chrome_devices` - Unique identifier of the Chrome Web device where you want to target your notification
 - `firefox_devices` - Unique identifier of the Firefox Web device where you want to target your notification
 - `safari_devices` - Unique identifier of the Safari Web device where you want to target your notification
+- `huawei_devices` - Unique identifier of the Huawei Web device where you want to target your notification
 
-###### Example
+##### Example
 {: #en-example16}
 
 ```JSON
 "ibmenpushto": "{\"fcm_devices\": [\"9c75975a-37d0-3898-905d-3b5ee0d7c172\",\"C9CACDF5-6EBF-49E1-AD60-E25BA23E954C\"]}"`
 "ibmenpushto": "{\"apns_devices\": [\"1c75972a-37d0-3898-905d-3b5ee0d7c172\",\"M9CACDF5-1EBF-49E1-AD60-E25BA23E954C\"]}"
 "ibmenpushto": "{\"chrome_devices\": [\"2c75972a-37d0-3898-905d-3b5ee0d7c182\",\"N9CACDF5-1EBF-49E1-AD60-E25BA23E994D\"]}"
-"ibmenpushto": "{\"firfox_devices\": [\"3c75972a-37d0-3898-905d-3b5ee0d7c182\",\"L9CACDF5-1EBF-49E1-AD60-E25BA23E994E\"]}"
+"ibmenpushto": "{\"firefox_devices\": [\"3c75972a-37d0-3898-905d-3b5ee0d7c182\",\"L9CACDF5-1EBF-49E1-AD60-E25BA23E994E\"]}"
 "ibmenpushto": "{\"safari_devices\": [\"1175972a-37d0-3898-905d-3b5ee0d7c1D2\",\"Q9CACDF5-1EBF-49E1-AD60-E25BA23E994N\"]}"
+"ibmenpushto": "{\"huawei_devices\": [\"1175972a-37d0-3898-905d-3b5ee0d7c1D2\",\"Q9CACDF5-1EBF-49E1-AD60-E25BA23E994N\"]}"
 ```
 
 Multiple destinations can be targeted by using following methods
@@ -622,7 +530,7 @@ Targeting notifications to platforms.
 "ibmenpushto": "{\"platforms\":[\"push_android\",\"push_ios\"]]}"
 ```
 
-Targeting notifications to specific platform.
+Targeting notifications to a specific platform.
 
 ```JSON
 "ibmenpushto": "{\"platforms\":[\"push_android\"]}"
@@ -630,9 +538,10 @@ Targeting notifications to specific platform.
 "ibmenpushto": "{\"platforms\":[\"push_chrome\"]}"
 "ibmenpushto": "{\"platforms\":[\"push_firefox\"]}"
 "ibmenpushto": "{\"platforms\":[\"push_safari\"]}"
+"ibmenpushto": "{\"platforms\":[\"push_huawei\"]}"
 ```
 
-###### Binary mode header
+##### Binary mode header
 {: #en-binary-mode-header24}
 
 ```JSON

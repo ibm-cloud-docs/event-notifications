@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-01-02"
+lastupdated: "2025-03-25"
 
 keywords: event notifications, event-notifications, email.templates
 subcollection: event-notifications
@@ -125,11 +125,3 @@ The personalization tags are described in the following list:
    * `personalization`: Specifies from where to select personalization values in the send notifications payload.
    * `ibmenmailto`: Iterate through an array of emails to which mapping can be done for personalization.
    * `name`: Specifies which value to select from a key. 
-
-##### Email Invitation Template
-
-![Create Email Invitation Template](images/en-email-invitation-template.png "Creating Email Invitation Template"){: caption="Creating Email Invitation Template" caption-side="bottom"}
-
-##### Email Notification Template
-
-![Create Email Notification Template](images/en-email-notification.png "Creating Email Notification Template"){: caption="Creating Email Notification Template" caption-side="bottom"}

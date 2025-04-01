@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-03-19"
+lastupdated: "2025-03-25"
 
 keywords: event-notifications, event notifications, managing service access, iam, account, authorizations, s2s
 
@@ -14,10 +14,10 @@ subcollection: event-notifications
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Using authorizations to grant access between services
+# Authorizing Event Notifications to access other services
 {: #en-using-s2s-authorization}
 
-Use {{site.data.keyword.cloud}} Identity and Access Management (IAM) to create or remove an authorization that grants one service access to another service.
+Use {{site.data.keyword.cloud}} Identity and Access Management (IAM) to create or remove an authorization that grants one service access to another service. You must grant {{site.data.keyword.en_short}} the appropriate IAM service to service access for it to be able to send notifications and alerts to the various available destinations. You can find the list of available destinations [here](/docs/event-notifications?topic=event-notifications-en-destination).
 
 If the source service that needs access to the target service is in the same account, select **This account**. The service-to-service authorization is created when the integration is created from the console. If the integration is being created by using the API, the users need to create the service-to-service authorization manually.
 {: note}
@@ -25,9 +25,9 @@ If the source service that needs access to the target service is in the same acc
 ## Creating an authorization in the console
 {: #en-using-s2s-console}
 
-If the source and target services are in different accounts or if the authorization is created manually, follow the steps listed below : 
+If the source and target services are in different accounts or if the authorization is created manually, complete the following steps: 
 
-1. In the {{site.data.keyword.cloud_notm}} console, click **Manage** -> **Access (IAM)**, and select **Authorizations**.
+1. In the {{site.data.keyword.cloud_notm}} console, click **Manage** > **Access (IAM)**, and select **Authorizations**.
 
 1. Click **Create**.
 
@@ -35,13 +35,13 @@ If the source and target services are in different accounts or if the authorizat
 
 1. Select the **Source service** as **Event Notifications**.
 
-1. Specify whether you want the authorization to be for all resources or Resources based on selected attributes. If you selected Resources based on selected attributes, then specify the **Add attributes**: only source resource group or only source service instance.
+1. Specify whether you want to authorize all {{site.data.keyword.en_short}} resources, specific resource group, resource ID, or a service instance. If you select specific resource group, resource ID, or a service instance you need specify the resource group,resource ID or service instance under **Add a condition**.
 
 1. Select a **Target service**.
 
-1. For the target service, specify whether you want the authorization to be for all instances, only to a specific instance in the account, or instances only in a certain resource group.
+1. For the target service, specify whether you want to give {{site.data.keyword.en_short}} access to all resources of the target, only to a specific resource group, a region, a service instance, a resource type or a resource ID. 
 
-1. Select the desired roles to assign access to the source service that accesses the target service.
+1. Select the appropriate roles to grant {{site.data.keyword.en_short}} access to the target service.
 
 1. Click **Authorize**.
 
