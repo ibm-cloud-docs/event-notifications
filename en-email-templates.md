@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-03-25"
+lastupdated: "2025-04-08"
 
 keywords: event notifications, event-notifications, email.templates
 subcollection: event-notifications
@@ -16,9 +16,8 @@ subcollection: event-notifications
 
 There are 2 types of Email templates that are supported by {{site.data.keyword.en_short}}:
 
-   * **Custom Email notification**: Provide a subject and construct the body. Include a placeholder for inserting the unsubscribe text, along with the unsubscription URL. This placeholder, represented as `{{ibmen_unsubscription}}`, is used to substitute the unsubscription URL.
-
-   * **Custom Email invitation**: Provide a subject and construct the body. Include a placeholder for inserting the invitation text, accompanied by the subscription URL. This placeholder, represented as `{{ibmen_invitation}}`, is used to substitute the invitation URL.
+   * [Custom Email notification](#en-custom-email-notification)
+   * [Custom Email invitation](#en-custom-email-invitation)
 
 
 ## Personalizing templates
@@ -32,7 +31,26 @@ Email personalization refers to the practice of tailoring email content and mess
    * Personalized content recommendations: Provide recommendations to specific information sources, such as blog posts, articles, or videos, based on the recipient's previous engagement with your content.
    * Location-based personalization: Customize content or promotions based on the recipient's geographic location or time zone.
 
+
+## Custom Email Notification
+{: #en-custom-email-notification}
+
+Provide a subject and construct the body. Include a placeholder for inserting the unsubscribe text, along with the unsubscription URL. This placeholder, represented as `{{ibmen_unsubscription}}`, is used to substitute the unsubscription URL.
+
 In the send notification payload, add a `personalization` parameter to enable it. See the following examples for more details.
+
+When you create a template to enable personalization, add a placeholder in the HTML Handlebars format, for example: 
+
+    ```
+    {{ibmenreferer personalization ibmenmailto 'name'}}
+    ```
+
+The personalization tags are described in the following list:
+
+   * `ibmenreferer`: Specifies where to enable the personalization. 
+   * `personalization`: Specifies from where to select personalization values in the send notifications payload.
+   * `ibmenmailto`: Iterate through an array of emails to which mapping can be done for personalization.
+   * `name`: Specifies which value to select from a key. 
 
 ### Send notification payload example
 {: #send-payload}
@@ -66,8 +84,8 @@ In the send notification payload, add a `personalization` parameter to enable it
 ```
 
 
-### Full template payload example
-{: #full-payload}
+### Notification template payload example
+{: #notification-payload}
 
 ``` html
     <html lang="en">
@@ -125,3 +143,33 @@ The personalization tags are described in the following list:
    * `personalization`: Specifies from where to select personalization values in the send notifications payload.
    * `ibmenmailto`: Iterate through an array of emails to which mapping can be done for personalization.
    * `name`: Specifies which value to select from a key. 
+
+## Custom Email Invitation
+ {: #en-custom-email-invitation}
+
+ Provide a subject and construct the body. Include a placeholder for inserting the invitation text, accompanied by the subscription URL. This placeholder, represented as `{{ibmen_invitation}}`, is used to substitute the invitation URL.
+
+### Invitation Template Payload Example
+ {: #invitation-payload}
+
+ ``` html
+ <html>
+     <head>
+         <title>
+             IBM Event Notifications
+         </title>
+     </head>
+     <body>
+         <p>
+             Hello! Invitation template
+         </p>
+         <table>
+             <tr>
+                 <td>
+                     Hello invitation link:{{ibmen_invitation }} 
+                 </td>
+             </tr>
+         </table>
+     </body>
+ </html>
+ ```

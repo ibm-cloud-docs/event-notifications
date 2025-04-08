@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-02-03"
+lastupdated: "2025-04-07"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -23,7 +23,7 @@ An {{site.data.keyword.en_full_notm}} template is a pre-defined layout that incl
 
 1. In the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Event notifications**. 
 1. Click the name of your {{site.data.keyword.en_short}} instance. 
-1. Click on **Create** on the top right.
+1. Click on **Create** on the upper right.
 1. Enter details about the template such as the name and description, and select a template type. Event Notifications currently supports 4 templates:
 
     * [Custom Email Notification](/docs/event-notifications?topic=event-notifications-en-email-templates)
@@ -31,13 +31,14 @@ An {{site.data.keyword.en_full_notm}} template is a pre-defined layout that incl
     * [Webhook Notification](/docs/event-notifications?topic=event-notifications-en-webhook-notifications-template)
     * [Slack Notification](/docs/event-notifications?topic=event-notifications-en-slack-notification-template)
     * [PagerDuty Notification](/docs/event-notifications?topic=event-notifications-en-pagerduty-notification-template)
+    * [Event Streams Notification](/docs/event-notifications?topic=event-notifications-en-event-streams-notification-template)
    
 1. Click **Add** to save your updates. 
 
 
 ## Handlebars Integration
 
-Handlebars is a templating language that allows for dynamic content generation within templates.Handlebars can be used to customize notification messages using template variables and conditional logic.
+Handlebars is a templating language that allows for dynamic content generation within templates. Handlebars can be used to customize notification messages using template variables, conditional logic and various other helpers
 
 ### Template Variables
 
@@ -79,7 +80,7 @@ Example:
 
 ### Contains Helper
 
-The contains helper allows users to check if there is a specific word in any of the fields of the payload.
+The contains helper allows users to check whether there is a specific word in any of the fields of the payload.
 
 #### Example:
 
@@ -89,7 +90,8 @@ The contains helper allows users to check if there is a specific word in any of 
 	"message": "this is test alert from dev account"
 }
 ```
-Use the contains helpers like below:
+
+Use the contains helpers like:
 ```handlebars
 {
 {{#contains data.message "dev"}}

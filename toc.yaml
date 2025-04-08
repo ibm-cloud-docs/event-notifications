@@ -88,6 +88,7 @@ toc:
           - en-webhook-notifications-template.md
           - en-slack-notification-template.md
           - en-pager-duty-notification.md
+          - en-event-streams-notification-template.md
       - topicgroup:
           label: Observability
           topics:
