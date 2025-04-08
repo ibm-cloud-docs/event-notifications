@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-03-25"
+lastupdated: "2025-04-08"
 
 keywords: event-notifications, event notifications, managing service access, iam, account, authorizations, s2s
 
@@ -45,8 +45,9 @@ If the source and target services are in different accounts or if the authorizat
 
 1. Click **Authorize**.
 
+
 ## Creating an authorization by using the CLI
-{: #en-create-auth-cli1}
+{: #en-create-auth-cli1}{: cli}
 
 To authorize a source service to access a target service, run the `ibmcloud iam authorization-policy-create` command.
 

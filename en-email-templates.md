@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-04-07"
+lastupdated: "2025-04-08"
 
 keywords: event notifications, event-notifications, email.templates
 subcollection: event-notifications
@@ -16,8 +16,8 @@ subcollection: event-notifications
 
 There are 2 types of Email templates that are supported by {{site.data.keyword.en_short}}:
 
-   * **Custom Email notification**
-   * **Custom Email invitation**
+   * [Custom Email notification](#en-custom-email-notification)
+   * [Custom Email invitation](#en-custom-email-invitation)
 
 
 ## Personalizing templates

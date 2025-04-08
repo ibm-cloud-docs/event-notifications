@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-03-25"
+lastupdated: "2025-04-08"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, Event Streams, event streams
 
@@ -56,14 +56,6 @@ To configure an {{site.data.keyword.messagehub}} destination, complete the follo
 
 1. Click **Add**.
 
-## Creating an authorization in the console
-{: #en-using-s2s-console-event-streams}
-
-An authorization is required to grant one service access to another service.You must grant Event Notifications the appropriate IAM service-to-service access so that it can publish messages to Event Streams.
-
-To learn the process to create an authorization between {{site.data.keyword.en_short}} and {{site.data.keyword.messagehub}}, refer [Authorization between services](/docs/event-notifications?topic=event-notifications-en-using-s2s-authorization). 
-
-
 ### Finding the {{site.data.keyword.messagehub}} service instance details
 {: #en-event-streams-details}
 
@@ -91,3 +83,10 @@ Copy the **HTTP API endpoint** that needs to be used in the destination creation
 {: #en-topic}
 
 Navigate to **Topics** in the menu. You will find the list of available topics. Select the topic that you want to send messages to or receive messages from. Copy the **Topic Name** that needs to be used in the destination creation process. Use this copied name in the destination creation screen.
+
+## Creating an authorization in the console
+{: #en-using-s2s-console-event-streams}
+
+An authorization is required to grant one service access to another service.You must grant Event Notifications the appropriate IAM service-to-service access so that it can publish messages to Event Streams.
+
+To learn the process to create an authorization between {{site.data.keyword.en_short}} and {{site.data.keyword.messagehub}}, refer [Authorization between services](/docs/event-notifications?topic=event-notifications-en-using-s2s-authorization). 
