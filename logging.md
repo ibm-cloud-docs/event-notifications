@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2025
-lastupdated: "2025-03-25"
+lastupdated: "2025-04-10"
 
 keywords: event notifications cloud logs, event notifications logging, event notifications external logs
 
@@ -40,40 +40,7 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 | Osaka (`jp-osa`)       | [Yes]{: tag-green}   |
 {: caption="Locations where platform logs are generated" caption-side="top"}
 
-### Locations where logs are sent to {{site.data.keyword.la_full_notm}}
-{: #la-legacy-locations}
 
-{{site.data.keyword.en_short}} sends platform logs to {{site.data.keyword.la_full_notm}} in the regions indicated in the following table.
-
-| Dallas (`us-south`) | Washington (`us-east`)  | Toronto (`ca-tor`) | Sao Paulo (`br-sao`) |
-|---------------------|-------------------------|-------------------|----------------------|
-| [Yes]{: tag-green} | [No]{: tag-red} | [Yes]{: tag-green} | [No]{: tag-red} |
-{: caption="Regions where platform logs are sent in Americas locations" caption-side="top"}
-{: #la-table-1}
-{: tab-title="Americas"}
-{: tab-group="la"}
-{: class="simple-tab-table"}
-{: row-headers}
-
-| Tokyo (`jp-tok`)    | Sydney (`au-syd`) |  Osaka (`jp-osa`) | Chennai (`in-che`) |
-|---------------------|------------------|------------------|--------------------|
-| [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [No]{: tag-red} |
-{: caption="Regions where platform logs are sent in Asia Pacific locations" caption-side="top"}
-{: #la-table-2}
-{: tab-title="Asia Pacific"}
-{: tab-group="la"}
-{: class="simple-tab-table"}
-{: row-headers}
-
-| Frankfurt (`eu-de`)  | London (`eu-gb`) | Madrid (`eu-es`) |
-|---------------------------------------------------------------|---------------------|------------------|
-| [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} |
-{: caption="Regions where platform logs are sent in Europe locations" caption-side="top"}
-{: #la-table-3}
-{: tab-title="Europe"}
-{: tab-group="la"}
-{: class="simple-tab-table"}
-{: row-headers}
 
 ### Locations where logs are sent to {{site.data.keyword.logs_full_notm}}
 {: #logs-locations}
