@@ -22,7 +22,7 @@ These restrictions work with traditional IAM policies, which are based on identi
 After you set up your {{site.data.keyword.en_short}} service instance, you can manage access by using [context-based restrictions (CBR)](https://cloud.ibm.com/context-based-restrictions/overview){: external}.
 {: shortdesc}
 
-Any Activity Tracker or audit log events generated come from the context-based restrictions service, and not IBM Cloud Event Notifications. For more information, see [Monitoring context-based restrictions](/docs/account?topic=account-cbr-monitor).
+Any audit log events generated come from the context-based restrictions service, and not IBM Cloud Event Notifications. For more information, see [Monitoring context-based restrictions](/docs/account?topic=account-cbr-monitor).
 
 ## How IBM Cloud Event Notifications Service integrates with context-based restrictions
 {: #en-manage-cbr-settings}

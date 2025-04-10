@@ -41,10 +41,7 @@ To use a push service destination, add it to a subscription. The subscription al
 
 The push service works along with an app on your users' mobile devices. You must instrument the app with the {{site.data.keyword.en_short}} push SDK. The app must ensure that users consent to notifications, and then the SDK helps to register their mobile devices. For more information, see [Create an {{site.data.keyword.en_short}} destination](/docs/event-notifications?topic=event-notifications-en-create-en-destination).
 
-## Push troubleshooting and telemetry
-{: #en-destinations-push-ts-and-telemetry}
 
-Troubleshooting and telemetry information for push notifications is available in the {{site.data.keyword.la_full}} service. You can see the dispatch status as well as *delivered* and *opened* information for individual devices. For more information, see [Logging for {{site.data.keyword.en_short}}](/docs/event-notifications?topic=event-notifications-logging).
 
 ## Push charges
 {: #en-destinations-push-charge}
