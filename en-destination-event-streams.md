@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-04-08"
+lastupdated: "2025-04-14"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, Event Streams, event streams
 
@@ -35,6 +35,8 @@ If you are using {{site.data.keyword.en_short}} CLI or API to configure an {{sit
 
 To configure an {{site.data.keyword.messagehub}} destination, complete the following steps:
 
+1. Navigate to https://cloud.ibm.com , click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > Resource List > Developer Tools > Your Event Notifications instance.
+
 1. From your {{site.data.keyword.en_short}} instance dashboard, click **Destinations**.
 
 1. Click **Add +** to add a new destination.
@@ -43,16 +45,17 @@ To configure an {{site.data.keyword.messagehub}} destination, complete the follo
 
       If the {{site.data.keyword.messagehub}} instance is located in the same account as your {{site.data.keyword.en_short}} instance:
 
-       1. Select the name of the {{site.data.keyword.messagehub}} instance to send notifications to. 
-       2. Once the instance is selected, the **Endpoint** field will be filled automatically by pulling it from the selected instance. 
-       3. Select the **Topic** to send/receive messages from. To select the topic, see [Topic](#en-topic). 
+      1. Select the name of the {{site.data.keyword.messagehub}} instance to send notifications to. 
+      2. Once the instance is selected, the **Endpoint** field will be filled automatically by pulling it from the selected instance. 
+      3. Select the **Topic** to send/receive messages from. To select the topic, see [Topic](#en-topic). 
 
 
       If the {{site.data.keyword.messagehub}} instance is located in a different account, provide the following details:
 
-       1. Enter the {{site.data.keyword.messagehub}} CRN . For more information, see [CRN](#en-crn).
-       2. Enter the {{site.data.keyword.messagehub}} endpoint URL. For more information, see [Endpoint url](#en-endpoint-url).
-       3. Select the topic to send/receive messages from. To select the topic, see [Topic](#en-topic).
+      1. Enter the {{site.data.keyword.messagehub}} CRN . For more information, see [CRN](#en-crn).
+      2. Enter the {{site.data.keyword.messagehub}} endpoint URL. For more information, see [Endpoint url](#en-endpoint-url).
+      3. Select the topic to send/receive messages from. To select the topic, see [Topic](#en-topic).
+
 
 1. Click **Add**.
 
