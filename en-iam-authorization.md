@@ -15,7 +15,7 @@ subcollection: event-notifications
 
 
 # Authorizing Event Notifications to access other services
-{: #en-using-s2s-authorization}{: ui}
+{: #en-using-s2s-authorization}
 
 Use {{site.data.keyword.cloud}} Identity and Access Management (IAM) to create or remove an authorization that grants one service access to another service. You must grant {{site.data.keyword.en_short}} the appropriate IAM service to service access for it to be able to send notifications and alerts to the various available destinations. You can find the list of available destinations [here](/docs/event-notifications?topic=event-notifications-en-destination).
 
@@ -44,11 +44,10 @@ If the source and target services are in different accounts or if the authorizat
 1. Select the appropriate roles to grant {{site.data.keyword.en_short}} access to the target service.
 
 1. Click **Authorize**.
+{: ui}
 
-
-# Creating an authorization by using the CLI
-{: #en-create-auth-cli1}{: cli}
 
 To authorize a source service to access a target service, run the `ibmcloud iam authorization-policy-create` command.
 
 For more information about all the parameters available for this command, see [ibmcloud iam authorization-policy-create](/docs/cli?topic=cli-ibmcloud_commands_iam#ibmcloud_iam_authorization_policy_create).
+{: cli}
