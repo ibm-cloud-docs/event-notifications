@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-04-08"
+lastupdated: "2025-04-14"
 
 keywords: event-notifications, event notifications, managing service access, iam, account, authorizations, s2s
 
@@ -15,7 +15,7 @@ subcollection: event-notifications
 
 
 # Authorizing Event Notifications to access other services
-{: #en-using-s2s-authorization}
+{: #en-using-s2s-authorization}{: ui}
 
 Use {{site.data.keyword.cloud}} Identity and Access Management (IAM) to create or remove an authorization that grants one service access to another service. You must grant {{site.data.keyword.en_short}} the appropriate IAM service to service access for it to be able to send notifications and alerts to the various available destinations. You can find the list of available destinations [here](/docs/event-notifications?topic=event-notifications-en-destination).
 
