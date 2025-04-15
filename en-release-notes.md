@@ -20,12 +20,12 @@ content-type: release-note
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
 
-## 11 April 2025
+## 15 April 2025
 {: #event-notifications-Oct2023}
 {: release-note}
 
-{{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} is now available in Sao Paulo region
-:  {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now provides the ability to provision instance in the Sao Paulo region.
+{{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} is now available in the Sao Paulo region
+:  {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now provides the ability to provision an instance in the Sao Paulo region.
 
 ## 28 February 2025
 {: #event-notifications-Feb282025}
