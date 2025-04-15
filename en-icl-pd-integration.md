@@ -2,7 +2,7 @@
 
 copyright:
    years: 2025
-lastupdated: "2025-04-14"
+lastupdated: "2025-04-15"
 
 keywords: event-notifications, event notifications, about event notifications, cloud logs, pagerduty
 
@@ -121,35 +121,61 @@ You need an {{site.data.keyword.cloud}} account. If you don't have an account, t
 
     ```json
     {
-    "payload": {
-        "summary": "{{ data.alert_definition.name}}",
-        "timestamp": "{{time}}",
-        {{#equal data.alert_definition.severity "Critical"}}
-        "severity": "critical",
+        "payload": {
+            "summary": "{{ data.alert_definition.name}}",
+            "timestamp": "{{time}}",
+            {{#equal data.alert_definition.severity "Critical"}}
+            "severity": "critical",
+            {{/equal}}
+            {{#equal data.alert_definition.severity "High"}}
+            "severity": "error",
+            {{/equal}}
+            {{#equal data.alert_definition.severity "Info"}}
+            "severity": "info",
+            {{/equal}}
+            {{#equal data.alert_definition.severity "Warning"}}
+            "severity": "warning",
+            {{/equal}}
+            "source": "{{ source }}",
+            "custom_details": {
+                "Alert ID": "{{ data.alert_definition.id }}",
+                "Alert description": "{{ data.alert_definition.description }}",
+                "Alert name": "{{ data.alert_definition.name }}",
+                {{#equal data.alert_definition.alert_type "StandardLessThanAlertEvent"}}
+                "Condition": {
+                    "LessThan": {
+                        "Threshold": "{{ data.alert_definition.condition.LessThan.condition_threshold }}",
+                        "Timeframe": "{{ data.alert_definition.condition.LessThan.condition_timeframe }}"
+                    }
+                },
+                {{/equal}}
+                "Log Example": "{{#if data.log_example_truncated}}{{data.log_example}} [logs truncated]{{else}}{{#if data.log_example}}{{#each data.log_example}}{{this}} {{/each}}{{else}}No matching lines found{{/if}}{{/if}}",
+                "Query statement": "{{ data.alert_definition.query_statement }}"
+            }
+        },
+        "dedup_key": "{{ data.alert_definition.id }}",
+        "links": [
+            {
+                "href": "{{ data.links.edit_alert }}",
+                "text": "Edit Alert"
+            },
+            {
+                "href": "{{ data.links.view_alert }}",
+                "text": "View Alert"
+            }
+        ],
+        {{#equal data.status "triggered"}}
+        "event_action": "trigger"
         {{/equal}}
-        {{#equal data.alert_definition.severity "High"}}
-        "severity": "error",
-        {{/equal}}
-        {{#equal data.alert_definition.severity "Info"}}
-        "severity": "info",
-        {{/equal}}
-        {{#equal data.alert_definition.severity "Warning"}}
-        "severity": "warning",
-        {{/equal}}
-        "source": "{{ source }}"
-    },
-    "dedup_key": "{{ data.alert_definition.id }}",
-    {{#equal data.status "triggered"}}
-    "event_action": "trigger"
-    {{/equal}}
 
-    {{#equal data.status "resolved"}}
-    "event_action": "resolve"
-    {{/equal}}
+        {{#equal data.status "resolved"}}
+        "event_action": "resolve"
+        {{/equal}}
 
-    {{#equal data.status "acknowledged"}}
-    "event_action": "acknowledge"
-    {{/equal}}
+        {{#equal data.status "acknowledged"}}
+        "event_action": "acknowledge"
+        {{/equal}}
+        "client": "IBM Cloud Logs"
     }
 
     ```
