@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2023-12-20"
+  years: 2021, 2025
+lastupdated: "2025-04-11"
 
 keywords: event-notifications, event notifications, regions, endpoints, private endpoints
 
@@ -31,6 +31,7 @@ Review region and connectivity options for interacting with {{site.data.keyword.
 - Toronto (`ca-tor`)
 - Tokyo (`jp-tok`)
 - Osaka (`jp-osa`)
+- Sao Paulo (`br-sao`)
 
 You can create {{site.data.keyword.en_full_notm}} resources in one of the supported {{site.data.keyword.cloud_notm}} regions.
 
@@ -60,6 +61,7 @@ The following table contains the base URLs for the {{site.data.keyword.en_full_n
 | Toronto |`https://ca-tor.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
 | Tokyo |`https://jp-tok.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
 | Osaka |`https://jp-osa.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
+| Sao Paulo | `https://br-sao.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
 {: caption="Public endpoints for interacting with {{site.data.keyword.en_short}} by using APIs" caption-side="bottom"}
 
 ### Private endpoints
@@ -77,4 +79,5 @@ If you need to manage your {{site.data.keyword.en_short}} resources over a priva
 | Toronto |`https://private.ca-tor.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
 | Tokyo |`https://private.jp-tok.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
 | Osaka |`https://private.jp-osa.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
+| Sao Paulo |`https://private.br-sao.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
 {: caption="Private endpoints for interacting with {{site.data.keyword.en_short}} by using APIs" caption-side="bottom"}
