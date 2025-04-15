@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-03-25"
+lastupdated: "2025-04-15"
 
 keywords: event notifications CLI plug-in, CLI reference, en cli reference, event notifications cli reference, event notifications, command line reference
 
@@ -81,6 +81,7 @@ export IBMCLOUD_EN_ENDPOINT=<https://au-syd.event-notifications.cloud.ibm.com/ev
    - **Osaka:** `https://jp-osa.event-notifications.cloud.ibm.com/event-notifications`
    - **Tokyo:** `https://jp-tok.event-notifications.cloud.ibm.com/event-notifications`
    - **Toronto:** `https://ca-tor.event-notifications.cloud.ibm.com/event-notifications`
+   - **Sao Paulo:** `https://br-sao.event-notifications.cloud.ibm.com/event-notifications`
 
 - export **IBMCLOUD_EN_ENDPOINT** variable to set the {{site.data.keyword.en_short}} region private endpoint.
 
@@ -92,6 +93,7 @@ export IBMCLOUD_EN_ENDPOINT=<https://au-syd.event-notifications.cloud.ibm.com/ev
    - **Osaka:** `https://private.jp-osa.event-notifications.cloud.ibm.com/event-notifications`
    - **Tokyo:** `https://private.jp-tok.event-notifications.cloud.ibm.com/event-notifications`
    - **Toronto:** `https://private.ca-tor.event-notifications.cloud.ibm.com/event-notifications`
+   - **Sao Paulo:** `https://private.br-sao.event-notifications.cloud.ibm.com/event-notifications`
 
 - export **EVENT_NOTIFICATIONS_API_KEY** variable to set the {{site.data.keyword.en_short}} instance `apikey`.
 
