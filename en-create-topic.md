@@ -39,14 +39,15 @@ You can send notifications or alerts to multiple destination types, for example,
       - **Event type**: select event type from the list.
       - **Event subtype**: select event sub type from the event sub type list.
       - **Severity**: select severity from the severity list.
-      - **Advanced conditions**: create your own custom conditions, which must follow [JSONpath specifications](https://goessner.net/articles/JsonPath/). The correctly written rule will extract the appropriate data from the incoming request payload. {{site.data.keyword.en_short}} supports conditional operators `>=, <=, ==, >, <, !=, =~` and logical operators `||, &&` for JSONPath evaluation. You can validate your JSONPath [here](https://jsonpath.com/).
+      - **Advanced conditions**: create your own custom conditions, which must follow [JSONpath specifications](https://goessner.net/articles/JsonPath/). The correctly written rule will extract the appropriate data from the incoming request payload. {{site.data.keyword.en_short}} supports conditional operators `>=, <=, ==, >, <, !=, =~` and logical operators `||, &&` for JSONPath evaluation. You can validate your JSONPath [here](https://jsonpath.com/). If you want to add advanced conditions for event type, subtype, and severity, see the following [example](/docs/event-notifications?topic=event-notifications-en-create-en-topic#create-topic-example). Similarly you can add advanced conditions for the other available [payload fields](/apidocs/event-notifications#send-notifications-request).
 
       The "=~" operator is a powerful tool that helps you search for patterns in strings using regular expressions.
       {: note}
 
-      Example:
+### Example:
+{: #create-topic-example}
 
-      ```JSON
+   ```JSON
       {
       "data": {
          "details": [
@@ -74,44 +75,56 @@ You can send notifications or alerts to multiple destination types, for example,
          ],
          "location": "London",
          "company": "IBM",
-         "region": "london"
+         "region": "london",
+         "event_type": "secret_about_to_expire ",
+         "event_sub_type": "in_60_days ",
+         "severity" : "MEDIUM"
       }
       }
    ```
 
-      Based on the previous JSON input, the following valid JSONPaths can be constructed:
+   Based on the previous JSON input, the following valid JSONPaths can be constructed:
 
-      ```bash
-         1. $.data.details[1].age >= 25
+   ```bash
+         1. $.data.event_sub_type == "in_60_days"
             Output: True
 
-         2. $.data.details[0].name == "Bob"
+         2. $.data.event_type == "secret_about_to_expire"
             Output: True
 
-         3. $.data.details[2].name != "unknown"
+         3. $.data.severity == "MEDIUM"
             Output: True
 
-         4. $.data.details[0].name == "Bob" || $.data.location == "New york"
+         4. $.data.details[1].age >= 25
+            Output: True
+
+         5. $.data.details[0].name == "Bob"
+            Output: True
+
+         6. $.data.details[2].name != "unknown"
+            Output: True
+
+         7. $.data.details[0].name == "Bob" || $.data.location == "New york"
             Output: True
             
-         5. $.data.details[1].age > 20 && $.data.company == "IBM"
+         8. $.data.details[1].age > 20 && $.data.company == "IBM"
             Output: True
 
-         6. $.data.details[0].age <= 30  || $.data.details[1].id >= 3
+         9. $.data.details[0].age <= 30  || $.data.details[1].id >= 3
             Output: True
 
-         7. $.data.details[2].id < 4
+         10. $.data.details[2].id < 4
             Output: True
 
-         8. $.data.location == "London"
+         11. $.data.location == "London"
             Output: True
          
-         9. $.data.region =~ "dallas|london|sydney"
+         12. $.data.region =~ "dallas|london|sydney"
             Output: True 
 
-         10. $.data.details[?(@.country == "India")].name == "Alice"
+         13. $.data.details[?(@.country == "India")].name == "Alice"
             Output: True 
-      ```
+   ```
       
 
 If your chosen source is an **API source** , then you can only add the "Advanced Conditions" rule to your topic.
