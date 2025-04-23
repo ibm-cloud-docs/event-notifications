@@ -66,19 +66,16 @@ toc:
               - en-push-firefox.md
               - en-push-safari.md
               - en-push-huawei.md
-          - topicgroup:
-              label: Event destinations
-              topics:
-              - en-destination-slack.md
-              - en-destination-msteams.md
-              - en-destination-pagerduty.md
-              - en-destination-webhook.md
-              - en-destination-servicenow.md
-              - en-destination-codeengine.md
-              - en-destination-cloud-object-storage.md
-              - en-destination-event-streams.md
-              - en-managing-encryption.md
-              - en-test-destination.md
+          - en-destination-slack.md
+          - en-destination-msteams.md
+          - en-destination-pagerduty.md
+          - en-destination-webhook.md
+          - en-destination-servicenow.md
+          - en-destination-codeengine.md
+          - en-destination-cloud-object-storage.md
+          - en-destination-event-streams.md
+          - en-managing-encryption.md
+          - en-test-destination.md
       - en-cfe-integrations.md
       - topicgroup:
           label: Event Notifications Templates
