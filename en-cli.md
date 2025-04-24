@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-04-15"
+lastupdated: "2025-04-24"
 
 keywords: event notifications CLI plug-in, CLI reference, en cli reference, event notifications cli reference, event notifications, command line reference
 
@@ -1984,7 +1984,7 @@ ibmcloud event-notifications template-replace --instance-id INSTANCE-ID --id ID 
 
     The maximum length is `24` characters. The minimum length is `22` characters. The value must match regular expression `/^(smtp_custom.notification|smtp_custom.invitation)$/`.
 
-`--params` ([`TemplateConfig`](#event-notifications-template-update-examples))
+`--params` ([`TemplateConfig`](#event-notifications-template-examples))
 :   Payload describing a template configuration. This JSON option can instead be provided by setting individual fields with other options. It is mutually exclusive with those options.
 
     Provide a JSON string option or specify a JSON file to read from by providing a filepath option that begins with a `@`, e.g. `--params=@path/to/file.json`.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-04-08"
+lastupdated: "2025-04-24"
 
 keywords: event notifications, event-notifications, email.templates
 subcollection: event-notifications
@@ -19,7 +19,6 @@ There are 2 types of Email templates that are supported by {{site.data.keyword.e
    * [Custom Email notification](#en-custom-email-notification)
    * [Custom Email invitation](#en-custom-email-invitation)
 
-
 ## Personalizing templates
 {: #en-template-personalization}
 
@@ -31,13 +30,6 @@ Email personalization refers to the practice of tailoring email content and mess
    * Personalized content recommendations: Provide recommendations to specific information sources, such as blog posts, articles, or videos, based on the recipient's previous engagement with your content.
    * Location-based personalization: Customize content or promotions based on the recipient's geographic location or time zone.
 
-
-## Custom Email Notification
-{: #en-custom-email-notification}
-
-Provide a subject and construct the body. Include a placeholder for inserting the unsubscribe text, along with the unsubscription URL. This placeholder, represented as `{{ibmen_unsubscription}}`, is used to substitute the unsubscription URL.
-
-In the send notification payload, add a `personalization` parameter to enable it. See the following examples for more details.
 
 When you create a template to enable personalization, add a placeholder in the HTML Handlebars format, for example: 
 
@@ -51,6 +43,15 @@ The personalization tags are described in the following list:
    * `personalization`: Specifies from where to select personalization values in the send notifications payload.
    * `ibmenmailto`: Iterate through an array of emails to which mapping can be done for personalization.
    * `name`: Specifies which value to select from a key. 
+
+
+## Custom Email Notification
+{: #en-custom-email-notification}
+
+Provide a subject and construct the body. Include a placeholder for inserting the unsubscribe text, along with the unsubscription URL. This placeholder, represented as `{{ibmen_unsubscription}}`, is used to substitute the unsubscription URL.
+
+In the send notification payload, add a `personalization` parameter to enable it. See the following examples for more details.
+
 
 ### Send notification payload example
 {: #send-payload}
@@ -83,9 +84,9 @@ The personalization tags are described in the following list:
     }
 ```
 
-
 ### Notification template payload example
-{: #notification-payload}
+{: #full-payload}
+
 
 ``` html
     <html lang="en">
@@ -129,20 +130,6 @@ The personalization tags are described in the following list:
         </body>
     </html>
  ```
-
-
-When you create a template to enable personalization, add a placeholder in the HTML Handlebars format, for example: 
-
-    ```
-    {{ibmenreferer personalization ibmenmailto 'name'}}
-    ```
-
-The personalization tags are described in the following list:
-
-   * `ibmenreferer`: Specifies where to enable the personalization. 
-   * `personalization`: Specifies from where to select personalization values in the send notifications payload.
-   * `ibmenmailto`: Iterate through an array of emails to which mapping can be done for personalization.
-   * `name`: Specifies which value to select from a key. 
 
 ## Custom Email Invitation
  {: #en-custom-email-invitation}

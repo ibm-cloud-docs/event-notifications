@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2025-04-15"
+lastupdated: "2025-04-24"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -306,7 +306,7 @@ New destination: {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_sh
 :  {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}} is now available as a destination. You can send notifications to your {{site.data.keyword.openwhisk_short}} instance by using {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}}. Send notifications to your {{site.data.keyword.openwhisk_short}} instance by using {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}}.
 
 Support for changing a **Pre-production destination** to **Production destination**
-:  You can now change a **Pre-production destination** to **Production destination** after your development and testing. For more information, see [Modify a Pre-production destination to Production destination](/docs/event-notifications?topic=event-notifications-en-create-en-destination#en-destination-preprod-prod1).
+:  You can now change a **Pre-production destination** to **Production destination** after your development and testing. For more information, see [Modify a Pre-production destination to Production destination](/docs/event-notifications?topic=event-notifications-en-create-en-destination#en-modify-en-destination).
 
 ## 16 Aug 2022
 {: #event-notifications-Aug1622}
