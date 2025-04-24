@@ -38,6 +38,7 @@ toc:
           - en-resource-lifcycle-events.md
           - en-create-source.md
           - en-source.md
+          - en-map-source-to-payload.md
       - topicgroup:
           label: Event destinations
           topics:
