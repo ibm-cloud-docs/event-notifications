@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2025-04-24"
+lastupdated: "2025-04-25"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -21,7 +21,7 @@ Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, sec
 {: note}
 
 ## 15 April 2025
-{: #event-notifications-Oct2023}
+{: #event-notifications-April152025}
 {: release-note}
 
 {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} is now available in the Sao Paulo region

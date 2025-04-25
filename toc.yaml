@@ -75,7 +75,6 @@ toc:
           - en-destination-codeengine.md
           - en-destination-cloud-object-storage.md
           - en-destination-event-streams.md
-          - en-managing-encryption.md
           - en-test-destination.md
       - en-cfe-integrations.md
       - topicgroup:

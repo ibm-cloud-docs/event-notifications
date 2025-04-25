@@ -88,20 +88,20 @@ You are charged for your instance of {{site.data.keyword.en_short}} until you de
 {: important}
 
 ### Restoring access to data
-{: #restoring_access}
+{: #restoring-access}
 
 Access can be restored only if the key was not deleted. To restore access, re-enable your root key. After a short period of initialization, your {{site.data.keyword.en_short}} instance is restarted and starts accepting connections again. All data is retained, subject to the normal retention limits configured in your instance.
 
 A cloud logs event is generated to report the action. For more information, see [{{site.data.keyword.cloudaccesstrailshort}} events](/docs/event-notifications?topic=event-notifications-at_events).
 
 ### Rotating the key
-{: #rotating_key}
+{: #rotating-key}
 
 {{site.data.keyword.keymanagementserviceshort}} and {{site.data.keyword.hscrypto}} support the rotation of root keys, either on demand or on a schedule. When this occurs, {{site.data.keyword.en_short}} adopts the new key by rewrapping the DEK as described in [how customer-managed encryption works](#en-encryption-how).
 
 A cloud logs event is generated to report the action. For more information, see [{{site.data.keyword.cloudaccesstrailshort}} events](/docs/event-notifications?topic=event-notifications-at_events).
 
 ## Disabling customer-managed encryption
-{: #stop_customer_encryption}
+{: #stop-customer-encryption}
 
 After enabling customer-managed encryption, it is not possible to disable it. Instead, you must delete the service instance and create a new instance.

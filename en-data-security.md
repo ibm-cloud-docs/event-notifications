@@ -56,12 +56,12 @@ If you no longer need an instance of {{site.data.keyword.en_short}}, you can del
 To restore a deleted instance or to delete the instance permanently, you can use Resource Reclamations. For more information about resource reclamation, see [Using Resource Reclamations](/docs/account?topic=account-resource-reclamation).
 
 ## Data security and compliance
-{: #en-data-security-and-compliance}
+{: #en-data-security-and-compliance1}
 
 {{site.data.keyword.en_short}} service has data security strategies in place to meet your compliance needs and ensure that your data remains secure and protected in the cloud.
 
 ### Security readiness
-{: #en-security-readiness}
+{: #en-security-readiness1}
 
 {{site.data.keyword.en_short}} ensures security readiness by adhering to {{site.data.keyword.IBM_notm}} best practices for systems, networking, and secure engineering.
 
@@ -71,7 +71,7 @@ To learn more about security controls across {{site.data.keyword.cloud_notm}}, s
 To learn more about how your data is secured in {{site.data.keyword.en_short}}, see [securing your data in {{site.data.keyword.en_short}}](/docs/event-notifications?topic=event-notifications-en-mng-data).
 
 #### Data encryption
-{: #en-data-encryption}
+{: #en-data-encryption1}
 
 {{site.data.keyword.en_short}} stores and encrypts details that are related to your destinations like email (sender, recipients, subject), or SMS (sender, recipient, details).
 
@@ -83,7 +83,7 @@ If you attempt to use a cipher that is not on this list, you may experience conn
 {: tip}
 
 ### Compliance readiness
-{: #en-compliance-readiness}
+{: #en-compliance-readiness1}
 
 {{site.data.keyword.en_short}} meets controls for global, industry, and regional compliance standards, including ISO
 27001/27017/27018/27701, and others.
@@ -92,6 +92,6 @@ For a complete listing of {{site.data.keyword.cloud_notm}} compliance certificat
 {: tip}
 
 #### ISO 27001, 27017, 27018, 27701
-{: #en-iso}
+{: #en-iso1}
 
 {{site.data.keyword.en_short}} is ISO 27001, 27017, 27018, and 27701 certified. You can view compliance certifications by visiting [Compliance on the {{site.data.keyword.cloud_notm}}](https://ibm.com/cloud/compliance){: external}.
