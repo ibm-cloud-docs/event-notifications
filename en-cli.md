@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-04-24"
+lastupdated: "2025-04-28"
 
 keywords: event notifications CLI plug-in, CLI reference, en cli reference, event notifications cli reference, event notifications, command line reference
 
@@ -501,6 +501,9 @@ ibmcloud event-notifications destination --help
       ```
 
    - The following example shows format of the `DestinationConfig` object for PagerDuty(pagerduty) destination.
+
+      It is recommended to use only the Routing key while creating the destination. The API key is deprecated and will not available for use in the future.
+      {: attention}
 
       ```json
       {
@@ -2774,16 +2777,11 @@ ibmcloud event-notifications send-notifications \
 Find a summary of changes for each version of {{site.data.keyword.en_short}} plug-in. Keep your CLI up to date so that you can use all of the available commands and their options.
 {: shortdesc}
 
-The CLI Plugin versions from 0.0.5 to 1.0.0 is deprecated.
+The CLI Plugin versions from 0.0.5 to 1.4.0 is deprecated.
 {: note}
 
 | Version | Release date | Changes |
 |------------|--------------|---------|
-| 1.0.1 | 17 July 2023 | Support for Huawei Destination and New CLI Support. |
-| 1.1.0 | 5 October 2023 | Support for Custom Email. |
-| 1.2.0 | 9 October 2023 | Support for Email Templates. |
-| 1.3.0 | 1 December 2023 | {{site.data.keyword.cos_full_notm}} integration supported. |
-| 1.4.0 | 14 March 2024 | Code engine destination configuration support for job and application. |
 | 1.5.0 | 10 May 2024 | Support for SMTP Configuration and Slack Templates. |
 | 1.6.0 | 1 August 2024 | CF destination deprecated and MMS supported. |
 | 1.7.0 | 9 August 2024 | Support for metrics and removed support for SMTP allowed IPs from SMTP configuration.|
@@ -2792,5 +2790,6 @@ The CLI Plugin versions from 0.0.5 to 1.0.0 is deprecated.
 | 1.10.0 | 4 November 2024 | Removed support for Cloud Functions |
 | 1.11.0 | 7 January 2025 | Support for Periodic Timer |
 | 1.12.0 | 27 February 2025 | Support for Pagerduty template |
-| 1.13.0 | 6 March 2025 | Support for {{site.data.keyword.messagehub}} destination, subscription and Templates
+| 1.13.0 | 6 March 2025 | Support for {{site.data.keyword.messagehub}} destination, subscription and Templates. |
+| 1.14.0 | 28 April 2025 | PagerDuty destination deprecated parameter `api_key` is marked as optional. |
 {: caption="Changes in the {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} CLI" caption-side="bottom"}
