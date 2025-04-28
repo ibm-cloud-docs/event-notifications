@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-04-14"
+lastupdated: "2025-04-25"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, Event Streams, event streams
 
@@ -78,7 +78,7 @@ To configure an {{site.data.keyword.messagehub}} destination, complete the follo
 Copy the **CRN**, that is used in the destination creation process. Use this copied CRN in the destination creation screen.
 
 #### Endpoint URL
-{: #en-endpoint-url}
+{: #en-event-streams-endpoint-url}
 
 Copy the **HTTP API endpoint** that needs to be used in the destination creation process. Use this copied endpoint in the destination creation screen.
 

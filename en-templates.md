@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-04-14"
+lastupdated: "2025-04-24"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -21,10 +21,9 @@ An {{site.data.keyword.en_full_notm}} template is a pre-defined layout that incl
 ## Creating a template
 {: #en-create-template}
 
-1. In the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Event notifications**. 
+1. In the {{site.data.keyword.cloud_notm}} console, click the **menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Event notifications**. 
 1. Click the name of your {{site.data.keyword.en_short}} instance. 
 1. Select **Templates** from the left panel.
-1. Click on **Create** on the upper right.
 1. Enter details about the template such as the name and description, and select a template type. Event Notifications currently supports 4 templates:
 
     * [Custom Email Notification](/docs/event-notifications?topic=event-notifications-en-email-templates)
@@ -39,7 +38,7 @@ An {{site.data.keyword.en_full_notm}} template is a pre-defined layout that incl
 
 ## Handlebars Integration
 
-Handlebars is a templating language that allows for dynamic content generation within templates. Handlebars can be used to customize notification messages using template variables, conditional logic and various other helpers
+Handlebars is a templating language that allows for dynamic content generation within templates. Handlebars can be used to customize notification messages using template variables ,conditional logic and various other helpers.
 
 ### Template Variables
 
@@ -91,8 +90,8 @@ The contains helper allows users to check whether there is a specific word in an
 	"message": "this is test alert from dev account"
 }
 ```
+Use the contains helpers like: 
 
-Use the contains helpers like:
 ```handlebars
 {
 {{#contains data.message "dev"}}

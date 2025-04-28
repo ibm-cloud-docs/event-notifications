@@ -333,7 +333,7 @@ This attribute is needed if you want to send a push notification to an Android d
 
 For compatibility with an earlier version for existing Push notification customers, the previous unified data format is still supported but is deprecated.
 
-##### Example: Deprecated Push notification service compatible format:
+##### Example: Sample notification payload:
 {: #en-example13}
 
 ```JSON
