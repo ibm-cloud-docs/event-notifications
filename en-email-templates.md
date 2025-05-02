@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-04-24"
+lastupdated: "2025-05-02"
 
 keywords: event notifications, event-notifications, email.templates
 subcollection: event-notifications
@@ -33,9 +33,9 @@ Email personalization refers to the practice of tailoring email content and mess
 
 When you create a template to enable personalization, add a placeholder in the HTML Handlebars format, for example: 
 
-    ```
+```
     {{ibmenreferer personalization ibmenmailto 'name'}}
-    ```
+```
 
 The personalization tags are described in the following list:
 

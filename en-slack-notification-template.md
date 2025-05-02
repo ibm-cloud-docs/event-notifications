@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-03-25"
+lastupdated: "2025-05-02"
 
 keywords: event-notifications, event notifications, about event notifications, templates, slack
 
@@ -84,7 +84,7 @@ To include JSON blocks in the template, they need to be encoded in base64 format
 ##### Example Create Template Usage:
 {: #en-slack-template-example}
 
-```plaintext
+```json
 {
 	"name": "Template for TIP",
 	"params": {
