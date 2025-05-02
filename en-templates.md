@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-04-24"
+lastupdated: "2025-05-02"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -102,3 +102,79 @@ Use the contains helpers like:
 
 There are more helpers available for use that can be referenced from [here](https://github.com/aymerick/raymond?tab=readme-ov-file#built-in-helpers)
 {: note}
+
+### Examples:
+
+Payload:
+
+```json
+"data": 
+{
+	"message": "this is test alert from dev account",
+	"secrets": [
+	{
+		"event_time": "2025-01-24T00:45:01Z",
+		"event_triggered_by": "SecretsManager",
+		"secret_expiration": "2025-04-24T00:45:01Z"
+	}
+],
+}
+```
+
+#### Using Conditional Logic Helpers along with Contains helpers
+{: #conditional-contains-helpers}
+
+```handlebars
+{{#if (contains data.message "dev")}}
+"color":"#1E90FF"
+{{else if (contains ibmendefaultlong "prod")}}
+"color":"#dc143c"
+{{else}}
+"color":"#097969"
+{{/if}}
+```
+
+#### For loop to print each and every key value from array of map
+{: #for-loop-1}
+
+```handlebars
+{
+	{{#each data.secrets}}
+	  {
+	"type": "TextBlock",
+	"text": "{{@key}}: {{this}}",
+	"wrap": true
+	},
+	{{/each}}
+}
+```
+
+#### For loop to print specific values from a array of map
+{: #for-loop-2}
+
+```handlebars
+{{#each data.secrets}}
+	{ 
+	"secret_expiration": "{{secret_expiration}}", 
+	 "event_time": "{{event_time}}" 
+	 }
+{{/each}}
+```
+#### Accessing value from payload where the key contains special chanracters
+
+Payload:
+
+```
+"toolchain.tool-instance":{
+	"name":"sample-date"
+}
+```
+{: codeblock}
+
+Accessing name:
+```
+{{[toolchain.tool-instance].name}}
+```
+{: codeblock}
+
+To access the `name` value from a JSON payload where the key is "toolchain.tool-instance" , the syntax {{[toolchain.tool-instance].name}} is used because the key contains special characters and cannot directly be accessed with a dot notation.

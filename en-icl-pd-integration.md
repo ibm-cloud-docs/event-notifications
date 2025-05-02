@@ -2,7 +2,7 @@
 
 copyright:
    years: 2025
-lastupdated: "2025-04-15"
+lastupdated: "2025-05-02"
 
 keywords: event-notifications, event notifications, about event notifications, cloud logs, pagerduty
 
@@ -127,7 +127,7 @@ You need an {{site.data.keyword.cloud}} account. If you don't have an account, t
             {{#equal data.alert_definition.severity "Critical"}}
             "severity": "critical",
             {{/equal}}
-            {{#equal data.alert_definition.severity "High"}}
+            {{#equal data.alert_definition.severity "Error"}}
             "severity": "error",
             {{/equal}}
             {{#equal data.alert_definition.severity "Info"}}
