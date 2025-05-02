@@ -24,7 +24,6 @@ toc:
       topics:
       - en-ts-monitor-secrets.md
       - en-icl-pd-integration.md
-      - en-ocm-integrations.md
   - navgroup:
       id: howto
       topics:
