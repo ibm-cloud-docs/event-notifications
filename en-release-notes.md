@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2025-04-25"
+lastupdated: "2025-05-05"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -76,7 +76,7 @@ Enhanced Filtering Criteria
 {: release-note}
 
 {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_full}} is available as a deployable architecture for use in projects
-:   Cloud automation for deploying {{site.data.keyword.en_full}} by using {{site.data.keyword.cloud_notm}} projects is now available. The Cloud automation for {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_full}} deployable architecture from the {{site.data.keyword.cloud_notm}} catalog, helps you to automate {{site.data.keyword.cloud_notm}} projects through configuring, deploying, and monitoring your resource deployments by using DevOps best practices. For more information, see [Working with the {{site.data.keyword.en_full}} deployable architecture](/docs/event-notifications?topic=event-notifications-deployable-architecture).
+:   Cloud automation for deploying {{site.data.keyword.en_full}} by using {{site.data.keyword.cloud_notm}} projects is now available. The Cloud automation for {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_full}} deployable architecture from the {{site.data.keyword.cloud_notm}} catalog, helps you to automate {{site.data.keyword.cloud_notm}} projects through configuring, deploying, and monitoring your resource deployments by using DevOps best practices. 
 
 For more information, see [Regions and endpoints](/docs/event-notifications?topic=event-notifications-en-regions-endpoints).
 
@@ -113,7 +113,7 @@ Support Context-Based restictions for SMTP Interface
 {: release-note}
 
 Support for acesss {{site.data.keyword.en_full}} metrics of custom email domains
-: {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now provides access to view the notitfication performance metrics for custom email domains, see [Monitoring {{site.data.keyword.en_full}} metrics](/docs/event-notifications?topic=event-notifications-en-view-manage-monitor-metrics).
+: {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now provides access to view the notitfication performance metrics for custom email domains, see [Monitoring {{site.data.keyword.en_full}} metrics](/docs/event-notifications?topic=event-notifications-monitoring).
 
 ## 22 May 2024
 {: #event-notifications-May2224}
