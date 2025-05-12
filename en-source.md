@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2025
-lastupdated: "2025-03-14"
+lastupdated: "2025-05-12"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -48,10 +48,8 @@ To add an {{site.data.keyword.cloud_notm}} source or an API source, complete the
 ## {{site.data.keyword.cloud_notm}} platform sources
 {: #en-ibm-cloud-platform-sources}
 
-- [{{site.data.keyword.cloud_notm}} Console Notifications](https://{DomainName}/docs/account?topic=account-add-users-distribution-list#event-notifications-add-ui)
 - [{{site.data.keyword.cloud_notm}} Platform Notifications](https://{DomainName}/docs/account?topic=account-add-users-distribution-list#event-notifications-distribution-list){: external}
 - [{{site.data.keyword.cloud_notm}} Resource lifecycle events](https://{DomainName}/docs/event-notifications?topic=event-notifications-en-resource-lifecycle-events)
-- [{{site.data.keyword.cloud_notm}} Projects](https://{DomainName}/docs/secure-enterprise?topic=secure-enterprise-event-notifications-events&interface=ui)
 
 ## Periodic Timer Source
 {: #periodic-timer-source}
