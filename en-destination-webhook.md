@@ -15,21 +15,35 @@ subcollection: event-notifications
 # Webhooks
 {: #en-destinations-webhook}
 
-A webhook represents a service destination, where an incoming notification can be consumed programmatically. For example, an incoming notification about an event can trigger a webhook destination to a backend microservice to act based on the content of the incoming notification. You can allowlist the ranges of IP addresses to restrict access to your servers that receive webhooks. For more information, see [webhook IP addresses](/docs/account?topic=account-webhook-ips).
+A webhook represents a service destination, where an incoming notification can be consumed programmatically. For example, an incoming notification about an event can trigger a webhook destination to a backend microservice to act based on the content of the incoming notification. 
 {: shortdesc}
-
-Regardless of the location of the Event Notification Service instance, to ensure uninterrupted webhook traffic you should add the IP ranges of all regions to your allow list.
-{: note}
 
 ## Configuring a webhook destination
 {: #en-webhook-configure}
 
 You can configure a webhook destination in the `Destinations` tab. As part of the configuration, enter the webhook URL, and the REST API verb to be called when the webhook is called. You can also enter authorization headers to the destination webhook. Create a subscription to associate the webhook destination to a topic.
 
+## Supported HTTP Verbs
+{: #en-supported-verbs}
+
+{{site.data.keyword.en_short}} webhooks support the http verbs GET, POST, PUT and PATCH. 
+
+- GET : Retrieves a representation of the specified resource.
+- POST : Creates a new resource.
+- PUT : Replaces the entire resource with the provided data.
+- PATCH : Applies partial modifications to a resource.
+
 ## Webhook signing
 {: #en-webhook-sign}
 
 To identify that the incoming notification is coming from {{site.data.keyword.en_full_notm}}, you can enable webhook signing. If signing is enabled, a public key can be downloaded, and used to decrypt the incoming notification content.
+
+## Allowlisting IP addresses 
+{: #en-allowlisting}
+
+You can allowlist the ranges of IP addresses to restrict access to your servers that receive webhooks. For more information, see [webhook IP addresses](/docs/account?topic=account-webhook-ips).
+
+Regardless of the location of the Event Notification Service instance, to ensure uninterrupted webhook traffic you should add the IP ranges of all regions to your allow list.
 
 ## Webhook retry policy
 {: #en-webhook-retry}

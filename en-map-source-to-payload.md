@@ -30,4 +30,4 @@ The following table links event types, subtypes, and the payload format details 
 |IBM Cloud Backup for VPC |[Event types](/docs/vpc?topic=vpc-event-notifications-events&interface=ui#event-notifications-list) |[Payload format details](/docs/vpc?topic=vpc-event-notifications-events&interface=ui#event-notifications-payload) |
 |{{site.data.keyword.cloud_notm}} Platform Notifications |[Event types](/docs/account?topic=account-viewing-notifications#notification-types) |[Payload format details](/docs/account?topic=account-add-users-distribution-list#webhook-distribution-list) |
 |{{site.data.keyword.cloud_notm}} Resource lifecycle events |[Event types](/docs/event-notifications?topic=event-notifications-en-resource-lifecycle-events#en-supported-resource-types) |[Payload format details](/docs/event-notifications?topic=event-notifications-en-resource-lifecycle-events#en-example-event) |
-{: caption="Source, event types and subtyoes and the payload format details" caption-side="bottom"}
+{: caption="Source, event types and subtypes and the payload format details" caption-side="bottom"}
