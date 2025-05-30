@@ -86,7 +86,6 @@ toc:
           - en-slack-notification-template.md
           - en-pager-duty-notification.md
           - en-event-streams-notification-template.md
-      - en-markdown-formatted-notifications.md
       - topicgroup:
           label: Observability
           topics:
