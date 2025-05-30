@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2023
-lastupdated: "2023-11-10"
+  years: 2020, 2025
+lastupdated: "2025-05-30"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, webhook
 
