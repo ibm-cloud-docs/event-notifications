@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2025-05-05"
+lastupdated: "2025-05-30"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -19,6 +19,13 @@ content-type: release-note
 
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
+
+## 30 May 2025
+{: #event-notifications-May302025}
+{: release-note}
+
+{{site.data.keyword.en_short}} Webhooks now support new http verbs 
+:  {{site.data.keyword.en_short}} webhooks now support the PUT and PATCH http verbs that enable a user to replace a resource or apply a partial update to a resource, see [Supported HTTP Verbs](/docs/event-notifications?topic=event-notifications-en-destinations-webhook#en-supported-verbs)
 
 ## 15 April 2025
 {: #event-notifications-April152025}
