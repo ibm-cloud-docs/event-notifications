@@ -120,6 +120,9 @@ For more information about all of the parameters that are available for this com
 
 Endpoints are used with your credentials (Bucket name, API Key, SDK) to tell your service where to look for your bucket.
 
+`private` {{site.data.keyword.cos_full_notm}} endpoints will not be supported for new integrations, since {{site.data.keyword.en_short}} now uses VPC network. It is recommended to use `direct` {{site.data.keyword.cos_full_notm}} endpoints while creating new integrations. Existing integrations over `private` endpoints will continue to work.
+{: note}
+
 1. Login to your {{site.data.keyword.cloud_notm}} account.
 
 1. Navigate to **Resource List** in the menu.
