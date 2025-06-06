@@ -91,6 +91,7 @@ toc:
           topics:
           - logging.md
           - monitoring.md
+          - en-monitoring-metrics.md
       - topicgroup:
           label: Enhancing security
           topics:

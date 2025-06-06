@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2024
-lastupdated: "2025-05-30"
+  years: 2021, 2025
+lastupdated: "2025-06-06"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -120,7 +120,7 @@ Support Context-Based restictions for SMTP Interface
 {: release-note}
 
 Support for acesss {{site.data.keyword.en_full}} metrics of custom email domains
-: {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now provides access to view the notitfication performance metrics for custom email domains, see [Monitoring {{site.data.keyword.en_full}} metrics](/docs/event-notifications?topic=event-notifications-monitoring).
+: {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now provides access to view the notitfication performance metrics for custom email domains, see [Monitoring {{site.data.keyword.en_full}} metrics](/docs/event-notifications?topic=event-notifications-en-manage-monitor-metrics).
 
 ## 22 May 2024
 {: #event-notifications-May2224}
