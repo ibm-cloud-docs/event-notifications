@@ -12,8 +12,8 @@ subcollection: event-notifications
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Monitoring {{site.data.keyword.en_full}} metrics
-{: #en-view-manage-monitor-metrics}
+# Monitoring {{site.data.keyword.en_full}} Custom Domain Email Metrics
+{: #en-manage-monitor-metrics}
 
 After you set up your {{site.data.keyword.en_full_notm}} service
 instance, you can manage monitoring metrics by using this feature.
