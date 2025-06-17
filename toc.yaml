@@ -110,6 +110,7 @@ toc:
               label: Privately connecting to Event Notifications
               topics:
               - en-cse.md
+              - en-vpe.md
       - topicgroup:
           label: Scheduling Events
           topics:
