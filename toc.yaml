@@ -111,7 +111,6 @@ toc:
               label: Privately connecting to Event Notifications
               topics:
               - en-cse.md
-              - en-vpe.md
       - topicgroup:
           label: Scheduling Events
           topics:
@@ -163,7 +162,6 @@ toc:
       - en-payload.md
       - en-map-notification-payload.md
       - en-notices.md
-
   - navgroup:
       id: help
       topics:

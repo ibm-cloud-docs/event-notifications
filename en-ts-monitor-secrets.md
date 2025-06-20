@@ -16,7 +16,7 @@ completion-time: 30m
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Monitoring {{site.data.keyword.secrets-manager_full}} certificates and secrets expiry
+# Monitoring {{site.data.keyword.secrets-manager_short}} certificates and secrets expiry
 {: #tutorial-en-monitor-secret}
 {: toc-content-type="tutorial"}
 {: toc-completion-time="30m"}
