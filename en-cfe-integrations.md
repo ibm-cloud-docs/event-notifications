@@ -59,8 +59,14 @@ To configure and collect failed events, do the following steps:
 
 1. Click the toggle switch to **ON** status under the **Collect failed events** column for the destination for which you want to collect the failed events. A success message is displayed for switching ON for collecting failed events for the selected destination.
 
-### Available list of destinations for collecting failed events
+## Available list of destinations for collecting failed events
+{: #en-collect-failedevents-destinationslist}
 
+The following destinations can collect failed events:
+
+* [Email](/docs/event-notifications?topic=event-notifications-en-destinations-email)
+* [SMS](/docs/event-notifications?topic=event-notifications-en-destinations-sms)
+* [Webhook](/docs/event-notifications?topic=event-notifications-en-destinations-webhook)
 * [Slack](/docs/event-notifications?topic=event-notifications-en-destinations-slack)
 * [MSTeams](/docs/event-notifications?topic=event-notifications-en-destinations-msteams)
 * [PagerDuty](/docs/event-notifications?topic=event-notifications-en-destinations-pagerduty)

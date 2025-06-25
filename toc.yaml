@@ -86,12 +86,13 @@ toc:
           - en-slack-notification-template.md
           - en-pager-duty-notification.md
           - en-event-streams-notification-template.md
+      - en-markdown-formatted-notifications.md
       - topicgroup:
           label: Observability
           topics:
           - logging.md
           - monitoring.md
-          - en-monitoring-metrics.md
+          - en-monitorEmailMetrics.md
       - topicgroup:
           label: Enhancing security
           topics:
@@ -161,7 +162,6 @@ toc:
       - en-payload.md
       - en-map-notification-payload.md
       - en-notices.md
-
   - navgroup:
       id: help
       topics:
