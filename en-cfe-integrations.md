@@ -73,6 +73,9 @@ The following destinations can collect failed events:
 * [ServiceNow](/docs/event-notifications?topic=event-notifications-en-destinations-servicenow)
 * [CodeEngine](/docs/event-notifications?topic=event-notifications-en-destinations-codeengine)
 * [IBM Cloud Object Storage](/docs/event-notifications?topic=event-notifications-en-destinations-cloud-object-storage)
+* [Custom Domain Email](/docs/event-notifications?topic=event-notifications-en-destinations-custom-email)
+* [Webhooks](/docs/event-notifications?topic=event-notifications-en-destinations-webhook)
+* [Custom SMS](/docs/event-notifications?topic=event-notifications-en-destinations-sms-custom)
 * Push Notifications
    * [Android Push Notifications(FCM)](/docs/event-notifications?topic=event-notifications-en-push-fcm)
    * [iOS Push Notifications(APN's)](/docs/event-notifications?topic=event-notifications-en-push-apns)
