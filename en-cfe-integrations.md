@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-10-07"
+  years:  2023, 2025
+lastupdated: "2025-07-01"
 
 keywords: event notifications, event notification, notifications, integrations, collect failed events
 
