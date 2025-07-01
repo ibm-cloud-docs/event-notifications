@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-04-28"
+lastupdated: "2025-06-30"
 
 keywords: event notifications CLI plug-in, CLI reference, en cli reference, event notifications cli reference, event notifications, command line reference
 
@@ -1007,8 +1007,8 @@ ibmcloud event-notifications topic --help
             "rules" : [
                {
                   "enabled" : true,
-                  "event_type_filter" : "exampleString",
-                  "notification_filter" : "exampleString",
+                  "event_type_filter": "$.notification_event_info.event_type == \'cert_manager\'",
+                  "notification_filter" : "$.notification.findings[0].severity == \'MODERATE\'",
                   "rule_id" : "exampleString"
                }
             ]
@@ -2678,6 +2678,7 @@ The following example shows the format of the NotificationCreate object.
   "ibmenslackto": "[\"sgjhgsjaS\",\"agjhgsjaS\"]",
   "ibmensmsto" : "exampleString",
   "ibmenmms": {"content": "VBORw0KGgoAAAANSUhEUgAAAFoAAAA4CAYAAAB9lO","content_type": "image/png"},
+  "ibmenmarkdownn": "This is a *italic* message.\n- Item 1\n- Item 2\n**bold text** with more text data\n~~strike through~~\n1. order 1\n2. order 2\n```fenced code block```\n> block code\n`code`\n[Click here](https://example.com) for more info."
   "ibmenhtmlbody" : "exampleString",
   "subject" : "exampleString",
   "data" : {
@@ -2792,4 +2793,5 @@ The CLI Plugin versions from 0.0.5 to 1.4.0 is deprecated.
 | 1.12.0 | 27 February 2025 | Support for Pagerduty template |
 | 1.13.0 | 6 March 2025 | Support for {{site.data.keyword.messagehub}} destination, subscription and Templates. |
 | 1.14.0 | 28 April 2025 | PagerDuty destination deprecated parameter `api_key` is marked as optional. |
+| 1.15.0 | 27 June 2025 | The markdown content for notification. |
 {: caption="Changes in the {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} CLI" caption-side="bottom"}
