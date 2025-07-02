@@ -254,3 +254,80 @@ Not necessarily. While server-related problems are common causes of client timeo
 {: faq}
 
 If you consistently encounter client timeouts, consider reaching out to the support team.
+
+## Does Event Notifications support cross account integration?
+{: #faq-en-notifications-cross-account-integration}
+{: faq}
+
+{{site.data.keyword.en_short}} supports cross-account integration. The following steps indicate the procedure to perform the cross-account integration:
+
+1. Create an {{site.data.keyword.en_short}} instance in the first account A.
+
+1. Create a {{site.data.keyword.secrets-manager_short}} instance in another account B.
+
+1. Perform service-to-service authorization on account A and provide the account number of B when prompted to select a source account.
+
+1. Create an API key and generate an access token. 
+
+```curl
+curl --request POST \
+  --url https://iam.cloud.ibm.com/identity/token \
+  --header 'Content-Type: application/x-www-form-urlencoded' \
+  --data apikey=<api-key> \
+  --data response_type=cloud_iam \
+  --data grant_type=urn:ibm:params:oauth:grant-type:apikey
+```
+Where: 
+`<api-key>` - Replace with the API key generated previously.
+
+To create the integration using API: 
+
+1. Run a curl command to integrate the {{site.data.keyword.en_short}} instance with the {{site.data.keyword.secrets-manager_short}} instance.
+
+```curl
+curl -X POST \
+  -H "Authorization: Bearer <iam_token>" \
+  -H "Accept: application/json" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "event_notifications_instance_crn": "<crn of the event notifications instance>",
+    "event_notifications_source_description": "Optional description of this source in an Event Notifications instance.",
+    "event_notifications_source_name": "My Secrets Manager"
+  }' \
+  "https://<secrets-manager instance id>.<region>.secrets-manager.appdomain.cloud/api/v2/notifications/registration"
+```
+
+Where:
+- `<iam-token`> - Replace with your IAM token.
+- `<crn of the event notifications instance>`- Replace with CRN of your {{site.data.keyword.en_short}} instance. 
+- `<secrets-manager instance id>`- Replace with the instance id of your {{site.data.keyword.secrets-manager_short}} instance.
+- `<region>`- Replace with the region which was used during the creation of your {{site.data.keyword.secrets-manager_short}} instance.
+
+To create the integration using CLI:
+
+```sh
+ibmcloud secrets-manager notifications-registration-create --instance-id 0a497fc8-4389-4fee-86ec-ab4b364524de \
+  --event-notifications-instance-crn <crn of the event notifications instance> \
+  --event-notifications-source-name 'My Secrets Manager' \
+  --event-notifications-source-description 'Optional description of this source in an Event Notifications instance.'
+```
+{: pre}
+
+Where:
+- `<crn of the event notifications instance>`- Replace with CRN of your {{site.data.keyword.en_short}} instance.
+
+To create the integration using Terraform:
+
+```hcl
+resource "ibm_sm_en_registration" "sm_en_registration" {
+  instance_id   = <secrets-manager instance id>
+  region        = <region>
+  event_notifications_instance_crn = <crn of the event notifications instance>
+  event_notifications_source_description = "Optional description of this source in an Event Notifications instance."
+  event_notifications_source_name = "My Secrets Manager"
+}
+```
+Where:
+- `<crn of the event notifications instance>`- Replace with CRN of your {{site.data.keyword.en_short}} instance. 
+- `<secrets-manager instance id>`- Replace with the instance id of your {{site.data.keyword.secrets-manager_short}} instance.
+- `<region>`- Replace with the region which was used during the creation of your {{site.data.keyword.secrets-manager_short}} instance.
