@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024
-lastupdated: "2024-12-16"
+  years: 2025
+lastupdated: "2025-07-08"
 
 keywords: event-notifications, event notifications, managing service access, iam, account, topics, subscriptions
 
@@ -86,7 +86,7 @@ Only **Writer** role is applicable for given Topics/Subscriptions. **Reader** Ro
 {: #topics-subscriptions-access-step-3}
 {: step}
 
-At this stage, you should have two access policies created as shown below. One access policy with **Reader & Viewer** roles for the instance, another with **Writer** role for the topics/subscriptions.
+At this stage, you should have two access policies created as shown in the following image. One access policy with **Reader & Viewer** roles for the instance, another with **Writer** role for the topics/subscriptions.
 
 ![Create a new policy](images/en-verify-access.png){: caption="Reviewing Access Policies"}
 
@@ -96,7 +96,7 @@ At this stage, you should have two access policies created as shown below. One a
 
 When this {{site.data.keyword.en_short}} instance is accessed by a user with Writer role, the user can only update topics and/or subscriptions.
 
-When a user tries to perform any action such as editing topics or subscriptions, for which the user is not assigned Writer Role, the action is denied as shown below.
+When a user tries to perform any action such as editing topics or subscriptions, for which the user is not assigned Writer Role, the action is denied as shown in the following image.
 {: note}
 
 - **UI output:**

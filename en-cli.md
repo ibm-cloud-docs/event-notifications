@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-06-30"
+lastupdated: "2025-07-08"
 
 keywords: event notifications CLI plug-in, CLI reference, en cli reference, event notifications cli reference, event notifications, command line reference
 
@@ -15,7 +15,7 @@ subcollection: event-notifications
 # {{site.data.keyword.en_short}} CLI
 {: #event-notifications-cli}
 
-The {{site.data.keyword.cloud_notm}} command-line interface (CLI) provides extra capabilities for service offerings. {{site.data.keyword.cloud_notm}} CLI supports a plug-in framework to extend its capability. You can install the {{site.data.keyword.en_short}} CLI plug-in from the {{site.data.keyword.cloud_notm}} plug-in repository. With the {{site.data.keyword.en_short}} service CLI plug-in, you can easily manage {{site.data.keyword.en_short}} service instances by using the CLI commands available.
+The {{site.data.keyword.cloud_notm}} command-line interface (CLI) provides additional capabilities for service offerings. {{site.data.keyword.cloud_notm}} CLI supports a plug-in framework to extend its capability. You can install the {{site.data.keyword.en_short}} CLI plug-in from the {{site.data.keyword.cloud_notm}} plug-in repository. With the {{site.data.keyword.en_short}} service CLI plug-in, you can easily manage {{site.data.keyword.en_short}} service instances by using the CLI commands available.
 {: shortdesc}
 
 ## Prerequisites

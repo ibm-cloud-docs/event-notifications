@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2024
-lastupdated: "2024-11-04"
+  years: 2020, 2025
+lastupdated: "2025-07-08"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -76,7 +76,7 @@ A service or application on {{site.data.keyword.cloud_notm}} that emits event no
 
 {{site.data.keyword.monitoringlong_notm}}, {{site.data.keyword.compliance_long}}, {{site.data.keyword.secrets-manager_full_notm}} Platform Notifications for {{site.data.keyword.cloud_notm}}, {{site.data.keyword.cloud_notm}} Resource Lifecycle Events, {{site.data.keyword.cloud_notm}} Projects, and Toolchain are enabled. A source can publish to multiple topics. In other contexts sources are identified as producers or publishers.
 
-Size limit for a send notification request is limited to 64 KB.
+The size limit for a send notification request is limited to 64 KB.
 
 ### Filter
 {: #en-filters}

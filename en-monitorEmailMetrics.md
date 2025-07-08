@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-06-20"
+lastupdated: "2025-07-08"
 
 keywords: event-notifications, metrics for email notifications, monitor metrics
 
@@ -47,7 +47,7 @@ To add more filter criteria, click **Filter** and select one of the following at
 You must provide valid values for **Notification ID** , **Email to** and **Subject** if added to the filter criteria. You can select required values from **Destination name** and **Source name** if added to the filter criteria.
 
 You can view metrics for pre-defined time periods of **Last 24 hours**, **Last 7 days**, or **Last 30 days** or custom defined dates.
-It helps you to form a new strategy or modify the existing one depending on the values of the below metrics.
+It helps you to form a new strategy or modify the existing one depending on the values of the following metrics.
 
 1. **Emails sent** : The total number of emails that are sent to the recipients in the selected time period.
 
@@ -67,7 +67,7 @@ You can also get a glimpse of the total number of **Bounced** or **Opened** noti
 
 
 ### View metrics for email notifications sent from SMTP configuration
-{: #en-view-email-metrics-customDomain}
+{: #en-view-email-metrics-smtp}
 
 To filter metrics for email notifications sent from SMTP you must select **Destination Type** as **SMTP configuration** in the **Attributes** section. You must also choose the required **SMTP Configuration** from the **Select Menu**.
 

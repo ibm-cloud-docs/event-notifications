@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-05-02"
+lastupdated: "2025-07-08"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -24,7 +24,7 @@ An {{site.data.keyword.en_full_notm}} template is a pre-defined layout that incl
 1. In the {{site.data.keyword.cloud_notm}} console, click the **menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Event notifications**. 
 1. Click the name of your {{site.data.keyword.en_short}} instance. 
 1. Select **Templates** from the left panel.
-1. Enter details about the template such as the name and description, and select a template type. Event Notifications currently supports 4 templates:
+1. Enter details about the template such as the name and description, and select a template type. Event Notifications currently supports the following templates:
 
     * [Custom Email Notification](/docs/event-notifications?topic=event-notifications-en-email-templates)
     * [Custom Email Invitation](/docs/event-notifications?topic=event-notifications-en-email-templates)

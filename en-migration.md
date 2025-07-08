@@ -574,7 +574,7 @@ Follow these steps to migrate from BMPush to ENPushDestination:
       ```
       {: codeblock}
 
-   There are extra fields like `destinationID` and `apikey` in new `initialize()` method. For more information, on getting the `apikey` for client SDK see [Managing service access](/docs/event-notifications?topic=event-notifications-service-access-management).
+   There are additional fields like `destinationID` and `apikey` in new `initialize()` method. For more information, on getting the `apikey` for client SDK see [Managing service access](/docs/event-notifications?topic=event-notifications-service-access-management).
 
 1. Change the device registration step
 
