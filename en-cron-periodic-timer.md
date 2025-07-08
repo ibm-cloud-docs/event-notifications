@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-01-13"
+lastupdated: "2025-07-08"
 
 keywords: event-notifications, event notifications, about event notifications, cron scheduler, topics, sources
 
@@ -32,7 +32,7 @@ The Periodic timer is an event scheduler in the {{site.data.keyword.cloud_notm}}
 
     ![Setting the time period and defining Cron Expression ](images/en-cron-expression.png "Setting the time period and defining Cron Expression"){: caption="Setting the time period and defining Cron Expression" caption-side="bottom"}
 
-    **Cron Expressions**
+    **Cron Expressions:**
 
     Syntax : `<MINUTE> <HOUR> <DAY-OF-MONTH> <MONTH> <DAY-OF-WEEK>`
 
@@ -45,7 +45,7 @@ The Periodic timer is an event scheduler in the {{site.data.keyword.cloud_notm}}
     | Day of week  | 1-7 or SUN-SAT  | , - * / ? L #              |
     {: caption="Cron Expressions" caption-side="bottom"}
 
-    **Allowed Special Characters**
+    **Allowed Special Characters:**
 
     **","** - Allows additional values. For example , in the day-of-week field , `sun,mon,tue` includes events scheduled on sunday,monday and tuesday. 
 

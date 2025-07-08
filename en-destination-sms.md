@@ -82,7 +82,7 @@ By adding phone numbers, you represent on behalf of yourself and your company th
 ## SMS segment
 {: #en-destinations-sms-segment}
 
-SMS segments are character batches (of length 160 characters) of an SMS message, used by carriers to measure the message size.
+SMS segments are character batches (of length 160 characters) of an SMS message, used by carriers to measure the size of the message.
 
 If a message contains less than 160 characters, then it is considered as one SMS segment. If a message contains over 160 characters, for example, of 200 characters, then it is considered as 2 segments, first segment has 160 character and the second segment has 40 characters.
 

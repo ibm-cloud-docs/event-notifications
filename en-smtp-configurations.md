@@ -190,7 +190,7 @@ After successful verification of a SMTP configuration in an IBM Cloud Event Noti
 3. While creating VPE:
    
    1. Select the required Region and VPC, from where you want to connect to the SMTP Private Endpoint.
-   2. Under "Request connection to a service", select "Event Notifications".
+   2. Under **Request connection to a service**, select **Event Notifications**.
    3. Enable the endpoint: `private.smtp.<region>.event-notifications.cloud.ibm.com`
    4. Select the required subnet for the Reserved IP(Note: You can bind only one IP address per VPC zone to an endpoint gateway).
    

@@ -89,7 +89,7 @@ By adding phone numbers, you affirm, on behalf of yourself and your company, tha
 ## SMS segment
 {: #en-destinations-sms-custom-segment}
 
-SMS segments are character batches (of length 160 characters) of an SMS message, used by carriers to measure the message size.
+SMS segments are character batches (of length 160 characters) of an SMS message, used by carriers to measure the size of the message.
 
 If a message contains less than 160 characters, then it is considered as one SMS segment. If a message contains more than 160 characters then it is considered as 2 segments, first segment has 160 character and the second segment has 40 characters.
 
@@ -107,7 +107,7 @@ The Custom SMS destination supports Multimedia Messaging Service (MMS) along wit
 {: #en-destinations-mms-custom-charge}
 
 MMS messages are charged in terms of `SMS Units`.An SMS unit is a fixed unit of cost. Therefore, the number of units that are consumed by a message varies based on the destination country, and Event Notifications service charges vary.
-The table below shows SMS Units charged for each MMS sent.
+The following table shows SMS Units charged for each MMS sent.
 
 | Supported Country Code        | SMS Units |
 |-------------------------------|-----------|

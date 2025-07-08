@@ -542,7 +542,7 @@ Targeting notifications to a specific platform.
 ```
 
 ##### Binary mode header
-{: #en-binary-mode-header24}
+{: #en-binary-mode-header25}
 
 ```JSON
 ce-ibmenpushto: "{\"user_id\": [\"ajay@accts.acmebank.com\",\"ankit@accts.acmebank.com\"]}"

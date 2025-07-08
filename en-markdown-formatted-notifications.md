@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-06-20"
+lastupdated: "2025-07-08"
 
 keywords:
 
@@ -75,7 +75,7 @@ To understand event notifications payload, check the [api specification](/apidoc
 ### Supported markdown elements
 {: #en-supported-markdown-elements}
 
-The table below lists the supported mardown elements for Slack, MS teams and Email destinations.
+The following table lists the supported mardown elements for Slack, MS teams and Email destinations.
 
 |Elements                    | Mardown formatting              | Slack                               | MS teams                           |Email                               |
 |----------------------------|---------------------------------|-------------------------------------|------------------------------------|------------------------------------|
