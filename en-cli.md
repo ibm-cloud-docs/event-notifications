@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-07-08"
+lastupdated: "2025-07-09"
 
 keywords: event notifications CLI plug-in, CLI reference, en cli reference, event notifications cli reference, event notifications, command line reference
 
@@ -396,7 +396,7 @@ ibmcloud event-notifications destination --help
 
    Note: The Event Notifications Destination Cloud Functions has been deprecated and no longer supported in category of destinations.
 
-- **Examples:**
+#### Examples
 {: #en-cli-destination-config-example-schema}
 
    - The following example shows format of the `DestinationConfig` object for iOS destination(push_ios) with P8 certificate. Set `pre_prod` Boolean parameter to *true* to configure destination as pre-production destination else set the value as *false*:
@@ -958,7 +958,7 @@ ibmcloud event-notifications topic --help
    `[--sources SOURCES]` ([TopicCreateSourcesItem[]](#en-cli-topic-example-schema))
    :  The list of sources.
 
-- **Example:**
+#### Example
 {: #en-cli-topic-example-schema}
   
    - The following example shows the format of the `TopicCreateSourcesItem[]` object for the Periodic Timer source.
@@ -1185,7 +1185,7 @@ ibmcloud event-notifications subscription --help
    `--attributes ATTRIBUTES` ([SubscriptionCreateAttributes](#en-cli-subscription-example-schema))
    :  The attributes to be set for subscription.
 
-- **Examples:**
+#### Examples
 {: #en-cli-subscription-example-schema}
 
    - The following example shows the format of the `SubscriptionCreateAttributes` object for webhook.
@@ -1380,7 +1380,7 @@ ibmcloud event-notifications subscription --help
    `[-attributes ATTRIBUTES]` ([SubscriptionUpdateAttributes](#en-cli-subscription-update-example-schema))
    :  The attributes to be set for subscription
 
-- **Examples:**
+#### Examples
 {: #en-cli-subscription-update-example-schema}
 
    - The following example shows the format of the `SubscriptionUpdateAttributes` object for Webhook.
@@ -1648,7 +1648,7 @@ Replace `Integration`.
 ibmcloud event-notifications integration-replace --instance-id INSTANCE-ID --id ID --type Type --metadata METADATA
 ```
 
-- **Examples:**
+#### Examples
 {: #en-cli-integration-create-example-schema}
 
    - The following example shows the format of the `IntegrationCreateAttributes` object.
@@ -1684,7 +1684,7 @@ ibmcloud event-notifications integration-replace --instance-id INSTANCE-ID --id 
 
    The maximum length is `100` characters. The minimum length is `1` character. The value must match regular expression `/[a-zA-Z0-9-:_]*/`.
 
-- **Examples:**
+#### Examples
 {: #en-cli-integration-example-schema}
 
    - The following example shows the format of the `IntegrationReplaceAttributes` object.
