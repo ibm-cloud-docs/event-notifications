@@ -277,8 +277,6 @@ curl --request POST \
   --data response_type=cloud_iam \
   --data grant_type=urn:ibm:params:oauth:grant-type:apikey
 ```
-Where: 
-`<api-key>` - Replace with the API key generated previously.
 
 To create the integration using API: 
 
@@ -297,12 +295,6 @@ curl -X POST \
   "https://<secrets-manager instance id>.<region>.secrets-manager.appdomain.cloud/api/v2/notifications/registration"
 ```
 
-Where:
-- `<iam-token`> - Replace with your IAM token.
-- `<crn of the event notifications instance>`- Replace with CRN of your {{site.data.keyword.en_short}} instance. 
-- `<secrets-manager instance id>`- Replace with the instance id of your {{site.data.keyword.secrets-manager_short}} instance.
-- `<region>`- Replace with the region which was used during the creation of your {{site.data.keyword.secrets-manager_short}} instance.
-
 To create the integration using CLI:
 
 ```sh
@@ -312,9 +304,6 @@ ibmcloud secrets-manager notifications-registration-create --instance-id 0a497fc
   --event-notifications-source-description 'Optional description of this source in an Event Notifications instance.'
 ```
 {: pre}
-
-Where:
-- `<crn of the event notifications instance>`- Replace with CRN of your {{site.data.keyword.en_short}} instance.
 
 To create the integration using Terraform:
 
@@ -327,7 +316,12 @@ resource "ibm_sm_en_registration" "sm_en_registration" {
   event_notifications_source_name = "My Secrets Manager"
 }
 ```
-Where:
-- `<crn of the event notifications instance>`- Replace with CRN of your {{site.data.keyword.en_short}} instance. 
-- `<secrets-manager instance id>`- Replace with the instance id of your {{site.data.keyword.secrets-manager_short}} instance.
-- `<region>`- Replace with the region which was used during the creation of your {{site.data.keyword.secrets-manager_short}} instance.
+
+| Placeholders in code blocks | Description |
+|-------------------|-------------|
+| `<api-key>` | Replace with the API key generated previously. |
+| `<iam-token`> | Replace with your IAM token. |
+| `<crn of the event notifications instance>` | Replace with CRN of your {{site.data.keyword.en_short}} instance. |
+| `<secrets-manager instance id>` | Replace with the instance ID of your {{site.data.keyword.secrets-manager_short}} instance. |
+| `<region>` | Replace with the region that was used during the creation of your {{site.data.keyword.secrets-manager_short}} instance. |
+{: caption="Description of placeholders in code blocks" caption-side="bottom" }
