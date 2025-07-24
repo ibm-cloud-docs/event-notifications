@@ -26,7 +26,7 @@ You must first enable virtual routing and forwarding in your account, and then y
 Keep in mind the following considerations:
 
 - You can select a service endpoint option for a {{site.data.keyword.en_short}} instance only at its creation.
-- The {{site.data.keyword.en_short}} service UI is not accessible for **Private only** instances.
+
 
 ## Setting up private endpoints for {{site.data.keyword.en_short}} in the UI
 {: #en-endpoint-setup-ui}
