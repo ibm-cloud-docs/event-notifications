@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-04-11"
+lastupdated: "2025-07-28"
 
 keywords: event-notifications, event notifications, about event notifications, service endpoints for {{site.data.keyword.en_short}}, network isolation in {{site.data.keyword.en_short}}
 
@@ -35,7 +35,7 @@ After your account is enabled for VRF and service endpoints, you can provision a
 
 1. In the {{site.data.keyword.cloud_notm}} console, go to the [{{site.data.keyword.en_short}} offering details page](/catalog/services/event-notifications){: external}.
 
-1. In the **Create** tab, select the location that represents the geographic area (**Region**) where you want to provision your instance. Currently, Dallas (`us-south`), London (`eu-gb`), Frankfurt (`eu-de`), Madrid (`eu-es`), Toronto (`ca-tor`), Tokyo (`jp-tok`), Osaka (`jp-osa`), Sydney (`au-syd`) and Sao Paulo (`br-sao`) regions are supported.
+1. In the **Create** tab, select the location that represents the geographic area (**Region**) where you want to provision your instance. Currently, Dallas (`us-south`), London (`eu-gb`), Frankfurt (`eu-de`), Madrid (`eu-es`), Toronto (`ca-tor`), Tokyo (`jp-tok`), Osaka (`jp-osa`), Sydney (`au-syd`), Sao Paulo (`br-sao`) and Montreal(`ca-mon`) regions are supported.
 
 1. **Select a pricing plan** - Based on your business requirements, select a pricing plan: Lite, and Standard.
 

@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2021, 2025
-lastupdated: "2025-04-11"
+lastupdated: "2025-07-28"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email, smtp
 
@@ -119,6 +119,7 @@ After successful verification of a SMTP configuration in an IBM Cloud Event Noti
     | eu-de (Frankfurt)                   | smtp.eu-de.event-notifications.cloud.ibm.com    | private.smtp.eu-de.event-notifications.cloud.ibm.com    |
     | eu-es (Madrid)                      | smtp.eu-de.event-notifications.cloud.ibm.com    | private.smtp.eu-de.event-notifications.cloud.ibm.com    |
     | br-sao (Sao Paulo)                  | smtp.us-south.event-notifications.cloud.ibm.com | private.smtp.us-south.event-notifications.cloud.ibm.com |
+    | ca-mon (Montreal)                   | smtp.us-south.event-notifications.cloud.ibm.com | private.smtp.us-south.event-notifications.cloud.ibm.com |
     {: caption="IBM Cloud Event Notifications SMTP endpoints" caption-side="bottom"}
 
     The SMTP Endpoints are available in following regions: `us-south` and `eu-de`. For example, it can be seen as instances created in London and Sydney also connect to the Dallas SMTP endpoint, and instances created in Madrid also connect to the Frankfurt SMTP endpoint.

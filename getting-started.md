@@ -3,7 +3,7 @@
 copyright:
 
   years: 2021, 2025
-lastupdated: "2025-04-15"
+lastupdated: "2025-07-28"
 
 keywords: event notifications, IBM Cloud
 
@@ -48,6 +48,7 @@ Decide on a location where your service to be hosted. Currently, the following l
 * Tokyo (jp-tok)
 * Osaka (jp-osa)
 * Sao Paulo (br-sao)
+* Montreal (ca-mon)
 
 ## Decide on a pricing plan
 {: #en-decide-pricing-plans}
