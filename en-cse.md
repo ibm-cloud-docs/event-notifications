@@ -4,7 +4,7 @@ copyright:
   years: 2022, 2025
 lastupdated: "2025-07-28"
 
-keywords: event-notifications, event notifications, about event notifications, service endpoints for {{site.data.keyword.en_short}}, network isolation in {{site.data.keyword.en_short}}
+keywords: event-notifications, event notifications, about event notifications, service endpoints for event notifications, network isolation in event notification
 
 subcollection: event-notifications
 
