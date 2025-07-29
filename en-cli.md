@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-07-28"
+lastupdated: "2025-07-29"
 
 keywords: event notifications CLI plug-in, CLI reference, en cli reference, event notifications cli reference, event notifications, command line reference
 
@@ -2064,101 +2064,7 @@ ibmcloud event-notifications template-delete \
 ```
 {: pre}
 
-### `ibmcloud event-notifications pre-defined-templates`
-{: #event-notifications-cli-pre-defined-templates-command}
 
-List all predefined templates.
-
-If the `--all-pages` option is not set, the command will only retrieve a single page of the collection.
-{: note}
-
-```sh
-ibmcloud event-notifications pre-defined-templates --instance-id INSTANCE-ID --source SOURCE --type TYPE [--limit LIMIT] [--offset OFFSET] [--search SEARCH]
-```
-{: pre}
-
-#### Command options
-{: #event-notifications-pre-defined-templates-cli-options}
-
-`--instance-id` (string)
-:   Unique identifier for IBM Cloud Event Notifications instance. Required.
-
-    The maximum length is `32` characters. The minimum length is `32` characters. The value must match regular expression `/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/`.
-
-`--source` (string)
-:   Source type. Required.
-
-    The maximum length is `50` characters. The minimum length is `1` character. The value must match regular expression `/.*/`.
-
-`--type` (string)
-:   Destination type. Required.
-
-    The maximum length is `50` characters. The minimum length is `1` character. The value must match regular expression `/.*/`.
-
-`--limit` (int64)
-:   Page limit for paginated results.
-
-    The default value is `10`. The maximum value is `100`. The minimum value is `1`.
-
-`--offset` (int64)
-:   offset for paginated results.
-
-    The default value is `0`. The minimum value is `0`.
-
-`--search` (string)
-:   Search string for filtering results.
-
-    The maximum length is `100` characters. The minimum length is `1` character. The value must match regular expression `/[a-zA-Z0-9]/`.
-
-`--all-pages` (bool)
-:   Invoke multiple requests to display all pages of the collection for pre-defined-templates.
-
-#### Example
-{: #event-notifications-pre-defined-templates-examples}
-
-```sh
-ibmcloud event-notifications pre-defined-templates \
-    --instance-id=exampleString \
-    --source=exampleString \
-    --type=exampleString \
-    --limit=10 \
-    --offset=0 \
-    --search=exampleString
-```
-{: pre}
-
-### `ibmcloud event-notifications template`
-{: #event-notifications-cli-template-command}
-
-Get details of a Template.
-
-```sh
-ibmcloud event-notifications template --instance-id INSTANCE-ID --id ID
-```
-{: pre}
-
-#### Command options
-{: #event-notifications-template-cli-options}
-
-`--instance-id` (string)
-:   Unique identifier for IBM Cloud Event Notifications instance. Required.
-
-    The maximum length is `32` characters. The minimum length is `32` characters. The value must match regular expression `/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/`.
-
-`--id` (string)
-:   Unique identifier for Template. Required.
-
-    The maximum length is `32` characters. The minimum length is `32` characters. The value must match regular expression `/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/`.
-
-#### Example
-{: #event-notifications-template-examples}
-
-```sh
-ibmcloud event-notifications template \
-    --instance-id=exampleString \
-    --id=exampleString
-```
-{: pre}
 
 ## SMTP Configurations
 {: #event-notifications-s-mtp-configurations-cli}
