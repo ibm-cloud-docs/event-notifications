@@ -20,8 +20,8 @@ content-type: release-note
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
 
-## 1 August 2025
-{: #event-notifications-Aug12025}
+## 30 July 2025
+{: #event-notifications-Jul302025}
 {: release-note}
 
 {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} is now available in the Montreal region
