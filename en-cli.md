@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-07-09"
+lastupdated: "2025-07-29"
 
 keywords: event notifications CLI plug-in, CLI reference, en cli reference, event notifications cli reference, event notifications, command line reference
 
@@ -82,6 +82,7 @@ export IBMCLOUD_EN_ENDPOINT=<https://au-syd.event-notifications.cloud.ibm.com/ev
    - **Tokyo:** `https://jp-tok.event-notifications.cloud.ibm.com/event-notifications`
    - **Toronto:** `https://ca-tor.event-notifications.cloud.ibm.com/event-notifications`
    - **Sao Paulo:** `https://br-sao.event-notifications.cloud.ibm.com/event-notifications`
+   - **Montreal:** `https://ca-mon.event-notifications.cloud.ibm.com/event-notifications`
 
 - export **IBMCLOUD_EN_ENDPOINT** variable to set the {{site.data.keyword.en_short}} region private endpoint.
 
@@ -94,6 +95,7 @@ export IBMCLOUD_EN_ENDPOINT=<https://au-syd.event-notifications.cloud.ibm.com/ev
    - **Tokyo:** `https://private.jp-tok.event-notifications.cloud.ibm.com/event-notifications`
    - **Toronto:** `https://private.ca-tor.event-notifications.cloud.ibm.com/event-notifications`
    - **Sao Paulo:** `https://private.br-sao.event-notifications.cloud.ibm.com/event-notifications`
+   - **Montreal:** `https://private.ca-mon.event-notifications.cloud.ibm.com/event-notifications`
 
 - export **EVENT_NOTIFICATIONS_API_KEY** variable to set the {{site.data.keyword.en_short}} instance `apikey`.
 
@@ -2061,6 +2063,8 @@ ibmcloud event-notifications template-delete \
     --id exampleString
 ```
 {: pre}
+
+
 
 ## SMTP Configurations
 {: #event-notifications-s-mtp-configurations-cli}

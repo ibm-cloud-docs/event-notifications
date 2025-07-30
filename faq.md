@@ -280,7 +280,7 @@ curl --request POST \
 
 To create the integration using API: 
 
-1. Run a curl command to integrate the {{site.data.keyword.en_short}} instance with the {{site.data.keyword.secrets-manager_short}} instance.
+Run a curl command to integrate the {{site.data.keyword.en_short}} instance with the {{site.data.keyword.secrets-manager_short}} instance.
 
 ```curl
 curl -X POST \

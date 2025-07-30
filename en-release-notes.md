@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-06-25"
+lastupdated: "2025-07-28"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -19,6 +19,13 @@ content-type: release-note
 
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
+
+## 1 August 2025
+{: #event-notifications-Aug12025}
+{: release-note}
+
+{{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} is now available in the Montreal region
+:  {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now can provision an instance in the Montreal region.
 
 ## 23 June 2025
 {: #event-notifications-Jun232025}

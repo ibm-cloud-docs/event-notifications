@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-04-11"
+lastupdated: "2025-07-28"
 
 keywords: HA for Event Notifications, high availability for Event Notifications, Event Notifications, disaster recovery
 
@@ -54,6 +54,7 @@ The following table lists the high-availability (HA) status for the regions (loc
 | North America | Dallas (us-south)|MZR|
 | North America | Toronto (ca-tor)|MZR|
 | Brazil | Sao Paulo (br-sao) | MZR |
+| North America | Montreal (ca-mon) | MZR |
 {: caption="HA status for the regions" caption-side="bottom"}
 
 Where:
@@ -61,7 +62,7 @@ Where:
 - A *geography* is a geographic area or larger political body that contains one or more regions.
 - A *region* is a defined geographic territory.
    - A region might be a specific postal code area, a town, a city, a state, a group of states, or even a group of countries.
-   - A region contains [multiple availability zones]( https://www.ibm.com/solutions/cloud-data-centers) to meet local access, low latency, and security requirements for the region.
+   - A region contains [multiple availability zones](https://www.ibm.com/solutions/cloud-data-centers) to meet local access, low latency, and security requirements for the region.
 - `MZR` means multi-zone region. [Learn more](/docs/overview?topic=overview-locations#table-mzr).
 
 ## Locations
