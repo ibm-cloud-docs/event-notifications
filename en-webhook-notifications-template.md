@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-05-02"
+lastupdated: "2025-08-01"
 
 keywords: event-notifications, event notifications, about event notifications, templates, webhook
 
@@ -28,7 +28,7 @@ Construct the template block. Make sure the template is a well-formed JSON that 
 
 Handlebars is a templating language that allows for dynamic content generation within templates.Handlebars can be used to customize notification messages using template variables and conditional logic.
 
-If the UI is used to create the template , Handlebars is used to create the payload for the body of the template. If API/CLI is used to create the template the payload must be encoded to the Base64 format. Refer the sample template for [UI](#webhook-template-ui) or [AI/CLI](#webhook-template-api-cli).
+If the UI is used to create the template , Handlebars is used to create the payload for the body of the template. If API/CLI is used to create the template the payload must be encoded to the Base64 format. Refer the sample template for [UI](#webhook-template-ui) or [API/CLI](#webhook-template-api-cli).
 
 
 ### UI webhook notification template example

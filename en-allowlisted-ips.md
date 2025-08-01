@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-07-30"
+lastupdated: "2025-08-01"
 
 keywords: event-notifications, event notifications, about event notifications, allowlisted ips
 
@@ -153,19 +153,4 @@ subcollection: event-notifications
    13.120.93.85
    13.121.86.163
    13.122.88.117
-   ```
-
-**Washington DC(us-east):**
-- private
-   ```
-   10.22.41.152
-   10.22.50.51
-   10.12.118.230
-   ```
-
-- public
-   ```
-   52.117.124.52
-   169.63.177.17
-   150.239.80.160
    ```

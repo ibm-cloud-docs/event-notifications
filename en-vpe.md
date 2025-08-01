@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-07-30"
+lastupdated: "2025-08-01"
 
 keywords: event-notifications, event notifications, about event notifications, vpe, virtual private endpoints, virtual private endpoint gateways
 
@@ -41,7 +41,7 @@ Before creating an endpoint gateway, ensure that you review [Planning for virtua
 
 1. On the console , click **Create**.
 
-1. In the details page provide the **Geography**, **Region**, **Name** for your gateway, **Resource Group**, select the **VPC** where you need the VPE IP address. To learn more about the fields, see [Viewing details of an endpoint gateway](docs/vpc?topic=vpc-vpe-viewing-details-of-an-endpoint-gateway&interface=ui)
+1. In the details page provide the **Geography**, **Region**, **Name** for your gateway, **Resource Group**, select the **VPC** where you need the VPE IP address. To learn more about the fields, see [Viewing details of an endpoint gateway](/docs/vpc?topic=vpc-vpe-viewing-details-of-an-endpoint-gateway&interface=ui)
 
 1. The security groups are used to tighten the security rules for inbound traffic toward your endpoint gateways. Select the checkbox for the security groups you want to attach to your gateway.
  
@@ -224,7 +224,7 @@ To learn more about the different fields, see [here](/docs/vpc?topic=vpc-orderin
 
 1. Download the Terraform CLI and configure the {{site.data.keyword.cloud_notm}} Provider plug-in. For more information, see [Getting started with Terraform](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started).
 
-1. The following example creates a VPE gateway using terraform: 
+1. The following example creates a VPE gateway using terraform
 
 ```hcl
 resource "ibm_is_virtual_endpoint_gateway" "en_vpe_dal" {
@@ -238,5 +238,3 @@ resource "ibm_is_virtual_endpoint_gateway" "en_vpe_dal" {
 ```
 
 To find the different SMTP endpoints , see [Endpoints](/docs/event-notifications?topic=event-notifications-en-smtp-configurations#en-smtp-configurations-requirements). Find the VPC ID in your VPC instance, see [Creating and Configuring a VPC](/docs/vpc?topic=vpc-getting-started&interface=terraform#create-and-configure-vpc)to learn the process of creating a VPC.
-
-
