@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-07-29"
+lastupdated: "2025-08-01"
 
 keywords: event notifications CLI plug-in, CLI reference, en cli reference, event notifications cli reference, event notifications, command line reference
 
@@ -1857,19 +1857,33 @@ ibmcloud event-notifications template-create \
 ibmcloud event-notifications template-create \
     --instance-id exampleString \
     --name exampleString \
-    --type pagerduty.notification \
-    --params '{"body": "ewogICJwYXlsb2FkIjogewogICAgInN1bW1hcnkiOiAie3sgZGF0YS5hbGVydF9kZWZpbml0aW9uLm5hbWV9fSIsCiAgICAidGltZXN0YW1wIjogInt7dGltZX19IiwKICAgICJzZXZlcml0eSI6ICJpbmZvIiwKICAgICJzb3VyY2UiOiAie3sgc291cmNlIH19IgogIH0sCiAgImRlZHVwX2tleSI6ICJ7eyBpZCB9fSIsCiAge3sjZXF1YWwgZGF0YS5zdGF0dXMgInRyaWdnZXJlZCJ9fQogICJldmVudF9hY3Rpb24iOiAidHJpZ2dlciIKICAge3svZXF1YWx9fQoKICB7eyNlcXVhbCBkYXRhLnN0YXR1cyAicmVzb2x2ZWQifX0KICAiZXZlbnRfYWN0aW9uIjogInJlc29sdmUiCiAge3svZXF1YWx9fQoKICAge3sjZXF1YWwgZGF0YS5zdGF0dXMgImFja25vd2xlZGdlZCJ9fQogICAiZXZlbnRfYWN0aW9uIjogImFja25vd2xlZGdlIgogICB7ey9lcXVhbH19Cn0="}' \
+    --type event_streams.notification \
+    --params '{"body": "eyJuYW1lIjoie3tkYXRhLm5hbWV9fSIifQ=="}' \
     --description exampleString
 ```
+
+- The following example shows the format of the `TemplateConfig` object for Code Engine Job. The supported type is `ibmcejob.notification`
 
 ```sh
 ibmcloud event-notifications template-create \
     --instance-id exampleString \
     --name exampleString \
-    --type event_streams.notification \
-    --params '{"body": "eyJuYW1lIjoie3tkYXRhLm5hbWV9fSIifQ=="}' \
+    --type ibmcejob.notification\
+    --params '{"body": "ewogInJ1bl9lbnZfdmFyaWFibGVzIjogWwogICB7ICJuYW1lIjogInJlZ2lvbiIsICJ2YWx1ZSI6ICJ7e2RhdGEucmVnaW9ufX0iLCJ0eXBlIjogImxpdGVyYWwifSwKeyJuYW1lIjoiVkFSMSIsInR5cGUiOiJsaXRlcmFsIiwidmFsdWUiOiJ7e2RhdGEudmFyMX19In0sCnsibmFtZSI6IlZBUjIiLCJ0eXBlIjoibGl0ZXJhbCIsInZhbHVlIjoie3tkYXRhLnZhcjJ9fSJ9Cl0KfQ=="}' \
     --description exampleString
 ```
+
+- The following example shows the format of the `TemplateConfig` object for Code Engine Application/Function. The supported type is `ibmceapp.notification`
+
+```sh
+ibmcloud event-notifications template-create \
+    --instance-id exampleString \
+    --name exampleString \
+    --type ibmceapp.notification\
+    --params '{"body": "ewogICJ2YXIxIjogInt7ZGF0YS52YXIxfX0iLAogICJ2YXIyIjogInt7ZGF0YS52YXIyfX0iCn0="}' \
+    --description exampleString
+```
+
 {: pre}
 
 ### `ibmcloud event-notifications templates`
@@ -1994,16 +2008,6 @@ ibmcloud event-notifications template-replace --instance-id INSTANCE-ID --id ID 
 
     Provide a JSON string option or specify a JSON file to read from by providing a filepath option that begins with a `@`, e.g. `--params=@path/to/file.json`.
 
-`--params-body` (string)
-:   Template body. This option provides a value for a sub-field of the JSON option 'params'. It is mutually exclusive with that option.
-
-    The maximum length is `20000` characters. The minimum length is `1` character. The value must match regular expression `/.*/`.
-
-`--params-subject` (string)
-:   The template subject. This option provides a value for a sub-field of the JSON option 'params'. It is mutually exclusive with that option.
-
-    The maximum length is `1000` characters. The minimum length is `1` character. The value must match regular expression `/.*/`.
-
 #### Examples
 {: #event-notifications-template-replace-examples}
 
@@ -2015,20 +2019,6 @@ ibmcloud event-notifications template-update \
     --description exampleString \
     --type exampleString \
     --params '{"body": "exampleString", "subject": "exampleString"}'
-```
-{: pre}
-
-Alternatively, granular options are available for the sub-fields of JSON string options:
-
-```sh
-ibmcloud event-notifications template-update \
-    --instance-id exampleString \
-    --id exampleString \
-    --name exampleString \
-    --description exampleString \
-    --type exampleString \
-    --params-body exampleString \
-    --params-subject exampleString
 ```
 {: pre}
 
@@ -2798,4 +2788,5 @@ The CLI Plugin versions from 0.0.5 to 1.4.0 is deprecated.
 | 1.13.0 | 6 March 2025 | Support for {{site.data.keyword.messagehub}} destination, subscription and Templates. |
 | 1.14.0 | 28 April 2025 | PagerDuty destination deprecated parameter `api_key` is marked as optional. |
 | 1.15.0 | 27 June 2025 | The markdown content for notification. |
+| 1.16.0 | 1 Aug 2025 | Code Engine and Pre-defined Templates support. |
 {: caption="Changes in the {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} CLI" caption-side="bottom"}
