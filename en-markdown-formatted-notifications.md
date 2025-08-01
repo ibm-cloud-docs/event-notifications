@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-07-08"
+lastupdated: "2025-08-01"
 
 keywords:
 
@@ -21,7 +21,7 @@ You include this message for one time in the event notification payload and it g
 You can define templates to personalize the notifications sent for certain destinations like Email, Webhook, Slack, PagerDuty, and Event Streams.
 You can use a template as a base and customize it to cater to upcoming requirements.
 
-However, if you skip defining a template, you can still format notifications for lack, Microsoft Teams, and Email that use markdown formatting.
+However, if you skip defining a template, you can still format notifications for Slack, Microsoft Teams, and Email that use markdown formatting.
 To format notifications by using markdown formatting, you must include `ibmenmarkdown` field in the Event notifications payload.
 
 
