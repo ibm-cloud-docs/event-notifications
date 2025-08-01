@@ -20,7 +20,7 @@ subcollection: event-notifications
 
 For more information on the Code Engine destination, see [Code Engine](/docs/event-notifications?topic=event-notifications-en-destinations-codeengine&interface=ui).
 
-## Constructing a {{site.data.keyword.codeengine_short}} notification template
+## Constructing a {{site.data.keyword.codeengineshort}} notification template
 {: #en-construct-code-engine-template}
 
 Construct the template block. Make sure the template is a well-formed JSON that adheres to the Handlebars template syntax and semantics.
@@ -28,11 +28,11 @@ Construct the template block. Make sure the template is a well-formed JSON that 
 Handlebars is a templating language that allows for dynamic content generation within templates.Handlebars can be used to customize notification messages using template variables and conditional logic.
 
 
-### {{site.data.keyword.codeengine_short}} notification template examples
+### {{site.data.keyword.codeengineshort}} notification template examples
 {: #en-code-engine-template-example}
 
 
-#### Template examples for {{site.data.keyword.codeengine_short}} Jobs
+#### Template examples for {{site.data.keyword.codeengineshort}} Jobs
 {: #en-code-engine-job-templates}
 
 ```json
@@ -44,10 +44,7 @@ Handlebars is a templating language that allows for dynamic content generation w
 ```
 See [Create a Job Run](https://cloud.ibm.com/apidocs/codeengine/v2#create-job-run) to find more parameters that you can integrate into the template.
 
-#### Template examples for {{site.data.keyword.codeengine_short}} Functions/Applications:
+#### Template examples for {{site.data.keyword.codeengineshort}} Functions/Applications:
 {: #en-code-engine-template-functions-applications-templates}
 
 For function and application templates, you can define them as per your requirement.
-
-
-
