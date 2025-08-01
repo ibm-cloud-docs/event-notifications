@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-07-28"
+lastupdated: "2025-08-01"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -24,8 +24,13 @@ Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, sec
 {: #event-notifications-Jul302025}
 {: release-note}
 
+Support for Code Engine templates 
+: {{site.data.keyword.IBM_notm}} {{site.data.keyword.en_short}} now supports creation of templates for Code Engine Jobs, Applications and Functions, enabling users to quickly set up and customize notifications for different events, see [Code Engine Templates](/docs/event-notifications?topic=event-notifications-en-code-engine-notification-template).
+
+
 {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} is now available in the Montreal region
 :  {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now can provision an instance in the Montreal region.
+
 
 ## 23 June 2025
 {: #event-notifications-Jun232025}

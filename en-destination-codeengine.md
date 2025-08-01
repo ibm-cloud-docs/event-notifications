@@ -15,7 +15,7 @@ subcollection: event-notifications
 # Code Engine
 {: #en-destinations-codeengine}
 
-{{site.data.keyword.codeenginefull}} is a fully managed, serverless platform that runs your containerized workloads, including web apps, micro-services, event-driven functions, or batch jobs. {{site.data.keyword.codeengineshort}} represents a service destination, where an incoming notification can be consumed programmatically. For example, an incoming notification about an event can trigger a {{site.data.keyword.codeengineshort}} destination to a backend microservice to act based on the content of the incoming notification.
+{{site.data.keyword.codeenginefull_notm}} is a fully managed, serverless platform that runs your containerized workloads, including web apps, micro-services, event-driven functions, or batch jobs. {{site.data.keyword.codeengineshort}} represents a service destination, where an incoming notification can be consumed programmatically. For example, an incoming notification about an event can trigger a {{site.data.keyword.codeengineshort}} destination to a backend microservice to act based on the content of the incoming notification.
 {: shortdesc}
 
 ## Configuring a {{site.data.keyword.codeengineshort}} destination
@@ -35,24 +35,28 @@ To configure a {{site.data.keyword.codeengineshort}} destination, do the followi
 
 1. In the **Add a destination** side panel, provide the following details.
 
-  - **Name** - Enter a name for your destination.
-  - **Description** - Optionally, enter a description for your destination.
-  - **Type** - Under **Destination**, for the **Type**, select **{{site.data.keyword.codeengineshort}}** from the list as your destination type.
-  - **Run Type** - Select one of the run type **{{site.data.keyword.codeengineshort}}** job or **{{site.data.keyword.codeengineshort}}** application.
-  
-  If selected run type is job then provide the following details:
-  - **Project name** - Select the {{site.data.keyword.codeengineshort}} project name from the list, if you already have a {{site.data.keyword.codeengineshort}} project. Otherwise, click the **Create new project** link, to create an {{site.data.keyword.codeengineshort}} project.
+    - **Name** - Enter a name for your destination.
+    - **Description** - Optionally, enter a description for your destination.
+    - **Type** - Under **Destination**, for the **Type**, select **{{site.data.keyword.codeengineshort}}** from the list as your destination type.
+    - **Run Type** - Select one of the run type **{{site.data.keyword.codeengineshort}}** job or **{{site.data.keyword.codeengineshort}}** application.
+    
+    If selected run type is job then provide the following details:
+    - **Project name** - Select the {{site.data.keyword.codeengineshort}} project name from the list, if you already have a {{site.data.keyword.codeengineshort}} project. Otherwise, click the **Create new project** link, to create an {{site.data.keyword.codeengineshort}} project.
 
-      When you select a {{site.data.keyword.codeengineshort}} project, the authorization between the services will be created internally between the two service instances, if the authorization between the services doesn't exist.
-      {: note}
-  - **Job name** - Select the job name from the list.
+        When you select a {{site.data.keyword.codeengineshort}} project, the authorization between the services will be created internally between the two service instances, if the authorization between the services doesn't exist.
+        {: note}
 
-  If selected run type is application then provide the following details:
-  - **URL** - Enter **{{site.data.keyword.codeengineshort}}** application secured URL (only HTTPS).
-  - **Verb** - Select the Verb to be called (GET or POST).
-  - **Headers** - Optionally, enter a list of headers to be passed to **{{site.data.keyword.codeengineshort}}** application.
+    - **Job name** - Select the job name from the list.
+
+    If selected run type is application then provide the following details:
+    - **URL** - Enter **{{site.data.keyword.codeengineshort}}** application secured URL (only HTTPS).
+    - **Verb** - Select the Verb to be called (GET or POST).
+    - **Headers** - Optionally, enter a list of headers to be passed to **{{site.data.keyword.codeengineshort}}** application.
 
 4. Click **Add**.
+
+{{site.data.keyword.en_short}} now supports Code Engine Functions.
+{: note}
 
 ## Using authorizations to grant access between services
 {: #en-using-s2s-auth1-ce}
@@ -102,7 +106,7 @@ The event payload has been transmitted to {{site.data.keyword.codeengineshort}} 
 
 You can test a {{site.data.keyword.codeengineshort}} destination in the options menu provided againts the destination. You can effortlessly test a destination, whether the provided configuration is correct or not with a single click.
 
-For more information on testing a destination, see [here](/docs/event-notifications?topic=event-notifications-en-test-destination).
+For more information on testing a destination, see [Testing Destination](/docs/event-notifications?topic=event-notifications-en-test-destination).
 
 ## {{site.data.keyword.codeengineshort}} retry policy
 {: #en-codengine-retry}

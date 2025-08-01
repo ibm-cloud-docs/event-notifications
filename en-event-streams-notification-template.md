@@ -2,9 +2,9 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-05-02"
+lastupdated: "2025-08-01"
 
-keywords: event-notifications, event notifications, about event notifications, templates, slack
+keywords: event-notifications, event notifications, about event notifications, templates, event streams
 
 subcollection: event-notifications
 
