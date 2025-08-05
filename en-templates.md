@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-07-08"
+lastupdated: "2025-08-05"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -32,7 +32,8 @@ An {{site.data.keyword.en_full_notm}} template is a pre-defined layout that incl
     * [Slack Notification](/docs/event-notifications?topic=event-notifications-en-slack-notification-template)
     * [PagerDuty Notification](/docs/event-notifications?topic=event-notifications-en-pagerduty-notification-template)
     * [Event Streams Notification](/docs/event-notifications?topic=event-notifications-en-event-streams-notification-template)
-   
+    * [Code Engine Notification](/docs/event-notifications?topic=event-notifications-en-code-engine-notification-template&interface=ui)
+
 1. Click **Add** to save your updates. 
 
 
