@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-08-01"
+lastupdated: "2025-08-07"
 
 keywords: event-notifications, event notifications, about event notifications, vpe, virtual private endpoints, virtual private endpoint gateways
 
@@ -16,9 +16,10 @@ subcollection: event-notifications
 # Virtual Private Endpoint
 {: #en-vpe}
 
-Virtual Private Endpoints (VPE) for VPC enables you to connect to {{site.data.keyword.en_short}} and other supported IBM Cloud services from your VPC network by using the IP addresses of your choice, which is allocated from a subnet within your VPC.
 
-You can create an endpoint gateway for an {{site.data.keyword.cloud}} or third-party service or application that you want to access on your private VPC network. You can use the console, CLI, API, or Terraform. 
+Virtual Private Endpoints (VPE) for VPC enables you to connect to {{site.data.keyword.en_short}} and other supported {{site.data.keyword.cloud}} services from your VPC network by using the IP addresses of your choosing, allocated from a subnet within your VPC.
+
+You can create an endpoint gateway for an {{site.data.keyword.cloud_notm}} service, third-party service or an application that you want to access on your private VPC network. You can either the console, CLI, API, or Terraform. 
 {: shortdesc}
 
 
@@ -42,19 +43,20 @@ Before creating an endpoint gateway, ensure that you review [Planning for virtua
 
 1. On the console, click **Create**.
 
-1. In the details page, provide the **Geography**, **Region**, **Name** for your gateway, **Resource Group**, select the **VPC** where you need the VPE IP address. To learn more about the fields, see [Viewing details of an endpoint gateway](/docs/vpc?topic=vpc-vpe-viewing-details-of-an-endpoint-gateway&interface=ui)
+
+1. On the details page provide the **Geography**, **Region**, **Name** for your gateway, **Resource Group**, and select the **VPC** where you need the VPE IP address. To learn more about the fields, see [Viewing details of an endpoint gateway](/docs/vpc?topic=vpc-vpe-viewing-details-of-an-endpoint-gateway&interface=ui).
 
 1. The security groups are used to tighten the security rules for inbound traffic toward your endpoint gateways. Select the checkbox for the security groups you want to attach to your gateway.
  
-1. Select the {{site.data.keyword.en_short}} under the **Request connection to a service** section.
+1. Select **{{site.data.keyword.en_short}}** under the **Request connection to a service** section.
 
 1. Select the region and choose an endpoint.
 
 1. In the **Reserved IP** section, select the option **Select one for me**. 
 
-1. Review the Order summary, then click Create a virtual private endpoint gateway. The endpoint gateway is requested for use.
+1. Review the order summary, then click **Create virtual private endpoint gateway**. The endpoint gateway is requested for use.
 
-To learn more about the different fields, see [here](/docs/vpc?topic=vpc-ordering-endpoint-gateway&interface=ui)
+To learn more about the different fields, see [Ordering Endpoint Gateway](/docs/vpc?topic=vpc-ordering-endpoint-gateway&interface=ui).
 
 ## Steps to provision a Virtual Private Endpoint Gateway by using CLI
 {: #en-steps-vpe-gateway-cli}{: cli}
@@ -85,9 +87,9 @@ To learn more about the different fields, see [here](/docs/vpc?topic=vpc-orderin
       :   Indicates the ID of the VPC.
 
    -   `--target`
-      :   Indicates the name, or CRN, of a provider cloud service instance.
+      :   Indicates the name or CRN of the {{site.data.keyword.en_short}} instance.
 
-1. Create an endpoint gateway by attaching the target type for a Private Path service:
+1. Create an endpoint gateway by attaching the target type for a private path service:
 
    ```sh
    ibmcloud is endpoint-gateway-create (--target-type private_path_service_gateway | provider_cloud_service | provider_infrastructure_service) --target TARGET [--vpc VPC] [--name NAME] [--rip RIP --subnet SUBNET | (--new-reserved-ip NEW_RESERVED_IP1 --new-reserved-ip NEW_RESERVED_IP2 ...)] [--sg SG] [--resource-group-id RESOURCE_GROUP_ID | --resource-group-name  RESOURCE_GROUP_NAME] [--output JSON] [-q, --quiet]
@@ -154,7 +156,7 @@ To learn more about the different fields, see [here](/docs/vpc?topic=vpc-orderin
       ```
       {: pre}
 
-   * **TargetCrn** - The name, or CRN, of the {{site.data.keyword.en_short}} instance where you want to set the endpoint gateway. You can use the command `ibmcloud is endpoint-gateway-targets` to list the IBM Cloud service instances that are qualified to be set as endpoint gateway targets.
+   * **TargetCrn** - The name or CRN of the {{site.data.keyword.en_short}} instance where you want to set the endpoint gateway. You can use the command `ibmcloud is endpoint-gateway-targets` to list the IBM Cloud service instances that are qualified to be set as endpoint gateway targets.
 
       ```sh
       export TargetCrn=<CRN of a target service>
@@ -189,7 +191,7 @@ To learn more about the different fields, see [here](/docs/vpc?topic=vpc-orderin
       ```
       {: codeblock}
 
-      When creating an endpoint gateway to connect to a Private Path service, make sure '"resource type" = "private_path_service_gateway"'.
+      When creating an endpoint gateway to connect to a private path service, make sure '"resource type" = "private_path_service_gateway"'.
       {: note}
 
       After you create an endpoint gateway for your {{site.data.keyword.en_short}} instance and assign a reserved IP address, you must bind the IP addresses from your VPC network to the endpoint gateway. See [Binding and unbinding a reserved IP address](/docs/vpc?topic=vpc-bind-unbind-reserved-ip) for details. These bound IP addresses become the VPE to access the service that is mapped to the endpoint gateway.
@@ -217,7 +219,7 @@ To learn more about the different fields, see [here](/docs/vpc?topic=vpc-orderin
       ```
       {: codeblock}
 
-      When creating an endpoint gateway to connect to a Private Path service, make sure that '"resource type" is set to `private_path_service_gateway`.
+      When creating an endpoint gateway to connect to a private path service, make sure that '"resource type" is set to `private_path_service_gateway`.
       {: note}
 
 ## Steps to provision a Virtual Private Endpoint Gateway by using Terraform
