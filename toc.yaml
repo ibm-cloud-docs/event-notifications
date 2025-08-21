@@ -159,9 +159,10 @@ toc:
               href: https://github.com/IBM/event-notifications-destination-ios-sdk#ios-destination-sdk-for-ibm-cloud-event-notifications-service-version-0041
       - topicgroup:
           label: Terraform Reference
-          topics:
-          - topic: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/en_destination_android
-            navtitle: Event Notifications Terraform Reference
+          links:
+          - link:
+              label: Event Notification Terraform Reference
+              href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/en_destination_android
       - en-regions-endpoints.md
       - en-vpe.md
       - data-portability.md
