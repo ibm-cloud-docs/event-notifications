@@ -27,7 +27,6 @@ toc:
   - navgroup:
       id: howto
       topics:
-      - en-terraform-tutorial.md
       - en-create-topic.md
       - en-create-subscription.md
       - en-integrations.md
@@ -158,6 +157,11 @@ toc:
           - link:
               label: iOS Client SDK
               href: https://github.com/IBM/event-notifications-destination-ios-sdk#ios-destination-sdk-for-ibm-cloud-event-notifications-service-version-0041
+      - topicgroup:
+          label: Terraform Reference
+          topics:
+          - topic: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/en_destination_android
+            navtitle: Event Notifications Terraform Reference
       - en-regions-endpoints.md
       - en-vpe.md
       - data-portability.md
