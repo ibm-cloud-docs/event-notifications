@@ -255,6 +255,8 @@ Not necessarily. While server-related problems are common causes of client timeo
 
 If you consistently encounter client timeouts, consider reaching out to the support team.
 
+
+
 ## Does Event Notifications support cross account integration?
 {: #faq-en-notifications-cross-account-integration}
 {: faq}

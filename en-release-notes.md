@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-08-01"
+lastupdated: "2025-08-21"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -19,6 +19,11 @@ content-type: release-note
 
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
+
+
+
+
+
 
 ## 30 July 2025
 {: #event-notifications-Jul302025}
@@ -102,15 +107,6 @@ Assigning Access to Topics and Subscriptons
 Enhanced Filtering Criteria
 : {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now supports advanced filtering criteria that can be used to add rules when you create a topic, see [Advanced Conditions](/docs/event-notifications?topic=event-notifications-en-create-en-topic).
 
-
-## 15 December 2024
-{: #event-notifications-dec1524}
-{: release-note}
-
-{{site.data.keyword.cloud_notm}} {{site.data.keyword.en_full}} is available as a deployable architecture for use in projects
-:   Cloud automation for deploying {{site.data.keyword.en_full}} by using {{site.data.keyword.cloud_notm}} projects is now available. The Cloud automation for {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_full}} deployable architecture from the {{site.data.keyword.cloud_notm}} catalog, helps you to automate {{site.data.keyword.cloud_notm}} projects through configuring, deploying, and monitoring your resource deployments by using DevOps best practices. 
-
-For more information, see [Regions and endpoints](/docs/event-notifications?topic=event-notifications-en-regions-endpoints).
 
 ## 30 September 2024
 {: #event-notifications-Sep3024}

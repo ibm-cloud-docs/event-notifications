@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024
-lastupdated: "2025-03-25"
+  years: 2024, 2025
+lastupdated: "2025-08-21"
 
 keywords:
 
@@ -31,8 +31,6 @@ The customer is responsible for the use of the exported data and configuration f
 - The conversion of the exported data and configuration to the format that is required by the alternative infrastructure and adapted applications.
 
 For more information about your responsibilities for {{site.data.keyword.en_full}}, see [Shared responsibilities for {{site.data.keyword.en_full}}](/docs/event-notifications?topic=event-notifications-en-responsibilities).
-
-
 
 ## Data export procedures
 {: #data-portability-procedures}
