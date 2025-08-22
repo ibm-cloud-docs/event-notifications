@@ -15,13 +15,13 @@ subcollection: event-notifications
 # Securing your data in {{site.data.keyword.en_short}}
 {: #en-mng-data}
 
-To ensure that you can securely manage your data when you use {{site.data.keyword.en_full}}, you must know exactly what data is stored and encrypted and you must know how to delete any stored data.
+To help ensure that you can securely manage your data when you use {{site.data.keyword.en_full}}, you must know exactly what data is stored and encrypted and you must know how to delete any stored data.
 {: shortdesc}
 
 ## How your data is stored and encrypted in {{site.data.keyword.en_short}}
 {: #en-data-storage}
 
-{{site.data.keyword.en_short}} stores and encrypts details that are related to your destinations like email (sender, recipients, subject), or SMS (sender, recipient, details). As a multi-tenant service, every tenant has a designated encryption key and user data in each tenant is encrypted with only that tenant's key. This tenant key is protected by using {{site.data.keyword.en_short}} managed Key Protect. {{site.data.keyword.en_short}} ensures that private information is encrypted before it is stored.
+{{site.data.keyword.en_short}} stores and encrypts details that are related to your destinations like email (sender, recipients, subject), or SMS (sender, recipient, details). As a multi-tenant service, every tenant has a designated encryption key and user data in each tenant is encrypted with only that tenant's key. This tenant key is protected by using {{site.data.keyword.en_short}} managed Key Protect. {{site.data.keyword.en_short}} helps ensure that private information is encrypted before it is stored.
 
 You can add a higher level of encryption control to your data at rest (when it is stored) by enabling integration with a Key Management Service (KMS). The data that you store in {{site.data.keyword.cloud_notm}} is encrypted at rest by using envelope encryption. If you need to control the encryption keys, you can integrate Key Protect or Hyper Protect Crypto Services. This process is commonly referred to as Bring Your Own Key (BYOK). With Key Protect and Hyper Protect Crypto Services, you can create, import, and manage encryption keys. You can assign access policies to the keys, assign users or service IDs to the keys, or give the key access only to a specific service.
 
@@ -58,12 +58,12 @@ To restore a deleted instance or to delete the instance permanently, you can use
 ## Data security and compliance
 {: #en-data-security-and-compliance1}
 
-{{site.data.keyword.en_short}} service has data security strategies in place to meet your compliance needs and ensure that your data remains secure and protected in the cloud.
+{{site.data.keyword.en_short}} service has data security strategies in place to meet your compliance needs and help ensure that your data remains secure and protected in the cloud.
 
 ### Security readiness
 {: #en-security-readiness1}
 
-{{site.data.keyword.en_short}} ensures security readiness by adhering to {{site.data.keyword.IBM_notm}} best practices for systems, networking, and secure engineering.
+{{site.data.keyword.en_short}} helps ensure security readiness by adhering to {{site.data.keyword.IBM_notm}} best practices for systems, networking, and secure engineering.
 
 To learn more about security controls across {{site.data.keyword.cloud_notm}}, see [How do I know that my data is safe?](/docs/overview?topic=overview-security#security){: external}.
 {: tip}
@@ -79,7 +79,7 @@ Access to {{site.data.keyword.en_short}} takes place over HTTPS and uses Transpo
 
 For more information on supported TLS ciphers, see [TLS cipher support](/docs/event-notifications?topic=event-notifications-en-cipher-support).
 
-If you attempt to use a cipher that is not on this list, you may experience connectivity issues. Update your client to use one of the supported ciphers. If you are using `openssl`, you can use the command `openssl ciphers -v` at the command line (or, for some installations of `openssl`, use the `-s -v` options) to show a verbose list of what ciphers your client supports.
+If you attempt to use a cipher that is not on this list, you may experience connectivity issues. Update your client to use one of the supported ciphers. If you are using `openssl`, you can use the command `openssl ciphers -v` at the command line (or for some installations of `openssl`, use the `-s -v` options) to show a verbose list of what ciphers your client supports.
 {: tip}
 
 ### Compliance readiness

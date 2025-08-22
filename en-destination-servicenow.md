@@ -67,9 +67,9 @@ To configure a ServiceNow destination, do the following steps:
 ## Testing a ServiceNow destination configuration
 {: #en-sn-test-destination}
 
-You can test a ServiceNow destination in the options menu provided againts the destination. You can effortlessly test a destination, whether the provided configuration is correct or not with a single click.
+You can test a ServiceNow destination in the options menu provided against the destination. You can effortlessly test a destination, whether the provided configuration is correct or not with a single click.
 
-For more information on testing a destination, see [here](/docs/event-notifications?topic=event-notifications-en-test-destination).
+For more information on testing a destination, see [Testing Destinations](/docs/event-notifications?topic=event-notifications-en-test-destination).
 
 ## ServiceNow retry policy
 {: #en-sn-retry}

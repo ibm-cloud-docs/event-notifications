@@ -23,22 +23,22 @@ Various services produce events that can be consumed by {{site.data.keyword.en_s
 
 There are now four types of sources that are supported for {{site.data.keyword.en_short}}: {{site.data.keyword.cloud_notm}} sources, generic API sources, {{site.data.keyword.cloud_notm}} platform sources and the Periodic Timer.
 
-With {{site.data.keyword.cloud_notm}} sources, events emit from managed services on {{site.data.keyword.cloud_notm}}. The following sources For example, {{site.data.keyword.monitoringfull_notm}}, {{site.data.keyword.cloud_notm}} Security and Compliance Center, {{site.data.keyword.secrets-manager_full_notm}}, {{site.data.keyword.appconfig_short}}, IBM Cloud Projects,Toolchain and {{site.data.keyword.lakehouse_full_notm}} can all be added to {{site.data.keyword.en_short}} {{site.data.keyword.cloud_notm}} sources.
+With {{site.data.keyword.cloud_notm}} sources, events emit from managed services on {{site.data.keyword.cloud_notm}}. The following sources, for example, {{site.data.keyword.monitoringfull_notm}}, {{site.data.keyword.cloud_notm}} Security and Compliance Center, {{site.data.keyword.secrets-manager_full_notm}}, {{site.data.keyword.appconfig_short}}, IBM Cloud Projects, Toolchain, and {{site.data.keyword.lakehouse_full_notm}} can all be added to {{site.data.keyword.en_short}} {{site.data.keyword.cloud_notm}} sources.
 
 With generic API sources, events emanate from services or applications that are not managed by IBM. For example, if you create your own application that sends events to {{site.data.keyword.en_short}}, your application can be added as an API source.
 
 API sources cannot route notifications to the {{site.data.keyword.cloud_notm}} email service and {{site.data.keyword.cloud_notm}} SMS service because these services deliver content that is generated exclusively from {{site.data.keyword.cloud_notm}} managed services.
 {: note}
 
-By default, {{site.data.keyword.cloud_notm}} Resource lifecycle events is provided as a source and is disabled. You can enable it, if you like to monitor the {{site.data.keyword.cloud_notm}} Resource lifecycle events, which you need to incur more charges. {{site.data.keyword.cloud_notm}} Resource lifecycle events are events around the {{site.data.keyword.cloud_notm}} resources like instance creation, updating an instance, deleting an instance and other events related to {{site.data.keyword.cloud_notm}} resources.
+By default, {{site.data.keyword.cloud_notm}} Resource lifecycle events are provided as a source and is disabled. You can enable it if you like to monitor the {{site.data.keyword.cloud_notm}} Resource lifecycle events, which you need to incur more charges. {{site.data.keyword.cloud_notm}} Resource lifecycle events are events around the {{site.data.keyword.cloud_notm}} resources like instance creation, updating an instance, deleting an instance and other events related to {{site.data.keyword.cloud_notm}} resources.
 
-The Periodic Timer source is also provided as a default source. It is used to schedule events based on a period defined by the user. It is disabled by deafult and you can enable it to schedule events periodically. 
+The Periodic Timer source is also provided as a default source. It is used to schedule events based on a period defined by the user. It is disabled by default and you can enable it to schedule events periodically. 
 
 To see the current list of {{site.data.keyword.cloud_notm}} services available as {{site.data.keyword.en_short}} sources, go to the **Sources** section of your {{site.data.keyword.en_short}} dashboard, click **Add**, and select **{{site.data.keyword.cloud_notm}} sources**.
 
 The connection protocols differ between source types, so the procedure for adding is different as described in the following sections.
 
-To integrate a source with {{site.data.keyword.en_short}}, an instance of that source also needs to be created. For more information on how the supported sources can be integrated with {{site.data.keyword.en_short}}, refer [here](/docs/event-notifications?topic=event-notifications-en-source).
+To integrate a source with {{site.data.keyword.en_short}}, an instance of that source also needs to be created. For more information on how the supported sources can be integrated with {{site.data.keyword.en_short}}, refer to [Registering event sources](/docs/event-notifications?topic=event-notifications-en-source).
 {: note}
 
 ## Adding a source
@@ -51,7 +51,7 @@ To integrate a source with {{site.data.keyword.en_short}}, an instance of that s
 
 1. Create a service-to-service authorization between your {{site.data.keyword.cloud_notm}} service and {{site.data.keyword.en_short}}.
    - From the {{site.data.keyword.cloud_notm}} console, navigate to **Manage** > **Access(IAM)** > **Authorizations**.
-   - Select your {{site.data.keyword.cloud_notm}} service as the source, and {{site.data.keyword.en_short}} as the target from the authorisation view.
+   - Select your {{site.data.keyword.cloud_notm}} service as the source, and {{site.data.keyword.en_short}} as the target from the authorization view.
    - Set the service access level to **Event Source Manager**.
 
 1. Find your existing service instances in your [account resource list](https://cloud.ibm.com/resources){: external} and select the instance of interest and open its dashboard.

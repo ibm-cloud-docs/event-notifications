@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-08-21"
+lastupdated: "2025-08-22"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -324,7 +324,7 @@ Support for Email "Opt-in"
 {: release-note}
 
 New supported {{site.data.keyword.cloud_notm}} source: {{site.data.keyword.cloud_notm}} Platform Notifications
-:  {{site.data.keyword.cloud_notm}} Platform Notifications is now available as a new supported {{site.data.keyword.cloud_notm}} source. For more information, see [Enabling {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} for the notification distribution list](https://cloud.ibm.com/docs/account?topic=account-add-users-distribution-list#event-notifications-distribution-list).
+:  {{site.data.keyword.cloud_notm}} Platform Notifications is now available as a new supported {{site.data.keyword.cloud_notm}} source. For more information, see [Enabling {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} for the notification distribution list](/docs/account?topic=account-add-users-distribution-list#event-notifications-distribution-list).
 
 ## 29 August 2022
 {: #event-notifications-Aug2522}

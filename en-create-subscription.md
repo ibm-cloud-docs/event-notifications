@@ -48,17 +48,17 @@ You can subscribe to or unsubscribe from specific {{site.data.keyword.en_short}}
 ### {{site.data.keyword.cloud_notm}} SMS service
 {: #en-SMS-destination}
 
-- You can add up to 3 phone numbers for the lite plan, and 100 phone numbers for stsandard plan to the recipient list. 
-- When you click **Create** subscription after adding the phone numbers, the number are added to the **Invited** tab. The **Active** tab, displays the phone number of recipients who confirmed receiving SMS notifications for the topic selected in the invite.
-- When a recipient clicks the **Unsubscribe** link, the recipients number is moved to the **Unsubscribed** tab. To restart the subscription, the recipient should contact {{site.data.keyword.IBM_notm}} {{site.data.keyword.en_short}} service administrator to add the number back to subscription.
-- In some cases, the carrier service allows keywords like `START` and `STOP`. When a recipient sends a response `STOP`, the services for recipient is disabled immediately. However, the phone number is moved to **Unsubscribed** tab only on the next attempt to send an SMS to the same number. The recipient can restart to receive the SMS by sending a response code `START`. 
+- You can add up to 3 phone numbers for the lite plan, and 100 phone numbers for standard plan to the recipient list. 
+- When you click **Create** subscription after adding the phone numbers, the numbers are added to the **Invited** tab. The **Active** tab, displays the phone number of recipients who confirmed receiving SMS notifications for the topic that is selected in the invite.
+- When a recipient clicks the **Unsubscribe** link, the recipients number is moved to the **Unsubscribed** tab. To restart the subscription, the recipient should contact {{site.data.keyword.IBM_notm}} {{site.data.keyword.en_short}} service administrator to add the number back to the subscription.
+- Sometimes, the carrier service allows keywords like `START` and `STOP`. When a recipient sends a response `STOP`, the services for recipient are disabled immediately. However, the phone number is moved to the **Unsubscribed** tab only on the next attempt to send an SMS to the same number. The recipient can restart to receive the SMS by sending a response code `START`. 
 
 ### {{site.data.keyword.cloud_notm}} Email service
 {: #en-Email-destination}
    
-- You can add up to 10,000 email addresses of the recipient list. The **Invited** tab displays a list of users who have not yet accepted the invitation to be a subscriber. The **Active** tab displays a list of recipients email addresses and the date they were activated. The **Unsubscribed** tab displays a list of recipients who have opted out of receiving any email notifications for this subscription.
+- You can add up to 10,000 email addresses of the recipient list. The **Invited** tab displays a list of users who have not yet accepted the invitation to be a subscriber. The **Active** tab displays a list of recipients email addresses and the date that they were activated. The **Unsubscribed** tab displays a list of recipients who have opted out of receiving any email notifications for this subscription.
 - Add additional information that is related to the respective destination type as required.
 
-If you are providing **Assigned to** and **Assignment group** values, make sure they have proper settings and linked otherwise ServiceNow will reject requests with 403. Also make sure there are no Business Rule blocking assignment to these groups and users.
+If you are providing **Assigned to** and **Assignment group** values, make sure that they have proper settings and are linked otherwise ServiceNow will reject requests with 403. Also make sure that there are no Business Rule blocking assignment to these groups and users.
 {: note}
          

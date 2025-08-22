@@ -117,9 +117,10 @@ For more information on how to create and use slack notification templates , see
 ## Testing a Slack destination configuration
 {: #en-slack-test-destination}
 
-You can test a Slack destination in the options menu provided againts the destination. You can effortlessly test a destination, whether the provided configuration is correct or not with a single click.
+You can test a Slack destination in the options menu provided against the destination. You can effortlessly test a destination, whether the provided configuration is correct or not with a single click.
 
-For more information on testing a destination, see [here](/docs/event-notifications?topic=event-notifications-en-test-destination).
+For more information on testing a destination, see [Testing Destinations](/docs/event-notifications?topic=event-notifications-en-test-destination).
+
 
 
 

@@ -23,10 +23,10 @@ A {{site.data.keyword.cos_full_notm}} represents a service destination, where an
 ## Configuring a {{site.data.keyword.cos_full_notm}} destination in the UI
 {: #en-destinations-cos-configure}
 
-Before you configure {{site.data.keyword.cos_full_notm}} as a destination, make sure that you have an {{site.data.keyword.cos_full_notm}} instance [created and configured](https://cloud.ibm.com/objectstorage/create) in the same account as your {{site.data.keyword.en_short}} instance.
+Before you configure {{site.data.keyword.cos_full_notm}} as a destination, make sure that you have an {{site.data.keyword.cos_full_notm}} instance that is [created and configured](https://cloud.ibm.com/objectstorage/create) in the same account as your {{site.data.keyword.en_short}} instance.
 {: note}
 
-If you are using {{site.data.keyword.en_short}} CLI or API to configure {{site.data.keyword.cos_full_notm}} service instance as a destination, ensure that you have enabled authorization to grant access between services before integrating with {{site.data.keyword.cos_full_notm}}. For more information, see [Using authorizations to grant access between services](#en-using-s2s-auth1).
+If you are using {{site.data.keyword.en_short}} CLI or API to configure {{site.data.keyword.cos_full_notm}} service instance as a destination, help ensure that you have enabled authorization to grant access between services before integrating with {{site.data.keyword.cos_full_notm}}. For more information, see [Using authorizations to grant access between services](#en-using-s2s-auth1).
 {: important}
 
 If you want to enforce access restrictions based on IP addresses, it is recommended to use context-based restrictions instead of a legacy bucket firewall.  For details, see [Restricting access by network context](/docs/cloud-object-storage?topic=cloud-object-storage-setting-a-firewall) in the Object Storage documentation.  If your setup must continue use of a legacy firewall, use the [Support Center](/unifiedsupport/supportcenter){: external} to create a support case for assistance with the IP range information.
@@ -36,7 +36,7 @@ To configure a {{site.data.keyword.cos_full_notm}} destination, do the following
 
 1. From your {{site.data.keyword.en_short}} instance dashboard, click **Destinations**.
 
-1. Click **Add +** to add new destination.
+1. Click **Add +** to add a new destination.
 
 1. In the **Add a destination** side panel, provide the following details.
 
@@ -44,7 +44,7 @@ To configure a {{site.data.keyword.cos_full_notm}} destination, do the following
    - **Description** - Optionally, enter a description for your destination.
    - **Type** - Under **Destination**, for the **Type**, select **{{site.data.keyword.cos_full_notm}}** from the list as your destination type.
 
-   - **Instance name** - Select the {{site.data.keyword.cos_full_notm}} instance name from the list, if you already have an {{site.data.keyword.cos_full_notm}} instance. Otherwise, click the **Create new instance** link, to create an {{site.data.keyword.cos_full_notm}} instance.
+   - **Instance name** - Select the {{site.data.keyword.cos_full_notm}} instance name from the list, if you already have an {{site.data.keyword.cos_full_notm}} instance. Otherwise, click the **Create new instance** link to create an {{site.data.keyword.cos_full_notm}} instance.
 
       When you select an {{site.data.keyword.cos_full_notm}} instance, the authorization between the services will be created internally between the two service instances, if the authorization between the services doesn't exist.
       {: note}
@@ -88,7 +88,7 @@ Use {{site.data.keyword.cloud}} Identity and Access Management (IAM) to create o
 
 1. Select both the roles (Reader, and Object Writer) to assign access to the source service that accesses the target service.
 
-   If you have selected only one of these two roles (Reader or Object Writer) during the service to service authorization, you cannot write or read from the {{site.data.keyword.cos_full_notm}} bucket. You will get an error for service to service authorization failure in these cases. Make sure to recreate an authorization between the services with both the roles selected.
+   If you have selected only one of these two roles (Reader or Object Writer) during the service to service authorization, you cannot write or read from the {{site.data.keyword.cos_full_notm}} bucket. You get an error for service to service authorization failure in these cases. Make sure to recreate an authorization between the services with both the roles selected.
 {: important}
 
 1. Click **Authorize**.
@@ -109,11 +109,11 @@ For more information about all of the parameters that are available for this com
 
 1. Navigate to **Storage** in the Resource list.
 
-1. Click the {{site.data.keyword.cos_full_notm}} name that will display your {{site.data.keyword.cos_full_notm}} console.
+1. Click the {{site.data.keyword.cos_full_notm}} name that displays your {{site.data.keyword.cos_full_notm}} console.
 
 1. In the {{site.data.keyword.cos_full_notm}} console, navigate to **Buckets**.
 
-1. Select and copy the required Bucket name that need to used in the destination creation process. Use this copied Bucket name in the destination creation screen.
+1. Select and copy the required Bucket name that need to use in the destination creation process. Use this copied Bucket name in the destination creation screen.
 
 ## How to find the Endpoint URL of the {{site.data.keyword.cos_full_notm}} service instance?
 {: #en-endpoint-url}
@@ -129,17 +129,23 @@ Endpoints are used with your credentials (Bucket name, API Key, SDK) to tell you
 
 1. Navigate to **Storage** in the Resource list.
 
-1. Click the {{site.data.keyword.cos_full_notm}} name that will display your {{site.data.keyword.cos_full_notm}} console.
+1. Click the {{site.data.keyword.cos_full_notm}} name that displays your {{site.data.keyword.cos_full_notm}} console.
 
 1. In the {{site.data.keyword.cos_full_notm}} console, navigate to **Buckets** in the menu.
 
 1. Click the required **Bucket name** to view the **Bucket configuration** details.
 
-1. Navigate to **Endpoints** section and copy your public or private endpoints as required. Use this value as the **Endpoint** in the [Configuring a {{site.data.keyword.cos_full_notm}} destination](#en-destinations-cos-configure) section.
+1. Navigate to the **Endpoints** section and copy your public or private endpoints as required. Use this value as the **Endpoint** in the [Configuring a {{site.data.keyword.cos_full_notm}} destination](#en-destinations-cos-configure) section.
 
 ## Testing a {{site.data.keyword.cos_full_notm}} destination configuration
 {: #en-cos-test-destination}
 
-You can test a {{site.data.keyword.cos_full_notm}} destination in the options menu provided againts the destination. You can effortlessly test a destination, whether the provided configuration is correct or not with a single click.
+<<<<<<< Updated upstream
+You can test a {{site.data.keyword.cos_full_notm}} destination in the options menu provided against the destination. You can effortlessly test a destination, whether the provided configuration is correct or not with a single click.
 
-For more information on testing a destination, see [here](/docs/event-notifications?topic=event-notifications-en-test-destination).
+For more information on testing a destination, see [Testing Destinatios](/docs/event-notifications?topic=event-notifications-en-test-destination).
+=======
+You can test a {{site.data.keyword.cos_full_notm}} destination in the options menu that is provided against the destination. You can effortlessly test a destination, whether the provided configuration is correct or not with a single click.
+
+For more information on testing a destination, see [Testing destinations](/docs/event-notifications?topic=event-notifications-en-test-destination).
+>>>>>>> Stashed changes
