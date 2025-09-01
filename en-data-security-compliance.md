@@ -15,13 +15,13 @@ subcollection: event-notifications
 # Data security and compliance
 {: #en-data-security-and-compliance}
 
-{{site.data.keyword.en_short}} service has data security strategies in place to meet your compliance needs and ensure that your data remains secure and protected in the cloud.
+{{site.data.keyword.en_short}} service has data security strategies in place to meet your compliance needs and help ensure that your data remains secure and protected in the cloud.
 {: shortdesc}
 
 ## Security readiness
 {: #en-security-readiness}
 
-{{site.data.keyword.en_short}} ensures security readiness by adhering to {{site.data.keyword.IBM_notm}} best practices for systems, networking, and secure engineering.
+{{site.data.keyword.en_short}} helps ensure security readiness by adhering to {{site.data.keyword.IBM_notm}} best practices for systems, networking, and secure engineering.
 
 To learn more about security controls across {{site.data.keyword.cloud_notm}}, see [How do I know that my data is safe?](/docs/overview?topic=overview-security#security){: external}.
 {: tip}
@@ -37,7 +37,7 @@ Access to {{site.data.keyword.en_short}} takes place over HTTPS and uses Transpo
 
 For more information on supported TLS ciphers, see [TLS cipher support](/docs/event-notifications?topic=event-notifications-en-cipher-support).
 
-If you attempt to use a cipher that is not on this list, you may experience connectivity issues. Update your client to use one of the supported ciphers. If you are using `openssl`, you can use the command `openssl ciphers -v` at the command line (or, for some installations of `openssl`, use the `-s -v` options) to show a verbose list of what ciphers your client supports.
+If you attempt to use a cipher that is not on this list, you may experience connectivity issues. Update your client to use one of the supported ciphers. If you are using `openssl`, you can use the command `openssl ciphers -v` at the command line (or for some installations of `openssl`, use the `-s -v` options) to show a verbose list of what ciphers your client supports.
 {: tip}
 
 ## Compliance readiness

@@ -15,14 +15,14 @@ subcollection: event-notifications
 
 {{site.data.keyword.en_short}} offers users a versatile option to deviate from the conventional subscription process by introducing an opt-out capability. This feature empowers users to seamlessly send notifications, allowing them to specify their preferred email addresses and templates within the send notifications payload. This not only simplifies the notification process but also elevates user control over their communication preferences.
 
-It's worth noting that the opting-out functionality is not activated by default, and this deliberate choice is rooted in security considerations. Enabling the opt-out feature from the start helps prevent potential fraudulent activities and aids in the detection of unauthorized actions. This proactive security measure not only safeguards user data but also contributes to the overall protection of users' reputation as senders. By taking a cautious approach, {{site.data.keyword.en_short}} prioritizes security, ensuring a secure and trustworthy communication environment for its users.
+It's worth noting that the opting-out functionality is not activated by default, and this deliberate choice is rooted in security considerations. Enabling the opt-out feature from the start helps prevent potential fraudulent activities and aids in the detection of unauthorized actions. This proactive security measure not only safeguards user data but also contributes to the overall protection of users' reputation as senders. By taking a cautious approach, {{site.data.keyword.en_short}} prioritizes security, helping ensure a secure and trustworthy communication environment for its users.
 
 ## Requesting for the Opt Out feature for the Custom Domain Email destination
 {: #en-destinations-custom-email-opt-out-request}
 
 By default, the subscription flow seamlessly includes the custom domain email destination, providing users with a streamlined experience. However, for those who prefer to opt out, we have implemented a straightforward process. Users can access this option by completing a brief questionnaire that helps customize their email preferences.
 
-This questionnaire ensures that users have the flexibility to tailor their subscription experience according to their specific needs. While the default setting optimizes convenience, the opt-out questionnaire empowers users to make personalized choices, enhancing their control over communication. This user-centric approach aligns with our commitment to providing a customizable and user-friendly platform.
+This questionnaire helps ensure that users have the flexibility to tailor their subscription experience according to their specific needs. While the default setting optimizes convenience, the opt-out questionnaire empowers users to make personalized choices, enhancing their control over communication. This user-centric approach provides a customizable and user-friendly platform.
 
 ```text
 1. Will the nature of the email content be Marketing or Transactional?
@@ -57,21 +57,21 @@ This questionnaire ensures that users have the flexibility to tailor their subsc
 ```
 {: codeblock}
 
-Upon receiving answers to the aforementioned questions and if users wish to proceed with modifying their email preferences, we encourage them to initiate the next step by opening a support case with {{site.data.keyword.en_short}}:
+Upon receiving answers to the previously mentioned questions and if users want to proceed with modifying their email preferences, it is encouraged to initiate the next step by opening a support case with {{site.data.keyword.en_short}}:
 
 1. From the {{site.data.keyword.cloud_notm}} console menu bar, click the **Help** icon > **Support center**.
 1. From the Contact support section, click **Create a case**.
 1. Select under `Category`, `Topic` as Event Notifications and `Subtopic` as Others
 1. Under `Subject` add **Requesting for the Opt Out feature for the Custom Domain Email destination**
-1. In the 'Description' section, please include responses to the aforementioned questionnaire. While many questions are self-explanatory, we've provided explanations for a few to ensure clarity.
+1. In the 'Description' section, include responses to the previously mentioned questionnaire. While many questions are self-explanatory, we've provided explanations for a few to help ensure clarity.
     * Provide Nature of email as **`Marketing` or `Transactional`**
-        * Marketing email - These emails are distributed to a broad audience. They are targeted list of prospects or customers containing marketing and promotional content such as to make a purchase, download information, etc.
-        * Transactional email - These emails are individualized for each recipient, typically triggered by specific user actions like making a website purchase or requesting a password reset, etc.
+        * Marketing email - These emails are distributed to a broad audience. They are a targeted list of prospects or customers containing marketing and promotional content such as to make a purchase, download information.
+        * Transactional email - These emails are individualized for each recipient, typically triggered by specific user actions like making a website purchase or requesting a password reset.
     * **Website URL** is required to gain a clearer understanding of the type of content you intend to send.
-    * A valid **Reply-To** email id is required to receive rejected or bounced emails' information.
-    * Requirement of **Well Formatted** Email content is required to prevent emails classified as Spam at the receivers end. Email which are not well formatted (i.e not html) can result in Email Service Providers to classify the mails as spam.
-1. Add **Attachments** if you want to provide more evidences supporting your answers
-1. Add required email Ids in the **Watchlist** section. And to know more about other options while creating a support case refer [here](https://{DomainName}/docs/account?topic=account-open-case&interface=ui){: external}.
+    * A valid **Reply-To** email ID is required to receive rejected or bounced emails' information.
+    * Requirement of well formatted Email content is required to prevent emails that are classified as Spam at the receivers end. Emails which are not well formatted (i.e. not html) can result in Email Service Providers to classify the mails as spam.
+1. Add **Attachments** if you want to provide more evidence supporting your answers
+1. Add required email IDs in the **Watchlist** section. And to know more about other options while creating a support case refer [Creating support cases](https://{DomainName}/docs/account?topic=account-open-case&interface=ui){: external}.
 
 ## Flexibility while using Opt-out flow
 {: #en-destinations-custom-email-opt-out-rules}

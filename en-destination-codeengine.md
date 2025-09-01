@@ -24,31 +24,31 @@ subcollection: event-notifications
 Before you configure {{site.data.keyword.codeengineshort}} as a destination for `run type` Job, make sure that you have a {{site.data.keyword.codeengineshort}} project [created and job configured](https://cloud.ibm.com/codeengine/projects) in the same account as your {{site.data.keyword.en_short}} instance.
 {: note}
 
-In case of `run type` Job, if you are using {{site.data.keyword.en_short}} CLI or API to configure {{site.data.keyword.codeengineshort}} job as a destination, ensure that you have enabled authorization to grant access between services. For more information, see [Using authorizations to grant access between services](#en-using-s2s-auth1-ce).
+If there is `run type` Job, if you are using {{site.data.keyword.en_short}} CLI or API to configure {{site.data.keyword.codeengineshort}} job as a destination, help ensure that you have enabled authorization to grant access between services. For more information, see [Using authorizations to grant access between services](#en-using-s2s-auth1-ce).
 {: important}
 
 To configure a {{site.data.keyword.codeengineshort}} destination, do the following steps:
 
 1. From your {{site.data.keyword.en_short}} instance dashboard, click **Destinations**.
 
-1. Click **Add +** to add new destination.
+1. Click **Add +** to add a new destination.
 
 1. In the **Add a destination** side panel, provide the following details.
 
     - **Name** - Enter a name for your destination.
     - **Description** - Optionally, enter a description for your destination.
     - **Type** - Under **Destination**, for the **Type**, select **{{site.data.keyword.codeengineshort}}** from the list as your destination type.
-    - **Run Type** - Select one of the run type **{{site.data.keyword.codeengineshort}}** job or **{{site.data.keyword.codeengineshort}}** application.
+    - **Run Type** - Select one of the run type {{site.data.keyword.codeengineshort}} jobs or **{{site.data.keyword.codeengineshort}}** application.
     
-    If selected run type is job then provide the following details:
-    - **Project name** - Select the {{site.data.keyword.codeengineshort}} project name from the list, if you already have a {{site.data.keyword.codeengineshort}} project. Otherwise, click the **Create new project** link, to create an {{site.data.keyword.codeengineshort}} project.
+    If selected run type is job, then provide the following details:
+    - **Project name** - Select the {{site.data.keyword.codeengineshort}} project name from the list, if you already have a {{site.data.keyword.codeengineshort}} project. Otherwise, click the **Create new project** link to create an {{site.data.keyword.codeengineshort}} project.
 
         When you select a {{site.data.keyword.codeengineshort}} project, the authorization between the services will be created internally between the two service instances, if the authorization between the services doesn't exist.
         {: note}
 
     - **Job name** - Select the job name from the list.
 
-    If selected run type is application then provide the following details:
+    If selected run type is application, then provide the following details:
     - **URL** - Enter **{{site.data.keyword.codeengineshort}}** application secured URL (only HTTPS).
     - **Verb** - Select the Verb to be called (GET or POST).
     - **Headers** - Optionally, enter a list of headers to be passed to **{{site.data.keyword.codeengineshort}}** application.
@@ -74,7 +74,7 @@ Use {{site.data.keyword.cloud}} Identity and Access Management (IAM) to create o
 1. Select a source account.
    * If the source service that needs access to the target service is in this account, select **This account**.
 
-1. Select a **Source service** as **Event Notifications**.
+1. Select a **Source service such** as **Event Notifications**.
 
 1. Specify whether you want the authorization to be for all resources or Resources based on selected attributes. If you have chosen Resources based on selected attributes, then specify the **Add attributes**: only source resource group or only source service instance.
 
@@ -84,7 +84,7 @@ Use {{site.data.keyword.cloud}} Identity and Access Management (IAM) to create o
 
 1. Select both the roles (Viewer and Writer) to assign access to the source service that accesses the target service.
 
-   If you have selected only one of these two roles (Reader or Writer) during the service to service authorization, you cannot trigger a job or configure destination. You will get an error for service to service authorization failure in these cases. Make sure that you recreate an authorization between the services with both the roles selected.
+   If you have selected only one of these two roles (Reader or Writer) during the service to service authorization, you cannot trigger a job or configure destination. You get an error for service to service authorization failure in these cases. Make sure that you recreate an authorization between the services with both the roles selected.
 {: important}
 
 1. Click **Authorize**.
@@ -99,14 +99,14 @@ For more information about all of the parameters that are available for this com
 ### Accessing event payload in {{site.data.keyword.codeengineshort}} job
 {: #en-codeengine-access-event-payload}
 
-The event payload has been transmitted to {{site.data.keyword.codeengineshort}} job using an environment variable, which can be retrieved by utilizing the `ibmendata` environment variable.
+The event payload has been transmitted to {{site.data.keyword.codeengineshort}} job by using an environment variable, which can be retrieved by using the `ibmendata` environment variable.
 
 ## Testing a {{site.data.keyword.codeengineshort}} destination configuration
 {: #en-codeengine-test-destination}
 
-You can test a {{site.data.keyword.codeengineshort}} destination in the options menu provided againts the destination. You can effortlessly test a destination, whether the provided configuration is correct or not with a single click.
+You can test a {{site.data.keyword.codeengineshort}} destination in the options menu that is provided against the destination. You can effortlessly test a destination, whether the provided configuration is correct or not with a single click.
 
-For more information on testing a destination, see [Testing Destination](/docs/event-notifications?topic=event-notifications-en-test-destination).
+For more information on testing a destination, see [Testing Destinations](/docs/event-notifications?topic=event-notifications-en-test-destination).
 
 ## {{site.data.keyword.codeengineshort}} retry policy
 {: #en-codengine-retry}

@@ -39,9 +39,9 @@ You can send notifications or alerts to multiple destination types, for example,
       - **Event type**: select event type from the list.
       - **Event subtype**: select event sub type from the event sub type list.
       - **Severity**: select severity from the severity list.
-      - **Advanced conditions**: create your own custom conditions, which must follow [JSONpath specifications](https://goessner.net/articles/JsonPath/). The correctly written rule will extract the appropriate data from the incoming request payload. {{site.data.keyword.en_short}} supports conditional operators `>=, <=, ==, >, <, !=, =~` and logical operators `||, &&` for JSONPath evaluation. You can validate your JSONPath [here](https://jsonpath.com/). If you want to add advanced conditions for event type, subtype, and severity, see the following [example](/docs/event-notifications?topic=event-notifications-en-create-en-topic#create-topic-example). Similarly you can add advanced conditions for the other available [payload fields](https://{DomainName}/apidocs/event-notifications#send-notifications-request).
+      - **Advanced conditions**: create your own custom conditions, which must follow [JSONpath specifications](https://goessner.net/articles/JsonPath/). The correctly written rule extracts the appropriate data from the incoming request payload. {{site.data.keyword.en_short}} supports conditional operators `>=, <=, ==, >, <, !=, =~` and logical operators `||, &&` for JSONPath evaluation. You can validate your JSONPath [here](https://jsonpath.com/). If you want to add advanced conditions for event type, subtype, and severity, see the following [example](/docs/event-notifications?topic=event-notifications-en-create-en-topic#create-topic-example). Similarly, you can add advanced conditions for the other available [payload fields](https://{DomainName}/apidocs/event-notifications#send-notifications-request).
 
-      The "=~" operator is a powerful tool that helps you search for patterns in strings using regular expressions.
+      The "=~" operator is a powerful tool that helps you search for patterns in strings by using regular expressions.
       {: note}
 
 ### Example:
@@ -127,12 +127,12 @@ You can send notifications or alerts to multiple destination types, for example,
    ```
       
 
-If your chosen source is an **API source** , then you can only add the "Advanced Conditions" rule to your topic.
+If your chosen source is an **API source**, then you can add the "Advanced Conditions" rule to your topic.
 {: note}
 
-If your chosen source is a **Periodic Timer Source** , then refer [here](/docs/event-notifications?topic=event-notifications-en-cron-periodic-timer) for steps to set rules for your topic. 
+If your chosen source is a **Periodic Timer Source**, then refer [here](/docs/event-notifications?topic=event-notifications-en-cron-periodic-timer) for steps to set rules for your topic. 
 
-Step 2 created a topic, step 3 provisions optional custom rules for the topic.
+Step 2 created a topic, step 3 provisioned optional custom rules for the topic.
 {: note}
 
 1. Click **Add a condition**.

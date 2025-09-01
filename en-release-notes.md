@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-08-01"
+lastupdated: "2025-09-01"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -19,6 +19,18 @@ content-type: release-note
 
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
+
+
+
+
+
+## 31 August 2025
+{: #event-notifications-Aug312025}
+{: release-note}
+
+Support for testing Webhook destination
+: {{site.data.keyword.IBM_notm}} {{site.data.keyword.en_short}} now enables users to test their Webhook destination. For more information on testing a destination, see [Testing Destinations](/docs/event-notifications?topic=event-notifications-en-test-destination).
+
 
 ## 30 July 2025
 {: #event-notifications-Jul302025}
@@ -102,15 +114,6 @@ Assigning Access to Topics and Subscriptons
 Enhanced Filtering Criteria
 : {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now supports advanced filtering criteria that can be used to add rules when you create a topic, see [Advanced Conditions](/docs/event-notifications?topic=event-notifications-en-create-en-topic).
 
-
-## 15 December 2024
-{: #event-notifications-dec1524}
-{: release-note}
-
-{{site.data.keyword.cloud_notm}} {{site.data.keyword.en_full}} is available as a deployable architecture for use in projects
-:   Cloud automation for deploying {{site.data.keyword.en_full}} by using {{site.data.keyword.cloud_notm}} projects is now available. The Cloud automation for {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_full}} deployable architecture from the {{site.data.keyword.cloud_notm}} catalog, helps you to automate {{site.data.keyword.cloud_notm}} projects through configuring, deploying, and monitoring your resource deployments by using DevOps best practices. 
-
-For more information, see [Regions and endpoints](/docs/event-notifications?topic=event-notifications-en-regions-endpoints).
 
 ## 30 September 2024
 {: #event-notifications-Sep3024}
@@ -211,7 +214,7 @@ Support for tiered pricing for Push Notifications destinations
 {: release-note}
 
 Validate connections
-:  {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now can validate the functionality and reliability of your critical connections. With this functionality, you can effortlessly test a destination with a single click. For more information, see [Test Destinations](/docs/event-notifications?topic=event-notifications-en-test-destination).
+:  {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now can validate the functionality and reliability of your critical connections. With this functionality, you can effortlessly test a destination with a single click. For more information on testing a destination, see [Testing Destinations](/docs/event-notifications?topic=event-notifications-en-test-destination).
 
 ## 20 September 2023
 {: #event-notifications-Sept2023}
@@ -328,7 +331,7 @@ Support for Email "Opt-in"
 {: release-note}
 
 New supported {{site.data.keyword.cloud_notm}} source: {{site.data.keyword.cloud_notm}} Platform Notifications
-:  {{site.data.keyword.cloud_notm}} Platform Notifications is now available as a new supported {{site.data.keyword.cloud_notm}} source. For more information, see [Enabling {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} for the notification distribution list](https://cloud.ibm.com/docs/account?topic=account-add-users-distribution-list#event-notifications-distribution-list).
+:  {{site.data.keyword.cloud_notm}} Platform Notifications is now available as a new supported {{site.data.keyword.cloud_notm}} source. For more information, see [Enabling {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} for the notification distribution list](/docs/account?topic=account-add-users-distribution-list#event-notifications-distribution-list).
 
 ## 29 August 2022
 {: #event-notifications-Aug2522}

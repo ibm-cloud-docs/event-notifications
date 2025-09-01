@@ -62,7 +62,7 @@ You can use {{site.data.keyword.mon_full_notm}} to visualize and alert on metric
 ## Enabling platform metrics for {{site.data.keyword.en_short}}
 {: #monitoring-enable}
 
-Before you can start with {{site.data.keyword.en_short}} monitoring metrics, you must first opt in and [enable platform metrics](https://cloud.ibm.com/docs/monitoring?topic=monitoring-platform_metrics_enabling).
+Before you can start with {{site.data.keyword.en_short}} monitoring metrics, you must first opt in and [enable platform metrics](/docs/monitoring?topic=monitoring-platform_metrics_enabling).
 {: note}
 
 You can configure only one instance of the {{site.data.keyword.mon_full_notm}} service per region to collect platform metrics.
@@ -87,7 +87,7 @@ For more information about launching the {{site.data.keyword.mon_full_notm}} UI,
 ## Monitoring {{site.data.keyword.en_short}}
 {: #monitoring-monitor}
 
-1. Start the [{{site.data.keyword.mon_full_notm}} web UI](https://cloud.ibm.com/docs/monitoring?topic=monitoring-launch) from the Observability page.
+1. Start the [{{site.data.keyword.mon_full_notm}} web UI](/docs/monitoring?topic=monitoring-launch) from the Observability page.
 1. Click **DASHBOARDS**.
 1. In the Default Dashboards section, expand **{{site.data.keyword.IBM_notm}}**.
 1. Select the {{site.data.keyword.en_short}} dashboard from the list.

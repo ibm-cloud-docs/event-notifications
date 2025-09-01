@@ -60,3 +60,10 @@ In addition, the following timeout conditions cause the webhook call to fail:
 
 If a call to the webhook URL fails even after retry attempts, the notification is lost.
 {: note}
+
+## Testing a Webhook destination configuration
+{: #en-webhook-test-destination}
+
+You can test a Webhook destination in the options menu provided against the destination. You can effortlessly test a destination, whether the provided configuration is correct or not with a single click.
+
+For more information on testing a destination, see [Testing Destinatios](/docs/event-notifications?topic=event-notifications-en-test-destination).

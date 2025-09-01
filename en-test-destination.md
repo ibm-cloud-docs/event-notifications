@@ -25,6 +25,7 @@ Currently this functionality supports following destinations:
 4. Microsoft&reg; Teams
 5. IBM Cloud Code Engine
 6. IBM Cloud Object Storage
+7. Webhook
 
 ## Before you begin
 {: #en-test-destination-prereqs}
@@ -45,4 +46,4 @@ Before you can start testing your destinations, you must have the following prer
    - **Status**: Whether the test is successful or failed.
    - **Response Code**: In the event of a test failure, the response code from the end destination client is returned.
    - **Response Message**: In the event of a test failure, the response message from the end destination client is returned.
-   - **Destination Activity**: If test is successful, you will see a test event delivered onto the desired destination, which will create a new message in case of Slack, Microsoft&reg; Teams, a new incident in case of PagerDuty and ServiceNow, a new invoke in case of IBM Cloud Code Engine, and at last a new object created under a provided bucket in case of IBM Cloud Object Storage.
+   - **Destination Activity**: If test is successful, you will see a test event delivered onto the desired destination, which will create a new message in case of Slack, Webhook and Microsoft&reg; Teams, a new incident in case of PagerDuty and ServiceNow, a new invoke in case of IBM Cloud Code Engine, and a new object created under a provided bucket in case of IBM Cloud Object Storage.

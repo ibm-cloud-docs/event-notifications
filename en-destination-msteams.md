@@ -109,9 +109,10 @@ Here -
 ## Testing a Microsoft&trade; Teams destination configuration
 {: #en-msteams-test-destination}
 
-You can test a Microsoft&trade; Teams destination in the options menu provided againts the destination. You can effortlessly test a destination, whether the provided configuration is correct or not with a single click.
+You can test a Microsoft&trade; Teams destination in the options menu provided against the destination. You can effortlessly test a destination, whether the provided configuration is correct or not with a single click.
 
-For more information on testing a destination, see [here](/docs/event-notifications?topic=event-notifications-en-test-destination).
+For more information on testing a destination, see [Testing Destinations](/docs/event-notifications?topic=event-notifications-en-test-destination).
+
 
 ## Microsoft Teams retry policy
 {: #en-msteams-retry}

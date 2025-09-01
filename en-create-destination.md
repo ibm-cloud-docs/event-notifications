@@ -14,7 +14,7 @@ subcollection: event-notifications
 # Creating an {{site.data.keyword.en_short}} destination
 {: #en-create-en-destination}
 
-Destinations are custom protocols, which are either services or user reachable entities. Refer [here](/docs/event-notifications?topic=event-notifications-en-destination) to find the list of destinations supported by {{site.data.keyword.en_short}}.
+Destinations are custom protocols, which are either services or user reachable entities. Refer [Working with event destinations](/docs/event-notifications?topic=event-notifications-en-destination) to find the list of destinations supported by {{site.data.keyword.en_short}}.
 
 {: shortdesc}
 
@@ -27,7 +27,7 @@ When you try to toggle the **Collect failed events** switch to **ON** without co
 
 1. Click **Destinations** in the {{site.data.keyword.en_short}} console. By default, **{{site.data.keyword.cloud_notm}} SMS service** and **{{site.data.keyword.cloud_notm}} Email service** are included, with their destination ID.
 
-1. Click **Add +** to add new destination.
+1. Click **Add +** to add a new destination.
 
    When you select the destination type as any one of the push notification services (FCM, APNs, Chrome, Firefox, and Safari), you can select a Pre-production destination for developing and testing your environments at a low cost.
    {: note}
@@ -51,5 +51,5 @@ To understand the billing impact of upgrading a **Pre-production destination** t
 
 1. Click **Add**.
 
-You cannot change a **Production destination** to **Pre-production destination**.
+You cannot change a **Production destination** to a **Pre-production destination**.
 {: important}
