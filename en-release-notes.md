@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-08-22"
+lastupdated: "2025-09-01"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -23,6 +23,13 @@ Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, sec
 
 
 
+
+## 31 August 2025
+{: #event-notifications-Aug312025}
+{: release-note}
+
+Support for testing Webhook destination
+: {{site.data.keyword.IBM_notm}} {{site.data.keyword.en_short}} now enables users to test their Webhook destination. For more information on testing a destination, see [Testing Destinations](/docs/event-notifications?topic=event-notifications-en-test-destination).
 
 
 ## 30 July 2025
@@ -207,7 +214,7 @@ Support for tiered pricing for Push Notifications destinations
 {: release-note}
 
 Validate connections
-:  {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now can validate the functionality and reliability of your critical connections. With this functionality, you can effortlessly test a destination with a single click. For more information, see [Test Destinations](/docs/event-notifications?topic=event-notifications-en-test-destination).
+:  {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now can validate the functionality and reliability of your critical connections. With this functionality, you can effortlessly test a destination with a single click. For more information on testing a destination, see [Testing Destinations](/docs/event-notifications?topic=event-notifications-en-test-destination).
 
 ## 20 September 2023
 {: #event-notifications-Sept2023}
