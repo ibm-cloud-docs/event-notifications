@@ -140,12 +140,6 @@ Endpoints are used with your credentials (Bucket name, API Key, SDK) to tell you
 ## Testing a {{site.data.keyword.cos_full_notm}} destination configuration
 {: #en-cos-test-destination}
 
-<<<<<<< Updated upstream
-You can test a {{site.data.keyword.cos_full_notm}} destination in the options menu provided against the destination. You can effortlessly test a destination, whether the provided configuration is correct or not with a single click.
-
-For more information on testing a destination, see [Testing Destinatios](/docs/event-notifications?topic=event-notifications-en-test-destination).
-=======
 You can test a {{site.data.keyword.cos_full_notm}} destination in the options menu that is provided against the destination. You can effortlessly test a destination, whether the provided configuration is correct or not with a single click.
 
 For more information on testing a destination, see [Testing destinations](/docs/event-notifications?topic=event-notifications-en-test-destination).
->>>>>>> Stashed changes
