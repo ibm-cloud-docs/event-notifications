@@ -88,10 +88,10 @@ If you attempt to use a cipher that is not on this list, you may experience conn
 {{site.data.keyword.en_short}} meets controls for global, industry, and regional compliance standards, including ISO
 27001/27017/27018/27701, and others.
 
-For a complete listing of {{site.data.keyword.cloud_notm}} compliance certifications, see [Compliance on the {{site.data.keyword.cloud_notm}}](https://ibm.com/cloud/compliance){: external}.
+For a complete listing of {{site.data.keyword.cloud_notm}} compliance certifications, see [Compliance on the {{site.data.keyword.cloud_notm}}](https://www.ibm.com/products/cloud/compliance){: external}.
 {: tip}
 
 #### ISO 27001, 27017, 27018, 27701
 {: #en-iso1}
 
-{{site.data.keyword.en_short}} is ISO 27001, 27017, 27018, and 27701 certified. You can view compliance certifications by visiting [Compliance on the {{site.data.keyword.cloud_notm}}](https://ibm.com/cloud/compliance){: external}.
+{{site.data.keyword.en_short}} is ISO 27001, 27017, 27018, and 27701 certified. You can view compliance certifications by visiting [Compliance on the {{site.data.keyword.cloud_notm}}](https://www.ibm.com/products/cloud/compliance){: external}.
