@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-08-07"
+lastupdated: "2025-09-05"
 
 keywords: event notifications CLI plug-in, CLI reference, en cli reference, event notifications cli reference, event notifications, command line reference
 
@@ -2717,6 +2717,44 @@ ibmcloud event-notifications metrics \
 ```
 {: pre}
 
+## Get Notifications Status
+{: #event-notifications-get-notifications-status-cli}
+
+This document describes the payload details for getting Notification status for Webhook Destination Test notifications.
+
+### `ibmcloud event-notifications notifications-status`
+{: #event-notifications-cli-notifications-status-command}
+
+Get notification status.
+
+```sh
+ibmcloud event-notifications notifications-status --instance-id INSTANCE-ID --id ID
+```
+
+
+#### Command options
+{: #event-notifications-notifications-status-cli-options}
+
+`--instance-id` (string)
+:   Unique identifier for IBM Cloud Event Notifications instance. Required.
+
+    The maximum length is `32` characters. The minimum length is `32` characters. The value must match regular expression `/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/`.
+
+`--id` (string)
+:   Get Notification Id. Required.
+
+    The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/`.
+
+#### Example
+{: #event-notifications-notifications-status-examples}
+
+```sh
+ibmcloud event-notifications notifications-status \
+    --instance-id=exampleString \
+    --id=exampleString
+```
+{: pre}
+
 ## Send Notifications
 {: #event-notifications-send-notifications-cli}
 
@@ -2867,7 +2905,7 @@ ibmcloud event-notifications send-notifications \
 Find a summary of changes for each version of {{site.data.keyword.en_short}} plug-in. Keep your CLI up to date so that you can use all of the available commands and their options.
 {: shortdesc}
 
-The CLI Plugin versions from 0.0.5 to 1.4.0 is deprecated.
+The CLI Plugin versions from 0.0.5 to 1.9.0 is deprecated.
 {: note}
 
 | Version | Release date | Changes |
@@ -2884,4 +2922,5 @@ The CLI Plugin versions from 0.0.5 to 1.4.0 is deprecated.
 | 1.14.0 | 28 April 2025 | PagerDuty destination deprecated parameter `api_key` is marked as optional. |
 | 1.15.0 | 27 June 2025 | The markdown content for notification. |
 | 1.16.0 | 1 Aug 2025 | Code Engine and Pre-defined Templates support. |
+| 1.17.0 | 4 September 2025 | Support webhook destination test get notifications-status command|
 {: caption="Changes in the {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} CLI" caption-side="bottom"}
