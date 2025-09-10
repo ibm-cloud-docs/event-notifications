@@ -29,11 +29,12 @@ Destinations are of two categories: human and service.
 Human destinations are devices, servers, or applications that present notifications for human consumption. The following human destinations are supported by the {{site.data.keyword.en_short}} service:
 
 
-- [Email Destinations](/docs/event-notifications?topic=event-notifications-en-destinations-email)
+- [Email Destinations](/docs/event-notifications?group=email-destinations)
    - [Inbuilt Email](/docs/event-notifications?topic=event-notifications-en-destination-email-destination-default)
    - [IBM Cloud Email service with custom domain](/docs/event-notifications?topic=event-notifications-en-destinations-custom-email)
-- [Inbuilt SMS](/docs/event-notifications?topic=event-notifications-en-destinations-sms)
-- [Custom SMS](/docs/event-notifications?topic=event-notifications-en-destinations-sms-custom)
+- [SMS Destinations](/docs/event-notifications?group=sms-destinations)
+   - [Inbuilt SMS](/docs/event-notifications?topic=event-notifications-en-destinations-sms)
+   - [Custom SMS](/docs/event-notifications?topic=event-notifications-en-destinations-sms-custom)
 - [Microsoft&reg; Teams](/docs/event-notifications?topic=event-notifications-en-destinations-msteams)
 - [PagerDuty](/docs/event-notifications?topic=event-notifications-en-destinations-pagerduty)
 - [Push notifications](/docs/event-notifications?topic=event-notifications-en-destinations-push)
@@ -56,3 +57,4 @@ Service destinations are cloud services or application where notifications are c
 - [Webhook](/docs/event-notifications?topic=event-notifications-en-destinations-webhook)
 - [{{site.data.keyword.codeengineshort}}](/docs/event-notifications?topic=event-notifications-en-destinations-codeengine)
 - [{{site.data.keyword.cos_full_notm}}](/docs/event-notifications?topic=event-notifications-en-destinations-cloud-object-storage)
+- [{{site.data.keyword.messagehub}}](/docs/event-notifications?topic=event-notifications-en-destinations-event-streams&interface=ui)
