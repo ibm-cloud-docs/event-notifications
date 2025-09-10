@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-08-01"
+lastupdated: "2025-09-10"
 
 keywords: event-notifications, event notifications, about event notifications, templates, webhook
 
@@ -19,16 +19,16 @@ A webhook represents a service destination, where an incoming notification can b
 For example, an incoming notification about an event can trigger a webhook destination to a backend microservice to act based on the content of the incoming notification.
 {: shortdesc}
 
-For more information about the Webhook destination, see [here](/docs/event-notifications?topic=event-notifications-en-destinations-webhook).
+For more information about the Webhook destination, see [Webhooks](/docs/event-notifications?topic=event-notifications-en-destinations-webhook).
 
 ## Constructing a webhook notification template
 {: #en-construct-webhook-template}
 
-Construct the template block. Make sure the template is a well-formed JSON that adheres to the Handlebars template syntax and semantics.
+Construct the template block. Make sure that the template is a well-formed JSON that adheres to the Handlebars template syntax and semantics.
 
-Handlebars is a templating language that allows for dynamic content generation within templates.Handlebars can be used to customize notification messages using template variables and conditional logic.
+Handlebars is a templating language that allows for dynamic content generation within templates. Handlebars can be used to customize notification messages by using template variables and conditional logic.
 
-If the UI is used to create the template , Handlebars is used to create the payload for the body of the template. If API/CLI is used to create the template the payload must be encoded to the Base64 format. Refer the sample template for [UI](#webhook-template-ui) or [API/CLI](#webhook-template-api-cli).
+If the UI is used to create the template, Handlebars is used to create the payload for the body of the template. If API/CLI is used to create the template, then the payload must be encoded to the Base64 format. Refer the sample template for [UI](#webhook-template-ui) or [API/CLI](#webhook-template-api-cli).
 
 
 ### UI webhook notification template example
@@ -71,6 +71,9 @@ If the UI is used to create the template , Handlebars is used to create the payl
   "runbook_url": "{{data.alert_definition.meta_labels.runbook}}"
 }
  ```
+ 
+To learn more about Handlebars integration and the various helpers offered, see [Handlebars Integration](/docs/event-notifications?topic=event-notifications-en-create-en-template&interface=ui#handlebars-integration).
+{: note}
 
 ### API or CLI webhook notification template example
 {: #webhook-template-api-cli}

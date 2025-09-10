@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-08-22"
+lastupdated: "2025-09-10"
 
 keywords: event-notifications, event notifications, about event notifications, templates, code engine
 
@@ -27,6 +27,8 @@ Construct the template block. Make sure that the template is a well-formed JSON 
 
 Handlebars is a templating language that allows for dynamic content generation within templates. Handlebars can be used to customize notification messages by using template variables and conditional logic.
 
+To learn more about Handlebars integration and the various helpers offered, see [Handlebars Integration](/docs/event-notifications?topic=event-notifications-en-create-en-template&interface=ui#handlebars-integration).
+{: note}
 
 ### {{site.data.keyword.codeengineshort}} notification template examples
 {: #en-code-engine-template-example}

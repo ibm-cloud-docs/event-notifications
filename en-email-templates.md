@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-05-02"
+lastupdated: "2025-09-10"
 
 keywords: event notifications, event-notifications, email.templates
 subcollection: event-notifications
@@ -22,9 +22,9 @@ There are 2 types of Email templates that are supported by {{site.data.keyword.e
 ## Personalizing templates
 {: #en-template-personalization}
 
-Email personalization refers to the practice of tailoring email content and messaging to individual recipients or specific segments of your email list based on their personal preferences, behaviors, demographics, or interactions with your brand. The goal of email personalization is to create a more engaging and relevant email experience for each recipient, which can lead to higher open rates, click-through rates, and conversions. See the following list of common ways you might personalize the email messaging:
+Email personalization refers to the practice of tailoring email content and messaging to individual recipients or specific segments of your email list based on their personal preferences, behaviors, demographics, or interactions with your brand. The goal of email personalization is to create a more engaging and relevant email experience for each recipient, which can lead to higher open rates, click-through rates, and conversions. See the following list of common ways that you can personalize the email messaging:
 
-   * Personalized greetings: Address the recipient by their first name in the email's salutation to make the email feel more personalized and less generic.
+   * Personalized greetings: Address the recipient by their given name in the email's salutation to make the email feel more personalized and less generic.
    * Product recommendations: Suggest products or services that are relevant to the recipient based on their past purchases.
    * Dynamic content: Use dynamic content blocks that can change based on recipient data, such as location, recent interactions, or purchase history.
    * Personalized content recommendations: Provide recommendations to specific information sources, such as blog posts, articles, or videos, based on the recipient's previous engagement with your content.
@@ -134,7 +134,7 @@ In the send notification payload, add a `personalization` parameter to enable it
 ## Custom Email Invitation
  {: #en-custom-email-invitation}
 
- Provide a subject and construct the body. Include a placeholder for inserting the invitation text, accompanied by the subscription URL. This placeholder, represented as `{{ibmen_invitation}}`, is used to substitute the invitation URL.
+ Provide a subject and construct the body. Include a placeholder for inserting the invitation text, which is accompanied by the subscription URL. This placeholder, represented as `{{ibmen_invitation}}`, is used to substitute the invitation URL.
 
 ### Invitation Template Payload Example
  {: #invitation-payload}
