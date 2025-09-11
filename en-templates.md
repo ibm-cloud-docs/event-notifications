@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-08-05"
+lastupdated: "2025-09-11"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -38,14 +38,17 @@ An {{site.data.keyword.en_full_notm}} template is a pre-defined layout that incl
 
 
 ## Handlebars Integration
+{: #handlebars-integration}
 
 Handlebars is a templating language that allows for dynamic content generation within templates. Handlebars can be used to customize notification messages using template variables ,conditional logic and various other helpers.
 
 ### Template Variables
+{: #template-variables}
 
 Template variables are placeholders within the notification message templates that get replaced with actual data when a notification is triggered. These variables allow users to personalize messages and include relevant information from the event being notified.
 
 #### Usage:
+{: #usage-template-variables}
 
 ```handlebars
 {{variable_name}}
@@ -57,10 +60,12 @@ Event Name: {{event_name}}
 ```
 
 ### Conditional Logic Helper
+{: #conditional-logic-helper}
 
 Conditional logic allows users to define conditions within the message templates, enabling dynamic content generation based on the values of variables. This feature is useful for creating flexible notification messages that adapt to different scenarios.
 
 #### Usage:
+{: #usage-conditional-logic-helper}
 
 ```handlebars
 {{#if condition}}
@@ -80,10 +85,12 @@ Example:
 ```
 
 ### Contains Helper
+{: #contains-helper}
 
 The contains helper allows users to check whether there is a specific word in any of the fields of the payload.
 
 #### Example:
+{: #example-contains-helper}
 
 ```
 "data": 
@@ -105,6 +112,7 @@ There are more helpers available for use that can be referenced from [here](http
 {: note}
 
 ### Examples:
+{: #template-examples}
 
 Payload:
 
