@@ -26,7 +26,7 @@ You can configure a webhook destination in the `Destinations` tab. As part of th
 ## Supported HTTP Verbs
 {: #en-supported-verbs}
 
-{{site.data.keyword.en_short}} webhooks support the http verbs GET, POST, PUT and PATCH. 
+{{site.data.keyword.en_short}} webhooks support the http verbs GET, POST, PUT, and PATCH. 
 
 - GET : Retrieves a representation of the specified resource.
 - POST : Creates a new resource.
@@ -43,7 +43,7 @@ To identify that the incoming notification is coming from {{site.data.keyword.en
 
 You can allowlist the ranges of IP addresses to restrict access to your servers that receive webhooks. For more information, see [webhook IP addresses](/docs/account?topic=account-webhook-ips).
 
-Regardless of the location of the Event Notification Service instance, to ensure uninterrupted webhook traffic you should add the IP ranges of all regions to your allow list.
+Regardless of the location of the Event Notifications Service instance, to help ensure uninterrupted webhook traffic that you should add the IP ranges of all regions to your allowlist.
 
 ## Webhook retry policy
 {: #en-webhook-retry}
@@ -61,9 +61,9 @@ In addition, the following timeout conditions cause the webhook call to fail:
 If a call to the webhook URL fails even after retry attempts, the notification is lost.
 {: note}
 
-## Testing a Webhook destination configuration
+## Testing a webhook destination configuration
 {: #en-webhook-test-destination}
 
-You can test a Webhook destination in the options menu provided against the destination. You can effortlessly test a destination, whether the provided configuration is correct or not with a single click.
+You can test a webhook destination in the options menu that is provided against the destination. You can effortlessly test a destination, whether the provided configuration is correct or not with a single click.
 
-For more information on testing a destination, see [Testing Destinatios](/docs/event-notifications?topic=event-notifications-en-test-destination).
+For more information on testing a destination, see [Testing Destinations](/docs/event-notifications?topic=event-notifications-en-test-destination).
