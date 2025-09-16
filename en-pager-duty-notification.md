@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-09-10"
+lastupdated: "2025-09-16"
 
 keywords: event-notifications, event notifications, about event notifications, templates, pagerduty
 
@@ -43,10 +43,7 @@ If the UI is used to create the template, Handlebars is used to create the paylo
     "source": "{{ source }}"
   },
   "dedup_key": "{{ id }}",
-  {{#equal data.status "triggered"}}
   "event_action": "trigger"
-   {{/equal}}
-
 }
 ```
 
