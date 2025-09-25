@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-09-05"
+lastupdated: "2025-09-25"
 
 keywords: event notifications CLI plug-in, CLI reference, en cli reference, event notifications cli reference, event notifications, command line reference
 
@@ -625,7 +625,7 @@ ibmcloud event-notifications destination --help
       }
       ```  
 
-       - The following example shows the format of the `DestinationConfig` object for {{site.data.keyword.messagehub}}(event_streams) destination.
+   - The following example shows the format of the `DestinationConfig` object for {{site.data.keyword.messagehub}}(event_streams) destination.
 
       ```json
       {
@@ -636,6 +636,19 @@ ibmcloud event-notifications destination --help
          }
       }
       ```
+
+   - The following example shows the format of the `DestinationConfig` object for {{site.data.keyword.appconfig_short}}(app_configuration) destination.
+
+      ```json
+      {
+         "params" : {
+           "type": "features",
+           "crn": "crn:v1:bluemix:public:apprapp:us-south:a/4a74f2c31f554afc88156b73a1d577c6:dbxxxx93-0xxa-4xx5-axcf-c2faxxxd::",
+           "environment_id": "stage",
+           "feature_id": "test"
+         }
+      }
+      ```   
 
    Note: The Custom SMS Destination does not require any Destination Config To be set up.
 
@@ -1267,6 +1280,21 @@ ibmcloud event-notifications subscription --help
          "template_id_notification": "a59f6e38-7a48-xxxx-b665-3724afc58b13",
       }
       ```
+      - The following example shows the format of the `SubscriptionCreateAttributes` object for App Configuration. When creating or updating a subscription for an **App Configuration** destination, the `attributes` object has a specific rule:  
+         - You must include **either** `feature_flag_enabled` **or** `template_id_notification`  
+         - You **cannot** include both properties together  
+         This ensures that a subscription is created for the correct use case — either **feature flag evaluation** or **notification templating**, but not both at once.
+
+      ```json
+      {
+         "template_id_notification": "e40843c8-xxxx-4717-xxxx-f923f2786a34",
+      }
+      ```
+      ```json
+      {
+         "feature_flag_enabled": false,
+      }
+      ```
 
 ### ibmcloud event-notifications subscription list
 {: #en-cli-subscription-list-command}
@@ -1488,6 +1516,22 @@ ibmcloud event-notifications subscription --help
       ```json
       {
          "template_id_notification": "a59f6e38-7a48-xxxx-b665-3724axx58b13",
+      }
+      ```
+
+      - The following example shows the format of the `SubscriptionCreateAttributes` object for App Configuration. When creating or updating a subscription for an **App Configuration** destination, the `attributes` object has a specific rule:  
+         - You must include **either** `feature_flag_enabled` **or** `template_id_notification`  
+         - You **cannot** include both properties together  
+         This ensures that a subscription is created for the correct use case — either **feature flag evaluation** or **notification templating**, but not both at once.
+
+      ```json
+      {
+         "template_id_notification": "e40843c8-xxxx-4717-xxxx-f923f2786a34",
+      }
+      ```
+      ```json
+      {
+         "feature_flag_enabled": false,
       }
       ```
 
@@ -1881,6 +1925,17 @@ ibmcloud event-notifications template-create \
     --name exampleString \
     --type ibmceapp.notification\
     --params '{"body": "ewogICJ2YXIxIjogInt7ZGF0YS52YXIxfX0iLAogICJ2YXIyIjogInt7ZGF0YS52YXIyfX0iCn0="}' \
+    --description exampleString
+```
+
+- The following example shows the format of the `TemplateConfig` object for App Configuration. The supported type is `app_configuration.notification`
+
+```sh
+ibmcloud event-notifications template-create \
+    --instance-id exampleString \
+    --name exampleString \
+    --type app_configuration.notification\
+    --params '{"body": "eyJlbmFibGVkIjogZmFsc2V9Cg=="}' \
     --description exampleString
 ```
 
@@ -2923,4 +2978,5 @@ The CLI Plugin versions from 0.0.5 to 1.9.0 is deprecated.
 | 1.15.0 | 27 June 2025 | The markdown content for notification. |
 | 1.16.0 | 1 Aug 2025 | Code Engine and Pre-defined Templates support. |
 | 1.17.0 | 4 September 2025 | Support webhook destination test get notifications-status command|
+| 1.18.0 | 25 Spetember 2025 | Appconfiguration destination, subscription and Template support |
 {: caption="Changes in the {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} CLI" caption-side="bottom"}
