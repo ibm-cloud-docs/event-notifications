@@ -58,3 +58,4 @@ Service destinations are cloud services or application where notifications are c
 - [{{site.data.keyword.codeengineshort}}](/docs/event-notifications?topic=event-notifications-en-destinations-codeengine)
 - [{{site.data.keyword.cos_full_notm}}](/docs/event-notifications?topic=event-notifications-en-destinations-cloud-object-storage)
 - [{{site.data.keyword.messagehub}}](/docs/event-notifications?topic=event-notifications-en-destinations-event-streams&interface=ui)
+- [{{site.data.keyword.appconfig_short}}](/docs/event-notifications?topic=event-notifications-en-destination-app-configuration&interface=ui)

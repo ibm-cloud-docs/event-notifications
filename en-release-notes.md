@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-09-01"
+lastupdated: "2025-09-25"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -19,6 +19,13 @@ content-type: release-note
 
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
+
+## 25 September 2025
+{: #event-notifications-Sep252025}
+{: release-note}
+
+New destination: {{site.data.keyword.appconfig_full}}
+:  {{site.data.keyword.appconfig_full}} is now available as a destination. You can [send notifications to your {{site.data.keyword.appconfig_full}} destination by using {{site.data.keyword.en_full}}](/docs/event-notifications?topic=event-notifications-en-destination-app-configuration&interface=ui).
 
 
 

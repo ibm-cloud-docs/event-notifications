@@ -26,6 +26,7 @@ Currently the following destinations support this functionality:
 5. IBM Cloud Code Engine
 6. IBM Cloud Object Storage
 7. Webhook
+8. App Configuration
 
 ## Before you begin
 {: #en-test-destination-prereqs}

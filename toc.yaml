@@ -74,6 +74,7 @@ toc:
           - en-destination-codeengine.md
           - en-destination-cloud-object-storage.md
           - en-destination-event-streams.md
+          - en-destination-app-configuration.md
           - en-test-destination.md
       - en-cfe-integrations.md
       - topicgroup:
@@ -86,6 +87,7 @@ toc:
           - en-pager-duty-notification.md
           - en-event-streams-notification-template.md
           - en-code-engine-templates.md
+          - en-appconfig-notification-template.md
       - en-markdown-formatted-notifications.md
       - topicgroup:
           label: Observability
