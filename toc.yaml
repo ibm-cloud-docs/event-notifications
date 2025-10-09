@@ -1,4 +1,3 @@
----
 toc:
   properties:
     subcollection: event-notifications
@@ -28,6 +27,7 @@ toc:
       id: howto
       topics:
       - en-create-topic.md
+      - en-advanced-filtering.md
       - en-create-subscription.md
       - en-integrations.md
       - en-smtp-configurations.md
