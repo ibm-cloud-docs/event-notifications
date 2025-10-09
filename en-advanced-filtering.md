@@ -13,14 +13,14 @@ subcollection: event-notifications
 # Advanced Filtering using JSONPath
 {: #en-advanced-filtering}
 
-While creating topics you can add your own custom conditions, which must follow the [JSONpath specifications](https://goessner.net/articles/JsonPath/). JSONPath is a Java DSL for reading JSON documents. The correctly written rule extracts the appropriate data from the incoming request payload. {{site.data.keyword.en_short}} supports conditional operators `>=, <=, ==, >, <, !=, =~` and logical operators `||, &&` for JSONPath evaluation. You can validate your JSONPath [JSONPath Validator](https://jsonpath.com/). If you want to add advanced conditions for event type, subtype, and severity, see the following [example](/docs/event-notifications?topic=event-notifications-en-create-en-topic#create-topic-example). Similarly, you can add advanced conditions for the other available [payload fields](https://{DomainName}/apidocs/event-notifications#send-notifications-request).
+While creating topics you can add your own custom conditions, which must follow the [JSONpath specifications](https://goessner.net/articles/JsonPath/). JSONPath is a Java DSL for reading JSON documents. The correctly written rule extracts the appropriate data from the incoming request payload. {{site.data.keyword.en_short}} supports conditional operators `>=, <=, ==, >, <, !=, =~` and logical operators `||, &&` for JSONPath evaluation. You can validate your JSONPath [JSONPath Validator](https://jsonpath.com/). If you want to add advanced conditions for event type, subtype, and severity, see the following [example](/docs/event-notifications?topic=event-notifications-en-advanced-filtering&interface=ui#en-advanced-filtering-examples). Similarly, you can add advanced conditions for the other available [payload fields](https://{DomainName}/apidocs/event-notifications#send-notifications-request).
 
 JSONPath expressions can use the dot–notation:
 ```bash
 $.data.details[0].name
 ```
 
-We only support regular expressions compatible with the [Go regexp package](https://pkg.go.dev/regexp).This package does not support lookbehind or negative lookahead assertions (e.g., `(?<!...)`, `(?!...)` are not supported).If you need to express a negative match, use a positive regular expression and apply the `not` operator provided by us to invert the result. See [Path Examples](#path-examples) to find an example of the usage of the `not` operator.
+We only support regular expressions compatible with the [Go regexp package](https://pkg.go.dev/regexp).This package does not support lookbehind or negative lookahead assertions (e.g., `(?<!...)`, `(?!...)` are not supported).If you need to express a negative match, use a positive regular expression and apply the `not` operator provided by us to invert the result. See [Path Examples](/docs/event-notifications?topic=event-notifications-en-advanced-filtering&interface=ui#en-advanced-filtering-examples) to find an example of the usage of the `not` operator.
 {: note}
 
 
@@ -133,7 +133,3 @@ Based on the previous JSON input, the following valid JSONPaths can be construct
 | `$.data.details[?(@.country == "India")].name == "Alice"`| JSONPath to check if the person from India has the name Alice. |
 | `not($.data.details[?(@.name =~ 'Ali*')])` | JSONPath to check if there is any person whose name does not start with `Ali`. |
 {: caption="Valid JSONPaths" caption-side="bottom"}
-
-
-
-
