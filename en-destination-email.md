@@ -33,6 +33,9 @@ If you would like to send your own content in the email or send emails from your
 
 Read through and follow [the suggested etiquettes](/docs/event-notifications?topic=event-notifications-en-email-bestpractices) when utilizing the IBM Cloud email service.
 
+ Sending invitations or emails to Group Email addresses or Distribution Lists is not supported.
+ {: note}
+
 ## Subscription workflow
 {: #en-destinations-email-subscription-flow}
 
