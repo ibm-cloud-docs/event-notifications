@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-09-25"
+lastupdated: "2025-10-28"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -19,6 +19,14 @@ content-type: release-note
 
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
+
+## 31 October 2025
+{: #event-notifications-Oct312025}
+{: release-note}
+
+Support for Cloning SMTP Credentials
+:  {{site.data.keyword.en_short}} now permits cloning of SMTP credentials across configurations. You can clone the same credentials across SMTP configurations if you need the same credentials for other SMTP configurations/Domains within the **same instance**. See [SMTP Configurations](/docs/event-notifications?topic=event-notifications-en-smtp-configurations)
+
 
 ## 25 September 2025
 {: #event-notifications-Sep252025}
