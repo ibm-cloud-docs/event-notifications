@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-09-25"
+lastupdated: "2025-10-13"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -33,8 +33,7 @@ An {{site.data.keyword.en_full_notm}} template is a pre-defined layout that incl
     * [PagerDuty Notification](/docs/event-notifications?topic=event-notifications-en-pagerduty-notification-template)
     * [Event Streams Notification](/docs/event-notifications?topic=event-notifications-en-event-streams-notification-template)
     * [Code Engine Notification](/docs/event-notifications?topic=event-notifications-en-code-engine-notification-template&interface=ui)
-    * [App Configuration Notification](/docs/event-notifications?topic=event-notifications-en-appconfig-notification-template&interface=ui)
-
+    * [App Configuration Notification](/docs/event-notifications?topic=event-notifications-en-app-configuration-notification-template&interface=ui)
 
 1. Click **Add** to save your updates. 
 

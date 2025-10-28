@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-09-25"
+lastupdated: "2025-10-13"
 
 keywords: event-notifications, event notifications, about event notifications, destinations,app configuration, app config
 
@@ -59,7 +59,7 @@ To configure {{site.data.keyword.appconfig_short}} as a destination, perform the
     - Provide the **Name**, an optional **Description**, and select the **Topic** and **Destination** created previously.
     - You can choose to send the notification based on **Attributes** or on a **Template**. While creating the {{site.data.keyword.appconfig_short}} subscription, either the attribute or template must be defined. These define the state of the feature flag while sending a notification.
         - **Attributes** - If you choose to send the notification based on attributes, you can choose to enable the feature flag or disable it when a notification is sent.
-        - **Template** - If you choose to send the notification based on a template, you need to define the template under the **Templates** section of the left navigation pane. See [App Configuration Notification Template](/docs/event-notifications?topic=event-notifications-en-appconfig-notification-template&interface=ui) to learn the process of creating a template to send notifications to {{site.data.keyword.appconfig_short}}.
+        - **Template** - If you choose to send the notification based on a template, you need to define the template under the **Templates** section of the left navigation pane. See [App Configuration Notification Template](/docs/event-notifications?topic=event-notifications-en-app-configuration-notification-template&interface=ui) to learn the process of creating a template to send notifications to {{site.data.keyword.appconfig_short}}.
 
 1. Click **Create**.
 
