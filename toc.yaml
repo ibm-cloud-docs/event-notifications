@@ -88,6 +88,7 @@ toc:
           - en-event-streams-notification-template.md
           - en-code-engine-templates.md
           - en-appconfig-notification-template.md
+      - en-predefined-templates.md
       - en-markdown-formatted-notifications.md
       - topicgroup:
           label: Observability

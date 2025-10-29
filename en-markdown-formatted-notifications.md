@@ -2,11 +2,11 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-08-01"
+lastupdated: "2025-10-29"
 
-keywords:
+keywords: markdown-formatted event notifications
 
-subcollection: event-notifications, markdown-formatted event notifications
+subcollection: event-notifications
 
 ---
 {{site.data.keyword.attribute-definition-list}}
