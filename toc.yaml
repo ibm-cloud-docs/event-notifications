@@ -81,6 +81,7 @@ toc:
           label: Event Notifications Templates
           topics:
           - en-templates.md
+          - en-predefined-templates.md
           - en-email-templates.md
           - en-webhook-notifications-template.md
           - en-slack-notification-template.md
@@ -88,7 +89,6 @@ toc:
           - en-event-streams-notification-template.md
           - en-code-engine-templates.md
           - en-appconfig-notification-template.md
-      - en-predefined-templates.md
       - en-markdown-formatted-notifications.md
       - topicgroup:
           label: Observability

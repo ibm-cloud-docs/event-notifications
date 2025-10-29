@@ -15,13 +15,16 @@ subcollection: event-notifications
 
 You can use pre-defined templates to design and structure notification messages.
 
-You can modify pre-defined templates to best suit your requirements and define your own templates easily. They are a ready reference of the significant fields in the notifications. Thus they help build relevant and actionable alert notifications. It is not necessary to create templates from the ground up, nor is an in-depth understanding of event payload structures required.
+You can modify pre-defined templates to best suit your requirements and save it as a user-defined template. They are a ready reference of the significant fields in the notifications. Thus they help build relevant and actionable alert notifications. It is not necessary to create templates from the ground up, nor is an in-depth understanding of event payload structures required.
 
-Pre-defined templates are detailed structures of event payloads to be sourced from various {{site.data.keyword.cloud_notm}} event services for each destination like Slack, Email, and MS Teams. A template is defined for a source to be received at a destination. For example, a pre-defined template is defined for Resource Lifecycle event as a source and Slack as a destination.
+Pre-defined templates are detailed structures of event payloads to be sourced from various {{site.data.keyword.cloud_notm}} event services for each destination like Slack, Email, and MS Teams. A single pre-defined template is defined for a pair of source and destination each. For example, a pre-defined template is defined for Resource Lifecycle event as a source and Slack as a destination.
 {: shortdesc}
 
-However, if you do not define any user-defined templates for a source to be received at a certain destination, the notification message structures itself based on the pre-defined template if present.
+However, if there is no user-defined template attached to the Subscription, the notification message structures itself based on the pre-defined template if present.
 {: important}
+
+Pre-defined template for In-built Email as a destination and any of the source types cannot be customized.
+{: note}
 
 ## Use pre-defined templates to create user-defined templates
 {: #en-createUserdefinedTemplates}

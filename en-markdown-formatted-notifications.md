@@ -30,15 +30,17 @@ To format notifications by using markdown formatting, you must include `ibmenmar
 
 The notification has a certain structure and format for every destination. A precedence order is in place to transform the event notification payload structure into a meaningful message for each destination.
 
-* A notification adheres to the defined template if you have defined one.
+* A notification adheres to the user-defined template if you have defined one.
 
-* If you do not define a template for a destination and include `ibmenmarkdown` field in the payload, a notification message maps to `ibmenmarkdown` field in the event notification payload.
+* A notification adheres to the pre-defined template if defined, if a user-defined template is not defined and a pre-defined template is defined for that pair of source and destination.
+
+* If you do not define a template for a destination and not have a pre-defined template in place or have and include `ibmenmarkdown` field in the payload, a notification message maps to `ibmenmarkdown` field in the event notification payload.
 
 * Else, if you do not include `ibmenmarkdown` field in the payload, a notification message maps to `ibmendefaultshort` and `ibmendefaultlong` fields in the event notification payload.
 
 For Email as a destination, if you include `ibmenhtmlbody` field in the payload and do not define a template, a notification message maps to `ibmenhtmlbody` field. Else, a notification message maps to `ibmenmarkdown` field in the event notification payload.
 
-## Structure event notifications payload using Markdown formatting
+## Structure event notifications payload by using Markdown formatting
 {: #en-markdown-formatted-ibmenmarkdown}
 
 The `ibmenmarkdown` field in the event notification payload must be a markdown-formatted text. It is designed one time and can be rendered in specific destination format at the Email, Slack, and Microsoft Teams destinations.
@@ -68,16 +70,16 @@ To use `ibmenmarkdown` field, refer to the following payload example.
 
 ```
 
-To understand the markdown formatting used to transform messages, check the [Markdown Cheat Sheet](https://markdownguide.offshoot.io/cheat-sheet/).
+To understand the markdown formatting used to transform messages, check the [Markdown cheat sheet](https://markdownguide.offshoot.io/cheat-sheet/).
 
-To understand event notifications payload, check the [api specification](/apidocs/event-notifications#send-notifications) for sending a notification.
+To understand the event notifications payload, check the [api specification](/apidocs/event-notifications#send-notifications) for sending a notification.
 
 ### Supported markdown elements
 {: #en-supported-markdown-elements}
 
-The following table lists the supported mardown elements for Slack, MS teams and Email destinations.
+The following table lists the supported markdown elements for Slack, MS teams, and Email destinations.
 
-|Elements                    | Mardown formatting              | Slack                               | MS teams                           |Email                               |
+|Elements                    | Markdown formatting              | Slack                               | MS teams                           |Email                               |
 |----------------------------|---------------------------------|-------------------------------------|------------------------------------|------------------------------------|
 | **Bold**                   | `**bold text**`                 | Supported                           | Supported                          | Supported                          |
 | **Italic**                 | `*italic*`                      | Supported                           | Supported                          | Supported                          |
@@ -88,7 +90,7 @@ The following table lists the supported mardown elements for Slack, MS teams and
 | **Inline Code**            | `` `code` ``                    | Supported                           | Not Supported                      | Supported                          |
 | **Code Block**             | \```language code block ```     | Supported                           | Not Supported                      | Supported                          |
 | **Blockquote**             | `> quote`                       | Supported                           | Not Supported                      | Supported                          |
-| **Emojis**                 | `:emoji_name:` (e.g., `:smile:`)| Supported                           | Not Supported                      | Not Supported                      |
+| **Emojis**                 | `:emoji_name:` (for example, `:smile:`)| Supported                           | Not Supported                      | Not Supported                      |
 {: caption="Supported markdown elements" caption-side="top"}
 
 
