@@ -133,16 +133,16 @@ After successful verification of a SMTP configuration in an IBM Cloud Event Noti
     The SMTP Endpoints are available in following regions: `us-south` and `eu-de`. For example, it can be seen as instances created in London and Sydney also connect to the Dallas SMTP endpoint, and instances created in Madrid also connect to the Frankfurt SMTP endpoint.
     {: note}
 
-2. The SMTP interface port number. Currently supported port 587.
+2. The SMTP interface port number. The supported port is 587.
 
 3. The SMTP username and password. A maximum of 5 users can be created in a single SMTP configuration. Event Notifications supports `Login` and `Plain` authentication methods from the SMTP protocol.
 
     Once the SMTP username and password is created ,you can clone the same credentials across SMTP configurations if you need the same credentials for other SMTP configurations/Domains within the **same instance**. This is supported via API/CLI/SDK and Terraform.
     {: note}
 
-4. Valid IP addresses or subnets can be [allowlisted from CBR](#enabling-context-based-restrictions-to-access-the-smtp-interface) through which the client can connect to the SMTP interface.
+4. Valid IP addresses or subnets can be [allowlisted from CBR](/docs/event-notifications?topic=event-notifications-en-smtp-configurations#en-smtp-configurations-cbr) through which the client can connect to the SMTP interface.
 
-5. IBM Cloud Event Notifications SMTP interface currently supports connection over `StartTLS` method for secure data transmission over networks.
+5. IBM Cloud Event Notifications SMTP interface supports connection over `StartTLS` method for secure data transmission over networks.
 
 6. When accessing IBM Cloud Event Notifications through the SMTP interface, your SMTP client application assembles the message. The information you need to provide may vary depending on the application you are using. The following are the minimum requirements for an SMTP exchange between a client and a server:
    * Source address: The source address must belong to the configured domain; otherwise, the sender address will be rejected.
