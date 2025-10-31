@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2021, 2025
-lastupdated: "2025-07-28"
+lastupdated: "2025-10-31"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email, smtp
 
@@ -9,6 +9,7 @@ subcollection: event-notifications
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+
 
 # Using the {{site.data.keyword.en_short}} SMTP Interface
 {: #en-smtp-configurations}
