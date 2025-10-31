@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-09-25"
+lastupdated: "2025-10-30"
 
 keywords: event notifications CLI plug-in, CLI reference, en cli reference, event notifications cli reference, event notifications, command line reference
 
@@ -2309,7 +2309,7 @@ ibmcloud event-notifications smtp-configurations \
 Create a new SMTP User.
 
 ```sh
-ibmcloud event-notifications smtp-user-create --instance-id INSTANCE-ID --id ID [--description DESCRIPTION]
+ibmcloud event-notifications smtp-user-create --instance-id INSTANCE-ID --id ID [--description DESCRIPTION] [--username-to-clone USERNAME-TO-CLONE]
 ```
 
 #### Command options
@@ -2330,6 +2330,10 @@ ibmcloud event-notifications smtp-user-create --instance-id INSTANCE-ID --id ID 
 
     The maximum length is `250` characters. The minimum length is `0` characters. The value must match regular expression `/[a-zA-Z 0-9-_\/.?:'";,+=!#@$%^&*() ]*/`.
 
+`--username-to-clone` (string)
+:   provide name of the user to clone.
+
+    The maximum length is `20` characters. The minimum length is `1` character. The value must match regular expression `/^[a-z0-9]{18}\\d{2}$/`.
 #### Example
 {: #event-notifications-smtp-user-create-examples}
 
@@ -2337,7 +2341,8 @@ ibmcloud event-notifications smtp-user-create --instance-id INSTANCE-ID --id ID 
 ibmcloud event-notifications smtp-user-create \
     --instance-id=exampleString \
     --id=exampleString \
-    --description=exampleString
+    --description=exampleString \
+    --username-to-clone=exampleString
 ```
 {: pre}
 
@@ -2979,4 +2984,5 @@ The CLI Plugin versions from 0.0.5 to 1.9.0 is deprecated.
 | 1.16.0 | 1 Aug 2025 | Code Engine and Pre-defined Templates support. |
 | 1.17.0 | 4 September 2025 | Support webhook destination test get notifications-status command|
 | 1.18.0 | 25 Spetember 2025 | Appconfiguration destination, subscription and Template support |
+| 1.19.0 | 30 October 2025 | Support for clone smtp user credentials |
 {: caption="Changes in the {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} CLI" caption-side="bottom"}

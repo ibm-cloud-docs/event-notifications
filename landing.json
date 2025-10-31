@@ -37,10 +37,10 @@
     }
   ],
   "section_devtools": {
-      "api": "/apidocs/event-notifications",
-      "cli": "/docs/event-notifications?topic=event-notifications-event-notifications-cli"
-    },
+    "api": "/apidocs/event-notifications",
+    "cli": "/docs/event-notifications?topic=event-notifications-event-notifications-cli"
+  },
   "section_updates": {
-      "view_more": "/docs/event-notifications?topic=event-notifications-release-notes"
-    }
+    "view_more": "/docs/event-notifications?topic=event-notifications-release-notes"
+  }
 }

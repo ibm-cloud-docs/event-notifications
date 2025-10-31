@@ -107,7 +107,9 @@ It is mandatory to setup CBR rules for the IBM Cloud Event Notifications instanc
 After successful verification of a SMTP configuration in an IBM Cloud Event Notifications instance, to send email using SMTP Interface you need following parameters:
 
 1. The list of IBM Cloud Event Notifications SMTP endpoints for each region is mentioned in below table:
-    
+
+    **Non-EU Regions:**
+        
     | Event Notifications Instance Region | SMTP Public Endpoint                                   | SMTP Private Endpoint
     |-------------------------------------|-------------------------------------------------|---------------------------------------------------------|
     | us-south (Dallas)                   | smtp.us-south.event-notifications.cloud.ibm.com | private.smtp.us-south.event-notifications.cloud.ibm.com |
@@ -116,39 +118,39 @@ After successful verification of a SMTP configuration in an IBM Cloud Event Noti
     | jp-osa (Osaka)                      | smtp.us-south.event-notifications.cloud.ibm.com | private.smtp.us-south.event-notifications.cloud.ibm.com |
     | au-syd (Sydney)                     | smtp.us-south.event-notifications.cloud.ibm.com | private.smtp.us-south.event-notifications.cloud.ibm.com |
     | eu-gb (London)                      | smtp.us-south.event-notifications.cloud.ibm.com | private.smtp.us-south.event-notifications.cloud.ibm.com |
-    | eu-de (Frankfurt)                   | smtp.eu-de.event-notifications.cloud.ibm.com    | private.smtp.eu-de.event-notifications.cloud.ibm.com    |
-    | eu-es (Madrid)                      | smtp.eu-de.event-notifications.cloud.ibm.com    | private.smtp.eu-de.event-notifications.cloud.ibm.com    |
     | br-sao (Sao Paulo)                  | smtp.us-south.event-notifications.cloud.ibm.com | private.smtp.us-south.event-notifications.cloud.ibm.com |
     | ca-mon (Montreal)                   | smtp.us-south.event-notifications.cloud.ibm.com | private.smtp.us-south.event-notifications.cloud.ibm.com |
-    {: caption="IBM Cloud Event Notifications SMTP endpoints" caption-side="bottom"}
+    {: caption="IBM Cloud Event Notifications Non-EU regions SMTP endpoints" caption-side="bottom"}
+
+    **EU Regions:**
+
+    | Event Notifications Instance Region | SMTP Public Endpoint                                   | SMTP Private Endpoint
+    |-------------------------------------|-------------------------------------------------|---------------------------------------------------------|
+    | eu-de (Frankfurt)                   | smtp.eu-de.event-notifications.cloud.ibm.com    | private.smtp.eu-de.event-notifications.cloud.ibm.com    |
+    | eu-es (Madrid)                      | smtp.eu-de.event-notifications.cloud.ibm.com    | private.smtp.eu-de.event-notifications.cloud.ibm.com    |
+    {: caption="IBM Cloud Event Notifications EU regions SMTP endpoints" caption-side="bottom"}
 
     The SMTP Endpoints are available in following regions: `us-south` and `eu-de`. For example, it can be seen as instances created in London and Sydney also connect to the Dallas SMTP endpoint, and instances created in Madrid also connect to the Frankfurt SMTP endpoint.
     {: note}
 
-2. The SMTP interface port number. Currently supported port 587.
+2. The SMTP interface port number. The supported port is 587.
 
-3. The SMTP username and password. Usernames and passwords are unique across SMTP configurations and passwords are encrypted using single-way hashing. A maximum of 5 users can be created in a single SMTP configuration. We are currently supporting `Login` and `Plain` authentication methods from the SMTP protocol.
+3. The SMTP username and password. A maximum of 5 users can be created in a single SMTP configuration. Event Notifications supports `Login` and `Plain` authentication methods from the SMTP protocol.
 
-4. IBM Cloud Event Notifications SMTP interface currently supports connection over `StartTLS` method for secure data transmission over networks.
+    Once the SMTP username and password is created ,you can clone the same credentials across SMTP configurations if you need the same credentials for other SMTP configurations/Domains within the **same instance**. This is supported via API/CLI/SDK and Terraform.
+    {: note}
 
-5. Client software or program can communicate strictly using Transport Layer Security (TLS).
+4. Valid IP addresses or subnets can be [allowlisted from CBR](/docs/event-notifications?topic=event-notifications-en-smtp-configurations#en-smtp-configurations-cbr) through which the client can connect to the SMTP interface.
 
-6. Valid IP addresses or subnets can be provided from which the client is connecting to the SMTP interface.
+5. IBM Cloud Event Notifications SMTP interface supports connection over `StartTLS` method for secure data transmission over networks.
 
-7. When accessing IBM Cloud Event Notifications through the SMTP interface, your SMTP client application assembles the message. The information you need to provide may vary depending on the application you are using. The following are the minimum requirements for an SMTP exchange between a client and a server:
+6. When accessing IBM Cloud Event Notifications through the SMTP interface, your SMTP client application assembles the message. The information you need to provide may vary depending on the application you are using. The following are the minimum requirements for an SMTP exchange between a client and a server:
    * Source address: The source address must belong to the configured domain; otherwise, the sender address will be rejected.
    * Destination address: The destination address can be any valid email address or set of email addresses
    * Message data: Ensure that the message data is spam-free, clean, and sensible.
 
-8. The outgoing IP address list based on the SMTP endpoint is mentioned below. These IPs will be listed on the receiver's email clients:
-
-    | SMTP Endpoint                                   | Outgoing IP addresses                                                                         |
-    |-------------------------------------------------|-----------------------------------------------------------------------------------------------|
-    | smtp.us-south.event-notifications.cloud.ibm.com | 150.240.68.207, 52.118.103.220, 169.47.95.114, 169.59.33.169, 150.239.167.120, 52.118.185.176 |
-    | smtp.eu-de.event-notifications.cloud.ibm.com    | 149.81.218.203, 158.177.6.24, 149.81.39.14, 158.176.12.194, 149.81.164.10, 161.156.160.31     |
-    {: caption="IBM Cloud Event Notifications OUtgoing IP addresses" caption-side="bottom"}
-
-9. As per the current configurations, attachments are not supported in Event Notifications SMTP interface.
+ As per the current configurations, attachments are not supported in Event Notifications SMTP interface.
+ {: note}
 
 ## Using SMTP interface for sending emails
 {: #en-smtp-configurations-send-emails}

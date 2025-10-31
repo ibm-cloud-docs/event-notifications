@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-10-13"
+lastupdated: "2025-10-29"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -15,16 +15,23 @@ subcollection: event-notifications
 # Creating an {{site.data.keyword.en_short}} template
 {: #en-create-en-template}
 
-An {{site.data.keyword.en_full_notm}} template is a pre-defined layout that includes images, text, and dynamic content based on an event. You can use a template as a base and customize it rather than creating a new one from scratch each time. 
+An {{site.data.keyword.en_full_notm}} template defines the layout and content of notifications (email, webhook, Slack, etc.). Templates can include images, static text, and dynamic content (variables, conditional logic) based on events.
+
+Event Notifications supports two types of templates:
+
+1. User-defined templates: You can design your own templates to structure notification messages.
+
+1. [Pre-defined templates](/docs/event-notifications?topic=event-notifications-en-predefinedTemplates): These are standard templates defined for a pair of specific source and destination. You can customize pre-defined templates to create a user defined template.
+
 {: shortdesc}
 
-## Creating a template
+## Creating a user-defined template
 {: #en-create-template}
 
-1. In the {{site.data.keyword.cloud_notm}} console, click the **menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Event notifications**. 
-1. Click the name of your {{site.data.keyword.en_short}} instance. 
-1. Select **Templates** from the left panel.
-1. Enter details about the template such as the name and description, and select a template type. Event Notifications currently supports the following templates:
+1. In the {{site.data.keyword.cloud_notm}} console, click the **menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Event notifications**.
+1. Click the name of your {{site.data.keyword.en_short}} instance.
+1. Select **Templates** from the left panel and click **Create**.
+1. Enter details about the template such as the name and description, and select a template type. Event Notifications currently supports the following user-defined templates:
 
     * [Custom Email Notification](/docs/event-notifications?topic=event-notifications-en-email-templates)
     * [Custom Email Invitation](/docs/event-notifications?topic=event-notifications-en-email-templates)
@@ -35,7 +42,7 @@ An {{site.data.keyword.en_full_notm}} template is a pre-defined layout that incl
     * [Code Engine Notification](/docs/event-notifications?topic=event-notifications-en-code-engine-notification-template&interface=ui)
     * [App Configuration Notification](/docs/event-notifications?topic=event-notifications-en-app-configuration-notification-template&interface=ui)
 
-1. Click **Add** to save your updates. 
+1. Click **Add** to save your updates.
 
 
 ## Handlebars Integration
@@ -94,12 +101,12 @@ The contains helper allows users to check whether there is a specific word in an
 {: #example-contains-helper}
 
 ```
-"data": 
+"data":
 {
 	"message": "this is test alert from dev account"
 }
 ```
-Use the contains helpers like: 
+Use the contains helpers like:
 
 ```handlebars
 {
@@ -118,7 +125,7 @@ There are more helpers available for use that can be referenced from [here](http
 Payload:
 
 ```json
-"data": 
+"data":
 {
 	"message": "this is test alert from dev account",
 	"secrets": [
@@ -164,9 +171,9 @@ Payload:
 
 ```handlebars
 {{#each data.secrets}}
-	{ 
-	"secret_expiration": "{{secret_expiration}}", 
-	 "event_time": "{{event_time}}" 
+	{
+	"secret_expiration": "{{secret_expiration}}",
+	 "event_time": "{{event_time}}"
 	 }
 {{/each}}
 ```

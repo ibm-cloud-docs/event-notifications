@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-09-10"
+lastupdated: "2025-10-29"
 
 keywords: event notifications, event-notifications, email.templates
 subcollection: event-notifications
@@ -14,10 +14,15 @@ subcollection: event-notifications
 # Email Templates
 {: #en-email-templates}
 
-There are 2 types of Email templates that are supported by {{site.data.keyword.en_short}}:
+There are 3 types of Email templates that are supported by {{site.data.keyword.en_short}}:
 
+   * Email notification
    * [Custom Email notification](#en-custom-email-notification)
    * [Custom Email invitation](#en-custom-email-invitation)
+
+Email only supports [Pre-defined templates](/docs/event-notifications?topic=event-notifications-en-predefinedTemplates).
+{: note}
+
 
 ## Personalizing templates
 {: #en-template-personalization}
@@ -31,7 +36,7 @@ Email personalization refers to the practice of tailoring email content and mess
    * Location-based personalization: Customize content or promotions based on the recipient's geographic location or time zone.
 
 
-When you create a template to enable personalization, add a placeholder in the HTML Handlebars format, for example: 
+When you create a template to enable personalization, add a placeholder in the HTML Handlebars format, for example:
 
 ```
     {{ibmenreferer personalization ibmenmailto 'name'}}
@@ -39,10 +44,10 @@ When you create a template to enable personalization, add a placeholder in the H
 
 The personalization tags are described in the following list:
 
-   * `ibmenreferer`: Specifies where to enable the personalization. 
+   * `ibmenreferer`: Specifies where to enable the personalization.
    * `personalization`: Specifies from where to select personalization values in the send notifications payload.
    * `ibmenmailto`: Iterate through an array of emails to which mapping can be done for personalization.
-   * `name`: Specifies which value to select from a key. 
+   * `name`: Specifies which value to select from a key.
 
 
 ## Custom Email Notification
@@ -153,7 +158,7 @@ In the send notification payload, add a `personalization` parameter to enable it
          <table>
              <tr>
                  <td>
-                     Hello invitation link:{{ibmen_invitation }} 
+                     Hello invitation link:{{ibmen_invitation }}
                  </td>
              </tr>
          </table>
