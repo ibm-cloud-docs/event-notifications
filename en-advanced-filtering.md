@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-10-09"
+lastupdated: "2025-11-03"
 
 keywords: event-notifications, event notifications, about event notifications, topics, advanced filtering
 
@@ -92,8 +92,8 @@ Filters are logical expressions used to filter arrays. The filters listed in the
         "location": "London",
         "company": "IBM",
         "region": "london",
-        "event_type": "secret_about_to_expire ",
-        "event_sub_type": "in_60_days ",
+        "event_type": "secret_about_to_expire",
+        "event_sub_type": "in_60_days",
         "severity" : "MEDIUM"
     }
 }
