@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-10-31"
+lastupdated: "2025-12-08"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -19,6 +19,13 @@ content-type: release-note
 
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
+
+## 7 December 2025
+{: #event-notifications-Dec72025}
+{: release-note}
+
+Bounce metric details for email notifications
+: You can now view the details of the bounced metrics for email notifications. To know more, see [Monitor IBM Cloud® Event Notifications metrics for email notifications](/docs/event-notifications?topic=event-notifications-en-manage-monitor-metrics).
 
 ## 31 October 2025
 {: #event-notifications-Oct312025}

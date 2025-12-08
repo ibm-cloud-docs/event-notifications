@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-07-08"
+lastupdated: "2025-12-08"
 
 keywords: event-notifications, metrics for email notifications, monitor metrics
 
@@ -44,6 +44,8 @@ To add more filter criteria, click **Filter** and select one of the following at
 
 1. **Subject**
 
+1. **Subscription name**
+
 You must provide valid values for **Notification ID** , **Email to** and **Subject** if added to the filter criteria. You can select required values from **Destination name** and **Source name** if added to the filter criteria.
 
 You can view metrics for pre-defined time periods of **Last 24 hours**, **Last 7 days**, or **Last 30 days** or custom defined dates.
@@ -64,6 +66,18 @@ The visual represention using graphs can help you to understand pattern of metri
 To download the metrics in your local system, go to **More** &gt; **Export to [desired format]**. Currently, you can export the graphs in CSV, PNG, and JPG formats.
 
 You can also get a glimpse of the total number of **Bounced** or **Opened** notifications for the selected time period.
+
+To view the the notifications that have bounced, you can refer to the bounce table that contains the following information:
+
+1. **Email address** : The email address of the receiver.
+
+1. **Subscription** : The subscription to which the notifications are sent.
+
+1. **Timestamp** : The timestamp of the bounced notification.
+
+1. **Bounce Reason** : The reason behind the notification bounce.
+
+1. **Subject** : The subject of the bounced email.
 
 
 ### View metrics for email notifications sent from SMTP configuration
@@ -100,3 +114,15 @@ The visual represention using graphs can help you to understand pattern of metri
 To download the metrics in your local system, go to **More** &gt; **Export to [desired format]**. Currently, you can export the graphs in CSV, PNG, and JPG formats.
 
 You can also get a glimpse of the total number of **Bounced** notifications for the selected time period.
+
+To view the the notifications that have bounced, you can refer to the bounce table that contains the following information:
+
+1. **Email address** : The email address of the receiver.
+
+1. **IP Address** : The IP address of the sender.
+
+1. **Timestamp** : The timestamp of the bounced notification.
+
+1. **Bounce Reason** : The reason behind the notification bounce.
+
+1. **Subject** : The subject of the bounced email.
