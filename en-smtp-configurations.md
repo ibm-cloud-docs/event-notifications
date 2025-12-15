@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2021, 2025
-lastupdated: "2025-10-31"
+lastupdated: "2025-12-12"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email, smtp
 
@@ -15,6 +15,19 @@ subcollection: event-notifications
 {: #en-smtp-configurations}
 
 IBM Cloud Event Notifications supports SMTP, the most common email protocol on the internet. You can send email using a variety of clients, software, or programming languages that support SMTP by connecting to the IBM Cloud Event Notifications SMTP interface. This document explains how to set up SMTP configuration, obtain user credentials, and setup a CBR rule to access the SMTP server.
+
+## Creating a SMTP Configuration
+{: #en-smtp-configuration-create}
+
+1. Create an {{site.data.keyword.en_short}} instance. To learn the process of creating an instance, see [Getting Started](/docs/event-notifications?topic=event-notifications-getting-started).
+
+2. Navigate to the instance dashboard and click on **SMTP Configurations** in the left navigation pane.
+
+3. Click **Add+**.
+
+4. Provide the name, an optional description and the domain name.
+
+5. Click **Add**.
 
 ## Domain name verification
 {: #en-smtp-configurations-verify}
