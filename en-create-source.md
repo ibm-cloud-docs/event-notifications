@@ -70,3 +70,33 @@ API Sources cannot be used to send notifications to out-of-the-box destinations 
 1. Type a name and an optional description and click **Add**.
 
 Follow the instructions in the [{{site.data.keyword.en_short}} API documentation](/apidocs/event-notifications), or in the SDK documentation for your programming language to configure the connection as you are connecting from your own application or service.
+
+## Adding a source to receive hyperwarp events
+{: #en-source-hyperwarp}
+
+### Before you begin
+{: #en-hyperwarp-prerequisites}
+
+1. Make sure that your service is onboarded to Event Notifications. See [Onboarding your service](/docs/event-notifications-onboarding?topic=event-notifications-onboarding-submitrequest) to learn the procedure to onboard your service to Event Notifications.
+
+2. Once your service is onboarded, ensure that a service-to-service authorization between your service as the source and Event Notifications as the target is present.
+
+### Steps
+{: #en-steps-add-source-hyperwarp}
+
+1. To learn the process of creating a source in Event Notifications, see [Creating a Source using API](https://cloud.ibm.com/apidocs/event-notifications#create-sources). The name, crn of your source instance and the enabled flag are required fields, whereas the description is an optional field.
+
+**Example:**
+
+```json
+{
+    "name": "vpc-test",
+    "enabled":true,
+    "description": "Testing for vpc",
+    "source":"crn of your source instance"
+}
+```
+
+2. To learn the process of sending a notification from source to destination, see [Getting started with Event Notifications](/docs/event-notifications?topic=event-notifications-getting-started).
+
+3. Once you have set up your Event Notifications instance, the Event Notifications team will start listening to the events from Hyperwarp for the selected instance and send notifications to your destination.

@@ -14,7 +14,7 @@ subcollection: event-notifications
 # Creating an {{site.data.keyword.en_short}} topic
 {: #en-create-en-topic}
 
-You can send notifications or alerts to multiple destination types, for example, email, SMS, and others that are subscribed to a particular topic. Configure topics as needed and {{site.data.keyword.en_short}} handles the routing and delivering of alerts reliably to the correct destinations.
+A topic is needed to filter the incoming events from the Source. Each source is connected to a topic through a user-defined filter. Notifications that pass into a topic are pushed to all subscribed destinations. A topic can connect to multiple sources and has an independent filter for each source that is connected to it. Configure topics as needed and {{site.data.keyword.en_short}} handles the routing and delivering of alerts reliably to the correct destinations.
 {: shortdesc}
 
 ## Creating a topic
