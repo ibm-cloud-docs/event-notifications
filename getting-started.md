@@ -3,7 +3,7 @@
 copyright:
 
   years: 2021, 2025
-lastupdated: "2025-07-28"
+lastupdated: "2025-12-18"
 
 keywords: event notifications, IBM Cloud
 
@@ -73,7 +73,7 @@ Changing plans from a chargeable plan (Standard) to free plan (Lite) is not perm
 {: #en-decide-event-source}
 {: step}
 
-You can create either an `API Source` or an `{{site.data.keyword.cloud_notm}}` source.
+You can create either an `API Source` or an `{{site.data.keyword.cloud_notm}}` source. To learn the more about the process of adding a source, see [Adding an Event Notifications source](/docs/event-notifications?topic=event-notifications-en-add-source).
 
 An `API source` indicates that the Event originated outside of {{site.data.keyword.cloud_notm}} and is sent to {{site.data.keyword.en_short}} service through API calls.
 
@@ -92,13 +92,18 @@ The list of IBM provided sources is as follows:
 - [Toolchain](https://{DomainName}/docs/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-cd&interface=ui){: external}
 - [watsonx.data](https://{DomainName}/docs/watsonxdata?topic=watsonxdata-event-notifications-events){: external}
 - [OpenPages](https://{DomainName}/docs/openpages?topic=openpages-event-notifications-events){: external}
-
+- [{{site.data.keyword.logs_full_notm}}](https://{DomainName}/docs/cloud-logs?topic=cloud-logs-event-notifications-alerts)
+- [{{site.data.keyword.cephaas_full_notm}}](https://{DomainName}/docs/cephaas?topic=cephaas-event-notifications-events)
+- watsonx.governance
 
 ## Choose an event destination
 {: #en-decide-event-destination}
 {: step}
 
 A destination is a delivery target for a notification. Two destination categories are supported: human and service.
+
+To learn the more about the process of creating a destination, see [Creating an Event Notifications destination](/docs/event-notifications?topic=event-notifications-en-create-en-destination).
+
 
 ### Human destinations
 {: #en-destination-human}
@@ -132,3 +137,23 @@ Service destinations are cloud services or applications where notifications are 
 - [{{site.data.keyword.codeengineshort}}](/docs/event-notifications?topic=event-notifications-en-destinations-codeengine)
 - [{{site.data.keyword.cos_full_notm}}](/docs/event-notifications?topic=event-notifications-en-destinations-cloud-object-storage)
 - [{{site.data.keyword.messagehub}}](/docs/event-notifications?topic=event-notifications-en-destinations-event-streams&interface=ui)
+- [{{site.data.keyword.appconfig_notm}}](/docs/event-notifications?topic=event-notifications-en-destination-app-configuration)
+
+
+## Create a topic
+{: #en-getting-started-create-topic}
+{: step}
+
+A topic is needed to filter the incoming events from the Source. Each source is connected to a topic through a user-defined filter. Notifications that pass into a topic are pushed to all subscribed destinations. A topic can connect to multiple sources and has an independent filter for each source that is connected to it. Configure topics as needed and {{site.data.keyword.en_short}} handles the routing and delivering of alerts reliably to the correct destinations.
+
+To learn the more about the process of creating a topic, see [Creating a topic](/docs/event-notifications?topic=event-notifications-en-create-en-topic#en-create-topic).
+
+## Create a subscription
+{: #en-getting-started-create-subscription}
+{: step}
+
+Destinations subscribe to topics. Multiple destinations can subscribe to a single topic. An email subscription is a list of all emails IDs, and an SMS subscription is a list of all phone numbers that a notification is routed to. A webhook subscription links a webhook destination to a topic.
+
+To learn the more about the process of creating a subscription, see [Creating a subscription](/docs/event-notifications?topic=event-notifications-en-create-en-subscription#en-create-subscription).
+
+Once you have created the subscription, you will receive a notification at the destination chosen previously whenever an event occurs.

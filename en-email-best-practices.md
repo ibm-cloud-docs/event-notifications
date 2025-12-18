@@ -46,7 +46,7 @@ IBM {{site.data.keyword.en_short}} is a powerful tool for sending event-related 
     - In this service, a single IP address is designated for sending emails on behalf of multiple domains. This shared IP address is authenticated using SPF, which allows it to be used to send emails to all users of the {{site.data.keyword.en_short}} service.
     
  - **Consequences**:
-    - Unfortunately, due to the shared IP address, the entire IP reputation is affected by one user's actions, due to which, another user's legitimate event notifications may also be blocked or flagged as spam by the email service providers, despite their adherence to the best practices.
+    - Unfortunately, due to the shared IP address, the entire IP reputation is affected by one user's actions, due to which, another user's legitimate events may also be blocked or flagged as spam by the email service providers, despite their adherence to the best practices.
     - If the shared IP's reputation is adversely impacted, it will be challenging for both the users to deliver emails effectively.
 
 Thus, it is important to maintain a responsible and ethical approach to email communication, as the actions of one user on a shared IP address can impact the deliverability of all users. Regular monitoring, education, and adherence to email best practices are crucial to prevent such issues.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-10-29"
+lastupdated: "2025-12-18"
 
 keywords: event notifications, event-notifications, email.templates
 subcollection: event-notifications
@@ -62,31 +62,32 @@ In the send notification payload, add a `personalization` parameter to enable it
 {: #send-payload}
 
 ```json
-    {
-        "id": "b2198eb8-04b1-48ec-a78c-ee87694dd845",
-        "time": "06/06/2022, 14:23:01",
-        "source": "apisource/git",
-        "specversion": "1.0",
-        "ibmensourceid": "d6f08a53-05f6-465f-903e-03db3fa91b64:api",
-        "data": {
-        "greet": "Evening",
-        "severity": "LOW",
-        "short_description": "Success! Your Event Notifications instance is now able to send personalised notifications",
-        "transaction_id": "e539778e-4915-4586-b4c9-48e44af5c010",
-        "name": "IBM Cloud Event Notifications",
-        "price": "100",
-        "rating": "4.9"
-        },
-        "datacontenttype": "application/json",
-        "ibmendefaultlong": "This is a original long message",
-        "ibmendefaultshort": "IBM Cloud Event Notifications is a routing service that provides information about critical events in your IBM Cloud account",
-        "ibmenmailto": "[\"john.piquet@ibm.com\"]",
-        "personalization": {
-        "john.piquet@ibm.com": {
-            "name": "JOHN ALFA PIQUET"
-        }
-        }
-    }
+  {
+	"id": "b2198eb8-04b1-48ec-a78c-ee87694dd845",
+	"time": "06/06/2022, 14:23:01",
+	"source": "apisource/git",
+	"specversion": "1.0",
+	"type": "*",
+	"ibmensourceid": "d6f08a53-05f6-465f-903e-03db3fa91b64:api",
+	"data": {
+		"greet": "Evening",
+		"severity": "LOW",
+		"short_description": "Success! Your Event Notifications instance is now able to send personalised notifications",
+		"transaction_id": "e539778e-4915-4586-b4c9-48e44af5c010",
+		"name": "IBM Cloud Event Notifications",
+		"price": "100",
+		"rating": "4.9"
+	},
+	"datacontenttype": "application/json",
+	"ibmendefaultlong": "This is a original long message",
+	"ibmendefaultshort": "IBM Cloud Event Notifications is a routing service that provides information about critical events in your IBM Cloud account",
+	"ibmenmailto": "[\"john.piquet@ibm.com\"]",
+	"personalization": {
+		"john.piquet@ibm.com": {
+			"name": "JOHN ALFA PIQUET"
+		}
+	}
+}
 ```
 
 ### Notification template payload example
