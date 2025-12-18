@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2024
-lastupdated: "2024-10-07"
+  years: 2020, 2025
+lastupdated: "2025-12-18"
 
 keywords: event notifications, event-notifications, source, tutorials
 
@@ -86,16 +86,17 @@ Follow the instructions in the [{{site.data.keyword.en_short}} API documentation
 
 1. To learn the process of creating a source in Event Notifications, see [Creating a Source using API](https://cloud.ibm.com/apidocs/event-notifications#create-sources). The name, crn of your source instance and the enabled flag are required fields, whereas the description is an optional field.
 
-**Example:**
+   **Example:**
 
-```json
-{
-    "name": "vpc-test",
-    "enabled":true,
-    "description": "Testing for vpc",
-    "source":"crn of your source instance"
-}
-```
+   ```json
+   {
+      "name": "vpc-test",
+      "enabled":true,
+      "description": "Testing for vpc",
+      "source":"crn of your source instance"
+   }
+   ```
+
 
 2. To learn the process of sending a notification from source to destination, see [Getting started with Event Notifications](/docs/event-notifications?topic=event-notifications-getting-started).
 

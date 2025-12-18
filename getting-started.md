@@ -3,7 +3,7 @@
 copyright:
 
   years: 2021, 2025
-lastupdated: "2025-07-28"
+lastupdated: "2025-12-18"
 
 keywords: event notifications, IBM Cloud
 
