@@ -20,9 +20,8 @@ content-type: release-note
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
 
-
-## 30 July 2025
-{: #event-notifications-Jul302025}
+## 14 January 2026
+{: #event-notifications-Jan142026}
 {: release-note}
 
 {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} is now available in the Washington DC region
