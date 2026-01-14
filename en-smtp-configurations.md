@@ -1,7 +1,7 @@
 ---
 copyright:
-  years: 2021, 2025
-lastupdated: "2025-12-12"
+  years: 2021, 2026
+lastupdated: "2026-01-14"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email, smtp
 
@@ -134,6 +134,7 @@ After successful verification of a SMTP configuration in an IBM Cloud Event Noti
     | eu-gb (London)                      | smtp.us-south.event-notifications.cloud.ibm.com | private.smtp.us-south.event-notifications.cloud.ibm.com |
     | br-sao (Sao Paulo)                  | smtp.us-south.event-notifications.cloud.ibm.com | private.smtp.us-south.event-notifications.cloud.ibm.com |
     | ca-mon (Montreal)                   | smtp.us-south.event-notifications.cloud.ibm.com | private.smtp.us-south.event-notifications.cloud.ibm.com |
+    | us-east (Washington DC)             | smtp.us-south.event-notifications.cloud.ibm.com | private.smtp.us-south.event-notifications.cloud.ibm.com |
     {: caption="IBM Cloud Event Notifications Non-EU regions SMTP endpoints" caption-side="bottom"}
 
     **EU Regions:**

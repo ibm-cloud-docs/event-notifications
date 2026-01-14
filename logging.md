@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2018, 2025
+  years: 2018, 2026
 lastupdated: "2025-07-28"
 
 keywords: event notifications cloud logs, event notifications logging, event notifications external logs
@@ -36,7 +36,8 @@ You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on platf
 | Tokyo (`jp-tok`)       | [Yes]{: tag-green}   |
 | Osaka (`jp-osa`)       | [Yes]{: tag-green}   |
 | Sao Paulo (`br-sao`)   | [Yes]{: tag-green}   |
-| Montreal (`ca-mon`)   | [Yes]{: tag-green}   |
+| Montreal (`ca-mon`)    | [Yes]{: tag-green}   |
+| Washington DC (`us-east`) | [Yes]{: tag-green} |
 {: caption="Locations where platform logs are generated" caption-side="top"}
 
 ### Locations where logs are sent to {{site.data.keyword.logs_full_notm}}
@@ -44,9 +45,9 @@ You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on platf
 
 {{site.data.keyword.en_short}} sends platform logs to {{site.data.keyword.logs_full_notm}} in the regions indicated in the following table.
 
-| Dallas (`us-south`) | Washington (`us-east`)  | Toronto (`ca-tor`) | Sao Paulo (`br-sao`) | Montreal (`ca-mon`) |
+| Dallas (`us-south`) | Washington DC (`us-east`)  | Toronto (`ca-tor`) | Sao Paulo (`br-sao`) | Montreal (`ca-mon`) |
 |---------------------|-------------------------|-------------------|----------------------|----------------------|
-| [Yes]{: tag-green} | [No]{: tag-red} | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} |
+| [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} |
 {: caption="Regions where platform logs are sent in Americas locations" caption-side="top"}
 {: #logs-table-1}
 {: tab-title="Americas"}
@@ -79,9 +80,9 @@ You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on platf
 
 {{site.data.keyword.en_short}} sends logs by {{site.data.keyword.logs_routing_full_notm}} in the regions that are indicated in the following table.
 
-| Dallas (`us-south`) | Washington (`us-east`)  | Toronto (`ca-tor`) | Sao Paulo (`br-sao`) | Montreal (`ca-mon`) |
+| Dallas (`us-south`) | Washington DC (`us-east`)  | Toronto (`ca-tor`) | Sao Paulo (`br-sao`) | Montreal (`ca-mon`) |
 |---------------------|-------------------------|-------------------|----------------------|----------------------|
-| [Yes]{: tag-green} | [No]{: tag-red} | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} |
+| [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} |
 {: caption="Regions where platform logs are sent in Americas locations" caption-side="top"}
 {: #lr-table-1}
 {: tab-title="Americas"}

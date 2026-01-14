@@ -55,6 +55,7 @@ The following table lists the high-availability (HA) status for the regions (loc
 | North America | Toronto (ca-tor)|MZR|
 | Brazil | Sao Paulo (br-sao) | MZR |
 | North America | Montreal (ca-mon) | MZR |
+| North America | Washington DC (us-east) | MZR |
 {: caption="HA status for the regions" caption-side="bottom"}
 
 Where:

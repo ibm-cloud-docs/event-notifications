@@ -44,9 +44,9 @@ You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on event
 
 {{site.data.keyword.en_short}} sends activity tracking events by {{site.data.keyword.atracker_full_notm}} in the regions that are indicated in the following table.
 
-| Dallas (`us-south`) | Washington (`us-east`)  | Toronto (`ca-tor`) | Sao Paulo (`br-sao`) | Montreal (`ca-mon`) |
+| Dallas (`us-south`) | Washington DC (`us-east`)  | Toronto (`ca-tor`) | Sao Paulo (`br-sao`) | Montreal (`ca-mon`) |
 |---------------------|-------------------------|-------------------|----------------------|---------------------|
-| [Yes]{: tag-green} | [No]{: tag-red} | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} |
+| [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} |
 {: caption="Regions where activity tracking events are sent in Americas locations" caption-side="top"}
 {: #atracker-table-1}
 {: tab-title="Americas"}

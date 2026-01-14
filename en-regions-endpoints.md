@@ -33,6 +33,7 @@ Review region and connectivity options for interacting with {{site.data.keyword.
 - Osaka (`jp-osa`)
 - Sao Paulo (`br-sao`)
 - Montreal (`ca-mon`)
+- Washington DC (`us-east`)
 
 You can create {{site.data.keyword.en_full_notm}} resources in one of the supported {{site.data.keyword.cloud_notm}} regions.
 
@@ -64,6 +65,7 @@ The following table contains the base URLs for the {{site.data.keyword.en_full_n
 | Osaka |`https://jp-osa.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
 | Sao Paulo | `https://br-sao.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
 | Montreal | `https://ca-mon.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
+| Washington DC | `https://us-east.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
 {: caption="Public endpoints for interacting with {{site.data.keyword.en_short}} by using APIs" caption-side="bottom"}
 
 ### Private endpoints
@@ -83,4 +85,5 @@ If you need to manage your {{site.data.keyword.en_short}} resources over a priva
 | Osaka |`https://private.jp-osa.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
 | Sao Paulo |`https://private.br-sao.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
 | Montreal |`https://private.ca-mon.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
+| Washington DC |`https://private.us-east.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
 {: caption="Private endpoints for interacting with {{site.data.keyword.en_short}} by using APIs" caption-side="bottom"}

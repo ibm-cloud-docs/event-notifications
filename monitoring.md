@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2018, 2025
+  years: 2018, 2026
 lastupdated: "2025-07-28"
 
 keywords: IBM Cloud, observability
@@ -29,9 +29,9 @@ You can use {{site.data.keyword.mon_full_notm}} to visualize and alert on metric
 
 {{site.data.keyword.en_full}} sends metrics in the regions that are indicated in the following table.
 
-| Dallas (`us-south`) | Washington (`us-east`)  | Toronto (`ca-tor`) | Sao Paulo (`br-sao`) | Montreal (`ca-mon`) |
+| Dallas (`us-south`) | Washington DC (`us-east`)  | Toronto (`ca-tor`) | Sao Paulo (`br-sao`) | Montreal (`ca-mon`) |
 |---------------------|-------------------------|-------------------|----------------------|----------------------|
-| [Yes]{: tag-green}| [No]{: tag-red} | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} |
+| [Yes]{: tag-green}| [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} |
 {: caption="Regions where metrics are sent in Americas locations" caption-side="top"}
 {: #mon-table-1}
 {: tab-title="Americas"}

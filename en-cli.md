@@ -83,6 +83,7 @@ export IBMCLOUD_EN_ENDPOINT=<https://au-syd.event-notifications.cloud.ibm.com/ev
    - **Toronto:** `https://ca-tor.event-notifications.cloud.ibm.com/event-notifications`
    - **Sao Paulo:** `https://br-sao.event-notifications.cloud.ibm.com/event-notifications`
    - **Montreal:** `https://ca-mon.event-notifications.cloud.ibm.com/event-notifications`
+   - **Washington DC:** `https://us-east.event-notifications.cloud.ibm.com/event-notifications`
 
 - export **IBMCLOUD_EN_ENDPOINT** variable to set the {{site.data.keyword.en_short}} region private endpoint.
 
@@ -96,6 +97,7 @@ export IBMCLOUD_EN_ENDPOINT=<https://au-syd.event-notifications.cloud.ibm.com/ev
    - **Toronto:** `https://private.ca-tor.event-notifications.cloud.ibm.com/event-notifications`
    - **Sao Paulo:** `https://private.br-sao.event-notifications.cloud.ibm.com/event-notifications`
    - **Montreal:** `https://private.ca-mon.event-notifications.cloud.ibm.com/event-notifications`
+   - **Washington DC:** `https://private.us-east.event-notifications.cloud.ibm.com/event-notifications`
 
 - export **EVENT_NOTIFICATIONS_API_KEY** variable to set the {{site.data.keyword.en_short}} instance `apikey`.
 
