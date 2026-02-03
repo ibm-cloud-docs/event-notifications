@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-01-14"
+lastupdated: "2026-01-29"
 
 keywords: event notifications CLI plug-in, CLI reference, en cli reference, event notifications cli reference, event notifications, command line reference
 
@@ -3096,4 +3096,5 @@ The CLI Plugin versions from 0.0.5 to 1.9.0 is deprecated.
 | 1.18.0 | 25 Spetember 2025 | Appconfiguration destination, subscription and Template support |
 | 1.19.0 | 30 October 2025 | Support for clone smtp user credentials |
 | 1.20.0 | 15 December 2025 | Support for bounce metrics |
+| 1.20.1 | 19 January 2026 | Fix for private endpoint support metadata and EN plugin install issue in private.cloud.ibm.com | 
 {: caption="Changes in the {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} CLI" caption-side="bottom"}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-01-14"
+lastupdated: "2026-02-03"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -19,6 +19,13 @@ content-type: release-note
 
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
+
+## 03 February 2026
+{: #event-notifications-Feb32026}
+{: release-note}
+
+{{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} supports SMTP connections accessible via CSE endpoints
+:  {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} can securely send emails from Classic infrastructure environments using private network connectivity.
 
 ## 14 January 2026
 {: #event-notifications-Jan142026}
