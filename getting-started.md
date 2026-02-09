@@ -3,7 +3,7 @@
 copyright:
 
   years: 2021, 2026
-lastupdated: "2025-12-18"
+lastupdated: "2026-02-09"
 
 keywords: event notifications, IBM Cloud
 
@@ -50,6 +50,7 @@ Decide on a location where your service to be hosted. Currently, the following l
 * Sao Paulo (br-sao)
 * Montreal (ca-mon)
 * Washington DC (us-east)
+* Chennai (in-che)
 
 ## Decide on a pricing plan
 {: #en-decide-pricing-plans}
