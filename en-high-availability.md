@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2025
-lastupdated: "2025-07-28"
+  years: 2021, 2026
+lastupdated: "2026-02-09"
 
 keywords: HA for Event Notifications, high availability for Event Notifications, Event Notifications, disaster recovery
 
@@ -56,6 +56,7 @@ The following table lists the high-availability (HA) status for the regions (loc
 | Brazil | Sao Paulo (br-sao) | MZR |
 | North America | Montreal (ca-mon) | MZR |
 | North America | Washington DC (us-east) | MZR |
+| Asia-Pacific| Chennai (in-che) | MZR |
 {: caption="HA status for the regions" caption-side="bottom"}
 
 Where:

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2025
-lastupdated: "2025-07-28"
+  years: 2021, 2026
+lastupdated: "2026-02-09"
 
 keywords: event-notifications, event notifications, regions, endpoints, private endpoints
 
@@ -34,6 +34,7 @@ Review region and connectivity options for interacting with {{site.data.keyword.
 - Sao Paulo (`br-sao`)
 - Montreal (`ca-mon`)
 - Washington DC (`us-east`)
+- Chennai (`in-che`)
 
 You can create {{site.data.keyword.en_full_notm}} resources in one of the supported {{site.data.keyword.cloud_notm}} regions.
 
@@ -66,6 +67,7 @@ The following table contains the base URLs for the {{site.data.keyword.en_full_n
 | Sao Paulo | `https://br-sao.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
 | Montreal | `https://ca-mon.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
 | Washington DC | `https://us-east.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
+| Chennai | `https://in-che.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
 {: caption="Public endpoints for interacting with {{site.data.keyword.en_short}} by using APIs" caption-side="bottom"}
 
 ### Private endpoints
@@ -86,4 +88,5 @@ If you need to manage your {{site.data.keyword.en_short}} resources over a priva
 | Sao Paulo |`https://private.br-sao.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
 | Montreal |`https://private.ca-mon.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
 | Washington DC |`https://private.us-east.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
+| Chennai |`https://private.in-che.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
 {: caption="Private endpoints for interacting with {{site.data.keyword.en_short}} by using APIs" caption-side="bottom"}

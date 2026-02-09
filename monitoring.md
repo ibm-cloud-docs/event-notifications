@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2026
-lastupdated: "2025-07-28"
+lastupdated: "2026-02-09"
 
 keywords: IBM Cloud, observability
 
@@ -41,7 +41,7 @@ You can use {{site.data.keyword.mon_full_notm}} to visualize and alert on metric
 
 | Tokyo (`jp-tok`)    | Sydney (`au-syd`) |  Osaka (`jp-osa`) | Chennai (`in-che`) |
 |---------------------|------------------|------------------|--------------------|
-| [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [No]{: tag-red} |
+| [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} |
 {: caption="Regions where metrics are sent in Asia Pacific locations" caption-side="top"}
 {: #mon-table-2}
 {: tab-title="Asia Pacific"}

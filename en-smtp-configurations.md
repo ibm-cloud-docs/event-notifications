@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2021, 2026
-lastupdated: "2026-02-03"
+lastupdated: "2026-02-09"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email, smtp
 
@@ -119,6 +119,35 @@ It is mandatory to setup CBR rules for the IBM Cloud Event Notifications instanc
 {: #en-smtp-configurations-requirements}
 
 After successful verification of a SMTP configuration in an IBM Cloud Event Notifications instance, to send email using SMTP Interface you need following parameters:
+
+1. The list of IBM Cloud Event Notifications SMTP endpoints for each region is mentioned in below table:
+
+    **Non-EU Regions:**
+        
+    | Event Notifications Instance Region | SMTP Public Endpoint                                   | SMTP Private Endpoint
+    |-------------------------------------|-------------------------------------------------|---------------------------------------------------------|
+    | us-south (Dallas)                   | smtp.us-south.event-notifications.cloud.ibm.com | private.smtp.us-south.event-notifications.cloud.ibm.com |
+    | ca-tor (Toronto)                    | smtp.us-south.event-notifications.cloud.ibm.com | private.smtp.us-south.event-notifications.cloud.ibm.com |
+    | jp-tok (Tokyo)                      | smtp.us-south.event-notifications.cloud.ibm.com | private.smtp.us-south.event-notifications.cloud.ibm.com |
+    | jp-osa (Osaka)                      | smtp.us-south.event-notifications.cloud.ibm.com | private.smtp.us-south.event-notifications.cloud.ibm.com |
+    | au-syd (Sydney)                     | smtp.us-south.event-notifications.cloud.ibm.com | private.smtp.us-south.event-notifications.cloud.ibm.com |
+    | eu-gb (London)                      | smtp.us-south.event-notifications.cloud.ibm.com | private.smtp.us-south.event-notifications.cloud.ibm.com |
+    | br-sao (Sao Paulo)                  | smtp.us-south.event-notifications.cloud.ibm.com | private.smtp.us-south.event-notifications.cloud.ibm.com |
+    | ca-mon (Montreal)                   | smtp.us-south.event-notifications.cloud.ibm.com | private.smtp.us-south.event-notifications.cloud.ibm.com |
+    | us-east (Washington DC)             | smtp.us-south.event-notifications.cloud.ibm.com | private.smtp.us-south.event-notifications.cloud.ibm.com |
+    | in-che (Chennai)                    | smtp.us-south.event-notifications.cloud.ibm.com | private.smtp.us-south.event-notifications.cloud.ibm.com |
+    {: caption="IBM Cloud Event Notifications Non-EU regions SMTP endpoints" caption-side="bottom"}
+
+    **EU Regions:**
+
+    | Event Notifications Instance Region | SMTP Public Endpoint                                   | SMTP Private Endpoint
+    |-------------------------------------|-------------------------------------------------|---------------------------------------------------------|
+    | eu-de (Frankfurt)                   | smtp.eu-de.event-notifications.cloud.ibm.com    | private.smtp.eu-de.event-notifications.cloud.ibm.com    |
+    | eu-es (Madrid)                      | smtp.eu-de.event-notifications.cloud.ibm.com    | private.smtp.eu-de.event-notifications.cloud.ibm.com    |
+    {: caption="IBM Cloud Event Notifications EU regions SMTP endpoints" caption-side="bottom"}
+
+    The SMTP Endpoints are available in following regions: `us-south` and `eu-de`. For example, it can be seen as instances created in London and Sydney also connect to the Dallas SMTP endpoint, and instances created in Madrid also connect to the Frankfurt SMTP endpoint.
+    {: note}
 
 1. You can connect to Event Notifications SMTP interface using Public endpoints or Private endpoints via CSE (Cloud Service Endpoint) and VPE (Virtual Private Endpoint) gateway. The SMTP endpoints are available in the `us-south` (Dallas) and `eu-de` (Frankfurt) regions.
 
