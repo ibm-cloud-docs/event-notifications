@@ -3,7 +3,7 @@
 copyright:
 
   years: 2021, 2026
-lastupdated: "2026-02-09"
+lastupdated: "2026-02-16"
 
 keywords: event notifications, IBM Cloud
 
@@ -58,14 +58,14 @@ Decide on a location where your service to be hosted. Currently, the following l
 
 Based on your business requirements, decide on a pricing plan. Currently, the following plans are available: Lite, and Standard.
 
-- `Lite`: This plan gives you unlimited ingested events, 10 topics, two filters per topic, five destinations, 20 outbound emails, 20 outbound SMSes, 20 outbound webhooks (including Slack, with a limit of 20 Slack messages), and 1000 notifications per push destination (cumulative per instance, including Android, iOS, Huawei devices, and Chrome, Firefox, Safari browsers; the instance will be disabled once the limit is reached). Ten subscriptions are allowed, and a subscription can have a maximum of three email recipients.
+- `Lite`: This plan gives you unlimited ingested events, 10 topics, two filters per topic, five destinations, 20 outbound emails, 20 outbound SMSes, 20 outbound webhooks (including Slack, with a limit of 20 Slack messages), and 1000 notifications per push destination (cumulative per instance, including Android, iOS, Huawei devices, and Chrome, Firefox, Safari browsers; the instance is disabled once the limit is reached). Ten subscriptions are allowed, and a subscription can have a maximum of three email recipients.
 
    Custom Email and Custom SMS destinations are not supported by Lite Plan.
    {: note}
 
 - `Standard`: You are charged for ingested events and for outbound digital messages. An ingested event is one that is received and filtered. If a source is connected but no filters are defined for it (that is, the source is not associated with any topic), the incoming events are dropped, and you are not charged. Outbound digital messages come in various types, and each type is priced separately.
 
-   You can use **Pre-production destination**, as low-cost push destination, for your development and test environments. You can change the **Pre-production destination** to **Production destination** post completion of your development and testing. This feature is only available for `Standard` pricing plan.
+   You can use **Pre-production destination**, as a low-cost push destination, for your development and test environments. You can change the **Pre-production destination** to **Production destination** post completion of your development and testing. This feature is only available for `Standard` pricing plan.
    {: note}
 
 Changing plans from a chargeable plan (Standard) to free plan (Lite) is not permitted as this may result in disruption and data loss due to the plan limitations.
@@ -83,7 +83,7 @@ An `{{site.data.keyword.cloud_notm}} source` indicates a service on {{site.data.
 
 The source `{{site.data.keyword.cloud_notm}} Resource Lifecycle Events` is a built-in source.  This source emits resource lifecycle events to {{site.data.keyword.en_short}} service. This is disabled by default and needs to be enabled.
 
-The other {{site.data.keyword.cloud_notm}} sources have to be first integrated from the respectice services to start emitting events to {{site.data.keyword.en_short}} service.
+The other {{site.data.keyword.cloud_notm}} sources must be first integrated from the respective services to start emitting events to {{site.data.keyword.en_short}} service.
 
 The list of IBM provided sources is as follows:
 - [{{site.data.keyword.monitoringfull_notm}}](https://{DomainName}/docs/monitoring?topic=monitoring-eventnotif){: external}

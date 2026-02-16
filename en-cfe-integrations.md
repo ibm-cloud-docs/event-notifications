@@ -17,14 +17,14 @@ subcollection: event-notifications
 As part of the Integrations in {{site.data.keyword.en_short}}, you can enable collecting failed events and take appropriate action.
 {: shortdesc}
 
-Collect failed events helps you to identify which messages have failed and can take remedial action.
+Collect failed events helps you to identify which messages have failed and take remedial action.
 
 When a message fails to be delivered a set number of times, the failed message ends up in a {{site.data.keyword.cos_full_notm}} bucket. You can able to identify the subscription or topic to which that failed message belongs and take further action, if required.
 
 Before you enable collecting failed events in **Destinations**, make sure that you have an {{site.data.keyword.cos_full_notm}} instance [created and configured](https://{DomainName}/objectstorage/create) in the same account as your {{site.data.keyword.en_short}} instance.
 {: note}
 
-If you are using {{site.data.keyword.en_short}} CLI or API to configure {{site.data.keyword.cos_full_notm}} service instance, ensure that you have enabled authorization to grant access between services before integrating with {{site.data.keyword.cos_full_notm}}. For more information, see [Using authorizations to grant access between services](#en-using-s2s-auth2).
+If you are using {{site.data.keyword.en_short}} CLI or API to configure {{site.data.keyword.cos_full_notm}} service instance, make sure that you have enabled authorization to grant access between services before integrating with {{site.data.keyword.cos_full_notm}}. For more information, see [Using authorizations to grant access between services](#en-using-s2s-auth2).
 {: important}
 
 If you want to enforce access restrictions based on IP addresses, it is recommended to use context-based restrictions instead of a legacy bucket firewall.  For details, see [Restricting access by network context](/docs/cloud-object-storage?topic=cloud-object-storage-setting-a-firewall) in the Object Storage documentation.  If your setup must continue use of a legacy firewall, use the [Support Center](/unifiedsupport/supportcenter){: external} to create a support case for assistance with the IP range information.
@@ -32,7 +32,7 @@ If you want to enforce access restrictions based on IP addresses, it is recommen
 
 To configure and collect failed events, do the following steps:
 
-1. From your {{site.data.keyword.en_short}} instance dashboard, click **Integrations**. By default, Key Management and Collect Failed Events tile will be displayed.
+1. From your {{site.data.keyword.en_short}} instance dashboard, click **Integrations**. By default, the Key Management and Collect Failed Events tile will be displayed.
 
 1. Click **Connect** in the **Collect Failed Events** tile. The **Collect Failed Events** side panel displays.
 
@@ -57,7 +57,7 @@ To configure and collect failed events, do the following steps:
 
 1. From your {{site.data.keyword.en_short}} instance dashboard, click **Destinations**.
 
-1. Click the toggle switch to **ON** status under the **Collect failed events** column for the destination for which you want to collect the failed events. A success message is displayed for switching ON for collecting failed events for the selected destination.
+1. Click the toggle switch to **ON** status under the **Collect failed events** column for the destination for which you want to collect the failed events. A success message is displayed for switching `ON` to collect failed events for the selected destination.
 
 ## Available list of destinations for collecting failed events
 {: #en-collect-failedevents-destinationslist}
@@ -88,7 +88,7 @@ The following destinations can collect failed events:
 
 After configuration and enabling collecting of failed events for a destination, the failed events gets added to the {{site.data.keyword.cos_full_notm}} bucket. You can take further action on the failed events as per your requirements.
 
-If you disconnect **Collect Failed Events** from the **Integrations** > **Collect Failed Events** overflow menu option, then all the destinations that are enabled to collect the failed events, will be switched to **OFF** state.
+If you disconnect **Collect Failed Events** from the **Integrations** > **Collect Failed Events** overflow menu option, then all the destinations that are enabled to collect the failed events, will be switched to the **OFF** state.
 {: note}
 
 ## Using authorizations to grant access between services
@@ -116,7 +116,7 @@ Use {{site.data.keyword.cloud}} Identity and Access Management (IAM) to create o
 
 1. Select both the roles (Reader, and Object Writer) to assign access to the source service that accesses the target service.
 
-   If you have selected only one of these two roles (Reader or Object Writer) during the service to service authorization, you cannot write or read from the {{site.data.keyword.cos_full_notm}} bucket. You will get an error for service to service authorization failure in these cases. Make sure to recreate an authorization between the services with both the roles selected.
+   If you have selected only one of these two roles (Reader or Object Writer) during the service to service authorization, you cannot write or read from the {{site.data.keyword.cos_full_notm}} bucket. You get an error for service to service authorization failure in these cases. Make sure to re-create an authorization between the services with both the roles selected.
    {: important}
 
 1. Click **Authorize**.
