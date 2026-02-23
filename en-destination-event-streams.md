@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025
-lastupdated: "2025-04-25"
+  years: 2026
+lastupdated: "2026-02-23"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, Event Streams, event streams
 
@@ -15,12 +15,12 @@ subcollection: event-notifications
 # {{site.data.keyword.messagehub}}
 {: #en-destinations-event-streams}
 
-{{site.data.keyword.messagehub}} is a message bus that is built by using Apache Kafka. It has high throughput and is optimized for event ingestion into {{site.data.keyword.cloud_notm}} and event stream distribution between your services and applications. In Event Streams, applications can send data by creating messages and sending to a topic. To receive messages, the application subscribes to a topic and can choose to receive all the messages of the topic or share the messages between them. 
+{{site.data.keyword.messagehub}} is a message bus that is built by using Apache Kafka. It has high throughput and is optimized for event ingestion into {{site.data.keyword.cloud_notm}} and event stream distribution between your services and applications. In Event Streams, applications can send data by creating messages and sending to a topic. To receive messages, the application subscribes to a topic and can choose to receive all the messages of the topic or share the messages between them.
 {: shortdesc}
 
 {{site.data.keyword.messagehub}} represents a service destination. Since {{site.data.keyword.messagehub}} is a Kafka managed service, incoming notifications cannot be stored and consumed programmatically because Kafka does not store the data once it has been read.
 
-## Before you begin 
+## Before you begin
 {: #en-event-streams-prerequisites}
 
 - Make sure that an {{site.data.keyword.messagehub}} instance is [created and configured](/docs/EventStreams?topic=EventStreams-quick_setup_guide&interface=ui).
@@ -41,13 +41,13 @@ To configure an {{site.data.keyword.messagehub}} destination, complete the follo
 
 1. Click **Add +** to add a new destination.
 
-1. Provide the name, description (optional) and select the destination type as {{site.data.keyword.messagehub}} and the account where the {{site.data.keyword.messagehub}} instance is located. 
+1. Provide the name, description (optional) and select the destination type as {{site.data.keyword.messagehub}} and the account where the {{site.data.keyword.messagehub}} instance is located.
 
       If the {{site.data.keyword.messagehub}} instance is located in the same account as your {{site.data.keyword.en_short}} instance:
 
-      1. Select the name of the {{site.data.keyword.messagehub}} instance to send notifications to. 
-      2. Once the instance is selected, the **Endpoint** field will be filled automatically by pulling it from the selected instance. 
-      3. Select the **Topic** to send/receive messages from. To select the topic, see [Topic](#en-topic). 
+      1. Select the name of the {{site.data.keyword.messagehub}} instance to send notifications to.
+      2. Once the instance is selected, the **Endpoint** field will be filled automatically by pulling it from the selected instance.
+      3. Select the **Topic** to send/receive messages from. To select the topic, see [Topic](#en-topic).
 
 
       If the {{site.data.keyword.messagehub}} instance is located in a different account, provide the following details:
@@ -70,11 +70,11 @@ To configure an {{site.data.keyword.messagehub}} destination, complete the follo
 
 1. Click the {{site.data.keyword.messagehub}} name that displays your {{site.data.keyword.messagehub}} console.
 
-1. From the {{site.data.keyword.messagehub}} console: 
+1. From the {{site.data.keyword.messagehub}} console:
 
 #### CRN
 {: #en-crn}
-    
+
 Copy the **CRN**, that is used in the destination creation process. Use this copied CRN in the destination creation screen.
 
 #### Endpoint URL
@@ -86,10 +86,16 @@ Copy the **HTTP API endpoint** that needs to be used in the destination creation
 {: #en-topic}
 
 Navigate to **Topics** in the menu. You will find the list of available topics. Select the topic that you want to send messages to or receive messages from. Copy the **Topic Name** that needs to be used in the destination creation process. Use this copied name in the destination creation screen.
-
 ## Creating an authorization in the console
 {: #en-using-s2s-console-event-streams}
 
 An authorization is required to grant one service access to another service.You must grant Event Notifications the appropriate IAM service-to-service access so that it can publish messages to Event Streams.
 
-To learn the process to create an authorization between {{site.data.keyword.en_short}} and {{site.data.keyword.messagehub}}, refer [Authorization between services](/docs/event-notifications?topic=event-notifications-en-using-s2s-authorization). 
+To learn the process to create an authorization between {{site.data.keyword.en_short}} and {{site.data.keyword.messagehub}}, refer [Authorization between services](/docs/event-notifications?topic=event-notifications-en-using-s2s-authorization).
+
+## {{site.data.keyword.messagehub}} retry policy
+{: #en-event-streams-retry}
+
+When sending notifications to {{site.data.keyword.messagehub}}, issues such as network errors and application glitches can cause the requests to fail. {{site.data.keyword.en_short}} automatically retries failed requests to provide resiliency.
+
+For detailed information about retry behavior, including retry attempts, delays, and timeout values, see [Retry policy for destinations](/docs/event-notifications?topic=event-notifications-en-destination#en-destination-retry-policy).

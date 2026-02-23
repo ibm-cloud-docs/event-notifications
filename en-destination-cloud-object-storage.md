@@ -143,3 +143,10 @@ Endpoints are used with your credentials (Bucket name, API Key, SDK) to tell you
 You can test a {{site.data.keyword.cos_full_notm}} destination in the options menu that is provided against the destination. You can effortlessly test a destination, whether the provided configuration is correct or not with a single click.
 
 For more information on testing a destination, see [Testing destinations](/docs/event-notifications?topic=event-notifications-en-test-destination).
+
+## {{site.data.keyword.cos_full_notm}} retry policy
+{: #en-cos-retry}
+
+When sending notifications to {{site.data.keyword.cos_full_notm}}, issues such as network errors and application glitches can cause the requests to fail. {{site.data.keyword.en_short}} automatically retries failed requests to provide resiliency.
+
+For detailed information about retry behavior, including retry attempts, delays, and timeout values, see [Retry policy for destinations](/docs/event-notifications?topic=event-notifications-en-destination#en-destination-retry-policy).

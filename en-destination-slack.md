@@ -127,15 +127,6 @@ For more information on testing a destination, see [Testing Destinations](/docs/
 ## Slack retry policy
 {: #en-slack-retry}
 
-When publishing a slack notification, issues such as network errors and application glitches can cause the requests to fail. A retry is used to provide resiliency to external requests. Attempt to retry the requests in such situations by using the following values:
+When publishing a Slack notification, issues such as network errors and application glitches can cause the requests to fail. {{site.data.keyword.en_short}} automatically retries failed requests to provide resiliency.
 
-- Limit = 60 seconds: total time that the service retries.
-- Step = 5 seconds: after each failure, the service waits 5 seconds before retrying. This delay prevents bombarding of the external services (webhook).
-
-In addition, the following timeout conditions cause the slack call to fail:
-
-- A connection timeout of 10 seconds
-- A response timeout of 60 seconds
-
-If a call to the Slack webhook URL fails even after retry attempts, the notification is lost.
-{: note}
+For detailed information about retry behavior, including retry attempts, delays, and timeout values, see [Retry policy for destinations](/docs/event-notifications?topic=event-notifications-en-destination#en-destination-retry-policy).

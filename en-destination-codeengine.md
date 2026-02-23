@@ -39,7 +39,7 @@ To configure a {{site.data.keyword.codeengineshort}} destination, do the followi
     - **Description** - Optionally, enter a description for your destination.
     - **Type** - Under **Destination**, for the **Type**, select **{{site.data.keyword.codeengineshort}}** from the list as your destination type.
     - **Run Type** - Select one of the run type {{site.data.keyword.codeengineshort}} jobs or **{{site.data.keyword.codeengineshort}}** application.
-    
+
     If selected run type is job, then provide the following details:
     - **Project name** - Select the {{site.data.keyword.codeengineshort}} project name from the list, if you already have a {{site.data.keyword.codeengineshort}} project. Otherwise, click the **Create new project** link to create an {{site.data.keyword.codeengineshort}} project.
 
@@ -111,15 +111,6 @@ For more information on testing a destination, see [Testing Destinations](/docs/
 ## {{site.data.keyword.codeengineshort}} retry policy
 {: #en-codengine-retry}
 
-When calling {{site.data.keyword.codeengineshort}}, issues such as network errors and application glitches can cause the requests to fail. A retry is used to provide resiliency to external requests. Attempt to retry the requests in such situations by using the following values:
+When sending notifications to {{site.data.keyword.codeengineshort}}, issues such as network errors and application glitches can cause the requests to fail. {{site.data.keyword.en_short}} automatically retries failed requests to provide resiliency.
 
-- Limit = 60 seconds: total time that the service retries.
-- Step = 5 seconds: after each failure, the service waits 5 seconds before retrying. This delay prevents bombarding of the external services ({{site.data.keyword.codeengineshort}}).
-
-In addition, the following timeout conditions cause the {{site.data.keyword.codeengineshort}} call to fail:
-
-- A connection timeout of 10 seconds
-- A response timeout of 60 seconds
-
-If a call to the URL fails even after retry attempts, the notification is lost.
-{: note}
+For detailed information about retry behavior, including retry attempts, delays, and timeout values, see [Retry policy for destinations](/docs/event-notifications?topic=event-notifications-en-destination#en-destination-retry-policy).

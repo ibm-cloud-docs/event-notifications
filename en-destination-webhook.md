@@ -15,7 +15,7 @@ subcollection: event-notifications
 # Webhooks
 {: #en-destinations-webhook}
 
-A webhook represents a service destination, where an incoming notification can be consumed programmatically. For example, an incoming notification about an event can trigger a webhook destination to a backend microservice to act based on the content of the incoming notification. 
+A webhook represents a service destination, where an incoming notification can be consumed programmatically. For example, an incoming notification about an event can trigger a webhook destination to a backend microservice to act based on the content of the incoming notification.
 {: shortdesc}
 
 ## Configuring a webhook destination
@@ -26,7 +26,7 @@ You can configure a webhook destination in the `Destinations` tab. As part of th
 ## Supported HTTP Verbs
 {: #en-supported-verbs}
 
-{{site.data.keyword.en_short}} webhooks support the http verbs GET, POST, PUT, and PATCH. 
+{{site.data.keyword.en_short}} webhooks support the http verbs GET, POST, PUT, and PATCH.
 
 - GET : Retrieves a representation of the specified resource.
 - POST : Creates a new resource.
@@ -38,7 +38,7 @@ You can configure a webhook destination in the `Destinations` tab. As part of th
 
 To identify that the incoming notification is coming from {{site.data.keyword.en_full_notm}}, you can enable webhook signing. If signing is enabled, a public key can be downloaded, and used to decrypt the incoming notification content.
 
-## Allowlisting IP addresses 
+## Allowlisting IP addresses
 {: #en-allowlisting}
 
 You can allowlist the ranges of IP addresses to restrict access to your servers that receive webhooks. For more information, see [webhook IP addresses](/docs/account?topic=account-webhook-ips).
@@ -48,18 +48,10 @@ Regardless of the location of the Event Notifications Service instance, to help 
 ## Webhook retry policy
 {: #en-webhook-retry}
 
-When calling a webhook, issues such as network errors and application glitches can cause the requests to fail. A retry is used to provide resiliency to external requests. Attempt to retry the requests in such situations by using the following values:
+When calling a webhook, issues such as network errors and application glitches can cause the requests to fail. {{site.data.keyword.en_short}} automatically retries failed requests to provide resiliency to external requests.
 
-- Limit = 60 seconds: total time that the service retries.
-- Step = 5 seconds: after each failure, the service waits 5 seconds before retrying. This delay prevents bombarding of the external services (webhook).
+For detailed information about retry behavior, including retry attempts, delays, and timeout values, see [Retry policy for destinations](/docs/event-notifications?topic=event-notifications-en-destination#en-destination-retry-policy).
 
-In addition, the following timeout conditions cause the webhook call to fail:
-
-- A connection timeout of 10 seconds
-- A response timeout of 60 seconds
-
-If a call to the webhook URL fails even after retry attempts, the notification is lost.
-{: note}
 
 ## Testing a webhook destination configuration
 {: #en-webhook-test-destination}

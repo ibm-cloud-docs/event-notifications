@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025
-lastupdated: "2025-10-13"
+  years: 2026
+lastupdated: "2026-02-23"
 
 keywords: event-notifications, event notifications, about event notifications, destinations,app configuration, app config
 
@@ -55,7 +55,7 @@ To configure {{site.data.keyword.appconfig_short}} as a destination, perform the
 
 1. Create a topic with a source of your choice. See [Creating an {{site.data.keyword.en_short}} topic](/docs/event-notifications?topic=event-notifications-en-create-en-topic&interface=ui) to learn the process of creating a topic.
 
-1. To create a subscription, navigate to the **Subscriptions** dashboard from the left navigation pane and click **Create**. 
+1. To create a subscription, navigate to the **Subscriptions** dashboard from the left navigation pane and click **Create**.
     - Provide the **Name**, an optional **Description**, and select the **Topic** and **Destination** created previously.
     - You can choose to send the notification based on **Attributes** or on a **Template**. While creating the {{site.data.keyword.appconfig_short}} subscription, either the attribute or template must be defined. These define the state of the feature flag while sending a notification.
         - **Attributes** - If you choose to send the notification based on attributes, you can choose to enable the feature flag or disable it when a notification is sent.
@@ -77,3 +77,10 @@ You can test an {{site.data.keyword.appconfig_short}} destination in the options
 
 
 For more information on testing a destination, see [Testing Destinations](/docs/event-notifications?topic=event-notifications-en-test-destination).
+
+## {{site.data.keyword.appconfig_short}} retry policy
+{: #en-appconfig-retry}
+
+When sending notifications to {{site.data.keyword.appconfig_short}}, issues such as network errors and application glitches can cause the requests to fail. {{site.data.keyword.en_short}} automatically retries failed requests to provide resiliency.
+
+For detailed information about retry behavior, including retry attempts, delays, and timeout values, see [Retry policy for destinations](/docs/event-notifications?topic=event-notifications-en-destination#en-destination-retry-policy).
