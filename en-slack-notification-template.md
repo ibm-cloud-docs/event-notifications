@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025
-lastupdated: "2025-09-10"
+  years: 2026
+lastupdated: "2026-02-24"
 
 keywords: event-notifications, event notifications, about event notifications, templates, slack
 
@@ -31,6 +31,8 @@ Users can generate or validate a static JSON by using the [Block Kit builders](h
 ### Example Create Template Usage:
 {: #en-slack-template}
 
+The following sections describe how to create Slack notification templates using the Input API and JSON blocks.
+
 #### Input API for Templates
 {: #en-input-api}
 
@@ -43,6 +45,19 @@ JSON blocks represent the layout and structure of notification messages by using
 
 ##### Usage:
 {: #en-usage}
+
+The following examples demonstrate how to use different Slack block types in your notification templates.
+
+###### Section Block
+{: #en-template-section-type}
+
+Section blocks display text content with optional accessories like buttons or images. To learn more about section blocks, refer [Section Block](https://docs.slack.dev/reference/block-kit/blocks/section-block).
+
+**Character limit considerations**
+
+As per Slack Block Kit limitations, a section block supports a maximum of 3000 characters in the text field. If the generated content exceeds this limit, slack will reject the payload and the notification will not be delivered. The following error message is returned: `Slack failed with an error message: 'invalid_blocks' and status code: 400`. Use [context blocks](/docs/event-notifications?topic=event-notifications-en-slack-notification-template#en-template-context-type) to avoid notification dropping for messages exceeding 3000 characters.
+{: note}
+
 
 ```json
 {
@@ -75,6 +90,37 @@ JSON blocks represent the layout and structure of notification messages by using
 }
 ```
 
+###### Context Block
+{: #en-template-context-type}
+
+Context blocks display supplementary information with text and images in a compact format. To learn more about context blocks, refer [Context Block](https://docs.slack.dev/reference/block-kit/blocks/context-block/).
+
+**Character limit considerations**
+
+A context block supports a maximum of 16000 characters in the text field. If the generated content exceeds this limit, the message will be truncated but the notification will still be delivered successfully.
+{: note}
+
+```json
+{
+   "blocks": [
+      {
+         "type": "context",
+         "elements": [
+               {
+                  "type": "image",
+                  "image_url": "https://image.freepik.com/free-photo/red-drawing-pin_1156-445.jpg",
+                  "alt_text": "images"
+               },
+               {
+                  "type": "mrkdwn",
+                  "text": "This is a notification message."
+               }
+         ]
+      }
+   ]
+}
+```
+
 #### Base64 Encoding
 {: #en-encoding}
 
@@ -82,6 +128,8 @@ To include JSON blocks in the template, they need to be encoded in base64 format
 
 ##### Example Create Template Usage:
 {: #en-slack-template-example}
+
+The following example shows a complete template request with base64-encoded JSON blocks.
 
 ```json
 {
