@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-02-09"
+lastupdated: "2026-02-19"
 
 keywords: event notifications CLI plug-in, CLI reference, en cli reference, event notifications cli reference, event notifications, command line reference
 
@@ -31,7 +31,7 @@ When you log in to the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cl
 [IBM Cloud Quick Reference card](https://cloud.ibm.com/media/docs/downloads/IBM%20Cloud%20CLI%20quick%20reference.pdf).
 
 
-**Note** The CLI Plugin versions from 0.0.5 to 1.0.0 is deprecated.
+**Note** The CLI Plugin versions before 1.15.2 is deprecated
 {: note}
 
 ## Install the {{site.data.keyword.en_short}} CLI
@@ -47,6 +47,7 @@ ibmcloud plugin install en
 ## {{site.data.keyword.en_short}} CLI commands
 {: #en-cli-commands}
 
+**Note** The CLI Plugin init command will be deprecated in future
 ### ibmcloud event-notifications init
 {: #en-cli-init-command}
 
@@ -3099,4 +3100,5 @@ The CLI Plugin versions from 0.0.5 to 1.9.0 is deprecated.
 | 1.19.0 | 30 October 2025 | Support for clone smtp user credentials |
 | 1.20.0 | 15 December 2025 | Support for bounce metrics |
 | 1.20.1 | 19 January 2026 | Fix for private endpoint support metadata and EN plugin install issue in private.cloud.ibm.com | 
+| 1.20.2 | 18 February 2026 | CLI plugin vulnerability fix patch update | 
 {: caption="Changes in the {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} CLI" caption-side="bottom"}

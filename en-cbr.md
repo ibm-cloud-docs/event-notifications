@@ -78,7 +78,7 @@ You can create CBR rules to protect the following API types for IBM Cloud Event 
 
 ### Control plane APIs
 
-Protects access to the APIs of the service, such as the APIs for doing CRUD operations on all the available entities in Event Notifications such as sources, topics, subscriptions, and more. Also, it protects access while sending notifications and Push Destinations APIs . A full list of APIs is mentioned [here](https://cloud.ibm.com/apidocs/event-notifications).
+Protects access to the APIs of the service, such as the APIs for doing CRUD operations on all the available entities in Event Notifications such as sources, topics, subscriptions, and more. Also, it protects access while sending notifications and Push Destinations APIs. A full list of APIs is mentioned [here](https://cloud.ibm.com/apidocs/event-notifications).
 
 If you select the cluster control plane APIs in your CBR rule, then only traffic from resources in the network zones that associate with that rule can interact with the cluster control plane APIs. All other requests are blocked.
 

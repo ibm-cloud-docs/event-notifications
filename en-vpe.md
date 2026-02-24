@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025
-lastupdated: "2025-08-07"
+  years: 2026
+lastupdated: "2026-02-16"
 
 keywords: event-notifications, event notifications, about event notifications, vpe, virtual private endpoints, virtual private endpoint gateways
 
@@ -17,16 +17,16 @@ subcollection: event-notifications
 {: #en-vpe}
 
 
-Virtual Private Endpoints (VPE) for VPC enables you to connect to {{site.data.keyword.en_short}} and other supported {{site.data.keyword.cloud}} services from your VPC network by using the IP addresses of your choosing, allocated from a subnet within your VPC.
+Virtual Private Endpoints (VPE) for VPC helps you to connect to {{site.data.keyword.en_short}} and other supported {{site.data.keyword.cloud}} services from your VPC network by using the IP addresses of your choosing, which is allocated from a subnet within your VPC.
 
-You can create an endpoint gateway for an {{site.data.keyword.cloud_notm}} service, third-party service or an application that you want to access on your private VPC network. You can either the console, CLI, API, or Terraform. 
+You can create an endpoint gateway for an {{site.data.keyword.cloud_notm}} service, third-party service, or an application that you want to access on your private VPC network. You can either the console, CLI, API, or Terraform. 
 {: shortdesc}
 
 
 ## Before you begin
 {: #en-vpe-prereqs}
 
-Before creating an endpoint gateway, ensure that you review [Planning for virtual private endpoint gateways](/docs/vpc?topic=vpc-planning-considerations) and have the following prerequisites:
+Before creating an endpoint gateway, make sure that you review [Planning for virtual private endpoint gateways](/docs/vpc?topic=vpc-vpe-planning-considerations) and have the following prerequisites:
 
 - A VPC
 - A subnet in at least one availability zone if you intend on binding an IP address at the same time you provision the endpoint gateway.
@@ -44,7 +44,7 @@ Before creating an endpoint gateway, ensure that you review [Planning for virtua
 1. On the console, click **Create**.
 
 
-1. On the details page provide the **Geography**, **Region**, **Name** for your gateway, **Resource Group**, and select the **VPC** where you need the VPE IP address. To learn more about the fields, see [Viewing details of an endpoint gateway](/docs/vpc?topic=vpc-vpe-viewing-details-of-an-endpoint-gateway&interface=ui).
+1. On the details page, provide the **Geography**, **Region**, **Name** for your gateway, **Resource Group**, and select the **VPC** where you need the VPE IP address. To learn more about the fields, see [Viewing details of an endpoint gateway](/docs/vpc?topic=vpc-vpe-viewing-details-of-an-endpoint-gateway&interface=ui).
 
 1. The security groups are used to tighten the security rules for inbound traffic toward your endpoint gateways. Select the checkbox for the security groups you want to attach to your gateway.
  

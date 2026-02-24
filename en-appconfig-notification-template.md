@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025
-lastupdated: "2025-09-25"
+  years: 2026
+lastupdated: "2026-02-16"
 
 keywords: event-notifications, event notifications, about event notifications, templates, app configuration, app config
 
@@ -27,7 +27,7 @@ Construct the template block. Make sure that the template is a well-formed JSON 
 
 Handlebars is a templating language that allows for dynamic content generation within templates. Handlebars can be used to customize notification messages by using template variables and conditional logic. See [Handlebars](/docs/event-notifications?topic=event-notifications-en-create-en-template&interface=ui#handlebars-integration) for more information on the various helpers available while creating templates.
 
-Make sure you include `"enabled":"true"` or `"enabled":"false"` in your template depending on how you want your feature flag to behave when a notification is sent to the {{site.data.keyword.appconfig_short}} destination. Without this, there will be no action in the destination when the notification is sent and you may face errors when sending notifications from the API.
+Make sure that you include `"enabled":"true"` or `"enabled":"false"` in your template depending on how you want your feature flag to behave when a notification is sent to the {{site.data.keyword.appconfig_short}} destination. Without this, there will be no action in the destination when the notification is sent and you may face errors when sending notifications from the API.
 {: important}
 
 ### {{site.data.keyword.appconfig_short}} notification template example
@@ -43,6 +43,3 @@ Make sure you include `"enabled":"true"` or `"enabled":"false"` in your template
 {{/if}}
 }
 ```
-
-
-

@@ -59,3 +59,31 @@ Service destinations are cloud services or application where notifications are c
 - [{{site.data.keyword.cos_full_notm}}](/docs/event-notifications?topic=event-notifications-en-destinations-cloud-object-storage)
 - [{{site.data.keyword.messagehub}}](/docs/event-notifications?topic=event-notifications-en-destinations-event-streams&interface=ui)
 - [{{site.data.keyword.appconfig_short}}](/docs/event-notifications?topic=event-notifications-en-destination-app-configuration&interface=ui)
+
+## Retry policy for destinations
+{: #en-destination-retry-policy}
+
+When sending notifications to destinations, issues such as network errors and application glitches can cause requests to fail. {{site.data.keyword.en_short}} automatically retries failed requests to provide resiliency.
+
+### Retry behavior
+{: #en-destination-retry-behavior}
+
+The client automatically retries failed requests up to **3 times** with a exponential delay between **1 and 10 seconds** to prevent retry spikes.
+
+If the destination server returns a **`Retry-After`** header, that value (in seconds) overrides the default backoff delay.
+
+Each request has a **10-second timeout**, and retries stop immediately once a request succeeds or the maximum attempts are reached.
+
+If a notification fails even after all retry attempts, the notification is lost.
+{: note}
+
+This retry policy applies to the following destinations:
+- [Slack](/docs/event-notifications?topic=event-notifications-en-destinations-slack)
+- [Microsoft Teams](/docs/event-notifications?topic=event-notifications-en-destinations-msteams)
+- [PagerDuty](/docs/event-notifications?topic=event-notifications-en-destinations-pagerduty)
+- [Webhook](/docs/event-notifications?topic=event-notifications-en-destinations-webhook)
+- [ServiceNow](/docs/event-notifications?topic=event-notifications-en-destinations-servicenow)
+- [{{site.data.keyword.codeengineshort}}](/docs/event-notifications?topic=event-notifications-en-destinations-codeengine)
+- [{{site.data.keyword.cos_full_notm}}](/docs/event-notifications?topic=event-notifications-en-destinations-cloud-object-storage)
+- [{{site.data.keyword.messagehub}}](/docs/event-notifications?topic=event-notifications-en-destinations-event-streams)
+- [{{site.data.keyword.appconfig_short}}](/docs/event-notifications?topic=event-notifications-en-destination-app-configuration)
