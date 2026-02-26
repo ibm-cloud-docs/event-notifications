@@ -329,11 +329,10 @@ ce-ibmendefaultlong: "Password will expire in 10 Days. Please log in to the Bank
 #### ibmenfcmbody(string/json)
 {: #en-ibmenfcmbody-string-json}
 
-This attribute is needed if you want to send a push notification to an Android device. This is the body that you want to send to FCM (Firebase Cloud Messaging) server, this must be JSON in string format. For more information regarding the FCM body, see [REST Resource: projects.messages](https://firebase.google.com/docs/reference/fcm/rest/v1/projects.messages){: external}.
 
-For compatibility with an earlier version for existing Push notification customers, the previous unified data format is still supported but is deprecated.
+This attribute is needed if you want to send push notification to an Android device. This is the body that you want to send to FCM server, this must be JSON in string format. For more information regarding FCM body, see [here](https://firebase.google.com/docs/reference/fcm/rest/v1/projects.messages){: external}.
 
-##### Example: Sample notification payload:
+##### Sample notification payload
 {: #en-example13}
 
 ```JSON
@@ -350,11 +349,9 @@ ce-ibmenfcmbody: {"message":{"android":{"ttl":"86400s","notification":{"click_ac
 #### ibmenapnsbody(string/json)
 {: #en-ibmenapnsbody-string-json}
 
-This attribute is needed if you want to send a push notification to an iOS device. This is the body that you want to send to the APNs (Apple Push Notification Service) server, this must be JSON in string format. For more information regarding APNs body, see [Creating the Remote Notification Payload](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html){: external}.
+This attribute is needed if you want to send push notification to an iOS device. This is the body that you want to send to APNs server, this must be JSON in string format. For more information regarding APNs body, follow this documentation [here](https://developer.apple.com/documentation/usernotifications/generating-a-remote-notification){: external}.
 
-For compatibility with an earlier version for existing Push notification customers, the previous unified data format is still supported but is deprecated.
-
-##### Sample notification payload:
+##### Sample notification payload
 {: #en-example14}
 
 ```JSON
@@ -364,7 +361,7 @@ For compatibility with an earlier version for existing Push notification custome
 To customize your APNs push notifications, you can provide APNs headers. Some of them are mandatory to deliver a notification if key is present. The required body as follows:
 
 ```JSON
-"ibmenapnsheaders": "{\"apns-priority\":10, \"apns-collapse-id\": \"collapse\"}"
+ce-ibmenapnsbody: {"aps":{"alert":{"title":"Game Request","subtitle":"Five Card Draw","body":"Bob wants to play poker"},"category":"GAME_INVITATION"},"gameID":"12345678"}
 ```
 
 To get more details on APNs headers, see [Generating a remote notification](https://developer.apple.com/documentation/usernotifications/generating-a-remote-notification){: external}.
