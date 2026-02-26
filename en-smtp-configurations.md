@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2021, 2026
-lastupdated: "2026-02-09"
+lastupdated: "2026-02-26"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email, smtp
 
@@ -123,7 +123,7 @@ After successful verification of a SMTP configuration in an IBM Cloud Event Noti
 1. The list of IBM Cloud Event Notifications SMTP endpoints for each region is mentioned in below table:
 
     **Non-EU Regions:**
-        
+
     | Event Notifications Instance Region | SMTP Public Endpoint                                   | SMTP Private Endpoint
     |-------------------------------------|-------------------------------------------------|---------------------------------------------------------|
     | us-south (Dallas)                   | smtp.us-south.event-notifications.cloud.ibm.com | private.smtp.us-south.event-notifications.cloud.ibm.com |
@@ -168,6 +168,7 @@ After successful verification of a SMTP configuration in an IBM Cloud Event Noti
     Once the SMTP username and password is created ,you can clone the same credentials across SMTP configurations if you need the same credentials for other SMTP configurations/Domains within the **same instance**. This is supported via API/CLI/SDK and Terraform.
     {: note}
 
+
 4. Valid IP addresses or subnets can be [allowlisted from CBR](/docs/event-notifications?topic=event-notifications-en-smtp-configurations#en-smtp-configurations-cbr) through which the client can connect to the SMTP interface.
 
 5. IBM Cloud Event Notifications SMTP interface supports connection over `StartTLS` method for secure data transmission over networks.
@@ -179,6 +180,9 @@ After successful verification of a SMTP configuration in an IBM Cloud Event Noti
 
  As per the current configurations, attachments are not supported in Event Notifications SMTP interface.
  {: note}
+
+
+
 
 ## Using SMTP interface for sending emails
 {: #en-smtp-configurations-send-emails}
