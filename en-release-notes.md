@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-02-26"
+lastupdated: "2026-03-03"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -21,6 +21,14 @@ Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, sec
 {: note}
 
 
+## 3 March 2026
+{: #event-notifications-Mar32026}
+{: release-note}
+
+API key-based authentication for SMTP interface
+:  {{site.data.keyword.en_short}} now supports API key-based authentication for the SMTP interface using Service IDs. You can create multiple API keys per Service ID to support different environments, customers, or applications. For more information, see [Using API keys for SMTP authentication](/docs/event-notifications?topic=event-notifications-en-smtp-configurations#en-smtp-configurations-api-keys).
+
+
 
 ## 9 February 2026
 {: #event-notifications-Feb92026}
@@ -29,7 +37,7 @@ Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, sec
 {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} is now available in the Chennai(India) region
 :  {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now can provision an instance in the Chennai(India) region.
 
-## 03 February 2026
+## 3 February 2026
 {: #event-notifications-Feb32026}
 {: release-note}
 

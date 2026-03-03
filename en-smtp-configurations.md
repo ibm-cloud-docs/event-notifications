@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2021, 2026
-lastupdated: "2026-02-26"
+lastupdated: "2026-03-03"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email, smtp
 
@@ -14,14 +14,14 @@ subcollection: event-notifications
 # Using the {{site.data.keyword.en_short}} SMTP Interface
 {: #en-smtp-configurations}
 
-IBM Cloud Event Notifications supports SMTP, the most common email protocol on the internet. You can send email using a variety of clients, software, or programming languages that support SMTP by connecting to the IBM Cloud Event Notifications SMTP interface. This document explains how to set up SMTP configuration, obtain user credentials, and setup a CBR rule to access the SMTP server.
+IBM Cloud Event Notifications supports SMTP, the most common email protocol on the internet. You can send email using a variety of clients, software, or programming languages that support SMTP by connecting to the IBM Cloud Event Notifications SMTP interface. This document explains how to set up SMTP configuration, obtain user credentials, and set up a CBR rule to access the SMTP server.
 
 ## Creating a SMTP Configuration
 {: #en-smtp-configuration-create}
 
 1. Create an {{site.data.keyword.en_short}} instance. To learn the process of creating an instance, see [Getting Started](/docs/event-notifications?topic=event-notifications-getting-started).
 
-2. Navigate to the instance dashboard and click on **SMTP Configurations** in the left navigation pane.
+2. Navigate to the instance dashboard and click **SMTP Configurations** in the left navigation pane.
 
 3. Click **Add+**.
 
@@ -41,7 +41,7 @@ After creating a SMTP configuration in an IBM Cloud Event Notifications instance
 2. Create DomainKeys Identified Mail (DKIM), which allows an organization to take responsibility for transmitting a message by signing it. DKIM allows the receiver to check the email that claimed to have come from a specific domain, is authorized by the owner of that domain.
     * Open your DNS hosting provider for the domain name configured
     * Create a new TXT record with your domain name registerer with the name and value provided in the configure screen for DKIM
-3. For the enhanced security we do manual verification about the SMTP interface requirement using following questionnaire:
+3. For the enhanced security we perform manual verification about the SMTP interface requirement using following questionnaire:
 
     ```text
     1. Will the nature of the email content be Marketing or Transactional?
@@ -68,7 +68,7 @@ After creating a SMTP configuration in an IBM Cloud Event Notifications instance
 
     7. Whether you have a manual or automated process in place for handling unsubscribes, it's important to provide an "unsubscribe" link in the email payload you send. When recipients decide not to receive further emails, they can simply click on the 'unsubscribe' link and remove their email address from your mailing list. Add a statement that you agree to have an “unsubscribe” link in the email payload that you send.
 
-    8. If you send the html content in the notification payload, do you have a process to validate this content is well formatted? Ill formatted HTML content may descrese the server reputation.
+    8. If you send the html content in the notification payload, do you have a process to validate this content is well formatted? Poorly formatted HTML content may decrease the server reputation.
     ```
     {: codeblock}
 
@@ -82,15 +82,15 @@ After creating a SMTP configuration in an IBM Cloud Event Notifications instance
     * A valid Reply-To email ID is required to receive information about rejected or bounced emails.
     * Well-formatted Email content is required to prevent emails from being classified as Spam at the recipient's end. Emails that are not well-formatted (i.e., not in HTML) can result in Email Service Providers classifying the emails as Spam.
 
-    Upon filling out answers to the aforementioned questions, users have to request for the enablement of SMTP interface Event Notifications verification via Support Ticket:
+    Upon filling out answers to the aforementioned questions, users must request the enablement of SMTP interface Event Notifications verification via Support Ticket:
 
     1. From the {{site.data.keyword.cloud_notm}} console menu bar, click the **Help** icon > **Support center**.
     1. From the Contact support section, click **Create a case**.
     1. Select under `Category`, `Topic` as Event Notifications and `Subtopic` as Others
     1. Under `Subject` add **Requesting for the Authorization to Enable SMTP Interface for Event Notifications**
-    1. In the 'Description' section firstly provide IBM Cloud Event Notifications `instance id`, `region` in which instance is created, and a `DKIM Name` which is in the format of `{{uuid}}._domainkey.{{domain}}`
+    1. In the 'Description' section first provide IBM Cloud Event Notifications `instance id`, `region` in which instance is created, and a `DKIM Name` which is in the format of `{{uuid}}._domainkey.{{domain}}`
     1. Later, please include responses to the aforementioned questionnaire.
-    1. Add **Attachments** if you want to provide more evidences supporting your answers
+    1. Add **Attachments** if you want to provide more evidence supporting your answers
     1. Add required email Ids in the **Watchlist** section. And to know more about other options while creating a support case refer [here](https://{DomainName}/docs/account?topic=account-open-case&interface=ui){: external}.
 
 Some of the common verification issues could be:
@@ -108,80 +108,76 @@ It's worth noting that we perform periodic checks on the SPF and DKIM TXT record
 The legacy IP-based allowlisting for the SMTP interface is now deprecated. It is mandatory to migrate to context-based restrictions when connecting to the SMTP interface. Current allowlisted IPs will remain functional for the next six months, allowing time for this transition.
 {: note}
 
-By default access to the SMTP interface is restricted from any IP addresses. To allow access to the SMTP interface, you must enable [context-based restrictions](/docs/event-notifications?topic=event-notifications-en-access-control-cbr). Specifically to access the SMTP interface, you must select the [API type as SMTP Configuration](/docs/event-notifications?topic=event-notifications-en-access-control-cbr#en-manage-cbr-apis) while setting up the CBR rule.
+By default, access to the SMTP interface is restricted from any IP addresses. To allow access to the SMTP interface, you must enable [context-based restrictions](/docs/event-notifications?topic=event-notifications-en-access-control-cbr). Specifically to access the SMTP interface, you must select the [API type as SMTP Configuration](/docs/event-notifications?topic=event-notifications-en-access-control-cbr#en-manage-cbr-apis) while setting up the CBR rule.
 
-All the set of IPs associated in the network zone selected while setting up the CBR rule will be automatically allowlisted to connect to the SMTP server.
+The set of IPs associated in the network zone selected while setting up the CBR rule will be automatically allowlisted to connect to the SMTP server.
 
-It is mandatory to setup CBR rules for the IBM Cloud Event Notifications instances you intend to use for SMTP interface feature
+It is mandatory to set up CBR rules for the IBM Cloud Event Notifications instances you intend to use for SMTP interface feature
 {: note}
 
 ## Requirements to send email over SMTP Interface
 {: #en-smtp-configurations-requirements}
 
-After successful verification of a SMTP configuration in an IBM Cloud Event Notifications instance, to send email using SMTP Interface you need following parameters:
-
-1. The list of IBM Cloud Event Notifications SMTP endpoints for each region is mentioned in below table:
-
-    **Non-EU Regions:**
-
-    | Event Notifications Instance Region | SMTP Public Endpoint                                   | SMTP Private Endpoint
-    |-------------------------------------|-------------------------------------------------|---------------------------------------------------------|
-    | us-south (Dallas)                   | smtp.us-south.event-notifications.cloud.ibm.com | private.smtp.us-south.event-notifications.cloud.ibm.com |
-    | ca-tor (Toronto)                    | smtp.us-south.event-notifications.cloud.ibm.com | private.smtp.us-south.event-notifications.cloud.ibm.com |
-    | jp-tok (Tokyo)                      | smtp.us-south.event-notifications.cloud.ibm.com | private.smtp.us-south.event-notifications.cloud.ibm.com |
-    | jp-osa (Osaka)                      | smtp.us-south.event-notifications.cloud.ibm.com | private.smtp.us-south.event-notifications.cloud.ibm.com |
-    | au-syd (Sydney)                     | smtp.us-south.event-notifications.cloud.ibm.com | private.smtp.us-south.event-notifications.cloud.ibm.com |
-    | eu-gb (London)                      | smtp.us-south.event-notifications.cloud.ibm.com | private.smtp.us-south.event-notifications.cloud.ibm.com |
-    | br-sao (Sao Paulo)                  | smtp.us-south.event-notifications.cloud.ibm.com | private.smtp.us-south.event-notifications.cloud.ibm.com |
-    | ca-mon (Montreal)                   | smtp.us-south.event-notifications.cloud.ibm.com | private.smtp.us-south.event-notifications.cloud.ibm.com |
-    | us-east (Washington DC)             | smtp.us-south.event-notifications.cloud.ibm.com | private.smtp.us-south.event-notifications.cloud.ibm.com |
-    | in-che (Chennai)                    | smtp.us-south.event-notifications.cloud.ibm.com | private.smtp.us-south.event-notifications.cloud.ibm.com |
-    {: caption="IBM Cloud Event Notifications Non-EU regions SMTP endpoints" caption-side="bottom"}
-
-    **EU Regions:**
-
-    | Event Notifications Instance Region | SMTP Public Endpoint                                   | SMTP Private Endpoint
-    |-------------------------------------|-------------------------------------------------|---------------------------------------------------------|
-    | eu-de (Frankfurt)                   | smtp.eu-de.event-notifications.cloud.ibm.com    | private.smtp.eu-de.event-notifications.cloud.ibm.com    |
-    | eu-es (Madrid)                      | smtp.eu-de.event-notifications.cloud.ibm.com    | private.smtp.eu-de.event-notifications.cloud.ibm.com    |
-    {: caption="IBM Cloud Event Notifications EU regions SMTP endpoints" caption-side="bottom"}
-
-    The SMTP Endpoints are available in following regions: `us-south` and `eu-de`. For example, it can be seen as instances created in London and Sydney also connect to the Dallas SMTP endpoint, and instances created in Madrid also connect to the Frankfurt SMTP endpoint.
-    {: note}
+After successful verification of a SMTP configuration in an IBM Cloud Event Notifications instance, to send email using the SMTP Interface you need the following parameters:
 
 1. You can connect to Event Notifications SMTP interface using Public endpoints or Private endpoints via CSE (Cloud Service Endpoint) and VPE (Virtual Private Endpoint) gateway. The SMTP endpoints are available in the `us-south` (Dallas) and `eu-de` (Frankfurt) regions.
 
     **Dallas (`us-south`) SMTP endpoint:**
     - SMTP Public Endpoint: `smtp.us-south.event-notifications.cloud.ibm.com`
     - SMTP Private Endpoint: `private.smtp.us-south.event-notifications.cloud.ibm.com`
-    - Event Notifications instances in the following regions connect to this endpoint: us-south (Dallas), ca-tor (Toronto), jp-tok (Tokyo), jp-osa (Osaka), au-syd (Sydney), eu-gb (London), br-sao (Sao Paulo), ca-mon (Montreal), us-east (Washington DC)
+    - Event Notifications instances in the following regions connect to this endpoint: us-south (Dallas), ca-tor (Toronto), jp-tok (Tokyo), jp-osa (Osaka), au-syd (Sydney), eu-gb (London), br-sao (Sao Paulo), ca-mon (Montreal), in-che (Chennai), us-east (Washington DC)
 
     **Frankfurt (`eu-de`) SMTP endpoint:**
     - SMTP Public Endpoint: `smtp.eu-de.event-notifications.cloud.ibm.com`
     - SMTP Private Endpoint: `private.smtp.eu-de.event-notifications.cloud.ibm.com`
     - Event Notifications instances in the following regions connect to this endpoint: eu-de (Frankfurt), eu-es (Madrid)
 
-2. The SMTP interface port number. The supported port is 587.
+1. The SMTP interface port number. The supported port is 587.
 
-3. The SMTP username and password. A maximum of 5 users can be created in a single SMTP configuration. Event Notifications supports `Login` and `Plain` authentication methods from the SMTP protocol.
+1. The SMTP username and password. A maximum of 5 users can be created in a single SMTP configuration. Event Notifications supports `Login` and `Plain` authentication methods from the SMTP protocol.
 
-    Once the SMTP username and password is created ,you can clone the same credentials across SMTP configurations if you need the same credentials for other SMTP configurations/Domains within the **same instance**. This is supported via API/CLI/SDK and Terraform.
+    When you create an SMTP user, you receive a username and password. However, password-based authentication will be deprecated in the near future. You must migrate to API key-based authentication using Service IDs. For more information, see [Using API keys for SMTP authentication](#en-smtp-configurations-api-keys).
+    {: deprecated}
+
+    Once the SMTP username and password is created, you can clone the same credentials across SMTP configurations if you need the same credentials for other SMTP configurations/Domains within the **same instance**. This is supported via API/CLI/SDK and Terraform.
     {: note}
 
 
-4. Valid IP addresses or subnets can be [allowlisted from CBR](/docs/event-notifications?topic=event-notifications-en-smtp-configurations#en-smtp-configurations-cbr) through which the client can connect to the SMTP interface.
+1. Valid IP addresses or subnets can be [allowlisted from CBR](/docs/event-notifications?topic=event-notifications-en-smtp-configurations#en-smtp-configurations-cbr) through which the client can connect to the SMTP interface.
 
-5. IBM Cloud Event Notifications SMTP interface supports connection over `StartTLS` method for secure data transmission over networks.
+1. IBM Cloud Event Notifications SMTP interface supports connection over `StartTLS` method for secure data transmission over networks.
 
-6. When accessing IBM Cloud Event Notifications through the SMTP interface, your SMTP client application assembles the message. The information you need to provide may vary depending on the application you are using. The following are the minimum requirements for an SMTP exchange between a client and a server:
+1. When accessing IBM Cloud Event Notifications through the SMTP interface, your SMTP client application assembles the message. The information you need to provide may vary depending on the application you are using. The following are the minimum requirements for an SMTP exchange between a client and a server:
    * Source address: The source address must belong to the configured domain; otherwise, the sender address will be rejected.
-   * Destination address: The destination address can be any valid email address or set of email addresses
+   * Destination address: The destination address can be any valid email address or set of email addresses.
    * Message data: Ensure that the message data is spam-free, clean, and sensible.
 
- As per the current configurations, attachments are not supported in Event Notifications SMTP interface.
+ According to the current configurations, attachments are not supported in Event Notifications SMTP interface.
  {: note}
 
 
+### Using API keys for SMTP authentication
+{: #en-smtp-configurations-api-keys}
+
+To use multiple API keys for SMTP authentication, you must create a Service ID and assign the appropriate SMTP role. The API keys created for the Service ID act as passwords for the SMTP user, providing enhanced security and flexibility.
+
+#### Creating API keys for SMTP users
+{: #en-smtp-configurations-create-api-keys}
+
+To create API keys for SMTP users, complete the following steps:
+
+1. Create a Service ID and configure your Event Notifications instance as part of access policy. For detailed instructions, see [Creating and working with service IDs](/docs/account?topic=account-serviceids) and [Assigning access in the console](/docs/account?topic=account-account-services).
+
+1. Assign the SMTP role to the Service ID. This role grants the Service ID permission to authenticate to the SMTP interface. For information about assigning access, see [Assigning access to Event Notifications](/docs/event-notifications?topic=event-notifications-en-service-access-management). Confirm your access policy, resource, and the role.
+
+1. Create one or more API keys for the Service ID. For instructions, see [Managing service ID API keys](/docs/account?topic=account-serviceidapikeys).
+
+1. Use the API key as the password when authenticating to the SMTP interface. The username remains the SMTP username you received when creating the SMTP user.
+
+#### API key limits
+{: #en-smtp-configurations-api-key-limits}
+
+The number of API keys you can create per Service ID is determined by IBM Cloud IAM limits. For current limits and quotas, check [IAM limits](/docs/account?topic=account-known-issues#iam_limits).
 
 
 ## Using SMTP interface for sending emails
@@ -190,8 +186,7 @@ After successful verification of a SMTP configuration in an IBM Cloud Event Noti
 1. Configure SMTP-enabled software, including ServiceNow, Jira, blogging platforms, RSS aggregators, list management software, and workflow systems, using the provided SMTP endpoint, port, and valid username-password credentials.
 2. To send an email using the SMTP interface, you can use an SMTP-enabled programming language, email server, or application. Ensure that you complete all the required steps mentioned above and have the correct SMTP endpoint, port, and credentials to connect to the IBM Cloud Event Notifications SMTP interface.
 3. If you currently administer your own email server, you can use the IBM Cloud SMTP endpoint, port, and credentials to send all your outgoing email through the Event Notifications SMTP configuration, without modifying your existing email clients and applications.
-4. To interact with the IBM Cloud Event Notifications SMTP interface using the command line, follow the example below:
-
+4. To interact with the IBM Cloud Event Notifications SMTP interface using the command line, see the following example
     ```sh
     openssl s_client -starttls smtp -connect {{smtp_endpoint}}:587
     ...
@@ -227,17 +222,20 @@ After successful verification of a SMTP configuration in an IBM Cloud Event Noti
    1. Select the required Region and VPC, from where you want to connect to the SMTP Private Endpoint.
    2. Under **Request connection to a service**, select **Event Notifications**.
    3. Enable the endpoint: `private.smtp.<region>.event-notifications.cloud.ibm.com`
-   4. Select the required subnet for the Reserved IP(Note: You can bind only one IP address per VPC zone to an endpoint gateway).
+   4. Select the required subnet for the Reserved IP.
+      You can bind only one IP address per VPC zone to an endpoint gateway.
+      {: note}
 
     ![SMTP Private Endpoint VPE](images/smtp-private-endpoint.png "SMTP Private Endpoint VPE"){: caption="SMTP Private Endpoint VPE" caption-side="bottom"}
 
 4. Create a **Network Zone** in **Context-Based-Restrictions(CBR)** for your VPC.
-5. Create **CBR Rule** for **Event-Notifications Instance** and add above created **Network zone** (OR) Add above **Network Zone** to existing **CBR Rule** that you already created for **Event-Notifications Instance**.
-6. Try using the respective SMTP Private Endpoint listed [here](/docs/event-notifications?topic=event-notifications-en-smtp-configurations#en-smtp-configurations-requirements).
+5. Create **CBR Rule** for **Event-Notifications Instance** and add **Network zone** created above or add **Network Zone** to existing **CBR Rule** that you already created for **Event-Notifications Instance**.
+
+6. Use the SMTP Private Endpoint listed in the [SMTP configurations requirements](/docs/event-notifications?topic=event-notifications-en-smtp-configurations#en-smtp-configurations-requirements).
 
 
 ## Tracking Email Status
 {: #en-destinations-smtp-configurations-tracking-status}
 
 * After sending emails from any of the above methods, you will receive a Queue ID, which will be beneficial for debugging purposes.
-* This capability allows users to monitor the delivery status of emails sent through a Custom Email destination, ensuring transparency and enhancing the overall user experience. For more information, follow [these steps](/docs/event-notifications?topic=event-notifications-en-destination-email-custom-domain-status).
+* This capability allows users to monitor the delivery status of emails sent through a Custom Email destination, ensuring transparency and enhancing the overall user experience. For more information, follow the steps to [monitor the delivery status of emails sent through a Custom Email destination](/docs/event-notifications?topic=event-notifications-en-destination-email-custom-domain-status).
