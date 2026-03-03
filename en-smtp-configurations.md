@@ -136,7 +136,8 @@ After successful verification of a SMTP configuration in an IBM Cloud Event Noti
 
 1. The SMTP username and password. A maximum of 5 users can be created in a single SMTP configuration. Event Notifications supports `Login` and `Plain` authentication methods from the SMTP protocol.
 
-    
+    When you create an SMTP user, you receive a username and password. However, password-based authentication will be deprecated in the near future. You must migrate to API key-based authentication using Service IDs. For more information, see [Using API keys for SMTP authentication](#en-smtp-configurations-api-keys).
+    {: deprecated}
 
     Once the SMTP username and password is created, you can clone the same credentials across SMTP configurations if you need the same credentials for other SMTP configurations/Domains within the **same instance**. This is supported via API/CLI/SDK and Terraform.
     {: note}
@@ -155,6 +156,28 @@ After successful verification of a SMTP configuration in an IBM Cloud Event Noti
  {: note}
 
 
+### Using API keys for SMTP authentication
+{: #en-smtp-configurations-api-keys}
+
+To use multiple API keys for SMTP authentication, you must create a Service ID and assign the appropriate SMTP role. The API keys created for the Service ID act as passwords for the SMTP user, providing enhanced security and flexibility.
+
+#### Creating API keys for SMTP users
+{: #en-smtp-configurations-create-api-keys}
+
+To create API keys for SMTP users, complete the following steps:
+
+1. Create a Service ID and configure your Event Notifications instance as part of access policy. For detailed instructions, see [Creating and working with service IDs](/docs/account?topic=account-serviceids) and [Assigning access in the console](/docs/account?topic=account-account-services).
+
+1. Assign the SMTP role to the Service ID. This role grants the Service ID permission to authenticate to the SMTP interface. For information about assigning access, see [Assigning access to Event Notifications](/docs/event-notifications?topic=event-notifications-en-service-access-management). Confirm your access policy, resource, and the role.
+
+1. Create one or more API keys for the Service ID. For instructions, see [Managing service ID API keys](/docs/account?topic=account-serviceidapikeys).
+
+1. Use the API key as the password when authenticating to the SMTP interface. The username remains the SMTP username you received when creating the SMTP user.
+
+#### API key limits
+{: #en-smtp-configurations-api-key-limits}
+
+The number of API keys you can create per Service ID is determined by IBM Cloud IAM limits. For current limits and quotas, check [IAM limits](/docs/account?topic=account-known-issues#iam_limits).
 
 
 ## Using SMTP interface for sending emails
