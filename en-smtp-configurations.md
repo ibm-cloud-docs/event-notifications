@@ -166,11 +166,11 @@ To use multiple API keys for SMTP authentication, you must create a Service ID a
 
 To create API keys for SMTP users, complete the following steps:
 
-1. Create a Service ID and configure your Event Notifications instance as part of access policy. For detailed instructions, see [Creating and working with service IDs](/docs/account?topic=account-serviceids) and [Assigning access in the console](/docs/account?topic=account-account-services).
+1. Create a Service ID and configure your Event Notifications instance as part of access policy. To learn how to create and configure Service IDs, see [Creating and working with service IDs](/docs/account?topic=account-serviceids) and [Assigning access in the console](/docs/account?topic=account-account-services).
 
-1. Assign the SMTP role to the Service ID. This role grants the Service ID permission to authenticate to the SMTP interface. For information about assigning access, see [Assigning access to Event Notifications](/docs/event-notifications?topic=event-notifications-en-service-access-management). Confirm your access policy, resource, and the role.
+1. Assign the SMTP role to the Service ID. This role grants the Service ID permission to authenticate to the SMTP interface. Confirm your access policy, resource, and the role.
 
-1. Create one or more API keys for the Service ID. For instructions, see [Managing service ID API keys](/docs/account?topic=account-serviceidapikeys).
+1. Create one or more API keys for the Service ID. To learn how to create and manage API keys, see [Managing service ID API keys](/docs/account?topic=account-serviceidapikeys).
 
 1. Use the API key as the password when authenticating to the SMTP interface. The username remains the SMTP username you received when creating the SMTP user.
 
