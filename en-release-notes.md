@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-03-03"
+lastupdated: "2026-03-20"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -20,6 +20,20 @@ content-type: release-note
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
 
+
+## 19 March 2026
+{: #event-notifications-Mar192026}
+{: release-note}
+
+Hyper Protect Crypto Services (HPCS) integration deprecated
+:  Support for Hyper Protect Crypto Services (HPCS) as a key management service for {{site.data.keyword.en_short}} is now deprecated. Existing HPCS integrations will continue to function, but new integrations with HPCS are no longer supported.
+
+Migration to Key Protect recommended
+:  Customers currently using HPCS are encouraged to migrate to {{site.data.keyword.keymanagementservicelong_notm}}. Key Protect is available in two deployment options to meet your security and compliance requirements:
+   - **Key Protect Multi-Tenant (BYOK):** A shared key management service with FIPS 140-2 Level 3 certified HSMs that provides Bring Your Own Key (BYOK) capability
+   - **Key Protect Dedicated (KYOK):** A single-tenant service with dedicated FIPS 140-2 Level 3 certified HSMs that provides Keep Your Own Key (KYOK) capability for enhanced security and exclusive control
+
+   Both Key Protect deployment options provide suitable alternatives to HPCS. For more information about integrating with Key Protect, see [Integrating with Key Protect](/docs/event-notifications?topic=event-notifications-en-integrations#en-int-key-management) and [Managing encryption](/docs/event-notifications?topic=event-notifications-en-managing-encryption).
 
 ## 3 March 2026
 {: #event-notifications-Mar32026}

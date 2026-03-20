@@ -23,7 +23,13 @@ To help ensure that you can securely manage your data when you use {{site.data.k
 
 {{site.data.keyword.en_short}} stores and encrypts details that are related to your destinations like email (sender, recipients, subject), or SMS (sender, recipient, details). As a multi-tenant service, every tenant has a designated encryption key and user data in each tenant is encrypted with only that tenant's key. This tenant key is protected by using {{site.data.keyword.en_short}} managed Key Protect. {{site.data.keyword.en_short}} helps ensure that private information is encrypted before it is stored.
 
-You can add a higher level of encryption control to your data at rest (when it is stored) by enabling integration with a Key Management Service (KMS). The data that you store in {{site.data.keyword.cloud_notm}} is encrypted at rest by using envelope encryption. If you need to control the encryption keys, you can integrate Key Protect or Hyper Protect Crypto Services. This process is commonly referred to as Bring Your Own Key (BYOK). With Key Protect and Hyper Protect Crypto Services, you can create, import, and manage encryption keys. You can assign access policies to the keys, assign users or service IDs to the keys, or give the key access only to a specific service.
+You can add a higher level of encryption control to your data at rest (when it is stored) by enabling integration with {{site.data.keyword.keymanagementservicelong_notm}}. The data that you store in {{site.data.keyword.cloud_notm}} is encrypted at rest by using envelope encryption. If you need to control the encryption keys, you can integrate Key Protect.
+
+{{site.data.keyword.keymanagementserviceshort}} is available in two deployment options:
+- **Key Protect Multi-Tenant (BYOK):** A shared key management service with FIPS 140-2 Level 3 certified HSMs. This option provides Bring Your Own Key (BYOK) capability.
+- **Key Protect Dedicated (KYOK):** A single-tenant service with dedicated FIPS 140-2 Level 3 certified HSMs for enhanced security and compliance. This option provides Keep Your Own Key (KYOK) capability with exclusive control over your encryption keys.
+
+With either Key Protect deployment option, you can create, import, and manage encryption keys. You can assign access policies to the keys, assign users or service IDs to the keys, or give the key access only to a specific service. Both options provide suitable alternatives to Hyper Protect Crypto Services (HPCS), which is being deprecated.
 
 For more information, see [Managing encryption](/docs/event-notifications?topic=event-notifications-en-managing-encryption).
 
