@@ -4,7 +4,7 @@ copyright:
   years:  2022, 2024
 lastupdated: "2024-10-07"
 
-keywords: event notifications, event notification, notifications, integrations, key protect, key management, hyper protect, hpcs, Collect Failed events
+keywords: event notifications, event notification, notifications, integrations, key protect, key management, Collect Failed events
 
 subcollection: event-notifications
 
@@ -14,41 +14,43 @@ subcollection: event-notifications
 # Integrating {{site.data.keyword.en_short}} with other {{site.data.keyword.cloud_notm}} services
 {: #en-integrations}
 
-Integrations in {{site.data.keyword.en_short}} represent list of other {{site.data.keyword.cloud_notm}} services that are connected to your {{site.data.keyword.en_short}} instance. You can encrypt the data that you store in {{site.data.keyword.cloud_notm}} databases by using encryption keys that you can control. For more information, see [Integrating with a Key management service](#en-int-key-management). You can also collect failed events and take appropriate action. For more information, see [Collecting failed events](/docs/event-notifications?topic=event-notifications-en-cfe-integrations).
+Integrations in {{site.data.keyword.en_short}} represent a list of other {{site.data.keyword.cloud_notm}} services that are connected to your {{site.data.keyword.en_short}} instance. You can encrypt the data that you store in {{site.data.keyword.cloud_notm}} databases by using encryption keys that you can control. For more information, see [Integrating with Key Protect](#en-int-key-management). You can also collect failed events and take appropriate action. For more information, see [Collecting failed events](/docs/event-notifications?topic=event-notifications-en-cfe-integrations).
 {: shortdesc}
 
-## Integrating with a Key management service
+## Integrating with Key Protect
 {: #en-int-key-management}
 
-You can use either one of the following options:
-- Bring Your Own Key (BYOK) through {{site.data.keyword.keymanagementservicelong_notm}}, and use one of your own keys to encrypt your databases and backups.
-- Hyper Protect Crypto Services (HPCS) - {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}, a dedicated key management service, and Hardware Security Module (HSM) that provides you with the Keep Your Own Key capability for cloud data encryption with exclusive control of your encryption keys.
+You can use customer-managed encryption keys through {{site.data.keyword.keymanagementservicelong_notm}} to encrypt your databases and backups with one of your own keys. {{site.data.keyword.keymanagementserviceshort}} is available in two deployment options:
+
+- **Key Protect Multi-Tenant (BYOK):** A shared key management service that provides FIPS 140-2 Level 3 certified cloud-based hardware security modules (HSMs) for key protection. This option provides Bring Your Own Key (BYOK) capability.
+- **Key Protect Dedicated (KYOK):** A single-tenant key management service that provides dedicated FIPS 140-2 Level 3 certified HSMs with exclusive control over your encryption keys. This option provides Keep Your Own Key (KYOK) capability for enhanced security and compliance.
+
+Both Key Protect deployment options are suitable alternatives to Hyper Protect Crypto Services (HPCS), which is being deprecated.
+{: note}
 
 BYOK and KYOK capabilities are supported only for {{site.data.keyword.en_short}} Standard plan.
 {: important}
 
 For more information, see [Managing encryption](/docs/event-notifications?topic=event-notifications-en-managing-encryption).
 
-If you are using {{site.data.keyword.en_short}} CLI or API to integrate with a key management service (KMS), ensure that you have enabled authorization to grant access between services before integrating with a KMS service. For more information, see [Using authorizations to grant access between services](#en-using-auth-access-between-services).
+If you are using {{site.data.keyword.en_short}} CLI or API to integrate with Key Protect, ensure that you have enabled authorization to grant access between services before integrating. For more information, see [Using authorizations to grant access between services](#en-using-auth-access-between-services).
 {: important}
 
-You can create and bring keys that are created by using {{site.data.keyword.keymanagementserviceshort}} or {{site.data.keyword.hscrypto}}. To get started, you need [{{site.data.keyword.keymanagementserviceshort}}](/catalog/services/key-protect){: external} or [{{site.data.keyword.hscrypto}}](/catalog/services/hyper-protect-crypto-services) provisioned on your {{site.data.keyword.cloud_notm}} account. For more information, see [provisioning a key protect instance](/docs/key-protect?topic=key-protect-provision){: external} or see [provisioning a {{site.data.keyword.hscrypto}} instance](/docs/hs-crypto?topic=hs-crypto-get-started){: external}.
+You can create and bring keys that are created by using {{site.data.keyword.keymanagementserviceshort}}. To get started, you need [{{site.data.keyword.keymanagementserviceshort}}](/catalog/services/key-protect){: external} provisioned on your {{site.data.keyword.cloud_notm}} account. You can choose either the Multi-Tenant or Dedicated deployment option based on your security and compliance requirements. For more information, see [Provisioning a Key Protect instance](/docs/key-protect?topic=key-protect-provision){: external}.
 
-1. From your {{site.data.keyword.en_short}} service instance dashboard, click **Integrations**. By default, a Key Protect entry is listed, that can be edited to configure the **Key Management** option of your choice, connecting to your {{site.data.keyword.en_short}} instance.
+1. From your {{site.data.keyword.en_short}} service instance dashboard, click **Integrations**. By default, a Key Protect entry is listed that can be edited to configure the **Key Management** option, connecting to your {{site.data.keyword.en_short}} instance.
 
-1. From Overflow menu of the default entry, click **Edit**. This displays the **Key Management** side panel.
-
-1. Select **Key Protect** or **Hyper Protect Crypto Services** from the **Service** drop-down list, as per your requirement.
+1. From the overflow menu of the default entry, click **Edit**. This displays the **Key Management** side panel.
 
 1. For the **Instance**, select one of these options:
-   - **Create a new instance** - to create a new instance of the selected service. This will take you to the respective provisioning page of the service selected.
-   - **Choose existing instance** - select this option if you already have a {{site.data.keyword.keymanagementserviceshort}} or {{site.data.keyword.hscrypto}} instance. Select the **Service** instance and **Root key** from the drop-down list.
+   - **Create a new instance** - Create a new instance of Key Protect. This takes you to the Key Protect provisioning page.
+   - **Choose existing instance** - Select this option if you already have a {{site.data.keyword.keymanagementserviceshort}} instance. Select the **Service** instance and **Root key** from the drop-down list.
 
 1. Click **Save** to apply the changes.
 
 The updated **Key Management** information is listed in the **Integrations** dashboard.
 
-By default customer data is encrypted. You can user APIs, CLI, or User Interface to provide your own KMS details for data encryption. If you are using CLI or APIs then you need to get default KMS integration ID through [List all integrations](/apidocs/event-notifications#list-integrations) API. In case of default KMS integrations except integration ID all other values are empty. You need to use the integration ID to update the integration details with your own KMS details.
+By default, customer data is encrypted. You can use APIs, CLI, or the user interface to provide your own Key Protect details for data encryption. If you are using CLI or APIs, you need to get the default Key Protect integration ID through the [List all integrations](/apidocs/event-notifications#list-integrations) API. In case of default Key Protect integrations, except for the integration ID, all other values are empty. You need to use the integration ID to update the integration details with your own Key Protect details.
 {: note}
 
 ## Using authorizations to grant access between services
@@ -71,7 +73,7 @@ Use {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) to cre
 
 1. Specify whether you want the authorization to be for all resources or Resources based on selected attributes, If you selected Resources based on selected attributes, then specify the **Add attributes** only source resource group or only source service instance.
 
-1. Select a **Target service** as per your requirement (Key Protect or Hyper Protect Crypto Services).
+1. Select **Key Protect** as the **Target service**.
 
 1. For the target service, specify whether you want the authorization to be for all instances, only a specific instance in the account, or instances only in a certain resource group.
 
