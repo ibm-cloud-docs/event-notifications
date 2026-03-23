@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-02-19"
+lastupdated: "2026-03-23"
 
 keywords: event notifications CLI plug-in, CLI reference, en cli reference, event notifications cli reference, event notifications, command line reference
 
@@ -1686,21 +1686,12 @@ ibmcloud event-notifications integration-create --instance-id INSTANCE-ID --type
 `--type` (string)
 :  Type of the integration collect_failed_events.
 
-   The maximum length is `50` characters. The minimum length is `1` characters. Allowed values are KMS and hs-crypto.
+   The maximum length is `50` characters. The minimum length is `1` characters. Allowed value is collect_failed_events.
 
 `--metadata` ([IntegrationCreateAttributes](#en-cli-integration-create-example-schema))
 :  Integration schema for update
 
    Metadata required for integration.
-
-### ibmcloud event-notifications integration replace
-{: #en-cli-integration-update-command}
-
-Replace `Integration`.
-
-```sh
-ibmcloud event-notifications integration-replace --instance-id INSTANCE-ID --id ID --type Type --metadata METADATA
-```
 
 #### Examples
 {: #en-cli-integration-create-example-schema}
@@ -1713,7 +1704,16 @@ ibmcloud event-notifications integration-replace --instance-id INSTANCE-ID --id 
          "crn": "crn:v1:bluemix:public:cloud-object-storage:global:xxxxxxx6db359a81a1dde8f44bxxxxxx:xxxxxxxx-1d48-xxxx-xxxx-xxxxxxxxxxxx::",
          "bucket_name": "cloud-object-storage"
       }
-      ```
+      ```   
+
+### ibmcloud event-notifications integration replace
+{: #en-cli-integration-update-command}
+
+Replace `Integration`.
+
+```sh
+ibmcloud event-notifications integration-replace --instance-id INSTANCE-ID --id ID --type Type --metadata METADATA
+```
 
 #### Command options
 {: #en-cli-integration-replace-options}
@@ -1724,9 +1724,10 @@ ibmcloud event-notifications integration-replace --instance-id INSTANCE-ID --id 
    The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]/`.
 
 `--type` (string)
-:  Type of the integration KMS/hs-crypto.
+:  Type of the integration KMS/hs-crypto(deprecated).
 
-   The maximum length is `50` characters. The minimum length is `1` characters. Allowed values are KMS and hs-crypto.
+   The maximum length is `50` characters. The minimum length is `1` characters. Allowed values are KMS and collect_failed_events.
+   Note: The type hs-crypto is deprecated now. No new integration resources with hs-crypto type will be supported.
 
 `--metadata` ([IntegrationReplaceAttributes](#en-cli-integration-example-schema))
 :  Integration schema for update
@@ -1741,12 +1742,12 @@ ibmcloud event-notifications integration-replace --instance-id INSTANCE-ID --id 
 #### Examples
 {: #en-cli-integration-example-schema}
 
-   - The following example shows the format of the `IntegrationReplaceAttributes` object.
+   - The following example shows the format of the `IntegrationReplaceAttributes` object for kms.
 
       ```json
       {
          "endpoint" : "https://qa.us-south.kms.cloud.ibm.com",
-         "crn" : "crn of key protect/hpcs instance",
+         "crn" : "crn of key protect",
          "root_key_id" : "root key id"
       }
       ```
