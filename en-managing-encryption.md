@@ -105,3 +105,6 @@ A cloud logs event is generated to report the action. For more information, see 
 {: #stop-customer-encryption}
 
 After enabling customer-managed encryption, it is not possible to disable it. Instead, you must delete the service instance and create a new instance.
+
+Alternatively, you can use pre-built, open-source, and enterprise-ready Terraform IBM Modules (TIM) to provision your infrastructure through [{{site.data.keyword.en_short}}](https://registry.terraform.io/modules/terraform-ibm-modules/event-notifications/ibm/latest){: external} module, see comprehensive [example](https://registry.terraform.io/modules/terraform-ibm-modules/event-notifications/ibm/latest/examples/advanced){: external} that demonstrates creating a {{site.data.keyword.keymanagementserviceshort}} instance with a root key, provisioning an {{site.data.keyword.en_short}} instance with bring-your-own-key (BYOK) encryption, and Configuring the authorization policy between services.
+{: tip}

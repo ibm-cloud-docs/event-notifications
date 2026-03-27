@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2021, 2025
+  years: 2021, 2026
 lastupdated: "2024-10-07"
 
 keywords: event-notifications, event notifications, customer responsibilities, IBM responsibilities, terms and conditions, disaster recovery, toolchain backup

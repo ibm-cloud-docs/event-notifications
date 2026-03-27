@@ -257,6 +257,12 @@ If you consistently encounter client timeouts, consider reaching out to the supp
 
 
 
+## Can I use Terraform IBM Modules to provision {{site.data.keyword.en_short}}?
+{: #faq-en-tim}
+{: faq}
+
+Yes, you can use pre-built, enterprise-ready [Terraform IBM Modules (TIM)](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim) to provision and configure {{site.data.keyword.en_short}} instances. The [{{site.data.keyword.en_short}}](https://registry.terraform.io/modules/terraform-ibm-modules/event-notifications/ibm/latest){: external} module provides a standardized, tested approach to deploying {{site.data.keyword.en_short}} with best practices built in.
+
 ## Does Event Notifications support cross account integration?
 {: #faq-en-notifications-cross-account-integration}
 {: faq}

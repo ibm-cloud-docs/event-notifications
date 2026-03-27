@@ -87,3 +87,6 @@ Use {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) to cre
 To authorize a source service access a target service, run the `ibmcloud iam authorization-policy-create` command.
 
 For more information about all of the parameters that are available for this command, see [ibmcloud iam authorization-policy-create](/docs/cli?topic=cli-ibmcloud_commands_iam#ibmcloud_iam_authorization_policy_create).
+
+The [Terraform IBM Modules (TIM) for {{site.data.keyword.en_short}}](https://registry.terraform.io/modules/terraform-ibm-modules/event-notifications/ibm/latest){: external} provides a comprehensive [example](https://registry.terraform.io/modules/terraform-ibm-modules/event-notifications/ibm/latest/examples/advanced){: external} that demonstrates provisioning an {{site.data.keyword.en_short}} instance, a {{site.data.keyword.keymanagementserviceshort}} instance with a root key, authorization between these services, and creating an integration between them. These [Terraform IBM Modules (TIM)](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim) are pre-built, open-source, and enterprise-ready that follow {{site.data.keyword.cloud_notm}} security best practices.
+{: tip}
