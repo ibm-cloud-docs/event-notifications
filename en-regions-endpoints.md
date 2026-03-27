@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-02-09"
+lastupdated: "2026-03-27"
 
 keywords: event-notifications, event notifications, regions, endpoints, private endpoints
 
@@ -90,3 +90,31 @@ If you need to manage your {{site.data.keyword.en_short}} resources over a priva
 | Washington DC |`https://private.us-east.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
 | Chennai |`https://private.in-che.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{guid}` |
 {: caption="Private endpoints for interacting with {{site.data.keyword.en_short}} by using APIs" caption-side="bottom"}
+
+## SMTP endpoints
+{: #en-smtp-endpoints}
+
+{{site.data.keyword.en_short}} provides SMTP interface endpoints that allow you to send email notifications using standard SMTP protocol. 
+
+You can connect to the SMTP interface using either public endpoints or private endpoints via Cloud Service Endpoints (CSE) and Virtual Private Endpoint (VPE) gateways. All SMTP connections use port 587.
+
+The SMTP endpoints are available in the `us-south` (Dallas) and `eu-de` (Frankfurt) regions. 
+
+Before you can use the SMTP interface, you must create an SMTP configuration and complete domain verification. For more information, see [Using the {{site.data.keyword.en_short}} SMTP Interface](/docs/event-notifications?topic=event-notifications-en-smtp-configurations).
+{: note}
+
+### Dallas (us-south) SMTP endpoint
+{: #en-smtp-dallas-endpoint}
+
+- **SMTP Public Endpoint:** `smtp.us-south.event-notifications.cloud.ibm.com`
+- **SMTP Private Endpoint:** `private.smtp.us-south.event-notifications.cloud.ibm.com`
+
+{{site.data.keyword.en_short}} instances in the following regions connect to this endpoint: Dallas (`us-south`), Toronto (`ca-tor`), Tokyo (`jp-tok`), Osaka (`jp-osa`), Sydney (`au-syd`), London (`eu-gb`), Sao Paulo (`br-sao`), Montreal (`ca-mon`), Chennai (`in-che`), and Washington DC (`us-east`).
+
+### Frankfurt (eu-de) SMTP endpoint
+{: #en-smtp-frankfurt-endpoint}
+
+- **SMTP Public Endpoint:** `smtp.eu-de.event-notifications.cloud.ibm.com`
+- **SMTP Private Endpoint:** `private.smtp.eu-de.event-notifications.cloud.ibm.com`
+
+{{site.data.keyword.en_short}} instances in the following regions connect to this endpoint: Frankfurt (`eu-de`) and Madrid (`eu-es`).
