@@ -13,7 +13,7 @@ subcollection: event-notifications
 # {{site.data.keyword.cloud_notm}} Email Service with Custom domain
 {: #en-destinations-custom-email}
 
-You can configure a custom email destination in the Destinations tab. As part of the configuration, enter the domain name to be used for sending emails.
+You can configure a custom email destination in the Destinations tab. As part of the configuration, enter the domain name to be used for sending emails. 
 
 Custom email destination is not supported by Lite Plan. To know more about the plans and destinations available, refer [here](/docs/event-notifications?topic=event-notifications-getting-started)
 {: note}
@@ -44,6 +44,8 @@ c. The DNS propagation may take up to 72 hours to be updated across the internet
 {: #en-destinations-custom-email-use}
 
 To use the email service destination, add it to a subscription along with the email addresses of interest. For a single subscription, you can add up to 10,000 email addresses with the {{site.data.keyword.en_short}} managed email Opt-in capability. The subscription also needs a topic to filter events of interest from your sources. When an event lands in the topic, {{site.data.keyword.en_short}} immediately routes the event notification to your email recipients.
+
+Custom domain emails are sent from regional email infrastructure based on your {{site.data.keyword.en_short}} instance location. Instances in Dallas, Toronto, Tokyo, Osaka, Sydney, London, Sao Paulo, Montreal, Chennai, and Washington DC send emails from the Dallas region. Instances in Frankfurt and Madrid send emails from the Frankfurt region.
 
 If you add an individual to the recipient list who does not want to receive email notifications, the recipient can opt out by clicking a link in the footer of the email. You can track recipients who opt into the {{site.data.keyword.en_short}} dashboard.
 
