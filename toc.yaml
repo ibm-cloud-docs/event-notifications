@@ -165,7 +165,7 @@ toc:
           links:
           - link:
               label: Event Notification Terraform Reference
-              href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/en_destination_android
+              href: https://registry.terraform.io/modules/terraform-ibm-modules/event-notifications/ibm/latest
       - en-regions-endpoints.md
       - en-vpe.md
       - data-portability.md

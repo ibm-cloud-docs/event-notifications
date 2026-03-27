@@ -59,6 +59,9 @@ To configure and collect failed events, do the following steps:
 
 1. Click the toggle switch to **ON** status under the **Collect failed events** column for the destination for which you want to collect the failed events. A success message is displayed for switching `ON` to collect failed events for the selected destination.
 
+Alternatively, you can use pre-built, open-source, and enterprise-ready Terraform IBM Modules (TIM) to provision your infrastructure through [{{site.data.keyword.en_short}}](https://registry.terraform.io/modules/terraform-ibm-modules/event-notifications/ibm/latest){: external} module, see comprehensive [example](https://registry.terraform.io/modules/terraform-ibm-modules/event-notifications/ibm/latest/examples/advanced) {: external} that covers creating an {{site.data.keyword.en_short}} instance, a {{site.data.keyword.cos_full_notm}} instance and bucket, configuring the integration between {{site.data.keyword.en_short}} and {{site.data.keyword.cos_full_notm}} and setting up authorization policies between the services.
+{: tip}
+
 ## Available list of destinations for collecting failed events
 {: #en-collect-failedevents-destinationslist}
 

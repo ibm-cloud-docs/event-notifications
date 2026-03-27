@@ -168,3 +168,8 @@ Follow the creation or modification of zones or rules with adequate testing to h
 
 Users who attempt to access your resources outside of the defined zones receive `HTTP error 403` when the appropriate rules are not established.
 {: note}
+
+The Terraform IBM Modules (TIM) for [{{site.data.keyword.en_short}}](https://registry.terraform.io/modules/terraform-ibm-modules/event-notifications/ibm/latest){: external} supports creating CBR rules, allowing you to define and enforce access restrictions as part of your infrastructure as code. These [Terraform IBM Modules (TIM)](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim) are pre-built, open-source, and enterprise-ready that follow {{site.data.keyword.cloud_notm}} security best practices.
+
+Additionally, you can use the [Terraform IBM Modules for CBR](https://registry.terraform.io/modules/terraform-ibm-modules/cbr/ibm/latest){: external} to create CBR zones and CBR rules for any IBM Cloud service, providing a flexible and reusable approach to managing context-based restrictions across your infrastructure.
+{: note}

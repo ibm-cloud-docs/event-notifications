@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-02-16"
+lastupdated: "2026-03-27"
 
 keywords: event-notifications, event notifications, about event notifications, vpe, virtual private endpoints, virtual private endpoint gateways
 
@@ -239,5 +239,8 @@ resource "ibm_is_virtual_endpoint_gateway" "en_vpe_dal" {
   vpc            = <vpc id of your vpc>
 }
 ```
+
+You can also use the [Terraform IBM Modules (TIM) for VPE Gateway](https://registry.terraform.io/modules/terraform-ibm-modules/vpe-gateway/ibm/latest){: external} to create and manage Virtual Private Endpoint gateways for {{site.data.keyword.en_short}} and other IBM Cloud services.
+{: tip}
 
 To find the different SMTP endpoints, see [Endpoints](/docs/event-notifications?topic=event-notifications-en-smtp-configurations#en-smtp-configurations-requirements). Find the VPC ID in your VPC instance, see [Creating and Configuring a VPC](/docs/vpc?topic=vpc-getting-started&interface=terraform#create-and-configure-vpc) to learn the process of creating a VPC.

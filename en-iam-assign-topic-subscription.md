@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025
-lastupdated: "2025-07-08"
+  years: 2026
+lastupdated: "2026-03-27"
 
 keywords: event-notifications, event notifications, managing service access, iam, account, topics, subscriptions
 
@@ -20,7 +20,7 @@ completion-time: 15m
 {: toc-content-type="tutorial"}
 {: toc-completion-time="15m"}
 
-This tutorial shows you how to assign access roles for users against Topics and Subscriptions, by creating and modifying IAM access policies. The details of the IAM roles are as follows: 
+This tutorial shows you how to assign access roles for users against Topics and Subscriptions, by creating and modifying IAM access policies. The details of the IAM roles are as follows:
 
 ##### Applicable roles:
 1. Reader: To enable access to topics/subscriptions in an instance, a user must at least have **Reader** level privileges to the particular {{site.data.keyword.en_short}} instance. With only Reader access, the user can only view and cannot edit any resources in the {{site.data.keyword.en_short}} instance.
@@ -70,7 +70,7 @@ Only **Writer** role is applicable for given Topics/Subscriptions. **Reader** Ro
 
 - The Topic ID if you want to create an access policy for a topic **OR**
 
-![Create a new policy](images/en-topic-id.png){: caption="Accessing Topic ID"} 
+![Create a new policy](images/en-topic-id.png){: caption="Accessing Topic ID"}
 
 - The Subscription ID if you want to create an access policy for a subscription.
 
@@ -111,7 +111,7 @@ When a user tries to perform any action such as editing topics or subscriptions,
   "trace":"e7bed498-6a41-4af0-89dc-cc08c4dc0e45",
   "errors": [{"code":"authorization_error",
   "message":"Unfortunately you don't have a permission to access requested resource",
-  "more_info":"https://test.cloud.ibm.com/apidocs/event-notifications#event-notifications-api-authentication" }]
+  "more_info":"https://cloud.ibm.com/apidocs/event-notifications#event-notifications-api-authentication" }]
 }
 ```
 {: codeblock}

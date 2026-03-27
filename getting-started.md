@@ -3,7 +3,7 @@
 copyright:
 
   years: 2021, 2026
-lastupdated: "2026-02-16"
+lastupdated: "2026-03-27"
 
 keywords: event notifications, IBM Cloud
 
@@ -159,3 +159,7 @@ Destinations subscribe to topics. Multiple destinations can subscribe to a singl
 To learn the more about the process of creating a subscription, see [Creating a subscription](/docs/event-notifications?topic=event-notifications-en-create-en-subscription#en-create-subscription).
 
 Once you have created the subscription, you will receive a notification at the destination chosen previously whenever an event occurs.
+
+
+As an alternative to the console-based approach, you can also use [Terraform IBM Modules (TIM)](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim) to provision and configure {{site.data.keyword.en_short}} instances using Infrastructure as Code(IaC) automation. The [Terraform IBM Modules (TIM) for {{site.data.keyword.en_short}}](https://registry.terraform.io/modules/terraform-ibm-modules/event-notifications/ibm/latest){: external} provides a standardized, tested approach for deploying {{site.data.keyword.en_short}} with best practices built in. These modules are pre-built, open-source, and enterprise-ready that follow {{site.data.keyword.cloud_notm}} security best practices.
+{: tip}

@@ -38,7 +38,8 @@
   ],
   "section_devtools": {
     "api": "/apidocs/event-notifications",
-    "cli": "/docs/event-notifications?topic=event-notifications-event-notifications-cli"
+    "cli": "/docs/event-notifications?topic=event-notifications-event-notifications-cli",
+    "terraform": "https://registry.terraform.io/modules/terraform-ibm-modules/event-notifications/ibm/latest"
   },
   "section_updates": {
     "view_more": "/docs/event-notifications?topic=event-notifications-release-notes"

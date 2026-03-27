@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025
-lastupdated: "2025-04-14"
+  years: 2026
+lastupdated: "2026-03-27"
 
 keywords: event-notifications, event notifications, managing service access, iam, account, authorizations, s2s
 
@@ -51,3 +51,27 @@ To authorize a source service to access a target service, run the `ibmcloud iam 
 
 For more information about all the parameters available for this command, see [ibmcloud iam authorization-policy-create](/docs/cli?topic=cli-ibmcloud_commands_iam#ibmcloud_iam_authorization_policy_create).
 {: cli}
+
+You can use the [Terraform IBM Modules (TIM) for service to service authorization](https://registry.terraform.io/modules/terraform-ibm-modules/s2s-auth/ibm/latest){: external} to create authorization policies between {{site.data.keyword.en_short}} and other services.
+
+An example for service to service authorization using Terraform IBM Modules (TIM):
+
+```terraform
+module "service_auth" {
+  source                = "terraform-ibm-modules/s2s-auth/ibm"
+  version               = "2.0.7"
+  enable_cbr            = false
+  service_map           = {
+    "test-policy-1" = {
+      "description"              = "This is a test auth policy",
+      "enforcement_mode"         = "report",
+      "roles"                    = ["Reader"],
+      "source_resource_instance_id" = "<source_resource_instance_guid>",
+      "source_service_name"      = "cloud-object-storage",
+      "target_resource_instance_id" = "<target_resource_instance_guid>",
+      "target_service_name"      = "kms"
+    }
+  }
+}
+```
+{: codeblock}
