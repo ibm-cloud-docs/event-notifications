@@ -45,7 +45,7 @@ This tutorial shows you how to send push notifications as follows:
 
 You must have the following prerequisites in place:
 
-* Download and install any code editor to correct website code by using HTML, CSS, and js.
+* Download and install any code editor to create website code by using HTML, CSS, and JavaScript.
 * A Google account to log in to Firebase console to get your Sender ID and Server API Key.
 * An {{site.data.keyword.cloud_notm}} account. If you do not have one, [create an IBM Cloud account](https://cloud.ibm.com/){: external}.
 
@@ -54,12 +54,12 @@ You must have the following prerequisites in place:
 {: step}
 
 * Log in to your [{{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/){: external}.
-* In the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog#services), search `Event Notifications > Event Notifications`.
-* Select a `Region` from the list of supported regions and select a `pricing plan`.
-* Provide a `Service name`.
-* Select a `resource group`.
+* In the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog#services), search **Event Notifications > Event Notifications**.
+* Select a **Region** from the list of supported regions and select a **pricing plan**.
+* Provide a **Service name**.
+* Select a **resource group**.
 * Accept the licensing agreements and terms by clicking the checkbox.
-* Click `Create`.
+* Click **Create**.
 
 ## Get FCM credentials
 {: #en-get-fcm-chrome}
@@ -68,13 +68,13 @@ You must have the following prerequisites in place:
 Firebase Cloud Messaging (FCM) is the gateway that delivers push notifications to Chrome web devices. To set up the Chrome web Push destination on the console, you must get your FCM credentials (Server key). The server key is stored securely and used by the {{site.data.keyword.en_short}} service to connect to the FCM server.
 
 * Go to the [Firebase Console](https://console.firebase.google.com/?pli=1){: external}. A Google user account is required.
-* Click `Create a project`. If you are already having a project, then click `Add Project`.
-* In the `Create a project window`, enter a project name, and accept the terms and enable or disable Google analytics (optional) by selecting the toggle switch and click `Continue`.
-* If Google analytics is enabled, then in the `Configure Google Analytics` window, choose the `Analytics location`, and accept the terms.
-* Click `Create Project`.
-* Click `Continue` when the new project is ready.
-* In the navigation panel, select the `settings` icon next to the `Project Overview` and select `Settings > Project settings`.
-* Click the `Cloud Messaging` tab to view your project credentials: `Server Key`.
+* Click **Create a project**. If you already have a project, then click **Add Project**.
+* In the **Create a project** window, enter a project name, accept the terms, and enable or disable Google analytics (optional) by selecting the toggle switch, then click **Continue**.
+* If Google analytics is enabled, then in the **Configure Google Analytics** window, choose the **Analytics location**, and accept the terms.
+* Click **Create Project**.
+* Click **Continue** when the new project is ready.
+* In the navigation panel, select the **settings** icon next to the **Project Overview** and select **Settings** > **Project settings**.
+* Click the **Cloud Messaging** tab to view your project credentials: **Server Key**.
 
 ![FCM credentials](images/en-fcm-credentials.png "FCM credentials"){: caption="FCM credentials" caption-side="bottom"}
 
@@ -84,26 +84,26 @@ Firebase Cloud Messaging (FCM) is the gateway that delivers push notifications t
 
 Take the following steps:
 
-* Go to the `Sources` section of the {{site.data.keyword.en_short}} dashboard.
-* Click `Add` and select an API Source.
-* Type a name and an optional description and click `Add`.
+* Go to the **Sources** section of the {{site.data.keyword.en_short}} dashboard.
+* Click **Add** and select an API Source.
+* Type a name and an optional description and click **Add**.
 
 ## Create an {{site.data.keyword.en_short}} destination
 {: #en-create-dest-chrome}
 {: step}
 
-Click `Destinations` in the {{site.data.keyword.en_short}} console and add the following destination details:
+Click **Destinations** in the {{site.data.keyword.en_short}} console and add the following destination details:
 
-* `Name`: add a name for the Destination.
-* `Description`: add an optional description for the destination.
-* `Type`: select `Chrome Push Notifications` type from the dropdown list.
+* **Name**: add a name for the Destination.
+* **Description**: add an optional description for the destination.
+* **Type**: select **Chrome Push Notifications** type from the dropdown list.
 * Select a destination plan: Pre-production destination or Production destination.
-   - `Pre-production destination` - select this destination as low-cost push destination, for your development and test environments.
-   - `Production destination` - use the full capability of this destination. Unlimited devices and outbound messages allowed.
-* Add your website URL to get it allow listed.
-* Add the `Server Key`, which you got from `Get FCM credentials` section.
+   - **Pre-production destination** - select this destination as a low-cost push destination for your development and test environments.
+   - **Production destination** - use the full capability of this destination. Unlimited devices and outbound messages allowed.
+* Add your website URL to allowlist it.
+* Add the **Server Key**, which you got from **Get FCM credentials** section.
 * Click **Add**.
-* When Chrome destination is created, edit the created destination to get public vapId key required for web sdk.
+* When the Chrome destination is created, edit the destination to get the public vapID key required for the web SDK.
 
 ![Destination Edit](images/en-push-chrome-destination-edit.png "Destination Edit"){: caption="Receive notifications" caption-side="bottom"}
 
@@ -113,28 +113,28 @@ Click `Destinations` in the {{site.data.keyword.en_short}} console and add the f
 {: #en-create-topic-chrome}
 {: step}
 
-Select `Topics` in the {{site.data.keyword.en_short}} console and click `Create`. Enter the following topic details:
+Select **Topics** in the {{site.data.keyword.en_short}} console and click **Create**. Enter the following topic details:
 
-* `Name`: enter a name for the topic.
-* `Description`: add an optional description for the topic.
-* `Source`: select a source from the dropdown list.
-* `Event type`: select event type from the dropdown list.
-* `Event sub type` select event sub type from the event sub type dropdown list.
-* `Severity`: select severity from the severity dropdown list.
-* `Advanced conditions`: write your own custom conditions, which must follow [jsonpath specifications](https://www.rfc-editor.org/rfc/rfc9535.html). Jsonpath expressions can be validated at [jsonpath.com](https://jsonpath.com) or [extendsclass.com](https://extendsclass.com/jsonpath-tester.html).
+* **Name**: enter a name for the topic.
+* **Description**: add an optional description for the topic.
+* **Source**: select a source from the dropdown list.
+* **Event type**: select event type from the dropdown list.
+* **Event sub type**: select event sub type from the event sub type dropdown list.
+* **Severity**: select severity from the severity dropdown list.
+* **Advanced conditions**: write your own custom conditions, which must follow [jsonpath specifications](https://www.rfc-editor.org/rfc/rfc9535.html). Jsonpath expressions can be validated at [jsonpath.com](https://jsonpath.com) or [extendsclass.com](https://extendsclass.com/jsonpath-tester.html).
 
 ## Create an {{site.data.keyword.en_short}} subscription
 {: #en-create-sub-chrome}
 {: step}
 
-Click `Subscriptions` in the {{site.data.keyword.en_short}} console. Enter the following subscription details:
+Click **Subscriptions** in the {{site.data.keyword.en_short}} console. Enter the following subscription details:
 
-* `Click` Create to display subscription wizard.
+* Click **Create** to display the subscription wizard.
 * Complete the following subscription details:
-   * `Subscription name`: name of the subscription.
-   * `Subscription description`: add an optional description.
-* Under the `Subscribe to a topic` section, select a topic from the drop-down list and select a destination from the destination drop-down list.
-* `Destination type`: select type under `Destination` and click `Add`.
+   * **Subscription name**: name of the subscription.
+   * **Subscription description**: add an optional description.
+* Under the **Subscribe to a topic** section, select a topic from the drop-down list and select a destination from the destination drop-down list.
+* **Destination type**: select type under **Destination** and click **Add**.
 
 ## Set up {{site.data.keyword.en_short}} Chrome web SDK
 {: #en-setup-chrome-sdk}
@@ -142,7 +142,7 @@ Click `Subscriptions` in the {{site.data.keyword.en_short}} console. Enter the f
 
 The Chrome web SDK enables Chrome websites to receive push notifications. Complete the following steps to install {{site.data.keyword.en_short}} Chrome web SDK, initialize the SDK, and register for notifications for your website.
 
-* To include the SDK in your project, add the `ENPushSDK.js`,`ENPushServiceWorker.js`, and `manifest_Website.json` files to your project root folder.
+* To include the SDK in your project, add the `ENPushSDK.js`, `ENPushServiceWorker.js`, and `manifest_Website.json` files to your project root folder.
 
 * Edit the `manifest_Website.json` file.
 
@@ -155,7 +155,7 @@ The Chrome web SDK enables Chrome websites to receive push notifications. Comple
 
 * Change the `manifest_Website.json` file name to `manifest.json`.
 
-* Include the `manifest.json` in `<head>` tag of your html file.
+* Include the `manifest.json` in the `<head>` tag of your HTML file.
 
    ```html
    <link rel="manifest" href="https://github.com/IBM/event-notifications-destination-webpush-sdk/blob/main/manifest_Website.json">
@@ -168,7 +168,7 @@ The Chrome web SDK enables Chrome websites to receive push notifications. Comple
    <script src="https://github.com/IBM/event-notifications-destination-webpush-sdk/blob/main/ENPushSDK.js" async></script>
    ```
 
-* Complete the following steps to enable website to initialize the SDK.
+* Complete the following steps to enable the website to initialize the SDK.
 
    ```js
    var enPush = new ENPush()
@@ -203,10 +203,10 @@ The Chrome web SDK enables Chrome websites to receive push notifications. Comple
       })
       ```
 
-   * Register with `userId`. For `userId` based notification, the register method accepts one more parameter - `userId`.
+   * Register with `userId`. For `userId`-based notification, the register method accepts one more parameter - `userId`.
 
       ```js
-      bmsPush.registerWithUserId("UserId",function(response) {
+      enPush.registerWithUserId("UserId",function(response) {
          alert(response.response)
       })
       ```
@@ -227,8 +227,8 @@ The Chrome web SDK enables Chrome websites to receive push notifications. Comple
 {: #en-send-notifications-chrome}
 {: step}
 
-Use the [Send notification API](/apidocs/event-notifications) to send the push notification for the Chrome web device. You can use the [Node](https://github.com/IBM/event-notifications-node-admin-sdk#send-notifications){: external} or [Go](https://github.com/IBM/event-notifications-go-admin-sdk#send-notifications){: external} admin SDK instead of calling the API directly.
+Use the [Send notification API](/apidocs/event-notifications) to send the push notification for the Chrome web device. You can use the [Node](https://github.com/IBM/event-notifications-node-admin-sdk#send-notifications){: external}, [Go](https://github.com/IBM/event-notifications-go-admin-sdk#send-notifications){: external}, [Python](https://github.com/IBM/event-notifications-python-admin-sdk){: external} or [Java](https://github.com/IBM/event-notifications-java-admin-sdk){: external} admin SDK instead of calling the API directly.
 
-Received notification on the chrome website in MacOS.
+Received notification on the Chrome website in macOS.
 
 ![Receive notifications](images/en-receive-chrome-notification.png "Receive notifications"){: caption="Receive notifications" caption-side="bottom"}
