@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025
-lastupdated: "2025-03-26"
+  years: 2026
+lastupdated: "2026-03-30"
 
 keywords: event notifications, event-notifications, map event notifications to destinations
 subcollection: event-notifications
@@ -22,6 +22,9 @@ You can filter and route event notifications from {{site.data.keyword.cloud_notm
 {: shortdesc}
 
 To understand more about the event notification payload, see [Event Notifications payload](/docs/event-notifications?topic=event-notifications-en-spec-payload).
+
+To view the payload of incoming notifications from your sources, you can enable Store Notifications. This helps you understand the notification payload format and available field names. For more information, see [Viewing payloads of notifications](/docs/event-notifications?topic=event-notifications-en-view-notification-payloads).
+{: tip}
 
 Events can be used to trigger proactive alerts and can also be derived from logs for metric collection or debugging purposes.
 To ensure that notifications are informative and useful to the recipient, it's crucial to construct a comprehensive notification payload.

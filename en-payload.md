@@ -21,7 +21,10 @@ This document outlines the {{site.data.keyword.en_short}} specification.
 ## Introduction
 {: #en-spec-payloadintro}
 
-This document describes the payload details for sending events notifications by using the API sources in {{site.data.keyword.en_short}}. API sources can be used to send events from your backend applications. You can use this document to send Push notifications from business backends.
+This document describes the payload details for sending events notifications by using the API sources in {{site.data.keyword.en_short}}. API sources can be used to send events from your backend applications. You can use this document to send Push notifications from business backend.
+
+You can view the payload of incoming notifications by enabling the Store Notifications for your source. For more information, see [Viewing payloads of notifications](/docs/event-notifications?topic=event-notifications-en-view-notification-payloads).
+
 
 Events from API sources cannot be routed to {{site.data.keyword.IBM_notm}} email and {{site.data.keyword.IBM_notm}} SMS destinations.
 {: important}
