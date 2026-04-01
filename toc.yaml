@@ -38,6 +38,7 @@ toc:
           - en-create-source.md
           - en-source.md
           - en-map-source-to-payload.md
+          - en-view-notification-payloads.md
       - topicgroup:
           label: Event destinations
           topics:

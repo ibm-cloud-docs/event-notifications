@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-30"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -20,6 +20,13 @@ content-type: release-note
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
 
+
+## 26 March 2026
+{: #event-notifications-Mar262026}
+{: release-note}
+
+View payloads of notifications
+:  Enable Store Notifications to view payloads of notifications in {{site.data.keyword.en_short}}. For more information, see [Viewing payloads of notifications](/docs/event-notifications?topic=event-notifications-en-view-notification-payloads).
 
 ## 19 March 2026
 {: #event-notifications-Mar192026}
