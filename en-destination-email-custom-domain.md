@@ -3,7 +3,7 @@ copyright:
   years: 2021, 2024
 lastupdated: "2024-01-31"
 
-keywords: event-notifications, event notifications, about event notifications, destinations, email
+keywords: event-notifications, event notifications, about event notifications, destinations, email,  sandbox, testing
 
 subcollection: event-notifications
 ---
@@ -13,10 +13,86 @@ subcollection: event-notifications
 # {{site.data.keyword.cloud_notm}} Email Service with Custom domain
 {: #en-destinations-custom-email}
 
-You can configure a custom email destination in the Destinations tab. As part of the configuration, enter the domain name to be used for sending emails. 
 
-Custom email destination is not supported by Lite Plan. To know more about the plans and destinations available, refer [here](/docs/event-notifications?topic=event-notifications-getting-started)
+You can configure a custom email destination in the Destinations tab. As part of the configuration, enter the domain name to be used for sending emails. When you create a custom email destination, you can choose between sandbox mode for testing or production mode with your own verified domain.
+
+Custom email destination is not supported by Lite Plan. To know more about the plans and destinations available, refer [here](/docs/event-notifications?topic=event-notifications-getting-started).
 {: note}
+
+## Choosing between Sandbox and Production mode
+{: #en-destinations-custom-email-modes}
+
+When you create a custom email destination, you can select one of the following modes:
+
+Sandbox mode
+:   Use an {{site.data.keyword.en_short}}-provided domain for immediate testing without domain verification.
+
+Production mode
+:   Use your own domain with full control over email sending. Production mode requires domain verification through SPF and DKIM records.
+
+## Sandbox environment for testing
+{: #en-destinations-custom-email-sandbox}
+
+Sandbox mode allows you to test your email notification configuration quickly without setting up and verifying your own domain. {{site.data.keyword.en_short}} automatically maps an {{site.data.keyword.en_short}}-owned domain to your destination, enabling you to start sending test notifications immediately.
+
+### Sandbox mode restrictions
+{: #en-destinations-custom-email-sandbox-restrictions}
+
+The following restrictions apply in sandbox mode:
+
+Instance limit
+:   You can create only one custom email destination with sandbox mode enabled per {{site.data.keyword.en_short}} instance.
+
+Subscription flow requirement
+:   Sandbox destinations must use the {{site.data.keyword.en_short}} managed email opt-in capability. Customer-managed opt-in is not available in sandbox mode.
+
+Recipient limit
+:   You can invite up to 10 recipients to subscribe to notifications from a sandbox destination.
+
+Rate limiting
+:   You can send up to 3000 notifications per {{site.data.keyword.en_short}} instance.
+
+### Using Sandbox mode
+{: #en-destinations-custom-email-sandbox-use}
+
+To use Sandbox mode:
+
+1. In the {{site.data.keyword.en_short}} dashboard, go to **Destinations**.
+2. Click **Add a destination**.
+3. Select **Custom Email** as the destination type.
+4. Select the **Sandbox environment (recommended for testing)** checkbox.
+5. Complete the destination details and click **Create**.
+
+After you create the sandbox destination, {{site.data.keyword.en_short}} automatically maps an {{site.data.keyword.en_short}} domain to your destination. You can then:
+
+1. Create a subscription for the sandbox destination.
+2. {{site.data.keyword.en_short}} provides a default sender email address for your subscription.
+3. Add email addresses to invite users (up to 10 recipients).
+4. You can start sending notifications.
+
+### Transitioning from sandbox to production
+{: #en-destinations-custom-email-sandbox-to-production}
+
+After you complete testing in sandbox mode and are ready to send notifications to a larger audience, you can transition your existing sandbox destination to production mode by updating the domain.
+
+Updating the domain transitions you out of the sandbox environment. You must reconfigure and verify your own domain and update the subscription details in the subscriptions section.
+{: important}
+
+To transition from sandbox to production:
+
+1. In the {{site.data.keyword.en_short}} dashboard, go to **Destinations**.
+2. Locate your sandbox custom email destination in the destinations list.
+3. Click the overflow menu (three vertical dots) for the destination.
+4. Select **Update domain**.
+6. In the **Domain name** field, enter your domain name. Review your changes before saving. Updates will require DNS changes depending on your configuration.
+8. Click **Save** to update the domain.
+9. Complete the domain verification process by configuring SPF and DKIM records. For more information, see [Custom domain name verification](#en-destinations-custom-email-verify).
+10. Update your subscriptions to reflect the new domain configuration:
+    - Navigate to the **Subscriptions** section.
+    - Update the sender email address and other subscription details as needed.
+
+
+After the transition is complete, your destination operates in production mode with your verified domain, and Sandbox restrictions no longer apply.
 
 ## Custom domain name verification
 {: #en-destinations-custom-email-verify}
