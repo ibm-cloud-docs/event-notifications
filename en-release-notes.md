@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-03-30"
+lastupdated: "2026-04-06"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -20,6 +20,13 @@ content-type: release-note
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
 
+
+## 2 April 2026
+{: #event-notifications-Apr22026}
+{: release-note}
+
+Sandbox mode for custom email destinations
+:  Custom email destinations now support sandbox mode for testing without domain verification. Sandbox mode provides an {{site.data.keyword.en_short}}-managed domain, allowing you to test email notifications immediately with up to 10 recipients and 3000 notifications per instance. When ready for production, update the domain to transition to your own verified custom domain. For more information, see [Sandbox environment for testing](/docs/event-notifications?topic=event-notifications-en-destinations-custom-email#en-destinations-custom-email-sandbox).
 
 ## 26 March 2026
 {: #event-notifications-Mar262026}
