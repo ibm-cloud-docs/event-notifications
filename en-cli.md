@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-03-23"
+lastupdated: "2026-04-07"
 
 keywords: event notifications CLI plug-in, CLI reference, en cli reference, event notifications cli reference, event notifications, command line reference
 
@@ -135,7 +135,7 @@ ibmcloud event-notifications source --help
 - **Action:** Create `Source`.
 
    ```sh
-   ibmcloud event-notifications sources-create --instance-id INSTANCE-ID --name NAME --description DESCRIPTION [--enabled ENABLED]
+   ibmcloud event-notifications sources-create --instance-id INSTANCE-ID --name NAME --description DESCRIPTION [--enabled ENABLED] [--store-notifications STORE-NOTIFICATIONS]
    ```
    {: pre}
 
@@ -161,13 +161,18 @@ ibmcloud event-notifications source --help
 
       The value is set to true to enable the source and false to disable the source.
 
+   `--store-notifications` (bool)
+:   enable to view the payload of incoming events for troubleshooting.
+
+    The default value is `false`.   
+
 ### ibmcloud event-notifications source update
 {: #en-cli-source-update-command}
 
 - **Action:** Update `Source`.
 
    ```sh
-   ibmcloud event-notifications source-update --instance-id INSTANCE-ID --id ID [--name NAME] [--description DESCRIPTION] [--enabled ENABLED]
+   ibmcloud event-notifications source-update --instance-id INSTANCE-ID --id ID [--name NAME] [--description DESCRIPTION] [--enabled ENABLED] [--store-notifications STORE-NOTIFICATIONS]
    ```
    {: pre}
 
@@ -192,6 +197,11 @@ ibmcloud event-notifications source --help
    :  Search string for filtering results.
 
       The value is set to true to enable the source and false to disable the source.
+
+   `--store-notifications` (bool)
+:   enable to view the payload of incoming events for troubleshooting.
+
+    The default value is `false`.   
 
    `--id` (string)
    :  Unique identifier for Source. Required.
@@ -621,7 +631,7 @@ ibmcloud event-notifications destination --help
       }
       ```  
 
-   - The following example shows the format of the `DestinationConfig` object for Custom Email(smtp_custom) destination.
+   - The following example shows the format of the `DestinationConfig` object for Custom Email(smtp_custom) destination. In case of Custom Email Sandbox(smtp_custom_sandbox) destination, Destination Configuration params are not required.
 
       Process To do the Custom Domain Configuration and Verification: <https://cloud.ibm.com/docs/event-notifications?topic=event-notifications-en-destinations-custom-email#en-destinations-custom-email-verify>
 
@@ -900,6 +910,45 @@ ibmcloud event-notifications test-destination --instance-id INSTANCE-ID --id ID
 ibmcloud event-notifications test-destination \
     --instance-id=exampleString \
     --id=exampleString
+```
+{: pre}
+
+### `ibmcloud event-notifications email-sandbox-destination-update`
+{: #event-notifications-cli-email-sandbox-destination-update-command}
+
+Upgrade sandbox destination to production with custom domain.
+
+```sh
+ibmcloud event-notifications email-sandbox-destination-update --instance-id INSTANCE-ID --id ID --domain DOMAIN
+```
+
+
+#### Command options
+{: #event-notifications-email-sandbox-destination-update-cli-options}
+
+`--instance-id` (string)
+:   Unique identifier for IBM Cloud Event Notifications instance. Required.
+
+    The maximum length is `32` characters. The minimum length is `32` characters. The value must match regular expression `/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/`.
+
+`--id` (string)
+:   Unique identifier for Destination. Required.
+
+    The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/^[0-9(a-f|A-F)]{8}-[0-9(a-f|A-F)]{4}-4[0-9(a-f|A-F)]{3}-[89ab][0-9(a-f|A-F)]{3}-[0-9(a-f|A-F)]{12}$/`.
+
+`--domain` (string)
+:   Email Domain. Required.
+
+    The maximum length is `250` characters. The minimum length is `1` character. The value must match regular expression `/.*/`.
+
+#### Example
+{: #event-notifications-email-sandbox-destination-update-examples}
+
+```sh
+ibmcloud event-notifications email-sandbox-destination-update \
+    --instance-id=exampleString \
+    --id=exampleString \
+    --domain=exampleString
 ```
 {: pre}
 
@@ -1275,12 +1324,22 @@ ibmcloud event-notifications subscription --help
          "add_notification_payload": true,
          "reply_to_mail": "en@ibm.com",
          "reply_to_name": "EYS ORG",
+      }
+      ```
+   - The following example shows the format of the `SubscriptionCreateAttributes` object for Custom Email Sandbox.
+
+      ```json
+      {
+         "invited" :["entest@gmail.com"],
+         "add_notification_payload": true,
+         "reply_to_mail": "en@ibm.com",
+         "reply_to_name": "EYS ORG",
          "from_name":"ABC ORG",
          "from_email":"Testuser@mailx.com",
          "template_id_notification": "a59f6e38-7a48-xxxx-b665-3724afc58b13",
          "template_id_invitation": "f1ef32fb-b7dd-4405-xxxx-7b6719cee8aa"
       }
-      ```
+      ```   
       - The following example shows the format of the `SubscriptionCreateAttributes` object for Pagerduty/Event Streams.
 
       ```json
@@ -1490,6 +1549,28 @@ ibmcloud event-notifications subscription --help
          "template_id_invitation": "f1ef32fb-b7dd-4405-xxxx-7b6719cee8aa"
       }
       ```
+
+   - The following example shows the format of the `SubscriptionUpdateAttributes` object for Custom Email Sandbox.
+
+      ```json
+      {
+         "invited": {
+            "add": ["example1@gmail.com"],
+            "remove": []
+         },
+         "subscribed": {
+            "remove": ["example2@gmail.com"]
+         },
+         "unsubscribed": {
+            "remove": ["example3@gmail.com"]
+         },
+         "reply_to_mail": "example@ibm.com",
+         "reply_to_name": "USA news",
+         "add_notification_payload": true,
+         "template_id_notification": "a59f6e38-7a48-xxxx-b665-3724afc58b13",
+         "template_id_invitation": "f1ef32fb-b7dd-4405-xxxx-7b6719cee8aa"
+      }
+      ```   
 
    - The following example shows the format of the `SubscriptionUpdateAttributes` object for Slack for type as `incoming_webhook`.
 
@@ -2982,6 +3063,14 @@ The following example shows the format of the NotificationCreate object.
   "ibmenmarkdownn": "This is a *italic* message.\n- Item 1\n- Item 2\n**bold text** with more text data\n~~strike through~~\n1. order 1\n2. order 2\n```fenced code block```\n> block code\n`code`\n[Click here](https://example.com) for more info."
   "ibmenhtmlbody" : "exampleString",
   "subject" : "exampleString",
+   "attachments": [
+    {
+      "content": "VGhpcyBpcyBhIHRlc3QgZG9jdW1lbnQK",
+      "filename": "test.txt",
+      "content_type": "text/plain",
+      "disposition": "attachment"
+    }
+  ],
   "data" : {
     "anyKey" : "anyValue"
   },
@@ -3102,4 +3191,5 @@ The CLI Plugin versions from 0.0.5 to 1.9.0 is deprecated.
 | 1.20.0 | 15 December 2025 | Support for bounce metrics |
 | 1.20.1 | 19 January 2026 | Fix for private endpoint support metadata and EN plugin install issue in private.cloud.ibm.com | 
 | 1.20.2 | 18 February 2026 | CLI plugin vulnerability fix patch update | 
+| 1.21.0 | 7 April 2026 | CLI plugin update for view sandbox, email attachments and source options support for payload debugging |
 {: caption="Changes in the {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} CLI" caption-side="bottom"}

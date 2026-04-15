@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-03-30"
+lastupdated: "2026-04-15"
 
 keywords: about payload of notifications, store notifications, view notification, notification payloads, troubleshooting
 
@@ -23,7 +23,7 @@ The ability to view notification payloads allows you to inspect the format and c
 ## Enabling notification storage
 {: #en-view-notification-payloads-enable}
 
-When you enable the **Store Notifications** for a source, {{site.data.keyword.en_short}} begins storing incoming notifications from that source. The **Notifications** column displays the number of notification payloads available for that source.
+By default, {{site.data.keyword.en_short}} does not store incoming notification payloads. You must explicitly enable the **Store Notifications** option for each source to begin storing notifications. When you enable **Store Notifications** for a source, {{site.data.keyword.en_short}} begins storing incoming notifications from that source. Only notifications that arrive after you enable this option are stored. The **Notifications** column displays the number of notification payloads available for that source.
 
 **Store Notifications** is not supported for periodic timer sources.
 {: note}
@@ -43,9 +43,9 @@ After you enable the **Store Notifications**, {{site.data.keyword.en_short}} beg
 ## Viewing stored notifications
 {: #en-view-notification-payloads-view}
 
-After you enable the **Store Notifications**, you can view stored notification payloads for the source.
+After you enable the **Store Notifications**, you can view stored notification payloads for the source. Only notifications received after enabling this option are available for viewing.
 
-A side panel opens on the right side of the screen, displaying the stored notification payloads for the selected source.
+A side panel opens on the right side of the screen when you click the **Notifications** count, displaying the stored notification payloads for the selected source.
 
 The **Source Events** side panel contains the following sections:
 

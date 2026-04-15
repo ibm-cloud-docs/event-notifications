@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2024
-lastupdated: "2024-04-18"
+  years: 2020, 2026
+lastupdated: "2026-04-15"
 
 
 keywords: event-notification, event notification, faqs, Frequently Asked Questions, question, billing, service, invalid devices, device deletion, database
@@ -97,7 +97,7 @@ Sometimes, devices are marked as invalid and deleted from the database, if they 
       - [Chrome Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-chrome)
       - [Firefox Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-firefox)
       - [Safari Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-safari)
-      
+
    1. Next, the bank sends a notification with payload containing attribute `"notification-type":"maintenance"` and `"ibmenpushto": "{\"tags\":[\"AP\""]]}"`, `notification-type` attributes is added so that it matches against the topic condition and `ibmenpushto` as the message is for targeting push customers with android and iOS devices in Asia Pacific region `AP`.
 
 ## Why don't I see Email or SMS notifications that I have sent after configuring {{site.data.keyword.en_short}} for Email and SMS?
@@ -145,6 +145,43 @@ Yes. You can send notifications to more than one destination.
 Emails sent via an IBM Cloud email destination are sent on behalf of IBM Cloud from a source (i.e., The sender's email domain will always have ".event-notifications.cloud.ibm.com"). On the other hand, a custom email destination allows you to add your own domain address through which a sender can send emails.
 
 Also, API sources cannot send notifications to IBM Cloud email destination, because of the security reasons, on the other hand, a custom domain email destination can receive notifications from any kind of source.
+
+## What file extensions are blocked for email attachments?
+{: #faq-en-blocked-file-extensions}
+{: faq}
+
+For security reasons, certain file extensions are blocked when sending email attachments through custom domain email destinations. These extensions are blocked to prevent the transmission of potentially harmful executable files, scripts, and system files that could pose security risks to recipients.
+
+The following table lists the blocked file extensions:
+
+| | | | |
+|-------------|-------------|-------------|-------------|
+| `.ade` | `.adp` | `.app` | `.asp` |
+| `.bas` | `.bat` | `.cer` | `.chm` |
+| `.cmd` | `.com` | `.cpl` | `.crt` |
+| `.csh` | `.der` | `.exe` | `.fxp` |
+| `.gadget` | `.hlp` | `.hta` | `.inf` |
+| `.ins` | `.isp` | `.its` | `.js` |
+| `.jse` | `.ksh` | `.lib` | `.lnk` |
+| `.mad` | `.maf` | `.mag` | `.mam` |
+| `.maq` | `.mar` | `.mas` | `.mat` |
+| `.mau` | `.mav` | `.maw` | `.mda` |
+| `.mdb` | `.mde` | `.mdt` | `.mdw` |
+| `.mdz` | `.msc` | `.msh` | `.msh1` |
+| `.msh2` | `.mshxml` | `.msh1xml` | `.msh2xml` |
+| `.msi` | `.msp` | `.mst` | `.ops` |
+| `.pcd` | `.pif` | `.plg` | `.prf` |
+| `.prg` | `.reg` | `.scf` | `.scr` |
+| `.sct` | `.shb` | `.shs` | `.sys` |
+| `.ps1` | `.ps1xml` | `.ps2` | `.ps2xml` |
+| `.psc1` | `.psc2` | `.tmp` | `.url` |
+| `.vb` | `.vbe` | `.vbs` | `.vps` |
+| `.vsmacros` | `.vss` | `.vst` | `.vsw` |
+| `.vxd` | `.ws` | `.wsc` | `.wsf` |
+| `.wsh` | `.xnk` | | |
+{: caption="Blocked file extensions for email attachments" caption-side="bottom"}
+
+If you attempt to send an attachment with a blocked extension, the request will be rejected with a `400 Bad Request` error.
 
 ## What is SPF verification?
 {: #faq-en-notifications-spf-verification}
@@ -275,7 +312,7 @@ Yes, you can use pre-built, enterprise-ready [Terraform IBM Modules (TIM)](https
 
 1. Perform service-to-service authorization on account A and provide the account number of B when prompted to select a source account.
 
-1. Create an API key and generate an access token. 
+1. Create an API key and generate an access token.
 
 ```curl
 curl --request POST \
@@ -286,7 +323,7 @@ curl --request POST \
   --data grant_type=urn:ibm:params:oauth:grant-type:apikey
 ```
 
-To create the integration using API: 
+To create the integration using API:
 
 Run a curl command to integrate the {{site.data.keyword.en_short}} instance with the {{site.data.keyword.secrets-manager_short}} instance.
 

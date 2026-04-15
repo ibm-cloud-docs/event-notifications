@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-04-18"
+  years: 2022, 2026
+lastupdated: "2026-04-15"
 
 keywords: event-notifications, event notifications migration, notifications, destinations, specification
 
@@ -547,3 +547,66 @@ Targeting notifications to a specific platform.
 ```JSON
 ce-ibmenpushto: "{\"user_id\": [\"ajay@accts.acmebank.com\",\"ankit@accts.acmebank.com\"]}"
 ```
+
+#### attachments(array)
+{: #en-email-attachments-array}
+
+This attribute is used to include file attachments when sending notifications to custom domain email destinations. Each attachment in the array must include the file content encoded in Base64 format, along with metadata such as filename, content type, and disposition.
+
+Email attachments are supported only for custom domain email destinations. This feature is not available for default IBM Cloud email destinations.
+{: important}
+
+The `attachments` array contains objects with the following properties:
+
+content (string, required)
+:   The file content encoded in base64 format.
+
+    Ensure the content is properly encoded before including it in the payload.
+
+filename (string, required)
+:   The name of the file as it will appear to the recipient. Include the file extension (e.g., "document.pdf", "report.xlsx").
+
+content_type (string, not required)
+:   The MIME type of the file. Common examples include:
+    - `application/pdf` for PDF files
+
+
+disposition (string, required)
+:   Use `attachment` to indicate the file is an attachment.
+
+##### Example
+{: #en-example-email-attachments}
+
+```json
+"attachments": [
+  {
+    "content": "JVBERi0xLjQKJeLjz9MKMyAwIG9iago8PC9UeXBlL...",
+    "filename": "document.pdf",
+    "content_type": "application/pdf",
+    "disposition": "attachment"
+  },
+  {
+    "content": "UEsDBBQAAAAIAKt8elYAAAAAAAAAAAAAAAAJAAAA...",
+    "filename": "report.xlsx",
+    "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    "disposition": "attachment"
+  }
+]
+```
+
+##### Binary mode header
+{: #en-binary-mode-header26}
+
+```json
+ce-attachments: [{"content":"JVBERi0xLjQKJeLjz9MKMyAwIG9iago8PC9UeXBlL...","filename":"document.pdf","content_type":"application/pdf","disposition":"attachment"}]
+```
+
+##### Usage notes
+{: #en-email-attachments-notes}
+
+- Attachments are subject to size limits. Ensure your total payload size (including all attachments) doesn't exceed 40 MB.
+- You can attach a maximum of 10 files per email notification.
+- All file content must be base64 encoded before including in the payload.
+- Multiple attachments can be included in a single notification by adding multiple objects to the `attachments` array.
+- This feature is available only when sending notifications to custom domain email destinations.
+- Certain file extensions are blocked for security reasons. For the complete list of blocked extensions, see [What file extensions are blocked for email attachments?](/docs/event-notifications?topic=event-notifications-en-faqs-operations#faq-en-blocked-file-extensions)

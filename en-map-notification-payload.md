@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2026
-lastupdated: "2026-03-30"
+  years: 2022, 2026
+lastupdated: "2026-04-15"
 
 keywords: event notifications, event-notifications, map event notifications to destinations
 subcollection: event-notifications
@@ -109,6 +109,13 @@ You can opt out from the conventional subscription process, and specify the pref
 If you have enabled the opt-out feature and completed the opt-out questionnaire,
 1. `ibmenmailto` key gets preference, even if subscribed email list is already present under connected subscription.
 1. `ibmentemplates` key gets preference, even if a Notification Template is attached to the subscription.
+
+### Email attachments
+{: #en-map-notificationpayload-destination-cuEmail-attachments}
+
+Custom domain email destinations support file attachments through the `attachments` array in the notification payload. Each attachment must include Base64-encoded content, filename, content type, and disposition.
+
+For detailed information about including attachments in your email notifications, see [attachments attribute](/docs/event-notifications?topic=event-notifications-en-spec-payload#en-email-attachments-array).
 
 ## Custom SMS
 {: #en-map-notificationpayload-destination-cuSMS}
