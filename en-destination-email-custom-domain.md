@@ -1,7 +1,7 @@
 ---
 copyright:
-  years: 2021, 2024
-lastupdated: "2024-01-31"
+  years: 2021, 2026
+lastupdated: "2026-04-15"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email,  sandbox, testing
 
@@ -12,7 +12,6 @@ subcollection: event-notifications
 
 # {{site.data.keyword.cloud_notm}} Email Service with Custom domain
 {: #en-destinations-custom-email}
-
 
 You can configure a custom email destination in the Destinations tab. As part of the configuration, enter the domain name to be used for sending emails. When you create a custom email destination, you can choose between sandbox mode for testing or production mode with your own verified domain.
 
@@ -159,6 +158,22 @@ In the following example snippet, you can find a template with a minimal body th
 ```
 
 For more information on how to create custom templates, follow [these steps](/docs/event-notifications?topic=event-notifications-en-create-en-template).
+
+## Email Attachments
+{: #en-destinations-custom-email-attachments}
+
+Custom domain email destinations support sending file attachments with your notifications.
+
+### Attachment requirements
+{: #en-destinations-custom-email-attachments-requirements}
+
+When including attachments in your email notifications, ensure that you meet the following requirements:
+
+- **File content encoding**: All file content must be base64 encoded.
+- **Size limit**: The total payload size, including all attachments, must not exceed 40 MB. You can include a maximum of 10 attachments per notification.
+- **File extensions**: Certain file extensions are blocked for security reasons. For the complete list of blocked extensions, see [What file extensions are blocked for email attachments?](/docs/event-notifications?topic=event-notifications-en-faqs-operations#faq-en-blocked-file-extensions)
+
+To include attachments in your email notifications, add the `attachments` array to your notification payload. For detailed information about the `attachments` payload structure and examples, see [email_attachments attribute](/docs/event-notifications?topic=event-notifications-en-spec-payload#en-email-attachments-array).
 
 ## Tracking Email Status
 {: #en-destinations-custom-email-tracking-status}
