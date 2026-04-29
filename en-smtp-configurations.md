@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2021, 2026
-lastupdated: "2026-03-03"
+lastupdated: "2026-04-29"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email, smtp
 
@@ -132,7 +132,15 @@ After successful verification of a SMTP configuration in an IBM Cloud Event Noti
     - SMTP Private Endpoint: `private.smtp.eu-de.event-notifications.cloud.ibm.com`
     - Event Notifications instances in the following regions connect to this endpoint: eu-de (Frankfurt), eu-es (Madrid)
 
-1. The SMTP interface port number. The supported port is 587.
+1. The SMTP interface port numbers and encryption methods. {{site.data.keyword.en_short}} supports two ports for SMTP connections:
+
+   | Port | Encryption Method | Description | How It Works |
+   |------|-------------------|-------------|--------------|
+   | 587 | STARTTLS (Explicit TLS) | Connection starts unencrypted and upgrades to TLS | The initial connection is established in plain text. Your SMTP client issues the STARTTLS command to initiate a TLS handshake, upgrading the connection to an encrypted channel. Also known as "opportunistic TLS." |
+   | 465 | TLS Wrapper (Implicit TLS/SSL) | Connection is encrypted from the start | The TLS/SSL handshake occurs immediately upon connection, before any SMTP commands are exchanged. The entire SMTP session is wrapped in a TLS/SSL layer. Also known as SMTPS (SMTP Secure). |
+   {: caption="Table 1. Supported SMTP ports and encryption methods" caption-side="bottom"}
+
+   Both ports provide secure email transmission with strong encryption. Choose the port that best fits your SMTP client's configuration requirements and security policies.
 
 1. The SMTP username and password. A maximum of 5 users can be created in a single SMTP configuration. Event Notifications supports `Login` and `Plain` authentication methods from the SMTP protocol.
 
@@ -145,7 +153,7 @@ After successful verification of a SMTP configuration in an IBM Cloud Event Noti
 
 1. Valid IP addresses or subnets can be [allowlisted from CBR](/docs/event-notifications?topic=event-notifications-en-smtp-configurations#en-smtp-configurations-cbr) through which the client can connect to the SMTP interface.
 
-1. IBM Cloud Event Notifications SMTP interface supports connection over `StartTLS` method for secure data transmission over networks.
+1. IBM Cloud Event Notifications SMTP interface supports secure connections using either `STARTTLS` (port 587) or implicit `TLS/SSL` (port 465) for secure data transmission over networks.
 
 1. When accessing IBM Cloud Event Notifications through the SMTP interface, your SMTP client application assembles the message. The information you need to provide may vary depending on the application you are using. The following are the minimum requirements for an SMTP exchange between a client and a server:
    * Source address: The source address must belong to the configured domain; otherwise, the sender address will be rejected.
@@ -186,29 +194,112 @@ The number of API keys you can create per Service ID is determined by IBM Cloud 
 1. Configure SMTP-enabled software, including ServiceNow, Jira, blogging platforms, RSS aggregators, list management software, and workflow systems, using the provided SMTP endpoint, port, and valid username-password credentials.
 2. To send an email using the SMTP interface, you can use an SMTP-enabled programming language, email server, or application. Ensure that you complete all the required steps mentioned above and have the correct SMTP endpoint, port, and credentials to connect to the IBM Cloud Event Notifications SMTP interface.
 3. If you currently administer your own email server, you can use the IBM Cloud SMTP endpoint, port, and credentials to send all your outgoing email through the Event Notifications SMTP configuration, without modifying your existing email clients and applications.
-4. To interact with the IBM Cloud Event Notifications SMTP interface using the command line, see the following example
+4. To interact with the IBM Cloud Event Notifications SMTP interface using the command line, see the following examples:
+
+    **Example using port 587 with STARTTLS:**
     ```sh
-    openssl s_client -starttls smtp -connect {{smtp_endpoint}}:587
-    ...
-    ...
-    ...
-    auth login
-    334 VXNlcm5hbWU6
-    dXNlcm5hbWU=
-    334 UGFzc3dvcmQ6
-    cGFzc3dvcmQ=
-    235 2.7.0 Authentication successful
-    mail from: mailer@example.com
-    250 2.1.0 Ok
-    rcpt to: recipient@test.com
-    250 2.1.5 Ok
-    data
-    354 End data with <CR><LF>.<CR><LF>
-    from: Mailer <mailer@example.com>
-    to: Recipient <recipent@test.com>
-    Subject: IBM Cloud Event Notifications SMTP interface
-    Get the all events securely from IBM EN SMTP Interface
-    .
+    swaks --to recipient@example.com --from sender@yourdomain.com --server smtp.us-south.event-notifications.cloud.ibm.com --port 587 --auth PLAIN --auth-user <your-smtp-username> --auth-password <your-smtp-password> --tls
+    === Trying smtp.us-south.event-notifications.cloud.ibm.com:587...
+    === Connected to smtp.us-south.event-notifications.cloud.ibm.com.
+    <- 220 mail.event-notifications.cloud.ibm.com ESMTP Service Ready
+     -> EHLO your-hostname.local
+    <- 250-Hello your-hostname.local
+    <- 250-PIPELINING
+    <- 250-8BITMIME
+    <- 250-ENHANCEDSTATUSCODES
+    <- 250-CHUNKING
+    <- 250-STARTTLS
+    <- 250-SIZE 31457280
+    <- 250 LIMITS RCPTMAX=100
+     -> STARTTLS
+    <- 220 2.0.0 Ready to start TLS
+    === TLS started with cipher TLSv1.3:AEAD-CHACHA20-POLY1305-SHA256:256
+    === TLS client certificate not requested and not sent
+    === TLS no client certificate set
+    === TLS peer[0]  subject=[/CN=smtp.us-south.event-notifications.cloud.ibm.com]
+    ===        commonName=[smtp.us-south.event-notifications.cloud.ibm.com], subjectAltName=[DNS:private.smtp.us-south.event-notifications.cloud.ibm.com, DNS:smtp.us-south.event-notifications.cloud.ibm.com] notAfter=[2026-07-12T14:18:53Z]
+    === TLS peer[1]  subject=[/C=US/O=Let's Encrypt/CN=E8]
+    ===        commonName=[E8], subjectAltName=[] notAfter=[2027-03-12T23:59:59Z]
+    === TLS peer certificate passed CA verification, passed host verification (using host smtp.us-south.event-notifications.cloud.ibm.com to verify)
+     ~> EHLO your-hostname.local
+    <~ 250-Hello your-hostname.local
+    <~ 250-PIPELINING
+    <~ 250-8BITMIME
+    <~ 250-ENHANCEDSTATUSCODES
+    <~ 250-CHUNKING
+    <~ 250-AUTH PLAIN
+    <~ 250-SIZE 31457280
+    <~ 250 LIMITS RCPTMAX=100
+     ~> AUTH PLAIN <base64-encoded-credentials>
+    <~ 235 2.0.0 Authentication succeeded
+     ~> MAIL FROM:<sender@yourdomain.com>
+    <~ 250 2.0.0 Roger, accepting mail from <sender@yourdomain.com>
+     ~> RCPT TO:<recipient@example.com>
+    <~ 250 2.0.0 I'll make sure <recipient@example.com> gets this
+     ~> DATA
+    <~ 354 Go ahead. End your data with <CR><LF>.<CR><LF>
+     ~> Date: Tue, 14 Apr 2026 15:35:16 +0530
+     ~> To: recipient@example.com
+     ~> From: sender@yourdomain.com
+     ~> Subject: test Tue, 14 Apr 2026 15:35:16 +0530
+     ~> Message-Id: <20260414153516.009507@your-hostname.local>
+     ~> X-Mailer: swaks v20240103.0 jetmore.org/john/code/swaks/
+     ~>
+     ~> This is a test mailing
+     ~>
+     ~>
+     ~> .
+    <~ 250 2.0.0 Ok: queued
+     ~> QUIT
+    <~ 221 2.0.0 Bye
+    ```
+    {: codeblock}
+
+    **Example using port 465 with implicit TLS/SSL:**
+    ```sh
+    swaks --to recipient@example.com --from sender@yourdomain.com --server smtp.us-south.event-notifications.cloud.ibm.com --port 465 --auth PLAIN --auth-user <your-smtp-username> --auth-password <your-smtp-password> --tls-on-connect
+    === Trying smtp.us-south.event-notifications.cloud.ibm.com:465...
+    === Connected to smtp.us-south.event-notifications.cloud.ibm.com.
+    === TLS started with cipher TLSv1.3:AEAD-CHACHA20-POLY1305-SHA256:256
+    === TLS client certificate not requested and not sent
+    === TLS no client certificate set
+    === TLS peer[0]  subject=[/CN=smtp.us-south.event-notifications.cloud.ibm.com]
+    ===        commonName=[smtp.us-south.event-notifications.cloud.ibm.com], subjectAltName=[DNS:private.smtp.us-south.event-notifications.cloud.ibm.com, DNS:smtp.us-south.event-notifications.cloud.ibm.com] notAfter=[2026-07-12T14:18:53Z]
+    === TLS peer[1]  subject=[/C=US/O=Let's Encrypt/CN=E8]
+    ===        commonName=[E8], subjectAltName=[] notAfter=[2027-03-12T23:59:59Z]
+    === TLS peer certificate passed CA verification, passed host verification (using host smtp.us-south.event-notifications.cloud.ibm.com to verify)
+    <~ 220 mail.event-notifications.cloud.ibm.com ESMTP Service Ready
+     ~> EHLO your-hostname.local
+    <~ 250-Hello your-hostname.local
+    <~ 250-PIPELINING
+    <~ 250-8BITMIME
+    <~ 250-ENHANCEDSTATUSCODES
+    <~ 250-CHUNKING
+    <~ 250-AUTH PLAIN
+    <~ 250-SIZE 31457280
+    <~ 250 LIMITS RCPTMAX=100
+     ~> AUTH PLAIN <base64-encoded-credentials>
+    <~ 235 2.0.0 Authentication succeeded
+     ~> MAIL FROM:<sender@yourdomain.com>
+    <~ 250 2.0.0 Roger, accepting mail from <sender@yourdomain.com>
+     ~> RCPT TO:<recipient@example.com>
+    <~ 250 2.0.0 I'll make sure <recipient@example.com> gets this
+     ~> DATA
+    <~ 354 Go ahead. End your data with <CR><LF>.<CR><LF>
+     ~> Date: Tue, 14 Apr 2026 15:36:25 +0530
+     ~> To: recipient@example.com
+     ~> From: sender@yourdomain.com
+     ~> Subject: test Tue, 14 Apr 2026 15:36:25 +0530
+     ~> Message-Id: <20260414153625.009884@your-hostname.local>
+     ~> X-Mailer: swaks v20240103.0 jetmore.org/john/code/swaks/
+     ~>
+     ~> This is a test mailing
+     ~>
+     ~>
+     ~> .
+    <~ 250 2.0.0 Ok: queued
+     ~> QUIT
+    <~ 221 2.0.0 Bye
     ```
     {: codeblock}
 
