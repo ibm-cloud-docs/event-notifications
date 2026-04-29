@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-04-15"
+lastupdated: "2026-04-29"
 
 keywords: event-notifications, event notifications migration, notifications, destinations, specification
 
@@ -228,7 +228,10 @@ Defines the MIME type of the data content. Currently, only "application/json" is
 #### data
 {: #en-data}
 
-The payload of the event. This can contain information that can be passed along to destinations like webhooks. Make sure that you are not sending any sensitive information. This must be a valid JSON object.
+The payload of the event. This can contain information that can be passed along to destinations like webhooks. This must be a valid JSON object.
+
+Do not include sensitive information such as passwords, API keys, personal identification numbers, credit card information, or other confidential data in the payload. The payload may be logged, stored, or transmitted to various destinations.
+{: important}
 
 ##### Example
 {: #en-example8}
@@ -331,7 +334,6 @@ ce-ibmendefaultlong: "Password will expire in 10 Days. Please log in to the Bank
 
 #### ibmenfcmbody(string/json)
 {: #en-ibmenfcmbody-string-json}
-
 
 This attribute is needed if you want to send push notification to an Android device. This is the body that you want to send to FCM server, this must be JSON in string format. For more information regarding FCM body, see [here](https://firebase.google.com/docs/reference/fcm/rest/v1/projects.messages){: external}.
 

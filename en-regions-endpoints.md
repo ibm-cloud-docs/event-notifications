@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-03-27"
+lastupdated: "2026-04-29"
 
 keywords: event-notifications, event notifications, regions, endpoints, private endpoints
 
@@ -94,11 +94,13 @@ If you need to manage your {{site.data.keyword.en_short}} resources over a priva
 ## SMTP endpoints
 {: #en-smtp-endpoints}
 
-{{site.data.keyword.en_short}} provides SMTP interface endpoints that allow you to send email notifications using standard SMTP protocol. 
+{{site.data.keyword.en_short}} provides SMTP interface endpoints that allow you to send email notifications using standard SMTP protocol.
 
-You can connect to the SMTP interface using either public endpoints or private endpoints via Cloud Service Endpoints (CSE) and Virtual Private Endpoint (VPE) gateways. All SMTP connections use port 587.
+You can connect to the SMTP interface using either public endpoints or private endpoints via Cloud Service Endpoints (CSE) and Virtual Private Endpoint (VPE) gateways. SMTP connections support two ports:
+- **Port 587**: Uses STARTTLS for encryption
+- **Port 465**: Uses implicit TLS/SSL for encryption
 
-The SMTP endpoints are available in the `us-south` (Dallas) and `eu-de` (Frankfurt) regions. 
+The SMTP endpoints are available in the `us-south` (Dallas) and `eu-de` (Frankfurt) regions.
 
 Before you can use the SMTP interface, you must create an SMTP configuration and complete domain verification. For more information, see [Using the {{site.data.keyword.en_short}} SMTP Interface](/docs/event-notifications?topic=event-notifications-en-smtp-configurations).
 {: note}
