@@ -3,7 +3,7 @@
 copyright:
 
   years: 2021, 2026
-lastupdated: "2026-03-27"
+lastupdated: "2026-04-30"
 
 keywords: event notifications, IBM Cloud
 
@@ -87,7 +87,7 @@ The other {{site.data.keyword.cloud_notm}} sources must be first integrated from
 
 The list of IBM provided sources is as follows:
 - [{{site.data.keyword.monitoringfull_notm}}](https://{DomainName}/docs/monitoring?topic=monitoring-eventnotif){: external}
-- [Security and Compliance](https://{DomainName}/docs/security-compliance?topic=security-compliance-event-notifications&interface=ui){: external}
+- [Security and Compliance](/docs/workload-protection?topic=workload-protection-getting-started){: external}
 - [{{site.data.keyword.secrets-manager_short}}](https://{DomainName}/docs/secrets-manager?topic=secrets-manager-event-notifications&interface=ui){: external}
 - [{{site.data.keyword.appconfig_short}}](https://{DomainName}/docs/app-configuration?topic=app-configuration-ac-int-en){: external}
 - [IBM Cloud Projects](https://{DomainName}/docs/secure-enterprise?topic=secure-enterprise-event-notifications-events&interface=ui){: external}

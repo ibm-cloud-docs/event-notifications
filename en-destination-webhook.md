@@ -41,7 +41,7 @@ To identify that the incoming notification is coming from {{site.data.keyword.en
 ## Allowlisting IP addresses
 {: #en-allowlisting}
 
-You can allowlist the ranges of IP addresses to restrict access to your servers that receive webhooks. For more information, see [webhook IP addresses](/docs/account?topic=account-webhook-ips).
+You can allowlist the ranges of IP addresses to restrict access to your servers that receive webhooks. For more information, see [webhook IP addresses](/docs/support?topic=support-webhook-ips).
 
 Regardless of the location of the Event Notifications Service instance, to help ensure uninterrupted webhook traffic that you should add the IP ranges of all regions to your allowlist.
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2025
-lastupdated: "2025-05-12"
+  years: 2020, 2026
+lastupdated: "2026-04-30"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -29,7 +29,7 @@ From a billing perspective, ingested notifications are calculated for all incomi
 The list of IBM provided sources is as follows:
 - [{{site.data.keyword.logs_full_notm}}](https://{DomainName}/docs/cloud-logs?topic=cloud-logs-event-notifications-configure){: external}
 - [{{site.data.keyword.monitoringfull_notm}}](https://{DomainName}/docs/monitoring?topic=monitoring-eventnotif){: external}
-- [Security and Compliance](https://{DomainName}/docs/security-compliance?topic=security-compliance-event-notifications&interface=ui){: external}
+- [Security and Compliance](/docs/workload-protection?topic=workload-protection-getting-started){: external}
 - [{{site.data.keyword.secrets-manager_short}}](https://{DomainName}/docs/secrets-manager?topic=secrets-manager-event-notifications&interface=ui){: external}
 - [{{site.data.keyword.appconfig_short}}](https://{DomainName}/docs/app-configuration?topic=app-configuration-ac-int-en){: external}
 - [IBM Cloud Projects](https://{DomainName}/docs/secure-enterprise?topic=secure-enterprise-event-notifications-events&interface=ui){: external}
@@ -48,7 +48,7 @@ To add an {{site.data.keyword.cloud_notm}} source or an API source, complete the
 ## {{site.data.keyword.cloud_notm}} platform sources
 {: #en-ibm-cloud-platform-sources}
 
-- [{{site.data.keyword.cloud_notm}} Platform Notifications](https://{DomainName}/docs/account?topic=account-add-users-distribution-list#event-notifications-distribution-list){: external}
+- [{{site.data.keyword.cloud_notm}} Platform Notifications](/docs/support?topic=support-add-users-distribution-list#event-notifications-distribution-list){: external}
 - [{{site.data.keyword.cloud_notm}} Resource lifecycle events](https://{DomainName}/docs/event-notifications?topic=event-notifications-en-resource-lifecycle-events)
 
 ## Periodic Timer Source

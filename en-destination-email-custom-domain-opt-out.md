@@ -71,7 +71,7 @@ Upon receiving answers to the previously mentioned questions and if users want t
     * A valid **Reply-To** email ID is required to receive rejected or bounced emails' information.
     * Requirement of well formatted Email content is required to prevent emails that are classified as Spam at the receivers end. Emails which are not well formatted (i.e. not html) can result in Email Service Providers to classify the mails as spam.
 1. Add **Attachments** if you want to provide more evidence supporting your answers
-1. Add required email IDs in the **Watchlist** section. And to know more about other options while creating a support case refer [Creating support cases](https://{DomainName}/docs/account?topic=account-open-case&interface=ui){: external}.
+1. Add required email IDs in the **Watchlist** section. And to know more about other options while creating a support case refer [Creating support cases](/docs/support?topic=support-open-case&interface=ui){: external}.
 
 ## Flexibility while using Opt-out flow
 {: #en-destinations-custom-email-opt-out-rules}
