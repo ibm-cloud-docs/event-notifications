@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-04-15"
+lastupdated: "2026-04-30"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -423,7 +423,7 @@ Support for Email "Opt-in"
 {: release-note}
 
 New supported {{site.data.keyword.cloud_notm}} source: {{site.data.keyword.cloud_notm}} Platform Notifications
-:  {{site.data.keyword.cloud_notm}} Platform Notifications is now available as a new supported {{site.data.keyword.cloud_notm}} source. For more information, see [Enabling {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} for the notification distribution list](/docs/account?topic=account-add-users-distribution-list#event-notifications-distribution-list).
+:  {{site.data.keyword.cloud_notm}} Platform Notifications is now available as a new supported {{site.data.keyword.cloud_notm}} source. For more information, see [Enabling {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} for the notification distribution list](/docs/support?topic=support-add-users-distribution-list#event-notifications-distribution-list).
 
 ## 29 August 2022
 {: #event-notifications-Aug2522}
@@ -507,7 +507,7 @@ New destination: Firebase Cloud Messaging (FCM) push notifications for Android
 {: release-note}
 
 New source: {{site.data.keyword.compliance_full}}
-:   Integrating {{site.data.keyword.compliance_short}} with {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} can help you route security events by the supported channels. For more information, see [Enabling {{site.data.keyword.en_short}} for {{site.data.keyword.compliance_short}}](/docs/security-compliance?topic=security-compliance-event-notifications&interface=ui).
+:   Integrating {{site.data.keyword.compliance_short}} with {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} can help you route security events by the supported channels. For more information, see [Enabling {{site.data.keyword.en_short}} for {{site.data.keyword.compliance_short}}](/docs/workload-protection?topic=workload-protection-getting-started).
 
 ## 28 October 2021
 {: #event-notifications-Oct2821}

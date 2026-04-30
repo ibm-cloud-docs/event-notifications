@@ -59,7 +59,7 @@ Complete the following steps to provision your {{site.data.keyword.en_short}} in
 
 1. Provision an instance of [{{site.data.keyword.keymanagementserviceshort}}](/docs/key-protect?topic=key-protect-provision){: external} or [{{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-provision){: external}.
 
-1. Create an authorization policy to allow the {{site.data.keyword.en_short}} service to access the key management service instance as a Reader. For more information, see [Using authorizations to grant access between services](/docs/account?topic=account-serviceauth){: external}.
+1. Create an authorization policy to allow the {{site.data.keyword.en_short}} service to access the key management service instance as a Reader. For more information, see [Using authorizations to grant access between services](/docs/iam?topic=iam-serviceauth&interface=ui){: external}.
 
 1. Create or import a root key into your key management service instance.
 

@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2021, 2026
-lastupdated: "2026-04-29"
+lastupdated: "2026-04-30"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email, smtp
 
@@ -91,7 +91,7 @@ After creating a SMTP configuration in an IBM Cloud Event Notifications instance
     1. In the 'Description' section first provide IBM Cloud Event Notifications `instance id`, `region` in which instance is created, and a `DKIM Name` which is in the format of `{{uuid}}._domainkey.{{domain}}`
     1. Later, please include responses to the aforementioned questionnaire.
     1. Add **Attachments** if you want to provide more evidence supporting your answers
-    1. Add required email Ids in the **Watchlist** section. And to know more about other options while creating a support case refer [here](https://{DomainName}/docs/account?topic=account-open-case&interface=ui){: external}.
+    1. Add required email Ids in the **Watchlist** section. And to know more about other options while creating a support case refer [here](/docs/support?topic=support-open-case&interface=ui){: external}.
 
 Some of the common verification issues could be:
 
@@ -174,11 +174,11 @@ To use multiple API keys for SMTP authentication, you must create a Service ID a
 
 To create API keys for SMTP users, complete the following steps:
 
-1. Create a Service ID and configure your Event Notifications instance as part of access policy. To learn how to create and configure Service IDs, see [Creating and working with service IDs](/docs/account?topic=account-serviceids) and [Assigning access in the console](/docs/account?topic=account-account-services).
+1. Create a Service ID and configure your Event Notifications instance as part of access policy. To learn how to create and configure Service IDs, see [Creating and working with service IDs](/docs/iam?topic=iam-serviceids&interface=ui) and [Assigning access in the console](/docs/iam?topic=iam-account-services&interface=ui).
 
 1. Assign the SMTP role to the Service ID. This role grants the Service ID permission to authenticate to the SMTP interface. Confirm your access policy, resource, and the role.
 
-1. Create one or more API keys for the Service ID. To learn how to create and manage API keys, see [Managing service ID API keys](/docs/account?topic=account-serviceidapikeys).
+1. Create one or more API keys for the Service ID. To learn how to create and manage API keys, see [Managing service ID API keys](/docs/iam?topic=iam-serviceidapikeys&interface=ui).
 
 1. Use the API key as the password when authenticating to the SMTP interface. The username remains the SMTP username you received when creating the SMTP user.
 
