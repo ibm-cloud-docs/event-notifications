@@ -2,11 +2,13 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-04-07"
+lastupdated: "2026-05-01"
 
 keywords: event notifications CLI plug-in, CLI reference, en cli reference, event notifications cli reference, event notifications, command line reference
 
 subcollection: event-notifications
+
+content-type: cli-docs
 
 ---
 
