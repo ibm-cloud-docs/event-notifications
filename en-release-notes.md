@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-04-30"
+lastupdated: "2026-05-11"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -19,6 +19,13 @@ content-type: release-note
 
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
+
+## 11 May 2026
+{: #event-notifications-May112026}
+{: release-note}
+
+{{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} is now available in the Mumbai(India) region
+:  {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now can provision an instance in the Mumbai(India) region.
 
 ## 14 April 2026
 {: #event-notifications-Apr142026}
