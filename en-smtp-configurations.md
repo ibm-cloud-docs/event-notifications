@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2021, 2026
-lastupdated: "2026-04-30"
+lastupdated: "2026-05-11"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email, smtp
 
@@ -125,7 +125,7 @@ After successful verification of a SMTP configuration in an IBM Cloud Event Noti
     **Dallas (`us-south`) SMTP endpoint:**
     - SMTP Public Endpoint: `smtp.us-south.event-notifications.cloud.ibm.com`
     - SMTP Private Endpoint: `private.smtp.us-south.event-notifications.cloud.ibm.com`
-    - Event Notifications instances in the following regions connect to this endpoint: us-south (Dallas), ca-tor (Toronto), jp-tok (Tokyo), jp-osa (Osaka), au-syd (Sydney), eu-gb (London), br-sao (Sao Paulo), ca-mon (Montreal), in-che (Chennai), us-east (Washington DC)
+    - Event Notifications instances in the following regions connect to this endpoint: us-south (Dallas), ca-tor (Toronto), jp-tok (Tokyo), jp-osa (Osaka), au-syd (Sydney), eu-gb (London), br-sao (Sao Paulo), ca-mon (Montreal), in-che (Chennai), us-east (Washington DC), in-mum (Mumbai)
 
     **Frankfurt (`eu-de`) SMTP endpoint:**
     - SMTP Public Endpoint: `smtp.eu-de.event-notifications.cloud.ibm.com`

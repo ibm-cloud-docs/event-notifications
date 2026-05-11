@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-02-09"
+lastupdated: "2026-05-11"
 
 keywords: HA for Event Notifications, high availability for Event Notifications, Event Notifications, disaster recovery
 
@@ -39,7 +39,7 @@ A region (location) is a geographically and physically separate group of one or 
 ## Availability zones for {{site.data.keyword.en_short}}
 {: #en-zones-ha}
 
-{{site.data.keyword.en_full_notm}} service is a highly available, regional service. In each supported region, the service exists in multiple availability zones with no single point of failure. 
+{{site.data.keyword.en_full_notm}} service is a highly available, regional service. In each supported region, the service exists in multiple availability zones with no single point of failure.
 
 The following table lists the high-availability (HA) status for the regions (locations) where the {{site.data.keyword.en_full_notm}} service is available:
 
@@ -48,6 +48,8 @@ The following table lists the high-availability (HA) status for the regions (loc
 | Asia-Pacific| Sydney (au-syd)|MZR|
 | Asia-Pacific| Tokyo (jp-tok)|MZR|
 | Asia-Pacific| Osaka (jp-osa)|MZR|
+| Asia-Pacific| Chennai (in-che) | MZR |
+| Asia-Pacific| Mumbai (in-mum) | MZR |
 | Europe | London (eu-gb)|MZR|
 | Europe | Frankfurt (eu-de)|MZR|
 | Europe | Madrid (eu-es)|MZR|
@@ -56,7 +58,6 @@ The following table lists the high-availability (HA) status for the regions (loc
 | Brazil | Sao Paulo (br-sao) | MZR |
 | North America | Montreal (ca-mon) | MZR |
 | North America | Washington DC (us-east) | MZR |
-| Asia-Pacific| Chennai (in-che) | MZR |
 {: caption="HA status for the regions" caption-side="bottom"}
 
 Where:

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-02-09"
+lastupdated: "2026-05-11"
 
 keywords:
 
@@ -54,9 +54,9 @@ You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on event
 {: class="simple-tab-table"}
 {: row-headers}
 
-| Tokyo (`jp-tok`)    | Sydney (`au-syd`) |  Osaka (`jp-osa`) | Chennai (`in-che`) |
-|---------------------|------------------|------------------|--------------------|
-| [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} |
+| Tokyo (`jp-tok`)    | Sydney (`au-syd`) |  Osaka (`jp-osa`) | Chennai (`in-che`) | Mumbai (`in-mum`) |
+|---------------------|------------------|------------------|--------------------|--------------------|
+| [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} |
 {: caption="Regions where activity tracking events are sent in Asia Pacific locations" caption-side="top"}
 {: #atracker-table-2}
 {: tab-title="Asia Pacific"}

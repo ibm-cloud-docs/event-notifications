@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-05-01"
+lastupdated: "2026-05-11"
 
 keywords: event notifications CLI plug-in, CLI reference, en cli reference, event notifications cli reference, event notifications, command line reference
 
@@ -88,6 +88,7 @@ export IBMCLOUD_EN_ENDPOINT=<https://au-syd.event-notifications.cloud.ibm.com/ev
    - **Montreal:** `https://ca-mon.event-notifications.cloud.ibm.com/event-notifications`
    - **Washington DC:** `https://us-east.event-notifications.cloud.ibm.com/event-notifications`
    - **Chennai:** `https://in-che.event-notifications.cloud.ibm.com/event-notifications`
+   - **Mumbai:** `https://in-mum.event-notifications.cloud.ibm.com/event-notifications`
 
 - export **IBMCLOUD_EN_ENDPOINT** variable to set the {{site.data.keyword.en_short}} region private endpoint.
 
@@ -103,6 +104,7 @@ export IBMCLOUD_EN_ENDPOINT=<https://au-syd.event-notifications.cloud.ibm.com/ev
    - **Montreal:** `https://private.ca-mon.event-notifications.cloud.ibm.com/event-notifications`
    - **Washington DC:** `https://private.us-east.event-notifications.cloud.ibm.com/event-notifications`
    - **Chennai:** `https://private.in-che.event-notifications.cloud.ibm.com/event-notifications`
+   - **Mumbai:** `https://private.in-mum.event-notifications.cloud.ibm.com/event-notifications`
 
 - export **EVENT_NOTIFICATIONS_API_KEY** variable to set the {{site.data.keyword.en_short}} instance `apikey`.
 
@@ -166,7 +168,7 @@ ibmcloud event-notifications source --help
    `--store-notifications` (bool)
 :   enable to view the payload of incoming events for troubleshooting.
 
-    The default value is `false`.   
+    The default value is `false`.
 
 ### ibmcloud event-notifications source update
 {: #en-cli-source-update-command}
@@ -203,7 +205,7 @@ ibmcloud event-notifications source --help
    `--store-notifications` (bool)
 :   enable to view the payload of incoming events for troubleshooting.
 
-    The default value is `false`.   
+    The default value is `false`.
 
    `--id` (string)
    :  Unique identifier for Source. Required.
@@ -538,7 +540,7 @@ ibmcloud event-notifications destination --help
 
 
    - The following example shows the format of the `DestinationConfig` object for Webhook(webhook).
-   
+
       ```json
       {
          "params" : {
@@ -602,7 +604,7 @@ ibmcloud event-notifications destination --help
             "type" : "job",
             "job_name" : "custom-job",
             "project_crn" : "crn:v1:bluemix:public:codeengine:us-south:a/e7e5820aeccb40efb78fd69a7858ef23:xxxxxxxxxxxxxx::"
-            
+
          }
       }
       ```
@@ -631,7 +633,7 @@ ibmcloud event-notifications destination --help
             "pre_prod" : true // Set to true in case of configuring Destination as pre-prod Destination (pre_prod destination can only be configured for Standard plan)
          }
       }
-      ```  
+      ```
 
    - The following example shows the format of the `DestinationConfig` object for Custom Email(smtp_custom) destination. In case of Custom Email Sandbox(smtp_custom_sandbox) destination, Destination Configuration params are not required.
 
@@ -643,7 +645,7 @@ ibmcloud event-notifications destination --help
             "domain": "mailx.com"
          }
       }
-      ```  
+      ```
 
    - The following example shows the format of the `DestinationConfig` object for {{site.data.keyword.messagehub}}(event_streams) destination.
 
@@ -668,7 +670,7 @@ ibmcloud event-notifications destination --help
            "feature_id": "test"
          }
       }
-      ```   
+      ```
 
    Note: The Custom SMS Destination does not require any Destination Config To be set up.
 
@@ -1034,7 +1036,7 @@ ibmcloud event-notifications topic --help
 
 #### Example
 {: #en-cli-topic-example-schema}
-  
+
    - The following example shows the format of the `TopicCreateSourcesItem[]` object for the Periodic Timer source.
 
       ```json
@@ -1225,7 +1227,7 @@ ibmcloud event-notifications subscription --help
 - **Action:** Create new `Subscription`.
 
    ```sh
-   ibmcloud event-notifications subscription-create --instance-id INSTANCE-ID --name NAME --destination-id DESTINATION-ID --topic-id TOPIC-ID [--description DESCRIPTION] [--attributes ATTRIBUTES] 
+   ibmcloud event-notifications subscription-create --instance-id INSTANCE-ID --name NAME --destination-id DESTINATION-ID --topic-id TOPIC-ID [--description DESCRIPTION] [--attributes ATTRIBUTES]
    ```
    {: pre}
 
@@ -1341,7 +1343,7 @@ ibmcloud event-notifications subscription --help
          "template_id_notification": "a59f6e38-7a48-xxxx-b665-3724afc58b13",
          "template_id_invitation": "f1ef32fb-b7dd-4405-xxxx-7b6719cee8aa"
       }
-      ```   
+      ```
       - The following example shows the format of the `SubscriptionCreateAttributes` object for Pagerduty/Event Streams.
 
       ```json
@@ -1349,9 +1351,9 @@ ibmcloud event-notifications subscription --help
          "template_id_notification": "a59f6e38-7a48-xxxx-b665-3724afc58b13",
       }
       ```
-      - The following example shows the format of the `SubscriptionCreateAttributes` object for App Configuration. When creating or updating a subscription for an **App Configuration** destination, the `attributes` object has a specific rule:  
-         - You must include **either** `feature_flag_enabled` **or** `template_id_notification`  
-         - You **cannot** include both properties together  
+      - The following example shows the format of the `SubscriptionCreateAttributes` object for App Configuration. When creating or updating a subscription for an **App Configuration** destination, the `attributes` object has a specific rule:
+         - You must include **either** `feature_flag_enabled` **or** `template_id_notification`
+         - You **cannot** include both properties together
          This ensures that a subscription is created for the correct use case — either **feature flag evaluation** or **notification templating**, but not both at once.
 
       ```json
@@ -1395,7 +1397,7 @@ ibmcloud event-notifications subscription --help
    `[--instance-id INSTANCE-ID]`  (string)
    :  The unique identifier for {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} instance.
 
-      The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]/`.      
+      The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]/`.
 
 ### ibmcloud event-notifications subscription get
 {: #en-cli-subscription-get-command}
@@ -1572,7 +1574,7 @@ ibmcloud event-notifications subscription --help
          "template_id_notification": "a59f6e38-7a48-xxxx-b665-3724afc58b13",
          "template_id_invitation": "f1ef32fb-b7dd-4405-xxxx-7b6719cee8aa"
       }
-      ```   
+      ```
 
    - The following example shows the format of the `SubscriptionUpdateAttributes` object for Slack for type as `incoming_webhook`.
 
@@ -1610,9 +1612,9 @@ ibmcloud event-notifications subscription --help
       }
       ```
 
-      - The following example shows the format of the `SubscriptionCreateAttributes` object for App Configuration. When creating or updating a subscription for an **App Configuration** destination, the `attributes` object has a specific rule:  
-         - You must include **either** `feature_flag_enabled` **or** `template_id_notification`  
-         - You **cannot** include both properties together  
+      - The following example shows the format of the `SubscriptionCreateAttributes` object for App Configuration. When creating or updating a subscription for an **App Configuration** destination, the `attributes` object has a specific rule:
+         - You must include **either** `feature_flag_enabled` **or** `template_id_notification`
+         - You **cannot** include both properties together
          This ensures that a subscription is created for the correct use case — either **feature flag evaluation** or **notification templating**, but not both at once.
 
       ```json
@@ -1688,7 +1690,7 @@ ibmcloud event-notifications subscription --help
    `[--instance-id INSTANCE-ID]`  (string)
    :  The unique identifier for {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} instance.
 
-      The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]/`.  
+      The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]/`.
 
 ### ibmcloud event-notifications tag subscription list
 {: #en-cli-tag-subscription-list-command}
@@ -1720,7 +1722,7 @@ ibmcloud event-notifications subscription --help
    `----user-id USER-ID` (string)
    :  The user identifier for the device registration.
 
-      The default value is ` `. The maximum length is `255` characters. The minimum length is `0` characters. The value must match regular expression `/[a-zA-Z 0-9-_\/.?:'";,+=!#@$%^&*() ]*/`.   
+      The default value is ` `. The maximum length is `255` characters. The minimum length is `0` characters. The value must match regular expression `/[a-zA-Z 0-9-_\/.?:'";,+=!#@$%^&*() ]*/`.
 
    `--limit LIMIT` (int64)
    :  The page limit for paginated results.
@@ -1735,12 +1737,12 @@ ibmcloud event-notifications subscription --help
    `--search SEARCH` (string)
    :  The search string for filtering results.
 
-      The maximum length is `100` characters. The minimum length is `0` characters. The value must match regular expression `/[a-zA-Z0-9]/`.   
+      The maximum length is `100` characters. The minimum length is `0` characters. The value must match regular expression `/[a-zA-Z0-9]/`.
 
    `[--instance-id INSTANCE-ID]`  (string)
    :  The unique identifier for {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} instance.
 
-      The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]/`.             
+      The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]/`.
 
 ## Integrations
 {: #en-cli-integration}
@@ -1787,7 +1789,7 @@ ibmcloud event-notifications integration-create --instance-id INSTANCE-ID --type
          "crn": "crn:v1:bluemix:public:cloud-object-storage:global:xxxxxxx6db359a81a1dde8f44bxxxxxx:xxxxxxxx-1d48-xxxx-xxxx-xxxxxxxxxxxx::",
          "bucket_name": "cloud-object-storage"
       }
-      ```   
+      ```
 
 ### ibmcloud event-notifications integration replace
 {: #en-cli-integration-update-command}
@@ -3191,7 +3193,7 @@ The CLI Plugin versions from 0.0.5 to 1.9.0 is deprecated.
 | 1.18.0 | 25 Spetember 2025 | Appconfiguration destination, subscription and Template support |
 | 1.19.0 | 30 October 2025 | Support for clone smtp user credentials |
 | 1.20.0 | 15 December 2025 | Support for bounce metrics |
-| 1.20.1 | 19 January 2026 | Fix for private endpoint support metadata and EN plugin install issue in private.cloud.ibm.com | 
-| 1.20.2 | 18 February 2026 | CLI plugin vulnerability fix patch update | 
+| 1.20.1 | 19 January 2026 | Fix for private endpoint support metadata and EN plugin install issue in private.cloud.ibm.com |
+| 1.20.2 | 18 February 2026 | CLI plugin vulnerability fix patch update |
 | 1.21.0 | 7 April 2026 | CLI plugin update for view sandbox, email attachments and source options support for payload debugging |
 {: caption="Changes in the {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} CLI" caption-side="bottom"}

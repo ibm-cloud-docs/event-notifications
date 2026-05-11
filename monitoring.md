@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2026
-lastupdated: "2026-02-09"
+lastupdated: "2026-05-11"
 
 keywords: IBM Cloud, observability
 
@@ -39,9 +39,9 @@ You can use {{site.data.keyword.mon_full_notm}} to visualize and alert on metric
 {: class="simple-tab-table"}
 {: row-headers}
 
-| Tokyo (`jp-tok`)    | Sydney (`au-syd`) |  Osaka (`jp-osa`) | Chennai (`in-che`) |
+| Tokyo (`jp-tok`)    | Sydney (`au-syd`) |  Osaka (`jp-osa`) | Chennai (`in-che`) | Mumbai (`in-mum`) |
 |---------------------|------------------|------------------|--------------------|
-| [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} |
+| [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} |
 {: caption="Regions where metrics are sent in Asia Pacific locations" caption-side="top"}
 {: #mon-table-2}
 {: tab-title="Asia Pacific"}
@@ -100,7 +100,7 @@ For more information about launching the {{site.data.keyword.mon_full_notm}} UI,
 | Name | Description |
 | ------------ | ------------ |
 | ibm_eventnotifications_total_ingested_notifications| The total number of notifications that are ingested. Ingested notifications are events from a source that has at least one condition that is defined on them for filtering. |
-| ibm_eventnotifications_total | The total number of notifications for a particular type includes successful and failed notifications. | 
+| ibm_eventnotifications_total | The total number of notifications for a particular type includes successful and failed notifications. |
 | ibm_eventnotifications_failed | The total number of failed notifications of a particular type. |
 | ibm_eventnotifications_devices | The total number of push notification devices registered. |
 {: caption="Metrics available by service plan" caption-side="bottom"}
