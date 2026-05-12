@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2026
-lastupdated: "2026-05-11"
+lastupdated: "2026-05-12"
 
 keywords: event notifications cloud logs, event notifications logging, event notifications external logs
 
@@ -58,7 +58,7 @@ You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on platf
 {: row-headers}
 
 | Tokyo (`jp-tok`)    | Sydney (`au-syd`) |  Osaka (`jp-osa`) | Chennai (`in-che`) | Mumbai (`in-mum`) |
-|---------------------|------------------|------------------|--------------------|
+|---------------------|------------------|------------------|--------------------|-------------------|
 | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} |
 {: caption="Regions where platform logs are sent in Asia Pacific locations" caption-side="top"}
 {: #logs-table-2}
