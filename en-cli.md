@@ -2013,7 +2013,6 @@ ibmcloud event-notifications template-create \
     --params '{"body": "eyJlbmFibGVkIjogZmFsc2V9Cg=="}' \
     --description exampleString
 ```
-
 {: pre}
 
 ### `ibmcloud event-notifications templates`
@@ -2778,7 +2777,6 @@ ibmcloud event-notifications verify-smtp-update \
     --id=exampleString \
     --type=exampleString
 ```
-
 {: pre}
 
 ## Metrics
