@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-05-26"
+lastupdated: "2026-05-27"
 
 keywords: event notifications CLI plug-in, CLI reference, en cli reference, event notifications cli reference, event notifications, command line reference
 
@@ -54,19 +54,19 @@ ibmcloud plugin install en
 ### ibmcloud en en-list
 {: #en-cli-list-command}
 
-Lists the instances in the set target region. You can retrieve you instance GUID from the listed instances.
+Lists the instances in the set target region. You can retrieve your instance GUID from the listed instances.
 
 ```sh
 ibmcloud en en-list
 ```
 {: pre}
 
-
 ### ibmcloud event-notifications environment variables set
 {: #en-cli-environment-variables}
 
-Sets the region that you'll be working on. The default endpoint region is Dallas. For other regions, change the endpoint by using the export command to set the variable, for example, use the following command for Sydney:
-export IBMCLOUD_EN_ENDPOINT=<https://au-syd.event-notifications.cloud.ibm.com/event-notifications>
+Set the region that you'll be working on by setting the ibmcloud target region ibmcloud target -r <region> or export regional endpoint via  variable IBMCLOUD_EN_ENDPOINT, for example, use the following for Sydney: 
+
+- export IBMCLOUD_EN_ENDPOINT= https://au-syd.event-notifications.cloud.ibm.com/event-notifications
 
 - export **IBMCLOUD_EN_ENDPOINT** variable to set the {{site.data.keyword.en_short}} region public endpoint.
 
@@ -3147,6 +3147,25 @@ ibmcloud event-notifications send-notifications \
 {: caption="Android platform settings" caption-side="bottom"}
 
 
+## Sample script for {{site.data.keyword.en_short}} provisioning using CLI
+{: #en-provisioning-script}
+
+The [provision_event_notification.sh](https://github.com/IBM/event-notifications/blob/main/samples/provision_event_notifications.sh){: external} script automates the provisioning and configuration of an {{site.data.keyword.en_short}} instance.
+
+
+## Sample script for platform notifications integration using CLI
+{: #en-platform-notifications-script}
+
+The [en-platform-notification-src-and-email-dest.sh](https://github.com/IBM/event-notifications/blob/main/samples/en-platform-notification-src-and-email-dest.sh){: external} script integrates Platform Notifications with {{site.data.keyword.en_short}} and routes notifications to IBM Inbuilt Email or Custom Domain Sandbox.
+
+  
+## Sample script for {{site.data.keyword.logs_full_notm}} integration using CLI
+{: #en-icl-script}
+
+The [en-icl-src-and-email-dest.sh](https://github.com/IBM/event-notifications/blob/main/samples/en-icl-src-and-email-dest.sh){: external} script integrates {{site.data.keyword.logs_full_notm}} with {{site.data.keyword.en_short}} and routes notifications to IBM Inbuilt Email or Custom Domain Sandbox .
+
+This script assumes that the {{site.data.keyword.logs_full_notm}} instance and {{site.data.keyword.en_short}} instance are in the same account.
+{: note}
 
 
 ## CLI version history
