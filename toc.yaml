@@ -21,12 +21,19 @@ toc:
   - navgroup:
       id: tutorial
       topics:
+      - topicgroup:
+          label: Route notifications to destinations
+          topics:
+          - en-route-notifications.md
+          - en-route-create-topic.md
+          - en-route-create-filters.md
+          - en-route-create-subscriptions.md
+          - en-route-review.md
       - en-ts-monitor-secrets.md
       - en-icl-pd-integration.md
   - navgroup:
       id: howto
       topics:
-      - en-create-topic.md
       - en-advanced-filtering.md
       - en-create-subscription.md
       - en-integrations.md
