@@ -21,13 +21,9 @@ Create a topic to organize incoming events from sources. After you create the to
 ## Creating a topic
 {: #en-route-create-topic-steps}
 
-1. In your {{site.data.keyword.en_short}} instance, click **Topics** in the navigation menu.
+1. Enter the **Topic name** and **Description** (optional).
 
-2. Click **Create**.
-
-3. Enter the **Topic name** and **Description** (optional).
-
-4. Click **Next** to create the topic and proceed to the **Event filters** screen.
+1. Click **Next** to create the topic and proceed to the **Event filters** screen.
 
 ## Next steps
 {: #en-route-create-topic-next}
