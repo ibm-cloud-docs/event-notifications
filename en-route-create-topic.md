@@ -13,7 +13,7 @@ subcollection: event-notifications
 {{site.data.keyword.attribute-definition-list}}
 
 # Create a topic
-{: #en-create-en-topic}
+{: #en-route-create-topic}
 
 Create a topic to organize incoming events from sources. After you create the topic, you can add event filters and subscriptions to route notifications to destinations.
 {: shortdesc}
