@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-05-11"
+lastupdated: "2026-06-09"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -19,6 +19,13 @@ content-type: release-note
 
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
+
+## 08 June 2026
+{: #event-notifications-Jun082026}
+{: release-note}
+
+Streamlined guided flow for topic creation
+:  {{site.data.keyword.en_short}} now provides a unified guided flow that enables you to create a topic, configure filters and conditions for events, and set up subscriptions to notify users—all in a single streamlined workflow. For more information, see [Creating a topic](/docs/event-notifications?topic=event-notifications-en-create-en-topic).
 
 ## 11 May 2026
 {: #event-notifications-May112026}
