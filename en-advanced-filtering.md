@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025
-lastupdated: "2025-11-03"
+  years: 2026
+lastupdated: "2026-06-16"
 
 keywords: event-notifications, event notifications, about event notifications, topics, advanced filtering
 
@@ -55,7 +55,7 @@ Filters are logical expressions used to filter arrays. The filters listed in the
 | `<=` | left is less than or equal to right |
 | `>` | left is greater than right |
 | `>=` | left is greater than or equal to right |
-| `=~` | left matches regular expression [?(@.name =~ /foo.*?/i)] |
+| `=~` | left matches regular expression [?(@.name =~ 'foo.*?')] |
 | `&&` | combine multiple conditions in a filter where all conditions must be true for an element to be selected. |
 | `\|\|`| combine multiple conditions in a filter where at least one of the specified conditions must be true for an element to be selected. |
 {: caption="Filter Operators" caption-side="bottom"}
