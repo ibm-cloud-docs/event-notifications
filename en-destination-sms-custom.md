@@ -18,14 +18,14 @@ You can configure a Custom SMS destination in the Destinations tab.
 Custom SMS destination is not supported by Lite Plan. To know more about the plans and destinations available, refer [here](/docs/event-notifications?topic=event-notifications-getting-started)
 {: note}
 
-## Custom SMS personalised numbers
+## Custom SMS personalized numbers
 {: #en-destinations-sms-custom-numbers}
 
 After creating the destination, you must explicitly request these numbers to use this destination for sending events. To request for numbers [contact us](mailto:mbluemix@in.ibm.com?subject=[Custom%20SMS]%20:%20%20Request%20for%20Personalised%20numbers&body=Kindly%20provide%20the%20following%20details:%0D%0A%0D%0AInstance%20CRN:%0D%0ADestination%20ID:%0D%0ACountries:%0D%0ARegion:%0D%0APhone%20Number%20Type:%20[short-code,%20alphanumeric,%20long-code).
 
 Provide the following details: the destination ID, CRN of the event notification instance, along with the list of countries for which you need to send notifications using this destination.
 
-Provisioning the phone numbers may take six to eight weeks depending on the country and phone numsber type.
+Provisioning the phone numbers may take six to eight weeks depending on the country and phone number type.
 {: note}
 
 ## Using a Custom SMS destination
@@ -106,7 +106,7 @@ The Custom SMS destination supports Multimedia Messaging Service (MMS) along wit
 ## MMS Supported countries and charges
 {: #en-destinations-mms-custom-charge}
 
-MMS messages are charged in terms of `SMS Units`.An SMS unit is a fixed unit of cost. Therefore, the number of units that are consumed by a message varies based on the destination country, and Event Notifications service charges vary.
+MMS messages are charged in terms of `SMS Units`. An SMS unit is a fixed unit of cost. Therefore, the number of units that are consumed by a message varies based on the destination country, and Event Notifications service charges vary.
 The following table shows SMS Units charged for each MMS sent.
 
 | Supported Country Code        | SMS Units |
