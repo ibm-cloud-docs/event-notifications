@@ -39,9 +39,9 @@ Read through and follow [the suggested etiquettes](/docs/event-notifications?top
 ## Subscription workflow
 {: #en-destinations-email-subscription-flow}
 
-Both the {{site.data.keyword.en_short}} Email Destinations support a subscription workflow. This workflow triggers an invitation email to all email-ids which are subscribed to an Email Destination. The invitation contains a link to accept further notification from the subscription. All notificaiton emails will be sent to the subscribed email-id only if the recipent accepts the invitation.  
+Both the {{site.data.keyword.en_short}} Email Destinations support a subscription workflow. This workflow triggers an invitation email to all email-ids which are subscribed to an Email Destination. The invitation contains a link to accept further notification from the subscription. All notification emails will be sent to the subscribed email-id only if the recipient accepts the invitation.
 
-The followiing diagram shows depicts the workflow, from invited to subscribed and to unsubsubscribed.
+The following diagram depicts the workflow, from invited to subscribed and to unsubscribed.
 
 ![Email state-diagram](images/en-email-state-diagram.png "Email state diagram"){: caption="Email state diagram" caption-side="bottom"}
 
