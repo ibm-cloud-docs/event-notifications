@@ -31,6 +31,7 @@ toc:
           - en-route-review.md
       - en-ts-monitor-secrets.md
       - en-icl-pd-integration.md
+      - en-pd-ocm-migration.md
   - navgroup:
       id: howto
       topics:
