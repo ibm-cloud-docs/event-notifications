@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-06-09"
+lastupdated: "2026-06-30"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -19,6 +19,14 @@ content-type: release-note
 
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
+
+## 1 July 2026
+{: #event-notifications-Jul012026}
+{: release-note}
+
+Enhanced rate limits for sandbox custom email destinations
+:  In addition to the existing 3000 emails per month limit, sandbox destinations now enforce a daily limit of 200 emails and a per-second limit of 1 email. For more information, see [Sandbox mode restrictions](/docs/event-notifications?topic=event-notifications-en-destinations-custom-email#en-destinations-custom-email-sandbox-restrictions).
+
 
 ## 8 June 2026
 {: #event-notifications-Jun082026}
@@ -48,6 +56,7 @@ Support email attachments for custom domain destinations
 
 Sandbox mode for custom email destinations
 :  Custom email destinations now support sandbox mode for testing without domain verification. Sandbox mode provides an {{site.data.keyword.en_short}}-managed domain, allowing you to test email notifications immediately with up to 10 recipients and 3000 notifications per instance. When ready for production, update the domain to transition to your own verified custom domain. For more information, see [Sandbox environment for testing](/docs/event-notifications?topic=event-notifications-en-destinations-custom-email#en-destinations-custom-email-sandbox).
+
 
 
 

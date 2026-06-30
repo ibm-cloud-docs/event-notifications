@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2021, 2026
-lastupdated: "2026-04-15"
+lastupdated: "2026-06-30"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email,  sandbox, testing
 
@@ -49,7 +49,7 @@ Recipient limit
 :   You can invite up to 10 recipients to subscribe to notifications from a sandbox destination.
 
 Rate limiting
-:   You can send up to 3000 notifications per {{site.data.keyword.en_short}} instance.
+:   You can send up to 3000 emails per month, 200 emails per day, and 1 email per second per {{site.data.keyword.en_short}} instance in sandbox mode.
 
 ### Using Sandbox mode
 {: #en-destinations-custom-email-sandbox-use}
