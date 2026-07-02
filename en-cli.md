@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-05-27"
+lastupdated: "2026-06-29"
 
 keywords: event notifications CLI plug-in, CLI reference, en cli reference, event notifications cli reference, event notifications, command line reference
 
@@ -2789,7 +2789,7 @@ ibmcloud event-notifications verify-smtp-update \
 Get metrics.
 
 ```sh
-ibmcloud event-notifications metrics ---instance-id INSTANCE-ID --destination-type DESTINATION-TYPE --gte GTE --lte LTE [--destination-id DESTINATION-ID] [--subscription-id SUBSCRIPTION-ID] [--source-id SOURCE-ID] [--email-to EMAIL-TO] [--notification-id NOTIFICATION-ID] [--subject SUBJECT]
+ibmcloud event-notifications metrics ---instance-id INSTANCE-ID --gte GTE --lte LTE [--smtp-config-id SMTP-CONFIG-ID] [--destination-type DESTINATION-TYPE][--destination-id DESTINATION-ID] [--subscription-id SUBSCRIPTION-ID] [--source-id SOURCE-ID] [--email-to EMAIL-TO] [--notification-id NOTIFICATION-ID] [--subject SUBJECT]
 ```
 
 #### Command options
@@ -2800,11 +2800,6 @@ ibmcloud event-notifications metrics ---instance-id INSTANCE-ID --destination-ty
 
     The maximum length is `256` characters. The minimum length is `10` characters. The value must match regular expression `/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]/`.
 
-`--destination-type` (string)
-:   Destination type. Allowed values are [smtp_custom]. Required.
-
-    Allowable values are: `smtp_custom`.
-
 `--gte` (string)
 :   GTE (greater than equal), start timestamp in UTC. Required.
 
@@ -2814,6 +2809,16 @@ ibmcloud event-notifications metrics ---instance-id INSTANCE-ID --destination-ty
 :   LTE (less than equal), end timestamp in UTC. Required.
 
     The maximum length is `28` characters. The minimum length is `1` character. The value must match regular expression `/[0-9]{1,4}-[0-9]{1,2}-[0-9]{1,2}T[0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2}Z/`.
+
+`--smtp-config-id` (string)
+:   SMTP configuration ID. Required when querying metrics for SMTP interface destinations.
+
+    The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/`.
+
+`--destination-type` (string)
+:   Destination type for which metrics are requested. Supported value: smtp_custom. Required when querying metrics for custom email destinations.
+
+    Allowable values are: `smtp_custom`.        
 
 `--destination-id` (string)
 :   Unique identifier for Destination.
@@ -2869,7 +2874,7 @@ ibmcloud event-notifications metrics \
 Get bounce metrics.
 
 ```sh
-ibmcloud event-notifications bounce-metrics --instance-id INSTANCE-ID --destination-type DESTINATION-TYPE --gte GTE --lte LTE [--destination-id DESTINATION-ID] [--subscription-id SUBSCRIPTION-ID] [--source-id SOURCE-ID] [--email-to EMAIL-TO] [--notification-id NOTIFICATION-ID] [--subject SUBJECT] [--limit LIMIT] [--offset OFFSET]
+ibmcloud event-notifications bounce-metrics --instance-id INSTANCE-ID --gte GTE --lte LTE [--smtp-config-id SMTP-CONFIG-ID] [--destination-type DESTINATION-TYPE] [--destination-id DESTINATION-ID] [--subscription-id SUBSCRIPTION-ID] [--source-id SOURCE-ID] [--email-to EMAIL-TO] [--notification-id NOTIFICATION-ID] [--subject SUBJECT] [--limit LIMIT] [--offset OFFSET]
 ```
 
 
@@ -2881,11 +2886,6 @@ ibmcloud event-notifications bounce-metrics --instance-id INSTANCE-ID --destinat
 
     The maximum length is `32` characters. The minimum length is `32` characters. The value must match regular expression `/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/`.
 
-`--destination-type` (string)
-:   Destination type. Allowed values are [smtp_custom]. Required.
-
-    Allowable values are: `smtp_custom`.
-
 `--gte` (string)
 :   GTE (greater than equal), start timestamp in UTC. Required.
 
@@ -2895,6 +2895,16 @@ ibmcloud event-notifications bounce-metrics --instance-id INSTANCE-ID --destinat
 :   LTE (less than equal), end timestamp in UTC. Required.
 
     The maximum length is `28` characters. The minimum length is `1` character. The value must match regular expression `/[0-9]{1,4}-[0-9]{1,2}-[0-9]{1,2}T[0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2}Z/`.
+
+`--smtp-config-id` (string)
+:   SMTP configuration ID. Required when querying metrics for SMTP interface destinations.
+
+    The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/`.
+
+`--destination-type` (string)
+:   Destination type for which metrics are requested. Supported value: smtp_custom. Required when querying metrics for custom email destinations.
+
+    Allowable values are: `smtp_custom`.        
 
 `--destination-id` (string)
 :   Unique identifier for Destination.
@@ -3199,4 +3209,5 @@ The CLI Plugin versions from 0.0.5 to 1.9.0 is deprecated.
 | 1.20.2 | 18 February 2026 | CLI plugin vulnerability fix patch update |
 | 1.21.0 | 7 April 2026 | CLI plugin update for view sandbox, email attachments and source options support for payload debugging |
 | 1.21.1 | 25 May 2026 | Deprecated init and show command and added en instances listing command. Fix provided to automatically set EN endpoint according to set target region. |
+| 1.21.2 | 29 June 2026 | Bug Fix for SMTP Metrics to support SMTP Config ID flag and mark destination type as optional. |
 {: caption="Changes in the {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} CLI" caption-side="bottom"}

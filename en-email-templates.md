@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2025
-lastupdated: "2025-12-18"
+  years: 2021, 2026
+lastupdated: "2026-06-17"
 
 keywords: event notifications, event-notifications, email.templates
 subcollection: event-notifications
@@ -72,7 +72,7 @@ In the send notification payload, add a `personalization` parameter to enable it
 	"data": {
 		"greet": "Evening",
 		"severity": "LOW",
-		"short_description": "Success! Your Event Notifications instance is now able to send personalised notifications",
+		"short_description": "Success! Your Event Notifications instance is now able to send personalized notifications",
 		"transaction_id": "e539778e-4915-4586-b4c9-48e44af5c010",
 		"name": "IBM Cloud Event Notifications",
 		"price": "100",

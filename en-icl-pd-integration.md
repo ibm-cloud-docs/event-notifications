@@ -1,8 +1,8 @@
 ---
 
 copyright:
-   years: 2025
-lastupdated: "2025-05-27"
+   years: 2026
+lastupdated: "2026-06-17"
 
 keywords: event-notifications, event notifications, about event notifications, cloud logs, pagerduty
 
@@ -199,10 +199,10 @@ You need an {{site.data.keyword.cloud}} account. If you don't have an account, t
 
 1. Verify the alert and click create. 
 
-## Verifying that the connection was succesfully established
+## Verifying that the connection was successfully established
 {: #en-verification}
 
-1. Navigate to your {{site.data.keyword.logs_full_notm}} **Dashboard** and click on Test. If the connection was succesfully established, you will receive a PagerDuty alert. 
+1. Navigate to your {{site.data.keyword.logs_full_notm}} **Dashboard** and click on Test. If the connection was successfully established, you will receive a PagerDuty alert.
 
 1. You can set the time period and frequency of the Alert Notifications in the next step and select alerts to attach to the webhook. 
 

@@ -82,7 +82,7 @@ Flexibility within the opt-out flow signifies a user-centric approach, granting 
     1. Email Ids sent via send notifications payload under `ibmenmailto` key gets preference, even if subscribed email list is already present under connected subscription
     2. If the key `ibmenmailto` is **Absent** in the payload then preference is given to the subscribed email list
 * Template handling rules
-    1. Template IDs sent via send notifcations payload under `ibmentemplates` key gets preference, even if a Notification Template is attached to the subscription.
+    1. Template IDs sent via send notifications payload under `ibmentemplates` key gets preference, even if a Notification Template is attached to the subscription.
     2. If the key `ibmentemplates` is **Absent** in the payload then preference is given to the Notification Template in the subscription
     3. If Template is **Absent** in the send notifications payload and also **Absent** in the subscription, then **Email Body** is picked from the `ibmendefaultlong` field from the send notifications payload and **Subject** is picked from the `ibmendefaultshort` field.
     4. If `ibmensubject` field is present in the send notifications payload then the Subject will be picked from the field irrespective of any of the previously described conditions.
