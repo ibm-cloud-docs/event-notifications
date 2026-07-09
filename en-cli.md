@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-06-29"
+lastupdated: "2026-07-09"
 
 keywords: event notifications CLI plug-in, CLI reference, en cli reference, event notifications cli reference, event notifications, command line reference
 
@@ -120,8 +120,11 @@ ibmcloud event-notifications source --help
 
 - **Action:** Create `Source`.
 
+The CLI currently supports creating API sources only.
+{: note}
+
    ```sh
-   ibmcloud event-notifications sources-create --instance-id INSTANCE-ID --name NAME --description DESCRIPTION [--enabled ENABLED] [--store-notifications STORE-NOTIFICATIONS]
+   ibmcloud event-notifications sources-create --instance-id INSTANCE-ID --name NAME [--description DESCRIPTION] [--enabled ENABLED] [--store-notifications STORE-NOTIFICATIONS]
    ```
    {: pre}
 
@@ -138,9 +141,9 @@ ibmcloud event-notifications source --help
       The default value is ` `. The maximum length is `255` characters. The minimum length is `1` characters. The value must match regular expression `/[a-zA-Z 0-9-_\/.?:'";,+=!#@$%^&*()]*/`.
 
    `--description DESCRIPTION` (string)
-   :  The description for source.
-
-      The default value is ``. The maximum length is `255` characters. The minimum length is `0` characters. The value must match regular expression `/[a-zA-Z 0-9-_\/.?:'";,+=!#@$%^&*()]*/`.
+   :  The description for source. Optional.
+   
+       The default value is ``. The maximum length is `255` characters. The minimum length is `0` characters. The value must match regular expression `/[a-zA-Z 0-9-_\/.?:'";,+=!#@$%^&*()]*/`.
 
    `--enabled ENABLED` (Boolean)
    :  The Boolean flag to enable or disable the source.
@@ -148,9 +151,9 @@ ibmcloud event-notifications source --help
       The value is set to true to enable the source and false to disable the source.
 
    `--store-notifications` (bool)
-:   enable to view the payload of incoming events for troubleshooting.
-
-    The default value is `false`.
+   :   Enable to view the payload of incoming events for troubleshooting.
+   
+       The default value is `false`.
 
 ### ibmcloud event-notifications source update
 {: #en-cli-source-update-command}
@@ -340,6 +343,8 @@ ibmcloud event-notifications destination --help
 
    `--config CONFIG` ([`DestinationConfig` examples](#en-cli-destination-config-example-schema))
    :  The configuration needed to set the destination-specific parameters.
+
+      If you create a destination without `--config`, the destination is created but does not function until you configure it.
 
       `--icon16x16` (io.ReadCloser)
    :   Safari icon 16x16.
@@ -654,7 +659,7 @@ ibmcloud event-notifications destination --help
       }
       ```
 
-   Note: The Custom SMS Destination does not require any Destination Config To be set up.
+   Note: A Custom SMS destination can be created without `DestinationConfig`, but it will not function until the required personalized numbers are explicitly requested and configured.
 
 ### ibmcloud event-notifications destination list
 {: #en-cli-destination-list-command}
@@ -1166,7 +1171,9 @@ ibmcloud event-notifications topic --help
       The default value is ``. The maximum length is `255` characters. The minimum length is `0` characters. The value must match regular expression `/[a-zA-Z 0-9-_\/.?:'";,+=!#@$%^&*()]*/`.
 
    `--sources` ([TopicUpdateSourcesItem[]](#en-cli-topic-example-schema))
-   :  List of sources.
+   :  List of sources with their filter configurations. This parameter is not just a list of source IDs - it includes filter rules for each source. Each source entry contains the source ID and associated filter configurations that determine which events from that source are routed to this topic. See the [examples](#en-cli-topic-example-schema) for the complete structure.
+   
+      **Important:** When updating a topic, sources already attached to the topic cannot be replaced through the CLI or UI - they can only be deleted and re-added. To modify source filters, you must first remove the source from the topic and then add it back with the new filter configuration.
 
 ### ibmcloud event-notifications topic delete
 {: #en-cli-topic-delete-command}
@@ -2974,7 +2981,7 @@ This document describes the payload details for getting Notification status for 
 ### `ibmcloud event-notifications notifications-status`
 {: #event-notifications-cli-notifications-status-command}
 
-Get notification status.
+Get the status of a test notification sent to a webhook destination. This command is specifically used to retrieve the delivery status of webhook test notifications.
 
 ```sh
 ibmcloud event-notifications notifications-status --instance-id INSTANCE-ID --id ID
@@ -2990,7 +2997,7 @@ ibmcloud event-notifications notifications-status --instance-id INSTANCE-ID --id
     The maximum length is `32` characters. The minimum length is `32` characters. The value must match regular expression `/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/`.
 
 `--id` (string)
-:   Get Notification Id. Required.
+:   The notification ID returned when testing a webhook destination. This ID is specific to test notifications sent to webhook destinations. Required.
 
     The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/`.
 
