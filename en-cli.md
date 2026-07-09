@@ -1343,6 +1343,7 @@ ibmcloud event-notifications subscription --help
       - The following example shows the format of the `SubscriptionCreateAttributes` object for App Configuration. When creating or updating a subscription for an **App Configuration** destination, the `attributes` object has a specific rule:
          - You must include **either** `feature_flag_enabled` **or** `template_id_notification`
          - You **cannot** include both properties together
+
          This ensures that a subscription is created for the correct use case — either **feature flag evaluation** or **notification templating**, but not both at once.
 
       ```json
@@ -2079,6 +2080,7 @@ Get details of a Template.
 ```sh
 ibmcloud event-notifications template --instance-id INSTANCE-ID --id ID
 ```
+{: pre}
 
 #### Command options
 {: #event-notifications-template-cli-options}
@@ -2086,7 +2088,7 @@ ibmcloud event-notifications template --instance-id INSTANCE-ID --id ID
 `--instance-id` (string)
 :   Unique identifier for IBM Cloud Event Notifications instance. Required.
 
-    The maximum length is `256` characters. The minimum length is `10` characters. The value must match regular expression `/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]/`.
+    The maximum length is `32` characters. The minimum length is `32` characters. The value must match regular expression `/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/`.
 
 `--id` (string)
 :   Unique identifier for Template. Required.
@@ -2098,8 +2100,8 @@ ibmcloud event-notifications template --instance-id INSTANCE-ID --id ID
 
 ```sh
 ibmcloud event-notifications template \
-    --instance-id exampleString \
-    --id exampleString
+    --instance-id=exampleString \
+    --id=exampleString
 ```
 {: pre}
 
@@ -2254,42 +2256,9 @@ ibmcloud event-notifications pre-defined-templates \
 ```
 {: pre}
 
-### `ibmcloud event-notifications template`
-{: #event-notifications-cli-template-command}
-
-Get details of a Template.
-
-```sh
-ibmcloud event-notifications template --instance-id INSTANCE-ID --id ID
-```
-{: pre}
-
-#### Command options
-{: #event-notifications-template-cli-options}
-
-`--instance-id` (string)
-:   Unique identifier for IBM Cloud Event Notifications instance. Required.
-
-    The maximum length is `32` characters. The minimum length is `32` characters. The value must match regular expression `/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/`.
-
-`--id` (string)
-:   Unique identifier for Template. Required.
-
-    The maximum length is `32` characters. The minimum length is `32` characters. The value must match regular expression `/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/`.
-
-#### Example
-{: #event-notifications-template-examples}
-
-```sh
-ibmcloud event-notifications template \
-    --instance-id=exampleString \
-    --id=exampleString
-```
-{: pre}
-
 
 ## SMTP Configurations
-{: #event-notifications-s-mtp-configurations-cli}
+{: #event-notifications-smtp-configurations-cli}
 
 IBM Cloud Event Notifications SMTP Configurations.
 
