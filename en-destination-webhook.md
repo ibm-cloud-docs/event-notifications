@@ -41,9 +41,101 @@ To identify that the incoming notification is coming from {{site.data.keyword.en
 ## Allowlisting IP addresses
 {: #en-allowlisting}
 
-You can allowlist the ranges of IP addresses to restrict access to your servers that receive webhooks. For more information, see [webhook IP addresses](/docs/support?topic=support-webhook-ips).
+You can allowlist the IP address ranges to restrict access to the servers that receive webhooks. For the existing webhook IP address ranges, see [webhook IP addresses](/docs/support?topic=support-webhook-ips).
 
-Regardless of the location of the Event Notifications Service instance, to help ensure uninterrupted webhook traffic that you should add the IP ranges of all regions to your allowlist.
+Also allowlist the following region-specific IP addresses for the region where your Event Notifications service instance is deployed. If you use Event Notifications service instances in multiple regions, allowlist the IP addresses for each applicable region.
+
+
+**Dallas**
+```
+- 52.118.150.206
+- 52.118.211.163
+- 67.18.95.240
+```
+
+**Sydney**
+```
+- 159.23.97.10
+- 130.198.9.234
+- 135.90.131.19
+```
+
+**London**
+```
+- 158.176.171.145
+- 158.175.189.21
+- 141.125.162.123
+```
+
+**Madrid**
+```
+- 13.121.86.163
+- 13.122.88.117
+- 13.120.93.85
+```
+
+**Frankfurt**
+```
+- 149.81.4.209
+- 149.81.212.50
+- 158.176.1.49
+```
+
+**Osaka**
+```
+- 163.68.88.77
+- 163.69.84.115
+- 163.73.93.115
+```
+
+**Tokyo**
+```
+- 165.192.134.77
+- 162.133.141.117
+- 128.168.131.96
+```
+
+**Toronto**
+```
+- 163.74.90.220
+- 163.75.87.40
+- 163.66.93.241
+```
+
+**Montreal**
+```
+- 64.5.42.20
+- 64.5.48.239
+- 64.5.44.233
+```
+
+**Sao Paulo**
+```
+- 13.116.82.0
+- 163.107.92.208
+- 163.109.92.155
+```
+
+**Washington DC**
+```
+- 52.117.124.52
+- 169.63.177.17
+- 150.239.80.160
+```
+
+**Chennai**
+```
+- 169.38.17.66
+- 169.38.9.38
+- 169.38.13.18
+```
+
+**Mumbai**
+```
+- 169.38.211.191
+- 169.38.236.49
+- 169.38.42.162
+```
 
 ## Webhook retry policy
 {: #en-webhook-retry}
