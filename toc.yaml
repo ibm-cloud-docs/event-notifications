@@ -14,7 +14,6 @@ toc:
       topics:
       - getting-started.md
       - en-about.md
-      - en-migration.md
       - en-responsibilities.md
       - en-new-pricing.md
       - en-release-notes.md
@@ -32,13 +31,10 @@ toc:
       - en-ts-monitor-secrets.md
       - en-icl-pd-integration.md
       - en-pd-ocm-migration.md
+      - en-migration.md
   - navgroup:
       id: howto
       topics:
-      - en-advanced-filtering.md
-      - en-create-subscription.md
-      - en-integrations.md
-      - en-smtp-configurations.md
       - topicgroup:
           label: Event sources
           topics:
@@ -99,6 +95,10 @@ toc:
           - en-code-engine-templates.md
           - en-appconfig-notification-template.md
       - en-markdown-formatted-notifications.md
+      - en-advanced-filtering.md
+      - en-create-subscription.md
+      - en-integrations.md
+      - en-smtp-configurations.md
       - topicgroup:
           label: Observability
           topics:
