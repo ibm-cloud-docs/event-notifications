@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-07-10"
+lastupdated: "2026-07-21"
 
 keywords: event notifications CLI plug-in, CLI reference, en cli reference, event notifications cli reference, event notifications, command line reference
 
@@ -649,7 +649,7 @@ Operate on {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} desti
       }
       ```
 
-   Note: A Custom SMS destination can be created without `DestinationConfig`, but it will not function until the required personalized numbers are explicitly requested and configured.
+   Note: A Custom SMS destination can be created without `DestinationConfig`, but it will not function until the required personalized numbers are explicitly requested and configured. To request personalized numbers, see [Custom SMS personalized numbers](/docs/event-notifications?topic=event-notifications-en-destinations-sms-custom#en-destinations-sms-custom-numbers).
 
 ### ibmcloud event-notifications destination list
 {: #en-cli-destination-list-command}
@@ -1598,122 +1598,6 @@ Operate on {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} subsc
          "feature_flag_enabled": false,
       }
       ```
-
-### ibmcloud event-notifications tag subscription create
-{: #en-cli-tag-subscription-create-command}
-
-- **Action:** Create `Tag-Subscription`.
-
-   ```sh
-   ibmcloud event-notifications tags-subscription-create --instance-id INSTANCE-ID --id ID --device-id DEVICE-ID --tag-name TAG-NAME
-   ```
-   {: pre}
-
-- **Parameters to provide:**
-
-   `--id ID` (string)
-   :  Unique identifier for Destination. Required.
-
-      The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/`.
-
-   `--tag-name TAG-NAME` (string)
-   :  The offset for paginated results.
-
-      The default value is ` `. The maximum length is `255` characters. The minimum length is `0` characters. The value must match regular expression `/[a-zA-Z 0-9-_\/.?:'";,+=!#@$%^&*() ]*/`.
-
-   `----device-id DEVICE-ID` (string)
-   :  Unique identifier of the device.
-
-      The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/`.
-
-   `--instance-id INSTANCE-ID` (string)
-   :  The unique identifier for {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} instance. Required.
-
-      The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]/`.
-
-### ibmcloud event-notifications tag subscription delete
-{: #en-cli-tag-subscription-delete-command}
-
-- **Action:** Delete `Tag-Subscription`.
-
-   ```sh
-   ibmcloud event-notifications tags-subscription-delete --instance-id INSTANCE-ID --id ID --device-id DEVICE-ID --tag-name TAG-NAME
-   ```
-   {: pre}
-
-- **Parameters to provide:**
-
-   `--id ID` (string)
-   :  Unique identifier for Destination. Required.
-
-      The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/`.
-
-   `--tag-name TAG-NAME` (string)
-   :  The offset for paginated results.
-
-      The default value is ` `. The maximum length is `255` characters. The minimum length is `0` characters. The value must match regular expression `/[a-zA-Z 0-9-_\/.?:'";,+=!#@$%^&*() ]*/`.
-
-   `----device-id DEVICE-ID` (string)
-   :  Unique identifier of the device.
-
-      The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/`.
-
-   `--instance-id INSTANCE-ID` (string)
-   :  The unique identifier for {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} instance. Required.
-
-      The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]/`.
-
-### ibmcloud event-notifications tag subscription list
-{: #en-cli-tag-subscription-list-command}
-
-- **Action:** list `Tag-Subscriptions`.
-
-   ```sh
-   ibmcloud event-notifications tags-subscription --instance-id INSTANCE-ID --id ID [--device-id DEVICE-ID] [--user-id USER-ID] [--tag-name TAG-NAME] [--limit LIMIT] [--offset OFFSET] [--search SEARCH]
-   ```
-   {: pre}
-
-- **Parameters to provide:**
-
-   `--id ID` (string)
-   :  Subscription Tag ID. Required.
-
-      The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/`.
-
-   `--tag-name TAG-NAME` (string)
-   :  The offset for paginated results.
-
-      The default value is ` `. The maximum length is `255` characters. The minimum length is `0` characters. The value must match regular expression `/[a-zA-Z 0-9-_\/.?:'";,+=!#@$%^&*() ]*/`.
-
-   `----device-id DEVICE-ID` (string)
-   :  Unique identifier of the device.
-
-      The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/`.
-
-   `----user-id USER-ID` (string)
-   :  The user identifier for the device registration.
-
-      The default value is ` `. The maximum length is `255` characters. The minimum length is `0` characters. The value must match regular expression `/[a-zA-Z 0-9-_\/.?:'";,+=!#@$%^&*() ]*/`.
-
-   `--limit LIMIT` (int64)
-   :  The page limit for paginated results.
-
-      The maximum value is `100`. The minimum value is `1`.
-
-   `--offset OFFSET` (int64)
-   :  The offset for paginated results.
-
-      The minimum value is `0`.
-
-   `--search SEARCH` (string)
-   :  The search string for filtering results.
-
-      The maximum length is `100` characters. The minimum length is `0` characters. The value must match regular expression `/[a-zA-Z0-9]/`.
-
-   `--instance-id INSTANCE-ID` (string)
-   :  The unique identifier for {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} instance. Required.
-
-      The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]/`.
 
 ## Integrations
 {: #en-cli-integration}

@@ -3,7 +3,7 @@
 copyright:
 
   years: 2021, 2026
-lastupdated: "2026-05-11"
+lastupdated: "2026-07-20"
 
 keywords: event notifications, IBM Cloud
 
@@ -22,10 +22,10 @@ completion-time: 10m
 {: toc-content-type="tutorial"}
 {: toc-completion-time="10m"}
 
-This tutorial brings you through the steps that you need to take before you create an {{site.data.keyword.en_full_notm}} service.
+This tutorial walks you through the steps that you need to take before you create an {{site.data.keyword.en_full_notm}} service.
 {: shortdesc}
 
-{{site.data.keyword.en_short}} is a routing service that provides you about critical events that occur in your {{site.data.keyword.cloud}} account. You can filter and route event notifications from {{site.data.keyword.cloud_notm}} services like {{site.data.keyword.monitoringlong_notm}}, {{site.data.keyword.compliance_short}}, {{site.data.keyword.secrets-manager_short}}, {{site.data.keyword.cloud_notm}} Projects, and Toolchain to communication channels like email, SMS, push notifications, Huawei Cloud Push, webhook, slack, Microsoft&reg; Teams, ServiceNow, and {{site.data.keyword.cos_full_notm}}.
+{{site.data.keyword.en_short}} is a routing service that provides you with information about critical events that occur in your {{site.data.keyword.cloud}} account. You can filter and route event notifications from {{site.data.keyword.cloud_notm}} services and applications to human destinations, such as Email, SMS, and Push notifications, or to service destinations, such as Webhooks and cloud services.
 
 ## Create an {{site.data.keyword.cloud_notm}} account
 {: #en-cloud-ac}
@@ -37,7 +37,7 @@ If you don't have an {{site.data.keyword.cloud_notm}} account, [create one](http
 {: #en-decide-location}
 {: step}
 
-Decide on a location where your service to be hosted. Currently, the following locations are supported:
+Decide on a location where your service will to be hosted. Currently, the following locations are supported:
 
 * Dallas (us-south)
 * London (eu-gb)
@@ -76,91 +76,50 @@ Changing plans from a chargeable plan (Standard) to free plan (Lite) is not perm
 {: #en-decide-event-source}
 {: step}
 
-You can create either an `API Source` or an `{{site.data.keyword.cloud_notm}}` source. To learn the more about the process of adding a source, see [Adding an Event Notifications source](/docs/event-notifications?topic=event-notifications-en-add-source).
+You can create either an `API Source` or an `{{site.data.keyword.cloud_notm}}` source. To learn more about the process of adding a source, see [Adding an Event Notifications source](/docs/event-notifications?topic=event-notifications-en-add-source).
 
 An `API source` indicates that the Event originated outside of {{site.data.keyword.cloud_notm}} and is sent to {{site.data.keyword.en_short}} service through API calls.
 
 An `{{site.data.keyword.cloud_notm}} source` indicates a service on {{site.data.keyword.cloud_notm}} that can emit events to {{site.data.keyword.en_short}} service.
 
-The source `{{site.data.keyword.cloud_notm}} Resource Lifecycle Events` is a built-in source.  This source emits resource lifecycle events to {{site.data.keyword.en_short}} service. This is disabled by default and needs to be enabled.
+The source `{{site.data.keyword.cloud_notm}} Resource Lifecycle Events` is a built-in source. This source emits resource lifecycle events to {{site.data.keyword.en_short}} service. This is disabled by default and must be enabled.
 
-The other {{site.data.keyword.cloud_notm}} sources must be first integrated from the respective services to start emitting events to {{site.data.keyword.en_short}} service.
+The other {{site.data.keyword.cloud_notm}} sources must be first integrated to start emitting events to {{site.data.keyword.en_short}} service.
 
-The list of IBM provided sources is as follows:
-- [{{site.data.keyword.monitoringfull_notm}}](https://{DomainName}/docs/monitoring?topic=monitoring-eventnotif){: external}
-- [Security and Compliance](/docs/workload-protection?topic=workload-protection-getting-started){: external}
-- [{{site.data.keyword.secrets-manager_short}}](https://{DomainName}/docs/secrets-manager?topic=secrets-manager-event-notifications&interface=ui){: external}
-- [{{site.data.keyword.appconfig_short}}](https://{DomainName}/docs/app-configuration?topic=app-configuration-ac-int-en){: external}
-- [IBM Cloud Projects](https://{DomainName}/docs/secure-enterprise?topic=secure-enterprise-event-notifications-events&interface=ui){: external}
-- [Toolchain](https://{DomainName}/docs/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-cd&interface=ui){: external}
-- [watsonx.data](https://{DomainName}/docs/watsonxdata?topic=watsonxdata-event-notifications-events){: external}
-- [OpenPages](https://{DomainName}/docs/openpages?topic=openpages-event-notifications-events){: external}
-- [{{site.data.keyword.logs_full_notm}}](https://{DomainName}/docs/cloud-logs?topic=cloud-logs-event-notifications-alerts)
-- [{{site.data.keyword.cephaas_full_notm}}](https://{DomainName}/docs/cephaas?topic=cephaas-event-notifications-events)
-- watsonx.governance
+For the full list of supported {{site.data.keyword.cloud_notm}} sources, see [Registering event sources](/docs/event-notifications?topic=event-notifications-en-source).
 
 ## Choose an event destination
 {: #en-decide-event-destination}
 {: step}
 
-A destination is a delivery target for a notification. Two destination categories are supported: human and service.
+A destination is a delivery target for a notification. Two destination categories are supported:
 
-To learn the more about the process of creating a destination, see [Creating an Event Notifications destination](/docs/event-notifications?topic=event-notifications-en-create-en-destination).
+- **Human destinations** are devices, servers, or applications that present notifications for human consumption.
+- **Service destinations** are cloud services or applications where notifications are consumed programmatically.
 
+For the full list of supported destinations, see [Working with event destinations](/docs/event-notifications?topic=event-notifications-en-destination).
 
-### Human destinations
-{: #en-destination-human}
-
-Human destinations are devices, servers, or applications that present notifications for human consumption. The following human destinations are supported:
-
-- [Email Destinations](/docs/event-notifications?topic=event-notifications-en-destinations-email)
-   - [Inbuilt Email](/docs/event-notifications?topic=event-notifications-en-destination-email-destination-default)
-   - [IBM Cloud Email service with custom domain](/docs/event-notifications?topic=event-notifications-en-destinations-custom-email)
-- [SMS Destinations](/docs/event-notifications?group=sms-destinations)
-   - [Inbuilt SMS](/docs/event-notifications?topic=event-notifications-en-destinations-sms)
-   - [Custom SMS](/docs/event-notifications?topic=event-notifications-en-destinations-sms-custom)
-- [Microsoft&reg; Teams](/docs/event-notifications?topic=event-notifications-en-destinations-msteams)
-- [PagerDuty](/docs/event-notifications?topic=event-notifications-en-destinations-pagerduty)
-- [Push notifications](/docs/event-notifications?topic=event-notifications-en-destinations-push)
-   - [Android Push Notifications (FCM)](/docs/event-notifications?topic=event-notifications-en-push-fcm)
-   - [iOS Push Notifications (APNs)](/docs/event-notifications?topic=event-notifications-en-push-apns)
-   - [Chrome Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-chrome)
-   - [Firefox Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-firefox)
-   - [Safari Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-safari)
-   - [Huawei Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-huawei)
-- [Slack](/docs/event-notifications?topic=event-notifications-en-destinations-slack)
-- [ServiceNow](/docs/event-notifications?topic=event-notifications-en-destinations-servicenow)
-
-### Service destinations
-{: #en-destination-service}
-
-Service destinations are cloud services or applications where notifications are consumed programmatically. The following service destinations are supported:
-
-- [Webhook](/docs/event-notifications?topic=event-notifications-en-destinations-webhook)
-- [{{site.data.keyword.codeengineshort}}](/docs/event-notifications?topic=event-notifications-en-destinations-codeengine)
-- [{{site.data.keyword.cos_full_notm}}](/docs/event-notifications?topic=event-notifications-en-destinations-cloud-object-storage)
-- [{{site.data.keyword.messagehub}}](/docs/event-notifications?topic=event-notifications-en-destinations-event-streams&interface=ui)
-- [{{site.data.keyword.appconfig_notm}}](/docs/event-notifications?topic=event-notifications-en-destination-app-configuration)
+To learn more about the process of creating a destination, see [Creating an Event Notifications destination](/docs/event-notifications?topic=event-notifications-en-create-en-destination).
 
 
-## Create a topic
+## Route notifications to destinations
 {: #en-getting-started-create-topic}
 {: step}
 
-A topic is needed to filter the incoming events from the Source. Each source is connected to a topic through a user-defined filter. Notifications that pass into a topic are pushed to all subscribed destinations. A topic can connect to multiple sources and has an independent filter for each source that is connected to it. Configure topics as needed and {{site.data.keyword.en_short}} handles the routing and delivering of alerts reliably to the correct destinations.
+Event routing connects your sources to your destinations through topics, filters, and subscriptions.
 
-To learn the more about the process of creating a topic, see [Creating a topic](/docs/event-notifications?topic=event-notifications-en-create-en-topic#en-create-topic).
+- A **topic** organizes incoming events from one or more sources. Each source is connected to a topic through a user-defined filter.
+- **Filters** define which events from each source are routed to the topic.
+- A **subscription** connects a topic to a destination, so that matching events are delivered to the right people or services.
 
-## Create a subscription
-{: #en-getting-started-create-subscription}
-{: step}
+You can set up the complete routing flow — topic, filters, subscriptions, and review — in a single guided experience.
 
-Destinations subscribe to topics. Multiple destinations can subscribe to a single topic. An email subscription is a list of all emails IDs, and an SMS subscription is a list of all phone numbers that a notification is routed to. A webhook subscription links a webhook destination to a topic.
+To set up event routing, see [Route notifications to destinations](/docs/event-notifications?topic=event-notifications-en-create-en-topic).
 
-To learn the more about the process of creating a subscription, see [Creating a subscription](/docs/event-notifications?topic=event-notifications-en-create-en-subscription#en-create-subscription).
-
-Once you have created the subscription, you will receive a notification at the destination chosen previously whenever an event occurs.
+After you save the routing configuration, notifications are delivered to the chosen destinations whenever a matching event occurs.
 
 
-As an alternative to the console-based approach, you can also use [Terraform IBM Modules (TIM)](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim) to provision and configure {{site.data.keyword.en_short}} instances using Infrastructure as Code(IaC) automation. The [Terraform IBM Modules (TIM) for {{site.data.keyword.en_short}}](https://registry.terraform.io/modules/terraform-ibm-modules/event-notifications/ibm/latest){: external} provides a standardized, tested approach for deploying {{site.data.keyword.en_short}} with best practices built in. These modules are pre-built, open-source, and enterprise-ready that follow {{site.data.keyword.cloud_notm}} security best practices.
-{: tip}
+## Alternative: Use Terraform
+{: #en-getting-started-terraform}
+
+As an alternative to the console, you can provision and configure {{site.data.keyword.en_short}} instances by using [Terraform IBM Modules (TIM)](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim) for Infrastructure as Code (IaC) automation. The [TIM for {{site.data.keyword.en_short}}](https://registry.terraform.io/modules/terraform-ibm-modules/event-notifications/ibm/latest){: external} provides a standardized, tested, and enterprise-ready approach that follows {{site.data.keyword.cloud_notm}} security best practices.
