@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2021, 2026
-lastupdated: "2026-06-30"
+lastupdated: "2026-07-23"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email,  sandbox, testing
 
@@ -145,7 +145,7 @@ You can either resend the invitation or remove the recipient from the Invited li
 
 {{site.data.keyword.en_short}} offers users the flexibility of utilizing custom email destinations along with templates. Users have the option to provide HTML templates containing a payload. When sending notifications, the service integrates these templates seamlessly, replacing template variables with corresponding variables from the payload. This allows for dynamic and personalized email content for recipients.
 
-In cases where a custom template is not available, the system automatically defaults to the "ibmenhtmlbody" template. If the "ibmenhtmlbody" template is also unavailable, the system gracefully fallbacks to the "ibmendefaultlong" template, ensuring a smooth and consistent user experience. This robust template selection mechanism guarantees that notifications are always dispatched with relevant and appealing content, maximizing their impact and effectiveness.
+In cases where a custom template is not available, the system automatically defaults to the "ibmenhtmlbody" template. If the "ibmenhtmlbody" template is also unavailable, the system gracefully falls back to the "ibmendefaultlong" template, ensuring a smooth and consistent user experience. This robust template selection mechanism guarantees that notifications are always dispatched with relevant and appealing content, maximizing their impact and effectiveness.
 
 In the following example snippet, you can find a template with a minimal body that should not contain any line breaks (\n). The template includes a variable that will be replaced with its value in the email.
 

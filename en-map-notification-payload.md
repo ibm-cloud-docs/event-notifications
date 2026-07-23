@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-04-15"
+lastupdated: "2026-07-23"
 
 keywords: event notifications, event-notifications, map event notifications to destinations
 subcollection: event-notifications
@@ -102,7 +102,7 @@ Use an email Template to personalize the messages transformed from events. Also,
 To understand more about email templates, see [Email Templates](/docs/event-notifications?topic=event-notifications-en-email-templates).
 
 `ibmendefaultshort` maps to the subject of the email.
-In cases where a custom template is not available, the system automatically defaults to the `ibmenhtmlbody` template. If the `ibmenhtmlbody` template is also not available, the system gracefully fallbacks to the `ibmendefaultlong`, ensuring a smooth and consistent user experience.
+In cases where a custom template is not available, the system automatically defaults to the `ibmenhtmlbody` template. If the `ibmenhtmlbody` template is also not available, the system gracefully falls back to the `ibmendefaultlong`, ensuring a smooth and consistent user experience.
 
 You can opt out from the conventional subscription process, and specify the preferred email addresses and templates in the notifications payload. To know more about the opt-out capability, see [Custom Domain email Opt-out functions](/docs/event-notifications?topic=event-notifications-en-destinations-custom-domain-opt-out).
 
@@ -136,7 +136,7 @@ The keys that are defined as part of a `data` block maps to specific properties 
 Use Slack Template to transform event notification to Slack.
 The keys that are defined as part of a `data` block maps to specific properties in the template block. To understand more about the Slack Template, see [Slack](/docs/event-notifications?topic=event-notifications-en-slack-notification-template).
 
-If a template is not defined, the system gracefully fallbacks to the `ibmendefaultlong` for the body of the message.
+If a template is not defined, the system gracefully falls back to the `ibmendefaultlong` for the body of the message.
 
 
 ## Microsoft&reg; Teams
