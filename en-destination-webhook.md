@@ -43,13 +43,19 @@ To identify that the incoming notification is coming from {{site.data.keyword.en
 
 You can allowlist the IP address ranges to restrict access to the servers that receive webhooks. Ensure that the following IP addresses are all allowlisted:
 
-- **Existing webhook IP address ranges** (valid until end of September 2026): See [webhook IP addresses](/docs/support?topic=support-webhook-ips).
+### Existing webhook IP address ranges
+{: #en-allowlisting-existing}
 
-- **New IP addresses** (effective starting August 29, 2026):
+Valid until end of September 2026. See [webhook IP addresses](/docs/support?topic=support-webhook-ips).
 
-   - **Global common IP addresses**: See [Individual IP addresses for multi-zone regions](/docs/support?topic=support-webhook-ips#webhook-ips-individual).
+### New IP addresses
+{: #en-allowlisting-new}
 
-   - **Region-specific IP addresses**: Allowlist the IP addresses for the region where your {{site.data.keyword.en_short}} service instance is deployed. If you use {{site.data.keyword.en_short}} service instances in multiple regions, allowlist the IP addresses for each applicable region.
+Effective starting August 29, 2026:
+
+- **Global common IP addresses**: See [Individual IP addresses for multi-zone regions](/docs/support?topic=support-webhook-ips#webhook-ips-individual).
+
+- **Region-specific IP addresses**: Allowlist the IP addresses for the region where your {{site.data.keyword.en_short}} service instance is deployed. If you use {{site.data.keyword.en_short}} service instances in multiple regions, allowlist the IP addresses for each applicable region.
 
       **Dallas (us-south)**
 
