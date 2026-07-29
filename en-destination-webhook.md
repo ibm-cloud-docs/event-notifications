@@ -41,101 +41,210 @@ To identify that the incoming notification is coming from {{site.data.keyword.en
 ## Allowlisting IP addresses
 {: #en-allowlisting}
 
-You can allowlist the IP address ranges to restrict access to the servers that receive webhooks. For the existing webhook IP address ranges, see [webhook IP addresses](/docs/support?topic=support-webhook-ips).
+You can allowlist the IP address ranges to restrict access to the servers that receive webhooks. Ensure that the following IP addresses are all allowlisted:
 
-Also allowlist the following region-specific IP addresses for the region where your Event Notifications service instance is deployed. If you use Event Notifications service instances in multiple regions, allowlist the IP addresses for each applicable region.
+- **Existing webhook IP address ranges** (valid until end of September 2026): See [webhook IP addresses](/docs/support?topic=support-webhook-ips).
 
+- **New IP addresses** (effective starting August 29, 2026):
 
-**Dallas**
-```
-- 52.118.150.206
-- 52.118.211.163
-- 67.18.95.240
-```
+   - **Global common IP addresses**: See [Individual IP addresses for multi-zone regions](/docs/support?topic=support-webhook-ips#webhook-ips-individual).
 
-**Sydney**
-```
-- 159.23.97.10
-- 130.198.9.234
-- 135.90.131.19
-```
+   - **Region-specific IP addresses**: Allowlist the IP addresses for the region where your {{site.data.keyword.en_short}} service instance is deployed. If you use {{site.data.keyword.en_short}} service instances in multiple regions, allowlist the IP addresses for each applicable region.
 
-**London**
-```
-- 158.176.171.145
-- 158.175.189.21
-- 141.125.162.123
-```
+      **Dallas (us-south)**
 
-**Madrid**
-```
-- 13.121.86.163
-- 13.122.88.117
-- 13.120.93.85
-```
+      - Public
+         ```
+         52.118.150.206
+         52.118.211.163
+         67.18.95.240
+         ```
+      - Private
+         ```
+         10.22.12.198
+         10.22.26.163
+         10.119.56.147
+         ```
 
-**Frankfurt**
-```
-- 149.81.4.209
-- 149.81.212.50
-- 158.176.1.49
-```
+      **Sydney (au-syd)**
 
-**Osaka**
-```
-- 163.68.88.77
-- 163.69.84.115
-- 163.73.93.115
-```
+      - Public
+         ```
+         159.23.97.10
+         130.198.9.234
+         135.90.131.19
+         ```
+      - Private
+         ```
+         10.223.237.137
+         10.51.176.13
+         10.223.253.235
+         ```
 
-**Tokyo**
-```
-- 165.192.134.77
-- 162.133.141.117
-- 128.168.131.96
-```
+      **London (eu-gb)**
 
-**Toronto**
-```
-- 163.74.90.220
-- 163.75.87.40
-- 163.66.93.241
-```
+      - Public
+         ```
+         158.176.171.145
+         158.175.189.21
+         141.125.162.123
+         ```
+      - Private
+         ```
+         10.16.48.81
+         10.16.62.205
+         10.223.21.154
+         ```
 
-**Montreal**
-```
-- 64.5.42.20
-- 64.5.48.239
-- 64.5.44.233
-```
+      **Madrid (eu-es)**
 
-**Sao Paulo**
-```
-- 13.116.82.0
-- 163.107.92.208
-- 163.109.92.155
-```
+      - Public
+         ```
+         13.121.86.163
+         13.122.88.117
+         13.120.93.85
+         ```
+      - Private
+         ```
+         10.22.177.232
+         10.22.195.222
+         10.22.202.91
+         ```
 
-**Washington DC**
-```
-- 52.117.124.52
-- 169.63.177.17
-- 150.239.80.160
-```
+      **Frankfurt (eu-de)**
 
-**Chennai**
-```
-- 169.38.17.66
-- 169.38.9.38
-- 169.38.13.18
-```
+      - Public
+         ```
+         149.81.4.209
+         149.81.212.50
+         158.176.1.49
+         ```
+      - Private
+         ```
+         10.16.206.123
+         10.22.112.128
+         10.16.216.36
+         ```
 
-**Mumbai**
-```
-- 169.38.211.191
-- 169.38.236.49
-- 169.38.42.162
-```
+      **Osaka (jp-osa)**
+
+      - Public
+         ```
+         163.68.88.77
+         163.69.84.115
+         163.73.93.115
+         ```
+      - Private
+         ```
+         10.12.21.131
+         10.12.33.173
+         10.12.38.219
+         ```
+
+      **Tokyo (jp-tok)**
+
+      - Public
+         ```
+         165.192.134.77
+         162.133.141.117
+         128.168.131.96
+         ```
+      - Private
+         ```
+         10.223.197.48
+         10.223.201.138
+         10.223.213.141
+         ```
+
+      **Toronto (ca-tor)**
+
+      - Public
+         ```
+         163.74.90.220
+         163.75.87.40
+         163.66.93.241
+         ```
+      - Private
+         ```
+         10.223.149.61
+         10.223.166.200
+         10.223.182.99
+         ```
+
+      **Montreal (ca-mon)**
+
+      - Public
+         ```
+         64.5.42.20
+         64.5.48.239
+         64.5.44.233
+         ```
+      - Private
+         ```
+         10.46.73.140
+         10.46.77.140
+         10.46.81.140
+         ```
+
+      **Sao Paulo (br-sao)**
+
+      - Public
+         ```
+         13.116.82.0
+         163.107.92.208
+         163.109.92.155
+         ```
+      - Private
+         ```
+         10.12.183.145
+         10.12.71.56
+         10.51.193.111
+         ```
+
+      **Washington DC (us-east)**
+
+      - Public
+         ```
+         52.117.124.52
+         169.63.177.17
+         150.239.80.160
+         ```
+      - Private
+         ```
+         10.22.41.152
+         10.22.50.51
+         10.12.118.230
+         ```
+
+      **Chennai (in-che)**
+
+      - Public
+         ```
+         169.38.17.66
+         169.38.9.38
+         169.38.13.18
+         ```
+      - Private
+         ```
+         10.46.128.179
+         10.46.132.179
+         10.46.136.179
+         ```
+
+      **Mumbai (in-mum)**
+
+      - Public
+         ```
+         169.38.211.191
+         169.38.236.49
+         169.38.42.162
+         ```
+      - Private
+         ```
+         10.223.94.240
+         10.223.103.208
+         10.249.119.171
+         ```
 
 ## Webhook retry policy
 {: #en-webhook-retry}
