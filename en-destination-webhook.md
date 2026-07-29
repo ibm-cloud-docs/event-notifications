@@ -43,7 +43,7 @@ To identify that the incoming notification is coming from {{site.data.keyword.en
 
 You can allowlist the IP address ranges to restrict access to the servers that receive webhooks. Ensure that the following IP addresses are all allowlisted:
 
-### Existing webhook IP address ranges
+### Existing webhook IP addresses
 {: #en-allowlisting-existing}
 
 Valid until end of September 2026. See [webhook IP addresses](/docs/support?topic=support-webhook-ips).
