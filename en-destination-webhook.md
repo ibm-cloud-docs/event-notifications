@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2025
-lastupdated: "2025-05-30"
+  years: 2020, 2026
+lastupdated: "2026-07-30"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, webhook
 
@@ -21,7 +21,7 @@ A webhook represents a service destination, where an incoming notification can b
 ## Configuring a webhook destination
 {: #en-webhook-configure}
 
-You can configure a webhook destination in the `Destinations` tab. As part of the configuration, enter the webhook URL, and the REST API verb to be called when the webhook is called. You can also enter authorization headers to the destination webhook. Create a subscription to associate the webhook destination to a topic.
+You can configure a webhook destination on the **Destinations** tab. As part of the configuration, enter the webhook URL, and the REST API verb to be called when the webhook is called. You can also enter authorization headers to the destination webhook. Create a subscription to associate the webhook destination to a topic.
 
 ## Supported HTTP Verbs
 {: #en-supported-verbs}
@@ -263,6 +263,6 @@ For detailed information about retry behavior, including retry attempts, delays,
 ## Testing a webhook destination configuration
 {: #en-webhook-test-destination}
 
-You can test a webhook destination in the options menu that is provided against the destination. You can effortlessly test a destination, whether the provided configuration is correct or not with a single click.
+You can test a webhook destination in the options menu. You can test a destination, whether the provided configuration is correct or not with a single click.
 
 For more information on testing a destination, see [Testing Destinations](/docs/event-notifications?topic=event-notifications-en-test-destination).
