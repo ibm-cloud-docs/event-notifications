@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2021, 2026
-lastupdated: "2026-07-23"
+lastupdated: "2026-08-04"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email,  sandbox, testing
 
@@ -134,6 +134,11 @@ Opt-in message contains user or account who invited the recipient, the name of t
 The {{site.data.keyword.en_short}} are only sent to the opted-in recipients.
 
 You can either resend the invitation or remove the recipient from the Invited list. In the Invited tab, click and select the three vertical dots (overflow menu) and select Resend invitation for the recipient email address, to whom you need to resend the invitation. For deleting a user from the invited list, in the Invited tab, click the three vertical dots (overflow menu) and select Delete for the recipient email address, to whom you need to remove from the Invited list. For adding back a recipient after opted-out or not responded within the stipulated time that is mentioned in the invite email, you need to send a mail to the Reply to email address mentioned in the initial invite mail.
+
+## Requesting a recipient limit increase
+{: #en-destinations-custom-email-recipient-limit}
+
+Each send request supports up to 50 email recipients. To reach more recipients, split them into batches across multiple requests. If batching does not meet your use case requirements, you can request a higher limit. For more information, see [Requesting a recipient limit increase for email destinations](/docs/event-notifications?topic=event-notifications-en-email-recipient-limit-increase).
 
 ## Opting out of Event Notifications managed opt-in capability
 {: #en-destination-email-custom-domain-opt-out-desc}

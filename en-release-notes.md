@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-07-29"
+lastupdated: "2026-08-04"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -20,12 +20,21 @@ content-type: release-note
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
 
+## 3 August 2026
+{: #event-notifications-Aug032026}
+{: release-note}
+
+Recipient limit increase for custom domain email and SMTP destinations
+:  Each send request now supports up to 50 email recipients for custom domain email destinations and the SMTP interface. You can reach more recipients by splitting them across multiple requests. If batching does not meet your needs, you can request a higher limit. For more information, see [Requesting a recipient limit increase](/docs/event-notifications?topic=event-notifications-en-email-recipient-limit-increase).
+
+
 ## 29 July 2026
 {: #event-notifications-Jul292026}
 {: release-note}
 
 Updated webhook allowlisting IP addresses
 :  {{site.data.keyword.en_short}} webhook destinations now require additional IP addresses to be allowlisted. Effective August 29, 2026, you must also allowlist the global common IP addresses and region-specific public and private IP addresses. The existing webhook IP address ranges remain valid until end of September 2026. For more information, see [Allowlisting IP addresses](/docs/event-notifications?topic=event-notifications-en-destinations-webhook#en-allowlisting).
+
 
 ## 1 July 2026
 {: #event-notifications-Jul012026}
