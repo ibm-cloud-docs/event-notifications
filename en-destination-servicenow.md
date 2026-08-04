@@ -18,7 +18,7 @@ subcollection: event-notifications
 A ServiceNow represents a service destination, where an incoming security event notification can be consumed programmatically to actions.
 {: shortdesc}
 
-An event which is routed to a ServiceNow destination will trigger creation of an Incident in the configured ServiceNow destination.
+An event that is routed to a ServiceNow destination triggers the creation of an Incident in the configured ServiceNow destination.
 {: important}
 
 ## Configuring a ServiceNow destination
@@ -27,30 +27,30 @@ An event which is routed to a ServiceNow destination will trigger creation of an
 The ServiceNow name follows the standard `https://xxx.service-now.com`, where `xxx` is your instance name. The ServiceNow instance name, Username, and Password can be fetched from your ServiceNow console. Navigate to your ServiceNow profile and go to **Manage Instance Password** to get the details.
 {: important}
 
-To configure a ServiceNow destination, do the following steps:
+To configure a ServiceNow destination, complete the following steps:
 
-1. From your {{site.data.keyword.en_short}} instance dashboard, click **Destinations**.
+1. From your {{site.data.keyword.en_short}} instance, click **Destinations**.
 
-1. Click **Add +** to add a new destination.
+1. Click **Create** to add a new destination.
 
-1. In the **Add a destination** side panel, provide the following details.
+1. Enter the following destination details in the **Create destination** dialog:
 
-   - **Name** - Enter a name for your destination.
-   - **Description** - Optionally, enter a description for your destination.
-   - **Type** - Under **Destination**, for the **Type**, select **ServiceNow** from the drop-down as your destination type.
-   - **Instance Name** - Enter the name of your ServiceNow instance.
-   - **Username** - Enter the username to be used for connecting to the ServiceNow instance.
-   - **Password** - Enter the password to be used for authenticating the username mentioned earlier to authenticate in the ServiceNow instance.
-   - **Namespace** defaulting to `now` and it cannot be changed.
-   - {{site.data.keyword.en_short}} currently allows creation of entries on "Incident" table only and it cannot be changed.
-   - **URL** gets populated based on the value provided before.
-   - **Client ID** - Enter the client ID needed to retrieve the OAuth access token.
-   - **Client secret** - Enter the client secret required for authenticating the Client ID provided earlier.
+   - **Name**: Enter a name for your destination.
+   - **Description**: Optionally, enter a description for your destination.
+   - **Type**: Under **Destination**, select **ServiceNow** from the dropdown list as your destination type.
+   - **Instance Name**: Enter the name of your ServiceNow instance.
+   - **Username**: Enter the username for connecting to the ServiceNow instance.
+   - **Password**: Enter the password for authenticating the username in the ServiceNow instance.
+   - **Namespace**: Defaults to `now` and cannot be changed.
+   - **Table**: {{site.data.keyword.en_short}} currently allows creation of entries on the `Incident` table only and it cannot be changed.
+   - **URL**: Gets populated based on the values provided.
+   - **Client ID**: Enter the client ID needed to retrieve the OAuth access token.
+   - **Client secret**: Enter the client secret required for authenticating the Client ID.
 
-      **Client ID** and **Client secret** can be fetched from `System Oauth` -> `Application Registries`. This is inside your ServiceNow instance console (you can search by clicking on "All"). Make sure it is in active state and applicable for connecting to external clients.
+      **Client ID** and **Client secret** can be fetched from **System OAuth** > **Application Registries** in your ServiceNow instance console. Ensure that it is in an active state and applicable for connecting to external clients.
       {: note}
 
-1. Click **Add**.
+1. Click **Create destination**.
 
 ## {{site.data.keyword.en_short}} severity (ibmenseverity) to ServiceNow severity mapping
 {: #en-sn-severity-mapping}
@@ -67,7 +67,7 @@ To configure a ServiceNow destination, do the following steps:
 ## Testing a ServiceNow destination configuration
 {: #en-sn-test-destination}
 
-You can test a ServiceNow destination in the options menu provided against the destination. You can effortlessly test a destination, whether the provided configuration is correct or not with a single click.
+You can test a ServiceNow destination in the options menu next to the destination. You can test whether the provided configuration is correct with a single click.
 
 For more information on testing a destination, see [Testing Destinations](/docs/event-notifications?topic=event-notifications-en-test-destination).
 

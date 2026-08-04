@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-02-23"
+lastupdated: "2026-08-04"
 
 keywords: event-notifications, event notifications, about event notifications, destinations,app configuration, app config
 
@@ -24,7 +24,7 @@ The {{site.data.keyword.appconfig_short}} destination helps you toggle the featu
 ## Configuring an {{site.data.keyword.appconfig_short}} destination
 {: #en-appconfig-configure}
 
-You can configure an {{site.data.keyword.appconfig_short}} destination in the `Destinations` tab.
+You can configure an {{site.data.keyword.appconfig_short}} destination in the **Destinations** tab.
 
 ### Before you begin
 {: #en-config-prerequisites}
@@ -38,42 +38,44 @@ Before you begin, make sure that you have the following prerequisites in place:
 ### Configuration
 {: #en-appconfig-steps-configure}
 
-To configure {{site.data.keyword.appconfig_short}} as a destination, perform the following steps:
+To configure {{site.data.keyword.appconfig_short}} as a destination, complete the following steps:
 
-1. From your {{site.data.keyword.en_short}} instance dashboard, click **Destinations**.
+1. From your {{site.data.keyword.en_short}} instance, click **Destinations**.
 
-1. Click **Add +** to add a new destination.
+1. Click **Create** to add a new destination.
 
-1. In the **Add a destination** side panel, provide the following details.
-   - **Name** - Enter a name for your destination.
-   - **Description** - Optionally, enter a description for your destination.
-   - **Type** - Under **Destination** > **Type**, select {{site.data.keyword.appconfig_short}}. Select the account that your {{site.data.keyword.appconfig_short}} instance is located in.
-        - **This account** - If your {{site.data.keyword.appconfig_short}} instance is located in the same account as your {{site.data.keyword.en_short}} instance, select **This account**. Select the **Instance name**, **Environments** and **Feature Flag** to be toggled. All 3 fields must be populated to create the instance.
-        - **Specific account** - If your {{site.data.keyword.appconfig_short}} instance and {{site.data.keyword.en_short}} instance are in different accounts, select **Specific account**. Provide a valid {{site.data.keyword.appconfig_short}} instance **CRN, select the **Environments** and **Feature Flag** to be toggled. All 3 fields must be populated to create the instance.
+1. Enter the following destination details in the **Create destination** dialog:
+   - **Name**: Enter a name for your destination.
+   - **Description**: Optionally, enter a description for your destination.
+   - **Type**: Under **Destination**, select **{{site.data.keyword.appconfig_short}}**. Select the account that your {{site.data.keyword.appconfig_short}} instance is located in.
+        - **This account**: If your {{site.data.keyword.appconfig_short}} instance is in the same account as your {{site.data.keyword.en_short}} instance, select **This account**. Select the **Instance name**, **Environments**, and **Feature Flag** to be toggled. All three fields must be populated to create the destination.
+        - **Specific account**: If your {{site.data.keyword.appconfig_short}} instance and {{site.data.keyword.en_short}} instance are in different accounts, select **Specific account**. Provide a valid {{site.data.keyword.appconfig_short}} instance **CRN**, select the **Environments** and **Feature Flag** to be toggled. All three fields must be populated to create the destination.
 
-1. Click **Add**.
+1. Click **Create destination**.
 
-1. Create a topic with a source of your choice. See [Creating an {{site.data.keyword.en_short}} topic](/docs/event-notifications?topic=event-notifications-en-create-en-topic&interface=ui) to learn the process of creating a topic.
+1. Click **Topics** in the {{site.data.keyword.en_short}} instance and click **Create**. Enter the topic and filter details in the **Topic details** and **Event filters** steps, then click **Create topic**. See [Creating an {{site.data.keyword.en_short}} topic](/docs/event-notifications?topic=event-notifications-en-create-en-topic&interface=ui) for more information.
 
-1. To create a subscription, navigate to the **Subscriptions** dashboard from the left navigation pane and click **Create**.
-    - Provide the **Name**, an optional **Description**, and select the **Topic** and **Destination** created previously.
-    - You can choose to send the notification based on **Attributes** or on a **Template**. While creating the {{site.data.keyword.appconfig_short}} subscription, either the attribute or template must be defined. These define the state of the feature flag while sending a notification.
-        - **Attributes** - If you choose to send the notification based on attributes, you can choose to enable the feature flag or disable it when a notification is sent.
-        - **Template** - If you choose to send the notification based on a template, you need to define the template under the **Templates** section of the left navigation pane. See [App Configuration Notification Template](/docs/event-notifications?topic=event-notifications-en-app-configuration-notification-template&interface=ui) to learn the process of creating a template to send notifications to {{site.data.keyword.appconfig_short}}.
+1. Proceed to the **Subscriptions** step. Click **Create** and enter the following subscription details in the **Create subscription** dialog:
+    - **Subscription name**: Enter a name for the subscription.
+    - **Destination type**: Select destination type.
+    - **Destination**: Select destination.
+    - **Attributes or Template**: When you create the {{site.data.keyword.appconfig_short}} subscription, either the attribute or template must be defined. These define the state of the feature flag when a notification is sent.
+        - **Attributes**: You can enable or disable the feature flag when a notification is sent.
+        - **Template**: Define the template under the **Templates** section of the left navigation pane. See [App Configuration Notification Template](/docs/event-notifications?topic=event-notifications-en-app-configuration-notification-template&interface=ui) for more information.
 
-1. Click **Create**.
+1. Click **Create subscription**.
 
 
 ## Testing {{site.data.keyword.appconfig_short}} destination configuration
 {: #en-test-ac-destination}
 
-You can test an {{site.data.keyword.appconfig_short}} destination in the options menu that is provided against the destination. You can effortlessly test a destination, whether the provided configuration is correct or not with a single click.
+You can test an {{site.data.keyword.appconfig_short}} destination in the options menu next to the destination. You can test whether the provided configuration is correct with a single click.
 
-1. Navigate to the **Destinations** tab on the left navigation pane of your {{site.data.keyword.en_short}} instance.
+1. Click **Destinations** in the {{site.data.keyword.en_short}} instance.
 
-1. On the destination you want to test, click the overflow menu ![Overflow Menu](/images/overflow-menu.svg) and select **Test Destination**.
+1. On the destination you want to test, click the **Options** menu and select **Test Destination**.
 
-1. Navigate to the **Feature Flags** tab in your {{site.data.keyword.appconfig_short}} instance and if the destination is configured correctly the feature flag should be **enabled**. This indicates that your destination configuration is successful.
+1. Click the **Feature Flags** tab in your {{site.data.keyword.appconfig_short}} instance. If the destination is configured correctly, the feature flag is **enabled**, which indicates that your destination configuration is successful.
 
 
 For more information on testing a destination, see [Testing Destinations](/docs/event-notifications?topic=event-notifications-en-test-destination).

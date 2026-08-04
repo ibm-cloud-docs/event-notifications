@@ -32,36 +32,35 @@ If you are using {{site.data.keyword.en_short}} CLI or API to configure {{site.d
 If you want to enforce access restrictions based on IP addresses, it is recommended to use context-based restrictions instead of a legacy bucket firewall.  For details, see [Restricting access by network context](/docs/cloud-object-storage?topic=cloud-object-storage-setting-a-firewall) in the Object Storage documentation.  If your setup must continue use of a legacy firewall, use the [Support Center](/unifiedsupport/supportcenter){: external} to create a support case for assistance with the IP range information.
 {: note}
 
-To configure a {{site.data.keyword.cos_full_notm}} destination, do the following steps:
+To configure a {{site.data.keyword.cos_full_notm}} destination, complete the following steps:
 
-1. From your {{site.data.keyword.en_short}} instance dashboard, click **Destinations**.
+1. From your {{site.data.keyword.en_short}} instance, click **Destinations**.
 
-1. Click **Add +** to add a new destination.
+1. Click **Create** to create a new destination.
 
-1. In the **Add a destination** side panel, provide the following details.
+1. Enter the following destination details in the **Create destination** dialog:
 
-   - **Name** - Enter a name for your destination.
-   - **Description** - Optionally, enter a description for your destination.
-   - **Type** - Under **Destination**, for the **Type**, select **{{site.data.keyword.cos_full_notm}}** from the list as your destination type.
+   - **Name**: Enter a name for your destination.
+   - **Description**: Optionally, enter a description for your destination.
+   - **Type**: Under **Destination**, select **{{site.data.keyword.cos_full_notm}}** from the list as your destination type.
+   - **Instance name**: Select the {{site.data.keyword.cos_full_notm}} instance name from the list. Otherwise, click **Create new instance** to create an {{site.data.keyword.cos_full_notm}} instance.
 
-   - **Instance name** - Select the {{site.data.keyword.cos_full_notm}} instance name from the list, if you already have an {{site.data.keyword.cos_full_notm}} instance. Otherwise, click the **Create new instance** link to create an {{site.data.keyword.cos_full_notm}} instance.
-
-      When you select an {{site.data.keyword.cos_full_notm}} instance, the authorization between the services will be created internally between the two service instances, if the authorization between the services doesn't exist.
+      When you select an {{site.data.keyword.cos_full_notm}} instance, the authorization between the services is created internally between the two service instances, if the authorization does not exist.
       {: note}
 
-   - **Bucket name** - Enter the Bucket name to be used for creating a new object per notification into the {{site.data.keyword.cos_full_notm}} instance.
+   - **Bucket name**: Enter the bucket name to be used for creating a new object per notification in the {{site.data.keyword.cos_full_notm}} instance.
 
       You can get the bucket name from your {{site.data.keyword.cos_full_notm}} instance. For more information, see [Bucket name](#en-cos-bucket-name).
 
-      The pattern (is a combination of destination name and notification ID) that {{site.data.keyword.en_short}} uses to store the object in {{site.data.keyword.cos_full_notm}} bucket is similar to the following example:
+      The pattern (a combination of destination name and notification ID) that {{site.data.keyword.en_short}} uses to store the object in the {{site.data.keyword.cos_full_notm}} bucket is similar to the following example:
 
       `Rhonda Macejkovic/013f87bc-0537-4dad-8511-8cb054890ffc.json`,
 
-      where `Rhonda Macejkovic` is destination name and `013f87bc-0537-4dad-8511-8cb054890ffc` is notification ID. `.json` is the payload format.
+      where `Rhonda Macejkovic` is the destination name and `013f87bc-0537-4dad-8511-8cb054890ffc` is the notification ID. `.json` is the payload format.
 
-   - **Endpoint** - Enter the {{site.data.keyword.cos_full_notm}} endpoint URL. For more information, see [Endpoint url](#en-endpoint-url).
+   - **Endpoint**: Enter the {{site.data.keyword.cos_full_notm}} endpoint URL. For more information, see [Endpoint URL](#en-endpoint-url).
 
-1. Click **Add**.
+1. Click **Create destination**.
 
 ## Using authorizations to grant access between services
 {: #en-using-s2s-auth1}
@@ -103,17 +102,17 @@ For more information about all of the parameters that are available for this com
 ## How to find the Bucket name in the {{site.data.keyword.cos_full_notm}} service instance?
 {: #en-cos-bucket-name}
 
-1. Login to your {{site.data.keyword.cloud_notm}} account.
+1. Log in to your {{site.data.keyword.cloud_notm}} account.
 
 1. Navigate to **Resource List** in the menu.
 
 1. Navigate to **Storage** in the Resource list.
 
-1. Click the {{site.data.keyword.cos_full_notm}} name that displays your {{site.data.keyword.cos_full_notm}} console.
+1. Click the {{site.data.keyword.cos_full_notm}} instance name to open your {{site.data.keyword.cos_full_notm}} console.
 
-1. In the {{site.data.keyword.cos_full_notm}} console, navigate to **Buckets**.
+1. In the {{site.data.keyword.cos_full_notm}} console, click **Buckets**.
 
-1. Select and copy the required Bucket name that need to use in the destination creation process. Use this copied Bucket name in the destination creation screen.
+1. Select and copy the required bucket name to use in the destination creation process.
 
 ## How to find the Endpoint URL of the {{site.data.keyword.cos_full_notm}} service instance?
 {: #en-endpoint-url}
@@ -123,13 +122,13 @@ Endpoints are used with your credentials (Bucket name, API Key, SDK) to tell you
 `private` {{site.data.keyword.cos_full_notm}} endpoints will not be supported for new integrations, since {{site.data.keyword.en_short}} now uses VPC network. It is recommended to use `direct` {{site.data.keyword.cos_full_notm}} endpoints while creating new integrations. Existing integrations over `private` endpoints will continue to work.
 {: note}
 
-1. Login to your {{site.data.keyword.cloud_notm}} account.
+1. Log in to your {{site.data.keyword.cloud_notm}} account.
 
 1. Navigate to **Resource List** in the menu.
 
 1. Navigate to **Storage** in the Resource list.
 
-1. Click the {{site.data.keyword.cos_full_notm}} name that displays your {{site.data.keyword.cos_full_notm}} console.
+1. Click the {{site.data.keyword.cos_full_notm}} instance name to open your {{site.data.keyword.cos_full_notm}} console.
 
 1. In the {{site.data.keyword.cos_full_notm}} console, navigate to **Buckets** in the menu.
 
@@ -140,7 +139,7 @@ Endpoints are used with your credentials (Bucket name, API Key, SDK) to tell you
 ## Testing a {{site.data.keyword.cos_full_notm}} destination configuration
 {: #en-cos-test-destination}
 
-You can test a {{site.data.keyword.cos_full_notm}} destination in the options menu that is provided against the destination. You can effortlessly test a destination, whether the provided configuration is correct or not with a single click.
+You can test a {{site.data.keyword.cos_full_notm}} destination in the options menu next to the destination. You can test whether the provided configuration is correct with a single click.
 
 For more information on testing a destination, see [Testing destinations](/docs/event-notifications?topic=event-notifications-en-test-destination).
 
