@@ -2,7 +2,7 @@
 
 copyright:
    years: 2026
-lastupdated: "2026-06-09"
+lastupdated: "2026-08-04"
 
 keywords: event notifications, subscription, destination
 
@@ -26,20 +26,20 @@ Subscriptions connect your topic to destinations, defining where notifications a
 2. Enter the subscription details:
    - **Name**: Enter a descriptive name for the subscription.
    - **Destination type**: Select the type of destination.
-   - **Destination**: Select the destination that you want to use.
-   
-   You can click **Integrate destination** to add a new destination not listed here.
+   - **Destination**: Select the destination you want to use.
 
-4. Depending on the destination type, provide any additional details that are required. For example, for email or SMS destinations, add the recipients.
+   Click [**Integrate destination**](#en-route-integrate-destination) to add a new destination not listed here.
 
-5. Click **Create** to create the subscription.
+3. Depending on the destination type, provide the required details. For example, for email or SMS destinations, add the recipients.
 
-6. Optional: You can click **Create subscription** again to add more subscriptions. You can also edit or delete the created subscriptions by using the **Edit** and **Delete** options in the **Options** menu.
+4. Click **Create subscription**.
+
+5. Optional: Click **Create** again to add more subscriptions. You can also edit or delete the subscriptions by using the **Edit** and **Delete** options on the **Options** menu.
 
 ## Integrating a destination
 {: #en-route-integrate-destination}
 
-If you need a destination that is not already available, click **Integrate destination** in the subscription side panel. In the **Integrate destination** side panel, select the destination type that you want to add, and then click **Save**.
+If you need a destination that is not listed, click **Integrate destination** on the subscription dialog. In the **Integrate destination** dialog, select the destination type to add, and then click **Save**.
 
 For more information about destination-specific configurations, see [Event Notifications destinations](/docs/event-notifications?topic=event-notifications-en-destination).
 

@@ -38,11 +38,11 @@ toc:
       - topicgroup:
           label: Event sources
           topics:
-          - en-resource-lifcycle-events.md
           - en-create-source.md
           - en-source.md
           - en-map-source-to-payload.md
           - en-view-notification-payloads.md
+          - en-resource-lifcycle-events.md
       - topicgroup:
           label: Event destinations
           topics:

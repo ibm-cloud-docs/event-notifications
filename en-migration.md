@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-08"
+lastupdated: "2026-08-04"
 
 keywords: event-notifications, event notifications migration, notifications, destinations, push, migration
 
@@ -21,7 +21,7 @@ You can migrate your mobile apps from the deprecated IBM Cloud Push Notification
 ## Introduction
 {: #en-migrate-intro}
 
-{{site.data.keyword.en_short}} is a routing service that tells you about critical events that occur in your {{site.data.keyword.cloud_notm}} account. You can filter and route {{site.data.keyword.en_full}} from {{site.data.keyword.cloud_notm}} services like Monitoring, Security and Compliance Center, and Secrets Manager to communication channels like email, SMS, push notifications, and webhooks.
+{{site.data.keyword.en_short}} is a routing service that tells you about critical events that occur in your {{site.data.keyword.cloud_notm}} account. You can filter and route event notifications from {{site.data.keyword.cloud_notm}} services like Monitoring, Security and Compliance Center, and Secrets Manager to communication channels like email, SMS, push notifications, and webhooks.
 
 This guide outlines the steps to migrate your mobile apps and the backend to integrate with the {{site.data.keyword.en_short}} service.
 
@@ -47,20 +47,15 @@ For a more detailed explanation of the concepts of {{site.data.keyword.en_short}
 
 Create an API source. This source represents the backend from which you send the notifications.
 
-### Create a topic
+### Create a topic and subscription
 {: #en-migrate-create-topic}
 
-Create a topic where all the events from the backend flow into. However, this topic does not do any filtering, define a filter that sends all events from the source to this topic.
+Create a topic to receive all events from the backend. Add a filter that routes all events from the source to this topic. Then, create a subscription to connect the topic to the destination.
 
 ### Create a destination
 {: #en-migrate-create-destination}
 
 Create a destination of the required type.
-
-### Create a subscription
-{: #en-migrate-create-subscription}
-
-Create a subscription from the topic to the destination.
 
 ### Create service credentials
 {: #en-migrate-create-credentials}
@@ -83,7 +78,7 @@ Create a destination of type `Android Push Notification` (FCM) for the Android a
 ### Modify your project in Firebase console
 {: #en-migrate-modify-project-firebase}
 
-The package name for the {{site.data.keyword.mobilepushshort}} SDK was `com.ibm.mobilefirstplatform.clientsdk.android.push`. The new Event Notification SDK has the package `com.ibm.cloud.eventnotifications.destination.android`. Update your project in Firebase Console with the new package, then download and replace the new `google-services.jsonfile` in your Android project.
+The package name for the {{site.data.keyword.mobilepushshort}} SDK was `com.ibm.mobilefirstplatform.clientsdk.android.push`. The new Event Notification SDK has the package `com.ibm.cloud.eventnotifications.destination.android`. Update your project in Firebase Console with the new package, then download and replace the new `google-services.json` file in your Android project.
 
 1. Go to the [Firebase Console](https://console.firebase.google.com)
 
@@ -99,7 +94,7 @@ The package name for the {{site.data.keyword.mobilepushshort}} SDK was `com.ibm.
 
 1. Find an app with package name `com.ibm.mobilefirstplatform.clientsdk.android.push` and click **Remove this app**.
 
-1. Click **Add app > Choose Android**
+1. Click **Add app > Choose Android**.
 
 1. Enter `com.ibm.cloud.eventnotifications.destination.android` as the package name and click **Register App**.
 
@@ -112,7 +107,7 @@ The package name for the {{site.data.keyword.mobilepushshort}} SDK was `com.ibm.
 
 1. Add the Firebase `google-services.json` in the app module.
 
-1. Change the Module’s `build.gradlefile`to include the new SDKs.
+1. Change the Module's `build.gradle` file to include the new SDKs.
 
    ```groovy
    // Replace the following section
@@ -518,7 +513,7 @@ Your Android mobile app is ready to work with your new instance of {{site.data.k
 {: #en-migrate-modify-ios}
 {: step}
 
-Modify the mobile app source code to use the new {{site.data.keyword.en_short}} SDKs. You will replace the existing {{site.data.keyword.mobilepushshort}} service SDK with the {{site.data.keyword.en_short}} FCM SDK.
+Modify the mobile app source code to use the new {{site.data.keyword.en_short}} SDKs. Replace the existing {{site.data.keyword.mobilepushshort}} service SDK with the {{site.data.keyword.en_short}} FCM SDK.
 
 ### Create an iOS destination
 {: #en-migrate-create-ios-destination}
@@ -977,12 +972,12 @@ Your web app is ready to work with your new instance of {{site.data.keyword.en_f
 {: #en-migrate-modify-backend}
 {: step}
 
-This section contains the steps that you perform in the back end. The send notification API is changed and therefore all the SDKs change also.
+This section contains the steps that you perform in the back end. The send notification API has changed, which requires updates to all the SDKs.
 
 ### If you are using the `Node.js` SDK
 {: #en-migrate-using-nodejs}
 
-Migrate the existing Node SDK to the new {{site.data.keyword.en_full}} SDK. Follow this link for the new Node Admin SDK documentation.
+Migrate the existing Node SDK to the new {{site.data.keyword.en_full}} SDK. For more information, see the new Node Admin SDK documentation.
 
 1. Changes to importing the SDK
 
@@ -1184,7 +1179,7 @@ try {
 ### If you are using REST API
 {: #en-migrate-using-restapi}
 
-This section contains the details about the modifications that are required for Send Notifications API. The new API has extra parameters in the request body. The required parameters for Android push notifications are as follows:
+This section describes the modifications required for the Send Notifications API. The new API has extra parameters in the request body. The required parameters for Android push notifications are as follows:
 
 ```js
 {

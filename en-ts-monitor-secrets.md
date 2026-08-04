@@ -2,7 +2,7 @@
 
 copyright:
    years: 2022, 2024
-lastupdated: "2024-10-10"
+lastupdated: "2026-08-04"
 
 keywords: event-notifications, event notifications, about event notifications, secrets manager certificates, secrets expiry
 
@@ -137,47 +137,42 @@ This step ensures that an email destination exists where notifications are forwa
 
 If you want to add a webhook as a destination, click **Add** and enter the appropriate information in the **Add a destination** panel.
 
-## Create an {{site.data.keyword.en_short}} topic
+## Create an {{site.data.keyword.en_short}} topic and email subscription
 {: #en-secret-topic}
 {: step}
 
-Define a topic that receives an event from {{site.data.keyword.secrets-manager_short}}.
+Create a topic to receive events from {{site.data.keyword.secrets-manager_short}}, add an event filter, configure an email subscription, and review the configuration.
 
-1. Click **Topics**.
+1. Click **Topics** in the {{site.data.keyword.en_short}} console, then click **Create**.
 
-1. Click **Create**.
+1. On the **Topic details** screen, enter the following details:
+   - **Topic name**: Enter a name for the topic. For example, **MonitorSecretExpiry**.
+   - **Description**: Optionally, add a description for the topic.
 
-1. In the **Topic details** panel enter the following details:
-   - Enter the **Name** for your topic. For example, **MonitorSecretExpiry**.
-   - For **Source** select the {{site.data.keyword.en_short}} source, which has the same name as your {{site.data.keyword.secrets-manager_short}} instance.
-   - Select an **Event Type**. For this tutorial, select **Secret about to expire**.
-   - Select an **Event subtype**. For this tutorial, select **Secret expire in 10 days**.
-   - Select a **Severity**. For this tutorial, select **High Severity**.
+   Click **Next** to proceed to the **Event filters** screen.
 
-1. Click **Add a condition**. If you do not click **Add a condition** before you click **Create**, the topic is created with no conditions that are associated with it.
+1. On the **Event filters** screen, click **Create event filter** and enter the following details in the side panel:
+   - **Filter name**: Enter a descriptive name for the filter.
+   - **Source**: Select the source that has the same name as your {{site.data.keyword.secrets-manager_short}} instance.
 
-1. Click **Create**. Your topic is displayed in the Topics list.
+   Select **Apply filter conditions** and configure the following:
+   - **Event type**: Select **Secret about to expire**.
+   - **Event subtype**: Select **Secret expire in 10 days**.
+   - **Severity**: Select **High Severity**.
 
-Clicking **Add a condition** without selecting an **Event Type** sends the test event from {{site.data.keyword.secrets-manager_short}}.
-{: note}
+   Click **Add a condition** to apply the filter rules. To inspect recent event data or validate your conditions, see [View event payloads](/docs/event-notifications?topic=event-notifications-en-route-create-filters#en-route-view-payloads) and [Test all conditions](/docs/event-notifications?topic=event-notifications-en-route-create-filters#en-route-test-conditions).
 
-## Create an {{site.data.keyword.en_short}} email subscription
-{: #en-secret-email-sub}
-{: step}
+   Click **Save**, then click **Next** to proceed to the **Subscriptions** screen.
 
-Configure who receives an email when a notification is processed:
+1. On the **Subscriptions** screen, click **Create subscription** and enter the following details:
+   - **Name**: Enter a name for the subscription. For example, **SecretExpirySubscription**.
+   - **Destination type**: Select **Email**.
+   - **Destination**: Select **{{site.data.keyword.cloud_notm}} email service**.
+   - **Recipients**: Enter a valid email address, for example, **MyEmail@MyCompany.com**.
 
-1. Click **Subscriptions**.
+   Click **Create** to create the subscription.
 
-1. Click **Create**.
-
-1. In the **Create a subscription** panel enter the following details:
-   - Enter the **Name** for your subscription. For example, **SecretExpirySubscription**.
-   - For **Topic**, select the topic you created. For example, **MonitorSecretExpiry**.
-   - For **Destination**, select **{{site.data.keyword.cloud_notm}} email service**.
-   - For **Recipients**, enter a valid email address, for example, **MyEmail@MyCompany.com**.
-
-1. Click **Create**. Your subscription is added to the Subscriptions list.
+1. On the **Review** step, verify the topic name, event filter details, and subscription details, then click **Done**. Your topic is now active with the configured filters and subscriptions.
 
 ## Sending test event from {{site.data.keyword.secrets-manager_short}}
 {: #en-secret-send-test-event}
