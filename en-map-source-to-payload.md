@@ -15,7 +15,7 @@ subcollection: event-notifications
 # Event source, Event types, and {{site.data.keyword.en_short}} payload details
 {: #en-map-source-with-notification}
 
-A source produces events of multiple types and subtypes. The format of the payload changes according to the requirements. It is good to understand the specifics of event types and the notification payload details before you begin sending or receiving the notifications. It helps you to validate and troubleshoot the notifications as well.
+A source produces events of multiple types and subtypes. The format of the payload changes according to the requirements. Understanding the specifics of event types and the notification payload details before you begin sending or receiving notifications helps you validate and troubleshoot them.
 
 The following table links event types, subtypes, and the payload format details for each source.
 
@@ -34,3 +34,4 @@ The following table links event types, subtypes, and the payload format details 
 |IBM Cloud Backup for VPC |[Event types](/docs/vpc?topic=vpc-event-notifications-events&interface=ui#event-notifications-list) |[Payload format details](/docs/vpc?topic=vpc-event-notifications-events&interface=ui#event-notifications-payload) |
 |Storage Ceph as a Service |[Event types](/docs/cephaas?topic=cephaas-event-notifications-events#event-notifications-list)|[Payload format details](/docs/cephaas?topic=cephaas-event-notifications-events#event-notifications-payload)|
 |{{site.data.keyword.cloud_notm}} Resource lifecycle events |[Event types](/docs/event-notifications?topic=event-notifications-en-resource-lifecycle-events#en-supported-resource-types) |[Payload format details](/docs/event-notifications?topic=event-notifications-en-resource-lifecycle-events#en-example-event)|
+{: caption="Event sources, event types, and payload format details"}

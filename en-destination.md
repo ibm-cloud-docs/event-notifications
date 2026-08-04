@@ -52,7 +52,7 @@ The Inbuilt Email and Inbuilt SMS destinations are provided out of the box, and 
 ### Service destinations
 {: #en-destination-service-1}
 
-Service destinations are cloud services or application where notifications are consumed programmatically. The following service destination is supported by the {{site.data.keyword.en_short}} service:
+Service destinations are cloud services or applications where notifications are consumed programmatically. The following service destinations are supported by the {{site.data.keyword.en_short}} service:
 
 - [Webhook](/docs/event-notifications?topic=event-notifications-en-destinations-webhook)
 - [{{site.data.keyword.codeengineshort}}](/docs/event-notifications?topic=event-notifications-en-destinations-codeengine)
@@ -68,7 +68,7 @@ When sending notifications to destinations, issues such as network errors and ap
 ### Retry behavior
 {: #en-destination-retry-behavior}
 
-The client automatically retries failed requests up to **3 times** with a exponential delay between **1 and 10 seconds** to prevent retry spikes.
+The client automatically retries failed requests up to **3 times** with an exponential delay between **1 and 10 seconds** to prevent retry spikes.
 
 If the destination server returns a **`Retry-After`** header, that value (in seconds) overrides the default backoff delay.
 
