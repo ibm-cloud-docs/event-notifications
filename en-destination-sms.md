@@ -15,7 +15,7 @@ subcollection: event-notifications
 # {{site.data.keyword.cloud_notm}} SMS service
 {: #en-destinations-sms}
 
-{{site.data.keyword.en_short}} provides a built-in SMS service for sending transactional and informational event notification text messages to recipients who need to be aware of events that happen within your {{site.data.keyword.cloud_notm}} account.
+{{site.data.keyword.en_short}} provides a built-in SMS service for sending transactional and informational event notification text messages to recipients who need to be aware of events that occur within your {{site.data.keyword.cloud_notm}} account.
 {: shortdesc}
 
 The text messages originate from IBM-owned phone numbers or alphanumeric sender IDs. Except for test messages, the content cannot be modified within {{site.data.keyword.en_short}}.
@@ -25,51 +25,51 @@ The text messages originate from IBM-owned phone numbers or alphanumeric sender 
 ## Adding an SMS destination
 {: #en-destinations-sms-add}
 
-{{site.data.keyword.cloud_notm}} SMS service is a destination that provided by default and ready for immediate use. When a new instance is created, you see an entry `{{site.data.keyword.cloud_notm}} SMS service` in the destination tab. The SMS destination is pre-configured and is ready to use.
+{{site.data.keyword.cloud_notm}} SMS service is a destination that is provided by default and is ready to use. When you create a new instance, you see an entry `{{site.data.keyword.cloud_notm}} SMS service` in the **Destinations** tab.
 
 ## Using an {{site.data.keyword.cloud_notm}} SMS service destination
 {: #en-destinations-sms-use}
 
 To use the SMS service destination, add it to a subscription along with the phone numbers of the recipients. Within a single subscription, you can add up to 3 phone numbers for lite plan and 100 phone numbers for standard plan. The subscription also needs a topic to filter events of interest from your sources. When an event lands in the topic, {{site.data.keyword.en_short}} immediately routes the event notification to your SMS recipients.
 
-When you select `{{site.data.keyword.cloud_notm}} SMS service` as the destination type, you can add up to 3 phone numbers for lite plan and 100 phone numbers for standard plan, to the recipient list. To comply with the regulatory standards, you may need to get a consent (opt-in) from the SMS recipients to receive SMSs from each of the {{site.data.keyword.en_short}} subscriptions.
+When you select `{{site.data.keyword.cloud_notm}} SMS service` as the destination type, you can add up to 3 phone numbers for the Lite plan and 100 phone numbers for the Standard plan to the recipient list. To comply with regulatory standards, you might need to obtain consent (opt-in) from SMS recipients to receive SMS messages from each of the {{site.data.keyword.en_short}} subscriptions.
 
 ### Create a subscription with IBM SMS service as destination
 {: #en-create-subscription-sms-destination}
 
-1. From the {{site.data.keyword.en_short}} dashboard, click **Subscriptions** in the navigation menu.
+1. Click **Topics** in the {{site.data.keyword.en_short}} instance.
+Create a new topic or select an existing topic to configure the subscription for.
 
-1. Click `Create +` to display **Create a Subscription** side panel.
+1. If you are creating a new topic, configure **Topic**, **Filters**, and **Subscriptions** in the flow.
+For an existing topic, click **Edit** in the **Actions** menu and click the **Subscriptions** tab.
 
 1. Complete the following subscription details:
    - `Name`: name of the subscription.
-   - `Description`: add an optional description for this subscription
-
-1. Select a `Topic` from the list.
+   - `Description`: add an optional description for this subscription.
 
 1. Select `{{site.data.keyword.cloud_notm}} SMS service` as **Destination** from the list.
 
 1. The **Recipients** section displays three tabs:
-   - *Invited* - displays the list of phone numbers added to the subscription. Enter the phone numbers that need to receive SMS notifications and need to be part of the subscription.
-   - *Active* - displays the list of phone numbers added to the subscription and confirmed by the user to receive SMS notifications.
-   - *Unsubscribed* - displays the list of phone numbers added to the subscription and refused by the user not to receive SMS notifications.
+   - *Invited* - displays the list of phone numbers that are added to the subscription. Enter the phone numbers that need to receive SMS notifications as part of this subscription.
+   - *Active* - displays the list of phone numbers that are added to the subscription and confirmed by the user to receive SMS notifications.
+   - *Unsubscribed* - displays the list of phone numbers that are added to the subscription and where the user declined to receive SMS notifications.
 
-   Add the user's phone numbers with a *+ and country code*, who needs to receive SMS messages as part of this subscription, with comma (,) as separator between the numbers.
+   Add phone numbers with a *+ and country code*, separated by commas (,), for users who need to receive SMS messages as part of this subscription.
 
-1. Click **Create**. The recipient automatically receives initial message that they have been invited to subscribe to the topic. This is the `opt-in` message.
+1. Click **Create subscription**. The recipient automatically receives an initial message stating that they have been invited to subscribe to the topic. This is the opt-in message.
 
 The Opt-in message contains:
 - invitee name or account
 - name of the subscription
 - name of the topic
-- a link that will take you to a web page. The web page contains information that the recipient is subscribed to receive SMS notifications to a topic and a **Confirm** button. When the recipient click the **Confirm** button, then the recipient's number is moved from *Invited* tab to *Active* tab. A confirmation message also displaying that the recipient has accepted to receive SMS notifications. The confirmation message also contains a link to **Unsubscribe**, which on clicking moves to recipient's number to the *Unsubscribed* tab.
+- a link to a web page. The web page contains information about the SMS notification subscription for the topic and a **Confirm** button. When the recipient clicks **Confirm**, the recipient's number is moved from the *Invited* tab to the *Active* tab. A confirmation message is displayed stating that the recipient has accepted to receive SMS notifications. The confirmation message also contains an **Unsubscribe** link, which moves the recipient's number to the *Unsubscribed* tab.
 - an expiration time for the opt-in message.
 
-{{site.data.keyword.en_short}} are routed only to opted-in recipients. To stop receiving the notifications, recipient can click the **Unsubscribe** link in the message. Once unsubscribed, the recipients will not receive any notifications on the topic they have unsubscribed. To restart the subscription, the recipient need to contact {{site.data.keyword.IBM_notm}} {{site.data.keyword.en_short}} service administrator to add the number back to subscription.
+Notifications are routed only to opted-in recipients. To stop receiving notifications, a recipient can click the **Unsubscribe** link in the message. After unsubscribing, the recipient does not receive any notifications for that topic. To restart the subscription, the recipient must contact the {{site.data.keyword.IBM_notm}} {{site.data.keyword.en_short}} service administrator to add the number back to the subscription.
 
 In some cases, the carrier service allows keywords like `START` and `STOP` for receiving notifications and to stop notifications.
 
-When a recipient doesn't wants to receive any SMS notification, they can opt out by sending a response `STOP`, which immediately disables sending notifications to the recipient. However, the phone number is moved to **Unsubscribed** tab only on the next attempt to send an SMS to the same number.
+When a recipient does not want to receive any SMS notifications, they can opt out by sending a `STOP` response, which immediately disables notifications to that recipient. However, the phone number is moved to the **Unsubscribed** tab only on the next attempt to send an SMS to that number.
 
 To add a recipient number back to active list, take the following steps:
 
@@ -84,7 +84,7 @@ By adding phone numbers, you represent on behalf of yourself and your company th
 
 SMS segments are character batches (of length 160 characters) of an SMS message, used by carriers to measure the size of the message.
 
-If a message contains less than 160 characters, then it is considered as one SMS segment. If a message contains over 160 characters, for example, of 200 characters, then it is considered as 2 segments, first segment has 160 character and the second segment has 40 characters.
+If a message contains fewer than 160 characters, it is considered one SMS segment. If a message contains more than 160 characters, for example 200 characters, it is considered 2 segments: the first segment has 160 characters and the second segment has 40 characters.
 
 ## SMS charges
 {: #en-destinations-sms-charge}
@@ -295,7 +295,7 @@ Because SMS delivery rates vary widely with location, SMS text messages are char
 ## Calculating SMS Units and Price
 {: #en-destinations-sms-charge-calculations}
 
-If a notification is longer (notifications greater than 160 characters) might be split into multiple segments. Each segment is considered a message, as is each recipient phone number. For example, if an incoming notification is split into three SMS segments and the message is sent to five subscribed phone numbers
+Notifications that are longer than 160 characters might be split into multiple segments. Each segment is considered a message, as is each recipient phone number. For example, if an incoming notification is split into three SMS segments and the message is sent to five subscribed phone numbers.
 
 ### Total SMS Units
 
@@ -344,10 +344,10 @@ Total SMS price = 22.68 x 0.01615 = 0.366282 USD
 
 ### Charging for Successfully Sent Messages
 
-Regardless of whether the message was successfully delivered to the local device, you are charged for messages that are successfully sent by the {{site.data.keyword.cloud_notm}} SMS service to the local SMS provider. Therefore, it is essential to verify your phone number list carefully to prevent unnecessary charges
+Regardless of whether the message was successfully delivered to the local device, you are charged for messages that are successfully sent by the {{site.data.keyword.cloud_notm}} SMS service to the local SMS provider. Verify your phone number list carefully to prevent unnecessary charges.
 
 
-For personalized numbers or if you're looking for higher volume and price negotiations, you can find more details [here](/docs/event-notifications?topic=event-notifications-en-destinations-sms-custom).
+For personalized numbers or for higher volume and price negotiations, see [more details](/docs/event-notifications?topic=event-notifications-en-destinations-sms-custom).
 {: note}
 
-You can monitor your SMS usage by setting up a monitoring dashboard through the `Actions` menu in the {{site.data.keyword.en_short}} dashboard. See [Monitor {{site.data.keyword.en_short}} service metrics with {{site.data.keyword.monitoringfull_notm}}](/docs/event-notifications?topic=event-notifications-monitoring) for details.
+You can monitor your SMS usage by setting up a monitoring dashboard through the **Actions** menu in the {{site.data.keyword.en_short}} dashboard. See [Monitor {{site.data.keyword.en_short}} service metrics with {{site.data.keyword.monitoringfull_notm}}](/docs/event-notifications?topic=event-notifications-monitoring) for details.

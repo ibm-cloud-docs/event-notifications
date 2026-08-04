@@ -57,12 +57,12 @@ The instructions used in this document uses FCM's HTTP v1 API. The HTTP v1 API h
 {: step}
 
 * Log in to your [{{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/).
-* In the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog#services), search and select `Event Notifications > Event Notifications`.
-* Select a `Region` from the list of supported regions and select a `pricing plan`.
-* Provide a `Service name`.
-* Select a `resource group`.
+* In the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog#services), search and select **Event Notifications > Event Notifications**.
+* Select a **Region** from the list of supported regions and select a **pricing plan**.
+* Provide a **Service name**.
+* Select a **resource group**.
 * Accept the licensing agreements and terms by clicking the checkbox.
-* Click `Create`.
+* Click **Create**.
 
 ## Get FCM credentials
 {: #en-get-fcm}
@@ -71,13 +71,13 @@ The instructions used in this document uses FCM's HTTP v1 API. The HTTP v1 API h
 Firebase Cloud Messaging (FCM) is the gateway that delivers push notifications to Android devices. To set up the Android Push destination on the console, you must get your FCM credentials `project_id`, `private_key`, and `client_email`.
 
 * Go to the [Firebase Console](https://console.firebase.google.com/?pli=1){: external}. A Google user account is required.
-* Click `Create a project`. If you are already having a project, then click `Add Project`.
-* In the `Create a project window`, enter a project name, and accept the terms and enable or disable Google analytics (optional) by selecting the toggle switch and click `Continue`.
-* If Google analytics is enabled, then in the `Configure Google Analytics` window, choose the `Analytics location`, and accept the terms.
-* Click `Create Project`.
-* Click `Continue` when the new project is ready.
-* In the navigation panel, select the `settings` icon next to the `Project Overview` and select `Settings > Project settings`.
-* Click the `Service Accounts` tab.
+* Click **Create a project**. If you already have a project, click **Add Project**.
+* In the **Create a project** window, enter a project name, and accept the terms and enable or disable Google analytics (optional) by selecting the toggle switch and click **Continue**.
+* If Google analytics is enabled, then in the **Configure Google Analytics** window, choose the **Analytics location**, and accept the terms.
+* Click **Create Project**.
+* Click **Continue** when the new project is ready.
+* In the navigation panel, select the **Settings** icon next to **Project Overview** and select **Settings > Project settings**.
+* Click the **Service Accounts** tab.
 
    ![FCM credentials](images/en-fcm-credentials.png "FCM credentials"){: caption="FCM credentials" caption-side="bottom"}
 
@@ -89,17 +89,17 @@ Firebase Cloud Messaging (FCM) is the gateway that delivers push notifications t
 
 You also need to generate the `google-services.json` file. Complete the following steps:
 
-* In the Firebase console Project overview section, under `Get started by adding Firebase to your app` section click the `Android` icon.
+* In the Firebase console Project overview section, under the **Get started by adding Firebase to your app** section, click the **Android** icon.
 
    ![Firebase getting started](images/en-firebase-get-started.png "Firebase getting started"){: caption="Firebase getting started" caption-side="bottom"}
 
-* In the `Add Firebase to your Android app` window, add `com.ibm.cloud.eventnotifications.destination.android` as the Package Name. The `App nickname` field is optional.
+* In the **Add Firebase to your Android app** window, add `com.ibm.cloud.eventnotifications.destination.android` as the Package Name. The **App nickname** field is optional.
 
 * Click **Register app**.
 
    ![Add Firebase to your Android app](images/en-add-firebase.png "Add Firebase to your Android app"){: caption="Add Firebase to your Android app" caption-side="bottom"}
 
-* Include the package name of your application. Enter the package name in `Add Firebase to your Android app` window. The `App nickname` field is optional.
+* Include the package name of your application. Enter the package name in the **Add Firebase to your Android app** window. The **App nickname** field is optional.
 
 * Click **Register app**. See the following example:
 
@@ -113,53 +113,54 @@ You also need to generate the `google-services.json` file. Complete the followin
 {: #en-add-gen-api-fcm}
 {: step}
 
-Take the following steps:
+To create a generic API source:
 
-* Go to the `Sources` section of the {{site.data.keyword.en_short}} dashboard.
-* Click `Add` and select an API Source.
-* Type a name and an optional description and click `Add`.
+* Click **Sources** in the {{site.data.keyword.en_short}} instance.
+* Click **Create** and select an API Source in the **Create source** dialog.
+* Type a name and an optional description and click **Create source**.
 
 ## Create an {{site.data.keyword.en_short}} destination
 {: #en-create-dest-fcm}
 {: step}
 
-Click `Destinations` in the {{site.data.keyword.en_short}} console and add the following destination details:
+Click **Destinations** in the {{site.data.keyword.en_short}} instance and click **Create**. 
 
-* `Name`: add a name for the Destination.
-* `Description`: add an optional description for the destination.
-* `Type`: select `Android Push Notifications (FCM)` type from the dropdown list.
+Enter the following destination details in the **Create destination** dialog.
+
+* **Name**: add a name for the Destination.
+* **Description**: add an optional description for the destination.
+* **Type**: select **Android Push Notifications (FCM)** type from the dropdown list.
 * Select a destination plan: Pre-production destination or Production destination.
-   - `Pre-production destination` - select this destination as low-cost push destination, for your development and test environments.
-   - `Production destination` - use the full capability of this destination. Unlimited devices and outbound messages allowed.
+   - **Pre-production destination** - select this destination as low-cost push destination, for your development and test environments.
+   - **Production destination** - use the full capability of this destination. Unlimited devices and outbound messages allowed.
 * Update the FCM Push Credentials with the `project_id`, `private_key`, and `client_email` from the file downloaded earlier.
-* Click **Add**.
+* Click **Create destination**.
 
 ## Create an {{site.data.keyword.en_short}} topic
 {: #en-create-topic-fcm}
 {: step}
 
-Select `Topics` in the {{site.data.keyword.en_short}} console and click `Create`. Enter the following topic details:
+Click **Topics** in the {{site.data.keyword.en_short}} instance and click **Create**. Enter the following topic and filter details in the **Topic details** and **Event filters** steps:
 
-* `Name`: enter a name for the topic.
-* `Description`: add an optional description for the topic.
-* `Source`: select a source from the dropdown list.
-* `Event type`: select event type from the dropdown list.
-* `Event sub type`: select event sub type from the event sub type dropdown list.
-* `Severity`: select severity from the severity dropdown list.
-* `Advanced conditions`: write your own custom conditions, which must follow [jsonpath specifications](https://www.rfc-editor.org/rfc/rfc9535.html). Jsonpath expressions can be validated at [jsonpath.com](https://jsonpath.com) or [extendsclass.com](https://extendsclass.com/jsonpath-tester.html).
+* **Name**: enter a name for the topic.
+* **Description**: add an optional description for the topic.
+* **Source**: select a source from the dropdown list.
+* **Event type**: select event type from the dropdown list.
+* **Event sub type**: select event sub type from the event sub type dropdown list.
+* **Severity**: select severity from the severity dropdown list.
+* **Advanced conditions**: write your own custom conditions, which must follow [jsonpath specifications](https://www.rfc-editor.org/rfc/rfc9535.html). Jsonpath expressions can be validated at [jsonpath.com](https://jsonpath.com) or [extendsclass.com](https://extendsclass.com/jsonpath-tester.html).
 
 ## Create an {{site.data.keyword.en_short}} subscription
 {: #en-create-sub-fcm}
 {: step}
 
-Click `Subscriptions` in the {{site.data.keyword.en_short}} console. Enter the following subscription details:
+Proceed to the **Subscriptions** step. Click **Create** and enter the following subscription details in the **Create subscription** dialog.
 
-* `Click` Create to display subscription wizard.
-* Complete the following subscription details:
-   * `Subscription name`: name of the subscription.
-   * `Subscription description`: add an optional description.
-* Under the `Subscribe to a topic` section, select a topic from the drop-down list and select a destination from the destination drop-down list.
-* `Destination type`: select type under `Destination` and click **Add**.
+* **Subscription name**: enter a name for subscription
+* **Destination type**: select destination type. 
+* **Destination**: select destination.
+
+Click **Create subscription**.
 
 ## Set up {{site.data.keyword.en_short}} Android SDK
 {: #en-setup-android-sdk}

@@ -13,7 +13,7 @@ subcollection: event-notifications
 # {{site.data.keyword.cloud_notm}} SMS and MMS service with Custom SMS
 {: #en-destinations-sms-custom}
 
-You can configure a Custom SMS destination in the Destinations tab.
+You can configure a Custom SMS destination in the **Destinations** page.
 
 Custom SMS destination is not supported by Lite Plan. To know more about the plans and destinations available, refer [here](/docs/event-notifications?topic=event-notifications-getting-started)
 {: note}
@@ -38,16 +38,16 @@ To comply with the regulatory standards, you may need to get a consent (opt-in) 
 ### Create a subscription with Custom SMS as destination
 {: #en-create-subscription-sms-custom-destination}
 
-1. From the {{site.data.keyword.en_short}} dashboard, click **Subscriptions** in the navigation menu.
+1. Click **Topics** in the {{site.data.keyword.en_short}} instance.
+Create a new topic or select an existing topic to configure the subscription for.
 
-1. Click `Create +` to display **Create a Subscription** side panel.
+1. If you are creating a new topic, configure **Topic**, **Filters**, and **Subscriptions** in the flow.
+For an existing topic, click **Edit** in the **Actions** menu and click the **Subscriptions** tab.
 
 1. Complete the following subscription details:
 
    - `Name`: name of the subscription.
-   - `Description`: add an optional description for this subscription
-
-1. Select a `Topic` from the list.
+   - `Description`: add an optional description for this subscription.
 
 1. Select Custom SMS destination created as **Destination** from the list.
 
@@ -62,7 +62,7 @@ To comply with the regulatory standards, you may need to get a consent (opt-in) 
 Make sure that the phone numbers added belong to the destination supported countries, else SMS delivery may fail.
 {: note}
 
-1. Click **Create**. The recipient automatically receives initial message that they have been invited to subscribe to the topic. This is the `opt-in` message.
+1. Click **Create subscription**. The recipient automatically receives initial message that they have been invited to subscribe to the topic. This is the `opt-in` message.
 
 The Opt-in message contains:
 
@@ -113,3 +113,4 @@ The following table shows SMS Units charged for each MMS sent.
 |-------------------------------|-----------|
 | +1 (Canada) | 2.11847 units |
 | +1 (United States) | 2.11847 units |
+{: caption="MMS supported countries, units per message" caption-side="bottom"}
