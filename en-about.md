@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2026
-lastupdated: "2026-08-04"
+lastupdated: "2026-08-05"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -58,9 +58,6 @@ Route a single event notification to many destinations with just a few clicks. S
 {: #en-concepts}
 
 Learn about {{site.data.keyword.en_full}} concepts such as filters, conditions, and topics. The following diagram illustrates how these concepts relate to each other in an end-to-end event flow.
-
-![{{site.data.keyword.en_short}} concepts overview](images/overview-page-chart-light.svg "{{site.data.keyword.en_short}} concepts overview"){: caption="{{site.data.keyword.en_short}} concepts overview" caption-side="bottom" .light-theme-only}
-![{{site.data.keyword.en_short}} concepts overview](images/overview-page-chart-dark.svg "{{site.data.keyword.en_short}} concepts overview"){: caption="{{site.data.keyword.en_short}} concepts overview" caption-side="bottom" .dark-theme-only}
 
 ### Event
 {: #en-event}
