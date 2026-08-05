@@ -25,33 +25,33 @@ When you select PagerDuty as service destination, any subscribed notification ab
 
 To integrate your PagerDuty service to {{site.data.keyword.en_short}} service destination, you need to generate a PagerDuty routing key. To generate a PagerDuty routing key, follow these steps: [Generate a new Integration Key](https://support.pagerduty.com/main/docs/services-and-integrations#generate-a-new-integration-key){: external}.
 
-If you already integrated EventsV2 api with your PagerDuty service, jump to service directory, select **More** and select **View Integrations**. You will find the Integration key inside this view.
+If you already integrated EventsV2 API with your PagerDuty service, go to the service directory, select **More**, and select **View Integrations**. The Integration key is available in this view.
 {: note}
 
 ## Configuring a PagerDuty destination
 {: #en-pd-configure-destination}
 
-You can configure a PagerDuty destination in the `Destinations` tab.
+You can configure a PagerDuty destination in the **Destinations** tab.
 
-To configure a PagerDuty destination, do the following steps:
+To configure a PagerDuty destination, complete the following steps:
 
-1. From your {{site.data.keyword.en_short}} instance dashboard, click **Destinations**.
+1. From your {{site.data.keyword.en_short}} instance, click **Destinations**.
 
-1. Click **Add +** to add new destination.
+1. Click **Create** to create a new destination.
 
-1. In the **Add a destination** side panel, provide the following details.
+1. Enter the following destination details in the **Create destination** dialog:
 
-   - **Name** - Enter a name for your destination.
-   - **Description** - Optionally, enter a description for your destination.
-   - **Type** - Under **Destination**, for the **Type**, select **Pagerduty** from the drop-down as your destination type.
-   - **Routing key** - Enter the routing key [generated](#en-pd-generate-routing-key) earlier.
+   - **Name**: Enter a name for your destination.
+   - **Description**: Optionally, enter a description for your destination.
+   - **Type**: Under **Destination**, select **PagerDuty** from the dropdown list as your destination type.
+   - **Routing key**: Enter the routing key [generated](#en-pd-generate-routing-key) earlier.
 
-1. Click **Add**.
+1. Click **Create destination**.
 
 ## PagerDuty alert events supported by {{site.data.keyword.en_short}}
 {: #en-pd-retry}
 
-{{site.data.keyword.en_short}} supports only alert event of Pagerduty. For more information, see [here](https://developer.pagerduty.com/docs/ZG9jOjExMDI5NTgx-send-an-alert-event){: external}.
+{{site.data.keyword.en_short}} supports only alert events of PagerDuty. For more information, see [Send an alert event](https://developer.pagerduty.com/docs/ZG9jOjExMDI5NTgx-send-an-alert-event){: external}.
 
 | {{site.data.keyword.en_short}} field | PagerDuty field | Supported |
 | :---------- | :---------- | :----------|
@@ -82,7 +82,7 @@ To configure a PagerDuty destination, do the following steps:
 ## Testing a PagerDuty destination configuration
 {: #en-pd-test-destination}
 
-You can test a PagerDuty destination in the options menu provided against the destination. You can effortlessly test a destination, whether the provided configuration is correct or not with a single click.
+You can test a PagerDuty destination in the options menu next to the destination. You can test whether the provided configuration is correct with a single click.
 
 For more information on testing a destination, see [Testing Destinations](/docs/event-notifications?topic=event-notifications-en-test-destination).
 

@@ -57,12 +57,12 @@ You must have the following prerequisites in place:
 {: step}
 
 * Log in to your [{{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/){: external}.
-* In the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog#services), search `Event Notifications > Event Notifications`.
-* Select a `Region` from the list of supported regions and select a `pricing plan`.
-* Provide a `Service name`.
-* Select a `resource group`.
+* In the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog#services), search **Event Notifications > Event Notifications**.
+* Select a **Region** from the list of supported regions and select a **pricing plan**.
+* Provide a **Service name**.
+* Select a **resource group**.
 * Accept the licensing agreements and terms by clicking the checkbox.
-* Click `Create`.
+* Click **Create**.
 
 ## Get APNs credentials
 {: #en-get-apns-credentials}
@@ -81,11 +81,11 @@ The App ID (the bundle identifier) is a unique identifier that identifies a spec
 
    ![Certificates, Identifiers & Profiles](images/en-apns-cert-tab.png "App ID"){: caption="Certificates, Identifiers & Profiles" caption-side="bottom"}
 
-* Go to `Identifiers > Add identifier button`.
+* Go to **Identifiers** > **Add identifier** button.
 
    ![Identifier button](images/en-apns-identifier-button.png "Identifier button"){: caption="Identifier Button" caption-side="bottom"}
 
-* Click add a new `Identifier` button.
+* Click add a new **Identifier** button.
 
    ![Add new Identifier button](images/en-apns-new-identifier-button.png "Add new Identifier button"){: caption="Add new Identifier button" caption-side="bottom"}
 
@@ -93,21 +93,21 @@ The App ID (the bundle identifier) is a unique identifier that identifies a spec
 
    ![App IDs option](images/en-apns-app-id-option.png "App IDs option"){: caption="App IDs option" caption-side="bottom"}
 
-* Select a type and click `Continue`.
+* Select a type and click **Continue**.
 
    ![App ID type](images/en-apns-app-id-type.png "App ID type"){: caption="App ID type" caption-side="bottom"}
 
-* Provide a string for the App ID Prefix. Provide the App name in the `Description` field. For example, {{site.data.keyword.en_short}} iOS application.
+* Provide a string for the App ID Prefix. Provide the App name in the **Description** field. For example, {{site.data.keyword.en_short}} iOS application.
 
-* For the `Bundle ID`, choose *Explicit* and provide a Bundle ID value. It is recommended that you provide a reverse domain-name style string. For example, `com.ibm.cloud.en.app`.
+* For the **Bundle ID**, choose *Explicit* and provide a Bundle ID value. It is recommended that you provide a reverse domain-name style string. For example, `com.ibm.cloud.en.app`.
 
    ![Create new App ID details](images/en-apns-app-id-details.png "Create new App ID details"){: caption="Create new App ID details" caption-side="bottom"}
 
-* Select the `Push Notifications` check-box from the Capabilities and click `Continue`.
+* Select the **Push Notifications** check-box from the Capabilities and click **Continue**.
 
    ![Enable Push Notifications](images/en-apns-app-id-enable-push-notifications.png "Enable Push Notifications"){: caption="Enable Push Notifications" caption-side="bottom"}
 
-* Go through your settings and click `Register > Done`.
+* Go through your settings and click **Register** > **Done**.
 
 Your App ID is now registered.
 
@@ -132,11 +132,11 @@ You must obtain separate certificates for your development and distribution envi
 
    ![Certificates, Identifiers & Profiles](images/en-apns-cert-tab.png "App ID"){: caption="Certificates, Identifiers & Profiles" caption-side="bottom"}
 
-* In the `Identifiers area`, select your App ID.
+* In the **Identifiers** area, select your App ID.
 
    ![Identifiers tab](images/en-apns-app-id.png "Identifiers tab"){: caption="Identifiers tab" caption-side="bottom"}
 
-* Select the `Push Notifications` check-box OR select the `Edit` option.
+* Select the **Push Notifications** check-box OR select the **Edit** option.
 
    ![Push Notifications check-box](images/en-apns-p12-push-notifications.png "Push Notifications check-box"){: caption="Push Notifications check-box" caption-side="bottom"}
 
@@ -147,45 +147,45 @@ You must obtain separate certificates for your development and distribution envi
 
 * Use Keychain Access application on your Mac to create a Certificate Signing Request (CSR).
 
-* From the menu, select `Keychain Access > Certificate Assistant > Request a Certificate From a Certificate Authority…`.
+* From the menu, select **Keychain Access > Certificate Assistant > Request a Certificate From a Certificate Authority…**.
 
    ![Request new certificate](images/en-apns-p12-request-new-certificate.png "Request new certificate"){: caption="Request new certificate type" caption-side="bottom"}
 
 * In Certificate Information, enter the email address that is associated with your App Developer account and a common name. Give a meaningful name that helps you identify whether it is a certificate for development (sandbox) or distribution (production); for example, *sandbox-apns-certificate* or *production-apns-certificate*.
 
-* Select `Saved to disk` to download the `.certSigningRequest` file to your Mac, then click `Continue`.
+* Select **Saved to disk** to download the `.certSigningRequest` file to your Mac, then click **Continue**.
 
    ![Certificate details](images/en-apns-p12-certificate-details.png "Certificate details"){: caption="Certificate details" caption-side="bottom"}
 
-* In the `Save As` menu option, name the `.certSigningRequest` file, select the location where the file must be saved, and click `Save`.
+* In the **Save As** menu option, name the `.certSigningRequest` file, select the location where the file must be saved, and click **Save**.
 
    ![Save CSR file](images/en-apns-p12-save-csr.png "Save CSR file"){: caption="Save CSR file" caption-side="bottom"}
 
-* Click `Done`. You now have a CSR.
+* Click **Done**. You now have a CSR.
 
    ![CSR created](images/en-apns-p12-csr-created.png "CSR created"){: caption="CSR created" caption-side="bottom"}
 
-* Go back to the Apple developer portal, for the Upload CSR file option, click Choose File, and select file `CertificateSigningRequest.certSigningRequest`. Click `Continue`.
+* Go back to the Apple developer portal, for the Upload CSR file option, click **Choose File**, and select file `CertificateSigningRequest.certSigningRequest`. Click **Continue**.
 
    ![Upload CSR file](images/en-apns-p12-upload-csr.png "Upload CSR file"){: caption="Upload CSR file" caption-side="bottom"}
 
-* Click `Download`. The `aps_development.cer` file is downloaded.
+* Click **Download**. The `aps_development.cer` file is downloaded.
 
    ![Download certificate](images/en-apns-p12-download-cer.png "Download certificate"){: caption="Download certificate" caption-side="bottom"}
 
 * Locate your newly installed certificate. Double-click the certificate to install it into the Keychain Access.
 
-* On your Mac, go to `Keychain Access > My Certificates`.
+* On your Mac, go to **Keychain Access > My Certificates**.
 
-* Select the certificate and private key, and then select `Export` to convert the certificate into the personal information exchange format (`.p12` format).
+* Select the certificate and private key, and then select **Export** to convert the certificate into the personal information exchange format (`.p12` format).
 
    ![Export certificate](images/en-apns-p12-export-cer.png "Export certificate"){: caption="Export certificate" caption-side="bottom"}
 
-* In the `Save As` field, provide the certificate a meaningful name. For example, *sandbox-apns.p12* or *production-apns.p12*, then click `Save`.
+* In the **Save As** field, provide the certificate a meaningful name. For example, *sandbox-apns.p12* or *production-apns.p12*, then click **Save**.
 
    ![Save certificate](images/en-apns-p12-save-cer.png "Save certificate"){: caption="Save certificate" caption-side="bottom"}
 
-* In the `Enter a password` field, enter a password to protect the exported items, then click `OK`. You can use this password to configure your APNs settings on the {{site.data.keyword.en_short}} service console.
+* In the **Enter a password** field, enter a password to protect the exported items, then click **OK**. You can use this password to configure your APNs settings on the {{site.data.keyword.en_short}} service console.
 
    ![Protect certificate](images/en-apns-p12-protect-cer.png "Protect certificate"){: caption="Protect certificate" caption-side="bottom"}
 
@@ -194,19 +194,19 @@ You must obtain separate certificates for your development and distribution envi
 #### Create an APNs p8 token
 {: #en-p8}
 
-* Go to the [Apple developer portal](https://developer.apple.com/){: external} and select `Certificates, Identifiers & Profiles`.
+* Go to the [Apple developer portal](https://developer.apple.com/){: external} and select **Certificates, Identifiers & Profiles**.
 
    ![Certificates, Identifiers & Profiles](images/en-apns-cert-tab.png "App ID"){: caption="Certificates, Identifiers & Profiles" caption-side="bottom"}
 
-* Go to `Keys` tab.
+* Go to the **Keys** tab.
 
    ![Keys tab](images/en-apns-keys-tab.png "Keys tab"){: caption="Keys tab" caption-side="bottom"}
 
-* Enter `Key Name` and enable APNs, click `continue`.
+* Enter **Key Name** and enable APNs, click **Continue**.
 
    ![P8 token details](images/en-apns-p8-token-details.png "App ID"){: caption="P8 token details" caption-side="bottom"}
 
-* Click `Register`.
+* Click **Register**.
 
    ![Register p8 token](images/en-apns-p8-register.png "Register p8 certificate"){: caption="Register p8 token" caption-side="bottom"}
 
@@ -219,54 +219,56 @@ You must obtain separate certificates for your development and distribution envi
 {: #en-add-gen-api-apns}
 {: step}
 
-Take the following steps:
+To create a generic API source:
 
-* Go to the `Sources` section of the {{site.data.keyword.en_short}} dashboard.
-* Click `Add` and select an API Source.
-* Type a name and an optional description and click `Add`.
+* Click **Sources** in the {{site.data.keyword.en_short}} instance.
+* Click **Create** and select an API Source in the **Create source** dialog.
+* Type a name and an optional description and click **Create source**.
 
 ## Create a {{site.data.keyword.en_short}} destination
 {: #en-create-dest-apns}
 {: step}
 
-Click `Destinations` in the {{site.data.keyword.en_short}} console and add the following destination details:
+Click **Destinations** in the {{site.data.keyword.en_short}} instance and click **Create**.
 
-* `Name`: add a name for the Destination.
-* `Description`: add an optional description for the destination.
-* `Type`: select `iOS Push Notifications` type from the dropdown list.
+Enter the following destination details in the **Create destination** dialog.
+
+* **Name**: add a name for the Destination.
+* **Description**: add an optional description for the destination.
+* **Type**: select **iOS Push Notifications** type from the dropdown list.
 * Select a destination plan: Pre-production destination or Production destination.
-   - `Pre-production destination` - select this destination as low-cost push destination, for your development and test environments.
-   - `Production destination` - use the full capability of this destination. Unlimited devices and outbound messages allowed.
-* Update the iOS Push Credentials with the details based on `Authentication Type` and select `Environment`.
+   - **Pre-production destination** - select this destination as low-cost push destination, for your development and test environments.
+   - **Production destination** - use the full capability of this destination. Unlimited devices and outbound messages allowed.
+* Update the iOS Push Credentials with the details based on **Authentication Type** and select **Environment**.
 	* if certificate type is `p8`, upload .p8 file and provide `KeyID`, `TeamID`, and `BundleID`.
 	* if certificate type is `p12`, upload p12 certificate and provide certificate `password`.
-* Click `Add`.
+* Click **Create destination**.
 
 ## Create an {{site.data.keyword.en_short}} topic
 {: #en-create-topic-apns}
 {: step}
 
-Select `Topics` in the {{site.data.keyword.en_short}} console and click `Create`. Enter the following topic details:
-* `Name`: enter a name for the topic.
-* `Description`: add an optional description for the topic.
-* `Source`: select a source from the dropdown list.
-* `Event type`: select event type from the dropdown list.
-* `Event sub type` select event sub type from the event sub type dropdown list.
-* `Severity`: select severity from the severity dropdown list.
-* `Advanced conditions`: write your own custom conditions, which must follow [jsonpath specifications](https://www.rfc-editor.org/rfc/rfc9535.html). Jsonpath expressions can be validated at [jsonpath.com](https://jsonpath.com) or [extendsclass.com](https://extendsclass.com/jsonpath-tester.html).
+Click **Topics** in the {{site.data.keyword.en_short}} instance and click **Create**. Enter the following topic and filter details in the **Topic details** and **Event filters** steps:
+
+* **Name**: enter a name for the topic.
+* **Description**: add an optional description for the topic.
+* **Source**: select a source from the dropdown list.
+* **Event type**: select event type from the dropdown list.
+* **Event sub type**: select event sub type from the event sub type dropdown list.
+* **Severity**: select severity from the severity dropdown list.
+* **Advanced conditions**: write your own custom conditions, which must follow [jsonpath specifications](https://www.rfc-editor.org/rfc/rfc9535.html). Jsonpath expressions can be validated at [jsonpath.com](https://jsonpath.com) or [extendsclass.com](https://extendsclass.com/jsonpath-tester.html).
 
 ## Create an {{site.data.keyword.en_short}} subscription
 {: #en-create-sub-apns}
 {: step}
 
-Click `Subscriptions` in the {{site.data.keyword.en_short}} console. Enter the following subscription details:
+Proceed to the **Subscriptions** step. Click **Create** and enter the following subscription details in the **Create subscription** dialog.
 
-* `Click` Create to display subscription wizard.
-* Complete the following subscription details:
-   * `Subscription name`: name of the subscription.
-   * `Subscription description`: add an optional description.
-* Under the `Subscribe to a topic` section, select a topic from the drop-down list and select a destination from the destination drop-down list.
-* `Destination type`: select type under `Destination` and click `Add`.
+* **Subscription name**: enter a name for the subscription.
+* **Destination type**: select destination type.
+* **Destination**: select destination.
+
+Click **Create subscription**.
 
 ## Set up {{site.data.keyword.en_short}} IOS SDK
 {: #en-setup-ios-sdk}

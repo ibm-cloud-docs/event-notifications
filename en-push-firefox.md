@@ -45,38 +45,40 @@ This tutorial shows you how to send push notifications as follows:
 {: step}
 
 * Log in to your [{{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/).
-* In the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog#services), search `Event Notifications > Event Notifications`.
-* Select a `Region` from the list of supported regions and select a `pricing plan`.
-* Provide a `Service name`.
-* Select a `resource group`.
+* In the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog#services), search **Event Notifications > Event Notifications**.
+* Select a **Region** from the list of supported regions and select a **pricing plan**.
+* Provide a **Service name**.
+* Select a **resource group**.
 * Accept the licensing agreements and terms by clicking the checkbox.
-* Click `Create`.
+* Click **Create**.
 
 ## Add a generic API source
 {: #en-add-gen-api-ff}
 {: step}
 
-Take the following steps:
+To create a generic API source:
 
-* Go to the `Sources` section of the {{site.data.keyword.en_short}} dashboard.
-* Click `Add` and select an API Source.
-* Type a name and an optional description and click `Add`.
+* Click **Sources** in the {{site.data.keyword.en_short}} instance.
+* Click **Create** and select an API Source in the **Create source** dialog.
+* Type a name and an optional description and click **Create source**.
 
 ## Create an {{site.data.keyword.en_short}} destination
 {: #en-create-dest-ff}
 {: step}
 
-Click `Destinations` in the {{site.data.keyword.en_short}} console and add the following destination details:
+Click **Destinations** in the {{site.data.keyword.en_short}} instance and click **Create**.
 
-* `Name`: add a name for the Destination.
-* `Description`: add an optional description for the destination.
-* `Type`: select `Firefox Push Notifications` type from the dropdown list.
+Enter the following destination details in the **Create destination** dialog.
+
+* **Name**: add a name for the Destination.
+* **Description**: add an optional description for the destination.
+* **Type**: select **Firefox Push Notifications** type from the dropdown list.
 * Select a destination plan: Pre-production destination or Production destination.
-   - `Pre-production destination` - select this destination as low-cost push destination, for your development and test environments.
-   - `Production destination` - utilize the full capability of this destination. Unlimited devices and outbound messages allowed.
+   - **Pre-production destination** - select this destination as low-cost push destination, for your development and test environments.
+   - **Production destination** - use the full capability of this destination. Unlimited devices and outbound messages allowed.
 * Provide the URL of your website.
-* Click **Add**.
-* Once Firefox destination is created. Edit the created destination to get `public vapId key` required for web sdk.
+* Click **Create destination**.
+* After the Firefox destination is created, edit the destination to get the public vapID key required for the web SDK.
 
 ![Destination Edit](images/en-push-firefox-destination-edit.png "Destination Edit"){: caption="Receive notifications" caption-side="bottom"}
 
@@ -86,27 +88,27 @@ Click `Destinations` in the {{site.data.keyword.en_short}} console and add the f
 {: #en-create-topic-ff}
 {: step}
 
-Select `Topics` in the {{site.data.keyword.en_short}} console and click `Create`. Enter the following topic details:
-* `Name`: enter a name for the topic.
-* `Description`: add an optional description for the topic.
-* `Source`: select a source from the dropdown list.
-* `Event type`: select event type from the dropdown list.
-* `Event sub type`: select event sub type from the event sub type dropdown list.
-* `Severity`: select severity from the severity dropdown list.
-* `Advanced conditions`: write your own custom conditions, which must follow [jsonpath specifications](https://www.rfc-editor.org/rfc/rfc9535.html). Jsonpath expressions can be validated at [jsonpath.com](https://jsonpath.com) or [extendsclass.com](https://extendsclass.com/jsonpath-tester.html).
+Click **Topics** in the {{site.data.keyword.en_short}} instance and click **Create**. Enter the following topic and filter details in the **Topic details** and **Event filters** steps:
+
+* **Name**: enter a name for the topic.
+* **Description**: add an optional description for the topic.
+* **Source**: select a source from the dropdown list.
+* **Event type**: select event type from the dropdown list.
+* **Event sub type**: select event sub type from the event sub type dropdown list.
+* **Severity**: select severity from the severity dropdown list.
+* **Advanced conditions**: write your own custom conditions, which must follow [jsonpath specifications](https://www.rfc-editor.org/rfc/rfc9535.html). Jsonpath expressions can be validated at [jsonpath.com](https://jsonpath.com) or [extendsclass.com](https://extendsclass.com/jsonpath-tester.html).
 
 ## Create an {{site.data.keyword.en_short}} subscription
 {: #en-create-sub-ff}
 {: step}
 
-Click `Subscriptions` in the {{site.data.keyword.en_short}} console. Enter the following subscription details:
+Proceed to the **Subscriptions** step. Click **Create** and enter the following subscription details in the **Create subscription** dialog.
 
-* `Click` Create to display subscription wizard.
-* Complete the following subscription details:
-   * `Subscription name`: name of the subscription.
-   * `Subscription description`: add an optional description.
-* Under the `Subscribe to a topic` section, select a topic from the drop-down list and select a destination from the destination drop-down list.
-* `Destination type`: select type under `Destination` and click `Add`.
+* **Subscription name**: enter a name for the subscription.
+* **Destination type**: select destination type.
+* **Destination**: select destination.
+
+Click **Create subscription**.
 
 ## Set up {{site.data.keyword.en_short}} Firefox web SDK
 {: #en-setup-firefox-sdk}
@@ -163,11 +165,11 @@ The Firefox web SDK enables Firefox websites to receive push notifications. Comp
    ```
    {: codeblock}
 
-   * `region`: Region of the {{site.data.keyword.en_short}} instance. eg; `us-south`,`eu-gb`, `au-syd`, `eu-de` and `eu-es`.
+   * `region`: Region of the {{site.data.keyword.en_short}} instance. For example, `us-south`, `eu-gb`, `au-syd`, `eu-de`, or `eu-es`.
 
    * `deviceId`: Optional `deviceId` for device registration.
 
-* To register for notifications, se the `register()` or `registerWithUserId()` API to register the device with {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} service. Choose either of the following options:
+* To register for notifications, use the `register()` or `registerWithUserId()` API to register the device with {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} service. Choose either of the following options:
 
    * Register without `UserId`:
 
@@ -178,7 +180,7 @@ The Firefox web SDK enables Firefox websites to receive push notifications. Comp
       ```
       {: codeblock}
 
-   * Register with `UserId`. For `userId` based notification, the register method will accept one more parameter - `userId`.
+   * Register with `UserId`. For `userId`-based notification, the register method accepts one more parameter - `userId`.
 
       ```js
       bmsPush.registerWithUserId("UserId",function(response) {

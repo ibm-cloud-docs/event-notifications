@@ -27,33 +27,33 @@ Before you configure {{site.data.keyword.codeengineshort}} as a destination for 
 If there is `run type` Job, if you are using {{site.data.keyword.en_short}} CLI or API to configure {{site.data.keyword.codeengineshort}} job as a destination, help ensure that you have enabled authorization to grant access between services. For more information, see [Using authorizations to grant access between services](#en-using-s2s-auth1-ce).
 {: important}
 
-To configure a {{site.data.keyword.codeengineshort}} destination, do the following steps:
+To configure a {{site.data.keyword.codeengineshort}} destination, complete the following steps:
 
-1. From your {{site.data.keyword.en_short}} instance dashboard, click **Destinations**.
+1. From your {{site.data.keyword.en_short}} instance, click **Destinations**.
 
-1. Click **Add +** to add a new destination.
+1. Click **Create** to add a new destination.
 
-1. In the **Add a destination** side panel, provide the following details.
+1. Enter the following destination details in the **Create destination** dialog:
 
-    - **Name** - Enter a name for your destination.
-    - **Description** - Optionally, enter a description for your destination.
-    - **Type** - Under **Destination**, for the **Type**, select **{{site.data.keyword.codeengineshort}}** from the list as your destination type.
-    - **Run Type** - Select one of the run type {{site.data.keyword.codeengineshort}} jobs or **{{site.data.keyword.codeengineshort}}** application.
+    - **Name**: Enter a name for your destination.
+    - **Description**: Optionally, enter a description for your destination.
+    - **Type**: Under **Destination**, select **{{site.data.keyword.codeengineshort}}** from the list as your destination type.
+    - **Run Type**: Select one of the run type {{site.data.keyword.codeengineshort}} jobs or **{{site.data.keyword.codeengineshort}}** application.
 
-    If selected run type is job, then provide the following details:
-    - **Project name** - Select the {{site.data.keyword.codeengineshort}} project name from the list, if you already have a {{site.data.keyword.codeengineshort}} project. Otherwise, click the **Create new project** link to create an {{site.data.keyword.codeengineshort}} project.
+    If the selected run type is job, provide the following details:
+    - **Project name**: Select the {{site.data.keyword.codeengineshort}} project name from the list. Otherwise, click **Create new project** to create a {{site.data.keyword.codeengineshort}} project.
 
-        When you select a {{site.data.keyword.codeengineshort}} project, the authorization between the services will be created internally between the two service instances, if the authorization between the services doesn't exist.
+        When you select a {{site.data.keyword.codeengineshort}} project, the authorization between the services is created internally between the two service instances, if the authorization does not exist.
         {: note}
 
-    - **Job name** - Select the job name from the list.
+    - **Job name**: Select the job name from the list.
 
-    If selected run type is application, then provide the following details:
-    - **URL** - Enter **{{site.data.keyword.codeengineshort}}** application secured URL (only HTTPS).
-    - **Verb** - Select the Verb to be called (GET or POST).
-    - **Headers** - Optionally, enter a list of headers to be passed to **{{site.data.keyword.codeengineshort}}** application.
+    If the selected run type is application, provide the following details:
+    - **URL**: Enter the {{site.data.keyword.codeengineshort}} application secured URL (only HTTPS).
+    - **Verb**: Select the verb to be called (GET or POST).
+    - **Headers**: Optionally, enter a list of headers to be passed to the {{site.data.keyword.codeengineshort}} application.
 
-4. Click **Add**.
+1. Click **Create destination**.
 
 {{site.data.keyword.en_short}} now supports Code Engine Functions.
 {: note}
@@ -104,7 +104,7 @@ The event payload has been transmitted to {{site.data.keyword.codeengineshort}} 
 ## Testing a {{site.data.keyword.codeengineshort}} destination configuration
 {: #en-codeengine-test-destination}
 
-You can test a {{site.data.keyword.codeengineshort}} destination in the options menu that is provided against the destination. You can effortlessly test a destination, whether the provided configuration is correct or not with a single click.
+You can test a {{site.data.keyword.codeengineshort}} destination in the options menu next to the destination. You can test whether the provided configuration is correct with a single click.
 
 For more information on testing a destination, see [Testing Destinations](/docs/event-notifications?topic=event-notifications-en-test-destination).
 

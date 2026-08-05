@@ -82,17 +82,19 @@ Firebase Cloud Messaging (FCM) is the gateway that delivers push notifications t
 {: #en-add-gen-api-chrome}
 {: step}
 
-Take the following steps:
+To create a generic API source:
 
-* Go to the **Sources** section of the {{site.data.keyword.en_short}} dashboard.
-* Click **Add** and select an API Source.
-* Type a name and an optional description and click **Add**.
+* Click **Sources** in the {{site.data.keyword.en_short}} instance.
+* Click **Create** and select an API Source in the **Create source** dialog.
+* Type a name and an optional description and click **Create source**.
 
 ## Create an {{site.data.keyword.en_short}} destination
 {: #en-create-dest-chrome}
 {: step}
 
-Click **Destinations** in the {{site.data.keyword.en_short}} console and add the following destination details:
+Click **Destinations** in the {{site.data.keyword.en_short}} instance and click **Create**.
+
+Enter the following destination details in the **Create destination** dialog.
 
 * **Name**: add a name for the Destination.
 * **Description**: add an optional description for the destination.
@@ -102,7 +104,7 @@ Click **Destinations** in the {{site.data.keyword.en_short}} console and add the
    - **Production destination** - use the full capability of this destination. Unlimited devices and outbound messages allowed.
 * Add your website URL to allowlist it.
 * Add the **Server Key**, which you got from **Get FCM credentials** section.
-* Click **Add**.
+* Click **Create destination**.
 * When the Chrome destination is created, edit the destination to get the public vapID key required for the web SDK.
 
 ![Destination Edit](images/en-push-chrome-destination-edit.png "Destination Edit"){: caption="Receive notifications" caption-side="bottom"}
@@ -113,7 +115,7 @@ Click **Destinations** in the {{site.data.keyword.en_short}} console and add the
 {: #en-create-topic-chrome}
 {: step}
 
-Select **Topics** in the {{site.data.keyword.en_short}} console and click **Create**. Enter the following topic details:
+Click **Topics** in the {{site.data.keyword.en_short}} instance and click **Create**. Enter the following topic and filter details in the **Topic details** and **Event filters** steps:
 
 * **Name**: enter a name for the topic.
 * **Description**: add an optional description for the topic.
@@ -127,14 +129,13 @@ Select **Topics** in the {{site.data.keyword.en_short}} console and click **Crea
 {: #en-create-sub-chrome}
 {: step}
 
-Click **Subscriptions** in the {{site.data.keyword.en_short}} console. Enter the following subscription details:
+Proceed to the **Subscriptions** step. Click **Create** and enter the following subscription details in the **Create subscription** dialog.
 
-* Click **Create** to display the subscription wizard.
-* Complete the following subscription details:
-   * **Subscription name**: name of the subscription.
-   * **Subscription description**: add an optional description.
-* Under the **Subscribe to a topic** section, select a topic from the drop-down list and select a destination from the destination drop-down list.
-* **Destination type**: select type under **Destination** and click **Add**.
+* **Subscription name**: enter a name for the subscription.
+* **Destination type**: select destination type.
+* **Destination**: select destination.
+
+Click **Create subscription**.
 
 ## Set up {{site.data.keyword.en_short}} Chrome web SDK
 {: #en-setup-chrome-sdk}

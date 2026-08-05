@@ -2,7 +2,7 @@
 
 copyright:
    years: 2026
-lastupdated: "2026-06-30"
+lastupdated: "2026-08-04"
 
 keywords: event-notifications, event notifications, pagerduty, on call manager, ocm, migration, icl, cloud logs
 
@@ -26,18 +26,18 @@ completion-time: 30m
 This tutorial shows you how to migrate your PagerDuty alerting setup to IBM On Call Manager (OCM) using {{site.data.keyword.en_full_notm}}.
 {: shortdesc}
 
-IBM On Call Manager can receive events from various monitoring sources, either on-premises or in the cloud. By integrating OCM with {{site.data.keyword.en_short}}, you can route notifications from IBM Cloud services to your OCM instance for centralized incident management.
+IBM On Call Manager can receive events from various monitoring sources, either on-premises or in the cloud. By integrating OCM with {{site.data.keyword.en_short}}, you can route notifications from IBM Cloud services to your OCM instance for centralised incident management.
 
 The migration process differs based on your source type:
 
-- If your source is {{site.data.keyword.logs_full_notm}} (ICL), you'll create an ICL Integration on OCM to receive alerts directly from Cloud Logs.
-- For other IBM Cloud sources (such as Secrets Manager or IBM Cloud Monitoring), you'll create an Outbound Integration on OCM and configure {{site.data.keyword.en_short}} to route notifications through a webhook destination.
+- If your source is {{site.data.keyword.logs_full_notm}} (ICL), you will create an ICL Integration on OCM to receive alerts directly from Cloud Logs.
+- For other IBM Cloud sources (such as Secrets Manager or IBM Cloud Monitoring), you will create an Outbound Integration on OCM and configure {{site.data.keyword.en_short}} to route notifications through a webhook destination.
 
-## Before you begin 
+## Before you begin
 {: #en-pd-ocm-migration-prereqs}
 
-- You need an IBM On Call Manager account. If you don't have an account, then [Create an On Call Manager account](https://oncallmanager.ibm.com/cemui/onboard-users).
-- You need an {{site.data.keyword.cloud}} account. If you don't have an account, then [Create an {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com).
+- You need an IBM On Call Manager account. If you don't have an account, [create an On Call Manager account](https://oncallmanager.ibm.com/cemui/onboard-users).
+- You need an {{site.data.keyword.cloud}} account. If you don't have an account, [create an {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com).
 - Verify that you have an existing {{site.data.keyword.en_short}} service instance or create a new one.
 
 ## Migrating {{site.data.keyword.logs_full_notm}} source to OCM
@@ -67,15 +67,13 @@ Follow these steps when your source is {{site.data.keyword.logs_full_notm}} (ICL
 {: #en-create-webhook-destination-icl}
 {: step}
 
-1. Navigate to your {{site.data.keyword.en_short}} instance by clicking ![Hamburger icon](images/icon_hamburger.svg) > **Resource List** > **Developer Tools** > **Your Event Notifications instance**.
+1. Navigate to your {{site.data.keyword.en_short}} instance.
 
-1. Go to the **Destinations** section of the {{site.data.keyword.en_short}} dashboard.
+1. Click **Destinations** in the left panel.
 
-1. Click **Add**.
+1. Click **Create** in the **Destinations** section.
 
-1. Enter a name for the destination (for example, "OCM Webhook - Cloud Logs").
-
-1. Provide an optional description.
+1. Provide a name and description for the destination (for example, "OCM Webhook - Cloud Logs") in the **Create destination** dialog.
 
 1. Select the destination type as **Webhook**.
 
@@ -85,23 +83,21 @@ Follow these steps when your source is {{site.data.keyword.logs_full_notm}} (ICL
 
 1. (Optional) Add any required authorization headers if your OCM instance requires authentication.
 
-1. Click **Add**.
+1. Click **Create destination**.
 
 ### Create a subscription
 {: #en-create-subscription-icl}
 {: step}
 
-1. In the **Topics** section of the {{site.data.keyword.en_short}} dashboard, select the topic that is configured for your {{site.data.keyword.logs_full_notm}} source.
+1. Click **Topics** in the {{site.data.keyword.en_short}} console and click the topic that is configured for your {{site.data.keyword.logs_full_notm}} source.
 
-1. In the topic details page, click **Subscriptions** and then click **Create**.
+1. Click the **Subscriptions** tab, then click **Create**.
 
-1. Enter a name for the subscription (for example, "Cloud Logs to OCM").
-
-1. Provide an optional description.
+1. Enter a name for the subscription (for example, "Cloud Logs to OCM") in the **Create subscription** dialog.
 
 1. Select the OCM webhook destination you created earlier.
 
-1. Click **Create**.
+1. Click **Create subscription**.
 
 Your {{site.data.keyword.logs_full_notm}} alerts are now configured to route to On Call Manager through {{site.data.keyword.en_short}}.
 
@@ -132,15 +128,13 @@ Follow these steps for sources other than {{site.data.keyword.logs_full_notm}}, 
 {: #en-create-webhook-destination-other}
 {: step}
 
-1. Navigate to your {{site.data.keyword.en_short}} instance by clicking ![Hamburger icon](images/icon_hamburger.svg) > **Resource List** > **Developer Tools** > **Your Event Notifications instance**.
+1. Navigate to your {{site.data.keyword.en_short}} instance.
 
-1. Go to the **Destinations** section of the {{site.data.keyword.en_short}} dashboard.
+1. Click **Destinations** in the left panel.
 
-1. Click **Add**.
+1. Click **Create** in the **Destinations** section.
 
-1. Enter a name for the destination (for example, "OCM Webhook - General").
-
-1. Provide an optional description.
+1. Provide a name and description for the destination (for example, "OCM Webhook - General") in the **Create destination** dialog.
 
 1. Select the destination type as **Webhook**.
 
@@ -150,23 +144,23 @@ Follow these steps for sources other than {{site.data.keyword.logs_full_notm}}, 
 
 1. (Optional) Add any required authorization headers if your OCM instance requires authentication.
 
-1. Click **Add**.
+1. Click **Create destination**.
 
 ### Create or use a template for your source
 {: #en-create-template-other}
 {: step}
 
-Templates are required for non-ICL sources to format the notification payload correctly for On Call Manager. You can either copy your existing webhook template and modify it for OCM, or create a new one.
+Templates are required for non-ICL sources to format the notification payload correctly for On Call Manager. Copy your existing webhook template and modify it for OCM, or create a new one.
 
 To create a new webhook template:
 
-1. Go to the **Templates** section of the {{site.data.keyword.en_short}} dashboard.
+1. Click **Templates** in the left panel.
 
-1. Click **Create**.
+1. Click **Create** to create a user-defined template.
 
-1. Enter a name for the template (for example, "OCM Webhook Template - Secrets Manager").
+1. Enter a name for the template (for example, "OCM Webhook Template - Secrets Manager") in the **Create a template** dialog.
 
-1. Provide an optional description.
+1. Optionally, enter a description.
 
 1. Select the template type as **Webhook Notification**.
 
@@ -198,59 +192,56 @@ To create a new webhook template:
 
    For more information about template syntax and available variables, see [Webhook notification templates](/docs/event-notifications?topic=event-notifications-en-webhook-notifications-template).
 
-1. Click **Add**.
+1. Click **Create template**.
 
 ### Create a subscription with the template
 {: #en-create-subscription-other}
 {: step}
 
-1. In the **Topics** section of the {{site.data.keyword.en_short}} dashboard, select the topic that is configured for your source (for example, Secrets Manager or IBM Cloud Monitoring).
+1. Click **Topics** in the {{site.data.keyword.en_short}} console and click the topic that is configured for your source (for example, Secrets Manager or IBM Cloud Monitoring).
 
-1. In the topic details page, click **Subscriptions** and then click **Create**.
+1. Click the **Subscriptions** tab, then click **Create**.
 
-1. Enter a name for the subscription (for example, "Secrets Manager to OCM").
+1. Enter a name for the subscription (for example, "Secrets Manager to OCM") in the **Create subscription** dialog.
 
-1. Provide an optional description.
+1. Optionally, enter a description.
 
 1. Select the OCM webhook destination you created earlier.
 
 1. Select the webhook template you created or modified for OCM.
 
-1. Click **Create**.
+1. Click **Create subscription**.
 
 Your IBM Cloud service alerts are now configured to route to On Call Manager through {{site.data.keyword.en_short}}.
 
 ## Verify the integration
 {: #en-verify-integration}
-{: step}
 
-To verify that your migration was successful:
 
-1. Go to the **Destinations** section of the {{site.data.keyword.en_short}} dashboard.
+To verify your migration was successful:
+
+1. Click **Destinations** in the {{site.data.keyword.en_short}} console.
 
 1. Locate your OCM webhook destination.
 
-1. Click the overflow menu ![Overflow menu](/images/overflow-menu.svg) for the destination.
+1. Click **Test destination** in the **Options** menu.
 
-1. Click **Test destination**.
-
-1. You should receive a test notification in your On Call Manager instance.
+1. A test notification is sent to your On Call Manager instance.
 
 1. Verify that the notification appears correctly in OCM with the expected format and severity.
 
 ## Next steps
 {: #en-pd-ocm-migration-next-steps}
 
-After completing the migration:
+After you complete the migration:
 
 - Review and adjust your notification templates to match your team's requirements.
 - Configure escalation policies in On Call Manager to route alerts to the appropriate on-call personnel.
 - Set up notification rules in OCM to control how and when team members are notified.
 - Monitor the integration for a few days to ensure all alerts are being received correctly.
-- Once verified, you can decommission your PagerDuty integration.
+- After you verify the integration, you can decommission your PagerDuty integration.
 
 For more information about {{site.data.keyword.en_short}} templates and customization, see:
 - [Webhook notification templates](/docs/event-notifications?topic=event-notifications-en-webhook-notifications-template)
 - [Creating templates](/docs/event-notifications?topic=event-notifications-en-create-template)
 - [Mapping notification payload](/docs/event-notifications?topic=event-notifications-en-map-notification-payload)
-

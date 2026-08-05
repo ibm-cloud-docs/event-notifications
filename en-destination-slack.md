@@ -33,34 +33,38 @@ Before you configure Slack as a destination for Direct Messages, ensure you have
 {: note}
 
 
-To configure a Slack destination, follow these steps:
+To configure a Slack destination, complete the following steps:
 
-1. Log in to your {{site.data.keyword.en_short}} instance dashboard and navigate to Destinations.
+1. click **Destinations** in the {{site.data.keyword.en_short}} instance.
 
-1. Click **Add** to add a new destination.
+1. Click **Create** to add a new destination.
 
-1. In the Add a destination side panel, provide the following details:
+1. Enter the following destination details in the **Create destination** dialog:
 
-  - **Name**: Enter a name for your destination.
-  - **Description**: Optionally, enter a description for your destination.
-  - **Type**: Under Destination, select Slack from the list as your destination type.
-  - **Send messages:** Choose one of the following options:
-      - **Using incoming webhooks**: Provide the Slack Incoming Webhook URL.
-      - **Using direct messages:** Provide the Bot User OAuth Token.
+   - **Name**: Enter a name for your destination.
+   - **Description**: Optionally, enter a description for your destination.
+   - **Type**: Under **Destination**, select **Slack** from the list as your destination type.
+   - **Send messages**: Choose one of the following options:
+       - **Using incoming webhooks**: Provide the Slack Incoming Webhook URL.
+       - **Using direct messages**: Provide the Bot User OAuth Token.
+
+1. Click **Create destination**.
 
 
 ## Configuring a slack subscription
 {: #en-slack-configure-sub}
 
-1. Using Incoming Webhooks
-   - You can add attachment color to individual Slack subscriptions based on a hex code. For example, use #0000FF to set the color to blue.
-1. Using Direct Messages
-   - You can provide a list of member ids and channel ids. If channel ids are provide then the application shall be integrated into the specified channels.
+To configure a slack subscription: 
+
+1. **Using Incoming Webhooks**
+   - You can add an attachment color to individual Slack subscriptions based on a hex code. For example, use #0000FF to set the color to blue.
+1. **Using Direct Messages**
+   - You can provide a list of member IDs and channel IDs. If channel IDs are provided, the application is integrated into the specified channels.
 
 ## How a default slack notification (without template) from Event Notifications looks
 {: #en-how-a-slack-notification-from-en-looks}
 
-Event notification generates slack notifications from incoming payload. The template event notification use to send to slack looks like following -
+{{site.data.keyword.en_short}} generates Slack notifications from the incoming payload. The template that {{site.data.keyword.en_short}} uses to send to Slack looks like the following example:
 
 ```sh
 {
@@ -106,18 +110,18 @@ Event notification generates slack notifications from incoming payload. The temp
 }
 ```
 
-Here -
+Where:
 
-*ibmendefaultshort* is the default short payload that is provided in the incoming payload.
-*ibmendefaultlong* is the default long payload that is provided in the incoming payload.
-*data* is the data JSON provided in the incoming payload and format as JSON in the slack notification.
+- `ibmendefaultshort` is the default short payload that is provided in the incoming payload.
+- `ibmendefaultlong` is the default long payload that is provided in the incoming payload.
+- `data` is the data JSON provided in the incoming payload and formatted as JSON in the Slack notification.
 
-For more information on how to create and use slack notification templates , see [here](/docs/event-notifications?topic=event-notifications-en-slack-notification-template)
+For more information on how to create and use Slack notification templates, see [Slack notification templates](/docs/event-notifications?topic=event-notifications-en-slack-notification-template).
 
 ## Testing a Slack destination configuration
 {: #en-slack-test-destination}
 
-You can test a Slack destination in the options menu provided against the destination. You can effortlessly test a destination, whether the provided configuration is correct or not with a single click.
+You can test a Slack destination in the options menu next to the destination. You can test whether the provided configuration is correct with a single click.
 
 For more information on testing a destination, see [Testing Destinations](/docs/event-notifications?topic=event-notifications-en-test-destination).
 

@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2021, 2026
-lastupdated: "2026-05-11"
+lastupdated: "2026-08-04"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email, smtp
 
@@ -101,6 +101,11 @@ Some of the common verification issues could be:
 
 It's worth noting that we perform periodic checks on the SPF and DKIM TXT records of the domain provided. To ensure uninterrupted email delivery, we recommend keeping the records inserted in the DNS even after verifying them once. If the SPF or DKIM fails in the periodic check, we will suspend email sending.
 {: note}
+
+## Requesting a recipient limit increase
+{: #en-smtp-configurations-recipient-limit}
+
+Each send request supports up to 50 email recipients. To reach more recipients, split them into batches across multiple requests. If batching does not meet your use case requirements, you can request a higher limit. For more information, see [Requesting a recipient limit increase for email destinations](/docs/event-notifications?topic=event-notifications-en-email-recipient-limit-increase).
 
 ## Enabling context-based restrictions to access the SMTP interface
 {: #en-smtp-configurations-cbr}

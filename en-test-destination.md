@@ -39,12 +39,11 @@ Before you can start testing your destinations, you must have the following prer
 ## Testing your destination
 {: #en-test-destinations}
 
-1. Go to the {{site.data.keyword.en_short}} console.
-2. Click the **Destinations** tab.
-3. For the destination that you want to test, click the overflow menu ![Overflow Menu](/images/overflow-menu.svg) and then select **Test**. Wait for the test to finish.
-4. When the test is completed, you are presented with the results. Review your results. The results typically include the following information:
+1. From your {{site.data.keyword.en_short}} instance, click **Destinations**.
+1. For the destination that you want to test, click the **Options** menu and select **Test**. Wait for the test to finish.
+1. When the test is complete, review your results. The results typically include the following information:
 
    - **Status**: Whether the test is successful or failed.
    - **Response Code**: If there is a test failure, the response code from the end destination client is returned.
    - **Response Message**: If there is a test failure, the response message from the end destination client is returned.
-   - **Destination Activity**: If the test is successful, you see that a test event is delivered to the desired destination, which will create a new message in the case of Slack, webhook and Microsoft&reg; Teams, a new incident in the case of PagerDuty and ServiceNow, a new invoke in the case of {{site.data.keyword.codeenginefull_notm}}, and a new object is created under a provided bucket in the case of {{site.data.keyword.cos_full_notm}}.
+   - **Destination Activity**: If the test is successful, a test event is delivered to the destination. The activity varies by destination type: a new message is created for Slack, Webhook, and Microsoft&reg; Teams; a new incident is created for PagerDuty and ServiceNow; a new invocation occurs for {{site.data.keyword.codeenginefull_notm}}; and a new object is created in the specified bucket for {{site.data.keyword.cos_full_notm}}.
