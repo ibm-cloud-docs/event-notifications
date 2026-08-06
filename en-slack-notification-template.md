@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-02-24"
+lastupdated: "2026-08-06"
 
 keywords: event-notifications, event notifications, about event notifications, templates, slack
 
@@ -11,6 +11,7 @@ subcollection: event-notifications
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+{:codeblock: .codeblock}
 
 
 # Slack Notification Template
@@ -42,6 +43,61 @@ The Input API for Templates provides a mechanism for users to define notificatio
 {: #en-json-blocks}
 
 JSON blocks represent the layout and structure of notification messages by using the Slack Block Kit format. Users can create rich and interactive message layouts by defining various block types such as sections, actions, and buttons. Handlebars can be used with JSON blocks for powerful integration. You can design your JSON blocks via the following builder - https://app.slack.com/block-kit-builder
+
+##### Default notification example
+{: #en-slack-template-default-example}
+
+The following example shows the default Slack notification block structure that {{site.data.keyword.en_short}} uses when no custom template is applied. You can use this as a starting point when building your own Slack notification template.
+
+```json
+{
+  "blocks": [
+    {
+      "type": "rich_text",
+      "elements": [
+        {
+          "type": "rich_text_section",
+          "elements": [
+            {
+              "type": "text",
+              "text": "{{ibmendefaultshort}}",
+              "style": {
+                "bold": true
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "plain_text",
+        "text": "{{ibmendefaultlong}}",
+        "emoji": true
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "context",
+      "elements": [
+        {
+          "type": "mrkdwn",
+          "text": "```{{event_payload}}```"
+        }
+      ]
+    }
+  ]
+}
+```
+{: codeblock}
+
+Where:
+- `{{ibmendefaultshort}}` — the short summary text from the notification payload, rendered as bold text.
+- `{{ibmendefaultlong}}` — the full notification message from the notification payload.
+- `{{event_payload}}` — the complete notification payload sent to the `/notifications` endpoint, formatted as a code block in Slack.
 
 ##### Usage:
 {: #en-usage}
@@ -89,6 +145,7 @@ As per Slack Block Kit limitations, a section block supports a maximum of 3000 c
    ]
 }
 ```
+{: codeblock}
 
 ###### Context Block
 {: #en-template-context-type}
@@ -120,6 +177,7 @@ A context block supports a maximum of 16000 characters in the text field. If the
    ]
 }
 ```
+{: codeblock}
 
 #### Base64 Encoding
 {: #en-encoding}
@@ -140,3 +198,4 @@ The following example shows a complete template request with base64-encoded JSON
 	"type": "slack.notification"
 }
 ```
+{: codeblock}

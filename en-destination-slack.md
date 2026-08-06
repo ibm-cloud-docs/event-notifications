@@ -11,6 +11,7 @@ subcollection: event-notifications
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+{:codeblock: .codeblock}
 
 # Slack
 {: #en-destinations-slack}
@@ -66,7 +67,7 @@ To configure a slack subscription:
 
 {{site.data.keyword.en_short}} generates Slack notifications from the incoming payload. The template that {{site.data.keyword.en_short}} uses to send to Slack looks like the following example:
 
-```sh
+```json
 {
   "blocks": [
     {
@@ -77,7 +78,7 @@ To configure a slack subscription:
           "elements": [
             {
               "type": "text",
-              "text": "{{ibmendefaultshort}}", // Read from event payload
+              "text": "{{ibmendefaultshort}}",
               "style": {
                 "bold": true
               }
@@ -90,7 +91,7 @@ To configure a slack subscription:
       "type": "section",
       "text": {
         "type": "plain_text",
-        "text": "{{ibmendefaultlong}}", // Read from event payload
+        "text": "{{ibmendefaultlong}}",
         "emoji": true
       }
     },
@@ -102,13 +103,14 @@ To configure a slack subscription:
       "elements": [
         {
           "type": "mrkdwn",
-          "text": "```{{event_payload}}```" // Full notification payload sent to /notifications endpoint
+          "text": "```{{event_payload}}```"
         }
       ]
     }
   ]
 }
 ```
+{: codeblock}
 
 Where:
 
