@@ -48,7 +48,7 @@ JSON blocks represent the layout and structure of notification messages by using
 
 The following example shows the default Slack notification block structure that {{site.data.keyword.en_short}} uses when no custom template is applied. You can use this as a starting point when building your own Slack notification template.
 
-```json
+```JSON
 {
   "blocks": [
     {
@@ -144,6 +144,7 @@ As per Slack Block Kit limitations, a section block supports a maximum of 3000 c
    ]
 }
 ```
+{: codeblock}
 
 ###### Context Block
 {: #en-template-context-type}
@@ -175,6 +176,7 @@ A context block supports a maximum of 16000 characters in the text field. If the
    ]
 }
 ```
+{: codeblock}
 
 #### Base64 Encoding
 {: #en-encoding}
@@ -195,3 +197,4 @@ The following example shows a complete template request with base64-encoded JSON
 	"type": "slack.notification"
 }
 ```
+{: codeblock}
