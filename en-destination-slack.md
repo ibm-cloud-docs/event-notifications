@@ -11,6 +11,7 @@ subcollection: event-notifications
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+{:codeblock: .codeblock}
 
 # Slack
 {: #en-destinations-slack}

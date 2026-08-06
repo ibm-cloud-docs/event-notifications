@@ -11,6 +11,7 @@ subcollection: event-notifications
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+{:codeblock: .codeblock}
 
 
 # Slack Notification Template
@@ -48,7 +49,7 @@ JSON blocks represent the layout and structure of notification messages by using
 
 The following example shows the default Slack notification block structure that {{site.data.keyword.en_short}} uses when no custom template is applied. You can use this as a starting point when building your own Slack notification template.
 
-```JSON
+```
 {
   "blocks": [
     {
