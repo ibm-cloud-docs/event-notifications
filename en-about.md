@@ -166,7 +166,7 @@ A pricing unit for SMS text messages.
 ## {{site.data.keyword.en_short}} relationship model
 {: #en-relation}
 
-{{site.data.keyword.en_short}} includes sources, filters, topics, destinations, and subscriptions. The relationship between these elements is shown in Figure 1.
+{{site.data.keyword.en_short}} includes sources, filters, topics, destinations, and subscriptions. The relationship between these elements is shown in the following figure.
 
 ![{{site.data.keyword.en_short}} flow](images/en-updated-relationship-model.svg "{{site.data.keyword.en_short}} flow"){: caption="{{site.data.keyword.en_short}} relationship model" caption-side="bottom"}
 
