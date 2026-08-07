@@ -166,9 +166,9 @@ A pricing unit for SMS text messages.
 ## {{site.data.keyword.en_short}} relationship model
 {: #en-relation}
 
-{{site.data.keyword.en_short}} includes sources, filters, topics, destinations, and subscriptions. The relationship between these elements is shown in Figure 1.
+{{site.data.keyword.en_short}} includes sources, filters, topics, destinations, and subscriptions. The relationship between these elements is shown int he following figure.
 
-![{{site.data.keyword.en_short}} flow](images/en-updated-relationship-model.svg "{{site.data.keyword.en_short}} flow"){: caption="{{site.data.keyword.en_short}} relationship model" caption-side="bottom"}
+![{{site.data.keyword.en_short}} flow](images/en-overview-page.svg "{{site.data.keyword.en_short}} flow"){: caption="{{site.data.keyword.en_short}} relationship model" caption-side="bottom"}
 
 Events originate outside {{site.data.keyword.en_short}}, for example, from {{site.data.keyword.cloud_notm}} services. An 'event source' within {{site.data.keyword.en_short}} represents a connection between {{site.data.keyword.en_short}} and one of these event-producing services.
 
