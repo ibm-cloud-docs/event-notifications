@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2026
-lastupdated: "2026-08-06"
+lastupdated: "2026-08-07"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -58,6 +58,8 @@ Route a single event notification to many destinations with just a few clicks. S
 {: #en-concepts}
 
 Learn about {{site.data.keyword.en_full}} concepts such as filters, conditions, and topics. The following diagram illustrates how these concepts relate to each other in an end-to-end event flow.
+
+
 
 ### Event
 {: #en-event}
@@ -167,7 +169,7 @@ A pricing unit for SMS text messages.
 
 {{site.data.keyword.en_short}} includes sources, filters, topics, destinations, and subscriptions. The relationship between these elements is shown in Figure 1.
 
-![{{site.data.keyword.en_short}} flow](images/en_relationshipmodelv3.png "{{site.data.keyword.en_short}} flow"){: caption="Figure 1. {{site.data.keyword.en_short}} relationship model" caption-side="bottom"}
+![{{site.data.keyword.en_short}} flow](images/en-relationship-model.svg "{{site.data.keyword.en_short}} flow"){: caption="{{site.data.keyword.en_short}} relationship model" caption-side="bottom"}
 
 Events originate outside {{site.data.keyword.en_short}}, for example, from {{site.data.keyword.cloud_notm}} services. An 'event source' within {{site.data.keyword.en_short}} represents a connection between {{site.data.keyword.en_short}} and one of these event-producing services.
 
