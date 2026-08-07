@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-07-21"
+lastupdated: "2026-08-07"
 
 keywords: event notifications CLI plug-in, CLI reference, en cli reference, event notifications cli reference, event notifications, command line reference
 
@@ -3048,4 +3048,5 @@ The CLI Plugin versions from 0.0.5 to 1.9.0 is deprecated.
 | 1.21.0 | 7 April 2026 | CLI plugin update for view sandbox, email attachments and source options support for payload debugging |
 | 1.21.1 | 25 May 2026 | Deprecated init and show command and added en instances listing command. Fix provided to automatically set EN endpoint according to set target region. |
 | 1.21.2 | 29 June 2026 | Bug Fix for SMTP Metrics to support SMTP Config ID flag and mark destination type as optional. |
+| 1.21.3 | 6 August 2026 | CLI Plugin vulnerability fix, usability and cosmetic improvements |
 {: caption="Changes in the {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} CLI" caption-side="bottom"}
