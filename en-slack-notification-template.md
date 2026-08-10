@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-08-06"
+lastupdated: "2026-08-07"
 
 keywords: event-notifications, event notifications, about event notifications, templates, slack
 
@@ -11,7 +11,6 @@ subcollection: event-notifications
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-{:codeblock: .codeblock}
 
 
 # Slack Notification Template
