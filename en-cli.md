@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-08-07"
+lastupdated: "2026-08-10"
 
 keywords: event notifications CLI plug-in, CLI reference, en cli reference, event notifications cli reference, event notifications, command line reference
 
@@ -2933,6 +2933,18 @@ The following example shows the format of the NotificationCreate object.
 
 #### Example
 {: #event-notifications-send-notifications-examples}
+
+**With required parameters:**
+
+```sh
+ibmcloud event-notifications send-notifications \
+    --instance-id=exampleString \
+    --body='{"specversion": "1.0", "time": "2019-01-01T12:00:00.000Z", "type": "*", "id": "exampleString", "source": "exampleString", "ibmensourceid": "exampleString", "ibmendefaultshort": "short message", "ibmendefaultlong": "long message", "data": {"name": "exampleString"}, "datacontenttype": "application/json"}'
+```
+{: codeblock}
+
+
+**With all parameters:**
 
 ```sh
 ibmcloud event-notifications send-notifications \
