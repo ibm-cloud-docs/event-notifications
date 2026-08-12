@@ -2,7 +2,7 @@
 
 copyright:
    years: 2026
-lastupdated: "2026-08-04"
+lastupdated: "2026-08-12"
 
 keywords: event-notifications, event notifications, pagerduty, on call manager, ocm, migration, icl, cloud logs
 
@@ -44,6 +44,9 @@ The migration process differs based on your source type:
 {: #en-pd-ocm-migration-icl}
 
 Follow these steps when your source is {{site.data.keyword.logs_full_notm}} (ICL).
+
+If resolved alerts are being re-triggered in PagerDuty instead of being closed, you must use an Outbound Integration on OCM with a webhook template attached to your subscription. ICL integrations on OCM do not support templates. For more information, see [Create or use a template for your source](#en-create-template-other).
+{: note}
 
 ### Create an ICL Integration on On Call Manager
 {: #en-create-icl-integration}
@@ -97,7 +100,7 @@ Follow these steps when your source is {{site.data.keyword.logs_full_notm}} (ICL
 
 1. Select the OCM webhook destination you created earlier.
 
-1. Click **Create subscription**.
+1. Click **Create**.
 
 Your {{site.data.keyword.logs_full_notm}} alerts are now configured to route to On Call Manager through {{site.data.keyword.en_short}}.
 
