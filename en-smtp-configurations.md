@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2021, 2026
-lastupdated: "2026-08-04"
+lastupdated: "2026-08-13"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email, smtp
 
@@ -21,18 +21,18 @@ IBM Cloud Event Notifications supports SMTP, the most common email protocol on t
 
 1. Create an {{site.data.keyword.en_short}} instance. To learn the process of creating an instance, see [Getting Started](/docs/event-notifications?topic=event-notifications-getting-started).
 
-2. Navigate to the instance dashboard and click **SMTP Configurations** in the left navigation pane.
+2. In your {{site.data.keyword.en_short}} instance, click **Email** > **SMTP Configurations**.
 
-3. Click **Add+**.
+3. Click **Create**.
 
-4. Provide the name, an optional description and the domain name.
+4. Enter a **Name**, an optional **Description**, and the **Domain name** in the **Create a new SMTP configuration** dialog.
 
-5. Click **Add**.
+5. Click **Create**.
 
 ## Domain name verification
 {: #en-smtp-configurations-verify}
 
-After creating a SMTP configuration in an IBM Cloud Event Notifications instance, you need to perform three types of verifications to get the required parameters to send email via the SMTP Interface. These verifications are located under the 'Verify' tab, accessible by clicking the `⋮` menu.
+After creating an SMTP configuration in an {{site.data.keyword.en_short}} instance, you need to perform three types of verifications to get the required parameters to send email through the SMTP interface. These verifications are located under the **Verify** tab, accessible by clicking the **Options** menu.
 
 1. Create Sender Policy Framework (SPF), which is used to authenticate the sender of an email. SPF specifies the mail servers that are allowed to send email for your domain.
     * Make sure the domain already exists as an A record in the DNS records.
@@ -82,16 +82,16 @@ After creating a SMTP configuration in an IBM Cloud Event Notifications instance
     * A valid Reply-To email ID is required to receive information about rejected or bounced emails.
     * Well-formatted Email content is required to prevent emails from being classified as Spam at the recipient's end. Emails that are not well-formatted (i.e., not in HTML) can result in Email Service Providers classifying the emails as Spam.
 
-    Upon filling out answers to the aforementioned questions, users must request the enablement of SMTP interface Event Notifications verification via Support Ticket:
+    After completing the questionnaire, request enablement of the SMTP interface verification through a support ticket:
 
     1. From the {{site.data.keyword.cloud_notm}} console menu bar, click the **Help** icon > **Support center**.
-    1. From the Contact support section, click **Create a case**.
-    1. Select under `Category`, `Topic` as Event Notifications and `Subtopic` as Others
-    1. Under `Subject` add **Requesting for the Authorization to Enable SMTP Interface for Event Notifications**
-    1. In the 'Description' section first provide IBM Cloud Event Notifications `instance id`, `region` in which instance is created, and a `DKIM Name` which is in the format of `{{uuid}}._domainkey.{{domain}}`
-    1. Later, please include responses to the aforementioned questionnaire.
-    1. Add **Attachments** if you want to provide more evidence supporting your answers
-    1. Add required email Ids in the **Watchlist** section. And to know more about other options while creating a support case refer [here](/docs/support?topic=support-open-case&interface=ui){: external}.
+    1. From the **Contact support** section, click **Create a case**.
+    1. Under **Category**, set **Topic** to **Event Notifications** and **Subtopic** to **Others**.
+    1. Under **Subject**, enter **Requesting for the Authorization to Enable SMTP Interface for Event Notifications**.
+    1. In the **Description** section, provide the {{site.data.keyword.en_short}} `instance id`, `region`, and a `DKIM Name` in the format `{{uuid}}._domainkey.{{domain}}`.
+    1. Include your responses to the questionnaire.
+    1. Add **Attachments** if you want to provide supporting evidence.
+    1. Add required email addresses in the **Watchlist** section. For more information about other options, see [Creating a support case](/docs/support?topic=support-open-case&interface=ui){: external}.
 
 Some of the common verification issues could be:
 
@@ -99,7 +99,7 @@ Some of the common verification issues could be:
 2. Verify that the DNS record for the domain is updated correctly, including SPF/DKIM values.
 3. DNS propagation may take up to 72 hours to be updated across the internet.
 
-It's worth noting that we perform periodic checks on the SPF and DKIM TXT records of the domain provided. To ensure uninterrupted email delivery, we recommend keeping the records inserted in the DNS even after verifying them once. If the SPF or DKIM fails in the periodic check, we will suspend email sending.
+{{site.data.keyword.en_short}} performs periodic checks on the SPF and DKIM TXT records of the configured domain. To ensure uninterrupted email delivery, keep the records in the DNS even after verifying them. If the SPF or DKIM fails a periodic check, email sending will be suspended.
 {: note}
 
 ## Requesting a recipient limit increase
@@ -152,7 +152,7 @@ After successful verification of a SMTP configuration in an IBM Cloud Event Noti
     When you create an SMTP user, you receive a username and password. However, password-based authentication will be deprecated in the near future. You must migrate to API key-based authentication using Service IDs. For more information, see [Using API keys for SMTP authentication](#en-smtp-configurations-api-keys).
     {: deprecated}
 
-    Once the SMTP username and password is created, you can clone the same credentials across SMTP configurations if you need the same credentials for other SMTP configurations/Domains within the **same instance**. This is supported via API/CLI/SDK and Terraform.
+    After the SMTP username and password are created, you can clone the same credentials across SMTP configurations within the **same instance**. This is supported through the API, CLI, SDK, and Terraform.
     {: note}
 
 
@@ -324,8 +324,8 @@ The number of API keys you can create per Service ID is determined by IBM Cloud 
 
     ![SMTP Private Endpoint VPE](images/smtp-private-endpoint.png "SMTP Private Endpoint VPE"){: caption="SMTP Private Endpoint VPE" caption-side="bottom"}
 
-4. Create a **Network Zone** in **Context-Based-Restrictions(CBR)** for your VPC.
-5. Create **CBR Rule** for **Event-Notifications Instance** and add **Network zone** created above or add **Network Zone** to existing **CBR Rule** that you already created for **Event-Notifications Instance**.
+4. Create a **Network Zone** in **Context-Based Restrictions (CBR)** for your VPC.
+5. Create a **CBR Rule** for your {{site.data.keyword.en_short}} instance and add the **Network Zone** created earlier, or add the **Network Zone** to an existing **CBR Rule** for your instance.
 
 6. Use the SMTP Private Endpoint listed in the [SMTP configurations requirements](/docs/event-notifications?topic=event-notifications-en-smtp-configurations#en-smtp-configurations-requirements).
 
@@ -333,5 +333,5 @@ The number of API keys you can create per Service ID is determined by IBM Cloud 
 ## Tracking Email Status
 {: #en-destinations-smtp-configurations-tracking-status}
 
-* After sending emails from any of the above methods, you will receive a Queue ID, which will be beneficial for debugging purposes.
-* This capability allows users to monitor the delivery status of emails sent through a Custom Email destination, ensuring transparency and enhancing the overall user experience. For more information, follow the steps to [monitor the delivery status of emails sent through a Custom Email destination](/docs/event-notifications?topic=event-notifications-en-destination-email-custom-domain-status).
+* After sending emails, you receive a Queue ID that you can use for debugging purposes.
+* You can monitor the delivery status of emails sent through a Custom Email destination. For more information, see [Monitor the delivery status of emails sent through a Custom Email destination](/docs/event-notifications?topic=event-notifications-en-destination-email-custom-domain-status).

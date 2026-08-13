@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-08-04"
+lastupdated: "2026-08-13"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -19,6 +19,20 @@ content-type: release-note
 
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
+
+## 12 August 2026
+{: #event-notifications-Aug122026}
+{: release-note}
+
+UI enhancements for topic configuration
+:  The following enhancements are available when you configure topics in {{site.data.keyword.en_short}}:
+
+   - **Manage subscriptions in the route notifications flow**: Subscriptions are no longer available as a standalone option from the navigation menu on the {{site.data.keyword.en_short}} instance page. When you create or edit a topic, you can create and edit subscriptions as part of the same route notifications flow. For more information, see [Creating subscriptions](/docs/event-notifications?topic=event-notifications-en-route-create-subscriptions).
+
+   - **Filter validator**: When configuring a topic, you can view payload data emitted from your connected sources and test one or more filter conditions against it to verify the results before saving the topic configuration.
+
+   - **View mapping**: To view the end-to-end event flow, navigate to the mapping view. You can trace the path from the source that emits events, through the topic that filters them, to the destinations that are configured to receive notifications. For more information, see [Viewing the event flow mapping](/docs/event-notifications?topic=event-notifications-en-view-mapping).
+
 
 ## 3 August 2026
 {: #event-notifications-Aug032026}

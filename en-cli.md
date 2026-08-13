@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-08-10"
+lastupdated: "2026-08-13"
 
 keywords: event notifications CLI plug-in, CLI reference, en cli reference, event notifications cli reference, event notifications, command line reference
 
@@ -122,6 +122,16 @@ The CLI currently supports creating API sources only.
    ibmcloud event-notifications sources-create --instance-id INSTANCE-ID --name NAME [--description DESCRIPTION] [--enabled ENABLED] [--store-notifications STORE-NOTIFICATIONS]
    ```
    {: pre}
+
+   You can also use the following command (both commands are currently supported):
+
+   ```sh
+   ibmcloud event-notifications source-create --instance-id INSTANCE-ID --name NAME [--description DESCRIPTION] [--enabled ENABLED] [--store-notifications STORE-NOTIFICATIONS]
+   ```
+   {: pre}
+
+   Both `source-create` and `sources-create` are supported. Use `source-create` for consistency with other commands.
+   {: note}
 
 - **Parameters to provide:**
 
@@ -1133,6 +1143,14 @@ Operate on {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} topic
    ```
    {: pre}
 
+   Use `topic-update` instead of `topic-replace`. Both commands are currently supported, but `topic-replace` will be deprecated in a future release.
+   {: note}
+
+   ```sh
+   ibmcloud event-notifications topic-update --id ID [--name NAME] [--description DESCRIPTION] [--sources SOURCES] --instance-id INSTANCE-ID
+   ```
+   {: pre}
+
 - **Parameters to provide:**
 
    `--instance-id` (string)
@@ -1642,13 +1660,20 @@ ibmcloud event-notifications integration-create --instance-id INSTANCE-ID --type
       }
       ```
 
-### ibmcloud event-notifications integration replace
+### ibmcloud event-notifications integration update
 {: #en-cli-integration-update-command}
 
 Replace `Integration`.
 
 ```sh
 ibmcloud event-notifications integration-replace --instance-id INSTANCE-ID --id ID --type Type --metadata METADATA
+```
+
+Use `integration-update` instead of `integration-replace`. Both commands are currently supported, but `integration-replace` will be deprecated in a future release.
+{: note}
+
+```sh
+ibmcloud event-notifications integration-update --instance-id INSTANCE-ID --id ID --type Type --metadata METADATA
 ```
 
 #### Command options
@@ -1890,7 +1915,7 @@ ibmcloud event-notifications template-create \
 ### `ibmcloud event-notifications templates`
 {: #event-notifications-cli-templates-command}
 
-List all Templates.
+List all user-defined Templates.
 Note: If the `--all-pages` option is not set, the command will only retrieve a single page of the collection.
 
 ```sh
@@ -1968,13 +1993,13 @@ ibmcloud event-notifications template \
 ```
 {: pre}
 
-### `ibmcloud event-notifications template-replace`
+### `ibmcloud event-notifications template-update`
 {: #event-notifications-cli-template-update-command}
 
 Update details of a Template.
 
 ```sh
-ibmcloud event-notifications template-replace --instance-id INSTANCE-ID --id ID [--name NAME] [--description DESCRIPTION] [--type TYPE] [--params PARAMS]
+ibmcloud event-notifications template-update --instance-id INSTANCE-ID --id ID [--name NAME] [--description DESCRIPTION] [--params PARAMS]
 ```
 
 #### Command options
@@ -2000,11 +2025,6 @@ ibmcloud event-notifications template-replace --instance-id INSTANCE-ID --id ID 
 
     The maximum length is `255` characters. The minimum length is `1` character. The value must match regular expression `/[a-zA-Z 0-9-_\/.?:'";,+=!#@$%^&*() ]*/`.
 
-`--type` (string)
-:   The type of template.
-
-    The maximum length is `24` characters. The minimum length is `22` characters. The value must match regular expression `/^(smtp_custom.notification|smtp_custom.invitation)$/`.
-
 `--params` ([`TemplateConfig`](#event-notifications-template-examples))
 :   Payload describing a template configuration. This JSON option can instead be provided by setting individual fields with other options. It is mutually exclusive with those options.
 
@@ -2014,12 +2034,25 @@ ibmcloud event-notifications template-replace --instance-id INSTANCE-ID --id ID 
 {: #event-notifications-template-replace-examples}
 
 ```sh
-ibmcloud event-notifications template-update \
+ibmcloud event-notifications template-replace \
     --instance-id exampleString \
     --id exampleString \
     --name exampleString \
     --description exampleString \
     --type exampleString \
+    --params '{"body": "exampleString", "subject": "exampleString"}'
+```
+{: pre}
+
+Use `template-update` instead of `template-replace`. Both commands are currently supported, but `template-replace` will be deprecated in a future release.
+{: note}
+
+```sh
+ibmcloud event-notifications template-update \
+    --instance-id exampleString \
+    --id exampleString \
+    --name exampleString \
+    --description exampleString \
     --params '{"body": "exampleString", "subject": "exampleString"}'
 ```
 {: pre}

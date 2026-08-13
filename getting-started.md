@@ -3,7 +3,7 @@
 copyright:
 
   years: 2021, 2026
-lastupdated: "2026-07-20"
+lastupdated: "2026-08-13"
 
 keywords: event notifications, IBM Cloud
 
@@ -112,12 +112,16 @@ Event routing connects your sources to your destinations through topics, filters
 - **Filters** define which events from each source are routed to the topic.
 - A **subscription** connects a topic to a destination, so that matching events are delivered to the right people or services.
 
-You can set up the complete routing flow — topic, filters, subscriptions, and review — in a single guided experience.
-
 To set up event routing, see [Route notifications to destinations](/docs/event-notifications?topic=event-notifications-en-create-en-topic).
 
 After you save the routing configuration, notifications are delivered to the chosen destinations whenever a matching event occurs.
 
+
+Subscriptions are created and managed as part of the route notifications to destinations flow. They are not available as a standalone option from the navigation menu on the {{site.data.keyword.en_short}} instance page. To create or modify a subscription, you must work through a topic:
+
+- **New topic**: If you have not created a topic yet, create one. You can add subscriptions to the new topic as part of the same guided flow.
+- **Existing topic**: If a topic already exists, edit it to add or modify subscriptions.
+{: important}
 
 ## Alternative: Use Terraform
 {: #en-getting-started-terraform}
