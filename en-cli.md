@@ -110,7 +110,7 @@ EVENT_NOTIFICATIONS_API_KEY can be your IBM Cloud API key or the service credent
 
 Operate on {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} source.
 
-### ibmcloud event-notifications source create
+### ibmcloud event-notifications sources create
 {: #en-cli-source-create-command}
 
 - **Action:** Create `Source`.
@@ -1133,18 +1133,20 @@ Operate on {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} topic
 
       The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]/`.
 
-### ibmcloud event-notifications topic update
+### ibmcloud event-notifications topic replace
 {: #en-cli-topic-update-command}
 
 - **Action:** Update existing `Topic`.
+
+You can use `topic-update` instead of `topic-replace`. Both commands are currently supported, but `topic-replace` will be deprecated in a future release.
+{: note}
 
    ```sh
    ibmcloud event-notifications topic-replace --id ID [--name NAME] [--description DESCRIPTION] [--sources SOURCES] --instance-id INSTANCE-ID
    ```
    {: pre}
 
-   Use `topic-update` instead of `topic-replace`. Both commands are currently supported, but `topic-replace` will be deprecated in a future release.
-   {: note}
+   or
 
    ```sh
    ibmcloud event-notifications topic-update --id ID [--name NAME] [--description DESCRIPTION] [--sources SOURCES] --instance-id INSTANCE-ID
@@ -1660,17 +1662,18 @@ ibmcloud event-notifications integration-create --instance-id INSTANCE-ID --type
       }
       ```
 
-### ibmcloud event-notifications integration update
+### ibmcloud event-notifications integration replace
 {: #en-cli-integration-update-command}
 
 Replace `Integration`.
 
+Use `integration-update` instead of `integration-replace`. Both commands are currently supported, but `integration-replace` will be deprecated in a future release.
+{: note}
+
 ```sh
 ibmcloud event-notifications integration-replace --instance-id INSTANCE-ID --id ID --type Type --metadata METADATA
 ```
-
-Use `integration-update` instead of `integration-replace`. Both commands are currently supported, but `integration-replace` will be deprecated in a future release.
-{: note}
+or
 
 ```sh
 ibmcloud event-notifications integration-update --instance-id INSTANCE-ID --id ID --type Type --metadata METADATA
@@ -1993,14 +1996,17 @@ ibmcloud event-notifications template \
 ```
 {: pre}
 
-### `ibmcloud event-notifications template-update`
+### `ibmcloud event-notifications template-replace`
 {: #event-notifications-cli-template-update-command}
 
 Update details of a Template.
 
 ```sh
-ibmcloud event-notifications template-update --instance-id INSTANCE-ID --id ID [--name NAME] [--description DESCRIPTION] [--params PARAMS]
+ibmcloud event-notifications template-replace --instance-id INSTANCE-ID --id ID [--name NAME] [--description DESCRIPTION] [--params PARAMS]
 ```
+
+You can use `template-update` instead of `template-replace`. Both commands are currently supported, but `template-replace` will be deprecated in a future release.
+{: note}
 
 #### Command options
 {: #event-notifications-template-update-cli-options}
@@ -2044,8 +2050,7 @@ ibmcloud event-notifications template-replace \
 ```
 {: pre}
 
-Use `template-update` instead of `template-replace`. Both commands are currently supported, but `template-replace` will be deprecated in a future release.
-{: note}
+or
 
 ```sh
 ibmcloud event-notifications template-update \
