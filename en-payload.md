@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-04-29"
+lastupdated: "2026-08-20"
 
 keywords: event-notifications, event notifications migration, notifications, destinations, specification
 
@@ -21,12 +21,13 @@ This document outlines the {{site.data.keyword.en_short}} specification.
 ## Introduction
 {: #en-spec-payloadintro}
 
-This document describes the payload details for sending events notifications by using the API sources in {{site.data.keyword.en_short}}. API sources can be used to send events from your backend applications. You can use this document to send Push notifications from business backend.
+This document describes the payload details for sending event notifications through API sources in {{site.data.keyword.en_short}}. API sources enable you to send events from your backend applications to any configured destination, including custom email, custom SMS, push notifications, webhooks, and more.
 
-You can view the payload of incoming notifications by enabling the Store Notifications for your source. For more information, see [Viewing payloads of notifications](/docs/event-notifications?topic=event-notifications-en-view-notification-payloads).
+To route events to custom email and custom SMS destinations, populate the `ibmendefaultshort` and `ibmendefaultlong` extension attributes in your payload. These fields provide the default message content for email and SMS channels. For push notification delivery, use the destination specific attributes such as `ibmenfcmbody`, `ibmenapnsbody`, `ibmenchromebody`, and others.
 
+You can view the payload of incoming events by enabling Capture events for your source. For more information, see [Viewing payloads of notifications](/docs/event-notifications?topic=event-notifications-en-view-notification-payloads).
 
-Events from API sources cannot be routed to {{site.data.keyword.IBM_notm}} email and {{site.data.keyword.IBM_notm}} SMS destinations.
+Events from API sources cannot be routed to the other {{site.data.keyword.IBM_notm}} email and {{site.data.keyword.IBM_notm}} SMS destinations.
 {: important}
 
 ```sh
