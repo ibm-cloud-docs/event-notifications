@@ -45,9 +45,17 @@ Restrict access to the resources of Event Notifications by applying CBR on Contr
 ### Protecting cluster resources
 {: #en-manage-cbr-cluster-resources}
 
-You can create CBR rules on resource groups, regions, or instances.
+You can create CBR rules on resource groups, regions, instances, or specific resource types. The following parameters can be used for scoping a CBR rule.
 
-**Regions:**
+**Resource group:**
+
+Protects IBM Cloud Event Notifications Service resources in a specific resource group.
+
+If you use the CLI, you can specify the `--resource-group-id RESOURCE-GROUP-ID` option to protect resources in a specific resource group.
+
+If you use the API, you can specify `"name": "resourceGroupId","value": "RESOURCE-GROUP-ID"` field in the resource attributes.
+
+**Region:**
 
 Protects IBM Cloud Event Notifications Service resources in a specific region. If you select a region in your CBR rule, then only traffic from resources in the network zones that you associate with the rule can interact with resources in that region.
 
@@ -55,21 +63,49 @@ If you use the CLI, you can specify the `--region REGION` option to protect reso
 
 If you use the API, you can specify `"name": "region","value": "REGION"` field in the resource attributes.
 
-**Resource group:**
-
-Protects IBM Cloud Event Notifications Service resources in a specific resource group.
-
-If you use the CLI, you can specify the -`-resource-group-id RESOURCE-GROUP-ID` option to protect resources in a specific resource group.
-
-If you use the API, you can specify `"name": "resourceGroupId","value": "RESOURCE-GROUP-ID"` field in the resource attributes.
-
-**Instances:**
+**Service instance:**
 
 Protects specific instances of IBM Cloud Event Notifications Service.
 
-If you use the CLI, you can specify the -`-service-instance INSTANCE-ID` option to protect a specific instance
+If you use the CLI, you can specify the `--service-instance INSTANCE-ID` option to protect a specific instance.
 
 If you use the API, you can specify `"name": "serviceInstance","value": "INSTANCE-ID"` field in the resource attributes.
+
+**Environment:**
+
+Scopes the CBR rule to a specific deployment environment of the {{site.data.keyword.en_short}} service.
+
+If you use the API, you can specify `"name": "environment","value": "ENVIRONMENT"` field in the resource attributes.
+
+**Resource type:**
+
+Scopes the CBR rule to a specific type of resource within {{site.data.keyword.en_short}}.
+
+If you use the API, you can specify `"name": "resourceType","value": "RESOURCE-TYPE"` field in the resource attributes.
+
+**Resource:**
+
+Scopes the CBR rule to a specific resource within {{site.data.keyword.en_short}}.
+
+If you use the API, you can specify `"name": "resource","value": "RESOURCE-ID"` field in the resource attributes.
+
+**Subscription ID:**
+
+Scopes the CBR rule to a specific subscription within {{site.data.keyword.en_short}}.
+
+If you use the API, you can specify `"name": "subscriptionId","value": "SUBSCRIPTION-ID"` field in the resource attributes.
+
+**Topic ID:**
+
+Scopes the CBR rule to a specific topic within {{site.data.keyword.en_short}}.
+
+If you use the API, you can specify `"name": "topicId","value": "TOPIC-ID"` field in the resource attributes.
+
+**SMTP Config ID:**
+
+Scopes the CBR rule to a specific SMTP configuration within {{site.data.keyword.en_short}}.
+
+If you use the API, you can specify `"name": "smtpConfigId","value": "SMTP-CONFIG-ID"` field in the resource attributes.
 
 ### Protecting specific APIs
 {: #en-manage-cbr-apis}
@@ -78,7 +114,7 @@ You can create CBR rules to protect the following API types for IBM Cloud Event 
 
 ### Control plane APIs
 
-Protects access to the APIs of the service, such as the APIs for doing CRUD operations on all the available entities in Event Notifications such as sources, topics, subscriptions, and more. Also, it protects access while sending notifications and Push Destinations APIs. A full list of APIs is mentioned [here](https://cloud.ibm.com/apidocs/event-notifications).
+Protects access to the APIs of the service, such as the APIs for doing CRUD operations on all the available entities in Event Notifications such as sources, topics, subscriptions, SMTP configurations and more. Also, it protects access while sending notifications and Push Destinations APIs. A full list of APIs is mentioned [here](https://cloud.ibm.com/apidocs/event-notifications).
 
 If you select the cluster control plane APIs in your CBR rule, then only traffic from resources in the network zones that associate with that rule can interact with the cluster control plane APIs. All other requests are blocked.
 
