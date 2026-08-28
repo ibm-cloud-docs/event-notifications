@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-08-13"
+lastupdated: "2026-08-27"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -19,6 +19,14 @@ content-type: release-note
 
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
+
+## 27 August 2026
+{: #event-notifications-Aug272026}
+{: release-note}
+
+Granular context-based restrictions for SMTP sub-users
+:  You can now apply CBR rules at the per-sub-user level for the SMTP interface, enabling independent network restrictions for each SMTP sub-user within a single {{site.data.keyword.en_short}} instance. For more information, see [Managing access with context-based restrictions](/docs/event-notifications?topic=event-notifications-en-access-control-cbr).
+
 
 ## 12 August 2026
 {: #event-notifications-Aug122026}
