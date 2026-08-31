@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2026
-lastupdated: "2026-08-07"
+lastupdated: "2026-08-31"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -57,7 +57,7 @@ Route a single event notification to many destinations with just a few clicks. S
 ## Concepts
 {: #en-concepts}
 
-Learn about {{site.data.keyword.en_full}} concepts such as filters, conditions, and topics. 
+Learn about {{site.data.keyword.en_full}} concepts such as filters, conditions, and topics.
 
 
 ### Event
@@ -77,7 +77,7 @@ A service or application on {{site.data.keyword.cloud_notm}} that emits event no
 
 {{site.data.keyword.monitoringlong_notm}}, {{site.data.keyword.compliance_long}}, {{site.data.keyword.secrets-manager_full_notm}} Platform Notifications for {{site.data.keyword.cloud_notm}}, {{site.data.keyword.cloud_notm}} Resource Lifecycle Events, {{site.data.keyword.cloud_notm}} Projects, and Toolchain are enabled. A source can publish to multiple topics. In other contexts sources are identified as producers or publishers.
 
-The size limit for a send notification request is limited to 64 KB.
+Send notification requests are limited to 64KB.
 
 ### Filter
 {: #en-filters}

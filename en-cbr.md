@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2024-07-08"
+  years: 2026
+lastupdated: "2026-08-31"
 
 keywords: event-notifications, event notifications, about event notifications, context-based restrictions, access allowlist, network security
 
@@ -17,7 +17,7 @@ subcollection: event-notifications
 
 Context-based restrictions give account owners and administrators the ability to define and enforce access restrictions for IBM Cloud® resources based on the context of access requests. Access to IBM Cloud Event Notifications resources can be controlled with context-based restrictions and identity and access management policies.
 
-These restrictions work with traditional IAM policies, which are based on identity, to provide an extra layer of protection. Unlike IAM policies, context-based restrictions don't assign access. Context-based restrictions check that an access request comes from an allowed context that you configure. Since both IAM access and context-based restrictions enforce access, context-based restrictions offer protection even in the face of compromised or mismanaged credentials.
+These restrictions work with traditional IAM policies, which are based on identity, to provide another layer of protection. Unlike IAM policies, context-based restrictions don't assign access. Context-based restrictions check that an access request comes from an allowed context that you configure. Since both IAM access and context-based restrictions enforce access, context-based restrictions offer protection even in the face of compromised or mismanaged credentials.
 
 After you set up your {{site.data.keyword.en_short}} service instance, you can manage access by using [context-based restrictions (CBR)](https://cloud.ibm.com/context-based-restrictions/overview){: external}.
 {: shortdesc}

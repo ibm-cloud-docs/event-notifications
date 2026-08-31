@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2026
-lastupdated: "2026-07-30"
+lastupdated: "2026-08-31"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, webhook
 
@@ -57,200 +57,277 @@ Effective starting August 29, 2026:
 
 - **Region-specific IP addresses**: Allowlist the IP addresses for the region where your {{site.data.keyword.en_short}} service instance is deployed. If you use {{site.data.keyword.en_short}} service instances in multiple regions, allowlist the IP addresses for each applicable region.
 
-   **Dallas (us-south)**
+#### Dallas (us-south)
+{: #dallas-us-south}
 
-   - Public
-      ```
-      52.118.150.206
-      52.118.211.163
-      67.18.95.240
-      ```
-   - Private
-      ```
-      10.22.12.198
-      10.22.26.163
-      10.119.56.147
-      ```
+- Public
 
-   **Sydney (au-syd)**
+   ```txt
+   52.118.150.206
+   52.118.211.163
+   67.18.95.240
+   ```
+   {: codeblock}
 
-   - Public
-      ```
-      159.23.97.10
-      130.198.9.234
-      135.90.131.19
-      ```
-   - Private
-      ```
-      10.223.237.137
-      10.51.176.13
-      10.223.253.235
-      ```
+- Private
 
-   **London (eu-gb)**
+   ```txt
+   10.22.12.198
+   10.22.26.163
+   10.119.56.147
+   ```
+   {: codeblock}
 
-   - Public
-      ```
-      158.176.171.145
-      158.175.189.21
-      141.125.162.123
-      ```
-   - Private
-      ```
-      10.16.48.81
-      10.16.62.205
-      10.223.21.154
-      ```
+#### Sydney (au-syd)
+{: #sydney-au-syd}
 
-   **Madrid (eu-es)**
+- Public
 
-   - Public
-      ```
-      13.121.86.163
-      13.122.88.117
-      13.120.93.85
-      ```
-   - Private
-      ```
-      10.22.177.232
-      10.22.195.222
-      10.22.202.91
-      ```
+   ```txt
+   159.23.97.10
+   130.198.9.234
+   135.90.131.19
+   ```
+   {: codeblock}
 
-   **Frankfurt (eu-de)**
+- Private
 
-   - Public
-      ```
-      149.81.4.209
-      149.81.212.50
-      158.176.1.49
-      ```
-   - Private
-      ```
-      10.16.206.123
-      10.22.112.128
-      10.16.216.36
-      ```
+   ```txt
+   10.223.237.137
+   10.51.176.13
+   10.223.253.235
+   ```
+   {: codeblock}
 
-   **Osaka (jp-osa)**
+#### London (eu-gb)
+{: #london-eu-gb}
 
-   - Public
-      ```
-      163.68.88.77
-      163.69.84.115
-      163.73.93.115
-      ```
-   - Private
-      ```
-      10.12.21.131
-      10.12.33.173
-      10.12.38.219
-      ```
+- Public
 
-   **Tokyo (jp-tok)**
+   ```txt
+   158.176.171.145
+   158.175.189.21
+   141.125.162.123
+   ```
+   {: codeblock}
 
-   - Public
-      ```
-      165.192.134.77
-      162.133.141.117
-      128.168.131.96
-      ```
-   - Private
-      ```
-      10.223.197.48
-      10.223.201.138
-      10.223.213.141
-      ```
+- Private
 
-   **Toronto (ca-tor)**
+   ```txt
+   10.16.48.81
+   10.16.62.205
+   10.223.21.154
+   ```
+   {: codeblock}
 
-   - Public
-      ```
-      163.74.90.220
-      163.75.87.40
-      163.66.93.241
-      ```
-   - Private
-      ```
-      10.223.149.61
-      10.223.166.200
-      10.223.182.99
-      ```
+#### Madrid (eu-es)
+{: #madrid-eu-es}
 
-   **Montreal (ca-mon)**
+- Public
 
-   - Public
-      ```
-      64.5.42.20
-      64.5.48.239
-      64.5.44.233
-      ```
-   - Private
-      ```
-      10.46.73.140
-      10.46.77.140
-      10.46.81.140
-      ```
+   ```txt
+   13.121.86.163
+   13.122.88.117
+   13.120.93.85
+   ```
+   {: codeblock}
 
-   **Sao Paulo (br-sao)**
+- Private
 
-   - Public
-      ```
-      13.116.82.0
-      163.107.92.208
-      163.109.92.155
-      ```
-   - Private
-      ```
-      10.12.183.145
-      10.12.71.56
-      10.51.193.111
-      ```
+   ```txt
+   10.22.177.232
+   10.22.195.222
+   10.22.202.91
+   ```
+   {: codeblock}
 
-   **Washington DC (us-east)**
+#### Frankfurt (eu-de)
+{: #frankfurt-eu-de}
 
-   - Public
-      ```
-      52.117.124.52
-      169.63.177.17
-      150.239.80.160
-      ```
-   - Private
-      ```
-      10.22.41.152
-      10.22.50.51
-      10.12.118.230
-      ```
+- Public
 
-   **Chennai (in-che)**
+   ```txt
+   149.81.4.209
+   149.81.212.50
+   158.176.1.49
+   ```
+   {: codeblock}
 
-   - Public
-      ```
-      169.38.17.66
-      169.38.9.38
-      169.38.13.18
-      ```
-   - Private
-      ```
-      10.46.128.179
-      10.46.132.179
-      10.46.136.179
-      ```
+- Private
 
-   **Mumbai (in-mum)**
+   ```txt
+   10.16.206.123
+   10.22.112.128
+   10.16.216.36
+   ```
+   {: codeblock}
 
-   - Public
-      ```
-      169.38.211.191
-      169.38.236.49
-      169.38.42.162
-      ```
-   - Private
-      ```
-      10.223.94.240
-      10.223.103.208
-      10.249.119.171
-      ```
+#### Osaka (jp-osa)
+{: #osaka-jp-osa}
+
+- Public
+
+   ```txt
+   163.68.88.77
+   163.69.84.115
+   163.73.93.115
+   ```
+   {: codeblock}
+
+- Private
+
+   ```txt
+   10.12.21.131
+   10.12.33.173
+   10.12.38.219
+   ```
+   {: codeblock}
+
+#### Tokyo (jp-tok)
+{: #tokyo-jp-tok}
+
+- Public
+
+   ```txt
+   165.192.134.77
+   162.133.141.117
+   128.168.131.96
+   ```
+   {: codeblock}
+
+- Private
+
+   ```txt
+   10.223.197.48
+   10.223.201.138
+   10.223.213.141
+   ```
+   {: codeblock}
+
+#### Toronto (ca-tor)
+
+- Public
+
+   ```txt
+   163.74.90.220
+   163.75.87.40
+   163.66.93.241
+   ```
+   {: codeblock}
+
+- Private
+
+   ```txt
+   10.223.149.61
+   10.223.166.200
+   10.223.182.99
+   ```
+   {: codeblock}
+
+#### Montreal (ca-mon)
+{: #montreal-ca-mon}
+
+- Public
+
+   ```txt
+   64.5.42.20
+   64.5.48.239
+   64.5.44.233
+   ```
+   {: codeblock}
+
+- Private
+
+   ```txt
+   10.46.73.140
+   10.46.77.140
+   10.46.81.140
+   ```
+   {: codeblock}
+
+#### Sao Paulo (br-sao)
+{: #sao-paulo-br-sao}
+
+- Public
+
+   ```txt
+   13.116.82.0
+   163.107.92.208
+   163.109.92.155
+   ```
+   {: codeblock}
+
+- Private
+
+   ```txt
+   10.12.183.145
+   10.12.71.56
+   10.51.193.111
+   ```
+   {: codeblock}
+
+#### Washington DC (us-east)
+{: #washington-dc-us-east}
+
+- Public
+
+   ```txt
+   52.117.124.52
+   169.63.177.17
+   150.239.80.160
+   ```
+   {: codeblock}
+
+- Private
+
+   ```txt
+   10.22.41.152
+   10.22.50.51
+   10.12.118.230
+   ```
+   {: codeblock}
+
+#### Chennai (in-che)
+{: #chennai-in-che}
+
+- Public
+
+   ```txt
+   169.38.17.66
+   169.38.9.38
+   169.38.13.18
+   ```
+   {: codeblock}
+
+- Private
+
+   ```txt
+   10.46.128.179
+   10.46.132.179
+   10.46.136.179
+   ```
+   {: codeblock}
+
+#### Mumbai (in-mum)
+{: #mumbai-in-mum}
+
+- Public
+
+   ```txt
+   169.38.211.191
+   169.38.236.49
+   169.38.42.162
+   ```
+   {: codeblock}
+
+- Private
+
+   ```txt
+   10.223.94.240
+   10.223.103.208
+   10.249.119.171
+   ```
+   {: codeblock}
 
 ## Webhook retry policy
 {: #en-webhook-retry}
