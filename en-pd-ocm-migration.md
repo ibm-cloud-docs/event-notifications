@@ -2,7 +2,7 @@
 
 copyright:
    years: 2026
-lastupdated: "2026-08-12"
+lastupdated: "2026-08-31"
 
 keywords: event-notifications, event notifications, pagerduty, on call manager, ocm, migration, icl, cloud logs
 
@@ -52,7 +52,7 @@ If resolved alerts are being re-triggered in PagerDuty instead of being closed, 
 {: #en-create-icl-integration}
 {: step}
 
-1. Log in to your [On Call Manager](https://oncallmanager.ibm.com){: external} account.
+1. Log in to your [On Call Manager](https://oncallmanager.ibm.com/cemui/onboard-users){: external} account.
 
 1. Click **Administration** > **Integrations**.
 
@@ -113,7 +113,7 @@ Follow these steps for sources other than {{site.data.keyword.logs_full_notm}}, 
 {: #en-create-outbound-integration}
 {: step}
 
-1. Log in to your [On Call Manager](https://oncallmanager.ibm.com){: external} account.
+1. Log in to your [On Call Manager](https://oncallmanager.ibm.com/cemui/onboard-users){: external} account.
 
 1. Click **Administration** > **Integrations**.
 
@@ -246,5 +246,5 @@ After you complete the migration:
 
 For more information about {{site.data.keyword.en_short}} templates and customization, see:
 - [Webhook notification templates](/docs/event-notifications?topic=event-notifications-en-webhook-notifications-template)
-- [Creating templates](/docs/event-notifications?topic=event-notifications-en-create-template)
-- [Mapping notification payload](/docs/event-notifications?topic=event-notifications-en-map-notification-payload)
+- [Creating templates](/docs/event-notifications?topic=event-notifications-en-create-en-template)
+- [Viewing notification payload](/docs/event-notifications?topic=event-notifications-en-view-notification-payload)

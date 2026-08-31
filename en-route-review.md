@@ -2,7 +2,7 @@
 
 copyright:
    years: 2026
-lastupdated: "2026-06-09"
+lastupdated: "2026-08-31"
 
 keywords: event notifications, review, test, verify
 
@@ -39,4 +39,4 @@ Now that you set up a complete event routing flow, you can:
 
 * [Create notification templates](/docs/event-notifications?topic=event-notifications-en-create-en-template) to customize the format and content of your notifications.
 
-* [Monitor notification delivery](/docs/event-notifications?topic=event-notifications-en-monitoring) to track performance and troubleshoot issues.
+* [Monitor notification delivery](/docs/event-notifications?topic=event-notifications-monitoring) to track performance and troubleshoot issues.
