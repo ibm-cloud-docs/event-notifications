@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2021, 2026
-lastupdated: "2026-08-31"
+lastupdated: "2026-09-01"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email, smtp
 
@@ -70,7 +70,7 @@ After creating an SMTP configuration in an {{site.data.keyword.en_short}} instan
 
     8. If you send the html content in the notification payload, do you have a process to validate this content is well formatted? Poorly formatted HTML content may decrease the server reputation.
     ```
-    {: codeblock}
+    {: screen}
 
     While many questions are self-explanatory, we have provided explanations for a few to ensure clarity.
 

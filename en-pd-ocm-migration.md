@@ -2,7 +2,7 @@
 
 copyright:
    years: 2026
-lastupdated: "2026-08-31"
+lastupdated: "2026-09-01"
 
 keywords: event-notifications, event notifications, pagerduty, on call manager, ocm, migration, icl, cloud logs
 
@@ -60,7 +60,7 @@ If resolved alerts are being re-triggered in PagerDuty instead of being closed, 
 
 1. Locate the **IBM Cloud Logs** tile and click **Configure**.
 
-1. Enter a name for the integration (for example, "Cloud Logs Production Alerts").
+1. Enter a name for the integration. For example, *Cloud logs production alerts*.
 
 1. Click **Copy** ![Copy](/images/copy.svg) to copy the generated webhook URL to the clipboard. Save this URL for use in the next step.
 
@@ -76,7 +76,7 @@ If resolved alerts are being re-triggered in PagerDuty instead of being closed, 
 
 1. Click **Create** in the **Destinations** section.
 
-1. Provide a name and description for the destination (for example, "OCM Webhook - Cloud Logs") in the **Create destination** dialog.
+1. Provide a name and description for the destination in the **Create destination** dialog. For example, *OCM Webhook - Cloud Logs*.
 
 1. Select the destination type as **Webhook**.
 
@@ -98,7 +98,7 @@ If resolved alerts are being re-triggered in PagerDuty instead of being closed, 
 
 1. Enter a name for the subscription (for example, "Cloud Logs to OCM") in the **Create subscription** dialog.
 
-1. Select the OCM webhook destination you created earlier.
+1. Select the OCM webhook destination that you created earlier.
 
 1. Click **Create**.
 
@@ -121,7 +121,7 @@ Follow these steps for sources other than {{site.data.keyword.logs_full_notm}}, 
 
 1. Locate the **Webhook** tile and click **Configure**.
 
-1. Enter a name for the integration (for example, "IBM Cloud Services Webhook").
+1. Enter a name for the integration. For example, *IBM Cloud Services Webhook*.
 
 1. Click **Copy** ![Copy](/images/copy.svg) to copy the generated webhook URL to the clipboard. Save this URL for use in the next step.
 
@@ -137,7 +137,7 @@ Follow these steps for sources other than {{site.data.keyword.logs_full_notm}}, 
 
 1. Click **Create** in the **Destinations** section.
 
-1. Provide a name and description for the destination (for example, "OCM Webhook - General") in the **Create destination** dialog.
+1. Provide a name and description for the destination in the **Create destination** dialog. For example, *OCM Webhook - General"*.
 
 1. Select the destination type as **Webhook**.
 
@@ -161,7 +161,7 @@ To create a new webhook template:
 
 1. Click **Create** to create a user-defined template.
 
-1. Enter a name for the template (for example, "OCM Webhook Template - Secrets Manager") in the **Create a template** dialog.
+1. Enter a name for the template in the **Create a template** dialog. For example, *OCM Webhook Template - Secrets Manager*.
 
 1. Optionally, enter a description.
 
@@ -180,6 +180,7 @@ To create a new webhook template:
        "resolution": false
    }
    ```
+   {: codeblock}
 
    **IBM Cloud Monitoring source:**
 
@@ -192,6 +193,7 @@ To create a new webhook template:
        "eventtype": "{{#if (contains subject "Triggered")}}Trigger{{else}}Resolved{{/if}}"
    }
    ```
+   {: codeblock}
 
    For more information about template syntax and available variables, see [Webhook notification templates](/docs/event-notifications?topic=event-notifications-en-webhook-notifications-template).
 
@@ -205,7 +207,7 @@ To create a new webhook template:
 
 1. Click the **Subscriptions** tab, then click **Create**.
 
-1. Enter a name for the subscription (for example, "Secrets Manager to OCM") in the **Create subscription** dialog.
+1. Enter a name for the subscription in the **Create subscription** dialog. For example, *Secrets Manager to OCM*.
 
 1. Optionally, enter a description.
 
@@ -219,7 +221,6 @@ Your IBM Cloud service alerts are now configured to route to On Call Manager thr
 
 ## Verify the integration
 {: #en-verify-integration}
-
 
 To verify your migration was successful:
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-08-04"
+lastupdated: "2026-09-01"
 
 keywords: about payload of notifications, store notifications, view notification, notification payloads, troubleshooting
 
@@ -53,7 +53,7 @@ To view event payloads:
 **Search**
 :   A search field allows you to filter event payloads by entering search criteria. The search filters event payloads based on notification ID, timestamp, summary (`ibmendefaultshort` parameter from the payload).
 
-**List of events payloads** displays **Notification ID**, **Summary** and **Timestamp** of each event payload. 
+**List of events payloads** displays **Notification ID**, **Summary** and **Timestamp** of each event payload.
 
 ### Viewing event payload details
 {: #en-view-notification-payloads-details}
@@ -63,7 +63,7 @@ To view the complete event payload:
 1. In the list of event payloads on the **Source Events** dialog, locate the event payload you want to inspect.
 1. Click the expand icon on the event payload row to view the payload.
 
-You can copy the JSON payload by clicking the copy icon in the upper right corner of the payload display.
+You can copy the JSON payload by clicking the copy icon in the payload display.
 
 ## Disabling storage of event payloads
 {: #en-view-notification-payloads-disable}

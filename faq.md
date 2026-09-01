@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2026
-lastupdated: "2026-08-31"
+lastupdated: "2026-09-01"
 
 
 keywords: event-notification, event notification, faqs, Frequently Asked Questions, question, billing, service, invalid devices, device deletion, database
@@ -13,7 +13,7 @@ subcollection: event-notifications
 
 {{site.data.keyword.attribute-definition-list}}
 
-# FAQs for {{site.data.keyword.en_short}}
+# FAQ for {{site.data.keyword.en_short}}
 {: #en-faqs-operations}
 
 FAQs for {{site.data.keyword.en_short}} provide answers to common operations issues.
@@ -154,7 +154,7 @@ For security reasons, certain file extensions are blocked when sending email att
 
 The following table lists the blocked file extensions:
 
-| | | | |
+| Block file extensions |
 |-------------|-------------|-------------|-------------|
 | `.ade` | `.adp` | `.app` | `.asp` |
 | `.bas` | `.bat` | `.cer` | `.chm` |
