@@ -179,15 +179,19 @@ toc:
               href: https://registry.terraform.io/modules/terraform-ibm-modules/event-notifications/ibm/latest
       - en-regions-endpoints.md
       - en-vpe.md
-      - data-portability.md
+      - topic: data-portability.md
+        navtitle: Understanding data portability
       - en-payload.md
       - en-map-notification-payload.md
-      - en-notices.md
+      - topic: en-notices.md
+        navtitle: en-notices.md
   - navgroup:
       id: help
       topics:
-      - en-getting-support.md
-      - faq.md
+      - topic: en-getting-support.md
+        navtitle: Getting help and support
+      - topic: faq.md
+        navtitle: FAQ
       - topicgroup:
           label: Troubleshooting
           topics:
