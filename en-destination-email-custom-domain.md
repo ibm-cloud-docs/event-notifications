@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2021, 2026
-lastupdated: "2026-08-04"
+lastupdated: "2026-09-01"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email,  sandbox, testing
 
@@ -72,7 +72,7 @@ After you create the sandbox destination, {{site.data.keyword.en_short}} automat
 ### Transitioning from sandbox to production
 {: #en-destinations-custom-email-sandbox-to-production}
 
-After you complete testing in sandbox mode and are ready to send notifications to a larger audience, you can transition your existing sandbox destination to production mode by updating the domain.
+After you complete testing in sandbox mode and are ready to send notifications to real recipients, you can transition your existing sandbox destination to production mode by updating the domain.
 
 Updating the domain transitions you out of the sandbox environment. You must reconfigure and verify your own domain and update the subscription details in the subscriptions section.
 {: important}

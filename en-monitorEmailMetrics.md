@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025
-lastupdated: "2025-12-08"
+  years: "2025, 2026"
+lastupdated: "2026-09-01"
 
 keywords: event-notifications, metrics for email notifications, monitor metrics
 
@@ -12,117 +12,84 @@ subcollection: event-notifications
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Monitor {{site.data.keyword.en_full}} metrics for email notifications
+# Monitoring metrics for email notifications
 {: #en-manage-monitor-metrics}
 
-You can track metrics for email notifications sent through custom domain email and SMTP, such as the number of emails delivered. This allows you to analyze customer behavior in real time and optimize your communication strategy.
+In {{site.data.keyword.en_full}}, you can track metrics for email notifications sent through custom domain email and SMTP, such as the number of emails delivered. This allows you to analyze customer behavior in real time and optimize your communication strategy.
 {: shortdesc}
 
-To monitor metrics for email notifications sent from custom domain or SMTP,click **Metrics** on your provisioned instance of {{site.data.keyword.en_short}} console.
+## How can I view metrics?
+{: #en-view-metrics}
+
+To monitor metrics for email notifications sent from either a custom domain or an SMTP, click **Metrics** on your provisioned {{site.data.keyword.en_short}} instance in the console.
+
+## Filtering metrics
+{: #en-filter-metrics}
+
+You can use the filters available in the console to specify specific time periods or types of data that you want to review. By reviewing your metrics, you can infer information about your customer database that can inform your notification strategy. From your metrics, you are able to see the following information:
+
+	* **Email address**: The email address of the receiver.
+	* (Custom only) **Subscription**: The subscription to which the notifications are sent.
+	* (SMTP only) **Timestamp**: The timestamp of the bounced notification.
+	* **Bounce Reason**: The reason behind the notification bounce.
+	* **Subject**: The subject of the bounced email.
+
+## How can I filter metrics for emails that are sent from a custom domain?
+{: #en-filter-email-metrics-customDomain}
+
+To view metrics for email notifications that are sent from custom domains, you can filter it according to the following options.
+
+1. In the **Attributes** section, select **Custom email** from the **Destination type** options.
+2. Filter your attributes by using following options in the **Where** menu.
+
+   * Notification ID
+   * Destination name
+   * Source name
+   * Email to
+   * Subject
+   * Subscription name
+
+	The values provided for Notification ID, Email to, and Subject must be exact if they are used as filter criteria. You can slect required values from destination name and source name if they are used as criteria to filter.
+	{: tip}
+
+3. Select a pre-defined time period such as **Last 24 hours**, **Last 7 days**, or **Last 30 days**, or provide specific dates that you want to review.
 
 
-## View metrics for email notifications
-{: #en-view-email-metrics}
+## How can I filter metrics for emails that are sent from an SMTP?
+{: #en-filter-email-metrics-smtp}
 
-You can understand customer behaviour and use this information to optimize your notification strategy.
-You can use these metrics to gain insights at any given time.
+To view metrics for email notifications that are sent from an SMTP, you can filter it according to the following options.
 
-### View metrics for email notifications sent from custom domain
-{: #en-view-email-metrics-customDomain}
+1. In the **Attributes** section, select **SMTP configuration** from the **Destination type** options.
+2. Select the **SMTP configuration** that you are working with from the **Select** menu.
+3. Filter your attributes by using following options in the **Where** menu.
 
-To filter metrics for email notifications sent from custom domain email you must select **Destination Type** as **Custom Email** in the **Attributes** section.
+   * SMTP user name
+   * Email from
+   * Email to
+   * Subject
 
-To add more filter criteria, click **Filter** and select one of the following attribute from **Where** menu.
+	The values provided must be exact if they are used as filter criteria in order for the search to be successful.
+	{: tip}
 
-1. **Notification ID**
+4. Select a pre-defined time period such as **Last 24 hours**, **Last 7 days**, or **Last 30 days**, or provide specific dates that you want to review.
 
-1. **Destination name**
+## How do I know whether my email was received?
+{: #en-notifications-email-bounce-rate}
 
-1. **Source name**
+By reviewing your metrics, you can see which emails were not received because they bounced.
 
-1. **Email to**
+	* **Email address**: The email address of the receiver.
+	* (Custom only) **Subscription**: The subscription to which the notifications are sent.
+	* (SMTP only) **IP Address**: The IP address of the sender
+	* **Timestamp**: The timestamp of the bounced notification.
+	* **Bounce Reason**: The reason behind the notification bounce.
+	* **Subject**: The subject of the bounced email.
 
-1. **Subject**
+## Downloading metrics?
+{: #en-download-metrics}
 
-1. **Subscription name**
+To download Event Notifications metrics to your local system, you can use the following steps.
 
-You must provide valid values for **Notification ID** , **Email to** and **Subject** if added to the filter criteria. You can select required values from **Destination name** and **Source name** if added to the filter criteria.
-
-You can view metrics for pre-defined time periods of **Last 24 hours**, **Last 7 days**, or **Last 30 days** or custom defined dates.
-It helps you to form a new strategy or modify the existing one depending on the values of the following metrics.
-
-1. **Emails sent** : The total number of emails that are sent to the recipients in the selected time period.
-
-1. **Delivered** : The total number of emails that successfully reach to the recipients in the selected time period.
-
-1. **Failed** : The total number of emails that fail to deliver successfully to the recipients in the selected time period.
-
-1. **Open rate** : The percentage of emails that the receivers open upon delivery.
-
-1. **Bounce rate** : The percentage of emails that do not deliver to the intended recipient and bounce back.
-
-The visual represention using graphs can help you to understand pattern of metrics over a certain time period. You can understand percentage of **Delivered**, **Failed**, and **Opened** mails for the selected time period at a glance.
-
-To download the metrics in your local system, go to **More** &gt; **Export to [desired format]**. Currently, you can export the graphs in CSV, PNG, and JPG formats.
-
-You can also get a glimpse of the total number of **Bounced** or **Opened** notifications for the selected time period.
-
-To view the the notifications that have bounced, you can refer to the bounce table that contains the following information:
-
-1. **Email address** : The email address of the receiver.
-
-1. **Subscription** : The subscription to which the notifications are sent.
-
-1. **Timestamp** : The timestamp of the bounced notification.
-
-1. **Bounce Reason** : The reason behind the notification bounce.
-
-1. **Subject** : The subject of the bounced email.
-
-
-### View metrics for email notifications sent from SMTP configuration
-{: #en-view-email-metrics-smtp}
-
-To filter metrics for email notifications sent from SMTP you must select **Destination Type** as **SMTP configuration** in the **Attributes** section. You must also choose the required **SMTP Configuration** from the **Select Menu**.
-
-To add more filter criteria, click **Filter** and select one of the following attribute from **Where** menu.
-
-1. **SMTP user name**
-
-1. **Email from**
-
-1. **Email to**
-
-1. **Subject**
-
-You must provide valid values for all the above attributes if added to filter criteria.
-
-You can view metrics for pre-defined time periods of **Last 24 hours**, **Last 7 days**, or **Last 30 days** or custom defined dates.
-It helps you to form a new strategy or modify the existing one depending on the values of the below metrics.
-
-1. **Emails sent** : The total number of emails that are sent to the recipients in the selected time period.
-
-1. **Delivered** : The total number of emails that successfully reach to the recipients in the selected time period.
-
-1. **Failed** : The total number of emails that fail to deliver successfully to the recipients in the selected time period.
-
-1. **Bounce rate** : The percentage of emails that do not deliver to the intended recipient and bounce back.
-
-
-The visual represention using graphs can help you to understand pattern of metrics over a certain time period. You can understand percentage of **Delivered**, and **Failed** mails for the selected time period at a glance.
-
-To download the metrics in your local system, go to **More** &gt; **Export to [desired format]**. Currently, you can export the graphs in CSV, PNG, and JPG formats.
-
-You can also get a glimpse of the total number of **Bounced** notifications for the selected time period.
-
-To view the the notifications that have bounced, you can refer to the bounce table that contains the following information:
-
-1. **Email address** : The email address of the receiver.
-
-1. **IP Address** : The IP address of the sender.
-
-1. **Timestamp** : The timestamp of the bounced notification.
-
-1. **Bounce Reason** : The reason behind the notification bounce.
-
-1. **Subject** : The subject of the bounced email.
+1. In the Event Notifications UI go to **More** > **Export to [desired format]**
+2. Select the type of format that you want to export to. Options include **CSV**, **PNG**, and **JPG**.

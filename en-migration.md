@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2026-08-04"
+lastupdated: "2026-09-01"
 
 keywords: event-notifications, event notifications migration, notifications, destinations, push, migration
 
@@ -1179,7 +1179,7 @@ try {
 ### If you are using REST API
 {: #en-migrate-using-restapi}
 
-This section describes the modifications required for the Send Notifications API. The new API has extra parameters in the request body. The required parameters for Android push notifications are as follows:
+This section describes the modifications required for the Send Notifications API. The new API has added parameters in the request body. The required parameters for Android push notifications are as follows:
 
 ```js
 {
@@ -1192,6 +1192,7 @@ This section describes the modifications required for the Send Notifications API
    "ibmenpushto": "{\"fcm_devices\": [\"9c75975a-3898-905d-3bd7c172\"]]}",
   }
 ```
+{: codeblock}
 
 For a detailed description of the event attributes, see the {{site.data.keyword.en_full}} event attribute definition.
 
@@ -1227,6 +1228,7 @@ For a detailed description of the event attributes, see the {{site.data.keyword.
   "type": "com.acme.flightbooking.complete"
 }
 ```
+{: codeblock}
 
 * `target` field is replaced by `ibmenpushto`
 * `message` field is removed. The `alert`, `url` fields are part of the `ibmenfcmbody`
