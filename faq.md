@@ -154,7 +154,7 @@ For security reasons, certain file extensions are blocked when sending email att
 
 The following table lists the blocked file extensions:
 
-| Extensions | | | |
+| Extensions | Extensions | Extensions | Extensions |
 |-------------|-------------|-------------|-------------|
 | `.ade` | `.adp` | `.app` | `.asp` |
 | `.bas` | `.bat` | `.cer` | `.chm` |
