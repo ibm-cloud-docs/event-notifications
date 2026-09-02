@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-10-10"
+  years: 2022, 2026
+lastupdated: "2026-09-02"
 
 keywords: event-notifications, event notifications, destinations, pagerduty
 
@@ -25,7 +25,7 @@ When you select PagerDuty as service destination, any subscribed notification ab
 
 To integrate your PagerDuty service to {{site.data.keyword.en_short}} service destination, you need to generate a PagerDuty routing key. To generate a PagerDuty routing key, follow these steps: [Generate a new Integration Key](https://support.pagerduty.com/main/docs/services-and-integrations#generate-a-new-integration-key){: external}.
 
-If you already integrated EventsV2 API with your PagerDuty service, go to the service directory, select **More**, and select **View Integrations**. The Integration key is available in this view.
+If you already integrated Events V2 API with your PagerDuty service, go to the service directory, select **More**, and select **View Integrations**. The Integration key is available in this view.
 {: note}
 
 ## Configuring a PagerDuty destination

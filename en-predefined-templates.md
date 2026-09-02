@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025
-lastupdated: "2025-11-07"
+  years: 2025, 2026
+lastupdated: "2026-09-02"
 
 keywords: predefined templates
 
@@ -10,11 +10,14 @@ subcollection: event-notifications
 ---
 {{site.data.keyword.attribute-definition-list}}
 
-# Pre-defined templates
+# Managing pre-defined templates for notification messages
 {: #en-predefinedTemplates}
 
-You can use pre-defined templates to design and structure notification messages. You can modify a pre-defined template to best suit your requirements and save it as a user-defined template. {{site.data.keyword.cloud_notm}} services source these payloads and destinations like Slack, email and Microsoft Teams render them in a user-defined template structure.
+You can use pre-defined templates to design and structure notifications that are managed by using {{site.data.keyword.en_short}}. {{site.data.keyword.cloud_notm}} services source these payloads and destinations like Slack, email and Microsoft Teams render them in a user-defined template structure.
 {: shortdesc}
+
+For more custom messages, you can modify an existing template to better suit your needs and save it as a user-defined template.
+{: tip}
 
 A pre-defined template definition maps to a pair of a source and a destination and has a single instance. For example, a pre-defined template definition maps to a Resource Lifecycle event as a source and a Slack as a destination.
 
