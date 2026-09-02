@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2024
-lastupdated: "2024-10-08"
+  years: 2019, 2026
+lastupdated: "2026-09-02"
 
 keywords: question about event notifications, notification, notifications
 
@@ -19,13 +19,13 @@ content-type: troubleshoot
 {: troubleshoot}
 {: support}
 
-Notification is not received at the destinations.
+A notification is not received.
 {: shortdesc}
 
-Notification is not received at the destinations, for example: SMTP_IBM, SMS_IBM.
+The notification is not received at the destination. For example, SMTP_IBM, SMS_IBM.
 {: tsSymptoms}
 
-The most common cause would be that conditions (rules) written for the topic does not match with the incoming payload.
+Most commonly, the cause is that the conditions (rules) written for the topic do not match with the incoming payload.
 {: tsCauses}
 
 If you are using static events (event type, event subtype and severity)

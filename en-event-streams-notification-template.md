@@ -12,7 +12,7 @@ subcollection: event-notifications
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Event Streams Notification Template
+# Managing Event Streams notification templates
 {: #en-event-streams-notification-template}
 
 {{site.data.keyword.messagehub}} is a message bus that is built by using Apache Kafka. In Event Streams, applications can send data by creating messages and sending to a topic. To receive messages, the application subscribes to a topic and can choose to receive all the messages of the topic or share the messages between them.

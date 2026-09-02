@@ -17,7 +17,7 @@ content-type: cli-docs
 # {{site.data.keyword.en_short}} CLI reference
 {: #event-notifications-cli}
 
-The {{site.data.keyword.cloud_notm}} command-line interface (CLI) provides additional capabilities for service offerings. {{site.data.keyword.cloud_notm}} CLI supports a plug-in framework to extend its capability. You can install the {{site.data.keyword.en_short}} CLI plug-in from the {{site.data.keyword.cloud_notm}} plug-in repository. With the {{site.data.keyword.en_short}} service CLI plug-in, you can easily manage {{site.data.keyword.en_short}} service instances by using the CLI commands available.
+To work with {{site.data.keyword.en_short}} by using the command-line interface (CLI) you can install the {{site.data.keyword.en_short}} CLI plug-in from the {{site.data.keyword.cloud_notm}} plug-in repository. The plug-in is designed to extend the capabilities that are offered by the {{site.data.keyword.cloud_notm}} CLI.
 {: shortdesc}
 
 ## Prerequisites

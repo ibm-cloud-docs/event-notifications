@@ -11,7 +11,7 @@ subcollection: event-notifications
 ---
 {{site.data.keyword.attribute-definition-list}}
 
-# Testing destination connections in Event Notifications
+# Testing destination connections for Event Notifications
 {: #en-test-destination}
 
 Maintaining the health and integrity of your connections is paramount. Making sure that your destinations deliver events reliably and the connection to the third-party apps is always up to date, is vital. To verify that the connection to your destination is correct, you can run a test.
