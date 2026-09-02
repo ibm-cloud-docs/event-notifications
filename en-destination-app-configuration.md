@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-08-04"
+lastupdated: "2026-09-02"
 
 keywords: event-notifications, event notifications, about event notifications, destinations,app configuration, app config
 
@@ -12,7 +12,7 @@ subcollection: event-notifications
 
 {{site.data.keyword.attribute-definition-list}}
 
-# {{site.data.keyword.appconfig_notm}}
+# Configuring {{site.data.keyword.appconfig_notm}} as a destination in {{site.data.keyword.en_short}}
 {: #en-destination-app-configuration}
 
 {{site.data.keyword.appconfig_short}} is a centralized feature management and configuration service for use with web and mobile applications, microservices, and distributed environments. You can define feature flags, which are organized into collections and targeted to segments. Change feature flag states in the cloud to activate or deactivate features in your application or environment, often without restarting.

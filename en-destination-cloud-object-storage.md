@@ -12,7 +12,7 @@ subcollection: event-notifications
 
 {{site.data.keyword.attribute-definition-list}}
 
-# {{site.data.keyword.cos_full_notm}}
+# Configuring {{site.data.keyword.cos_short}} as a destination in {{site.data.keyword.en_short}}
 {: #en-destinations-cloud-object-storage}
 
 {{site.data.keyword.cos_full_notm}} is a highly scalable cloud storage service, which is designed for high durability, resiliency, and security. Store, manage, and access your data through the self-service portal and RESTful APIs. The files that are uploaded into {{site.data.keyword.cos_full_notm}} are called **objects**. The uploaded objects are organized into **buckets** that serve as containers for objects.

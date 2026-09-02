@@ -12,7 +12,7 @@ subcollection: event-notifications
 
 {{site.data.keyword.attribute-definition-list}}
 
-# PagerDuty
+# Configuring PagerDuty as a destination in {{site.data.keyword.en_short}}
 {: #en-destinations-pagerduty}
 
 PagerDuty empowers users and organizations to prevent and resolve business-impacting incidents for exceptional customer experience. PagerDuty helps organizations with the insight to proactively manage events that may impact customers across their IT environment.

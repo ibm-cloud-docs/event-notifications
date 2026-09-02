@@ -12,7 +12,7 @@ subcollection: event-notifications
 
 {{site.data.keyword.attribute-definition-list}}
 
-# ServiceNow
+# Configuring ServiceNow as a destination in {{site.data.keyword.en_short}}
 {: #en-destinations-servicenow}
 
 A ServiceNow represents a service destination, where an incoming security event notification can be consumed programmatically to actions.
