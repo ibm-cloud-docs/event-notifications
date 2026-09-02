@@ -2,7 +2,7 @@
 
 copyright:
    years: 2026
-lastupdated: "2026-09-01"
+lastupdated: "2026-09-02"
 
 keywords: event-notifications, event notifications, pagerduty, on call manager, ocm, migration, icl, cloud logs
 
@@ -248,4 +248,4 @@ After you complete the migration:
 For more information about {{site.data.keyword.en_short}} templates and customization, see:
 - [Webhook notification templates](/docs/event-notifications?topic=event-notifications-en-webhook-notifications-template)
 - [Creating templates](/docs/event-notifications?topic=event-notifications-en-create-en-template)
-- [Viewing notification payload](/docs/event-notifications?topic=event-notifications-en-view-notification-payload)
+- [Viewing notification payload](/docs/event-notifications?topic=event-notifications-en-view-notification-payloads)
