@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-02-21"
+  years: 2020, 2026
+lastupdated: "2026-09-02"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, IBM Cloud Object Storage, cloud object storage, object storage
 
@@ -18,9 +18,9 @@ subcollection: event-notifications
 {{site.data.keyword.cos_full_notm}} is a highly scalable cloud storage service, which is designed for high durability, resiliency, and security. Store, manage, and access your data through the self-service portal and RESTful APIs. The files that are uploaded into {{site.data.keyword.cos_full_notm}} are called **objects**. The uploaded objects are organized into **buckets** that serve as containers for objects.
 {: shortdesc}
 
-A {{site.data.keyword.cos_full_notm}} represents a service destination, where an incoming notification can be stored and consumed programmatically to actions.
+An {{site.data.keyword.cos_full_notm}} represents a service destination, where an incoming notification can be stored and consumed programmatically to actions.
 
-## Configuring a {{site.data.keyword.cos_full_notm}} destination in the UI
+## Configuring an {{site.data.keyword.cos_full_notm}} destination in the UI
 {: #en-destinations-cos-configure}
 
 Before you configure {{site.data.keyword.cos_full_notm}} as a destination, make sure that you have an {{site.data.keyword.cos_full_notm}} instance that is [created and configured](https://cloud.ibm.com/objectstorage/create) in the same account as your {{site.data.keyword.en_short}} instance.
@@ -32,7 +32,7 @@ If you are using {{site.data.keyword.en_short}} CLI or API to configure {{site.d
 If you want to enforce access restrictions based on IP addresses, it is recommended to use context-based restrictions instead of a legacy bucket firewall.  For details, see [Restricting access by network context](/docs/cloud-object-storage?topic=cloud-object-storage-setting-a-firewall) in the Object Storage documentation.  If your setup must continue use of a legacy firewall, use the [Support Center](/unifiedsupport/supportcenter){: external} to create a support case for assistance with the IP range information.
 {: note}
 
-To configure a {{site.data.keyword.cos_full_notm}} destination, complete the following steps:
+To configure an {{site.data.keyword.cos_full_notm}} destination, complete the following steps:
 
 1. From your {{site.data.keyword.en_short}} instance, click **Destinations**.
 
@@ -134,12 +134,12 @@ Endpoints are used with your credentials (Bucket name, API Key, SDK) to tell you
 
 1. Click the required **Bucket name** to view the **Bucket configuration** details.
 
-1. Navigate to the **Endpoints** section and copy your public or private endpoints as required. Use this value as the **Endpoint** in the [Configuring a {{site.data.keyword.cos_full_notm}} destination](#en-destinations-cos-configure) section.
+1. Navigate to the **Endpoints** section and copy your public or private endpoints as required. Use this value as the **Endpoint** in the [Configuring an {{site.data.keyword.cos_full_notm}} destination](#en-destinations-cos-configure) section.
 
-## Testing a {{site.data.keyword.cos_full_notm}} destination configuration
+## Testing an {{site.data.keyword.cos_full_notm}} destination configuration
 {: #en-cos-test-destination}
 
-You can test a {{site.data.keyword.cos_full_notm}} destination in the options menu next to the destination. You can test whether the provided configuration is correct with a single click.
+You can test an {{site.data.keyword.cos_full_notm}} destination in the options menu next to the destination. You can test whether the provided configuration is correct with a single click.
 
 For more information on testing a destination, see [Testing destinations](/docs/event-notifications?topic=event-notifications-en-test-destination).
 

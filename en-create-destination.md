@@ -39,7 +39,7 @@ To understand the billing impact of upgrading a **Pre-production destination** t
 
 By default, each destination detail consists of **Name**, **Description**, **Type**, **Subscriptions**, **Collect failed events** (Off).
 
-When you try to toggle the **Collect failed events** switch to **ON** without configuring a {{site.data.keyword.cos_full_notm}} bucket to collect the failed events, an appropriate error message displays. For more information on configuration and collecting failed events, see [Collecting failed events](/docs/event-notifications?topic=event-notifications-en-cfe-integrations).
+When you try to toggle the **Collect failed events** switch to **ON** without configuring an {{site.data.keyword.cos_full_notm}} bucket to collect the failed events, an appropriate error message displays. For more information on configuration and collecting failed events, see [Collecting failed events](/docs/event-notifications?topic=event-notifications-en-cfe-integrations).
 {: note}
 
 ## Modifying an {{site.data.keyword.en_short}} destination

@@ -29,7 +29,7 @@ This tutorial shows you how to integrate {{site.data.keyword.logs_full_notm}} al
 
 This tutorial shows you how to configure the following flow:
 
-1. Creating a {{site.data.keyword.logs_full_notm}} and an {{site.data.keyword.en_short}} instance.
+1. Creating an {{site.data.keyword.logs_full_notm}} and an {{site.data.keyword.en_short}} instance.
 
 1. Connecting an instance of {{site.data.keyword.logs_full_notm}} with an {{site.data.keyword.en_short}} instance.
 
