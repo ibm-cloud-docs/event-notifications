@@ -399,7 +399,7 @@ Support for Custom Domain Email Service
 {: release-note}
 
 New destination: Huawei Cloud Push
-:  Huawei Push Destination is now available as a {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} destination. You can [send and store notifications to your Huawei Push Destination by using {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}}](/docs/event-notifications?topic=event-notifications-en-push-huawei).
+:  Huawei Push Destination is now available as an {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} destination. You can [send and store notifications to your Huawei Push Destination by using {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}}](/docs/event-notifications?topic=event-notifications-en-push-huawei).
 
 ## 25 May 2023
 {: #event-notifications-May2523}
