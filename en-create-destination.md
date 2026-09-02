@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2024
-lastupdated: "2024-10-25"
+  years: 2020, 2026
+lastupdated: "2026-09-02"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -31,7 +31,7 @@ To create a new destination:
 
 1. Provide **Name**, **Description** and **Destination type**. Configuration parameters differ by destination type. For more information about available destination types and steps to create and configure each one, see [Working with event destinations](/docs/event-notifications?topic=event-notifications-en-destination).
 
-1. Configure your destination parameters and click **Create destination**. 
+1. Configure your destination parameters and click **Create destination**.
 
 You can click the **Edit** in the **Options** menu to edit the destination. You can upgrade **Pre-production destination** to **Production destination**.
 

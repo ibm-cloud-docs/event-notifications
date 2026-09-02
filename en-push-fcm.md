@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-10-17"
+  years: 2022, 2026
+lastupdated: "2026-09-02"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, push
 
@@ -123,7 +123,7 @@ To create a generic API source:
 {: #en-create-dest-fcm}
 {: step}
 
-Click **Destinations** in the {{site.data.keyword.en_short}} instance and click **Create**. 
+Click **Destinations** in the {{site.data.keyword.en_short}} instance and click **Create**.
 
 Enter the following destination details in the **Create destination** dialog.
 
@@ -157,7 +157,7 @@ Click **Topics** in the {{site.data.keyword.en_short}} instance and click **Crea
 Proceed to the **Subscriptions** step. Click **Create** and enter the following subscription details in the **Create subscription** dialog.
 
 * **Subscription name**: enter a name for subscription
-* **Destination type**: select destination type. 
+* **Destination type**: select destination type.
 * **Destination**: select destination.
 
 Click **Create subscription**.

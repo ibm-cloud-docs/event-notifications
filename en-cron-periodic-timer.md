@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025
-lastupdated: "2025-08-22"
+  years: 2025, 2026
+lastupdated: "2026-09-02"
 
 keywords: event-notifications, event notifications, about event notifications, cron scheduler, topics, sources
 
@@ -14,7 +14,7 @@ subcollection: event-notifications
 # Periodic Timer
 {: #en-cron-periodic-timer}
 
-The Periodic timer is an event scheduler in the {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} service that generates events periodically based on the cron expressions. Periodic Event scheduling is important in large-scale applications where the client cannot maintain the periodic timer. Therefore, rather than relying on the client to schedule events, {{site.data.keyword.en_short}} will manage the scheduling of events based on a certain period that is defined by the user. 
+The Periodic timer is an event scheduler in the {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} service that generates events periodically based on the cron expressions. Periodic Event scheduling is important in large-scale applications where the client cannot maintain the periodic timer. Therefore, rather than relying on the client to schedule events, {{site.data.keyword.en_short}} will manage the scheduling of events based on a certain period that is defined by the user.
 
 ## Scheduling an Event
 {: #en-cron-scheduling-event}
@@ -49,7 +49,7 @@ The Periodic timer is an event scheduler in the {{site.data.keyword.cloud_notm}}
 
     **Allowed Special Characters:**
 
-    **","** - Allows extra values. For example, in the day-of-week field, `sun,mon,tue` includes events that are scheduled on Sunday, Monday, and Tuesday. 
+    **","** - Allows extra values. For example, in the day-of-week field, `sun,mon,tue` includes events that are scheduled on Sunday, Monday, and Tuesday.
 
     **"-"** - Allows defining ranges. For example, in the day-of-month field 23-30 includes events that are scheduled on 23 to 30 of a month.
 
@@ -67,16 +67,16 @@ The Periodic timer is an event scheduler in the {{site.data.keyword.cloud_notm}}
 
     Click **Create**.
 
-1. Review the newly created topic. 
+1. Review the newly created topic.
 
     ![Reviewing Topic](images/en-cron-review.png "Reviewing Topic"){: caption="Reviewing Topic" caption-side="bottom"}
 
 ### **Step 2 : Creating a subscription**
 {: #en-cron-create-subscription}
 
-Refer [Create a Subscription](/docs/event-notifications?topic=event-notifications-en-create-en-subscription) to see how to create a subscription. 
+Refer [Create a Subscription](/docs/event-notifications?topic=event-notifications-en-create-en-subscription) to see how to create a subscription.
 
-Once a subscription has been created, an invitation Email/SMS will be sent to subscribe to the {{site.data.keyword.en_short}} topic. 
+Once a subscription has been created, an invitation Email/SMS will be sent to subscribe to the {{site.data.keyword.en_short}} topic.
 
 ![Invitation Email](images/en-invitation-email.png "Invitation Email to subscribe to topic"){: caption="Invitation Email to subscribe to topic" caption-side="bottom"}
 
@@ -84,6 +84,6 @@ Once a subscription has been created, an invitation Email/SMS will be sent to su
 ### **Step 3 : Verifying that an Event occurs at the scheduled time**
 {: #en-cron-verify}
 
-Once the event is scheduled, the next step is verifying that an event occurs at the scheduled time and a notification is sent to the destination. 
+Once the event is scheduled, the next step is verifying that an event occurs at the scheduled time and a notification is sent to the destination.
 
 ![Verifying Event](images/en-verifying-notification.png "Email Notification when Event takes place at a scheduled time"){: caption="Email Notification when Event takes place at scheduled time" caption-side="bottom"}

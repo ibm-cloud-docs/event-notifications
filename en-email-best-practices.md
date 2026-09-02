@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023
-lastupdated: "2023-12-07"
+  years: 2023, 2026
+lastupdated: "2026-09-02"
 
 keywords: event notifications, event notification, notifications, email, custom domain, best practices
 
@@ -29,7 +29,7 @@ IBM {{site.data.keyword.en_short}} is a powerful tool for sending event-related 
   - Educate team on the importance of email etiquette.
   - Implement rate limits on email sends to avoid sending a high volume of emails in a short period.
   - Regularly monitor email sending activity for any signs of abuse.
-  
+
 ## Shared IP Addresses
 {: #en-email-sharedip}
 
@@ -44,7 +44,7 @@ IBM {{site.data.keyword.en_short}} is a powerful tool for sending event-related 
 ```
 - **How Shared IP Address Works**:
     - In this service, a single IP address is designated for sending emails on behalf of multiple domains. This shared IP address is authenticated using SPF, which allows it to be used to send emails to all users of the {{site.data.keyword.en_short}} service.
-    
+
  - **Consequences**:
     - Unfortunately, due to the shared IP address, the entire IP reputation is affected by one user's actions, due to which, another user's legitimate events may also be blocked or flagged as spam by the email service providers, despite their adherence to the best practices.
     - If the shared IP's reputation is adversely impacted, it will be challenging for both the users to deliver emails effectively.
@@ -55,18 +55,18 @@ Thus, it is important to maintain a responsible and ethical approach to email co
 {: #en-email-authverification}
 
 - Implement DomainKeys Identified Mail (DKIM), Sender Policy Framework (SPF), and Domain-based Message Authentication, Reporting, and Conformance (DMARC) to authenticate your emails. Here's what you need to know about them:
-  
+
   - **DomainKeys Identified Mail (DKIM)**: DKIM is an email authentication method that adds a digital signature to your outgoing emails. This signature is generated using a private key that only you have access to. The recipient's email service provider can then verify the signature using the public key stored in your DNS records. This verification ensures that the email hasn't been tampered with in transit and that it genuinely comes from your domain. Implementing DKIM helps prevent email spoofing and phishing, which can improve email deliverability.
 
   - **Sender Policy Framework (SPF)**: SPF is another email authentication method that helps prevent email spoofing. SPF specifies which IP addresses or domains are authorized to send email on behalf of your domain. By setting up SPF records in your DNS, you inform receiving email servers which sources are legitimate senders for your domain. This ensures that only authorized servers can send emails claiming to be from your domain.
-  
+
   - **Domain-based Message Authentication, Reporting, and Conformance (DMARC)**: DMARC is an email authentication and reporting protocol that builds upon SPF and DKIM. It allows you to set policies that define how email providers should handle emails that fail authentication checks. DMARC helps prevent domain spoofing and phishing attacks by providing clear instructions to email receivers on how to handle messages that claim to be from your domain. DMARC also offers reporting features, giving you insights into how your email domain is used and whether unauthorized sources are attempting to send emails on your behalf.
-  
+
 With the implementation of DMARC in addition to DKIM and SPF, your email messages will be more secure, and you'll have better control over how emails claiming to be from your domain are treated by email service providers, enhancing your email deliverability and security.
 
 ## Handling Emails in Spam/Junk Folders
 {: #en-email-spamhandling}
- 
+
 It's important for users to understand that despite following best practices, some legitimate emails might still end up in their spam or junk folders. This can occur for various reasons, such as user preferences or the occasional marking of emails as spam by other recipients.
 
   - **User Action**:

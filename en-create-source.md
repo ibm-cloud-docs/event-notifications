@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2025
-lastupdated: "2025-12-18"
+  years: 2020, 2026
+lastupdated: "2026-09-02"
 
 keywords: event notifications, event-notifications, source, tutorials
 
@@ -41,7 +41,7 @@ To see the current list of {{site.data.keyword.cloud_notm}} services available a
 
 The connection protocols differ between source types, so the procedure for adding is different as described in the following sections.
 
-To integrate a source with {{site.data.keyword.en_short}}, an instance of that source also needs to be created. 
+To integrate a source with {{site.data.keyword.en_short}}, an instance of that source also needs to be created.
 {: note}
 
 ## Creating a source
@@ -51,7 +51,7 @@ To create a new source:
 
 1. Verify that the {{site.data.keyword.cloud_notm}} service is available as a source for {{site.data.keyword.en_short}}.
    1. Click **Sources** in your {{site.data.keyword.en_short}} instance.
-   1. Click **Create** in the **Sources** section. 
+   1. Click **Create** in the **Sources** section.
    1. Select **{{site.data.keyword.cloud_notm}} source** in the **Create source** dialog.
    1. Confirm that the managed service of interest is displayed.
 

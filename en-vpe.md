@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2026
-lastupdated: "2026-03-27"
+  years: 2025, 2026
+lastupdated: "2026-09-02"
 
 keywords: event-notifications, event notifications, about event notifications, vpe, virtual private endpoints, virtual private endpoint gateways
 
@@ -19,7 +19,7 @@ subcollection: event-notifications
 
 Virtual Private Endpoints (VPE) for VPC helps you to connect to {{site.data.keyword.en_short}} and other supported {{site.data.keyword.cloud}} services from your VPC network by using the IP addresses of your choosing, which is allocated from a subnet within your VPC.
 
-You can create an endpoint gateway for an {{site.data.keyword.cloud_notm}} service, third-party service, or an application that you want to access on your private VPC network. You can either the console, CLI, API, or Terraform. 
+You can create an endpoint gateway for an {{site.data.keyword.cloud_notm}} service, third-party service, or an application that you want to access on your private VPC network. You can either the console, CLI, API, or Terraform.
 {: shortdesc}
 
 
@@ -47,12 +47,12 @@ Before creating an endpoint gateway, make sure that you review [Planning for vir
 1. On the details page, provide the **Geography**, **Region**, **Name** for your gateway, **Resource Group**, and select the **VPC** where you need the VPE IP address. To learn more about the fields, see [Viewing details of an endpoint gateway](/docs/vpc?topic=vpc-vpe-viewing-details-of-an-endpoint-gateway&interface=ui).
 
 1. The security groups are used to tighten the security rules for inbound traffic toward your endpoint gateways. Select the checkbox for the security groups you want to attach to your gateway.
- 
+
 1. Select **{{site.data.keyword.en_short}}** under the **Request connection to a service** section.
 
 1. Select the region and choose an endpoint.
 
-1. In the **Reserved IP** section, select the option **Select one for me**. 
+1. In the **Reserved IP** section, select the option **Select one for me**.
 
 1. Review the order summary, then click **Create virtual private endpoint gateway**. The endpoint gateway is requested for use.
 
