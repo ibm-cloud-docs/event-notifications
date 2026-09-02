@@ -15,10 +15,12 @@ subcollection: event-notifications
 # Configuring {{site.data.keyword.cos_short}} as a destination in {{site.data.keyword.en_short}}
 {: #en-destinations-cloud-object-storage}
 
-{{site.data.keyword.cos_full_notm}} is a highly scalable cloud storage service, which is designed for high durability, resiliency, and security. Store, manage, and access your data through the self-service portal and RESTful APIs. The files that are uploaded into {{site.data.keyword.cos_full_notm}} are called **objects**. The uploaded objects are organized into **buckets** that serve as containers for objects.
+In {{site.data.keyword.en_full_notm}} can configure {{site.data.keyword.cos_full_notm}} as a destination to store or programatically convert notifications to actions.
 {: shortdesc}
 
-An {{site.data.keyword.cos_full_notm}} represents a service destination, where an incoming notification can be stored and consumed programmatically to actions.
+{{site.data.keyword.cos_full_notm}} is designed for high durability, resiliency, and security. By using the service, you can store, manage, and access your data through the console or by using APIs. In {{site.data.keyword.cos_short}}, the files that are uploaded are known as *objects* that can be organized into *buckets*.
+{: tip}
+
 
 ## Configuring an {{site.data.keyword.cos_full_notm}} destination in the UI
 {: #en-destinations-cos-configure}
