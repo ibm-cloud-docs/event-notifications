@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2017, 2024
-lastupdated: "2024-10-11"
+  years: 2017, 2026
+lastupdated: "2026-09-02"
 
 keywords: event notifications, event notification, notifications, service access, manage, user roles
 
@@ -14,7 +14,7 @@ subcollection: event-notifications
 # Managing IAM access for {{site.data.keyword.en_short}}
 {: #service-access-management}
 
-With {{site.data.keyword.en_short}} and {{site.data.keyword.iamlong}}, {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) account owners can manage user access in your account.
+As an account owner, you can manage access to the instance of {{site.data.keyword.en_short}} in your account by using {{site.data.keyword.iamlong}}.
 {: shortdesc}
 
 As an account owner, you can set policies within your account to create different levels of access for different users. For example, certain users can have `Read only` access to one instance, but `Write` access to another. You can decide who is allowed to create, update, and delete instances of {{site.data.keyword.en_short}}.
