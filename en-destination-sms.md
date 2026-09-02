@@ -298,21 +298,25 @@ Because SMS delivery rates vary widely with location, SMS text messages are char
 Notifications that are longer than 160 characters might be split into multiple segments. Each segment is considered a message, as is each recipient phone number. For example, if an incoming notification is split into three SMS segments and the message is sent to five subscribed phone numbers.
 
 ### Total SMS Units
+{: #total-sms-units}
 
 The total number of SMS units consumed for the notification is calculated as follows:
 
-```
+```txt
 Total SMS units = (Number of Segments) x (Number of phone numbers) x (SMS Unit for the country)
 ```
+{: codeblock}
 
 In this example, with five subscribed phone numbers - two in the United States, two in Mexico, and one in France - the total number of SMS units would be:
 
-```
+```txt
 SMS units for United States is: 3 x 2 x 0.61 = 3.66
 SMS units for Mexico is: 3 x 2 x 1.93 = 11.58
 SMS units for France is: 3 x 1 x 2.48 = 7.44
-```
 Total SMS units = 22.68
+```
+{: codeblock}
+
 
 ### Total SMS Price
 
