@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2024-02-29"
+  years: 2023, 2026
+lastupdated: "2026-09-07"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, code engine
 
@@ -12,7 +12,7 @@ subcollection: event-notifications
 
 {{site.data.keyword.attribute-definition-list}}
 
-# # Configuring Code Engine as a destination in {{site.data.keyword.en_short}}
+# Configuring Code Engine as a destination in {{site.data.keyword.en_short}}
 {: #en-destinations-codeengine}
 
 {{site.data.keyword.codeenginefull_notm}} is a fully managed, serverless platform that runs your containerized workloads, including web apps, micro-services, event-driven functions, or batch jobs. {{site.data.keyword.codeengineshort}} represents a service destination, where an incoming notification can be consumed programmatically. For example, an incoming notification about an event can trigger a {{site.data.keyword.codeengineshort}} destination to a backend microservice to act based on the content of the incoming notification.
