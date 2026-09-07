@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2022
-lastupdated: "2022-11-28"
+  years: 2022, 2026
+lastupdated: "2026-09-02"
 
 keywords: event notifications, event notification, notifications, managing encryption, byok, kyok, integrations protect, hpcs
 
@@ -11,26 +11,15 @@ subcollection: event-notifications
 ---
 {{site.data.keyword.attribute-definition-list}}
 
-# Managing encryption
+# Managing encryption with customer-managed keys
 {: #en-managing-encryption}
 
-By default, customer data in {{site.data.keyword.en_short}} are encrypted at-rest using a randomly generated key. Although this default encryption model provides at-rest security, you might need a higher level of control. For these use cases, {{site.data.keyword.en_short}} supports customer-managed encryption with the following IBM Cloud® Key Management Services:
-
-- {{site.data.keyword.keymanagementservicefull}} (Bring Your Own Key - BYOK) helps you provision encrypted keys for apps across {{site.data.keyword.cloud_notm}} services. As you manage the lifecycle of your keys, you can benefit from knowing that your keys are secured by FIPS 140-2 Level 3 certified cloud-based hardware security modules (HSMs) that protect against the theft of information. You can find out more about using {{site.data.keyword.keymanagementserviceshort}} in the [Getting Started tutorial](/docs/key-protect?topic=key-protect-getting-started-tutorial){: external}.
-- {{site.data.keyword.hscrypto}} (Keep Your Own Key - KYOK) is a single-tenant, dedicated HSM that is controlled by you. The service is built on FIPS 140-2 Level 4-certified hardware, the highest offered by any cloud provider in the industry. You can find out more about using {{site.data.keyword.hscrypto}} in the [Getting Started tutorial](/docs/hs-crypto?topic=hs-crypto-get-started){: external}.
-
-These services allow the use of a customer-provided key to control encryption. By disabling or deleting this key, you can prevent any further access to the data stored by the service, because it is no longer possible to decrypt it.
+By default, customer data in {{site.data.keyword.en_short}} is encrypted at-rest by using a randomly generated key. If your solution requires a higher level of control, you can manage your own encryption by integrating with {{site.data.keyword.keymanagementservicefull}} or {{site.data.keyword.hscrypto}}. You must be using the standard pricing plan to bring your own key.
 {: shortdesc}
 
-Consider using customer-managed keys if you require the following features:
+If your solution requires that you manage your own keys for data at rest or that you have explicit control of the full lifecycle of data,including at rest, then you might consider using customer-managed keys. Both {{site.data.keyword.keymanagementserviceshort}} and {{site.data.keyword.hscrypto}} are designed to allow the use of a customer-provided key to control encryption. To compare the services and determine which is best for your solution, see [Which data security service is best for me?](/docs/key-protect?topic=key-protect-manage-secrets-ibm-cloud)
 
-- Encryption of data at-rest controlled by your own key.
-- Explicit control of the lifecycle of data stored at rest.
-
-Customer-managed keys is available on the Standard plan only.
-{: note}
-
-Deletion of the customer-managed key is non-recoverable and will result in the loss of any data stored in your {{site.data.keyword.en_short}} instance.
+If you delete a custom-managed key without going through the proper process, you could lose access to the data that is stored in your {{site.data.keyword.en_short}} instance.
 {: important}
 
 ## What is not covered by customer-managed encryption
@@ -38,7 +27,7 @@ Deletion of the customer-managed key is non-recoverable and will result in the l
 
 If customer-managed encryption feature is selected, the user should be aware that **only** customer data is covered by this encryption. {{site.data.keyword.en_short}} encrypts at-rest other data related to the use of the service.
 
-You are not recommended to use confidential information in client metadata.
+It is not recommended to use confidential information in client metadata.
 {: important}
 
 ## How customer-managed encryption works

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2024
-lastupdated: "2024-10-25"
+  years: 2020, 2026
+lastupdated: "2026-09-02"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -31,7 +31,7 @@ To create a new destination:
 
 1. Provide **Name**, **Description** and **Destination type**. Configuration parameters differ by destination type. For more information about available destination types and steps to create and configure each one, see [Working with event destinations](/docs/event-notifications?topic=event-notifications-en-destination).
 
-1. Configure your destination parameters and click **Create destination**. 
+1. Configure your destination parameters and click **Create destination**.
 
 You can click the **Edit** in the **Options** menu to edit the destination. You can upgrade **Pre-production destination** to **Production destination**.
 
@@ -39,7 +39,7 @@ To understand the billing impact of upgrading a **Pre-production destination** t
 
 By default, each destination detail consists of **Name**, **Description**, **Type**, **Subscriptions**, **Collect failed events** (Off).
 
-When you try to toggle the **Collect failed events** switch to **ON** without configuring a {{site.data.keyword.cos_full_notm}} bucket to collect the failed events, an appropriate error message displays. For more information on configuration and collecting failed events, see [Collecting failed events](/docs/event-notifications?topic=event-notifications-en-cfe-integrations).
+When you try to toggle the **Collect failed events** switch to **ON** without configuring an {{site.data.keyword.cos_full_notm}} bucket to collect the failed events, an appropriate error message displays. For more information on configuration and collecting failed events, see [Collecting failed events](/docs/event-notifications?topic=event-notifications-en-cfe-integrations).
 {: note}
 
 ## Modifying an {{site.data.keyword.en_short}} destination

@@ -1,7 +1,8 @@
 ---
+
 copyright:
-  years: 2021, 2024
-lastupdated: "2024-01-03"
+  years: 2021, 2026
+lastupdated: "2026-09-02"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email
 
@@ -13,13 +14,13 @@ subcollection: event-notifications
 # Tracking Email Status
 {: #en-destination-email-custom-domain-status}
 
-This portion of the documentation provides an overview of the status tracking system that is integrated with {{site.data.keyword.en_short}} for emails sent from a custom domain. The system generates logs containing crucial data, such as the email size and masked sender and recipient email addresses, to ensure privacy and security.
-The system tracks three primary email statuses: Delivered, Deferred, and Bounced, providing valuable insights into the success and potential issues with email delivery.
+This portion of the documentation provides an overview of the status tracking system that is integrated with {{site.data.keyword.en_short}} for emails sent from a custom domain. The system generates logs containing crucial data, such as the email byte count and masked sender and recipient email addresses, to ensure privacy and security. The system tracks three primary email statuses: Delivered, Deferred, and Bounced, providing valuable insights into the success and potential issues with email delivery.
 
 - ## Delivered
 {: #en-destination-email-custom-domain-status-delivered}
 
-When an email is delivered successfully, a "SENT" log is created. The log contains essential data, such as the delivered email size and the masked sender and recipient email addresses, to maintain privacy and security.
+When an email is delivered successfully, a "SENT" log is created.
+
 For example, a delivered log may look like this:
 
 ```text

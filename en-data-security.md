@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2024
-lastupdated: "2024-10-11"
+  years: 2020, 2026
+lastupdated: "2026-09-02"
 
 keywords: data encryption in Event Notifications, data storage for Event Notifications, bring your own keys for Event Notifications, BYOK for Event Notifications, key management for Event Notifications, key encryption for Event Notifications, personal data in Event Notifications, data deletion for Event Notifications, data in Event Notifications, data security in Event Notifications, KYOK for Event Notifications
 
@@ -15,7 +15,7 @@ subcollection: event-notifications
 # Securing your data in {{site.data.keyword.en_short}}
 {: #en-mng-data}
 
-To help ensure that you can securely manage your data when you use {{site.data.keyword.en_full}}, you must know exactly what data is stored and encrypted and you must know how to delete any stored data.
+You can securely manage your data when you use {{site.data.keyword.en_full}} by ensuring that you know what data is stored, how it is encrypted, and how to delete stored data.
 {: shortdesc}
 
 ## How your data is stored and encrypted in {{site.data.keyword.en_short}}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-08-04"
+lastupdated: "2026-09-02"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, Event Streams, event streams
 
@@ -12,7 +12,7 @@ subcollection: event-notifications
 
 {{site.data.keyword.attribute-definition-list}}
 
-# {{site.data.keyword.messagehub}}
+# Configuring {{site.data.keyword.messagehub}} as a destination in {{site.data.keyword.en_short}}
 {: #en-destinations-event-streams}
 
 {{site.data.keyword.messagehub}} is a message bus that is built by using Apache Kafka. It has high throughput and is optimized for event ingestion into {{site.data.keyword.cloud_notm}} and event stream distribution between your services and applications. In Event Streams, applications can send data by creating messages and sending to a topic. To receive messages, the application subscribes to a topic and can choose to receive all the messages of the topic or share the messages between them.

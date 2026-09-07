@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025
-lastupdated: "2025-09-16"
+  years: 2025, 2026
+lastupdated: "2026-09-02"
 
 keywords: event-notifications, event notifications, about event notifications, templates, pagerduty
 
@@ -13,10 +13,10 @@ subcollection: event-notifications
 {{site.data.keyword.attribute-definition-list}}
 
 
-# PagerDuty Notification Template
+# Creating a PagerDuty notification template in Event Notifications
 {: #en-pagerduty-notification-template}
 
-PagerDuty helps organizations with the insight to proactively manage events that impact customers across their IT environment. When you select PagerDuty as the service destination, any subscribed notification about an event can be sent as an alert to PagerDuty channels.
+PagerDuty helps organizations with the insight to proactively manage events that impact customers across their IT environmenst. When you select PagerDuty as the service destination, any subscribed notification about an event can be sent as an alert to PagerDuty channels.
 {: shortdesc}
 
 For more information about the PagerDuty destination, see [PagerDuty](/docs/event-notifications?topic=event-notifications-en-destinations-pagerduty).

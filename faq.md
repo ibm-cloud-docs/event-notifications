@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2026
-lastupdated: "2026-04-15"
+lastupdated: "2026-09-01"
 
 
 keywords: event-notification, event notification, faqs, Frequently Asked Questions, question, billing, service, invalid devices, device deletion, database
@@ -13,7 +13,7 @@ subcollection: event-notifications
 
 {{site.data.keyword.attribute-definition-list}}
 
-# FAQs for {{site.data.keyword.en_short}}
+# FAQ for {{site.data.keyword.en_short}}
 {: #en-faqs-operations}
 
 FAQs for {{site.data.keyword.en_short}} provide answers to common operations issues.
@@ -154,7 +154,7 @@ For security reasons, certain file extensions are blocked when sending email att
 
 The following table lists the blocked file extensions:
 
-| | | | |
+| Extensions | Extensions | Extensions | Extensions |
 |-------------|-------------|-------------|-------------|
 | `.ade` | `.adp` | `.app` | `.asp` |
 | `.bas` | `.bat` | `.cer` | `.chm` |
@@ -298,7 +298,7 @@ If you consistently encounter client timeouts, consider reaching out to the supp
 {: #faq-en-tim}
 {: faq}
 
-Yes, you can use pre-built, enterprise-ready [Terraform IBM Modules (TIM)](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim) to provision and configure {{site.data.keyword.en_short}} instances. The [{{site.data.keyword.en_short}}](https://registry.terraform.io/modules/terraform-ibm-modules/event-notifications/ibm/latest){: external} module provides a standardized, tested approach to deploying {{site.data.keyword.en_short}} with best practices built in.
+Yes, you can use pre-built, enterprise-ready [Terraform IBM Modules (TIM)](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim) to provision and configure {{site.data.keyword.en_short}} instances. The [{{site.data.keyword.en_short}}](https://registry.terraform.io/modules/terraform-ibm-modules/event-notifications/ibm/latest){: external} module provides a standardized, tested approach to deploying {{site.data.keyword.en_short}} with best practices built in.
 
 ## Does Event Notifications support cross account integration?
 {: #faq-en-notifications-cross-account-integration}

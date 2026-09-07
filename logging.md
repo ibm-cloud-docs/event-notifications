@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2026
-lastupdated: "2026-05-12"
+lastupdated: "2026-09-02"
 
 keywords: event notifications cloud logs, event notifications logging, event notifications external logs
 
@@ -15,7 +15,7 @@ subcollection: event-notifications
 # Logging for {{site.data.keyword.en_short}}
 {: #logging}
 
-{{site.data.keyword.cloud}} services, such as {{site.data.keyword.en_short}}, generate platform logs that you can use to investigate abnormal activity and critical actions in your account, and troubleshoot problems.
+{{site.data.keyword.en_short}} generates platform logs that can be used to investigate abnormal activity, review critical actions, or troubleshoot issues by integrating with {{site.data.keyword.logs_routing_full_notm}}.
 {: shortdesc}
 
 You can use {{site.data.keyword.logs_routing_full_notm}}, a platform service, to route platform logs in your account to a destination of your choice by configuring a tenant that defines where platform logs are sent. For more information, see [About Logs Routing](/docs/logs-router?topic=logs-router-about).

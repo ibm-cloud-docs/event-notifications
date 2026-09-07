@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2026
-lastupdated: "2026-03-27"
+  years: 2025, 2026
+lastupdated: "2026-09-02"
 
 keywords: event-notifications, event notifications, managing service access, iam, account, topics, subscriptions
 
@@ -15,19 +15,21 @@ completion-time: 15m
 ---
 {{site.data.keyword.attribute-definition-list}}
 
-# Assigning access to individual topics and subscriptions
+# Assigning access to topics and subscriptions
 {: #en-assign-access-to-topics-subscriptions}
 {: toc-content-type="tutorial"}
 {: toc-completion-time="15m"}
 
-This tutorial shows you how to assign access roles for users against Topics and Subscriptions, by creating and modifying IAM access policies. The details of the IAM roles are as follows:
+You can assign access roles for the users who work with topics and subscriptions in your instances of {{site.data.keyword.en_short}} by using {{site.data.keyword.iamlong}} policies.
+{: shortdesc}
 
-##### Applicable roles:
-1. Reader: To enable access to topics/subscriptions in an instance, a user must at least have **Reader** level privileges to the particular {{site.data.keyword.en_short}} instance. With only Reader access, the user can only view and cannot edit any resources in the {{site.data.keyword.en_short}} instance.
-1. Writer: Only **Writer** role is applicable for given topics/subscriptions. When an {{site.data.keyword.en_short}} instance is accessed by a user with Writer role,the user can only update topics and/or subscriptions.
+There are two roles that are applicable to topics and subscriptions:
+
+* Reader: To enable access to topics/subscriptions in an instance, a user must at least have **Reader** level privileges to the particular {{site.data.keyword.en_short}} instance. With only Reader access, the user can only view and cannot edit any resources in the {{site.data.keyword.en_short}} instance.
+* Writer: Only **Writer** role is applicable for given topics/subscriptions. When an {{site.data.keyword.en_short}} instance is accessed by a user with Writer role,the user can only update topics and/or subscriptions.
 
 A user cannot be assigned **Manager** Role to delete specific topics/subscriptions. This action can be carried out by a user who is assigned the Manager role to the whole Event Notifications instance.
- {: note}
+{: note}
 
 ## Before you begin
 {: #topics-subscriptions-access-step-0}
@@ -82,7 +84,7 @@ Only **Writer** role is applicable for given Topics/Subscriptions. **Reader** Ro
 5. Click **Next** and include conditions if needed which is optional.
 6. Click **Add**.
 
-## Review access policies
+## Review the access policies
 {: #topics-subscriptions-access-step-3}
 {: step}
 

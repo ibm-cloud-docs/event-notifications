@@ -1,8 +1,8 @@
 ---
 
 copyright:
-   years: 2026
-lastupdated: "2026-06-09"
+  years: 2026
+lastupdated: "2026-09-02"
 
 keywords: event notifications, topic, create topic
 

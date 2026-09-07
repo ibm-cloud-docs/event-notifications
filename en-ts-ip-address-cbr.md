@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023, 2024
-lastupdated: "2024-10-08"
+  years: 2023, 2026
+lastupdated: "2026-09-02"
 
 keywords: event-notifications, event notifications, about event notifications, troubleshooting, faqs, Frequently Asked Questions, question, can't create IAM credentials, can't regenerate IAM credentials, IAM credentials not working, IP address restrictions enabled, IP address not allowed
 
@@ -22,10 +22,10 @@ content-type: troubleshoot
 When you try to use {{site.data.keyword.en_short}} service instance you are unable to perform the action that you're attempting to complete.
 {: shortdesc}
 
-When you try to access any feature in {{site.data.keyword.en_short}} service instance either through the console or API or CLI, you may encounter an error similar to any of the following examples:
+When you try to access any feature in your {{site.data.keyword.en_short}} service instance - whether through the console or API or CLI, you may encounter an error similar to any of the following examples:
 {: tsSymptoms}
 
-```text
+```txt
 You do not have permission to perform this action. Contact your service Administrator.
 ```
 {: screen}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-07-23"
+lastupdated: "2026-09-01"
 
 keywords: event notifications, event-notifications, map event notifications to destinations
 subcollection: event-notifications
@@ -14,9 +14,7 @@ subcollection: event-notifications
 # Transforming messages with notification payloads for destinations
 {: #en-map-notificationpayload-destination-params}
 
-Event notification payloads include a set of default parameters that are consistently mapped across all destinations.
-However, to align with specific properties of the destination, you must incorporate extra parameters into the payload.
-You can simultaneously send event notifications to individuals, your application, and your automation suite.
+Event notification payloads include a set of default parameters that are consistently mapped across all destinations. To align with specific properties of the destination, you must incorporate additional parameters into the payload. You can simultaneously send event notifications to individuals, your application, and your automation suite.
 
 You can filter and route event notifications from {{site.data.keyword.cloud_notm}} services like {{site.data.keyword.monitoringlong_notm}}, {{site.data.keyword.compliance_short}}, {{site.data.keyword.secrets-manager_short}}, {{site.data.keyword.cloud_notm}} Projects, and Toolchain to communication channels like email, SMS, push notifications, Huawei Cloud Push, webhook, slack, Microsoft&reg; Teams, ServiceNow, and {{site.data.keyword.cos_full_notm}}.
 {: shortdesc}

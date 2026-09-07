@@ -1,7 +1,8 @@
 ---
+
 copyright:
   years: 2021, 2026
-lastupdated: "2026-08-13"
+lastupdated: "2026-09-02"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email, smtp
 
@@ -70,7 +71,7 @@ After creating an SMTP configuration in an {{site.data.keyword.en_short}} instan
 
     8. If you send the html content in the notification payload, do you have a process to validate this content is well formatted? Poorly formatted HTML content may decrease the server reputation.
     ```
-    {: codeblock}
+    {: screen}
 
     While many questions are self-explanatory, we have provided explanations for a few to ensure clarity.
 
@@ -190,7 +191,7 @@ To create API keys for SMTP users, complete the following steps:
 #### API key limits
 {: #en-smtp-configurations-api-key-limits}
 
-The number of API keys you can create per Service ID is determined by IBM Cloud IAM limits. For current limits and quotas, check [IAM limits](/docs/account?topic=account-known-issues#iam_limits).
+The number of API keys you can create per Service ID is determined by IBM Cloud IAM limits. For current limits and quotas, check [IAM limits](/docs/iam?topic=iam-account-limits).
 
 
 ## Using SMTP interface for sending emails

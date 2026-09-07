@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-02-21"
+  years: 2023, 2026
+lastupdated: "2026-09-02"
 
 keywords: event notifications, event notification, notifications, integrations, destinations, test destinations
 
@@ -11,7 +11,7 @@ subcollection: event-notifications
 ---
 {{site.data.keyword.attribute-definition-list}}
 
-# Testing destinations
+# Testing destination connections for Event Notifications
 {: #en-test-destination}
 
 Maintaining the health and integrity of your connections is paramount. Making sure that your destinations deliver events reliably and the connection to the third-party apps is always up to date, is vital. To verify that the connection to your destination is correct, you can run a test.

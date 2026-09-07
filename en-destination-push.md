@@ -16,7 +16,7 @@ completion-time: 10m
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Push notifications
+# Configuring push notifications for {{site.data.keyword.en_short}}
 {: #en-destinations-push}
 {: toc-content-type="tutorial"}
 {: toc-completion-time="10m"}

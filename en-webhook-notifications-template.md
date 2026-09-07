@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025
-lastupdated: "2025-09-10"
+  years: 2025, 2026
+lastupdated: "2026-09-02"
 
 keywords: event-notifications, event notifications, about event notifications, templates, webhook
 
@@ -15,7 +15,7 @@ subcollection: event-notifications
 # Webhook Notification Template
 {: #en-webhook-notifications-template}
 
-A webhook represents a service destination, where an incoming notification can be consumed programmatically. 
+A webhook represents a service destination, where an incoming notification can be consumed programmatically.
 For example, an incoming notification about an event can trigger a webhook destination to a backend microservice to act based on the content of the incoming notification.
 {: shortdesc}
 
@@ -71,7 +71,7 @@ If the UI is used to create the template, Handlebars is used to create the paylo
   "runbook_url": "{{data.alert_definition.meta_labels.runbook}}"
 }
  ```
- 
+
 To learn more about Handlebars integration and the various helpers offered, see [Handlebars Integration](/docs/event-notifications?topic=event-notifications-en-create-en-template&interface=ui#handlebars-integration).
 {: note}
 
@@ -87,4 +87,3 @@ To learn more about Handlebars integration and the various helpers offered, see 
 	"type": "webhook.notification"
     }
  ```
- 

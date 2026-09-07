@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-08-13"
+lastupdated: "2026-09-02"
 
 keywords: event notifications CLI plug-in, CLI reference, en cli reference, event notifications cli reference, event notifications, command line reference
 
@@ -14,10 +14,10 @@ content-type: cli-docs
 
 {{site.data.keyword.attribute-definition-list}}
 
-# {{site.data.keyword.en_short}} CLI
+# {{site.data.keyword.en_short}} CLI reference
 {: #event-notifications-cli}
 
-The {{site.data.keyword.cloud_notm}} command-line interface (CLI) provides additional capabilities for service offerings. {{site.data.keyword.cloud_notm}} CLI supports a plug-in framework to extend its capability. You can install the {{site.data.keyword.en_short}} CLI plug-in from the {{site.data.keyword.cloud_notm}} plug-in repository. With the {{site.data.keyword.en_short}} service CLI plug-in, you can easily manage {{site.data.keyword.en_short}} service instances by using the CLI commands available.
+To work with {{site.data.keyword.en_short}} by using the command-line interface (CLI) you can install the {{site.data.keyword.en_short}} CLI plug-in from the {{site.data.keyword.cloud_notm}} plug-in repository. The plug-in is designed to extend the capabilities that are offered by the {{site.data.keyword.cloud_notm}} CLI.
 {: shortdesc}
 
 ## Prerequisites
@@ -64,11 +64,23 @@ ibmcloud en en-list
 ### ibmcloud event-notifications environment variables set
 {: #en-cli-environment-variables}
 
-Set the region that you'll be working on by setting the ibmcloud target region ibmcloud target -r <region> or export regional endpoint via  variable IBMCLOUD_EN_ENDPOINT, for example, use the following for Sydney: 
+Set the region in which you want to work.
 
-- export IBMCLOUD_EN_ENDPOINT= https://au-syd.event-notifications.cloud.ibm.com/event-notifications
+```sh
+ibmcloud target -region
+```
+{: codeblock}
 
-- export **IBMCLOUD_EN_ENDPOINT** variable to set the {{site.data.keyword.en_short}} region public endpoint.
+Alternatively, you can export a regional endpoint via the variable `IBMCLOUD_EN_ENDPOINT` as shown in the following example.
+
+```sh
+export IBMCLOUD_EN_ENDPOINT= https://au-syd.event-notifications.cloud.ibm.com/event-notifications
+```
+{: codeblock}
+
+To set the regional endpoint as either public or private, see the following options:
+
+- Available public endpoints:
 
    - **Dallas:** `https://us-south.event-notifications.cloud.ibm.com/event-notifications`
    - **London:** `https://eu-gb.event-notifications.cloud.ibm.com/event-notifications`
@@ -84,7 +96,7 @@ Set the region that you'll be working on by setting the ibmcloud target region i
    - **Chennai:** `https://in-che.event-notifications.cloud.ibm.com/event-notifications`
    - **Mumbai:** `https://in-mum.event-notifications.cloud.ibm.com/event-notifications`
 
-- export **IBMCLOUD_EN_ENDPOINT** variable to set the {{site.data.keyword.en_short}} region private endpoint.
+- Available private endpoints:
 
    - **Dallas:** `https://private.us-south.event-notifications.cloud.ibm.com/event-notifications`
    - **London:** `https://private.eu-gb.event-notifications.cloud.ibm.com/event-notifications`
@@ -100,10 +112,7 @@ Set the region that you'll be working on by setting the ibmcloud target region i
    - **Chennai:** `https://private.in-che.event-notifications.cloud.ibm.com/event-notifications`
    - **Mumbai:** `https://private.in-mum.event-notifications.cloud.ibm.com/event-notifications`
 
-- export **EVENT_NOTIFICATIONS_API_KEY** variable to set the {{site.data.keyword.en_short}} instance `apikey`.
-
-EVENT_NOTIFICATIONS_API_KEY can be your IBM Cloud API key or the service credentials API key from your {{site.data.keyword.en_short}} instance.
-{: note}
+You can also export the **EVENT_NOTIFICATIONS_API_KEY** variable to configure the API key  or the service credentials API key for your {{site.data.keyword.en_short}} instance.
 
 ## Sources
 {: #en-cli-source}
@@ -147,7 +156,7 @@ The CLI currently supports creating API sources only.
 
    `--description DESCRIPTION` (string)
    :  The description for source. Optional.
-   
+
        The default value is ``. The maximum length is `255` characters. The minimum length is `0` characters. The value must match regular expression `/[a-zA-Z 0-9-_\/.?:'";,+=!#@$%^&*()]*/`.
 
    `--enabled ENABLED` (Boolean)
@@ -157,7 +166,7 @@ The CLI currently supports creating API sources only.
 
    `--store-notifications` (bool)
    :   Enable to view the payload of incoming events for troubleshooting.
-   
+
        The default value is `false`.
 
 ### ibmcloud event-notifications source update
@@ -624,7 +633,7 @@ Operate on {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} desti
 
    - The following example shows the format of the `DestinationConfig` object for Custom Email(smtp_custom) destination. In case of Custom Email Sandbox(smtp_custom_sandbox) destination, Destination Configuration params are not required.
 
-      Process To do the Custom Domain Configuration and Verification: <https://cloud.ibm.com/docs/event-notifications?topic=event-notifications-en-destinations-custom-email#en-destinations-custom-email-verify>
+      Process To do the Custom Domain Configuration and Verification: https://cloud.ibm.com/docs/event-notifications?topic=event-notifications-en-destinations-custom-email#en-destinations-custom-email-verify
 
       ```json
       {
@@ -1344,7 +1353,7 @@ Operate on {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} subsc
       - The following example shows the format of the `SubscriptionCreateAttributes` object for App Configuration. When creating or updating a subscription for an **App Configuration** destination, the `attributes` object has a specific rule:
          - You must include **either** `feature_flag_enabled` **or** `template_id_notification`
          - You **cannot** include both properties together
-         
+
          This ensures that a subscription is created for the correct use case — either **feature flag evaluation** or **notification templating**, but not both at once.
 
       ```json
@@ -1803,7 +1812,7 @@ ibmcloud event-notifications template-create --instance-id INSTANCE-ID --name NA
     The maximum length is `24` characters. The minimum length is `22` characters. The value must match regular expression `/^(smtp_custom.notification|smtp_custom.invitation)$/`.
 
 `--params` ([`TemplateConfig`](#event-notifications-template-create-examples))
-:   Payload describing a template configuration. Required. 
+:   Payload describing a template configuration. Required.
 
     This JSON option can instead be provided by setting individual fields with other options. It is mutually exclusive with those options.
 
@@ -2616,7 +2625,7 @@ ibmcloud event-notifications smtp-allowed-ips \
 ### `ibmcloud event-notifications smtp-allowed-ips-update`
 {: #event-notifications-cli-smtp-allowed-ips-update-command}
 
-Note: The support for legacy allowlisting has been deprecated. The support has been enabled via Context-based-restrictions. For detailed information, please refer here: <https://cloud.ibm.com/docs/event-notifications?topic=event-notifications-en-smtp-configurations#en-smtp-configurations-cbr>
+Note: The support for legacy allowlisting has been deprecated. The support has been enabled via Context-based-restrictions. For detailed information, please refer here: https://cloud.ibm.com/docs/event-notifications?topic=event-notifications-en-smtp-configurations#en-smtp-configurations-cbr
 
 ### `ibmcloud event-notifications verify-smtp-update`
 {: #event-notifications-cli-verify-smtp-update-command}
@@ -2694,7 +2703,7 @@ ibmcloud event-notifications metrics ---instance-id INSTANCE-ID --gte GTE --lte 
 `--destination-type` (string)
 :   Destination type for which metrics are requested. Supported value: smtp_custom. Required when querying metrics for custom email destinations.
 
-    Allowable values are: `smtp_custom`.        
+    Allowable values are: `smtp_custom`.
 
 `--destination-id` (string)
 :   Unique identifier for Destination.
@@ -2780,7 +2789,7 @@ ibmcloud event-notifications bounce-metrics --instance-id INSTANCE-ID --gte GTE 
 `--destination-type` (string)
 :   Destination type for which metrics are requested. Supported value: smtp_custom. Required when querying metrics for custom email destinations.
 
-    Allowable values are: `smtp_custom`.        
+    Allowable values are: `smtp_custom`.
 
 `--destination-id` (string)
 :   Unique identifier for Destination.
@@ -2883,7 +2892,7 @@ ibmcloud event-notifications notifications-status \
 ## Send Notifications
 {: #event-notifications-send-notifications-cli}
 
-This document describes the payload details for sending events using the API sources in Event Notifications. API sources can be used to send events from your backend applications. Event Notifications supports two modes to make HTTP calls. This is adhering to the CloudEvents specification. These modes are Binary Mode and Structured mode. More details here - <https://github.com/cloudevents/spec>. In the Binary Content Mode, the value of the event data is placed into the HTTP request, or response, body as-is, with the datacontenttype attribute value declaring its media type in the HTTP Content-Type header; all other event attributes are mapped to HTTP headers. All the attribute names are prefixed with ce- and added to the header (except for the data and datacontenttype). When mandatory attributes of CloudEvents (specversion, id, type, and source) are passed as part of headers the request is treated as binary mode. Structured Mode. In the Structured Content Mode, event metadata attributes and event data are placed into the HTTP request body. For structured mode, set the Content-Type header to application/cloudevents+json. Mandatory attributes of CloudEvents (specversion, id, type, and source) are required to be part of the request body. In addition, id data is provided as datacontenttype which is mandatory. We only support datacontenttype as \"application/json\".
+This document describes the payload details for sending events using the API sources in Event Notifications. API sources can be used to send events from your backend applications. Event Notifications supports two modes to make HTTP calls. This is adhering to the CloudEvents specification. These modes are Binary Mode and Structured mode. More details here - https://github.com/cloudevents/spec. In the Binary Content Mode, the value of the event data is placed into the HTTP request, or response, body as-is, with the datacontenttype attribute value declaring its media type in the HTTP Content-Type header; all other event attributes are mapped to HTTP headers. All the attribute names are prefixed with ce- and added to the header (except for the data and datacontenttype). When mandatory attributes of CloudEvents (specversion, id, type, and source) are passed as part of headers the request is treated as binary mode. Structured Mode. In the Structured Content Mode, event metadata attributes and event data are placed into the HTTP request body. For structured mode, set the Content-Type header to application/cloudevents+json. Mandatory attributes of CloudEvents (specversion, id, type, and source) are required to be part of the request body. In addition, id data is provided as datacontenttype which is mandatory. We only support datacontenttype as \"application/json\".
 
 ### `ibmcloud event-notifications send-notifications`
 {: #event-notifications-cli-send-notifications-command}
@@ -3056,7 +3065,7 @@ The [provision_event_notification.sh](https://github.com/IBM/event-notifications
 
 The [en-platform-notification-src-and-email-dest.sh](https://github.com/IBM/event-notifications/blob/main/samples/en-platform-notification-src-and-email-dest.sh){: external} script integrates Platform Notifications with {{site.data.keyword.en_short}} and routes notifications to IBM Inbuilt Email or Custom Domain Sandbox.
 
-  
+
 ## Sample script for {{site.data.keyword.logs_full_notm}} integration using CLI
 {: #en-icl-script}
 

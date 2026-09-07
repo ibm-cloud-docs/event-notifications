@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2024
-lastupdated: "2024-10-07"
+  years: 2020, 2026
+lastupdated: "2026-09-02"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -61,10 +61,9 @@ The destination type determines how notifications are delivered. The following s
 
 ### {{site.data.keyword.cloud_notm}} Email service
 {: #en-Email-destination}
-   
+
 - You can add up to 10,000 email addresses to the recipient list. The **Invited** tab displays a list of users who have not yet accepted the invitation. The **Active** tab displays a list of recipient email addresses and the date that each address was activated. The **Unsubscribed** tab displays a list of recipients who have opted out of receiving email notifications for this subscription.
 - Add any additional information that is required for the destination type.
 
 If you are providing **Assigned to** and **Assignment group** values, make sure that they have proper settings and are linked otherwise ServiceNow will reject requests with 403. Also make sure that there are no Business Rule blocking assignment to these groups and users.
 {: note}
-         

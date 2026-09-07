@@ -12,7 +12,7 @@ subcollection: event-notifications
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Microsoft Teams
+# Configuring Microsoft Teams as a destination in {{site.data.keyword.en_short}}
 {: #en-destinations-msteams}
 
 Microsoft&trade; Teams is an enterprise collaboration and communication platform. When you select Microsoft Teams as a service destination, any subscribed notification about an event can be sent as a message to a Microsoft Teams channel.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025
-lastupdated: "2025-09-10"
+  years: 2025, 2026
+lastupdated: "2026-09-02"
 
 keywords: event-notifications, event notifications, about event notifications, templates, event streams
 
@@ -12,10 +12,10 @@ subcollection: event-notifications
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Event Streams Notification Template
+# Managing Event Streams notification templates
 {: #en-event-streams-notification-template}
 
-{{site.data.keyword.messagehub}} is a message bus that is built by using Apache Kafka. In Event Streams, applications can send data by creating messages and sending to a topic. To receive messages, the application subscribes to a topic and can choose to receive all the messages of the topic or share the messages between them. 
+{{site.data.keyword.messagehub}} is a message bus that is built by using Apache Kafka. In Event Streams, applications can send data by creating messages and sending to a topic. To receive messages, the application subscribes to a topic and can choose to receive all the messages of the topic or share the messages between them.
 {: shortdesc}
 
 For more information on the Event Streams destination, see [Event Streams](/docs/event-notifications?topic=event-notifications-en-destinations-event-streams).
@@ -39,17 +39,17 @@ To learn more about Handlebars integration and the various helpers offered, see 
 {
   "key": {
     "type": "text",
-    "data": "{{data.id}}" 
+    "data": "{{data.id}}"
   },
   "value": {
     "type": "text",
-    "data": "{ 
-      \"name\": \"{{data.alert_definition.name}}\", 
-      \"status\": \"{{data.status}}\", 
-      \"severity\": \"{{data.severity}}\", 
-      \"source\": \"{{source}}\", 
-      \"timestamp\": \"{{time}}\", 
-      \"view_alert\": \"{{data.links.view_alert}}\" 
+    "data": "{
+      \"name\": \"{{data.alert_definition.name}}\",
+      \"status\": \"{{data.status}}\",
+      \"severity\": \"{{data.severity}}\",
+      \"source\": \"{{source}}\",
+      \"timestamp\": \"{{time}}\",
+      \"view_alert\": \"{{data.links.view_alert}}\"
     }"
   }
 }

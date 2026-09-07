@@ -19,7 +19,7 @@ As part of the Integrations in {{site.data.keyword.en_short}}, you can enable co
 
 Collect failed events helps you to identify which messages have failed and take remedial action.
 
-When a message fails to be delivered a set number of times, the failed message ends up in a {{site.data.keyword.cos_full_notm}} bucket. You can able to identify the subscription or topic to which that failed message belongs and take further action, if required.
+When a message fails to be delivered a set number of times, the failed message ends up in an {{site.data.keyword.cos_full_notm}} bucket. You can able to identify the subscription or topic to which that failed message belongs and take further action, if required.
 
 Before you enable collecting failed events in **Destinations**, make sure that you have an {{site.data.keyword.cos_full_notm}} instance [created and configured](https://{DomainName}/objectstorage/create) in the same account as your {{site.data.keyword.en_short}} instance.
 {: note}

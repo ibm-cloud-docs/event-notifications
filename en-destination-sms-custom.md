@@ -1,7 +1,7 @@
 ---
 copyright:
-  years: 2021, 2023
-lastupdated: "2024-07-29"
+  years: 2021, 2026
+lastupdated: "2026-08-31"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, sms
 
@@ -89,7 +89,7 @@ By adding phone numbers, you affirm, on behalf of yourself and your company, tha
 ## SMS segment
 {: #en-destinations-sms-custom-segment}
 
-SMS segments are character batches (of length 160 characters) of an SMS message, used by carriers to measure the size of the message.
+SMS segments are 160-character batches that carriers use to measure the length of an SMS message.
 
 If a message contains less than 160 characters, then it is considered as one SMS segment. If a message contains more than 160 characters then it is considered as 2 segments, first segment has 160 character and the second segment has 40 characters.
 

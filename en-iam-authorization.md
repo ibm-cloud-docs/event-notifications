@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2026
-lastupdated: "2026-03-27"
+  years: 2025, 2026
+lastupdated: "2026-09-02"
 
 keywords: event-notifications, event notifications, managing service access, iam, account, authorizations, s2s
 
@@ -25,7 +25,7 @@ If the source service that needs access to the target service is in the same acc
 ## Creating an authorization in the console
 {: #en-using-s2s-console}
 
-If the source and target services are in different accounts or if the authorization is created manually, complete the following steps: 
+If the source and target services are in different accounts or if the authorization is created manually, complete the following steps:
 
 1. In the {{site.data.keyword.cloud_notm}} console, click **Manage** > **Access (IAM)**, and select **Authorizations**.
 
@@ -39,7 +39,7 @@ If the source and target services are in different accounts or if the authorizat
 
 1. Select a **Target service**.
 
-1. For the target service, specify whether you want to give {{site.data.keyword.en_short}} access to all resources of the target, only to a specific resource group, a region, a service instance, a resource type or a resource ID. 
+1. For the target service, specify whether you want to give {{site.data.keyword.en_short}} access to all resources of the target, only to a specific resource group, a region, a service instance, a resource type or a resource ID.
 
 1. Select the appropriate roles to grant {{site.data.keyword.en_short}} access to the target service.
 

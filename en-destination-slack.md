@@ -13,7 +13,7 @@ subcollection: event-notifications
 {{site.data.keyword.attribute-definition-list}}
 {:codeblock: .codeblock}
 
-# Slack
+# Configuring Slack as a destination in {{site.data.keyword.en_short}}
 {: #en-destinations-slack}
 
 Slack is a messaging platform that helps teams to connect and collaborate. When you select slack as a service destination, any subscribed notification about an event can be sent as a message to slack channels.
@@ -55,7 +55,7 @@ To configure a Slack destination, complete the following steps:
 ## Configuring a slack subscription
 {: #en-slack-configure-sub}
 
-To configure a slack subscription: 
+To configure a slack subscription:
 
 1. **Using Incoming Webhooks**
    - You can add an attachment color to individual Slack subscriptions based on a hex code. For example, use #0000FF to set the color to blue.

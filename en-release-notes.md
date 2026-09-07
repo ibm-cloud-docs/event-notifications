@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-08-27"
+lastupdated: "2026-09-02"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -389,7 +389,7 @@ Support for Email Templates in Custom Domain Email Destination
 {: release-note}
 
 New supported {{site.data.keyword.cloud_notm}} source: watsonx.data
-:  IBM watsonx.data is an open, hybrid, and governed fit-for-purpose data store optimized to scale all data, analytics, and AI workloads available as a {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} source under IBM Cloud Sources. For more information, see [Enabling {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} for watsonx.data](/docs/watsonxdata?topic=watsonxdata-event-notifications-events).
+:  IBM watsonx.data is an open, hybrid, and governed fit-for-purpose data store optimized to scale all data, analytics, and AI workloads available as an {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} source under IBM Cloud Sources. For more information, see [Enabling {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} for watsonx.data](/docs/watsonxdata?topic=watsonxdata-event-notifications-events).
 
 Support for Custom Domain Email Service
 :  {{site.data.keyword.en_short}} now supports sending email notifications sent from custom domain. To send these email notifications, you must configure a new destination as custom domain email service. For more information, see [Using an IBM Cloud email service with custom domain](/docs/event-notifications?topic=event-notifications-en-destinations-custom-email).
@@ -399,7 +399,7 @@ Support for Custom Domain Email Service
 {: release-note}
 
 New destination: Huawei Cloud Push
-:  Huawei Push Destination is now available as a {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} destination. You can [send and store notifications to your Huawei Push Destination by using {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}}](/docs/event-notifications?topic=event-notifications-en-push-huawei).
+:  Huawei Push Destination is now available as an {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} destination. You can [send and store notifications to your Huawei Push Destination by using {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}}](/docs/event-notifications?topic=event-notifications-en-push-huawei).
 
 ## 25 May 2023
 {: #event-notifications-May2523}

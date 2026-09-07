@@ -3,7 +3,7 @@
 copyright:
 
   years: 2021, 2026
-lastupdated: "2026-08-13"
+lastupdated: "2026-08-31"
 
 keywords: event notifications, IBM Cloud
 
@@ -117,7 +117,7 @@ To set up event routing, see [Route notifications to destinations flow](/docs/ev
 After you save the routing configuration, notifications are delivered to the chosen destinations whenever a matching event occurs.
 
 
-Subscriptions are created and managed as part of the route notifications to destinations flow. They are not available as a standalone option from the navigation menu on the {{site.data.keyword.en_short}} instance page. 
+Subscriptions are created and managed as part of the route notifications to destinations flow. They are not available as a standalone option from the navigation menu on the {{site.data.keyword.en_short}} instance page.
 {: important}
 
 To create or modify a subscription, you must work through a topic:
@@ -129,4 +129,4 @@ To create or modify a subscription, you must work through a topic:
 ## Alternative: Use Terraform
 {: #en-getting-started-terraform}
 
-As an alternative to the console, you can provision and configure {{site.data.keyword.en_short}} instances by using [Terraform IBM Modules (TIM)](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim) for Infrastructure as Code (IaC) automation. The [TIM for {{site.data.keyword.en_short}}](https://registry.terraform.io/modules/terraform-ibm-modules/event-notifications/ibm/latest){: external} provides a standardized, tested, and enterprise-ready approach that follows {{site.data.keyword.cloud_notm}} security best practices.
+As an alternative to the console, you can provision and configure {{site.data.keyword.en_short}} instances by using [Terraform IBM Modules (TIM)](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim) for Infrastructure as Code (IaC) automation. The [TIM for {{site.data.keyword.en_short}}](https://registry.terraform.io/modules/terraform-ibm-modules/event-notifications/ibm/latest){: external} provides a standardized, tested, and enterprise-ready approach that follows {{site.data.keyword.cloud_notm}} security best practices.
