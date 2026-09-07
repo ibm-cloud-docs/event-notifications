@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2026
-lastupdated: "2026-09-02"
+lastupdated: "2026-09-07"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, webhook
 
@@ -44,12 +44,13 @@ To identify that the incoming notification is coming from {{site.data.keyword.en
 You can allowlist the IP address ranges to restrict access to the servers that receive webhooks. Ensure that the following IP addresses are all allowlisted:
 
 ### Existing webhook IP addresses
-{: #en-allowlisting-existing}
+{: #en-allowlisting-existing-ips}
 
-Valid until end of September 2026. See [webhook IP addresses](/docs/support?topic=support-webhook-ips).
+These [webhook IP addresses](/docs/support?topic=support-webhook-ips) will be deprecated by the end of September 2026. Webhooks will no longer be delivered from these IP addresses. Ensure that you allowlist the [new IP addresses](#en-allowlisting-new-ips).
+{: note}
 
 ### New IP addresses
-{: #en-allowlisting-new}
+{: #en-allowlisting-new-ips}
 
 Effective starting August 29, 2026:
 
