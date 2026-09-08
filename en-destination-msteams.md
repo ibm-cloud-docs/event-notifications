@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-10-10"
+  years: 2021, 2026
+lastupdated: "2026-09-08"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, ms teams, Microsoft Teams
 
@@ -38,7 +38,7 @@ Click **Topics** in the {{site.data.keyword.en_short}} instance and click **Crea
 
 Proceed to the **Subscriptions** step. Click **Create**, enter the subscription details in the **Create subscription** dialog, and click **Create subscription** to associate the Microsoft Teams destination to this topic.
 
-## How do Microsoft Teams notification from {{site.data.keyword.en_short}} looks
+## How Microsoft Teams notifications from {{site.data.keyword.en_short}} look
 {: #en-how-do-msteams-notification-from-en-looks}
 
 {{site.data.keyword.en_short}} generates Microsoft Teams notifications from the incoming payload. The template that {{site.data.keyword.en_short}} uses to send to Microsoft Teams looks like the following example:

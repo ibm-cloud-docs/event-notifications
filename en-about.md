@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2026
-lastupdated: "2026-08-31"
+lastupdated: "2026-09-08"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -141,12 +141,12 @@ One subscription can have only one destination, but it can have many subscribers
 ### Outbound digital message
 {: #en-outbound}
 
-An event notification that is sent from the {{site.data.keyword.en_short}} service to a subscriber. Outbound digital messages are a primary billing metric for the {{site.data.keyword.en_short}} service. The price for outbound digital messages varies by destination (for example, outbound digital messages to SMS are priced differently than outbound digital messages to email). In most cases a dispatch (attempt to deliver) is considered an outbound digital message, regardless of whether the delivery was successfully.
+An event notification that is sent from the {{site.data.keyword.en_short}} service to a subscriber. Outbound digital messages are a primary billing metric for the {{site.data.keyword.en_short}} service. The price for outbound digital messages varies by destination (for example, outbound digital messages to SMS are priced differently than outbound digital messages to email). In most cases a dispatch (attempt to deliver) is considered an outbound digital message, regardless of whether the delivery was successful.
 
 ### Digital message origin
 {: #en-outbound-origin}
 
-The originating phone number or origin ID for a text message, and the originating domain or IP address for email. In, most countries the sender is obligated by law to be transparent about the origin of a digital message. If you select the IBM SMS Service or IBM Email Service as a destination for your subscriptions, the text messages that user receives has an origin that is owned by IBM.
+The originating phone number or origin ID for a text message, and the originating domain or IP address for email. In most countries, the sender is obligated by law to be transparent about the origin of a digital message. If you select the IBM SMS Service or IBM Email Service as a destination for your subscriptions, the text messages that user receives has an origin that is owned by IBM.
 
 ### SMS message
 {: #en-sms}
@@ -191,4 +191,4 @@ A notification sent to the {{site.data.keyword.en_short}} service must conform t
 
 A filter is a conditional statement, which connects a source to a topic. Filters are written to route notifications of interest to a particular topic. All notifications that pass through the filters into a topic are then routed to the topic subscribers. Filtering is absent between topic and destination.
 
-To simplify filtering, a source might include **event categories** in their notifications. Event categories are standard filter keys with the following hierarchy: Event Category -> Event Type -> Severity. Event categories simplify filtering because they appear as dropdown selection boxes when you are creating topics and filters in the {{site.data.keyword.en_short}} UI. For more advance filtering, use [JSONPath](https://jsonpath.com/) in the `Custom Filter` field. For more on JSONPath, see [JSONPath Online Evaluator](https://restfulapi.net/json-jsonpath/).
+To simplify filtering, a source might include **event categories** in their notifications. Event categories are standard filter keys with the following hierarchy: Event Category -> Event Type -> Severity. Event categories simplify filtering because they appear as dropdown selection boxes when you are creating topics and filters in the {{site.data.keyword.en_short}} UI. For more advanced filtering, use [JSONPath](https://jsonpath.com/) in the `Custom Filter` field. For more on JSONPath, see [JSONPath Online Evaluator](https://restfulapi.net/json-jsonpath/).

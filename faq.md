@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2026
-lastupdated: "2026-09-01"
+lastupdated: "2026-09-08"
 
 
 keywords: event-notification, event notification, faqs, Frequently Asked Questions, question, billing, service, invalid devices, device deletion, database
@@ -122,15 +122,15 @@ You cannot customize messages that are generated from {{site.data.keyword.cloud_
 {: #faq-en-send-notification-error-422}
 {: faq}
 
-{{site.data.keyword.en_short}} service is unable to process your request. This is usually seen when there is no condition or filter associated with the topic to which the notification is sent. Check your topic and verify that it is connected to the correct source, with the intended conditions.
+The request cannot be processed. This error typically occurs when no condition or filter is associated with the topic to which the notification is sent. Check your topic and verify that it is connected to the correct source, with the intended conditions.
 
-## Why my email notifications sent didn’t reach customers even though in the logs I can see successfully sent notifications?
+## Why didn't my email notifications reach customers even though the logs show successfully sent notifications?
 {: #faq-en-email-notifications-missing}
 {: faq}
 
-This may be due to your {{site.data.keyword.en_short}} instance has a subscription created for the smtp_ibm destination and has no email ID added as a recipient to the list for the subscription.
+This issue can occur when no email address is added as a recipient in the smtp_ibm destination subscription.
 
-Make sure your {{site.data.keyword.en_short}} instance has a subscription created for the smtp_ibm destination and has at least one email ID added as a recipient to the list for the subscription.
+Ensure that at least one email address is added as a recipient in the smtp_ibm destination subscription.
 
 ## Is it possible to send notifications to more than one destination using Event Notifications?
 {: #faq-en-notifications-multiple-destination}
@@ -142,7 +142,7 @@ Yes. You can send notifications to more than one destination.
 {: #faq-en-notifications-email-destinations}
 {: faq}
 
-Emails sent via an IBM Cloud email destination are sent on behalf of IBM Cloud from a source (i.e., The sender's email domain will always have ".event-notifications.cloud.ibm.com"). On the other hand, a custom email destination allows you to add your own domain address through which a sender can send emails.
+Emails sent through an IBM Cloud email destination are sent on behalf of IBM Cloud (that is, the sender's email domain always includes ".event-notifications.cloud.ibm.com"). A custom email destination allows you to add your own domain address through which a sender can send emails.
 
 Also, API sources cannot send notifications to IBM Cloud email destination, because of the security reasons, on the other hand, a custom domain email destination can receive notifications from any kind of source.
 
@@ -181,7 +181,7 @@ The following table lists the blocked file extensions:
 | `.wsh` | `.xnk` | | |
 {: caption="Blocked file extensions for email attachments" caption-side="bottom"}
 
-If you attempt to send an attachment with a blocked extension, the request will be rejected with a `400 Bad Request` error.
+If you attempt to send an attachment with a blocked extension, the request is rejected with a `400 Bad Request` error.
 
 ## What is SPF verification?
 {: #faq-en-notifications-spf-verification}
@@ -205,13 +205,13 @@ By implementing DKIM, domain owners can increase the trustworthiness of their em
 {: #faq-en-notifications-spf-verification-works}
 {: faq}
 
-1. The sender publishes an SPF Record: The owner of a domain (the sender) publishes an SPF record in their domain's DNS (Domain Name System) records. This SPF record specifies which mail servers are authorized to send email on behalf of that domain.
+1. Publish an SPF record: The domain owner publishes an SPF record in their DNS records. This record specifies which mail servers are authorized to send email on behalf of that domain.
 
-2. Email Sent: When an email is sent from that domain, the recipient's mail server may perform an SPF check by looking up the SPF record for the sender's domain.
+2. Send email: When an email is sent from that domain, the recipient's mail server may perform an SPF check by looking up the SPF record for the sender's domain.
 
-3. SPF Record Check: The recipient's mail server checks if the IP address of the sending mail server is listed in the SPF record as an authorized sender. If it is, the email is considered legitimate; if not, it may be marked as suspicious or rejected.
+3. Check the SPF record: The recipient's mail server checks whether the IP address of the sending mail server is listed in the SPF record as an authorized sender. If it is, the email is considered legitimate; if not, it may be marked as suspicious or rejected.
 
-4. Result: The SPF check produces one of three results:
+4. Review the result: The SPF check produces one of three results:
 
    - Pass: The sending server's IP address is listed in the SPF record, indicating that the email is legitimate.
    - Fail: The sending server's IP address is not listed in the SPF record, suggesting that the email may be unauthorized.
@@ -271,7 +271,7 @@ You may encounter client timeouts when trying to access a website, application, 
 {: faq}
 
 - Check your internet connection: Ensure that your internet connection is stable and not experiencing any disruptions.
-- Verify server status: Confirm that Event Notification Service is available and no incidents have been reported.
+- Verify server status: Confirm that {{site.data.keyword.en_short}} is available and no incidents have been reported.
 - Adjust timeout settings: Some applications allow users to adjust timeout settings. If possible, consider extending the timeout duration to accommodate potential delays.
 
 ## How can developers address client timeouts in their applications?

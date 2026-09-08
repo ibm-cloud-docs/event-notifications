@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-09-01"
+lastupdated: "2026-09-08"
 
 keywords: event-notifications, event notifications, about event notifications, templates, slack
 
@@ -26,7 +26,7 @@ For more information about the Slack destination, see [Slack](/docs/event-notifi
 
 Construct stacks of blocks. For more details, see the [Slack Block Kit](https://docs.slack.dev/block-kit/){: external}.
 
-Users can generate or validate a static JSON by using the [Block Kit builders](https://app.slack.com/block-kit-builder). This is added as a slack template in Event Notifications.
+Users can generate or validate a static JSON by using the [Block Kit builders](https://app.slack.com/block-kit-builder/E27SFGS2W/templates). This is added as a slack template in Event Notifications.
 
 ### Example Usage:
 {: #en-slack-template}

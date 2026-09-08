@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2026
-lastupdated: "2026-09-02"
+lastupdated: "2026-09-08"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -54,7 +54,8 @@ The destination type determines how notifications are delivered. The following s
 ### {{site.data.keyword.cloud_notm}} SMS service
 {: #en-SMS-destination}
 
-- You can add up to 3 phone numbers for the Lite plan and 100 phone numbers for the Standard plan to the recipient list.
+
+- When you add phone numbers to your subscription, you can add a maximum of 3 phone numbers if you're working with the Lite plan and 100 if you're working in the Standard plan.
 - When you click **Create subscription** after adding phone numbers, the numbers are added to the **Invited** tab. The **Active** tab displays the phone numbers of recipients who confirmed receiving SMS notifications for the selected topic.
 - When a recipient clicks the **Unsubscribe** link, the recipient's number is moved to the **Unsubscribed** tab. To restart the subscription, the recipient must contact the {{site.data.keyword.IBM_notm}} {{site.data.keyword.en_short}} service administrator to add the number back to the subscription.
 - In some cases, the carrier service allows keywords like `START` and `STOP`. When a recipient sends a `STOP` response, notifications are disabled immediately. However, the phone number is moved to the **Unsubscribed** tab only on the next attempt to send an SMS to that number. The recipient can restart notifications by sending a `START` response.
@@ -62,7 +63,8 @@ The destination type determines how notifications are delivered. The following s
 ### {{site.data.keyword.cloud_notm}} Email service
 {: #en-Email-destination}
 
-- You can add up to 10,000 email addresses to the recipient list. The **Invited** tab displays a list of users who have not yet accepted the invitation. The **Active** tab displays a list of recipient email addresses and the date that each address was activated. The **Unsubscribed** tab displays a list of recipients who have opted out of receiving email notifications for this subscription.
+- You can add a maximum of 10,000 emails when you add email addresses to your subscription recipient list.
+- The **Invited** tab displays a list of users who have not yet accepted the invitation. The **Active** tab displays a list of recipient email addresses and the date that each address was activated. The **Unsubscribed** tab displays a list of recipients who have opted out of receiving email notifications for this subscription.
 - Add any additional information that is required for the destination type.
 
 If you are providing **Assigned to** and **Assignment group** values, make sure that they have proper settings and are linked otherwise ServiceNow will reject requests with 403. Also make sure that there are no Business Rule blocking assignment to these groups and users.

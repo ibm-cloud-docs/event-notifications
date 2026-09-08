@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-09-02"
+lastupdated: "2026-09-08"
 
 keywords: event notifications, event notification, notifications, managing encryption, byok, kyok, integrations protect, hpcs
 
@@ -17,7 +17,7 @@ subcollection: event-notifications
 By default, customer data in {{site.data.keyword.en_short}} is encrypted at-rest by using a randomly generated key. If your solution requires a higher level of control, you can manage your own encryption by integrating with {{site.data.keyword.keymanagementservicefull}} or {{site.data.keyword.hscrypto}}. You must be using the standard pricing plan to bring your own key.
 {: shortdesc}
 
-If your solution requires that you manage your own keys for data at rest or that you have explicit control of the full lifecycle of data,including at rest, then you might consider using customer-managed keys. Both {{site.data.keyword.keymanagementserviceshort}} and {{site.data.keyword.hscrypto}} are designed to allow the use of a customer-provided key to control encryption. To compare the services and determine which is best for your solution, see [Which data security service is best for me?](/docs/key-protect?topic=key-protect-manage-secrets-ibm-cloud)
+If your solution requires that you manage your own keys for data at rest, or that you have explicit control of the full lifecycle of data including at rest, then you might consider using customer-managed keys. Both {{site.data.keyword.keymanagementserviceshort}} and {{site.data.keyword.hscrypto}} are designed to allow the use of a customer-provided key to control encryption. To compare the services and determine which is best for your solution, see [Which data security service is best for me?](/docs/key-protect?topic=key-protect-manage-secrets-ibm-cloud)
 
 If you delete a custom-managed key without going through the proper process, you could lose access to the data that is stored in your {{site.data.keyword.en_short}} instance.
 {: important}
@@ -25,9 +25,9 @@ If you delete a custom-managed key without going through the proper process, you
 ## What is not covered by customer-managed encryption
 {: #en-encryption-what}
 
-If customer-managed encryption feature is selected, the user should be aware that **only** customer data is covered by this encryption. {{site.data.keyword.en_short}} encrypts at-rest other data related to the use of the service.
+If you enable customer-managed encryption, note that **only** customer data is covered by this encryption. {{site.data.keyword.en_short}} encrypts other data related to the use of the service at rest.
 
-It is not recommended to use confidential information in client metadata.
+Do not use confidential information in client metadata.
 {: important}
 
 ## How customer-managed encryption works

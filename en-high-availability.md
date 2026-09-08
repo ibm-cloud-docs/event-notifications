@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-05-11"
+lastupdated: "2026-09-08"
 
 keywords: HA for Event Notifications, high availability for Event Notifications, Event Notifications, disaster recovery
 
@@ -21,7 +21,7 @@ subcollection: event-notifications
 
 IBM Event Notifications is a highly available, multi-tenant, regional service.
 
-## Service High Availability (HA)
+## Service high availability (HA)
 {: #en-service-high-availability}
 
 An availability zone is a logically and physically isolated location within an {{site.data.keyword.cloud_notm}} region where your data is processed and hosted.
@@ -96,4 +96,4 @@ If an entire MZR becomes inoperative (usually due to a catastrophic disaster or 
 
 When the primary MZR is restored, the secondary deployment is migrated back to the primary site. After the migration is complete, the DNS is restored to its original routing.
 
-If you need zero downtime during a regional disaster recovery, create and maintain backup instances in other regions. To synchronize a service instance in one region with an instance in a different region, you can use the APIs mentioned [here](/apidocs/event-notifications).
+If you need zero downtime during a regional disaster recovery, create and maintain backup instances in other regions. To synchronize a service instance in one region with an instance in a different region, you can use the [Event Notifications API](/apidocs/event-notifications).

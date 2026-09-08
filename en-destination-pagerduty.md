@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-09-02"
+lastupdated: "2026-09-08"
 
 keywords: event-notifications, event notifications, destinations, pagerduty
 
@@ -49,7 +49,7 @@ To configure a PagerDuty destination, complete the following steps:
 1. Click **Create destination**.
 
 ## PagerDuty alert events supported by {{site.data.keyword.en_short}}
-{: #en-pd-retry}
+{: #en-pd-alert-events}
 
 {{site.data.keyword.en_short}} supports only alert events of PagerDuty. For more information, see [Send an alert event](https://developer.pagerduty.com/docs/ZG9jOjExMDI5NTgx-send-an-alert-event){: external}.
 
