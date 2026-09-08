@@ -3,7 +3,7 @@
 copyright:
 
   years: 2021, 2026
-lastupdated: "2026-08-31"
+lastupdated: "2026-09-08"
 
 keywords: event notifications, IBM Cloud
 
@@ -25,7 +25,7 @@ completion-time: 10m
 This tutorial walks you through the steps that you need to take before you create an {{site.data.keyword.en_full_notm}} service.
 {: shortdesc}
 
-{{site.data.keyword.en_short}} is a routing service that provides you with information about critical events that occur in your {{site.data.keyword.cloud}} account. You can filter and route event notifications from {{site.data.keyword.cloud_notm}} services and applications to human destinations, such as Email, SMS, and Push notifications, or to service destinations, such as Webhooks and cloud services.
+{{site.data.keyword.en_short}} is a routing service that provides you with information about critical events that occur in your {{site.data.keyword.cloud}} account. You can filter and route event notifications from {{site.data.keyword.cloud_notm}} services and applications to human destinations, such as email, SMS, and push notifications, or to service destinations, such as webhooks and cloud services.
 
 ## Create an {{site.data.keyword.cloud_notm}} account
 {: #en-cloud-ac}
@@ -59,7 +59,12 @@ Decide on a location where your service will to be hosted. Currently, the follow
 
 Based on your business requirements, decide on a pricing plan. Currently, the following plans are available: Lite, and Standard.
 
-- `Lite`: This plan gives you unlimited ingested events, 10 topics, two filters per topic, five destinations, 20 outbound emails, 20 outbound SMSes, 20 outbound webhooks (including Slack, with a limit of 20 Slack messages), and 1000 notifications per push destination (cumulative per instance, including Android, iOS, Huawei devices, and Chrome, Firefox, Safari browsers; the instance is disabled once the limit is reached). Ten subscriptions are allowed, and a subscription can have a maximum of three email recipients.
+- `Lite`: This plan includes the following limits:
+   - Unlimited ingested events
+   - 10 topics, two filters per topic, and five destinations
+   - 20 outbound emails, 20 outbound SMS messages, and 20 outbound webhooks (including Slack)
+   - 1,000 notifications per push destination (cumulative per instance, across Android, iOS, Huawei, Chrome, Firefox, and Safari; the instance is disabled when the limit is reached)
+   - 10 subscriptions, with a maximum of three email recipients per subscription
 
    Custom Email and Custom SMS destinations are not supported by Lite Plan.
    {: note}
@@ -69,7 +74,7 @@ Based on your business requirements, decide on a pricing plan. Currently, the fo
    You can use **Pre-production destination**, as a low-cost push destination, for your development and test environments. You can change the **Pre-production destination** to **Production destination** post completion of your development and testing. This feature is only available for `Standard` pricing plan.
    {: note}
 
-Changing plans from a chargeable plan (Standard) to free plan (Lite) is not permitted as this may result in disruption and data loss due to the plan limitations.
+Downgrading from the Standard plan to the Lite plan is not permitted. Doing so can cause service disruption and data loss because of plan limitations.
 {: important}
 
 ## Choose an event source

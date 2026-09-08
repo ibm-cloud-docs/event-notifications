@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2024
-lastupdated: "2024-01-03"
+  years: 2021, 2026
+lastupdated: "2026-09-08"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email
 
@@ -11,7 +11,7 @@ subcollection: event-notifications
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Email Destinations
+# Email destinations
 {: #en-destinations-email}
 
 Use {{site.data.keyword.en_short}} email destinations to send event-driven notifications to recipients by email. Two destination types are available: Inbuilt Email and IBM Cloud Email service with custom domain.

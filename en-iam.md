@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-09-02"
+lastupdated: "2026-09-08"
 
 keywords: event notifications, event notification, notifications, service access, manage, user roles
 
@@ -19,7 +19,7 @@ As an account owner, you can manage access to the instance of {{site.data.keywor
 
 As an account owner, you can set policies within your account to create different levels of access for different users. For example, certain users can have `Read only` access to one instance, but `Write` access to another. You can decide who is allowed to create, update, and delete instances of {{site.data.keyword.en_short}}.
 
-{{site.data.keyword.en_short}} service has adopted IAM so App secret is not generated for new instances. Instead, you must use the [API keys instead](/docs/iam?topic=iam-manapikey){: external}.
+{{site.data.keyword.en_short}} has adopted IAM. App secrets are not generated for new instances. Use [API keys](/docs/iam?topic=iam-manapikey){: external} instead.
 {: note}
 
 ## User roles
@@ -162,7 +162,7 @@ curl -k -X POST \
 }
 ```
 
-Upon generating the access token by using the preceding curl command, operate the Rest APIs by passing the `Bearer <value of access_token>` in the Authorization header.
+Upon generating the access token by using the preceding curl command, use the REST APIs by passing the `Bearer <value of access_token>` in the Authorization header.
 
 For example:
 

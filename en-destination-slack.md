@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2024
-lastupdated: "2024-10-30"
+  years: 2020, 2026
+lastupdated: "2026-09-08"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, slack
 
@@ -16,18 +16,18 @@ subcollection: event-notifications
 # Configuring Slack as a destination in {{site.data.keyword.en_short}}
 {: #en-destinations-slack}
 
-Slack is a messaging platform that helps teams to connect and collaborate. When you select slack as a service destination, any subscribed notification about an event can be sent as a message to slack channels.
+Slack is a messaging platform that helps teams to connect and collaborate. When you select Slack as a service destination, any subscribed notification about an event can be sent as a message to Slack channels.
 {: shortdesc}
 
-When a message of length greater than 3000 characters is sent to slack, the message text gets truncated with leaders `[...]`.
+When a message of length greater than 3000 characters is sent to Slack, the message text gets truncated with leaders `[...]`.
 {: note}
 
-## Generate slack incoming webhook URL
+## Generate a Slack incoming webhook URL
 {: #en-generate-slack-incoming-webhook-url}
 
-To post a slack notification, that you need to generate an incoming webhook URL. To generate the URL, follow these steps: [Incoming webhooks for Slack](https://docs.slack.dev/messaging/sending-messages-using-incoming-webhooks/){: external}.
+To post a Slack notification, you need to generate an incoming webhook URL. To generate the URL, follow the steps in [Incoming webhooks for Slack](https://docs.slack.dev/messaging/sending-messages-using-incoming-webhooks/){: external}.
 
-## Configuring a slack destination
+## Configuring a Slack destination
 {: #en-slack-configure-destination}
 
 Before you configure Slack as a destination for Direct Messages, ensure you have created and configured a Slack app with a bot token scope of `chat:write`. Refer to the Slack API documentation for more information: (https://api.slack.com/quickstart#creating).
@@ -36,7 +36,7 @@ Before you configure Slack as a destination for Direct Messages, ensure you have
 
 To configure a Slack destination, complete the following steps:
 
-1. click **Destinations** in the {{site.data.keyword.en_short}} instance.
+1. Click **Destinations** in the {{site.data.keyword.en_short}} instance.
 
 1. Click **Create** to add a new destination.
 
@@ -52,7 +52,7 @@ To configure a Slack destination, complete the following steps:
 1. Click **Create destination**.
 
 
-## Configuring a slack subscription
+## Configuring a Slack subscription
 {: #en-slack-configure-sub}
 
 To configure a slack subscription:
@@ -62,7 +62,7 @@ To configure a slack subscription:
 1. **Using Direct Messages**
    - You can provide a list of member IDs and channel IDs. If channel IDs are provided, the application is integrated into the specified channels.
 
-## How a default slack notification (without template) from Event Notifications looks
+## How a default Slack notification (without template) from {{site.data.keyword.en_short}} looks
 {: #en-how-a-slack-notification-from-en-looks}
 
 {{site.data.keyword.en_short}} generates Slack notifications from the incoming payload. The template that {{site.data.keyword.en_short}} uses to send to Slack looks like the following example:

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2023
-lastupdated: "2024-07-29"
+  years: 2020, 2026
+lastupdated: "2026-09-08"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, sms
 
@@ -30,7 +30,7 @@ The text messages originate from IBM-owned phone numbers or alphanumeric sender 
 ## Using an {{site.data.keyword.cloud_notm}} SMS service destination
 {: #en-destinations-sms-use}
 
-To use the SMS service destination, add it to a subscription along with the phone numbers of the recipients. Within a single subscription, you can add up to 3 phone numbers for lite plan and 100 phone numbers for standard plan. The subscription also needs a topic to filter events of interest from your sources. When an event lands in the topic, {{site.data.keyword.en_short}} immediately routes the event notification to your SMS recipients.
+To use the SMS service destination, add it to a subscription along with the phone numbers of the recipients. Within a single subscription, you can add up to three phone numbers for the Lite plan and 100 phone numbers for the Standard plan. The subscription also needs a topic to filter events of interest from your sources. When an event lands in the topic, {{site.data.keyword.en_short}} immediately routes the event notification to your SMS recipients.
 
 When you select `{{site.data.keyword.cloud_notm}} SMS service` as the destination type, you can add up to 3 phone numbers for the Lite plan and 100 phone numbers for the Standard plan to the recipient list. To comply with regulatory standards, you might need to obtain consent (opt-in) from SMS recipients to receive SMS messages from each of the {{site.data.keyword.en_short}} subscriptions.
 
@@ -44,8 +44,8 @@ Create a new topic or select an existing topic to configure the subscription for
 For an existing topic, click **Edit** in the **Actions** menu and click the **Subscriptions** tab.
 
 1. Complete the following subscription details:
-   - `Name`: name of the subscription.
-   - `Description`: add an optional description for this subscription.
+   - **Name**: Name of the subscription.
+   - **Description**: Optional description for this subscription.
 
 1. Select `{{site.data.keyword.cloud_notm}} SMS service` as **Destination** from the list.
 
@@ -73,8 +73,8 @@ When a recipient does not want to receive any SMS notifications, they can opt ou
 
 To add a recipient number back to active list, take the following steps:
 
-1. Recipient needs to send `START` message back to the number from which SMS was received.
-1. After sending `START` message, the recipient can contact their {{site.data.keyword.IBM_notm}} {{site.data.keyword.en_short}} service administrator to add the number back to subscription.
+1. The recipient must send `START` to the number from which the SMS was received.
+1. After sending `START`, the recipient must contact their {{site.data.keyword.en_short}} administrator to add the number back to the subscription.
 
 By adding phone numbers, you represent on behalf of yourself and your company that you have properly informed the individuals, to whom the added phone numbers pertain, of their addition to this recipient list and purpose thereof, and have the required consents to do so.
 {: note}

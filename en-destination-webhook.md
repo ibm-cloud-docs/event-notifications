@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2026
-lastupdated: "2026-09-07"
+lastupdated: "2026-09-08"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, webhook
 
@@ -23,10 +23,10 @@ A webhook represents a service destination, where an incoming notification can b
 
 You can configure a webhook destination on the **Destinations** tab. As part of the configuration, enter the webhook URL, and the REST API verb to be called when the webhook is called. You can also enter authorization headers to the destination webhook. Create a subscription to associate the webhook destination to a topic.
 
-## Supported HTTP Verbs
+## Supported HTTP verbs
 {: #en-supported-verbs}
 
-{{site.data.keyword.en_short}} webhooks support the http verbs GET, POST, PUT, and PATCH.
+{{site.data.keyword.en_short}} webhooks support the HTTP verbs GET, POST, PUT, and PATCH.
 
 - GET : Retrieves a representation of the specified resource.
 - POST : Creates a new resource.
@@ -46,7 +46,7 @@ You can allowlist the IP address ranges to restrict access to the servers that r
 ### Existing webhook IP addresses
 {: #en-allowlisting-existing-ips}
 
-These [webhook IP addresses](/docs/support?topic=support-webhook-ips) will be deprecated by the end of September 2026. Webhooks will no longer be delivered from these IP addresses. Ensure that you allowlist the [new IP addresses](#en-allowlisting-new-ips).
+These [webhook IP addresses](/docs/support?topic=support-webhook-ips) are deprecated at the end of September 2026. After that date, webhooks are no longer delivered from these IP addresses. Ensure that you allowlist the [new IP addresses](#en-allowlisting-new-ips).
 {: note}
 
 ### New IP addresses
@@ -206,6 +206,7 @@ Effective starting August 29, 2026:
    {: codeblock}
 
 #### Toronto (ca-tor)
+{: #toronto-ca-tor}
 
 - Public
 
