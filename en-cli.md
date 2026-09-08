@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-09-02"
+lastupdated: "2026-09-08"
 
 keywords: event notifications CLI plug-in, CLI reference, en cli reference, event notifications cli reference, event notifications, command line reference
 
@@ -2674,7 +2674,7 @@ ibmcloud event-notifications verify-smtp-update \
 Get metrics.
 
 ```sh
-ibmcloud event-notifications metrics ---instance-id INSTANCE-ID --gte GTE --lte LTE [--smtp-config-id SMTP-CONFIG-ID] [--destination-type DESTINATION-TYPE][--destination-id DESTINATION-ID] [--subscription-id SUBSCRIPTION-ID] [--source-id SOURCE-ID] [--email-to EMAIL-TO] [--notification-id NOTIFICATION-ID] [--subject SUBJECT]
+ibmcloud event-notifications metrics --instance-id INSTANCE-ID --gte GTE --lte LTE [--smtp-config-id SMTP-CONFIG-ID] [--destination-type DESTINATION-TYPE] [--destination-id DESTINATION-ID] [--subscription-id SUBSCRIPTION-ID] [--source-id SOURCE-ID] [--email-to EMAIL-TO] [--notification-id NOTIFICATION-ID] [--subject SUBJECT]
 ```
 
 #### Command options
