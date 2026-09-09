@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-10-11"
+  years: 2022, 2026
+lastupdated: "2026-09-09"
 
 keywords: event notifications, Resource lifecycle events
 
@@ -22,7 +22,7 @@ The {{site.data.keyword.cloud_notm}} provisioning layer manages the lifecycle of
 
 Resource lifecycle events are events around the {{site.data.keyword.cloud_notm}} resources. For more information, see [Creating resources](/docs/account?topic=account-manage_resource&interface=ui){: external}.
 
-Some example of Resource lifecycle events are:
+Some examples of resource lifecycle events are:
 
 - Creating a resource instance
 - Updating a resource instance
@@ -41,19 +41,19 @@ Some example of Resource lifecycle events are:
    | `instance` | `create` | An event is generated when you provision a service instance. |
    | `instance` | `create_failure` | An event is generated when a service instance creation failed. |
    | `instance` | `create_inprogress` | An event is generated when a service instance creation is in progress. |
-   | `instance` | `delete` | An event is generated when a service instance deleted. |
+   | `instance` | `delete` | An event is generated when a service instance is deleted. |
    | `instance` | `delete_failure` | An event is generated when a service instance deletion failed. |
    | `instance` | `delete_inprogress` | An event is generated when a service instance deletion is in progress. |
-   | `instance` | `restore` | An event is generated when a service instance restored after deletion within reclamation period. |
-   | `instance` | `schedule_reclaim` | An event is generated when a service instance scheduled for reclaim after deletion. |
-   | `instance` | `update` | An event is generated when a service instance get updated. |
-   | `instance` | `update_failure` | An event is generated when a service instance updation failed. |
-   | `instance` | `update_inprogress` | An event is generated when a service instance updation is in progress. |
-   | `instance` | `update_plan` | An event is generated when a service instance plan get updated. |
-   | `instance` | `update_plan_failure` | An event is generated when a service instance plan updation failed. |
-   | `instance` | `update_plan_inprogress` | An event is generated when a service instance plan updation is in progress. |
-   | `instance` | `update_state` | An event is generated when a service instance state get updated. |
-   | `instance` | `update_state_failure` | An event is generated when a service instance state updation failed. |
+   | `instance` | `restore` | An event is generated when a service instance is restored after deletion within the reclamation period. |
+   | `instance` | `schedule_reclaim` | An event is generated when a service instance is scheduled for reclaim after deletion. |
+   | `instance` | `update` | An event is generated when a service instance is updated. |
+   | `instance` | `update_failure` | An event is generated when a service instance update fails. |
+   | `instance` | `update_inprogress` | An event is generated when a service instance update is in progress. |
+   | `instance` | `update_plan` | An event is generated when a service instance plan is updated. |
+   | `instance` | `update_plan_failure` | An event is generated when a service instance plan update fails. |
+   | `instance` | `update_plan_inprogress` | An event is generated when a service instance plan update is in progress. |
+   | `instance` | `update_state` | An event is generated when a service instance state is updated. |
+   | `instance` | `update_state_failure` | An event is generated when a service instance state update fails. |
    {: caption="Supported service instance type and sub-types" caption-side="bottom"}
 
 1. Service key type resources
@@ -62,7 +62,7 @@ Some example of Resource lifecycle events are:
    | :--------- | :---------- | :-------------- |
    | `key` | `create` | An event is generated when a service instance credentials are created successfully. |
    | `key` | `create_failure` | An event is generated when a service instance credentials creation failed. |
-   | `key` | `delete` | An event is generated when a service instance credentials deleted successfully. |
+   | `key` | `delete` | An event is generated when service instance credentials are deleted successfully. |
    | `key` | `delete_failure` | An event is generated when a service instance credentials deletion failed. |
    {: caption="Supported key credentials type and sub-types" caption-side="bottom"}
 
@@ -70,9 +70,9 @@ Some example of Resource lifecycle events are:
 
    | Event type | Sub-type    | Description     |
    | :--------- | :---------- | :-------------- |
-   | `Resource_group` | `create` | An event is generated when a resource group get created. |
-   | `Resource_group` | `delete` | An event is generated when a resource group get deleted. |
-   | `Resource_group` | `update` | An event is generated when a resource group get updated. |
+   | `Resource_group` | `create` | An event is generated when a resource group is created. |
+   | `Resource_group` | `delete` | An event is generated when a resource group is deleted. |
+   | `Resource_group` | `update` | An event is generated when a resource group is updated. |
    {: caption="Supported resource group type and sub-types" caption-side="bottom"}
 
 ## Enabling resource lifecycle events
@@ -82,12 +82,12 @@ Some example of Resource lifecycle events are:
 
 After enabling the source, you can publish the lifecycle events to the [Topic](/docs/event-notifications?topic=event-notifications-en-about#en-topics) of your choice.
 
-To learn more about working with **Topics**, see [here](/docs/event-notifications?topic=event-notifications-en-create-en-topic).
+To learn more about working with **Topics**, see [Creating an {{site.data.keyword.en_short}} topic](/docs/event-notifications?topic=event-notifications-en-create-en-topic).
 
-## Event Schema for Resource Lifecycle Events
+## Event schema for resource lifecycle events
 {: #en-schema-rc-events}
 
-The following table describes the fields of a Resource Lifecycle event:
+The following table describes the fields of a resource lifecycle event:
 
 | Field Name | Type | Description |
 |:-----------|:------|:-------------|
@@ -124,7 +124,7 @@ The following table describes the fields of a Resource Lifecycle event:
 | `event_properties.scheduled_reclaim_at` | String | Timestamp when the resource was reclaimed. Available for reclaim resource action. |
 | `event_properties.scheduled_reclaim_by` | String | IAM ID who restored the resource. Available for restore resource action. |
 | `event_properties.updated_at` | String | Timestamp which the last update on the resource was done. |
-{: caption="Event Schma for Resource Lifecycle Events" caption-side="bottom"}
+{: caption="Event schema for resource lifecycle events" caption-side="bottom"}
 
 ### Example event
 {: #en-example-event}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024
-lastupdated: "2024-10-17"
+  years: 2024, 2026
+lastupdated: "2026-09-09"
 
 keywords: event-notifications, event notifications, destinations, Huawei
 
@@ -18,7 +18,7 @@ subcollection: event-notifications
 {{site.data.keyword.en_short}} provides a push notification service for sending transactional and informational event notifications to Huawei mobile devices.
 {: shortdesc}
 
-## Creating a Huawei Push Destination
+## Creating a Huawei push destination
 {: #en-create-destination-huawei}
 
 To create a Huawei Push destination, complete the following steps:
@@ -34,7 +34,7 @@ To create a Huawei Push destination, complete the following steps:
    - **Description**: add an optional description about the destination.
    - **Destination type**: select **Huawei Push Notifications** from the list.
 
-1. Select a destination plan. You can select a **Pre-production destination** for developing and testing your environments at a low cost. You can upgrade a **Pre-production destination** to **Production destination** after creating the destination by using the **Edit** option from the overflow menu after your development and testing. For more information, see [Upgrading a Pre-production destination to Production destination](#en-destination-preprod-prod1). There will be a change in cost when you upgrade.
+1. Select a destination plan. You can select a **Pre-production destination** for developing and testing your environments at a low cost. You can upgrade a **Pre-production destination** to **Production destination** after creating the destination by using the **Edit** option from the overflow menu. For more information, see [Upgrading a pre-production destination to production destination](#en-destination-preprod-prod1). A change in cost occurs when you upgrade.
 
 1. Retrieve Huawei credentials (**Client ID** and **Client secret**) for your application. For more information, see [Retrieving Huawei credentials](#en-retrieve-huawei-credentials).
 
@@ -42,7 +42,7 @@ To create a Huawei Push destination, complete the following steps:
 
 1. Click **Create destination**.
 
-## Retrieving Huawei Credentials
+## Retrieving Huawei credentials
 {: #en-retrieve-huawei-credentials}
 
 To complete the Huawei Push Notification setup, you need a **Client ID** and **Client secret**. Obtain these from the Huawei AppGallery Connect portal.
@@ -58,7 +58,7 @@ To complete the Huawei Push Notification setup, you need a **Client ID** and **C
 
 1. Go to the **App information** section, where you can find OAuth 2.0 **Client ID**. Copy the **Client ID** and **Client secret** values into the respective fields.
 
-## Upgrading a Pre-production Destination to Production Destination
+## Upgrading a pre-production destination to production destination
 {: #en-destination-preprod-prod1}
 
 You can upgrade a **Pre-production destination** to **Production destination** after creating the destination by using the **Edit** option from the overflow menu.

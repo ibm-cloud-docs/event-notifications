@@ -1,8 +1,8 @@
 ---
 
 copyright:
-   years: 2026
-lastupdated: "2026-09-02"
+   years: 2025, 2026
+lastupdated: "2026-09-09"
 
 keywords: event-notifications, event notifications, pagerduty, on call manager, ocm, migration, icl, cloud logs
 
@@ -23,15 +23,15 @@ completion-time: 30m
 {: toc-completion-time="30m"}
 
 
-This tutorial shows you how to migrate your PagerDuty alerting setup to IBM On Call Manager (OCM) using {{site.data.keyword.en_full_notm}}.
+This tutorial shows you how to migrate your PagerDuty alerting setup to IBM On Call Manager (OCM) by using {{site.data.keyword.en_full_notm}}.
 {: shortdesc}
 
-IBM On Call Manager can receive events from various monitoring sources, either on-premises or in the cloud. By integrating OCM with {{site.data.keyword.en_short}}, you can route notifications from IBM Cloud services to your OCM instance for centralised incident management.
+IBM On Call Manager can receive events from various monitoring sources, either on-premises or in the cloud. By integrating OCM with {{site.data.keyword.en_short}}, you can route notifications from IBM Cloud services to your OCM instance for centralized incident management.
 
 The migration process differs based on your source type:
 
-- If your source is {{site.data.keyword.logs_full_notm}} (ICL), you will create an ICL Integration on OCM to receive alerts directly from Cloud Logs.
-- For other IBM Cloud sources (such as Secrets Manager or IBM Cloud Monitoring), you will create an Outbound Integration on OCM and configure {{site.data.keyword.en_short}} to route notifications through a webhook destination.
+- If your source is {{site.data.keyword.logs_full_notm}} (ICL), create an ICL Integration on OCM to receive alerts directly from Cloud Logs.
+- For other IBM Cloud sources (such as Secrets Manager or IBM Cloud Monitoring), create an Outbound Integration on OCM and configure {{site.data.keyword.en_short}} to route notifications through a webhook destination.
 
 ## Before you begin
 {: #en-pd-ocm-migration-prereqs}

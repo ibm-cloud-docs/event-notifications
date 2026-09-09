@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2021, 2026
-lastupdated: "2026-08-31"
+lastupdated: "2026-09-09"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, sms
 
@@ -46,8 +46,8 @@ For an existing topic, click **Edit** in the **Actions** menu and click the **Su
 
 1. Complete the following subscription details:
 
-   - `Name`: name of the subscription.
-   - `Description`: add an optional description for this subscription.
+   - **Name**: Name of the subscription.
+   - **Description**: Optional description for this subscription.
 
 1. Select Custom SMS destination created as **Destination** from the list.
 
@@ -59,7 +59,7 @@ For an existing topic, click **Edit** in the **Actions** menu and click the **Su
 
    Add the phone numbers prefixed with _+_ followed by the _country code_, with comma (,) as separator between the numbers.
 
-Make sure that the phone numbers added belong to the destination supported countries, else SMS delivery may fail.
+Ensure that the phone numbers added belong to the destination supported countries, otherwise SMS delivery may fail.
 {: note}
 
 1. Click **Create subscription**. The recipient automatically receives initial message that they have been invited to subscribe to the topic. This is the `opt-in` message.
@@ -69,10 +69,10 @@ The Opt-in message contains:
 - invitee name or account
 - name of the subscription
 - name of the topic
-- a link that will take you to a web page. The web page contains information that the recipient is subscribed to receive SMS notifications to a topic and a **Confirm** button. When the recipient click the **Confirm** button, then the recipient's number is moved from _Invited_ tab to _Active_ tab. A confirmation message also displaying that the recipient has accepted to receive SMS notifications. The confirmation message also contains a link to **Unsubscribe**, which on clicking moves to recipient's number to the _Unsubscribed_ tab.
+- a link to a web page. The web page contains information about the SMS notification subscription and a **Confirm** button. When the recipient clicks **Confirm**, the recipient's number is moved from the **Invited** tab to the **Active** tab. A confirmation message states that the recipient has accepted SMS notifications. The confirmation message also contains an **Unsubscribe** link, which moves the recipient's number to the **Unsubscribed** tab.
 - an expiration time for the opt-in message.
 
-{{site.data.keyword.en_short}} are routed only to opted-in recipients. To stop receiving the notifications, recipient can click the **Unsubscribe** link in the message. Once unsubscribed, the recipients will not receive any notifications on the topic they have unsubscribed. To restart the subscription, the recipient need to contact {{site.data.keyword.IBM_notm}} {{site.data.keyword.en_short}} service administrator to add the number back to subscription.
+Notifications are routed only to opted-in recipients. To stop receiving notifications, the recipient can click the **Unsubscribe** link in the message. After unsubscribing, the recipient does not receive any notifications for that topic. To restart the subscription, the recipient must contact the {{site.data.keyword.en_short}} administrator to add the number back to the subscription.
 
 In some cases, the carrier service allows keywords like `START` and `STOP` for receiving notifications and to stop notifications.
 

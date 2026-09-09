@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2026
-lastupdated: "2026-09-02"
+lastupdated: "2026-09-09"
 
 keywords: event-notifications, event notifications, managing service access, iam, account, topics, subscriptions
 
@@ -34,13 +34,13 @@ A user cannot be assigned **Manager** Role to delete specific topics/subscriptio
 ## Before you begin
 {: #topics-subscriptions-access-step-0}
 
-If you are already managing instances of {{site.data.keyword.en_short}} or IAM, you do not need to create more. However, as this tutorial will modify and configure the instance we are working with, make sure that any accounts or services are not being used in a production environment.
+If you are already managing instances of {{site.data.keyword.en_short}} or IAM, you do not need to create more. However, as this tutorial modifies and configures the instance you are working with, ensure that any accounts or services are not being used in a production environment.
 
 For this tutorial, you need:
 
 - An {{site.data.keyword.cloud}} Platform account
 - An instance of {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}}
-- To complete the steps to manage access to the service, you should be the owner of the {{site.data.keyword.en_short}} instance. In other words, your user ID needs **administrator platform permissions** to use the IAM service. You may have to contact or work with an account administrator.
+- To complete the steps to manage access to the service, you must be the owner of the {{site.data.keyword.en_short}} instance. Your user ID needs **administrator platform permissions** to use the IAM service. You might need to contact or work with an account administrator.
 
 ## Grant Reader access to {{site.data.keyword.en_short}} instance
 {: #topics-subscriptions-access-step-1}
@@ -60,7 +60,7 @@ To enable access to topics/subscriptions in an instance, the user must at least 
 {: #topics-subscriptions-access-step-2}
 {: step}
 
-We'll repeat the step 1, but this time we'll use **Topic ID/Subscription ID** resource attribute and select **Writer** role.
+Repeat step 1, but this time use the **Topic ID/Subscription ID** resource attribute and select the **Writer** role.
 
 In an access policy , we can have either Topic ID **or** Subscription ID. Both cannot be present in the same access policy. If you want an access policy for more than 1 topic/subscription , create separate access policies for each topic/subscription.
 {: note}

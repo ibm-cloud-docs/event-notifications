@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2025
-lastupdated: "2025-10-29"
+  years: 2021, 2026
+lastupdated: "2026-09-09"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -15,7 +15,7 @@ subcollection: event-notifications
 # Creating an {{site.data.keyword.en_short}} template
 {: #en-create-en-template}
 
-An {{site.data.keyword.en_full_notm}} template defines the layout and content of notifications (email, webhook, Slack, etc.). Templates can include images, static text, and dynamic content (variables, conditional logic) based on events.
+An {{site.data.keyword.en_full_notm}} template defines the layout and content of notifications (email, webhook, Slack, and more). Templates can include images, static text, and dynamic content (variables, conditional logic) based on events.
 
 Event Notifications supports two types of templates:
 
@@ -45,17 +45,17 @@ Event Notifications supports two types of templates:
 1. Click **Add** to save your updates.
 
 
-## Handlebars Integration
+## Handlebars integration
 {: #handlebars-integration}
 
-Handlebars is a templating language that allows for dynamic content generation within templates. Handlebars can be used to customize notification messages using template variables ,conditional logic and various other helpers.
+Handlebars is a templating language that allows for dynamic content generation within templates. You can use Handlebars to customize notification messages by using template variables, conditional logic, and various other helpers.
 
-### Template Variables
+### Template variables
 {: #template-variables}
 
-Template variables are placeholders within the notification message templates that get replaced with actual data when a notification is triggered. These variables allow users to personalize messages and include relevant information from the event being notified.
+Template variables are placeholders within the notification message templates that get replaced with actual data when a notification is triggered. These variables allow you to personalize messages and include relevant information from the event being notified.
 
-#### Usage:
+#### Usage
 {: #usage-template-variables}
 
 ```handlebars
@@ -67,12 +67,12 @@ Example:
 Event Name: {{event_name}}
 ```
 
-### Conditional Logic Helper
+### Conditional logic helper
 {: #conditional-logic-helper}
 
-Conditional logic allows users to define conditions within the message templates, enabling dynamic content generation based on the values of variables. This feature is useful for creating flexible notification messages that adapt to different scenarios.
+Conditional logic allows you to define conditions within the message templates, enabling dynamic content generation based on the values of variables. This feature is useful for creating flexible notification messages that adapt to different scenarios.
 
-#### Usage:
+#### Usage
 {: #usage-conditional-logic-helper}
 
 ```handlebars
@@ -92,12 +92,12 @@ Example:
 {{/if}}
 ```
 
-### Contains Helper
+### Contains helper
 {: #contains-helper}
 
-The contains helper allows users to check whether there is a specific word in any of the fields of the payload.
+The contains helper allows you to check whether there is a specific word in any of the fields of the payload.
 
-#### Example:
+#### Example
 {: #example-contains-helper}
 
 ```
@@ -116,10 +116,10 @@ Use the contains helpers like:
 }
 ```
 
-There are more helpers available for use that can be referenced from [here](https://github.com/aymerick/raymond?tab=readme-ov-file#built-in-helpers)
+For a full list of available helpers, see the [raymond built-in helpers reference](https://github.com/aymerick/raymond?tab=readme-ov-file#built-in-helpers){: external}.
 {: note}
 
-### Examples:
+### Examples
 {: #template-examples}
 
 Payload:
@@ -138,7 +138,7 @@ Payload:
 }
 ```
 
-#### Using Conditional Logic Helpers along with Contains helpers
+#### Using conditional logic helpers with contains helpers
 {: #conditional-contains-helpers}
 
 ```handlebars
@@ -151,7 +151,7 @@ Payload:
 {{/if}}
 ```
 
-#### For loop to print each and every key value from array of map
+#### For loop to print each key value from an array of maps
 {: #for-loop-1}
 
 ```handlebars
@@ -166,7 +166,7 @@ Payload:
 }
 ```
 
-#### For loop to print specific values from a array of map
+#### For loop to print specific values from an array of maps
 {: #for-loop-2}
 
 ```handlebars
@@ -177,7 +177,7 @@ Payload:
 	 }
 {{/each}}
 ```
-#### Accessing value from payload where the key contains special chanracters
+#### Accessing a value from a payload where the key contains special characters
 
 Payload:
 

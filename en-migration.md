@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2026-09-01"
+  years: 2022, 2026
+lastupdated: "2026-09-09"
 
 keywords: event-notifications, event notifications migration, notifications, destinations, push, migration
 
@@ -23,7 +23,7 @@ You can migrate your mobile apps from the deprecated IBM Cloud Push Notification
 
 {{site.data.keyword.en_short}} is a routing service that tells you about critical events that occur in your {{site.data.keyword.cloud_notm}} account. You can filter and route event notifications from {{site.data.keyword.cloud_notm}} services like Monitoring, Security and Compliance Center, and Secrets Manager to communication channels like email, SMS, push notifications, and webhooks.
 
-This guide outlines the steps to migrate your mobile apps and the backend to integrate with the {{site.data.keyword.en_short}} service.
+This topic outlines the steps to migrate your mobile apps and the backend to integrate with the {{site.data.keyword.en_short}} service.
 
 Take the following steps to migrate your mobile apps:
 

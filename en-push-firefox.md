@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-10-17"
+  years: 2022, 2026
+lastupdated: "2026-09-09"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, push
 
@@ -38,7 +38,7 @@ This tutorial shows you how to send push notifications as follows:
 * Create a website with {{site.data.keyword.en_short}}.
 * Get Firefox web credentials.
 * Download the SDK and complete the notifications setup.
-* Configure and send Firefox web Push Notifications to a browser.
+* Configure and send Firefox web push notifications to a browser.
 
 ## Create an {{site.data.keyword.en_short}} service instance
 {: #en-create-event-ff}
@@ -70,7 +70,7 @@ Click **Destinations** in the {{site.data.keyword.en_short}} instance and click 
 
 Enter the following destination details in the **Create destination** dialog.
 
-* **Name**: add a name for the Destination.
+* **Name**: Add a name for the destination.
 * **Description**: add an optional description for the destination.
 * **Type**: select **Firefox Push Notifications** type from the dropdown list.
 * Select a destination plan: Pre-production destination or Production destination.

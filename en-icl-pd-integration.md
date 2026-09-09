@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2026
-lastupdated: "2026-09-02"
+lastupdated: "2026-09-09"
 
 keywords: event-notifications, event notifications, about event notifications, cloud logs, pagerduty
 
@@ -52,7 +52,7 @@ You need an {{site.data.keyword.cloud}} account. If you don't have an account, t
 
 1. In the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog#services), search **Event Notifications > Event Notifications**.
 
-1. Select a **Location** from the list of supported locations and select a pricing plan. To know more about the pricing plans , refer [here](/docs/event-notifications?topic=event-notifications-getting-started#en-decide-pricing-plans).
+1. Select a **Location** from the list of supported locations and select a pricing plan. For more information, see [Pricing plans](/docs/event-notifications?topic=event-notifications-getting-started#en-decide-pricing-plans).
 
 1. Enter a service name.
 

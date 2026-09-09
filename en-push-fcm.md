@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-09-02"
+lastupdated: "2026-09-09"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, push
 
@@ -23,10 +23,10 @@ Create an {{site.data.keyword.en_short}} service, add a push destination for Fir
 
 {{site.data.keyword.en_short}} is an event notification routing service that notifies you of critical events that occur in your {{site.data.keyword.cloud_notm}} account or triggers automated actions by using webhooks. You can filter and route event notifications from {{site.data.keyword.cloud_notm}} services like {{site.data.keyword.prf_hubshort}}, to email, SMS, push notifications, and webhooks.
 
-## How do clients use Android Push Notifications?
+## How do clients use Android push notifications?
 {: #en-how-clients-send-fcm}
 
-The following diagram shows you how clients use Android Push Notifications.
+The following diagram shows you how clients use Android push notifications.
 
 ![How clients use push notifications](images/en-how-send.svg "How clients use push notifications"){: caption="How clients use push notifications" caption-side="bottom"}
 
@@ -38,7 +38,7 @@ This tutorial shows you how to send push notifications as follows:
 * Create a mobile app with {{site.data.keyword.en_short}}.
 * Get FCM credentials.
 * Download the code and complete the notifications setup.
-* Configure and send Android Push Notifications to a mobile device.
+* Configure and send Android push notifications to a mobile device.
 
 ## Before you begin
 {: #en-before-begin-fcm}
@@ -49,7 +49,7 @@ You must have the following prerequisites in place:
 * A Google account to log in to Firebase console to get your `project_id`, `private_key`, and `client_email`.
 * An {{site.data.keyword.cloud_notm}} account. If you do not have one, [create an {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/){: external}.
 
-The instructions used in this document uses FCM's HTTP v1 API. The HTTP v1 API has advantages such as secure access tokens, efficient customizations, and future proof as well as more extendable client platform versions. For more information on migrating from FCM legacy HTTP API to the HTTP v1 API, see [Migrating FCM legacy HTTP API to HTTP v1 API](#en-fcm-http-migration).
+The instructions in this topic use FCM's HTTP v1 API. The HTTP v1 API has advantages such as secure access tokens, efficient customizations, and more extendable client platform versions. For more information on migrating from the FCM legacy HTTP API to the HTTP v1 API, see [Migrating FCM legacy HTTP API to HTTP v1 API](#en-fcm-http-migration).
 {: important}
 
 ## Create an {{site.data.keyword.en_short}} service instance

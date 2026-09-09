@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-09-09"
 
 keywords: event-notifications, event notifications, about event notifications, topics, advanced filtering
 
@@ -10,7 +10,7 @@ subcollection: event-notifications
 
 ---
 
-# Advanced Filtering using JSONPath
+# Advanced filtering using JSONPath
 {: #en-advanced-filtering}
 
 While creating topics you can add your own custom conditions, which must follow the [JSONpath specifications](https://goessner.net/articles/JsonPath/). JSONPath is a Java DSL for reading JSON documents. The correctly written rule extracts the appropriate data from the incoming request payload. {{site.data.keyword.en_short}} supports conditional operators `>=, <=, ==, >, <, !=, =~` and logical operators `||, &&` for JSONPath evaluation. You can validate your JSONPath [JSONPath Validator](https://jsonpath.com/). If you want to add advanced conditions for event type, subtype, and severity, see the following [example](/docs/event-notifications?topic=event-notifications-en-advanced-filtering&interface=ui#en-advanced-filtering-examples). Similarly, you can add advanced conditions for the other available [payload fields](https://{DomainName}/apidocs/event-notifications#send-notifications-request).
@@ -20,14 +20,14 @@ JSONPath expressions can use the dot–notation:
 $.data.details[0].name
 ```
 
-We only support regular expressions compatible with the [Go regexp package](https://pkg.go.dev/regexp).This package does not support lookbehind or negative lookahead assertions (e.g., `(?<!...)`, `(?!...)` are not supported).If you need to express a negative match, use a positive regular expression and apply the `not` operator provided by us to invert the result. See [Path Examples](/docs/event-notifications?topic=event-notifications-en-advanced-filtering&interface=ui#en-advanced-filtering-examples) to find an example of the usage of the `not` operator.
+{{site.data.keyword.en_short}} supports only regular expressions that are compatible with the [Go regexp package](https://pkg.go.dev/regexp). This package does not support lookbehind or negative lookahead assertions (for example, `(?<!...)` and `(?!...)` are not supported). To express a negative match, use a positive regular expression and apply the `not` operator to invert the result. See [Path examples](/docs/event-notifications?topic=event-notifications-en-advanced-filtering&interface=ui#en-advanced-filtering-examples) for an example of the `not` operator.
 {: note}
 
 
-## JSONPath Operators
+## JSONPath operators
 {: #en-operators}
 
-JSONPath provides a variety of operators to query JSON structures. Using these operators you can search elements, filter based on conditions and perform other data extraction tasks. The following operators are supported by {{site.data.keyword.en_short}}.
+JSONPath provides a variety of operators to query JSON structures. By using these operators, you can search elements, filter based on conditions, and perform other data extraction tasks. The following operators are supported by {{site.data.keyword.en_short}}.
 
 | Operator | Description |
 |-------|--------|
@@ -42,7 +42,7 @@ JSONPath provides a variety of operators to query JSON structures. Using these o
 {: caption="JSONPath Operators" caption-side="bottom"}
 
 
-## Filter Operators
+## Filter operators
 {: #en-filters}
 
 Filters are logical expressions used to filter arrays. The filters listed in the following table are supported by {{site.data.keyword.en_short}}.
@@ -60,7 +60,7 @@ Filters are logical expressions used to filter arrays. The filters listed in the
 | `\|\|`| combine multiple conditions in a filter where at least one of the specified conditions must be true for an element to be selected. |
 {: caption="Filter Operators" caption-side="bottom"}
 
-## Path Examples
+## Path examples
 {: #en-advanced-filtering-examples}
 
 ```JSON

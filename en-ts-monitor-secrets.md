@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-09-02"
+lastupdated: "2026-09-09"
 
 keywords: event-notifications, event notifications, about event notifications, secrets manager certificates, secrets expiry
 
@@ -190,4 +190,4 @@ Send a test event as follows:
 
 1. Click send test event.
 
-You should start receiving notifications at the email address that you configured whenever the criteria defined in both {{site.data.keyword.secrets-manager_short}} and {{site.data.keyword.en_short}} match.
+After you complete the configuration, you receive notifications at the email address you configured whenever the criteria defined in both {{site.data.keyword.secrets-manager_short}} and {{site.data.keyword.en_short}} match.

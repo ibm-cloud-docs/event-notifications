@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-09-02"
+lastupdated: "2026-09-09"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email
 
@@ -11,7 +11,7 @@ subcollection: event-notifications
 
 {{site.data.keyword.attribute-definition-list}}
 
-# {{site.data.keyword.cloud_notm}} Inbuilt Email Service
+# {{site.data.keyword.cloud_notm}} inbuilt email service
 {: #en-destination-email-destination-default}
 
 To use the email service destination, add it to a subscription along with the email addresses of interest. For a single subscription, you can add up to 10,000 email addresses with the {{site.data.keyword.en_short}} managed email Opt-in capability. The subscription also needs a topic to filter events of interest from your sources. When an event lands in the topic, {{site.data.keyword.en_short}} immediately routes the event notification to your email recipients.
@@ -25,6 +25,6 @@ After a subscription is created, the list of users in the **Invited** tab automa
 
 Opt-in message contains user or account who invited the recipient, the name of the subscription, the purpose of the notifications, the frequency of expected notifications, a way to accept or reject the invitation, and expiration time for the invitation.
 
-The {{site.data.keyword.en_short}} are only sent to the opted-in recipients.
+Notifications are sent only to opted-in recipients.
 
 You can either resend the invitation or remove the recipient from the **Invited** list. In the **Invited** tab, click and select the three vertical dots (overflow menu) and select **Resend invitation** for the recipient email address, to whom you need to resend the invitation. For deleting a user from the invited list, in the **Invited** tab, click the three vertical dots (overflow menu) and select **Delete** for the recipient email address, to whom you need to remove from the **Invited** list. For adding back a recipient after opted-out or not responded within the stipulated time that is mentioned in the invite email, you need to send a mail to the **Reply to** email address mentioned in the initial invite mail.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2026
-lastupdated: "2026-09-02"
+lastupdated: "2026-09-09"
 
 keywords: event-notifications, event notifications, about event notifications, cron scheduler, topics, sources
 
@@ -11,26 +11,26 @@ subcollection: event-notifications
 ---
 {{site.data.keyword.attribute-definition-list}}
 
-# Periodic Timer
+# Periodic timer
 {: #en-cron-periodic-timer}
 
-The Periodic timer is an event scheduler in the {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} service that generates events periodically based on the cron expressions. Periodic Event scheduling is important in large-scale applications where the client cannot maintain the periodic timer. Therefore, rather than relying on the client to schedule events, {{site.data.keyword.en_short}} will manage the scheduling of events based on a certain period that is defined by the user.
+The periodic timer is an event scheduler in the {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} service that generates events periodically based on cron expressions. Periodic event scheduling is important in large-scale applications where the client cannot maintain the periodic timer. Therefore, rather than relying on the client to schedule events, {{site.data.keyword.en_short}} manages the scheduling of events based on a period that you define.
 
-## Scheduling an Event
+## Scheduling an event
 {: #en-cron-scheduling-event}
 
-### **Step 1 : Creating a topic by using the Periodic Timer as a source**
+### Step 1: Creating a topic by using the periodic timer as a source
 {: #en-cron-create-topic}
 
 1. Navigate to your {{site.data.keyword.en_short}} instance and click **Topics**. Click **Add**. Provide the name and description of the topic. Select Periodic Timer as the source.
 
     ![Creating a topic](images/en-creating-topic.png "Creating a topic"){: caption="Creating a topic" caption-side="bottom"}
 
-1. Now, you must define the time window and the cron expression for Event Scheduling. The periodic timer operates within the time window you specify. If no start time is provided, the timer starts immediately, and if no end time is set, it continues to trigger until manually disabled. At first you will see the default cron expression and time window as highlighted below:
+1. Define the time window and the cron expression for event scheduling. The periodic timer operates within the time window you specify. If no start time is provided, the timer starts immediately. If no end time is set, it continues to trigger until you disable it. The default cron expression and time window are displayed as shown:
 
     ![Cron Default Expression](images/en-cron-default.png "Cron Default Expression"){: caption="Cron Default Expression" caption-side="bottom"}
 
-    Once you have set the time window and defined the cron expression, you will see the events that are scheduled as shown:
+    After you set the time window and define the cron expression, the scheduled events are displayed as shown:
 
     ![Setting the time period and defining Cron Expression ](images/en-cron-expression.png "Setting the time period and defining Cron Expression"){: caption="Setting the time period and defining Cron Expression" caption-side="bottom"}
 
@@ -71,19 +71,19 @@ The Periodic timer is an event scheduler in the {{site.data.keyword.cloud_notm}}
 
     ![Reviewing Topic](images/en-cron-review.png "Reviewing Topic"){: caption="Reviewing Topic" caption-side="bottom"}
 
-### **Step 2 : Creating a subscription**
+### Step 2: Creating a subscription
 {: #en-cron-create-subscription}
 
-Refer [Create a Subscription](/docs/event-notifications?topic=event-notifications-en-create-en-subscription) to see how to create a subscription.
+For more information, see [Create a subscription](/docs/event-notifications?topic=event-notifications-en-create-en-subscription).
 
-Once a subscription has been created, an invitation Email/SMS will be sent to subscribe to the {{site.data.keyword.en_short}} topic.
+After a subscription is created, an invitation email or SMS is sent to subscribe to the {{site.data.keyword.en_short}} topic.
 
 ![Invitation Email](images/en-invitation-email.png "Invitation Email to subscribe to topic"){: caption="Invitation Email to subscribe to topic" caption-side="bottom"}
 
 
-### **Step 3 : Verifying that an Event occurs at the scheduled time**
+### Step 3: Verifying that an event occurs at the scheduled time
 {: #en-cron-verify}
 
-Once the event is scheduled, the next step is verifying that an event occurs at the scheduled time and a notification is sent to the destination.
+After the event is scheduled, verify that an event occurs at the scheduled time and that a notification is sent to the destination.
 
 ![Verifying Event](images/en-verifying-notification.png "Email Notification when Event takes place at a scheduled time"){: caption="Email Notification when Event takes place at scheduled time" caption-side="bottom"}
