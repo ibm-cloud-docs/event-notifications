@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-09-02"
+lastupdated: "2026-09-09"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email
 
@@ -11,7 +11,7 @@ subcollection: event-notifications
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Tracking Email Status
+# Tracking email status
 {: #en-destination-email-custom-domain-status}
 
 This portion of the documentation provides an overview of the status tracking system that is integrated with {{site.data.keyword.en_short}} for emails sent from a custom domain. The system generates logs containing crucial data, such as the email byte count and masked sender and recipient email addresses, to ensure privacy and security. The system tracks three primary email statuses: Delivered, Deferred, and Bounced, providing valuable insights into the success and potential issues with email delivery.
@@ -41,14 +41,14 @@ An email of size 1xxx bytes is deferred to each of the following : [y*s@test.com
 {: #en-destination-email-custom-domain-status-bounced}
 
 When an email fails to deliver successfully, it is marked as a bounce. The log for a bounced email contains information about the error reason and SMTP error code. SMTP error codes provide specific details about the nature of the delivery failure. {{site.data.keyword.en_short}} does not attempt to retry bounced emails.
-It is crucial for users to take corrective action in case of bounced emails, as this can negatively impact the sender's reputation.
+Take corrective action for bounced emails, as they can negatively impact the sender's reputation.
 For example, a bounced log may look like this:
 
 ```text
 An email of size 1xxx bytes is bounced ,Please check the authentacity of the emails: [g*a*g*n*1*3@in.ibm.com], from the sender: t*s*<*o*e*l*@xyz.com>host xyz.pphosted.com[] said: 550 5.1.1 User Unknown (in reply to DATA command )
 ```
 
-### Common SMTP Error Codes for Bounced Emails:
+### Common SMTP error codes for bounced emails
 {: #en-destinations-custom-email-status-smtp-error-codes}
 
 | SMTP Code | Description |

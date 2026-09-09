@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2026
-lastupdated: "2026-08-20"
+  years: 2025, 2026
+lastupdated: "2026-09-09"
 
 keywords: event-notifications, event notifications migration, notifications, destinations, specification
 
@@ -15,7 +15,7 @@ subcollection: event-notifications
 # {{site.data.keyword.en_short}} payload
 {: #en-spec-payload}
 
-This document outlines the {{site.data.keyword.en_short}} specification.
+This topic describes the {{site.data.keyword.en_short}} payload specification.
 {: shortdesc}
 
 ## Introduction
@@ -36,14 +36,14 @@ Events from API sources cannot be routed to the other {{site.data.keyword.IBM_no
 `Header: Authorization: Bearer <IAM token>`
 ```
 
-The Events adhere to Cloud Event standard. You can find more information about Cloud Events here.
+The events adhere to the Cloud Events standard. For more information, see [CloudEvents](https://cloudevents.io/){: external}.
 
 ## Modes of transport
 {: #en-modes-of-transport}
 
-{{site.data.keyword.en_short}} supports the following two modes to make HTTP calls. This is adhering to the Cloud Events specification.
+{{site.data.keyword.en_short}} supports the following two modes to make HTTP calls, in adherence to the Cloud Events specification.
 
-### Binary Mode
+### Binary mode
 {: #en-binary-mode}
 
 In the binary content mode, the value of the event `data` is placed into the HTTP request, or response, body as-is. The `datacontenttype` attribute value declares its media type in the HTTP `Content-Type` header. All other event attributes are mapped to HTTP headers.
@@ -53,7 +53,7 @@ All the attribute names are prefixed with `ce-` and added to the header (except 
 Binary Mode is the recommended way to send notifications.
 {: note}
 
-### Structured Mode
+### Structured mode
 {: #en-structured-mode}
 
 In the structured content mode, event metadata attributes and event data are placed into the HTTP request body. For structured mode set the `Content-Type` header to `application/cloudevents+json`.

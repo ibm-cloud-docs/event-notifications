@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-09-02"
+lastupdated: "2026-09-09"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email, smtp
 
@@ -12,12 +12,12 @@ subcollection: event-notifications
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Using the {{site.data.keyword.en_short}} SMTP Interface
+# Using the {{site.data.keyword.en_short}} SMTP interface
 {: #en-smtp-configurations}
 
-IBM Cloud Event Notifications supports SMTP, the most common email protocol on the internet. You can send email using a variety of clients, software, or programming languages that support SMTP by connecting to the IBM Cloud Event Notifications SMTP interface. This document explains how to set up SMTP configuration, obtain user credentials, and set up a CBR rule to access the SMTP server.
+{{site.data.keyword.en_short}} supports SMTP, the most common email protocol on the internet. You can send email by using a variety of clients, software, or programming languages that support SMTP by connecting to the {{site.data.keyword.en_short}} SMTP interface. This topic explains how to set up an SMTP configuration, obtain user credentials, and set up a CBR rule to access the SMTP server.
 
-## Creating a SMTP Configuration
+## Creating an SMTP configuration
 {: #en-smtp-configuration-create}
 
 1. Create an {{site.data.keyword.en_short}} instance. To learn the process of creating an instance, see [Getting Started](/docs/event-notifications?topic=event-notifications-getting-started).
@@ -36,7 +36,7 @@ IBM Cloud Event Notifications supports SMTP, the most common email protocol on t
 After creating an SMTP configuration in an {{site.data.keyword.en_short}} instance, you need to perform three types of verifications to get the required parameters to send email through the SMTP interface. These verifications are located under the **Verify** tab, accessible by clicking the **Options** menu.
 
 1. Create Sender Policy Framework (SPF), which is used to authenticate the sender of an email. SPF specifies the mail servers that are allowed to send email for your domain.
-    * Make sure the domain already exists as an A record in the DNS records.
+    * Ensure that the domain already exists as an A record in the DNS records.
     * Open your DNS hosting provider for the domain name configured
     * Create a new TXT record with your domain name registerer with the name and value provided in the configure screen for SPF
 2. Create DomainKeys Identified Mail (DKIM), which allows an organization to take responsibility for transmitting a message by signing it. DKIM allows the receiver to check the email that claimed to have come from a specific domain, is authorized by the owner of that domain.

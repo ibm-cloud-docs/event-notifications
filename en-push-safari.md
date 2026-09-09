@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-10-17"
+  years: 2022, 2026
+lastupdated: "2026-09-09"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, push
 
@@ -26,7 +26,7 @@ Create an {{site.data.keyword.en_short}} service, add a push destination for App
 ## How do clients use Safari push notifications?
 {: #en-how-clients-send-safari}
 
-The following diagram shows you how clients use iOS Push Notifications.
+The following diagram shows you how clients use iOS push notifications.
 
 ![How clients use push notifications](images/en-how-send-safari.svg "How clients use push notifications"){: caption="How clients use push notifications" caption-side="bottom"}
 
@@ -38,7 +38,7 @@ This tutorial shows you how to send push notifications as follows:
 * Create a web app with {{site.data.keyword.en_short}}.
 * Get Safari credentials.
 * Download the code and complete the notifications setup.
-* Configure and send Safari Push Notifications to a Safari Web.
+* Configure and send Safari push notifications to a Safari web browser.
 
 ## Before you begin
 {: #en-before-begin-safari}
@@ -47,7 +47,7 @@ You must have the following prerequisites in place:
 
 * An {{site.data.keyword.cloud_notm}} account. If you do not have one, [create an {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/){: external}.
 * An {{site.data.keyword.en_short}} Instance.
-* An IAM API key to allow the SDK to access your account. Create one [here](https://cloud.ibm.com/iam/apikeys){: external}.
+* An IAM API key to allow the SDK to access your account. [Create an API key](https://cloud.ibm.com/iam/apikeys){: external}.
 
 ## Create an {{site.data.keyword.en_short}} service instance
 {: #en-create-event-safari}

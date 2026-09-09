@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-10-17"
+  years: 2022, 2026
+lastupdated: "2026-09-09"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, push, chrome
 
@@ -23,10 +23,10 @@ Create an {{site.data.keyword.en_short}} service, add a push destination for Chr
 
 {{site.data.keyword.en_short}} is an event notification routing service that informs you about critical events that occur in your {{site.data.keyword.cloud_notm}} account or triggers automated actions by using webhooks. You can filter and route event notifications from {{site.data.keyword.cloud_notm}} services like {{site.data.keyword.prf_hubshort}}, to email, SMS, push notifications, and webhooks.
 
-## How do clients use Chrome web Push Notifications?
+## How do clients use Chrome web push notifications?
 {: #en-how-clients-send-chrome}
 
-The following diagram shows you how clients use Chrome web Push Notifications.
+The following diagram shows you how clients use Chrome web push notifications.
 
 ![How clients use push notifications](images/en-how-send-chrome.svg "How clients use push notifications"){: caption="How clients use push notifications" caption-side="bottom"}
 
@@ -38,7 +38,7 @@ This tutorial shows you how to send push notifications as follows:
 * Create a website with {{site.data.keyword.en_short}}.
 * Get Chrome web credentials.
 * Download the SDK and complete the notifications setup.
-* Configure and send Chrome web Push Notifications to a browser.
+* Configure and send Chrome web push notifications to a browser.
 
 ## Before you begin
 {: #en-before-begin-chrome}

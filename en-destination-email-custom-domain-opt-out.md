@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-09-02"
+lastupdated: "2026-09-09"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email
 
@@ -11,19 +11,17 @@ subcollection: event-notifications
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Custom Domain Email Opt-out functionality
+# Custom domain email opt-out functionality
 {: #en-destinations-custom-domain-opt-out}
 
-{{site.data.keyword.en_short}} offers users a versatile option to deviate from the conventional subscription process by introducing an opt-out capability. This feature empowers users to seamlessly send notifications, allowing them to specify their preferred email addresses and templates within the send notifications payload. This not only simplifies the notification process but also elevates user control over their communication preferences.
+{{site.data.keyword.en_short}} provides an opt-out capability that allows you to send notifications by specifying your preferred email addresses and templates directly in the send notifications payload, without following the standard subscription flow.
 
-It's worth noting that the opting-out functionality is not activated by default, and this deliberate choice is rooted in security considerations. Enabling the opt-out feature from the start helps prevent potential fraudulent activities and aids in the detection of unauthorized actions. This proactive security measure not only safeguards user data but also contributes to the overall protection of users' reputation as senders. By taking a cautious approach, {{site.data.keyword.en_short}} prioritizes security, helping ensure a secure and trustworthy communication environment for its users.
+The opt-out functionality is not enabled by default. This deliberate choice is rooted in security considerations. Keeping opt-out disabled by default helps prevent potential fraudulent activities and aids in the detection of unauthorized actions, safeguarding sender reputation and user data.
 
-## Requesting for the Opt Out feature for the Custom Domain Email destination
+## Requesting the opt-out feature for the custom domain email destination
 {: #en-destinations-custom-email-opt-out-request}
 
-By default, the subscription flow seamlessly includes the custom domain email destination, providing users with a streamlined experience. However, for those who prefer to opt out, we have implemented a straightforward process. Users can access this option by completing a brief questionnaire that helps customize their email preferences.
-
-This questionnaire helps ensure that users have the flexibility to tailor their subscription experience according to their specific needs. While the default setting optimizes convenience, the opt-out questionnaire empowers users to make personalized choices, enhancing their control over communication. This user-centric approach provides a customizable and user-friendly platform.
+By default, the custom domain email destination uses the standard subscription flow. To use the opt-out capability instead, complete a brief questionnaire to customize your email preferences.
 
 ```text
 1. Will the nature of the email content be Marketing or Transactional?
@@ -70,9 +68,9 @@ Upon receiving answers to the previously mentioned questions and if users want t
         * Transactional email - These emails are individualized for each recipient, typically triggered by specific user actions like making a website purchase or requesting a password reset.
     * **Website URL** is required to gain a clearer understanding of the type of content you intend to send.
     * A valid **Reply-To** email ID is required to receive rejected or bounced emails' information.
-    * Requirement of well formatted Email content is required to prevent emails that are classified as Spam at the receivers end. Emails which are not well formatted (i.e. not html) can result in Email Service Providers to classify the mails as spam.
+    * Well-formatted email content is required to prevent emails from being classified as spam by receivers. Emails that are not well-formatted (that is, not HTML) can cause email service providers to classify the messages as spam.
 1. Add **Attachments** if you want to provide more evidence supporting your answers
-1. Add required email IDs in the **Watchlist** section. And to know more about other options while creating a support case refer [Creating support cases](/docs/support?topic=support-open-case&interface=ui){: external}.
+1. Add required email IDs in the **Watchlist** section. For more information about other options when creating a support case, see [Creating support cases](/docs/support?topic=support-open-case&interface=ui){: external}.
 
 ## Flexibility while using Opt-out flow
 {: #en-destinations-custom-email-opt-out-rules}
