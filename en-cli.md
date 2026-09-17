@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-09-08"
+lastupdated: "2026-09-17"
 
 keywords: event notifications CLI plug-in, CLI reference, en cli reference, event notifications cli reference, event notifications, command line reference
 
@@ -128,14 +128,14 @@ The CLI currently supports creating API sources only.
 {: note}
 
    ```sh
-   ibmcloud event-notifications sources-create --instance-id INSTANCE-ID --name NAME [--description DESCRIPTION] [--enabled ENABLED] [--store-notifications STORE-NOTIFICATIONS]
+   ibmcloud event-notifications sources-create --instance-id INSTANCE-ID --name NAME [--description DESCRIPTION] --enabled ENABLED[--store-notifications STORE-NOTIFICATIONS]
    ```
    {: pre}
 
    You can also use the following command (both commands are currently supported):
 
    ```sh
-   ibmcloud event-notifications source-create --instance-id INSTANCE-ID --name NAME [--description DESCRIPTION] [--enabled ENABLED] [--store-notifications STORE-NOTIFICATIONS]
+   ibmcloud event-notifications source-create --instance-id INSTANCE-ID --name NAME [--description DESCRIPTION] --enabled ENABLED [--store-notifications STORE-NOTIFICATIONS]
    ```
    {: pre}
 
@@ -150,7 +150,7 @@ The CLI currently supports creating API sources only.
       The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]/`.
 
    `--name NAME` (int64)
-   :  The name to be provided for API source.
+   :  The name to be provided for API source. Required.
 
       The default value is ` `. The maximum length is `255` characters. The minimum length is `1` characters. The value must match regular expression `/[a-zA-Z 0-9-_\/.?:'";,+=!#@$%^&*()]*/`.
 
@@ -160,12 +160,12 @@ The CLI currently supports creating API sources only.
        The default value is ``. The maximum length is `255` characters. The minimum length is `0` characters. The value must match regular expression `/[a-zA-Z 0-9-_\/.?:'";,+=!#@$%^&*()]*/`.
 
    `--enabled ENABLED` (Boolean)
-   :  The Boolean flag to enable or disable the source. Optional.
+   :  The Boolean flag to enable or disable the source. Required.
 
       The value is set to true to enable the source and false to disable the source.
 
    `--store-notifications` (bool)
-   :   Enable to view the payload of incoming events for troubleshooting.
+   :   Enable to view the payload of incoming events for troubleshooting. Optional.
 
        The default value is `false`.
 
@@ -175,7 +175,7 @@ The CLI currently supports creating API sources only.
 - **Action:** Update `Source`.
 
    ```sh
-   ibmcloud event-notifications source-update --instance-id INSTANCE-ID --id ID [--name NAME] [--description DESCRIPTION] [--enabled ENABLED] [--store-notifications STORE-NOTIFICATIONS]
+   ibmcloud event-notifications source-update --instance-id INSTANCE-ID --id ID [--name NAME] [--description DESCRIPTION] [--enabled ENABLED][--store-notifications STORE-NOTIFICATIONS]
    ```
    {: pre}
 
@@ -2112,7 +2112,7 @@ If the `--all-pages` option is not set, the command will only retrieve a single 
 {: note}
 
 ```sh
-ibmcloud event-notifications pre-defined-templates --instance-id INSTANCE-ID --source SOURCE --type TYPE [--limit LIMIT] [--offset OFFSET] [--search SEARCH]
+ibmcloud event-notifications pre-defined-templates --instance-id INSTANCE-ID [--source SOURCE] [--type TYPE] [--limit LIMIT] [--offset OFFSET] [--search SEARCH]
 ```
 {: pre}
 
@@ -2125,12 +2125,12 @@ ibmcloud event-notifications pre-defined-templates --instance-id INSTANCE-ID --s
     The maximum length is `32` characters. The minimum length is `32` characters. The value must match regular expression `/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/`.
 
 `--source` (string)
-:   Source type. Required.
+:   Source type.
 
     The maximum length is `50` characters. The minimum length is `1` character. The value must match regular expression `/.*/`.
 
 `--type` (string)
-:   Destination type. Required.
+:   Destination type.
 
     The maximum length is `50` characters. The minimum length is `1` character. The value must match regular expression `/.*/`.
 
@@ -3081,7 +3081,7 @@ This script assumes that the {{site.data.keyword.logs_full_notm}} instance and {
 Find a summary of changes for each version of {{site.data.keyword.en_short}} plug-in. Keep your CLI up to date so that you can use all of the available commands and their options.
 {: shortdesc}
 
-The CLI Plugin versions from 0.0.5 to 1.9.0 is deprecated.
+The CLI Plugin versions from 0.0.5 to 1.20.2 is deprecated.
 {: note}
 
 | Version | Release date | Changes |
@@ -3108,4 +3108,5 @@ The CLI Plugin versions from 0.0.5 to 1.9.0 is deprecated.
 | 1.21.1 | 25 May 2026 | Deprecated init and show command and added en instances listing command. Fix provided to automatically set EN endpoint according to set target region. |
 | 1.21.2 | 29 June 2026 | Bug Fix for SMTP Metrics to support SMTP Config ID flag and mark destination type as optional. |
 | 1.21.3 | 6 August 2026 | CLI Plugin vulnerability fix, usability and cosmetic improvements |
+| 1.21.4 | 17 September | Source creation and pre-defined-templates command updates to remove unnecessary required parameters and mark as optional |
 {: caption="Changes in the {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} CLI" caption-side="bottom"}
