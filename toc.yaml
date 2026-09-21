@@ -150,6 +150,8 @@ toc:
           topics:
           - topic: en-cli.md
             navtitle: Event Notifications CLI
+          - topic: en-cli-change-log.md
+            navtitle: CLI change log
       - topicgroup:
           label: SDKs
           topics:
