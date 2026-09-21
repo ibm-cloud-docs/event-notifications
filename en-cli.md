@@ -50,7 +50,7 @@ Versions of the plugin before 1.15.2 are deprecated.
 The `init` command is deprecated and will be removed in a future release.
 {: note}
 
-### ibmcloud event-notifications en-list
+### `ibmcloud event-notifications en-list`
 {: #en-cli-list-command}
 
 Lists the instances in the set target region. You can retrieve your instance GUID from the listed instances.
@@ -60,15 +60,23 @@ ibmcloud event-notifications en-list
 ```
 {: pre}
 
-### ibmcloud target
-{: #en-cli-region}
-
-Set the region in which you want to work.
+#### Example
+{: #en-cli-list-example}
 
 ```sh
-ibmcloud target -region
+ibmcloud event-notifications en-list
 ```
-{: codeblock}
+{: pre}
+
+## Set a target region
+{: #en-cli-region}
+
+Set the region in which you want to work by using the `ibmcloud target` command.
+
+```sh
+ibmcloud target -r REGION
+```
+{: pre}
 
 Alternatively, you can export a regional endpoint via the variable `IBMCLOUD_EN_ENDPOINT` as shown in the following example.
 
@@ -118,7 +126,7 @@ You can also export the **EVENT_NOTIFICATIONS_API_KEY** variable to configure th
 
 Operate on {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} source.
 
-### ibmcloud event-notifications source-create
+### `ibmcloud event-notifications source-create`
 {: #en-cli-source-create-command}
 
 Create a source that configures a service to produce events that {{site.data.keyword.en_short}} can consume. You must provide the ID of the {{site.data.keyword.en_short}} instance for which you configure the source. For more information about source types and registering them with {{site.data.keyword.en_short}}, see [Adding an Event Notifications source](/docs/event-notifications?topic=event-notifications-en-add-source).
@@ -128,7 +136,7 @@ The CLI currently supports creating API sources only.
 
 
 ```sh
-ibmcloud event-notifications source-create --instance-id INSTANCE-ID --name NAME --description DESCRIPTION [--enabled] [--store-notifications]
+ibmcloud event-notifications source-create --instance-id INSTANCE-ID --name NAME [--description DESCRIPTION] --enabled ENABLED [--store-notifications STORE-NOTIFICATIONS]
 ```
 {: pre}
 
@@ -151,17 +159,15 @@ Both `source-create` and `sources-create` are supported. Use `source-create` for
 
 
 `--description` (string)
-:  The description of the API source. Required.
+:  The description of the API source.
 
    The default value is ``. The maximum length is `255` characters. The minimum length is `0` characters. The value must match regular expression `/[a-zA-Z 0-9-_\/.?:'";,+=!#@$%^&*()]*/`.
 
 `--enabled` (boolean)
-:  Enable or disable the source. Required.
-
-   The default value is `false`.
+:  Enable or disable the source. Required. Set to `true` to enable the source.
 
 `--store-notifications` (boolean)
-:  Store notifications. You can view the payload of incoming events for troubleshooting purposes.
+:  Store notifications. Set to `true` to store notifications so you can view the payload of incoming events for troubleshooting purposes.
 
 
 #### Example
@@ -172,12 +178,12 @@ ibmcloud event-notifications source-create \
    --instance-id=exampleString \
    --name=exampleString \
    --description=exampleString \
-   --enabled \
-   --store-notifications
+   --enabled=true \
+   --store-notifications=false
 ```
 {: pre}
 
-### ibmcloud event-notifications source-update
+### `ibmcloud event-notifications source-update`
 {: #en-cli-source-update-command}
 
 Update source parameters by using the source ID. You must also provide the ID of the {{site.data.keyword.en_short}} instance for which the source is configured.
@@ -236,7 +242,7 @@ ibmcloud event-notifications source-update \
 ```
 {: pre}
 
-### ibmcloud event-notifications sources
+### `ibmcloud event-notifications sources`
 {: #en-cli-source-list-command}
 
 List all of the sources in a specified instance.
@@ -285,31 +291,40 @@ ibmcloud event-notifications sources \
 ```
 {: pre}
 
-### ibmcloud event-notifications source
+### `ibmcloud event-notifications source`
 {: #en-cli-source-get-command}
 
 Get the details of a specific source.
 
 ```sh
-ibmcloud event-notifications source --id ID --instance-id INSTANCE-ID
+ibmcloud event-notifications source --instance-id INSTANCE-ID --id ID
 ```
 {: pre}
 
 #### Command options
 {: #command-options-source}
 
-`--id` (string)
-:  The unique identifier for the source. Required.
-
-   The maximum length is `100` characters. The minimum length is `1` character. The value must match regular expression `/[a-zA-Z0-9-:_]*/`.
-
 `--instance-id` (string)
 :  The unique identifier for the {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} instance. Required.
 
    The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]/`.
 
+`--id` (string)
+:  The unique identifier for the source. Required.
 
-### ibmcloud event-notifications source-delete
+   The maximum length is `100` characters. The minimum length is `1` character. The value must match regular expression `/[a-zA-Z0-9-:_]*/`.
+
+#### Example
+{: #example-source}
+
+```sh
+ibmcloud event-notifications source \
+  --instance-id=exampleString \
+  --id=exampleString
+```
+{: pre}
+
+### `ibmcloud event-notifications source-delete`
 {: #en-cli-source-delete-command}
 
 Delete a source.
@@ -335,7 +350,15 @@ ibmcloud event-notifications source-delete  --instance-id INSTANCE-ID --id ID
 `--force`
 :  Bypass the confirmation prompt and force the deletion of the resource.
 
+#### Example
+{: #example-source-delete}
 
+```sh
+ibmcloud event-notifications source-delete \
+  --instance-id=exampleString \
+  --id=exampleString
+```
+{: pre}
 
 ## Destinations
 {: #en-cli-destination}
@@ -1045,39 +1068,39 @@ ibmcloud event-notifications test-destination \
 ```
 {: pre}
 
-### `ibmcloud event-notifications email-sandbox-destination-update`
-{: #event-notifications-cli-email-sandbox-destination-update-command}
+### `ibmcloud event-notifications sandbox-destination-update`
+{: #event-notifications-cli-sandbox-destination-update-command}
 
-Upgrade sandbox destination to production with custom domain.
+Upgrade a sandbox email destination to production with a custom domain.
 
 ```sh
-ibmcloud event-notifications email-sandbox-destination-update --instance-id INSTANCE-ID --id ID --domain DOMAIN
+ibmcloud event-notifications sandbox-destination-update --instance-id INSTANCE-ID --id ID --domain DOMAIN
 ```
-
+{: pre}
 
 #### Command options
-{: #event-notifications-email-sandbox-destination-update-cli-options}
+{: #event-notifications-sandbox-destination-update-cli-options}
 
 `--instance-id` (string)
-:   Unique identifier for IBM Cloud Event Notifications instance. Required.
+:   The unique identifier for the {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} instance. Required.
 
-    The maximum length is `32` characters. The minimum length is `32` characters. The value must match regular expression `/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/`.
+    The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]/`.
 
 `--id` (string)
-:   Unique identifier for Destination. Required.
+:   The unique identifier for the destination. Required.
 
-    The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/^[0-9(a-f|A-F)]{8}-[0-9(a-f|A-F)]{4}-4[0-9(a-f|A-F)]{3}-[89ab][0-9(a-f|A-F)]{3}-[0-9(a-f|A-F)]{12}$/`.
+    The maximum length is `36` characters. The minimum length is `36` characters. The value must match regular expression `/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]/`.
 
 `--domain` (string)
-:   Email Domain. Required.
+:   The email domain. Required.
 
     The maximum length is `250` characters. The minimum length is `1` character. The value must match regular expression `/.*/`.
 
 #### Example
-{: #event-notifications-email-sandbox-destination-update-examples}
+{: #event-notifications-sandbox-destination-update-examples}
 
 ```sh
-ibmcloud event-notifications email-sandbox-destination-update \
+ibmcloud event-notifications sandbox-destination-update \
     --instance-id=exampleString \
     --id=exampleString \
     --domain=exampleString
@@ -1904,7 +1927,7 @@ ibmcloud event-notifications subscription-update \
 
 Operate on {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} integration.
 
-### ibmcloud event-notifications integration-create
+### `ibmcloud event-notifications integration-create`
 {: #en-cli-integration-create-command}
 
 Create an integration that connects {{site.data.keyword.en_short}} with {{site.data.keyword.cloud_notm}} Object Storage.
@@ -1952,7 +1975,7 @@ The following example shows the format of the `IntegrationCreateAttributes` obje
 ```
 {: pre}
 
-### ibmcloud event-notifications integration-update
+### `ibmcloud event-notifications integration-update`
 {: #en-cli-integration-update-command}
 
 Update an existing integration by using its ID. You must also provide the ID of the {{site.data.keyword.en_short}} instance for which the integration is configured.
@@ -2010,7 +2033,7 @@ The following example shows the format of the `IntegrationReplaceAttributes` obj
 ```
 {: pre}
 
-### ibmcloud event-notifications integrations
+### `ibmcloud event-notifications integrations`
 {: #en-cli-integrations-command}
 
 List the integrations that are created for an {{site.data.keyword.en_short}} instance.
@@ -2043,7 +2066,22 @@ ibmcloud event-notifications integrations --instance-id INSTANCE-ID [--offset OF
 
    The maximum length is `100` characters. The minimum length is `0` characters. The value must match regular expression `/[a-zA-Z0-9]/`.
 
-### ibmcloud event-notifications integration
+`--all-pages` (boolean)
+:  Invoke multiple requests to display all pages of the integration collection.
+
+#### Example
+{: #example-integrations}
+
+```sh
+ibmcloud event-notifications integrations \
+  --instance-id=exampleString \
+  --offset=0 \
+  --limit=10 \
+  --search=exampleString
+```
+{: pre}
+
+### `ibmcloud event-notifications integration`
 {: #en-cli-integration-command}
 
 Get the details of an integration by using its ID. You must also provide the ID of the {{site.data.keyword.en_short}} instance for which the integration is configured.
@@ -3253,7 +3291,7 @@ Send events from your backend applications by using API sources. {{site.data.key
 Send a notification from an instance of the service. For more information about the notification payload, see [the docs](/docs/event-notifications?topic=event-notifications-en-spec-payload).
 
 ```sh
-ibmcloud event-notifications send-notifications --instance-id INSTANCE-ID [--body='{"specversion": "1.0", "time": "2019-01-01T12:00:00.000Z", "id": "exampleString", "source": "exampleString", "type": "exampleString", "ibmenseverity": "exampleString", "ibmensourceid": "exampleString", "ibmendefaultshort": "exampleString", "ibmendefaultlong": "exampleString", "ibmensubject": "exampleString", "ibmentemplates": "exampleString", "ibmenmailto": "exampleString", "ibmenslackto": "exampleString", "ibmensmstext": "exampleString", "ibmensmsto": "exampleString", "ibmenhtmlbody": "exampleString", "subject": "exampleString", "ibmenmms": "exampleString", "ibmenmarkdown": "exampleString", "data": {"anyKey": "anyValue"}, "datacontenttype": "application/json", "ibmenpushto": {"fcm_devices": ["exampleString"], "apns_devices": ["exampleString"], "huawei_devices": ["exampleString"], "safari_devices": ["exampleString"], "chrome_devices": ["exampleString"], "firefox_devices": ["exampleString"], "user_ids": ["exampleString"], "tags": ["exampleString"], "platforms": ["push_android"]}, "ibmenfcmbody": {}, "ibmenapnsbody": {}, "ibmenapnsheaders": {}, "ibmenchromebody": {}, "ibmenchromeheaders": {}, "ibmenfirefoxbody": {}, "ibmenfirefoxheaders": {}, "ibmenhuaweibody": {}, "ibmensafaribody": {}, "email_attachments": [{"content": "exampleString", "filename": "exampleString", "content_type": "exampleString", "disposition": "attachment"}]}]
+ibmcloud event-notifications send-notifications --instance-id INSTANCE-ID [--body BODY]
 ```
 {: pre}
 
