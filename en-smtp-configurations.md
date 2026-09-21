@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-09-09"
+lastupdated: "2026-09-21"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email, smtp
 
@@ -82,6 +82,8 @@ After creating an SMTP configuration in an {{site.data.keyword.en_short}} instan
     * A Website URL is required to gain a clearer understanding of the type of content you intend to send.
     * A valid Reply-To email ID is required to receive information about rejected or bounced emails.
     * Well-formatted Email content is required to prevent emails from being classified as Spam at the recipient's end. Emails that are not well-formatted (i.e., not in HTML) can result in Email Service Providers classifying the emails as Spam.
+
+    For sample answers to help you complete the questionnaire, see the [Sample answers](/docs/event-notifications?topic=event-notifications-en-email-sender-questionnaire#en-email-sender-questionnaire-sample-answers) section of the Email sender verification questionnaire. The additional questions for the opt-out request do not apply here.
 
     After completing the questionnaire, request enablement of the SMTP interface verification through a support ticket:
 

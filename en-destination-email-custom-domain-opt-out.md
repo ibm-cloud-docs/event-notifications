@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-09-09"
+lastupdated: "2026-09-21"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email
 
@@ -55,6 +55,8 @@ By default, the custom domain email destination uses the standard subscription f
 10. Provide your Event Notifications Instance/s and Destination-ID/s in which you want to enable Customer managed email Opt-in.
 ```
 {: codeblock}
+
+For sample answers to help you complete the questionnaire, see [Email sender verification questionnaire](/docs/event-notifications?topic=event-notifications-en-email-sender-questionnaire).
 
 Upon receiving answers to the previously mentioned questions and if users want to proceed with modifying their email preferences, it is encouraged to initiate the next step by opening a support case with {{site.data.keyword.en_short}}:
 
