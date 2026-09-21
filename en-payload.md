@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2026
-lastupdated: "2026-09-09"
+lastupdated: "2026-09-10"
 
 keywords: event-notifications, event notifications migration, notifications, destinations, specification
 
@@ -32,11 +32,16 @@ Events from API sources cannot be routed to the other {{site.data.keyword.IBM_no
 
 ```sh
 `METHOD: POST`
-`URL: /event-notifications/v1/apps/{instanceID}/notifications`
+`URL: https://{region}.event-notifications.cloud.ibm.com/event-notifications/v1/instances/{instanceID}/notifications`
 `Header: Authorization: Bearer <IAM token>`
 ```
 
-The events adhere to the Cloud Events standard. For more information, see [CloudEvents](https://cloudevents.io/){: external}.
+
+Where `{region}` is the region where your {{site.data.keyword.en_short}} instance is deployed, for example `us-south` or `eu-de`, and `{instanceID}` is the GUID of your service instance. For the full list of regional base URLs, see [Regions and endpoints](/docs/event-notifications?topic=event-notifications-en-regions-endpoints).
+{: note}
+
+The Events adhere to Cloud Event standard. You can find more information about Cloud Events [here](https://cloudevents.io/){: external}.
+
 
 ## Modes of transport
 {: #en-modes-of-transport}

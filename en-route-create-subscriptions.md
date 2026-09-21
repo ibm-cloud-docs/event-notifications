@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-09-02"
+lastupdated: "2026-09-09"
 
 keywords: event notifications, subscription, destination
 
@@ -32,9 +32,11 @@ Subscriptions connect your topic to destinations, defining where notifications a
 
 3. Depending on the destination type, provide the required details. For example, for email or SMS destinations, add the recipients.
 
-4. Click **Create subscription**.
+4. Optional: Select a **Template** to apply custom formatting to the notification content sent to this destination. The template list shows user-defined templates that match the selected destination type. If you have not created a template yet, see [Creating an {{site.data.keyword.en_short}} template](/docs/event-notifications?topic=event-notifications-en-create-en-template) and return to this step.
 
-5. Optional: Click **Create** again to add more subscriptions. You can also edit or delete the subscriptions by using the **Edit** and **Delete** options on the **Options** menu.
+5. Click **Create subscription**.
+
+6. Optional: Click **Create** again to add more subscriptions. You can also edit or delete the subscriptions by using the **Edit** and **Delete** options on the **Options** menu.
 
 ## Integrating a destination
 {: #en-route-integrate-destination}

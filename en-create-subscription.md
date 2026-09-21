@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2026
-lastupdated: "2026-09-08"
+lastupdated: "2026-09-21"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -12,41 +12,17 @@ subcollection: event-notifications
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Creating an {{site.data.keyword.en_short}} subscription
+# Managing {{site.data.keyword.en_short}} subscriptions
 {: #en-create-en-subscription}
 
 Destinations subscribe to topics. Multiple destinations can subscribe to a single topic. An email subscription is a list of all emails IDs, and an SMS subscription is a list of all phone numbers that a notification is routed to. A webhook subscription links a webhook destination to a topic.
 {: shortdesc}
 
+To create a subscription, work through a topic in the route notifications flow. For more information, see [Creating subscriptions](/docs/event-notifications?topic=event-notifications-en-route-create-subscriptions).
+
 Of these, {{site.data.keyword.cloud_notm}} Email service and {{site.data.keyword.cloud_notm}} SMS service are supported out-of-the box.
 
-## Creating a subscription
-{: #en-create-subscription}
-
-1. Click **Topics** in the {{site.data.keyword.en_short}} instance.
-Create a new topic or select an existing topic to configure the subscription for.
-
-1. If you are creating a new topic, configure **Topic**, **Filters**, and **Subscriptions** in the flow.
-For an existing topic, click **Edit** in the **Options** menu and click the **Subscriptions** tab.
-
-1. Enter the following subscription details in the **Create subscription** dialog:
-
-   - **Subscription name**: Enter a name for the subscription.
-   - **Subscription description**: Optionally, enter a description for the subscription.
-   - **Topic**: Select a topic.
-   - **Destination type**: Select a destination type. For more information, see [Selecting a destination type](/docs/event-notifications?topic=event-notifications-en-create-en-subscription#en-select-destination).
-
-1. Click **Create subscription**.
-
-### Enabling the subscription
-{: #en-subscription-finish}
-
-Click **Create subscription** in the subscription dialog to enable the subscription.
-
-You can subscribe to or unsubscribe from a specific {{site.data.keyword.en_short}} subscription. Users can also opt out of receiving notifications for any subscription.
-{: note}
-
-## Selecting a destination type
+## Destination type details
 {: #en-select-destination}
 
 The destination type determines how notifications are delivered. The following sections describe the additional details required for each destination type.
