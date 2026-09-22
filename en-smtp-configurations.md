@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-09-21"
+lastupdated: "2026-09-22"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email, smtp
 
@@ -42,48 +42,7 @@ After creating an SMTP configuration in an {{site.data.keyword.en_short}} instan
 2. Create DomainKeys Identified Mail (DKIM), which allows an organization to take responsibility for transmitting a message by signing it. DKIM allows the receiver to check the email that claimed to have come from a specific domain, is authorized by the owner of that domain.
     * Open your DNS hosting provider for the domain name configured
     * Create a new TXT record with your domain name registerer with the name and value provided in the configure screen for DKIM
-3. For the enhanced security we perform manual verification about the SMTP interface requirement using following questionnaire:
-
-    ```text
-    1. Will the nature of the email content be Marketing or Transactional?
-
-    2. What is your website's URL?
-
-    3. Explain how you plan to use IBM Cloud Event Notifications to send email. To help us process your request, you should answer the following questions:
-
-    a. What is your strategy for creating or obtaining your email subscriber list?
-
-    b. What is your approach to managing bounced emails and handling recipient complaints?
-
-    c. What methods do you have in place for recipients to unsubscribe from your email communications?
-
-    d. How did you determine the sending rate or quota specified in your request?
-
-    e. Are you regularly cleaning your email list to remove invalid or outdated email addresses?
-
-    4. Indicate the email addresses where you wish to receive account-related communications. You can provide a list of up to four email addresses, separated by commas.
-
-    5. In the Event Notifications subscription, you are asked to provide a Reply-To field. Confirm that this is a valid email-id with a mailbox.
-
-    6. Include a statement affirming your commitment to sending emails only to individuals who have explicitly requested them, and verify that you have established a procedure for managing bounce and complaint notifications.
-
-    7. Whether you have a manual or automated process in place for handling unsubscribes, it's important to provide an "unsubscribe" link in the email payload you send. When recipients decide not to receive further emails, they can simply click on the 'unsubscribe' link and remove their email address from your mailing list. Add a statement that you agree to have an “unsubscribe” link in the email payload that you send.
-
-    8. If you send the html content in the notification payload, do you have a process to validate this content is well formatted? Poorly formatted HTML content may decrease the server reputation.
-    ```
-    {: screen}
-
-    While many questions are self-explanatory, we have provided explanations for a few to ensure clarity.
-
-    * Provide the Nature of Email: Marketing or Transactional.
-        * Marketing Email: These emails are distributed to a broad audience, targeting a list of prospects or customers with marketing and promotional content, such as encouraging a purchase or downloading information.
-        * Transactional Email: These emails are individualized for each recipient, typically triggered by specific user actions, such as making a website purchase or requesting a password reset.
-
-    * A Website URL is required to gain a clearer understanding of the type of content you intend to send.
-    * A valid Reply-To email ID is required to receive information about rejected or bounced emails.
-    * Well-formatted Email content is required to prevent emails from being classified as Spam at the recipient's end. Emails that are not well-formatted (i.e., not in HTML) can result in Email Service Providers classifying the emails as Spam.
-
-    For sample answers to help you complete the questionnaire, see the [Sample answers](/docs/event-notifications?topic=event-notifications-en-email-sender-questionnaire#en-email-sender-questionnaire-sample-answers) section of the Email sender verification questionnaire. The additional questions for the opt-out request do not apply here.
+3. For enhanced security, we perform manual verification of SMTP interface requirements. Complete the questionnaire for the common questions (Q1–Q8) described in [Email sender verification questionnaire](/docs/event-notifications?topic=event-notifications-en-email-sender-questionnaire). The additional questions for the opt-out request do not apply here.
 
     After completing the questionnaire, request enablement of the SMTP interface verification through a support ticket:
 
