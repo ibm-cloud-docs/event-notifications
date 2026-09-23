@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-09-08"
+lastupdated: "2026-09-23"
 
 keywords: event-notifications, event notifications, about event notifications, templates, slack
 
@@ -96,7 +96,7 @@ The following example shows the default Slack notification block structure that 
 Where:
 - `{{ibmendefaultshort}}` — the short summary text from the notification payload, rendered as bold text.
 - `{{ibmendefaultlong}}` — the full notification message from the notification payload.
-- `{{event_payload}}` — the complete notification payload sent to the `/notifications` endpoint, formatted as a code block in Slack.
+- `{{event_payload}}` — a template placeholder that renders the full notification payload as a preformatted code block in Slack. This is not a property in the notification payload.
 
 ##### Usage:
 {: #en-usage}
