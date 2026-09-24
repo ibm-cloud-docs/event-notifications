@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-09-22"
+lastupdated: "2026-09-24"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email, smtp
 
@@ -296,4 +296,20 @@ The number of API keys you can create per Service ID is determined by IBM Cloud 
 {: #en-destinations-smtp-configurations-tracking-status}
 
 * After sending emails, you receive a Queue ID that you can use for debugging purposes.
-* You can monitor the delivery status of emails sent through a Custom Email destination. For more information, see [Monitor the delivery status of emails sent through a Custom Email destination](/docs/event-notifications?topic=event-notifications-en-destination-email-custom-domain-status).
+* You can monitor the delivery status of emails sent through the SMTP interface. For more information, see [Monitor the delivery status of emails sent through SMTP interface](/docs/event-notifications?topic=event-notifications-en-destination-email-custom-domain-status).
+
+## Track the number of unique clicks on a link
+{: #en-destinations-smtp-configurations-link-tracking}
+
+You can track the number of unique clicks on links in your email notifications by adding the `data-track="true"` attribute to anchor tags in your email. Only the first click on a tracked link is recorded per notification — subsequent clicks by the same or other recipients do not increment the count.
+
+To track a link, add the `data-track="true"` attribute to the anchor tag in your email:
+
+```html
+<a data-track="true" href="https://www.example.com">Click here to see the details.</a>
+```
+{: codeblock}
+
+You can add `data-track="true"` to any number of links in a single email. Links without this attribute are not tracked.
+
+To view the number of unique clicks on a link, click **Metrics** on your {{site.data.keyword.en_short}} instance page, and review the **Unique clicks** metric.

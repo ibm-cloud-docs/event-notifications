@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2021, 2026
-lastupdated: "2026-09-01"
+lastupdated: "2026-09-24"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email,  sandbox, testing
 
@@ -184,3 +184,19 @@ To include attachments in your email notifications, add the `attachments` array 
 {: #en-destinations-custom-email-tracking-status}
 
 This capability allows users to monitor the delivery status of emails sent through a Custom Email destination, ensuring transparency and enhancing the overall user experience. For more information, follow [these steps](/docs/event-notifications?topic=event-notifications-en-destination-email-custom-domain-status).
+
+## Track the number of unique clicks on a link
+{: #en-destinations-custom-email-link-tracking}
+
+You can track the number of unique clicks by recipients on a link when you add the `data-track="true"` attribute to anchor tags in your email template. The first click on a tracked link by each recipient is recorded — repeated clicks by the same recipient do not increment the count.
+
+To track a link, add the `data-track="true"` attribute to the anchor tag in your email template:
+
+```html
+<a data-track="true" href="https://www.example.com">Click here to see the details.</a>
+```
+{: codeblock}
+
+You can add `data-track="true"` to any number of links in a single template. Links without this attribute are not tracked.
+
+To view the number of unique clicks on a link, click **Metrics** on your {{site.data.keyword.en_short}} instance page, select **Custom email** from the **Destination type** options, and review the **Unique clicks** metric.
