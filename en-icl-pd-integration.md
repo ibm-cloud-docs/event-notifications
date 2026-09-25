@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2026
-lastupdated: "2026-09-09"
+lastupdated: "2026-09-25"
 
 keywords: event-notifications, event notifications, about event notifications, cloud logs, pagerduty
 
@@ -45,7 +45,7 @@ This tutorial shows you how to configure the following flow:
 You need an {{site.data.keyword.cloud}} account. If you don't have an account, then [Create an {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration/).
 
 ## Create an {{site.data.keyword.en_short}} service instance
-{: #en-create-instance}
+{: #en-icl-pd-create-instance}
 {: step}
 
 1. Log in to your [{{site.data.keyword.cloud}}](https://cloud.ibm.com){: external} account.
