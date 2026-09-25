@@ -25,7 +25,7 @@ Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, sec
 {: release-note}
 
 Track the number of unique clicks on a link in email notifications
-:  You can now track the number of unique clicks on a link by recipients in your email notifications by adding the `data-track="true"` attribute to anchor tags in your email template or payload. To view the unique click count, review the **Unique clicks** metric in the **Metrics** view. For more information, see [Track the number of unique clicks on a link sent through a Custom Email destination](/docs/event-notifications?topic=event-notifications-en-destinations-custom-email#en-destinations-custom-email-link-tracking) or [Track the number of unique clicks on a link sent through the SMTP Interface](/docs/event-notifications?topic=event-notifications-en-destinations-custom-email#en-destinations-custom-email-link-tracking).
+:  You can now track the number of unique clicks on a link by recipients in your email notifications by adding the `data-track="true"` attribute to anchor tags in your email template or payload. To view the unique click count, review the **Unique clicks** metric in the **Metrics** view. For more information, see [Track the number of unique clicks on a link sent through a Custom Email destination](/docs/event-notifications?topic=event-notifications-en-destinations-custom-email#en-destinations-custom-email-link-tracking) or [Track the number of unique clicks on a link sent through the SMTP Interface](/docs/event-notifications?topic=event-notifications-en-smtp-configurations#en-destinations-smtp-configurations-link-tracking).
 
 
 
