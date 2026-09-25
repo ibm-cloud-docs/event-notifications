@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-09-02"
+lastupdated: "2026-09-25"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -19,6 +19,15 @@ content-type: release-note
 
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
+
+## 25 September 2026
+{: #event-notifications-Sep232026}
+{: release-note}
+
+Track the number of unique clicks on a link in email notifications
+:  You can now track the number of unique clicks on a link by recipients in your email notifications by adding the `data-track="true"` attribute to anchor tags in your email template or payload. To view the unique click count, review the **Unique clicks** metric in the **Metrics** view. For more information, see [Track the number of unique clicks on a link sent through a Custom Email destination](/docs/event-notifications?topic=event-notifications-en-destinations-custom-email#en-destinations-custom-email-link-tracking) or [Track the number of unique clicks on a link sent through the SMTP Interface](/docs/event-notifications?topic=event-notifications-en-destinations-custom-email#en-destinations-custom-email-link-tracking).
+
+
 
 ## 27 August 2026
 {: #event-notifications-Aug272026}
