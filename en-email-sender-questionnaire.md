@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-09-22"
+lastupdated: "2026-09-29"
 
 keywords: event-notifications, event notifications, email, smtp, questionnaire, sample answers, sender verification
 
@@ -22,7 +22,7 @@ The questionnaire is required for the following requests:
 - [Enabling the SMTP interface](/docs/event-notifications?topic=event-notifications-en-smtp-configurations#en-smtp-configurations-requirements)
 - [Requesting the custom domain email opt-out capability](/docs/event-notifications?topic=event-notifications-en-destinations-custom-domain-opt-out)
 
-## Common questions
+## Mandatory questions
 {: #en-email-sender-questionnaire-sample-answers}
 
 The following questions apply to both the SMTP interface request and the custom domain email opt-out request.
@@ -126,7 +126,7 @@ The following questions apply to both the SMTP interface request and the custom 
 **Sample answer:**
 > Yes. Email templates and HTML payloads are validated before production use. The process may include checking HTML formatting, testing template variables and placeholders, sending test emails to internal recipients, and reviewing rendering across common email clients.
 
-## Additional questions for the opt-out request
+## Additional mandatory questions for the opt-out request
 {: #en-email-sender-questionnaire-opt-out}
 
 If you are requesting the custom domain email opt-out capability, you must also answer the following additional questions in addition to the common questions above.
