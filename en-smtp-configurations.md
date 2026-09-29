@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-09-24"
+lastupdated: "2026-09-29"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email, smtp
 
@@ -127,9 +127,6 @@ After successful verification of a SMTP configuration in an IBM Cloud Event Noti
    * Destination address: The destination address can be any valid email address or set of email addresses.
    * Message data: Ensure that the message data is spam-free, clean, and sensible.
 
- According to the current configurations, attachments are not supported in Event Notifications SMTP interface.
- {: note}
-
 
 ### Using API keys for SMTP authentication
 {: #en-smtp-configurations-api-keys}
@@ -164,6 +161,7 @@ The number of API keys you can create per Service ID is determined by IBM Cloud 
 4. To interact with the IBM Cloud Event Notifications SMTP interface using the command line, see the following examples:
 
     **Example using port 587 with STARTTLS:**
+
     ```sh
     swaks --to recipient@example.com --from sender@yourdomain.com --server smtp.us-south.event-notifications.cloud.ibm.com --port 587 --auth PLAIN --auth-user <your-smtp-username> --auth-password <your-smtp-password> --tls
     === Trying smtp.us-south.event-notifications.cloud.ibm.com:587...
@@ -223,6 +221,7 @@ The number of API keys you can create per Service ID is determined by IBM Cloud 
     {: codeblock}
 
     **Example using port 465 with implicit TLS/SSL:**
+
     ```sh
     swaks --to recipient@example.com --from sender@yourdomain.com --server smtp.us-south.event-notifications.cloud.ibm.com --port 465 --auth PLAIN --auth-user <your-smtp-username> --auth-password <your-smtp-password> --tls-on-connect
     === Trying smtp.us-south.event-notifications.cloud.ibm.com:465...
@@ -270,16 +269,22 @@ The number of API keys you can create per Service ID is determined by IBM Cloud 
     ```
     {: codeblock}
 
+
 ### Using Virtual Private Endpoint (VPE) to send emails over SMTP Private Endpoint
 {: #en-smtp-configurations-send-emails-using-private-endpoint}
 
 1. To send emails via the SMTP Private Endpoint, you need to create or attach a Virtual Private Endpoint (VPE) to your IBM Cloud Virtual Private Cloud (VPC).
+
 2. Make sure to attach the VPE gateway to the same VPC where your IKS (IBM Kubernetes Service) clusters or VSI (Virtual Service Instance) are deployed.
+
 3. While creating VPE:
 
    1. Select the required Region and VPC, from where you want to connect to the SMTP Private Endpoint.
+
    2. Under **Request connection to a service**, select **Event Notifications**.
-   3. Enable the endpoint: `private.smtp.<region>.event-notifications.cloud.ibm.com`
+
+   3. Enable the endpoint: `private.smtp.<region>.event-notifications.cloud.ibm.com`.
+
    4. Select the required subnet for the Reserved IP.
       You can bind only one IP address per VPC zone to an endpoint gateway.
       {: note}
