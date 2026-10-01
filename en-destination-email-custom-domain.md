@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2021, 2026
-lastupdated: "2026-09-24"
+lastupdated: "2026-10-01"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email,  sandbox, testing
 
@@ -184,6 +184,8 @@ To include attachments in your email notifications, add the `attachments` array 
 {: #en-destinations-custom-email-tracking-status}
 
 This capability allows users to monitor the delivery status of emails sent through a Custom Email destination, ensuring transparency and enhancing the overall user experience. For more information, follow [these steps](/docs/event-notifications?topic=event-notifications-en-destination-email-custom-domain-status).
+
+To understand best practices for sender reputation, bounce rates, and email deliverability, see [Email best practices](/docs/event-notifications?topic=event-notifications-en-email-bestpractices).
 
 ## Track the number of unique clicks on a link
 {: #en-destinations-custom-email-link-tracking}

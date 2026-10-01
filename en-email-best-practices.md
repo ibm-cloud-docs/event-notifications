@@ -60,7 +60,69 @@ With the implementation of DMARC in addition to DKIM and SPF, your email message
 
 Thus, it is important to maintain a responsible and ethical approach to email communication, as the actions of one user on a shared IP address can impact the deliverability of all users. Regular monitoring, education, and adherence to email best practices are crucial to prevent such issues.
 
+## As you scale
+{: #en-email-as-you-scale}
 
+IP and domain reputation indicate how receiving email providers perceive the trustworthiness of your email sending infrastructure and domain. Maintaining a good reputation is important for reliable email delivery and helps reduce the likelihood of messages being throttled, rejected, or delivered to spam folders.
+
+### Sending volume and warm-up
+{: #en-email-warmup}
+
+Maintain a consistent and predictable sending volume in the initial phases. Avoid sudden, unexplained spikes in traffic, particularly when warming up a new IP or domain. Gradually increase volume when scaling your email traffic to allow receiving providers to establish a reputation for the IP and the sending domain.
+
+During warm-up:
+
+- Start with low volume and recipients who are known to be active and engaged.
+- Increase volume gradually rather than making large jumps.
+- Maintain a consistent sending pattern.
+
+#### Suggested sending volumes during initial days after onboarding to {{site.data.keyword.en_short}}
+{: #en-email-warmup-table}
+
+| Day | Suggested volume |
+|-----|-----------------|
+| 1 | 50 |
+| 2 | 100 |
+| 3 | 500 |
+| 4 | 1,000 |
+| 5 | 2,000 |
+| 6 | 4,000 |
+| 7 | 8,000 |
+| 8 | 16,000 |
+| 9 | 25,000 |
+| 10 | 35,000 |
+| 11 | 50,000 |
+| 12 | 75,000 |
+| 13 | 100,000 |
+| 14 | 150,000 |
+| 15 | 200,000 |
+| 16 | 275,000 |
+| 17 | 375,000 |
+| 18 | 500,000 |
+| 19 | 650,000 |
+| 20 | 825,000 |
+| 21 | 1,000,000 |
+
+### Bounce rates
+{: #en-email-bouncerates}
+
+Maintain a low bounce rate (ideally under 2%) by sending only to valid and active recipients. Remove or suppress email addresses that generate permanent (hard) bounces, handle transient (soft) bounces appropriately, and avoid repeatedly sending to invalid or non-existent recipient addresses.
+
+### Spam complaints
+{: #en-email-spamcomplaints}
+
+Recipients marking your email as spam will significantly lower your IP and domain reputation with mailbox providers. Keep spam complaint rates strictly below 0.1%.
+
+To minimize spam complaints:
+- Send relevant and expected emails only to recipients who have explicitly consented to receive them.
+- Ensure the sender identity is clear and consistent in the email header and subject line.
+- Promptly honor all unsubscribe and opt-out requests.
+- If you are using {{site.data.keyword.en_short}} managed opt-in ([Managing subscriptions](/docs/event-notifications?topic=event-notifications-en-destinations-custom-domain-opt-out)), monitor your opt-out rates. If you manage subscriptions independently, ensure an easily accessible and functional unsubscribe link is included in every non-transactional email.
+
+### Recipient engagement
+{: #en-email-engagement}
+
+Positive engagement from recipients such as opening emails, clicking links, moving messages out of spam, or adding sender addresses to address books signals to mailbox providers that your content is legitimate and wanted. Conversely, persistent lack of engagement harms sender reputation.
 
 ### Monitor and prevent spam
 {: #en-email-preventspam}
