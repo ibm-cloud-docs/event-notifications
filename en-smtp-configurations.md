@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-09-29"
+lastupdated: "2026-10-01"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email, smtp
 
@@ -302,6 +302,8 @@ The number of API keys you can create per Service ID is determined by IBM Cloud 
 
 * After sending emails, you receive a Queue ID that you can use for debugging purposes.
 * You can monitor the delivery status of emails sent through the SMTP interface. For more information, see [Monitor the delivery status of emails sent through SMTP interface](/docs/event-notifications?topic=event-notifications-en-destination-email-custom-domain-status).
+
+To understand best practices for sender reputation, bounce rates, and email deliverability, see [Email best practices](/docs/event-notifications?topic=event-notifications-en-email-bestpractices).
 
 ## Track the number of unique clicks on a link
 {: #en-destinations-smtp-configurations-link-tracking}
