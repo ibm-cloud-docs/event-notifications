@@ -96,12 +96,12 @@ It's important to note that the IBM {{site.data.keyword.en_short}} Service does 
 
 It's important for users to understand that despite following best practices, some legitimate emails might still end up in their spam or junk folders. This can occur for various reasons, such as user preferences or the occasional marking of emails as spam by other recipients.
 
-  - **User Action**:
-    - Users should periodically check their spam or junk folders. If they find a legitimate email in these folders, they should take the following actions:
-      - **Mark as "Not Spam"**: By marking an email as "Not Spam" or "Not Junk," users inform the email service provider that the message is not unwanted. This action signals that the sender is legitimate, and future emails from the same sender should be delivered to the inbox.
-      - **Move to Inbox**: Users can also move legitimate emails from the spam/junk folder to their inbox. This helps train the email service provider to recognize these messages as wanted and trusted.
+- **User Action**:
+  - Users should periodically check their spam or junk folders. If they find a legitimate email in these folders, they should take the following actions:
+    - **Mark as "Not Spam"**: By marking an email as "Not Spam" or "Not Junk," users inform the email service provider that the message is not unwanted. This action signals that the sender is legitimate, and future emails from the same sender should be delivered to the inbox.
+    - **Move to Inbox**: Users can also move legitimate emails from the spam/junk folder to their inbox. This helps train the email service provider to recognize these messages as wanted and trusted.
 
-  - **Educate Recipients**:
-    - If you are a sender of {{site.data.keyword.en_short}}, consider educating your recipients about the importance of checking their spam or junk folders for legitimate emails. Encourage them to mark your emails as "Not Spam" to ensure they receive important notifications.
+- **Educate Recipients**:
+  - If you are a sender of {{site.data.keyword.en_short}}, consider educating your recipients about the importance of checking their spam or junk folders for legitimate emails. Encourage them to mark your emails as "Not Spam" to ensure they receive important notifications.
 
 Understanding and actively managing emails in spam folders is essential to ensure the successful delivery of important {{site.data.keyword.en_short}}, even in cases where some recipients may mistakenly classify them as spam. It's a collaborative effort between senders and recipients to maintain an effective email communication channel.
