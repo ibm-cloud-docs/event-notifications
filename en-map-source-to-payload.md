@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025
-lastupdated: "2025-04-22"
+  years: 2025, 2026
+lastupdated: "2026-10-10"
 
 keywords: event-notifications, notifications payload, event sources
 
@@ -29,7 +29,7 @@ The following table links event types, subtypes, and the payload format details 
 |Platform Notifications for IBM Cloud |[Event types](/docs/support?topic=support-viewing-notifications#notification-type) |[Payload format details](/docs/support?topic=support-add-users-distribution-list#webhook-distribution-list) |
 |Toolchain |[Event types](/docs/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-cd&interface=ui#event-notifications-list-cd) |[Payload format details](/docs/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-cd&interface=ui#event-notifications-payload) |
 |{{site.data.keyword.appconfig_short}} |[Event types](/docs/app-configuration?topic=app-configuration-ac-int-en#ac-en-int-events) |[Payload format details](/docs/app-configuration?topic=app-configuration-ac-int-en#ac-int-en-notifications-payload) |
-|watsonx.data |[Event types](/docs/watsonxdata?topic=watsonxdata-event-notifications-events#event-notifications-list)| |
+|watsonx.data |[Event types](https://www.ibm.com/docs/en/watsonx/data){: external}| |
 |OpenPages |[Event types](/docs/openpages?topic=openpages-event-notifications-events&interface=ui#event-notifications-list) | [Payload format details](/docs/openpages?topic=openpages-event-notifications-events&interface=ui#event-notifications-payload) |
 |IBM Cloud Backup for VPC |[Event types](/docs/vpc?topic=vpc-event-notifications-events&interface=ui#event-notifications-list) |[Payload format details](/docs/vpc?topic=vpc-event-notifications-events&interface=ui#event-notifications-payload) |
 |Storage Ceph as a Service |[Event types](/docs/cephaas?topic=cephaas-event-notifications-events#event-notifications-list)|[Payload format details](/docs/cephaas?topic=cephaas-event-notifications-events#event-notifications-payload)|

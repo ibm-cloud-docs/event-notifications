@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-10-01"
+lastupdated: "2026-10-10"
 
 keywords: sendgrid migration, email migration, smtp migration, event notifications migration
 
@@ -32,9 +32,9 @@ During the transition from SendGrid to {{site.data.keyword.en_short}}, there is 
 ## Objectives
 {: #sendgrid-migration-objectives}
 
-In this tutorial, you will:
+In this tutorial, you:
 - Create an {{site.data.keyword.en_short}} instance
-- Configure email delivery using SMTP or Custom API
+- Configure email delivery by using SMTP or Custom API
 - Verify your custom domain
 - Set up context-based restrictions
 - Configure email subscriptions
@@ -43,7 +43,7 @@ In this tutorial, you will:
 ## Before you begin
 {: #sendgrid-migration-prereqs}
 
-Before you start the migration, ensure you have:
+Before you start the migration, ensure that you have:
 
 - An {{site.data.keyword.cloud_notm}} account with appropriate permissions.
 - Your SendGrid configuration details (SMTP endpoint, port, credentials).
@@ -276,7 +276,7 @@ Follow these steps if you want to use the {{site.data.keyword.en_short}} Custom 
 
 Integrate the {{site.data.keyword.en_short}} SDK into your application. The SDK requires the source ID, instance ID, and service credentials.
 
-For detailed SDK documentation, see the [API documentation](/apidocs/event-notifications).
+For detailed SDK documentation, see the [API documentation](/docs/apis/event-notifications).
 
 #### Create a custom email destination
 {: #sendgrid-migration-api-destination}
@@ -371,7 +371,7 @@ Recipients receive an opt-in email with a link to subscribe. You can track activ
 {: #sendgrid-migration-api-optout}
 {: step}
 
-If you want to manage your own subscription list without the opt-in flow, you can request an appoval to opt out. You can then send the recipient list in the payload.
+If you want to manage your own subscription list without the opt-in flow, you can request approval to opt out. You can then send the recipient list in the payload.
 Follow these steps to request approval for the opt out feature.
 
 1. Click the **Help** icon and select **Support Center**.
@@ -426,7 +426,7 @@ After completing the migration:
 ## Related information
 {: #sendgrid-migration-related}
 
-- [{{site.data.keyword.en_short}} API documentation](/apidocs/event-notifications)
+- [{{site.data.keyword.en_short}} API documentation](/docs/apis/event-notifications)
 - [{{site.data.keyword.en_short}} pricing](/docs/event-notifications?topic=event-notifications-en-new-pricing)
 - [SMTP configurations](/docs/event-notifications?topic=event-notifications-en-smtp-configurations)
 - [Email best practices](/docs/event-notifications?topic=event-notifications-en-email-bestpractices)

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2022, 2024
-lastupdated: "2024-10-07"
+  years: 2022, 2026
+lastupdated: "2026-10-10"
 
 keywords: event notifications, event notification, notifications, integrations, key protect, key management, Collect Failed events
 
@@ -50,7 +50,7 @@ You can create and bring keys that are created by using {{site.data.keyword.keym
 
 The updated **Key Management** information is listed in the **Integrations** dashboard.
 
-By default, customer data is encrypted. You can use APIs, CLI, or the user interface to provide your own Key Protect details for data encryption. If you are using CLI or APIs, you need to get the default Key Protect integration ID through the [List all integrations](/apidocs/event-notifications#list-integrations) API. In case of default Key Protect integrations, except for the integration ID, all other values are empty. You need to use the integration ID to update the integration details with your own Key Protect details.
+By default, customer data is encrypted. You can use APIs, CLI, or the user interface to provide your own Key Protect details for data encryption. If you are using CLI or APIs, you need to get the default Key Protect integration ID through the [List all integrations](/docs/apis/event-notifications#list-integrations) API. In case of default Key Protect integrations, except for the integration ID, all other values are empty. You need to use the integration ID to update the integration details with your own Key Protect details.
 {: note}
 
 ## Using authorizations to grant access between services
@@ -71,7 +71,7 @@ Use {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) to cre
 
 1. Select a **Source service** as **Event Notifications**.
 
-1. Specify whether you want the authorization to be for all resources or Resources based on selected attributes, If you selected Resources based on selected attributes, then specify the **Add attributes** only source resource group or only source service instance.
+1. Specify whether you want the authorization to be for all resources or resources based on selected attributes. If you selected resources based on selected attributes, specify the **Add attributes** only source resource group or only source service instance.
 
 1. Select **Key Protect** as the **Target service**.
 
