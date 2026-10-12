@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2023-12-04"
+  years: 2021, 2026
+lastupdated: "2026-10-12"
 
 keywords: HA for Event Notifications, high availability for Event Notifications, Event Notifications, disaster recovery
 
@@ -18,6 +18,8 @@ subcollection: event-notifications
 
 [Disaster recovery](#x2113280){: term} involves a set of policies, tools, and procedures for returning a system, an application, or an entire data center to full operation after a catastrophic interruption. It includes procedures for copying and storing an installed system's essential data in a secure location, and for recovering that data to restore normalcy of operation.
 {: shortdesc}
+
+This topic contains specific information about the high availability and disaster recovery strategies and configurations for {{site.data.keyword.en_short}}. For more information about how high availability and disaster recovery are handled for the {{site.data.keyword.cloud_notm}} platform, including concepts like cross regions, global services, and fault domains, check out the [Resiliency documentation](/docs/resiliency?topic=resiliency-ha-redundancy). {: tip}
 
 ## Responsibilities
 {: #bc-dr-responsibilities}
