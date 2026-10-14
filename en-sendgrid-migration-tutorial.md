@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-10-10"
+lastupdated: "2026-10-14"
 
 keywords: sendgrid migration, email migration, smtp migration, event notifications migration
 
@@ -125,7 +125,7 @@ Follow these steps if you are migrating from SendGrid SMTP to {{site.data.keywor
 
 4. Click **Add**.
 
-Your domain appears in the SMTP configurations list with a "Not verified" status.
+Your domain appears in the SMTP configurations list with a **Not verified** status.
 
 #### Verify your domain
 {: #sendgrid-migration-smtp-verify}
@@ -177,7 +177,7 @@ Authorization typically takes 24-48 hours.
 DNS propagation can take up to 72 hours.
 {: important}
 
-All three verification statuses (Event Notification Authorization, SPF, DKIM) must show "Verified" before proceeding.
+All three verification statuses (Event Notification Authorization, SPF, DKIM) must show **Verified** before proceeding.
 
 #### Configure context-based restrictions
 {: #sendgrid-migration-smtp-cbr}
@@ -292,7 +292,7 @@ For detailed SDK documentation, see the [API documentation](/docs/apis/event-not
 
 5. Click **Add**.
 
-Your domain appears in the destinations list with a "Not verified" status.
+Your domain appears in the destinations list with a **Not verified** status.
 
 #### Verify your custom domain
 {: #sendgrid-migration-api-verify}
@@ -309,7 +309,7 @@ Your domain appears in the destinations list with a "Not verified" status.
 
 5. After the DNS records are added and propagated, click **Verify**.
 
-Both SPF and DKIM statuses must show "Verified" before proceeding.
+Both SPF and DKIM statuses must show **Verified** before proceeding.
 
 #### Create a topic, migrate your template, and set up a subscription
 {: #sendgrid-migration-api-topic}
