@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2026
-lastupdated: "2026-09-08"
+lastupdated: "2026-10-21"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, webhook
 
@@ -23,7 +23,10 @@ A webhook represents a service destination, where an incoming notification can b
 
 You can configure a webhook destination on the **Destinations** tab. As part of the configuration, enter the webhook URL, and the REST API verb to be called when the webhook is called. You can also enter authorization headers to the destination webhook. Create a subscription to associate the webhook destination to a topic.
 
-## Supported HTTP verbs
+All ports (1–65535) are supported for webhook destinations in {{site.data.keyword.en_short}}.
+{: note}
+
+## Supported HTTP Verbs
 {: #en-supported-verbs}
 
 {{site.data.keyword.en_short}} webhooks support the HTTP verbs GET, POST, PUT, and PATCH.
