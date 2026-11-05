@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-10-14"
+lastupdated: "2026-11-05"
 
 keywords: sendgrid migration, email migration, smtp migration, event notifications migration
 
@@ -114,6 +114,8 @@ Follow these steps if you are migrating from SendGrid SMTP to {{site.data.keywor
 {: #sendgrid-migration-smtp-add}
 {: step}
 
+
+
 1. In your {{site.data.keyword.en_short}} instance, click **SMTP configurations** in the navigation.
 
 2. Click **Add**.
@@ -127,11 +129,15 @@ Follow these steps if you are migrating from SendGrid SMTP to {{site.data.keywor
 
 Your domain appears in the SMTP configurations list with a **Not verified** status.
 
+
 #### Verify your domain
 {: #sendgrid-migration-smtp-verify}
 {: step}
 
+
+
 Domain verification requires three steps: Event Notification authorization, SPF verification, and DKIM verification.
+
 
 ##### Request Event Notification authorization
 {: #sendgrid-migration-smtp-auth}
@@ -169,7 +175,6 @@ Authorization typically takes 24-48 hours.
 
 3. Copy the SPF and DKIM TXT values displayed in the UI.
 
-
 4. Add the TXT records through your DNS provider.
 
 5. After the DNS records are added and propagated, click **Verify** in the {{site.data.keyword.en_short}} console.
@@ -178,6 +183,7 @@ DNS propagation can take up to 72 hours.
 {: important}
 
 All three verification statuses (Event Notification Authorization, SPF, DKIM) must show **Verified** before proceeding.
+
 
 #### Configure context-based restrictions
 {: #sendgrid-migration-smtp-cbr}
@@ -282,6 +288,10 @@ For detailed SDK documentation, see the [API documentation](/docs/apis/event-not
 {: #sendgrid-migration-api-destination}
 {: step}
 
+
+
+
+
 1. In your {{site.data.keyword.en_short}} instance, click **Destinations** in the navigation.
 
 2. Click **Add**.
@@ -294,22 +304,15 @@ For detailed SDK documentation, see the [API documentation](/docs/apis/event-not
 
 Your domain appears in the destinations list with a **Not verified** status.
 
-#### Verify your custom domain
-{: #sendgrid-migration-api-verify}
-{: step}
-
 1. In the destinations list, click the actions menu (⋯) next to your domain.
-
 2. Click **Configure**.
-
 3. Copy the SPF and DKIM TXT values displayed.
-
-
 4. Add the TXT records through your DNS provider.
-
 5. After the DNS records are added and propagated, click **Verify**.
 
 Both SPF and DKIM statuses must show **Verified** before proceeding.
+
+
 
 #### Create a topic, migrate your template, and set up a subscription
 {: #sendgrid-migration-api-topic}
@@ -350,7 +353,7 @@ Before setting up routing, migrate your SendGrid email template so it is ready t
    - Define your filter using JSONPath expressions.
    - Click **Add a condition** to add more filters if needed.
 
-   For more information about JSONPath, see the [JSONPath documentation](https://goessner.net/articles/JsonPath/).
+   For more information about JSONPath, see the [JSONPath documentation](https://goessner.net/articles/JsonPath/){: external}.
 
 5. Click **Next** to go to the **Subscriptions** step.
 
@@ -363,7 +366,7 @@ Before setting up routing, migrate your SendGrid email template so it is ready t
 
    Click **Create subscription**.
 
-8. Click **Next** to review your configuration, then click **Save**.
+7. Click **Next** to review your configuration, then click **Save**.
 
 Recipients receive an opt-in email with a link to subscribe. You can track active and unsubscribed recipients in the subscription details.
 
@@ -398,6 +401,10 @@ Follow these steps to request approval for the opt out feature.
 
 {{site.data.keyword.en_short}} provides metrics to track email delivery and bounce rates.
 
+
+
+
+
 1. Click **Metrics** in the navigation.
 
 2. Select the metric type:
@@ -411,6 +418,7 @@ Follow these steps to request approval for the opt out feature.
    - Open rate (if tracking is enabled)
 
 Use these metrics to monitor the health of your email delivery and identify issues.
+
 
 ## Next steps
 {: #sendgrid-migration-next}

@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2021, 2026
-lastupdated: "2026-10-01"
+lastupdated: "2026-11-05"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email,  sandbox, testing
 
@@ -13,9 +13,13 @@ subcollection: event-notifications
 # {{site.data.keyword.cloud_notm}} Email Service with Custom domain
 {: #en-destinations-custom-email}
 
+
+
+
 You can configure a custom email destination in the Destinations tab. As part of the configuration, enter the domain name to be used for sending emails. When you create a custom email destination, you can choose between sandbox mode for testing or production mode with your own verified domain.
 
-Custom email destination is not supported by Lite Plan. To know more about the plans and destinations available, refer [here](/docs/event-notifications?topic=event-notifications-getting-started).
+
+Custom email destination is not supported by Lite Plan. To know more about the plans and destinations available, see [Pricing plans](/docs/event-notifications?topic=event-notifications-getting-started).
 {: note}
 
 ## Choosing between Sandbox and Production mode
@@ -32,7 +36,9 @@ Production mode
 ## Sandbox environment for testing
 {: #en-destinations-custom-email-sandbox}
 
+
 Sandbox mode allows you to test your email notification configuration quickly without setting up and verifying your own domain. {{site.data.keyword.en_short}} automatically maps an {{site.data.keyword.en_short}}-owned domain to your destination, enabling you to start sending test notifications immediately.
+
 
 ### Sandbox mode restrictions
 {: #en-destinations-custom-email-sandbox-restrictions}

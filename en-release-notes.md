@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-10-10"
+lastupdated: "2026-11-05"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -19,6 +19,8 @@ content-type: release-note
 
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
+
+
 
 ## 25 September 2026
 {: #event-notifications-Sep232026}

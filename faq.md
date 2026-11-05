@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2026
-lastupdated: "2026-09-08"
+lastupdated: "2026-11-05"
 
 
 keywords: event-notification, event notification, faqs, Frequently Asked Questions, question, billing, service, invalid devices, device deletion, database
@@ -51,7 +51,7 @@ Sometimes, devices are marked as invalid and deleted from the database, if they 
    - `BadDeviceToken` - the specified device token is invalid.
    - `DeviceTokenNotForTopic` - the device token doesn’t match the specified topic (bundle ID).
 
-   For more information on how to handle notification responses from apps, see [here](https://developer.apple.com/documentation/usernotifications/handling-notification-responses-from-apns){: external}.
+   For more information on how to handle notification responses from apps, see the [Apple Developer documentation for handling notification responses from APNs](https://developer.apple.com/documentation/usernotifications/handling-notification-responses-from-apns){: external}.
 
 - Chrome or Firefox devices:
    - `NotFound` - the subscription is expired and can’t be used.
@@ -98,7 +98,7 @@ Sometimes, devices are marked as invalid and deleted from the database, if they 
       - [Firefox Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-firefox)
       - [Safari Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-safari)
 
-   1. Next, the bank sends a notification with payload containing attribute `"notification-type":"maintenance"` and `"ibmenpushto": "{\"tags\":[\"AP\""]]}"`, `notification-type` attributes is added so that it matches against the topic condition and `ibmenpushto` as the message is for targeting push customers with android and iOS devices in Asia Pacific region `AP`.
+   1. Next, the bank sends a notification with payload containing attribute `"notification-type":"maintenance"` and `"ibmenpushto": "{\"tags\":[\"AP\""]]}"`, `notification-type` attribute is added so that it matches against the topic condition and `ibmenpushto` as the message is for targeting push customers with android and iOS devices in Asia Pacific region `AP`.
 
 ## Why don't I see Email or SMS notifications that I have sent after configuring {{site.data.keyword.en_short}} for Email and SMS?
 {: #faq-en-message-email-sms}
@@ -182,6 +182,8 @@ The following table lists the blocked file extensions:
 {: caption="Blocked file extensions for email attachments" caption-side="bottom"}
 
 If you attempt to send an attachment with a blocked extension, the request is rejected with a `400 Bad Request` error.
+
+
 
 ## What is SPF verification?
 {: #faq-en-notifications-spf-verification}

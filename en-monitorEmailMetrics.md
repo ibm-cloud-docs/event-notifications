@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: "2025, 2026"
-lastupdated: "2026-09-01"
+  years: 2025, 2026
+lastupdated: "2026-11-05"
 
-keywords: event-notifications, metrics for email notifications, monitor metrics
+keywords: event-notifications, metrics for email notifications, monitor metrics, email services, delivery metrics, unique clicks, deliverability
 
 subcollection: event-notifications
 
@@ -15,8 +15,18 @@ subcollection: event-notifications
 # Monitoring metrics for email notifications
 {: #en-manage-monitor-metrics}
 
+
+
 In {{site.data.keyword.en_full}}, you can track metrics for email notifications sent through custom domain email and SMTP, such as the number of emails delivered. This allows you to analyze customer behavior in real time and optimize your communication strategy.
 {: shortdesc}
+
+
+
+
+
+
+
+
 
 ## How can I view metrics?
 {: #en-view-metrics}
@@ -49,7 +59,7 @@ To view metrics for email notifications that are sent from custom domains, you c
    * Subject
    * Subscription name
 
-	The values provided for Notification ID, Email to, and Subject must be exact if they are used as filter criteria. You can slect required values from destination name and source name if they are used as criteria to filter.
+	The values provided for Notification ID, Email to, and Subject must be exact if they are used as filter criteria. You can select required values from destination name and source name if they are used as criteria to filter.
 	{: tip}
 
 3. Select a pre-defined time period such as **Last 24 hours**, **Last 7 days**, or **Last 30 days**, or provide specific dates that you want to review.
@@ -86,7 +96,7 @@ By reviewing your metrics, you can see which emails were not received because th
 	* **Bounce Reason**: The reason behind the notification bounce.
 	* **Subject**: The subject of the bounced email.
 
-## Downloading metrics?
+## Downloading metrics
 {: #en-download-metrics}
 
 To download Event Notifications metrics to your local system, you can use the following steps.
