@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2026
-lastupdated: "2026-09-02"
+lastupdated: "2026-10-10"
 
 keywords: event-notifications, event notifications, about event notifications, templates, code engine
 
@@ -44,7 +44,7 @@ To learn more about Handlebars integration and the various helpers offered, see 
 ]
 }
 ```
-See [Create a Job run](https://cloud.ibm.com/apidocs/codeengine/v2#create-job-run) to find more parameters that you can integrate into the template.
+See [Create a job run](/docs/apis/codeengine/v2#create-job-run) to find more parameters that you can integrate into the template.
 
 #### Template examples for {{site.data.keyword.codeengineshort}} Functions/Applications:
 {: #en-code-engine-template-functions-applications-templates}

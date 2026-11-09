@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-09-08"
+lastupdated: "2026-11-09"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email
 
@@ -17,6 +17,9 @@ subcollection: event-notifications
 Use {{site.data.keyword.en_short}} email destinations to send event-driven notifications to recipients by email. Two destination types are available: Inbuilt Email and IBM Cloud Email service with custom domain.
 {: shortdesc}
 
+Custom email destinations and SMTP configurations are only available for Standard plan instances.
+{: note}
+
 - [Inbuilt Email](/docs/event-notifications?topic=event-notifications-en-destination-email-destination-default)
 The Inbuilt Email destination provides an SMTP relay for sending transactional and informational event notification emails to recipients who need to be aware of events that occur within your {{site.data.keyword.cloud_notm}} account. This destination can be used to send email notifications for events that originate only from IBM Cloud sources. The content cannot be modified within {{site.data.keyword.en_short}}. This destination is available by default whenever you create an instance of {{site.data.keyword.en_short}}. These emails originate from `no-reply@cloud.ibm.com` or `event-notifications@cloud.ibm.com`. You can add your own reply-to address.
 
@@ -30,6 +33,22 @@ The Custom Domain Email destination allows you to send emails by using the email
 When you create a new {{site.data.keyword.en_short}} instance, a pre-configured `{{site.data.keyword.cloud_notm}} Email Service` destination is available in the **Destinations** page. Follow [the detailed steps](/docs/event-notifications?topic=event-notifications-en-destination-email-destination-default) to get started with the default domain email destination.
 
 To send your own email content or send emails from your own domain, click **Add destinations** and select the `Custom Email` destination. Follow [the detailed steps](/docs/event-notifications?topic=event-notifications-en-destinations-custom-email) to get started with the custom domain email destination.
+
+
+## SMTP configurations
+{: #en-destinations-email-services}
+
+You can also configure email from the **SMTP configurations** section of your {{site.data.keyword.en_short}} instance, which brings together domain verification, email setup, and delivery metrics to send email from a custom domain:
+
+**Domains**
+:   Register and verify the domains that you use to send email. You can set up Sender Policy Framework (SPF) and DomainKeys Identified Mail (DKIM) once for a domain and reuse it across custom email destinations and SMTP configurations. For more information, see [Managing email services](/docs/event-notifications?topic=event-notifications-en-email-domains).
+
+**Configure email**
+:   Set up email delivery by using one of two sub-tabs. The **SMTP** sub-tab configures an SMTP interface connection. The **API** sub-tab creates an API email configuration, which sets up a custom domain email destination, a subscription, and an automatically created default topic and API source in a single flow.
+
+**Metrics**
+:   View delivery metrics for email that is sent from custom domain email destinations and SMTP configurations.
+
 
 Follow [the suggested best practices](/docs/event-notifications?topic=event-notifications-en-email-bestpractices) when you use the IBM Cloud email service.
 

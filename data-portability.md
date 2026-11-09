@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024, 2025
-lastupdated: "2025-08-21"
+  years: 2024, 2026
+lastupdated: "2026-10-10"
 
 keywords:
 
@@ -51,7 +51,7 @@ For each data set that you need to export, use `GET` calls to get a copy of the 
 | integrations | `/v1/instances/{instance_id}/integrations` | All the integrations|
 {: caption="Example API endpoints" caption-side="top"}
 
-For more information about all available APIs for exporting data, see [API documentation](https://cloud.ibm.com/apidocs/event-notifications).
+For more information about all available APIs for exporting data, see the [Event Notifications API documentation](/docs/apis/event-notifications).
 
 /metrics does not have have a POST/PUT api as they are the metrics of usage of the service.
 {: note}
@@ -59,7 +59,7 @@ For more information about all available APIs for exporting data, see [API docum
 ## Exported data formats
 {: #data-portability-data-formats}
 
-{{site.data.keyword.en_full_notm}} resources export the data via Service APIs in JSON format. The schema of the exported data is described in the {{site.data.keyword.en_full_notm}} service [API documentation](https://cloud.ibm.com/apidocs/event-notifications).
+{{site.data.keyword.en_full_notm}} resources export the data via Service APIs in JSON format. The schema of the exported data is described in the {{site.data.keyword.en_full_notm}} service [API documentation](/docs/apis/event-notifications).
 
 ## Data ownership
 {: #data-portability-ownership}

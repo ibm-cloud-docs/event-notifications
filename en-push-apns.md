@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-09-09"
+lastupdated: "2026-10-10"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, push
 
@@ -515,7 +515,7 @@ override func didReceive(_ request: UNNotificationRequest, withContentHandler co
 {: #en-send-notifications-apns}
 {: step}
 
-Use the [Send Notification API](/apidocs/event-notifications) to send the push notification for the iOS device. You can use the [Node](mailto:https://github.com/IBM/event-notifications-node-admin-sdk#send-notifications) or [Go](https://github.com/IBM/event-notifications-go-admin-sdk#send-notifications) admin SDK instead of calling the API directly.
+Use the [Send Notification API](/docs/apis/event-notifications) to send the push notification for the iOS device. You can use the [Node](https://github.com/IBM/event-notifications-node-admin-sdk#send-notifications){: external} or [Go](https://github.com/IBM/event-notifications-go-admin-sdk#send-notifications){: external} admin SDK instead of calling the API directly.
 
 ![Send notifications](images/en-send-notifications.png "Send notifications"){: caption="Send notifications" caption-side="bottom"}
 

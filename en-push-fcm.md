@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-09-09"
+lastupdated: "2026-10-10"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, push
 
@@ -49,20 +49,20 @@ You must have the following prerequisites in place:
 * A Google account to log in to Firebase console to get your `project_id`, `private_key`, and `client_email`.
 * An {{site.data.keyword.cloud_notm}} account. If you do not have one, [create an {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/){: external}.
 
-The instructions in this topic use FCM's HTTP v1 API. The HTTP v1 API has advantages such as secure access tokens, efficient customizations, and more extendable client platform versions. For more information on migrating from the FCM legacy HTTP API to the HTTP v1 API, see [Migrating FCM legacy HTTP API to HTTP v1 API](#en-fcm-http-migration).
+The instructions in this topic use FCM's HTTP v1 API. The HTTP v1 API has advantages such as secure access tokens, efficient customizations, and more extendable client platform versions. For more information about migrating from the FCM legacy HTTP API to the HTTP v1 API, see [Migrating FCM legacy HTTP API to HTTP v1 API](#en-fcm-http-migration).
 {: important}
 
 ## Create an {{site.data.keyword.en_short}} service instance
 {: #en-create-event-fcm}
 {: step}
 
-* Log in to your [{{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/).
-* In the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog#services), search and select **Event Notifications > Event Notifications**.
-* Select a **Region** from the list of supported regions and select a **pricing plan**.
-* Provide a **Service name**.
-* Select a **resource group**.
-* Accept the licensing agreements and terms by clicking the checkbox.
-* Click **Create**.
+1. Log in to your [{{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/).
+1. In the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog#services), search and select **Event Notifications > Event Notifications**.
+1. Select a **Region** from the list of supported regions and select a **pricing plan**.
+1. Provide a **Service name**.
+1. Select a **resource group**.
+1. Accept the licensing agreements and terms by clicking the checkbox.
+1. Click **Create**.
 
 ## Get FCM credentials
 {: #en-get-fcm}
@@ -70,18 +70,18 @@ The instructions in this topic use FCM's HTTP v1 API. The HTTP v1 API has advant
 
 Firebase Cloud Messaging (FCM) is the gateway that delivers push notifications to Android devices. To set up the Android Push destination on the console, you must get your FCM credentials `project_id`, `private_key`, and `client_email`.
 
-* Go to the [Firebase Console](https://console.firebase.google.com/?pli=1){: external}. A Google user account is required.
-* Click **Create a project**. If you already have a project, click **Add Project**.
-* In the **Create a project** window, enter a project name, and accept the terms and enable or disable Google analytics (optional) by selecting the toggle switch and click **Continue**.
-* If Google analytics is enabled, then in the **Configure Google Analytics** window, choose the **Analytics location**, and accept the terms.
-* Click **Create Project**.
-* Click **Continue** when the new project is ready.
-* In the navigation panel, select the **Settings** icon next to **Project Overview** and select **Settings > Project settings**.
-* Click the **Service Accounts** tab.
+1. Go to the [Firebase Console](https://console.firebase.google.com/?pli=1){: external}. A Google user account is required.
+1. Click **Create a project**. If you already have a project, click **Add Project**.
+1. In the **Create a project** window, enter a project name, accept the terms, and enable or disable Google analytics (optional) by selecting the toggle switch, then click **Continue**.
+1. If Google analytics is enabled, in the **Configure Google Analytics** window, choose the **Analytics location**, and accept the terms.
+1. Click **Create Project**.
+1. Click **Continue** when the new project is ready.
+1. In the navigation panel, select the **Settings** icon next to **Project Overview** and select **Settings** > **Project settings**.
+1. Click the **Service Accounts** tab.
 
    ![FCM credentials](images/en-fcm-credentials.png "FCM credentials"){: caption="FCM credentials" caption-side="bottom"}
 
-* Click **Generate new private key** to generate your project credentials. The downloaded file will contain: `project_id`, `private_key`, and `client_email`.
+1. Click **Generate new private key** to generate your project credentials. The downloaded file contains `project_id`, `private_key`, and `client_email`.
 
 ## Generate `google-services.json`
 {: #en-gen-google-services}
@@ -115,9 +115,9 @@ You also need to generate the `google-services.json` file. Complete the followin
 
 To create a generic API source:
 
-* Click **Sources** in the {{site.data.keyword.en_short}} instance.
-* Click **Create** and select an API Source in the **Create source** dialog.
-* Type a name and an optional description and click **Create source**.
+1. Click **Sources** in the {{site.data.keyword.en_short}} instance.
+1. Click **Create** and select an API Source in the **Create source** dialog.
+1. Type a name and an optional description and click **Create source**.
 
 ## Create an {{site.data.keyword.en_short}} destination
 {: #en-create-dest-fcm}
@@ -156,7 +156,7 @@ Click **Topics** in the {{site.data.keyword.en_short}} instance and click **Crea
 
 Proceed to the **Subscriptions** step. Click **Create** and enter the following subscription details in the **Create subscription** dialog.
 
-* **Subscription name**: enter a name for subscription
+* **Subscription name**: enter a name for the subscription.
 * **Destination type**: select destination type.
 * **Destination**: select destination.
 
@@ -168,16 +168,16 @@ Click **Create subscription**.
 
 The Android SDK enables Android apps to receive push notifications. Complete the following steps to install {{site.data.keyword.en_short}} Android SDK, initialize the SDK, and register for notifications for your Android app.
 
-* Install {{site.data.keyword.en_short}} by using Gradle.
+1. Install {{site.data.keyword.en_short}} by using Gradle.
 
    ```gradle
    compile 'com.ibm.cloud:eventnotifications-destination-android:0.0.1'
    ```
    {: codeblock}
 
-* Follow [event-notifications-destination-android-sdk](https://github.com/IBM/event-notifications-destination-android-sdk) to install the SDK.
+1. Follow [event-notifications-destination-android-sdk](https://github.com/IBM/event-notifications-destination-android-sdk){: external} to install the SDK.
 
-* When Gradle is installed, [import and initialize](https://github.com/IBM/event-notifications-destination-android-sdk#initialize-sdk) the SDK.
+1. When Gradle is installed, [import and initialize](https://github.com/IBM/event-notifications-destination-android-sdk#initialize-sdk){: external} the SDK.
 
    ```java
    import com.ibm.cloud.eventnotifications.destination.android.ENPush;
@@ -193,7 +193,7 @@ The Android SDK enables Android apps to receive push notifications. Complete the
    ```
    {: codeblock}
 
-* When the SDK is initialized, [register](https://github.com/IBM/event-notifications-destination-android-sdk#register-for-notifications) for push notifications.
+1. When the SDK is initialized, [register](https://github.com/IBM/event-notifications-destination-android-sdk#register-for-notifications){: external} for push notifications.
 
    ```java
    // Register the device to Event Notifications
@@ -212,7 +212,7 @@ The Android SDK enables Android apps to receive push notifications. Complete the
    ```
    {: codeblock}
 
-* Optionally if you can also create push tag subscription, [subscribeToPushTag](https://github.com/IBM/event-notifications-destination-android-sdk#subscribe-to-tags) for push device. The subscribe API subscribes the device for a particular tag. After the device is subscribed to a particular tag, the device can receive notifications that are sent for that tag. Add the following code snippet to your Android mobile application to subscribe to a list of tags.
+1. Optionally, you can also create a push tag subscription. The [subscribeToPushTag](https://github.com/IBM/event-notifications-destination-android-sdk#subscribe-to-tags){: external} API subscribes the device for a particular tag. After the device is subscribed to a particular tag, the device can receive notifications that are sent for that tag. Add the following code snippet to your Android mobile application to subscribe to a list of tags.
 
    ```java
    // Subscribe to the given tag, if tagname is not available it will first get create then push device will get subscribe to it.
@@ -231,7 +231,7 @@ The Android SDK enables Android apps to receive push notifications. Complete the
    ```
    {: codeblock}
 
-* Add the notifications listener for receiving the notification in your application.
+1. Add the notifications listener for receiving the notification in your application.
 
    ```java
    //Handles the notification when it arrives
@@ -252,13 +252,13 @@ The Android SDK enables Android apps to receive push notifications. Complete the
    ```
    {: codeblock}
 
-* When the setup is complete, run your application and register for push notifications.
+1. When the setup is complete, run your application and register for push notifications.
 
 ## Send notifications to the Android device
 {: #en-send-notifications-fcm}
 {: step}
 
-Use the [Send notification API](/apidocs/event-notifications) to send the push notification for the Android device. You can use the [Node](mailto:https://github.com/IBM/event-notifications-node-admin-sdk#send-notifications) or [Go](https://github.com/IBM/event-notifications-go-admin-sdk#send-notifications) admin SDK instead of calling the API directly.
+Use the [Send notification API](/docs/apis/event-notifications) to send the push notification for the Android device. You can use the [Node](https://github.com/IBM/event-notifications-node-admin-sdk#send-notifications){: external} or [Go](https://github.com/IBM/event-notifications-go-admin-sdk#send-notifications){: external} admin SDK instead of calling the API directly.
 
 ![Send notifications](images/en-send-notifications.png "Send notifications"){: caption="Send notifications" caption-side="bottom"}
 
@@ -267,13 +267,13 @@ Use the [Send notification API](/apidocs/event-notifications) to send the push n
 ## Migrating FCM legacy HTTP API to HTTP v1 API
 {: #en-fcm-http-migration}
 
-Apps using the FCM legacy HTTP API should consider migrating to the HTTP v1 API using the instructions in this section. The HTTP v1 API has advantages such as secure access tokens, efficient customizations, and future proof as well as more extendable client platform versions.
+Apps that use the FCM legacy HTTP API should consider migrating to the HTTP v1 API by using the instructions in this section. The HTTP v1 API has advantages such as secure access tokens, efficient customizations, and more extendable client platform versions.
 
-In {{site.data.keyword.en_short}}, you can create an android destination by following FCM norms. For legacy HTTP API we have been providing support via two required parameters `server_key` and `sender_id`. For the v1 HTTP API, FCM introduced three new parameters: `project_id`, `client_email`, and `private_key`. The important point to observe here is both legacy and v1 HTTP APIs are mutually exclusive and we have taken care of that in {{site.data.keyword.en_short}}.
+In {{site.data.keyword.en_short}}, you can create an Android destination by following FCM norms. For the legacy HTTP API, support is provided through two required parameters: `server_key` and `sender_id`. For the v1 HTTP API, FCM introduced three new parameters: `project_id`, `client_email`, and `private_key`. Both legacy and v1 HTTP APIs are mutually exclusive.
 
-Here's how you can migrate from an old configuration to a new one.
+Complete the following steps to migrate from an old configuration to a new one.
 
-1. Under your existing FCM Android destination configuration you will find `server_key` and `sender_id` provided. Now you just need to update the existing destination by providing `project_id`, `client_email`, and `private_key` USING the PATCH /destinations/{id} API call.
+1. Under your existing FCM Android destination configuration, find `server_key` and `sender_id`. Update the existing destination by providing `project_id`, `client_email`, and `private_key` by using the PATCH /destinations/{id} API call.
 
    Existing Android destination configuration:
 

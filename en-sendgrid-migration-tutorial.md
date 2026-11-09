@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-10-01"
+lastupdated: "2026-11-09"
 
 keywords: sendgrid migration, email migration, smtp migration, event notifications migration
 
@@ -32,9 +32,9 @@ During the transition from SendGrid to {{site.data.keyword.en_short}}, there is 
 ## Objectives
 {: #sendgrid-migration-objectives}
 
-In this tutorial, you will:
+In this tutorial, you:
 - Create an {{site.data.keyword.en_short}} instance
-- Configure email delivery using SMTP or Custom API
+- Configure email delivery by using SMTP or Custom API
 - Verify your custom domain
 - Set up context-based restrictions
 - Configure email subscriptions
@@ -43,11 +43,11 @@ In this tutorial, you will:
 ## Before you begin
 {: #sendgrid-migration-prereqs}
 
-Before you start the migration, ensure you have:
+Before you start the migration, ensure that you have:
 
 - An {{site.data.keyword.cloud_notm}} account with appropriate permissions.
 - Your SendGrid configuration details (SMTP endpoint, port, credentials).
-- A custom domain for sending emails.
+- A verified custom domain in {{site.data.keyword.en_short}}. If you have not added or verified your domain, see [Managing email services](/docs/event-notifications?topic=event-notifications-en-email-domains).
 - Access to your DNS records for domain verification.
 
 ## Create an {{site.data.keyword.en_short}} instance
@@ -114,24 +114,24 @@ Follow these steps if you are migrating from SendGrid SMTP to {{site.data.keywor
 {: #sendgrid-migration-smtp-add}
 {: step}
 
-1. In your {{site.data.keyword.en_short}} instance, click **SMTP configurations** in the navigation.
+1. In your {{site.data.keyword.en_short}} instance, click **SMTP configurations** > **Configure email**, and select the **SMTP** tab.
 
 2. Click **Add**.
 
 3. Enter the following information:
    - **Name**: A descriptive name for your SMTP configuration
    - **Description**: Optional description
-   - **Domain**: Your custom domain (for example, `notifications.example.com`)
+   - **Domain**: Select an existing verified domain from the list, or enter a new domain name (for example, `notifications.example.com`)
 
 4. Click **Add**.
-
-Your domain appears in the SMTP configurations list with a "Not verified" status.
 
 #### Verify your domain
 {: #sendgrid-migration-smtp-verify}
 {: step}
 
-Domain verification requires three steps: Event Notification authorization, SPF verification, and DKIM verification.
+If you selected an existing verified domain when creating the SMTP configuration, domain verification is already complete and you can skip to [Request Event Notification authorization](#sendgrid-migration-smtp-auth). If you entered a new domain name, complete SPF and DKIM verification first.
+
+For SPF and DKIM verification steps, see [Verifying an email domain](/docs/event-notifications?topic=event-notifications-en-email-domains#en-email-domains-verify).
 
 ##### Request Event Notification authorization
 {: #sendgrid-migration-smtp-auth}
@@ -169,7 +169,6 @@ Authorization typically takes 24-48 hours.
 
 3. Copy the SPF and DKIM TXT values displayed in the UI.
 
-
 4. Add the TXT records through your DNS provider.
 
 5. After the DNS records are added and propagated, click **Verify** in the {{site.data.keyword.en_short}} console.
@@ -177,7 +176,8 @@ Authorization typically takes 24-48 hours.
 DNS propagation can take up to 72 hours.
 {: important}
 
-All three verification statuses (Event Notification Authorization, SPF, DKIM) must show "Verified" before proceeding.
+All three verification statuses (Event Notification Authorization, SPF, DKIM) must show **Verified** before proceeding.
+
 
 #### Configure context-based restrictions
 {: #sendgrid-migration-smtp-cbr}
@@ -276,40 +276,33 @@ Follow these steps if you want to use the {{site.data.keyword.en_short}} Custom 
 
 Integrate the {{site.data.keyword.en_short}} SDK into your application. The SDK requires the source ID, instance ID, and service credentials.
 
-For detailed SDK documentation, see the [API documentation](/apidocs/event-notifications).
+For detailed SDK documentation, see the [API documentation](/docs/apis/event-notifications).
 
 #### Create a custom email destination
 {: #sendgrid-migration-api-destination}
 {: step}
 
-1. In your {{site.data.keyword.en_short}} instance, click **Destinations** in the navigation.
+1. In your {{site.data.keyword.en_short}} instance, click **SMTP configurations** > **Configure email**, and select the **API** tab.
 
-2. Click **Add**.
+2. Click **Create API**.
 
-3. Select **Custom Email** as the destination type.
+3. Enter a **Name** and **Description** for the configuration. These are used as the subscription name and description.
 
-4. Enter your custom domain name.
+4. Under **Configuration type**, select **Production**.
 
-5. Click **Add**.
+5. Under **Verified domain**, select your verified domain from the **Domain** list. For more information on domain verification, see [Verifying an email domain](/docs/event-notifications?topic=event-notifications-en-email-domains#en-email-domains-verify).
 
-Your domain appears in the destinations list with a "Not verified" status.
+6. Click **Next** to continue to the **Subscriptions** step.
 
-#### Verify your custom domain
-{: #sendgrid-migration-api-verify}
-{: step}
+7. Under **Sender details**, enter the **Sender name** and **Sender email**.
 
-1. In the destinations list, click the actions menu (⋯) next to your domain.
+8. Under **Receiver details**, add recipients individually or click **Bulk upload** to upload a CSV file.
 
-2. Click **Configure**.
+9. Optionally, select an **Invitation template** and a **Notification template**.
 
-3. Copy the SPF and DKIM TXT values displayed.
+10. Click **Create**. {{site.data.keyword.en_short}} automatically creates a default topic and API source, which you can manage later in **Topics** and **Sources**.
 
 
-4. Add the TXT records through your DNS provider.
-
-5. After the DNS records are added and propagated, click **Verify**.
-
-Both SPF and DKIM statuses must show "Verified" before proceeding.
 
 #### Create a topic, migrate your template, and set up a subscription
 {: #sendgrid-migration-api-topic}
@@ -350,7 +343,7 @@ Before setting up routing, migrate your SendGrid email template so it is ready t
    - Define your filter using JSONPath expressions.
    - Click **Add a condition** to add more filters if needed.
 
-   For more information about JSONPath, see the [JSONPath documentation](https://goessner.net/articles/JsonPath/).
+   For more information about JSONPath, see the [JSONPath documentation](https://goessner.net/articles/JsonPath/){: external}.
 
 5. Click **Next** to go to the **Subscriptions** step.
 
@@ -363,7 +356,7 @@ Before setting up routing, migrate your SendGrid email template so it is ready t
 
    Click **Create subscription**.
 
-8. Click **Next** to review your configuration, then click **Save**.
+7. Click **Next** to review your configuration, then click **Save**.
 
 Recipients receive an opt-in email with a link to subscribe. You can track active and unsubscribed recipients in the subscription details.
 
@@ -371,7 +364,7 @@ Recipients receive an opt-in email with a link to subscribe. You can track activ
 {: #sendgrid-migration-api-optout}
 {: step}
 
-If you want to manage your own subscription list without the opt-in flow, you can request an appoval to opt out. You can then send the recipient list in the payload.
+If you want to manage your own subscription list without the opt-in flow, you can request approval to opt out. You can then send the recipient list in the payload.
 Follow these steps to request approval for the opt out feature.
 
 1. Click the **Help** icon and select **Support Center**.
@@ -398,19 +391,24 @@ Follow these steps to request approval for the opt out feature.
 
 {{site.data.keyword.en_short}} provides metrics to track email delivery and bounce rates.
 
-1. Click **Metrics** in the navigation.
+1. Click **SMTP configurations** > **Metrics** in the navigation.
 
-2. Select the metric type:
-   - **Custom email destination**: View metrics for API-based email delivery
-   - **SMTP configuration**: View metrics for SMTP-based email delivery
+2. In the **Dashboard settings** section, select a time interval. To view only one delivery method, click **View filters** and set **Delivery method** to **API** or **SMTP**.
 
-3. Review the following metrics:
-   - Emails sent
-   - Emails delivered
-   - Bounce rate
-   - Open rate (if tracking is enabled)
+3. In the **Metrics overview** section, review the following tiles:
+   - **Sent**
+   - **Delivered**
+   - **Opened** (API email only)
+   - **Unique clicks** (if link tracking is set up)
+   - **Failed**
+   - **Bounced**
+
+4. Review the **Deliverability insights** table and the **Failure distribution by reason** and **Bounce distribution by reason** charts to identify the cause of failed and bounced emails.
+
+For more information, see [Monitoring metrics for email notifications](/docs/event-notifications?topic=event-notifications-en-manage-monitor-metrics).
 
 Use these metrics to monitor the health of your email delivery and identify issues.
+
 
 ## Next steps
 {: #sendgrid-migration-next}
@@ -426,7 +424,7 @@ After completing the migration:
 ## Related information
 {: #sendgrid-migration-related}
 
-- [{{site.data.keyword.en_short}} API documentation](/apidocs/event-notifications)
+- [{{site.data.keyword.en_short}} API documentation](/docs/apis/event-notifications)
 - [{{site.data.keyword.en_short}} pricing](/docs/event-notifications?topic=event-notifications-en-new-pricing)
 - [SMTP configurations](/docs/event-notifications?topic=event-notifications-en-smtp-configurations)
 - [Email best practices](/docs/event-notifications?topic=event-notifications-en-email-bestpractices)

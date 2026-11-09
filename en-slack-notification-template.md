@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-09-23"
+lastupdated: "2026-10-10"
 
 keywords: event-notifications, event notifications, about event notifications, templates, slack
 
@@ -16,7 +16,7 @@ subcollection: event-notifications
 # Slack notification template
 {: #en-slack-notification-template}
 
-Slack is a messaging platform that helps teams to connect and collaborate. When you select slack as a service destination, any subscribed notification about an event can be sent as a message to slack channels.
+Slack is a messaging platform that helps teams connect and collaborate. When you select Slack as a service destination, any subscribed notification about an event can be sent as a message to Slack channels.
 {: shortdesc}
 
 For more information about the Slack destination, see [Slack](/docs/event-notifications?topic=event-notifications-en-destinations-slack).
@@ -24,11 +24,11 @@ For more information about the Slack destination, see [Slack](/docs/event-notifi
 ## Creating Slack notification templates
 {: #en-create-slack-template}
 
-Construct stacks of blocks. For more details, see the [Slack Block Kit](https://docs.slack.dev/block-kit/){: external}.
+Construct stacks of blocks. For more information, see the [Slack Block Kit](https://docs.slack.dev/block-kit/){: external}.
 
-Users can generate or validate a static JSON by using the [Block Kit builders](https://app.slack.com/block-kit-builder/E27SFGS2W/templates). This is added as a slack template in Event Notifications.
+Users can generate or validate a static JSON by using the [Block Kit Builder](https://app.slack.com/block-kit-builder){: external}. This is added as a Slack template in {{site.data.keyword.en_short}}.
 
-### Example Usage:
+### Example usage
 {: #en-slack-template}
 
 The following sections describe how to create Slack notification templates using the Input API and JSON blocks.
@@ -41,7 +41,7 @@ The Input API for Templates provides a mechanism for users to define notificatio
 #### JSON Blocks
 {: #en-json-blocks}
 
-JSON blocks represent the layout and structure of notification messages by using the Slack Block Kit format. Users can create rich and interactive message layouts by defining various block types such as sections, actions, and buttons. Handlebars can be used with JSON blocks for powerful integration. You can design your JSON blocks via the following builder - https://app.slack.com/block-kit-builder
+JSON blocks represent the layout and structure of notification messages by using the Slack Block Kit format. Users can create rich and interactive message layouts by defining various block types such as sections, actions, and buttons. Handlebars can be used with JSON blocks for powerful integration. You can design your JSON blocks by using the [Block Kit Builder](https://app.slack.com/block-kit-builder){: external}.
 
 ##### Default notification example
 {: #en-slack-template-default-example}
@@ -98,7 +98,7 @@ Where:
 - `{{ibmendefaultlong}}` — the full notification message from the notification payload.
 - `{{event_payload}}` — a template placeholder that renders the full notification payload as a preformatted code block in Slack. This is not a property in the notification payload.
 
-##### Usage:
+##### Usage
 {: #en-usage}
 
 The following examples demonstrate how to use different Slack block types in your notification templates.
@@ -106,7 +106,7 @@ The following examples demonstrate how to use different Slack block types in you
 ###### Section Block
 {: #en-template-section-type}
 
-Section blocks display text content with optional accessories like buttons or images. To learn more about section blocks, refer [Section Block](https://docs.slack.dev/reference/block-kit/blocks/section-block).
+Section blocks display text content with optional accessories like buttons or images. For more information about section blocks, see [Section Block](https://docs.slack.dev/reference/block-kit/blocks/section-block){: external}.
 
 As per Slack Block Kit limitations, a section block supports a maximum of 3000 characters in the text field. If the generated content exceeds this limit, slack will reject the payload and the notification will not be delivered. The following error message is returned: `Slack failed with an error message: 'invalid_blocks' and status code: 400`. Use [context blocks](/docs/event-notifications?topic=event-notifications-en-slack-notification-template#en-template-context-type) to avoid notification dropping for messages exceeding 3000 characters.
 {: note}
@@ -147,7 +147,7 @@ As per Slack Block Kit limitations, a section block supports a maximum of 3000 c
 ###### Context Block
 {: #en-template-context-type}
 
-Context blocks display supplementary information with text and images in a compact format. To learn more about context blocks, refer [Context Block](https://docs.slack.dev/reference/block-kit/blocks/context-block/).
+Context blocks display supplementary information with text and images in a compact format. For more information about context blocks, see [Context Block](https://docs.slack.dev/reference/block-kit/blocks/context-block/){: external}.
 
 A context block supports a maximum of 16000 characters in the text field. If the generated content exceeds this limit, the message will be truncated but the notification will still be delivered successfully.
 {: note}
@@ -179,7 +179,7 @@ A context block supports a maximum of 16000 characters in the text field. If the
 
 To include JSON blocks in the template, they need to be encoded in base64 format. This helps ensure that the data is transmitted safely and can be decoded accurately when rendering the notification message.
 
-##### Example Create Template Usage:
+##### Example create template usage
 {: #en-slack-template-example}
 
 The following example shows a complete template request with base64-encoded JSON blocks.

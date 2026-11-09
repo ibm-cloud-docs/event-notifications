@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2026
-lastupdated: "2026-09-02"
+lastupdated: "2026-10-10"
 
 keywords: event notifications, event-notifications, source, tutorials
 
@@ -73,4 +73,4 @@ API sources cannot be used to send notifications to out-of-the-box destinations 
 1. Select **API Source** in the **Create source** dialog.
 1. Enter a name and an optional description and click **Create source**.
 
-Follow the instructions in the [{{site.data.keyword.en_short}} API documentation](/apidocs/event-notifications), or in the SDK documentation for your programming language to configure the connection as you are connecting from your own application or service.
+Follow the instructions in the [{{site.data.keyword.en_short}} API documentation](/docs/apis/event-notifications), or in the SDK documentation for your programming language to configure the connection as you are connecting from your own application or service.

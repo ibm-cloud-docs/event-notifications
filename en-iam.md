@@ -2,13 +2,14 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-09-08"
+lastupdated: "2026-10-10"
 
 keywords: event notifications, event notification, notifications, service access, manage, user roles
 
 subcollection: event-notifications
 
 ---
+
 {{site.data.keyword.attribute-definition-list}}
 
 # Managing IAM access for {{site.data.keyword.en_short}}
@@ -19,7 +20,7 @@ As an account owner, you can manage access to the instance of {{site.data.keywor
 
 As an account owner, you can set policies within your account to create different levels of access for different users. For example, certain users can have `Read only` access to one instance, but `Write` access to another. You can decide who is allowed to create, update, and delete instances of {{site.data.keyword.en_short}}.
 
-{{site.data.keyword.en_short}} has adopted IAM. App secrets are not generated for new instances. Use [API keys](/docs/iam?topic=iam-manapikey){: external} instead.
+{{site.data.keyword.en_short}} has adopted IAM. App secrets are not generated for new instances. Use [API keys](/docs/iam?topic=iam-manapikey) instead.
 {: note}
 
 ## User roles
@@ -42,7 +43,7 @@ Platform management roles enable users to perform tasks on service resources at 
 | Editor | View and bind {{site.data.keyword.en_short}} instances. | You can bind applications to an instance of {{site.data.keyword.en_short}}. |
 | Operator | Create, delete, edit, suspend, resume, view, or bind {{site.data.keyword.en_short}} instances. | You can create or delete an {{site.data.keyword.en_short}} instance from the catalog. |
 | Administrator | All management actions for all services in the account. | You can perform all operator actions and the ability to assign policies to other users. |
-{: caption="Platform management roles and permissions" caption-side="top"}
+{: caption="Platform management roles and permissions" caption-side="bottom"}
 
 The following table details actions that are mapped to service access roles. Service access roles enable users to access {{site.data.keyword.en_short}} and also call the {{site.data.keyword.en_short}} API.
 
@@ -55,8 +56,8 @@ The following table details actions that are mapped to service access roles. Ser
 | Service Configuration Reader| Read services configuration for Governance management | View services configurations |
 | Event Source Manager | Source integration with {{site.data.keyword.en_short}} by using service to service authorization | * Perform service to service registration, of source \n * View, edit, and delete sources and events \n * Send notifications |
 | {{site.data.keyword.en_short}} Publisher | Create notification and view notifications count | Send notifications and view notifications count |
-| Device Manager | Custom role to handle push device registration with the {{site.data.keyword.en_short}} service | * View, create, edit, and delete Push Devices by using {{site.data.keyword.en_short}} client SDKs. \n *View, create, and delete Tags for Push Devices by using [{{site.data.keyword.en_short}} API](/apidocs/event-notifications). \n * View, Create, and Delete Channel Groups for Push Devices by using [{{site.data.keyword.en_short}} API](/apidocs/event-notifications). \n * View, create and delete Channels for Push Devices by using [{{site.data.keyword.en_short}} APIs](/apidocs/event-notifications).|
-{: caption="Actions mapping to service access roles" caption-side="top"}
+| Device Manager | Custom role to handle push device registration with the {{site.data.keyword.en_short}} service | * View, create, edit, and delete Push Devices by using {{site.data.keyword.en_short}} client SDKs. \n *View, create, and delete Tags for Push Devices by using [{{site.data.keyword.en_short}} API](/docs/apis/event-notifications). \n * View, Create, and Delete Channel Groups for Push Devices by using [{{site.data.keyword.en_short}} API](/docs/apis/event-notifications). \n * View, create and delete Channels for Push Devices by using [{{site.data.keyword.en_short}} APIs](/docs/apis/event-notifications).|
+{: caption="Actions mapping to service access roles" caption-side="bottom"}
 
 For more information about assigning user roles in the UI, see [Managing IAM access](/docs/iam?topic=iam-assign-access-resources&interface=ui).
 
@@ -126,7 +127,7 @@ The actions are customized and defined by the {{site.data.keyword.cloud_notm}} s
 | `event-notifications.integrations.list`| `GET /event-notifications/v1/instances/{instance_id}/integrations` | Manager, Administrator, Device-Manager | List all Key Management Services integrations |
 | `event-notifications.integrations.read`| `GET /event-notifications/v1/instances/{instance_id}/integrations/{id}` | Manager, Administrator, Device-Manager | Get a single Key Management Services integration |
 | `event-notifications.integrations.update`| `PUT /event-notifications/v1/instances/{instance_id}/integrations/{id}` | Manager, Administrator, Device-Manager | Update an existing Key Management Services integration |
-{: caption="Actions mapped to different roles" caption-side="top"}
+{: caption="Actions mapped to different roles" caption-side="bottom"}
 
 ## Working with API keys
 {: #apikeys}
@@ -138,7 +139,7 @@ To use any REST APIs, you must generate the access token by using the following 
 ### Parameters
 {: #params}
 
-```curl
+```sh
 curl -k -X POST \
 --header "Content-Type: application/x-www-form-urlencoded" \
 --header "Accept: application/json" \
@@ -146,12 +147,12 @@ curl -k -X POST \
 --data-urlencode "apikey=G2c7oaUuOjul1RbmbjAeI7YwJSUCW_hmfif3GhLabYPE" \
 "https://iam.cloud.ibm.com/identity/token"
 ```
-{: codeblock}
+{: pre}
 
 ### Response
 {: #apiresponse}
 
-```curl
+```json
 {
    "access_token": "eyJraWQiOiIyMDE3MTAzMC0wMDowMDowMCIsImFsZyI6IlJTMjU2In0.eyJpYW1faWQiOiJpYW0tU2VydmljZUlkLTcwMTgzMDYwLWY3NWUtNGQ5Yy04NjY5LTA4NTNkYzc2NDQyMSIsImlkIjoiaWFtLVNlcnZpY2VJZC03MDE4MzA2MC1mNzVlLTRkOWMtODY2OS0wODUzZGM3NjQ0MjEiLCJyZWFsbWlkIjoiaWFtIiwiaWRlbnRpZmllciI6IlNlcnZpY2VJZC03MDE4MzA2MC1mNzVlLTRkOWMtODY2OS0wODUzZGM3NjQ0MjEiLCJzdWIiOiJTZXJ2aWNlSWQtNzAxODMwNjAtZjc1ZS00ZDljLTg2NjktMDg1M2RjNzY0NDIxIiwic3ViX3R5cGUiOiJTZXJ2aWNlSWQiLCJhY2NvdW50Ijp7ImJzcyI6IjJmZDIwM2E1M2Q5MDI1ZDI4NTU5YjZhZDFhM2JhMTNjIn0sImlhdCI6MTUzNDc2MDIwNywiZXhwIjoxNTM0NzYzODA3LCJpc3MiOiJodHRwczovL2lhbS5ibHVlbWl4Lm5ldC9pZGVudGl0eSIsImdyYW50X3R5cGUiOiJ1cm46aWJtOnBhcmFtczpvYXV0aDpncmFudC10eXBlOmFwaWtleSIsInNjb3BlIjoiaWJtIG9wZW5pZCIsImNsaWVudF9pZCI6ImltZnB1c2giLCJhY3IiOjEsImFtciI6WyJwd2QiXX0.MSUIk3KvFKeidTa4Qf9Ydf-7_boRwPRyigRjBkF0KWT2AVxeQ7oDVOgSEvApzy1tKSoi4N-bAIDpsOkd-BYnYtZnAFJxn9IGSnHli4YXOabLnLIuXbvYJBqCeAWVZoTiqQO6H7ZY__8Nf1YlfGms-iV4FFRPVAq1bx_9BylY1t2gq6WhTWciSGhoq5CHr_bdbc3qK6NRHDzvOfqBP5hDRDo9WAVFSSqtMJNttGR1Dj92jM0o9yADWe32WoVXbxMDX7VZ-wEAbvIJIW1ZcQPPKG9rfW57XOthZSWSbE4MxrUkoHvrBiGqcJfm_yV_mZD_Ynbm4yDSW4q0HbHOB1K7mg",
    "refresh_token": "J1D6UZp3fEhxRdPCzhY4kvt7ojXIdUHjmO8x9pxGMgSZt0XpGd15F098WFKKUwp_v0pktQxdOZtcBGx3sL5THYUxU-PlkxELZ3gKX78dWf4P7lYDLDXR2x_n48fPIvRQoDD0ZJAKewO3o1IcegmNdf_InSgvu2M3Ra3FwlJPDN9mRH6-2e8pHnvq4e1rdY6pV0ufxweKc9dGqU-U7VU765BCg84kr8tkb9kpZnnPseDJ89gf5lhkZteKoNVkn-uiLUF0L-yv33tgtoDrdU5-FqaV00TUbLBoJEeTTnUD1fgIGB6SfphIImCQ0368gTU2emGBe3lzlQBnvkOXaMoBds3Nc2YL6px2LhqBWFd_ho68P4ahz1cbTn1rhqIjZMokeN88sreAKsRWhH7nVgBpfN3FS7OJBrVTx55j44vrZdH3vFJ-glLNb3FBwI6_6N_i2lVz7W-_W9xHW2CTYO7e3PYEZorQDBRZFIPImES6v7UV7YyaYG5ikktHHsOZsMzb6UYP-Kg1k2z_UTOumBkCDYxeV9GxukgSSK7Nckpysi5DJt4VgEnyxlbnfmWhtVeSzl8vjIBLJFE7oe7QDn3YyfCDP4QS4cIkTAvvpE5916pXk-rU9NLbIp6mmJw4PwY8__ao6CmCZJ4IDlr6GsDu4Ocn72yGgsNSwI-sq-dJyMuYG494CQ3MOooWsUjzhLTIHGsuHOkouMh07yR-v-D0dNrBeRmXM-JyF6BmtAS-rcivztjjbfJV3NNZcjC9RJvgf7OW5kp7dSRXMlohHu4tAxgVy16ON3Hm1TFnZt5jsaYLcwxuC6s2Qv7N4QEf2VIWLI5UWjbuj1IFi_Jq4RAkCCNgdvKo6RWaMbvZ8XL-3VKaDiJ60oy7wjGwZmWAWIFBZ1S3Br5waaT51T6mFV_s0VTu-68HhFpdIb1WFCXrU8DEcsamkUU7XRiTtBEIFNWQWnDDGMtn_vFGJCFygOd8CMsj",
@@ -161,17 +162,19 @@ curl -k -X POST \
    "scope": "ibm openid"
 }
 ```
+{: screen}
 
-Upon generating the access token by using the preceding curl command, use the REST APIs by passing the `Bearer <value of access_token>` in the Authorization header.
+After generating the access token by using the preceding curl command, use the REST APIs by passing the `Bearer <value of access_token>` in the Authorization header.
 
 For example:
 
-```curl
+```sh
 curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'Authorization: Bearer eyJraWQiOiIyMDE3MTAzMC0wMDowMDowMCIsImFsZyI6IlJTMjU2In0.eyJpYW1faWQiOiJpYW0tU2VydmljZUlkLTYxZDdhNzJkLWM3YzAtNGNlZS05Zjg0LWI2ZDc1NzgzMWM2NSIsImlkIjoiaWFtLVNlcnZpY2VJZC02MWQ3YTcyZC1jN2MwLTRjZWUtOWY4NC1iNmQ3NTc4MzFjNjUiLCJyZWFsbWlkIjoiaWFtIiwiaWRlbnRpZmllciI6IlNlcnZpY2VJZC02MWQ3YTcyZC1jN2MwLTRjZWUtOWY4NC1iNmQ3NTc4MzFjNjUiLCJzdWIiOiJTZXJ2aWNlSWQtNjFkN2E3MmQtYzdjMC00Y2VlLTlmODQtYjZkNzU3ODMxYzY1Iiwic3ViX3R5cGUiOiJTZXJ2aWNlSWQiLCJhY2NvdW50Ijp7ImJzcyI6Ijk3MDg5MjkzNTg0OTg1NzBhYjYxMjUwNDk3ZjBmMDI2In0sImlhdCI6MTUzNTM2NTQ5MywiZXhwIjoxNTM1MzY5MDkzLCJpc3MiOiJodHRwczovL2lhbS5ibHVlbWl4Lm5ldC9pZGVudGl0eSIsImdyYW50X3R5cGUiOiJ1cm46aWJtOnBhcmFtczpvYXV0aDpncmFudC10eXBlOmFwaWtleSIsInNjb3BlIjoiaWJtIG9wZW5pZCIsImNsaWVudF9pZCI6ImRlZmF1bHQiLCJhY3IiOjEsImFtciI6WyJwd2QiXX0.ASKxD9Wrz5--OYVkPIsufKK9RNKKhJKuvRldm5mnGNv6PSH7sPBB6NiRG-SSGzEC0ZIei1WqtRE-0TRHwzSnIjXPb3yffBcvNtXuG9wT8GT8zsvxQ7bJk0ovge_0Xrrcym4cCTq2jO6ROWzOZ275wkH0h4fIzukbPv7YpT2Z-DdxIwHY_uALxqcCY83xODtMIs21PO6YwQ3KX4YfNEpKUminJpo45T8po4k049PODQKEK65YrqHYK1_voCJUu9xt9uVoGd-r962fhnbuxeEAe6di9KGVfOGfEdZFHgexoG__wXHa0Rmv9dCl-nNI4WMZfCTj8jgfEOhuZstpW7pW2g' --header 'Accept-Language: en-US' -d '{ \
    "message": { \
      "alert": "Notification alert message" \
    } \
  }' 'https://us-east.imfpush.cloud.ibm.com/imfpush/v1/apps/4809d407-85ff-4d11-ae4b-0fcdf8a833f1/messages'
 ```
+{: pre}
 
-For more information about IAM, see [IAM Access](/docs/iam?topic=iam-userroles){: external}.
+For more information about IAM, see [IAM Access](/docs/iam?topic=iam-userroles).

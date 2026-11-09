@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-09-08"
+lastupdated: "2026-10-12"
 
 keywords: HA for Event Notifications, high availability for Event Notifications, Event Notifications, disaster recovery
 
@@ -18,6 +18,8 @@ subcollection: event-notifications
 
 [High availability](#x2284708){: term} (HA) is a core discipline in an IT infrastructure to keep your apps up and running, even after a partial or full site failure. The main purpose of high availability is to eliminate potential points of failures in an IT infrastructure.
 {: shortdesc}
+
+This topic contains specific information about the high availability and disaster recovery strategies and configurations for {{site.data.keyword.en_short}}. For more information about how high availability and disaster recovery are handled for the {{site.data.keyword.cloud_notm}} platform, including concepts like cross regions, global services, and fault domains, check out the [Resiliency documentation](/docs/resiliency?topic=resiliency-ha-redundancy). {: tip}
 
 IBM Event Notifications is a highly available, multi-tenant, regional service.
 
@@ -96,4 +98,4 @@ If an entire MZR becomes inoperative (usually due to a catastrophic disaster or 
 
 When the primary MZR is restored, the secondary deployment is migrated back to the primary site. After the migration is complete, the DNS is restored to its original routing.
 
-If you need zero downtime during a regional disaster recovery, create and maintain backup instances in other regions. To synchronize a service instance in one region with an instance in a different region, you can use the [Event Notifications API](/apidocs/event-notifications).
+If you need zero downtime during a regional disaster recovery, create and maintain backup instances in other regions. To synchronize a service instance in one region with an instance in a different region, you can use the [Event Notifications API](/docs/apis/event-notifications).

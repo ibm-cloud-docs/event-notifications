@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025
-lastupdated: "2025-10-29"
+  years: 2025, 2026
+lastupdated: "2026-10-10"
 
 keywords: markdown-formatted event notifications
 
@@ -72,7 +72,7 @@ To use `ibmenmarkdown` field, refer to the following payload example.
 
 To understand the markdown formatting used to transform messages, check the [Markdown cheat sheet](https://markdownguide.offshoot.io/cheat-sheet/).
 
-To understand the event notifications payload, check the [api specification](/apidocs/event-notifications#send-notifications) for sending a notification.
+To understand the event notifications payload, check the [API specification](/docs/apis/event-notifications#send-notifications) for sending a notification.
 
 ### Supported markdown elements
 {: #en-supported-markdown-elements}

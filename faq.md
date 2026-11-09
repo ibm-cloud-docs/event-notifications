@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2026
-lastupdated: "2026-09-08"
+lastupdated: "2026-11-09"
 
 
 keywords: event-notification, event notification, faqs, Frequently Asked Questions, question, billing, service, invalid devices, device deletion, database
@@ -51,7 +51,7 @@ Sometimes, devices are marked as invalid and deleted from the database, if they 
    - `BadDeviceToken` - the specified device token is invalid.
    - `DeviceTokenNotForTopic` - the device token doesn’t match the specified topic (bundle ID).
 
-   For more information on how to handle notification responses from apps, see [here](https://developer.apple.com/documentation/usernotifications/handling-notification-responses-from-apns){: external}.
+   For more information on how to handle notification responses from apps, see the [Apple Developer documentation for handling notification responses from APNs](https://developer.apple.com/documentation/usernotifications/handling-notification-responses-from-apns){: external}.
 
 - Chrome or Firefox devices:
    - `NotFound` - the subscription is expired and can’t be used.
@@ -98,7 +98,7 @@ Sometimes, devices are marked as invalid and deleted from the database, if they 
       - [Firefox Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-firefox)
       - [Safari Push Notifications](/docs/event-notifications?topic=event-notifications-en-push-safari)
 
-   1. Next, the bank sends a notification with payload containing attribute `"notification-type":"maintenance"` and `"ibmenpushto": "{\"tags\":[\"AP\""]]}"`, `notification-type` attributes is added so that it matches against the topic condition and `ibmenpushto` as the message is for targeting push customers with android and iOS devices in Asia Pacific region `AP`.
+   1. Next, the bank sends a notification with payload containing attribute `"notification-type":"maintenance"` and `"ibmenpushto": "{\"tags\":[\"AP\""]]}"`, `notification-type` attribute is added so that it matches against the topic condition and `ibmenpushto` as the message is for targeting push customers with android and iOS devices in Asia Pacific region `AP`.
 
 ## Why don't I see Email or SMS notifications that I have sent after configuring {{site.data.keyword.en_short}} for Email and SMS?
 {: #faq-en-message-email-sms}
@@ -182,6 +182,24 @@ The following table lists the blocked file extensions:
 {: caption="Blocked file extensions for email attachments" caption-side="bottom"}
 
 If you attempt to send an attachment with a blocked extension, the request is rejected with a `400 Bad Request` error.
+
+## Can I reuse a domain across custom email destinations and SMTP configurations?
+{: #faq-en-domain-reuse}
+{: faq}
+
+Yes. In the **SMTP configurations** section of your instance, you register a domain once and reuse it across any number of custom email destinations and SMTP configurations. SPF and DKIM records are set up once at the domain level, so you do not need to verify the same domain again for each new configuration. For more information, see [Managing email services](/docs/event-notifications?topic=event-notifications-en-email-domains).
+
+## Why can't I delete my email domain?
+{: #faq-en-domain-delete-blocked}
+{: faq}
+
+You cannot delete a domain if one or more custom email destinations or SMTP configurations still reference it. Remove or reconfigure all linked resources first, and then delete the domain. To find the linked resources, check which custom email destinations and SMTP configurations use the domain.
+
+## Why can't I create a custom email destination or SMTP configuration?
+{: #faq-en-email-standard-plan}
+{: faq}
+
+Custom email destinations and SMTP configurations are only available for Standard plan instances. If you are on a Lite plan, upgrade to a Standard plan to use these features. For more information about available plans, see [Getting started with {{site.data.keyword.en_short}}](/docs/event-notifications?topic=event-notifications-getting-started).
 
 ## What is SPF verification?
 {: #faq-en-notifications-spf-verification}

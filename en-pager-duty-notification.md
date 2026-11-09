@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2026
-lastupdated: "2026-09-02"
+lastupdated: "2026-10-10"
 
 keywords: event-notifications, event notifications, about event notifications, templates, pagerduty
 
@@ -16,18 +16,18 @@ subcollection: event-notifications
 # Creating a PagerDuty notification template in Event Notifications
 {: #en-pagerduty-notification-template}
 
-PagerDuty helps organizations with the insight to proactively manage events that impact customers across their IT environmenst. When you select PagerDuty as the service destination, any subscribed notification about an event can be sent as an alert to PagerDuty channels.
+PagerDuty helps organizations with the insight to proactively manage events that impact customers across their IT environments. When you select PagerDuty as the service destination, any subscribed notification about an event can be sent as an alert to PagerDuty channels.
 {: shortdesc}
 
 For more information about the PagerDuty destination, see [PagerDuty](/docs/event-notifications?topic=event-notifications-en-destinations-pagerduty).
 
-## How to create a PagerDuty Notification Template
+## Creating a PagerDuty notification template
 {: #en-create-pager-duty-template}
 
 Construct the template block. Make sure that the template is a well-formed JSON that adheres to the Handlebars template syntax and semantics.
-To learn more about the fields that can be used to construct the template block, see [Send an event to PagerDuty](https://developer.pagerduty.com/api-reference/368ae3d938c9e-send-an-event-to-pager-duty)
+For more information about the fields that can be used to construct the template block, see [Send an event to PagerDuty](https://docs.pagerduty.com/developer/api/reference/events-v2/send-event/create-v2-event){: external}.
 
-If the UI is used to create the template, Handlebars is used to create the payload for the body of the template. If API/CLI is used to create the template, then the payload must be encoded to the Base64 format. Refer the sample template for [UI](#ui-pd-template) or [AI/CLI](#api-cli-pd-template).
+If the UI is used to create the template, Handlebars is used to create the payload for the body of the template. If API/CLI is used to create the template, the payload must be encoded to the Base64 format. See the sample template for [UI](#ui-pd-template) or [API/CLI](#api-cli-pd-template).
 
 
 
@@ -46,12 +46,14 @@ If the UI is used to create the template, Handlebars is used to create the paylo
   "event_action": "trigger"
 }
 ```
+{: codeblock}
 
-To learn more about Handlebars integration and the various helpers offered, see [Handlebars Integration](/docs/event-notifications?topic=event-notifications-en-create-en-template&interface=ui#handlebars-integration).
+For more information about Handlebars integration and the various helpers offered, see [Handlebars Integration](/docs/event-notifications?topic=event-notifications-en-create-en-template&interface=ui#handlebars-integration).
 {: note}
 
 ### API or CLI PagerDuty notification template example
 {: #api-cli-pd-template}
+
 
 ```json
     {
@@ -61,4 +63,5 @@ To learn more about Handlebars integration and the various helpers offered, see 
 	},
 	"type": "pagerduty.notification"
     }
- ```
+```
+{: codeblock}

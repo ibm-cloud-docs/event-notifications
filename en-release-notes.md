@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-09-25"
+lastupdated: "2026-11-09"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -19,6 +19,14 @@ content-type: release-note
 
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
+
+
+## 06 November 2026
+{: #event-notifications-Nov062026}
+{: release-note}
+
+Unified email domain management and SMTP configurations
+:   You can now manage email domains centrally in the new **SMTP configurations** section of the {{site.data.keyword.en_short}} instance. Register a domain once, verify SPF and DKIM records one time, and reuse the domain across any number of custom email destinations and SMTP configurations. The **SMTP configurations** section also provides a unified **Configure email** experience with separate **API** and **SMTP** tabs, and a consolidated **Metrics** view. For more information, see [Managing email services](/docs/event-notifications?topic=event-notifications-en-email-domains).
 
 ## 25 September 2026
 {: #event-notifications-Sep232026}
@@ -86,8 +94,8 @@ Streamlined guided flow for topic creation
 {: #event-notifications-May112026}
 {: release-note}
 
-{{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} is now available in the Mumbai(India) region
-:  {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now can provision an instance in the Mumbai(India) region.
+{{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} is now available in the Mumbai (India) region
+:  {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} can now provision an instance in the Mumbai (India) region.
 
 ## 14 April 2026
 {: #event-notifications-Apr142026}
@@ -141,8 +149,8 @@ API key-based authentication for SMTP interface
 {: #event-notifications-Feb92026}
 {: release-note}
 
-{{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} is now available in the Chennai(India) region
-:  {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now can provision an instance in the Chennai(India) region.
+{{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} is now available in the Chennai (India) region
+:  {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} can now provision an instance in the Chennai (India) region.
 
 ## 3 February 2026
 {: #event-notifications-Feb32026}
@@ -163,17 +171,17 @@ API key-based authentication for SMTP interface
 {: release-note}
 
 Bounce metric details for email notifications
-: You can now view the details of the bounced metrics for email notifications. To know more, see [Monitor IBM Cloud® Event Notifications metrics for email notifications](/docs/event-notifications?topic=event-notifications-en-manage-monitor-metrics).
+: You can now view the details of the bounced metrics for email notifications. For more information, see [Monitor IBM Cloud® Event Notifications metrics for email notifications](/docs/event-notifications?topic=event-notifications-en-manage-monitor-metrics).
 
 ## 31 October 2025
 {: #event-notifications-Oct312025}
 {: release-note}
 
-Support for Cloning SMTP Credentials
-:  {{site.data.keyword.en_short}} now permits cloning of SMTP credentials across configurations. You can clone the same credentials across SMTP configurations if you need the same credentials for other SMTP configurations/Domains within the **same instance**. To learn more, see [SMTP Configurations](/docs/event-notifications?topic=event-notifications-en-smtp-configurations).
+Support for cloning SMTP credentials
+:  {{site.data.keyword.en_short}} now permits cloning of SMTP credentials across configurations. You can clone the same credentials across SMTP configurations if you need the same credentials for other SMTP configurations or domains within the **same instance**. For more information, see [SMTP configurations](/docs/event-notifications?topic=event-notifications-en-smtp-configurations).
 
 Pre-defined templates
-:  You can use Pre-defined templates to design and structure notification messages. To know more, see [Pre-defined templates](/docs/event-notifications?topic=event-notifications-en-predefinedTemplates).
+:  You can use pre-defined templates to design and structure notification messages. For more information, see [Pre-defined templates](/docs/event-notifications?topic=event-notifications-en-predefinedTemplates).
 
 ## 25 September 2025
 {: #event-notifications-Sep252025}
@@ -191,7 +199,7 @@ New destination: {{site.data.keyword.appconfig_full}}
 {: release-note}
 
 Support for testing Webhook destination
-: {{site.data.keyword.IBM_notm}} {{site.data.keyword.en_short}} now enables users to test their Webhook destination. For more information on testing a destination, see [Testing Destinations](/docs/event-notifications?topic=event-notifications-en-test-destination).
+: {{site.data.keyword.IBM_notm}} {{site.data.keyword.en_short}} now enables users to test their Webhook destination. For more information about testing a destination, see [Testing Destinations](/docs/event-notifications?topic=event-notifications-en-test-destination).
 
 
 ## 30 July 2025
@@ -199,11 +207,11 @@ Support for testing Webhook destination
 {: release-note}
 
 Support for Code Engine templates
-: {{site.data.keyword.IBM_notm}} {{site.data.keyword.en_short}} now supports creation of templates for Code Engine Jobs, Applications and Functions, enabling users to quickly set up and customize notifications for different events, see [Code Engine Templates](/docs/event-notifications?topic=event-notifications-en-code-engine-notification-template).
+: {{site.data.keyword.IBM_notm}} {{site.data.keyword.en_short}} now supports creation of templates for Code Engine Jobs, Applications, and Functions, enabling users to quickly set up and customize notifications for different events. For more information, see [Code Engine Templates](/docs/event-notifications?topic=event-notifications-en-code-engine-notification-template).
 
 
 {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} is now available in the Montreal region
-:  {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now can provision an instance in the Montreal region.
+:  {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} can now provision an instance in the Montreal region.
 
 
 ## 23 June 2025
@@ -211,48 +219,48 @@ Support for Code Engine templates
 {: release-note}
 
 {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now supports Markdown formatting
-:  {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now supports Markdown formatting for Slack, Microsoft Teams, and Email destinations. To understand more, see [Markdown formatting](/docs/event-notifications?topic=event-notifications-en-markdown-formatted-notifications).
+:  {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now supports Markdown formatting for Slack, Microsoft Teams, and Email destinations. For more information, see [Markdown formatting](/docs/event-notifications?topic=event-notifications-en-markdown-formatted-notifications).
 
 {{site.data.keyword.en_full}} extends access to email notifications metrics sent from SMTP configuration
-:  {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now provides access to email notifications metrics sent from SMTP configuration. To learn more, see [Monitoring {{site.data.keyword.en_full}} metrics](/docs/event-notifications?topic=event-notifications-en-manage-monitor-metrics).
+:  {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now provides access to email notifications metrics sent from SMTP configuration. For more information, see [Monitoring {{site.data.keyword.en_full}} metrics](/docs/event-notifications?topic=event-notifications-en-manage-monitor-metrics).
 
 {{site.data.keyword.en_full}} extends support for collecting failed events details to Email, SMS, and Webhook
-:  Collecting failed events helps you to identify failed messages and thus help you take remedial action for them. To know more, see [Collect failed events](/docs/event-notifications?topic=event-notifications-en-cfe-integrations).
+:  Collecting failed events helps you identify failed messages and take remedial action. For more information, see [Collect failed events](/docs/event-notifications?topic=event-notifications-en-cfe-integrations).
 
 ## 30 May 2025
 {: #event-notifications-May302025}
 {: release-note}
 
-{{site.data.keyword.en_short}} Webhooks now supports new http verbs
-:  {{site.data.keyword.en_short}} webhooks now support the PUT and PATCH http verbs that enable a user to replace a resource or apply a partial update to a resource, see [Supported HTTP Verbs](/docs/event-notifications?topic=event-notifications-en-destinations-webhook#en-supported-verbs)
+{{site.data.keyword.en_short}} Webhooks now support new HTTP verbs
+:  {{site.data.keyword.en_short}} webhooks now support the PUT and PATCH HTTP verbs that enable a user to replace a resource or apply a partial update to a resource. For more information, see [Supported HTTP verbs](/docs/event-notifications?topic=event-notifications-en-destinations-webhook#en-supported-verbs).
 
 ## 15 April 2025
 {: #event-notifications-April152025}
 {: release-note}
 
-{{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} is now available in the Sao Paulo region
-:  {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now can provision an instance in the Sao Paulo region.
+{{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} is now available in the São Paulo region
+:  {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} can now provision an instance in the São Paulo region.
 
 ## 28 February 2025
 {: #event-notifications-Feb282025}
 {: release-note}
 
-New destination : {{site.data.keyword.messagehub}}
+New destination: {{site.data.keyword.messagehub}}
 : {{site.data.keyword.messagehub}} is now available as a destination. You can [send notifications to your {{site.data.keyword.messagehub}} destination by using {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}}](/docs/event-notifications?topic=event-notifications-en-destinations-event-streams).
 
 ## 30 January 2025
 {: #event-notifications-Jan302025}
 {: release-note}
 
-Custom Templates for PagerDuty
-: {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now supports custom templates for PagerDuty, enabling users to quickly set up and customize the PagerDuty alert notifications, see [PagerDuty notification Template](/docs/event-notifications?topic=event-notifications-en-pagerduty-notification-template)
+Custom templates for PagerDuty
+: {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now supports custom templates for PagerDuty, enabling users to quickly set up and customize PagerDuty alert notifications. For more information, see [PagerDuty notification template](/docs/event-notifications?topic=event-notifications-en-pagerduty-notification-template).
 
 ## 30 December 2024
 {: #event-notifications-Dec302024}
 {: release-note}
 
-Periodic Timer
-: {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now supports periodic timer for event scheduling, see [Periodic Timer](/docs/event-notifications?topic=event-notifications-en-cron-periodic-timer)
+Periodic timer
+: {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now supports periodic timer for event scheduling. For more information, see [Periodic timer](/docs/event-notifications?topic=event-notifications-en-cron-periodic-timer).
 
 ## 20 December 2024
 {: #event-notifications-Dec202024}
@@ -265,83 +273,83 @@ Availability in Tokyo, Osaka, and Toronto regions
 {: #event-notifications-Dec1324}
 {: release-note}
 
-Assigning Access to Topics and Subscriptons
-: {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now allows a user to grant access to topics and subscriptions, see [Assigning Access to individual Topics and Subscriptions](/docs/event-notifications?topic=event-notifications-en-assign-access-to-topics-subscriptions).
+Assigning access to topics and subscriptions
+: {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now allows a user to grant access to topics and subscriptions. For more information, see [Assigning access to individual topics and subscriptions](/docs/event-notifications?topic=event-notifications-en-assign-access-to-topics-subscriptions).
 
 
 ## 28 November 2024
 {: #event-notifications-Nov2824}
 {: release-note}
 
-Enhanced Filtering Criteria
-: {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now supports advanced filtering criteria that can be used to add rules when you create a topic, see [Advanced Conditions](/docs/event-notifications?topic=event-notifications-en-create-en-topic).
+Enhanced filtering criteria
+: {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now supports advanced filtering criteria that can be used to add rules when you create a topic. For more information, see [Advanced conditions](/docs/event-notifications?topic=event-notifications-en-create-en-topic).
 
 
 ## 30 September 2024
 {: #event-notifications-Sep3024}
 {: release-note}
 
-Support for SMTP Private Endpoint
-: {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now supports the ability to send e-mails via SMTP Private Endpoint, see [SMTP Private Endpoint](/docs/event-notifications?topic=event-notifications-en-smtp-configurations#en-smtp-configurations-send-emails-using-private-endpoint).
+Support for SMTP private endpoint
+: {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now supports sending emails through an SMTP private endpoint. For more information, see [SMTP private endpoint](/docs/event-notifications?topic=event-notifications-en-smtp-configurations#en-smtp-configurations-send-emails-using-private-endpoint).
 
 ## 16 September 2024
 {: #event-notifications-Sep1624}
 {: release-note}
 
 Support for templates on Webhook
-: {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now supports templates on Webhook, enabling users to quickly set up notifications for different events, see [{{site.data.keyword.en_short}} Templates](/docs/event-notifications?topic=event-notifications-en-create-en-template).
+: {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now supports templates on Webhook, enabling users to quickly set up notifications for different events. For more information, see [{{site.data.keyword.en_short}} Templates](/docs/event-notifications?topic=event-notifications-en-create-en-template).
 
 ## 30 August 2024
 {: #event-notifications-Aug3024}
 {: release-note}
 
 Support direct message for Slack
-: {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now can send direct messages to Slack, see [Slack direct message](/docs/event-notifications?topic=event-notifications-en-destinations-slack).
+: {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} can now send direct messages to Slack. For more information, see [Slack direct message](/docs/event-notifications?topic=event-notifications-en-destinations-slack).
 
 ## 10 July 2024
 {: #event-notifications-Jul1024}
 {: release-note}
 
-Support Context-Based restrictions for SMTP Interface
-: {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now enforce context-based restrictions for the direct connection to SMTP interface, see [SMTP interface CBR support](/docs/event-notifications?topic=event-notifications-en-smtp-configurations#en-smtp-configurations-cbr).
+Support context-based restrictions for SMTP Interface
+: {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now enforces context-based restrictions for the direct connection to the SMTP interface. For more information, see [SMTP interface CBR support](/docs/event-notifications?topic=event-notifications-en-smtp-configurations#en-smtp-configurations-cbr).
 
 ## 5 July 2024
 {: #event-notifications-Jul0524}
 {: release-note}
 
 {{site.data.keyword.en_full}} now supports access to email notification metrics sent from custom email domains
-: {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} can now access email notitfication metrics that are sent from custom email domains. To learn more, see [Monitoring {{site.data.keyword.en_full}} metrics](/docs/event-notifications?topic=event-notifications-en-manage-monitor-metrics).
+: {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} can now access email notification metrics that are sent from custom email domains. For more information, see [Monitoring {{site.data.keyword.en_full}} metrics](/docs/event-notifications?topic=event-notifications-en-manage-monitor-metrics).
 
 ## 22 May 2024
 {: #event-notifications-May2224}
 {: release-note}
 
 Support for templates on Slack
-: {{site.data.keyword.IBM_notm}} {{site.data.keyword.en_short}} now supports templates on Slack, enabling users to quickly set up and customize notifications for different events, see [Event Notifications Slack Template](/docs/event-notifications?topic=event-notifications-en-slack-notification-template).
+: {{site.data.keyword.IBM_notm}} {{site.data.keyword.en_short}} now supports templates on Slack, enabling users to quickly set up and customize notifications for different events. For more information, see [Event Notifications Slack Template](/docs/event-notifications?topic=event-notifications-en-slack-notification-template).
 
 ## 01 May 2024
 {: #event-notifications-May0124}
 {: release-note}
 
 {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} supports SMTP Interface
-: {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now includes support for SMTP configuration and sending emails via connecting to the SMTP interface. To learn more, see [{{site.data.keyword.en_short}} SMTP Interface](/docs/event-notifications?topic=event-notifications-en-smtp-configurations).
+: {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now includes support for SMTP configuration and sending emails by connecting to the SMTP interface. For more information, see [{{site.data.keyword.en_short}} SMTP Interface](/docs/event-notifications?topic=event-notifications-en-smtp-configurations).
 
 ## 29 February 2024
 {: #event-notifications-Feb2924}
 {: release-note}
 
 Support for Code Engine Jobs
-: {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now includes support for code engine jobs as a destination option. To learn more, see [Code Engine jobs](/docs/event-notifications?topic=event-notifications-en-destinations-codeengine).
+: {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now includes support for code engine jobs as a destination option. For more information, see [Code Engine jobs](/docs/event-notifications?topic=event-notifications-en-destinations-codeengine).
 
 Support more countries for SMS notification that uses {{site.data.keyword.cloud_notm}} SMS service destination
-:  You can now send SMS notifications to countries listed [here](/docs/event-notifications?topic=event-notifications-en-destinations-sms#en-destinations-sms-charge).
+:  You can now send SMS notifications to the [countries that are supported](/docs/event-notifications?topic=event-notifications-en-destinations-sms#en-destinations-sms-charge).
 
 ## 10 January 2024
 {: #event-notifications-Jan1024}
 {: release-note}
 
 Support for Custom Domain Email Opt-out functionality
-: {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} offers users a versatile option to deviate from the conventional subscription process by introducing an opt-out capability. To know more, see [Custom Domain Email Opt-out functionality](/docs/event-notifications?topic=event-notifications-en-destinations-custom-domain-opt-out).
+: {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} offers users a versatile option to deviate from the conventional subscription process by introducing an opt-out capability. For more information, see [Custom Domain Email Opt-out functionality](/docs/event-notifications?topic=event-notifications-en-destinations-custom-domain-opt-out).
 
 ## 29 November 2023
 {: #event-notifications-Nov2923}
@@ -355,28 +363,28 @@ Support for personalized phone numbers via Custom SMS destination
 {: release-note}
 
 Support for IBM OpenPages as an IBM Cloud source
-:  OpenPages simplifies data governance, risk management, and regulatory compliance with its highly scalable, AI-powered, and unified GRC platform. You can now send specific events from OpenPages to {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} and route them to various destinations. To know more about OpenPages, see [Enabling {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} for OpenPages](/docs/openpages?topic=openpages-event-notifications-events).
+:  OpenPages simplifies data governance, risk management, and regulatory compliance with its highly scalable, AI-powered, and unified GRC platform. You can now send specific events from OpenPages to {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} and route them to various destinations. For more information about OpenPages, see [Enabling {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} for OpenPages](/docs/openpages?topic=openpages-event-notifications-events).
 
 ## 01 November 2023
 {: #event-notifications-Nov0123}
 {: release-note}
 
 Support for tiered pricing for Push Notifications destinations
-:  Pricing for Outbound Push Notifications are now tiered. For more information, see the [Pricing page](/docs/event-notifications?topic=event-notifications-en-new-pricing)
+:  Pricing for Outbound Push Notifications are now tiered. For more information, see the [Pricing page](/docs/event-notifications?topic=event-notifications-en-new-pricing).
 
 ## 20 October 2023
 {: #event-notifications-Oct2023}
 {: release-note}
 
-{{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} is now available in Madrid region
-:  {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now can provision an instance in Madrid region.
+{{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} is now available in the Madrid region
+:  {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} can now provision an instance in the Madrid region.
 
 ## 11 October 2023
 {: #event-notifications-Oct1123}
 {: release-note}
 
 Validate connections
-:  {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} now can validate the functionality and reliability of your critical connections. With this functionality, you can effortlessly test a destination with a single click. For more information on testing a destination, see [Testing Destinations](/docs/event-notifications?topic=event-notifications-en-test-destination).
+:  {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} can now validate the functionality and reliability of your critical connections. With this functionality, you can effortlessly test a destination with a single click. For more information about testing a destination, see [Testing Destinations](/docs/event-notifications?topic=event-notifications-en-test-destination).
 
 ## 20 September 2023
 {: #event-notifications-Sept2023}
@@ -398,7 +406,7 @@ Support for Email Templates in Custom Domain Email Destination
 {: release-note}
 
 New supported {{site.data.keyword.cloud_notm}} source: watsonx.data
-:  IBM watsonx.data is an open, hybrid, and governed fit-for-purpose data store optimized to scale all data, analytics, and AI workloads available as an {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} source under IBM Cloud Sources. For more information, see [Enabling {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} for watsonx.data](/docs/watsonxdata?topic=watsonxdata-event-notifications-events).
+:  IBM watsonx.data is an open, hybrid, and governed fit-for-purpose data store optimized to scale all data, analytics, and AI workloads available as an {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} source under IBM Cloud Sources. For more information, see [Enabling {{site.data.keyword.cloud_notm}} {{site.data.keyword.en_short}} for watsonx.data](https://www.ibm.com/docs/en/watsonx/data){: external}.
 
 Support for Custom Domain Email Service
 :  {{site.data.keyword.en_short}} now supports sending email notifications sent from custom domain. To send these email notifications, you must configure a new destination as custom domain email service. For more information, see [Using an IBM Cloud email service with custom domain](/docs/event-notifications?topic=event-notifications-en-destinations-custom-email).
@@ -449,7 +457,7 @@ Support for context-based restrictions (CBR)
 {: release-note}
 
 Support to more countries for SMS notification
-:  You can now send SMS notifications to countries listed [here](/docs/event-notifications?topic=event-notifications-en-destinations-sms).
+:  You can now send SMS notifications to the [countries that are supported](/docs/event-notifications?topic=event-notifications-en-destinations-sms).
 
 ## 24 January 2023
 {: #event-notifications-Jan2423}

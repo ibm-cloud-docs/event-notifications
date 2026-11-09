@@ -86,6 +86,13 @@ toc:
           - en-test-destination.md
       - en-cfe-integrations.md
       - topicgroup:
+          label: SMTP configurations
+          topics:
+          - en-email-domains.md
+          - en-smtp-configurations.md
+          - en-smtp-email-api.md
+          - en-monitorEmailMetrics.md
+      - topicgroup:
           label: Event Notifications Templates
           topics:
           - en-templates.md
@@ -102,13 +109,11 @@ toc:
       - en-create-subscription.md
       - en-view-mapping.md
       - en-integrations.md
-      - en-smtp-configurations.md
       - topicgroup:
           label: Observability
           topics:
           - logging.md
           - monitoring.md
-          - en-monitorEmailMetrics.md
       - topicgroup:
           label: Enhancing security
           topics:

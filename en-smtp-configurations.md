@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-10-01"
+lastupdated: "2026-11-09"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email, smtp
 
@@ -16,53 +16,24 @@ subcollection: event-notifications
 {: #en-smtp-configurations}
 
 {{site.data.keyword.en_short}} supports SMTP, the most common email protocol on the internet. You can send email by using a variety of clients, software, or programming languages that support SMTP by connecting to the {{site.data.keyword.en_short}} SMTP interface. This topic explains how to set up an SMTP configuration, obtain user credentials, and set up a CBR rule to access the SMTP server.
+{: shortdesc}
+
+
+Context-based restrictions must be configured before creating an SMTP configuration. For more information, see [Enabling context-based restrictions](#en-smtp-configurations-cbr). 
+{: note}
 
 ## Creating an SMTP configuration
 {: #en-smtp-configuration-create}
 
-1. Create an {{site.data.keyword.en_short}} instance. To learn the process of creating an instance, see [Getting Started](/docs/event-notifications?topic=event-notifications-getting-started).
-
-2. In your {{site.data.keyword.en_short}} instance, click **Email** > **SMTP Configurations**.
-
-3. Click **Create**.
-
-4. Enter a **Name**, an optional **Description**, and the **Domain name** in the **Create a new SMTP configuration** dialog.
-
-5. Click **Create**.
-
-## Domain name verification
-{: #en-smtp-configurations-verify}
-
-After creating an SMTP configuration in an {{site.data.keyword.en_short}} instance, you need to perform three types of verifications to get the required parameters to send email through the SMTP interface. These verifications are located under the **Verify** tab, accessible by clicking the **Options** menu.
-
-1. Create Sender Policy Framework (SPF), which is used to authenticate the sender of an email. SPF specifies the mail servers that are allowed to send email for your domain.
-    * Ensure that the domain already exists as an A record in the DNS records.
-    * Open your DNS hosting provider for the domain name configured
-    * Create a new TXT record with your domain name registerer with the name and value provided in the configure screen for SPF
-2. Create DomainKeys Identified Mail (DKIM), which allows an organization to take responsibility for transmitting a message by signing it. DKIM allows the receiver to check the email that claimed to have come from a specific domain, is authorized by the owner of that domain.
-    * Open your DNS hosting provider for the domain name configured
-    * Create a new TXT record with your domain name registerer with the name and value provided in the configure screen for DKIM
-3. For enhanced security, we perform manual verification of SMTP interface requirements. Complete the questionnaire for the common questions (Q1–Q8) described in [Email sender verification questionnaire](/docs/event-notifications?topic=event-notifications-en-email-sender-questionnaire). The additional questions for the opt-out request do not apply here.
-
-    After completing the questionnaire, request enablement of the SMTP interface verification through a support ticket:
-
-    1. From the {{site.data.keyword.cloud_notm}} console menu bar, click the **Help** icon > **Support center**.
-    1. From the **Contact support** section, click **Create a case**.
-    1. Under **Category**, set **Topic** to **Event Notifications** and **Subtopic** to **Others**.
-    1. Under **Subject**, enter **Requesting for the Authorization to Enable SMTP Interface for Event Notifications**.
-    1. In the **Description** section, provide the {{site.data.keyword.en_short}} `instance id`, `region`, and a `DKIM Name` in the format `{{uuid}}._domainkey.{{domain}}`.
-    1. Include your responses to the questionnaire.
-    1. Add **Attachments** if you want to provide supporting evidence.
-    1. Add required email addresses in the **Watchlist** section. For more information about other options, see [Creating a support case](/docs/support?topic=support-open-case&interface=ui){: external}.
-
-Some of the common verification issues could be:
-
-1. Ensure that the domain name is spelled correctly.
-2. Verify that the DNS record for the domain is updated correctly, including SPF/DKIM values.
-3. DNS propagation may take up to 72 hours to be updated across the internet.
-
-{{site.data.keyword.en_short}} performs periodic checks on the SPF and DKIM TXT records of the configured domain. To ensure uninterrupted email delivery, keep the records in the DNS even after verifying them. If the SPF or DKIM fails a periodic check, email sending will be suspended.
+SMTP configurations are only available for Standard plan instances.
 {: note}
+
+1. Create an {{site.data.keyword.en_short}} instance. To learn the process of creating an instance, see [Getting Started](/docs/event-notifications?topic=event-notifications-getting-started).
+2. In your {{site.data.keyword.en_short}} instance, click **SMTP configurations** > **Configure email**, and select the **SMTP** tab.
+3. Click **Create SMTP**.
+4. Enter a **Name** and an optional **Description** of the SMTP configuration. Select a verified domain from the **Domain** list. If you cannot find your domain in the list, the domain might not have been verified. To verify a domain, see [Verifying an email domain](/docs/event-notifications?topic=event-notifications-en-email-domains#en-email-domains-verify).
+5. Click **Next**, add user details, and generate SMTP credentials for your domain. You must save or download the one-time credentials that are generated.
+7. Click **Save**. The generated SMTP credentials are activated for authenticating client connections.
 
 ## Requesting a recipient limit increase
 {: #en-smtp-configurations-recipient-limit}
@@ -105,7 +76,7 @@ After successful verification of a SMTP configuration in an IBM Cloud Event Noti
    |------|-------------------|-------------|--------------|
    | 587 | STARTTLS (Explicit TLS) | Connection starts unencrypted and upgrades to TLS | The initial connection is established in plain text. Your SMTP client issues the STARTTLS command to initiate a TLS handshake, upgrading the connection to an encrypted channel. Also known as "opportunistic TLS." |
    | 465 | TLS Wrapper (Implicit TLS/SSL) | Connection is encrypted from the start | The TLS/SSL handshake occurs immediately upon connection, before any SMTP commands are exchanged. The entire SMTP session is wrapped in a TLS/SSL layer. Also known as SMTPS (SMTP Secure). |
-   {: caption="Table 1. Supported SMTP ports and encryption methods" caption-side="bottom"}
+   {: caption="Supported SMTP ports and encryption methods" caption-side="bottom"}
 
    Both ports provide secure email transmission with strong encryption. Choose the port that best fits your SMTP client's configuration requirements and security policies.
 
@@ -319,4 +290,5 @@ To track a link, add the `data-track="true"` attribute to the anchor tag in your
 
 You can add `data-track="true"` to any number of links in a single email. Links without this attribute are not tracked.
 
-To view the number of unique clicks on a link, click **Metrics** on your {{site.data.keyword.en_short}} instance page, and review the **Unique clicks** metric.
+
+To view the number of unique clicks on a link, click **SMTP configurations** > **Metrics** on your {{site.data.keyword.en_short}} instance page, and review the **Unique clicks** tile. To see only SMTP email, set **Delivery method** to **SMTP** in the filters. For more information, see [Monitoring metrics for email notifications](/docs/event-notifications?topic=event-notifications-en-manage-monitor-metrics).

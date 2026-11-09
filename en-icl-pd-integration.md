@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2026
-lastupdated: "2026-09-25"
+lastupdated: "2026-10-10"
 
 keywords: event-notifications, event notifications, about event notifications, cloud logs, pagerduty
 
@@ -23,7 +23,7 @@ completion-time: 30m
 {: toc-completion-time="30m"}
 
 
-This tutorial shows you how to integrate {{site.data.keyword.logs_full_notm}} alerts with {{site.data.keyword.en_short}} and send PagerDuty Alerts.
+This tutorial shows you how to integrate {{site.data.keyword.logs_full_notm}} alerts with {{site.data.keyword.en_short}} and send PagerDuty alerts.
 
 {{site.data.keyword.logs_full_notm}} is used to visualize and alert on events that are generated in your account. When an event of interest takes place in your {{site.data.keyword.logs_full_notm}} instance, it communicates with a connected {{site.data.keyword.en_short}} instance to raise an alert to the [PagerDuty destination](/docs/event-notifications?topic=event-notifications-en-destinations-pagerduty).
 
@@ -78,15 +78,15 @@ You need an {{site.data.keyword.cloud}} account. If you don't have an account, t
 {: #en-authorize-connection}
 {: step}
 
-1. Select **Manage > Access(IAM)** from the top right on your Dashboard.
+1. Select **Manage** > **Access (IAM)** from the top right of your dashboard.
 
 1. Under Authorizations, click **Create**.
 
 1. Select the source account, Cloud Logs as the source service and the specific instance of Cloud Logs that needs access.
 
-1. Next, select Event Notifications as the target service, the service instance of {{site.data.keyword.en_short}} that needs source access and assign the viewer,reader and event source manager roles to the source that it can use to interact with the target.
+1. Select Event Notifications as the target service, the service instance of {{site.data.keyword.en_short}} that needs source access, and assign the viewer, reader, and event source manager roles to the source so it can interact with the target.
 
-1. Click on **Review**. Review all the assignments.
+1. Click **Review**. Review all the assignments.
 
 1. Select **Authorize**.
 
@@ -100,21 +100,21 @@ You need an {{site.data.keyword.cloud}} account. If you don't have an account, t
 
 1. Select **Add** under {{site.data.keyword.en_short}}.
 
-1. Click on **Add New**. Since the authorization policy has been created, select next.
+1. Click **Add New**. Because the authorization policy has been created, select next.
 
-1. Name your integration , select the {{site.data.keyword.en_short}} instance that was used while authorization and set your endpoint type to **Public**. Click **Save**.
+1. Name your integration, select the {{site.data.keyword.en_short}} instance that was used during authorization, and set your endpoint type to **Public**. Click **Save**.
 
-1. Before moving to the **Test** step, we need to verify if a connection has been established between the {{site.data.keyword.en_short}} instance and the {{site.data.keyword.logs_full_notm}} instance.
+1. Before moving to the **Test** step, verify that a connection has been established between the {{site.data.keyword.en_short}} instance and the {{site.data.keyword.logs_full_notm}} instance.
 
 1. Navigate to your **{{site.data.keyword.en_short}} instance** by clicking on ![Hamburger icon](images/icon_hamburger.svg) > Resource List > Developer Tools > **Your Event Notifications instance**.
 
 1. Under **Sources** in your {{site.data.keyword.en_short}} instance, you should see your {{site.data.keyword.logs_full_notm}} instance as a source of the form **IBM Cloud Logs - GUID of your Cloud Logs Instance**.
 
-1. Go to **Topics** and click **Create**. Name your topic, and select your Cloud Logs instance as the Source. To learn more about creating a topic and providing filters that can be used in your instance , see [Creating an Event Notifications topic](/docs/event-notifications?topic=event-notifications-en-create-en-topic). Click **Create**.
+1. Go to **Topics** and click **Create**. Name your topic, and select your Cloud Logs instance as the source. To learn more about creating a topic and providing filters, see [Creating an Event Notifications topic](/docs/event-notifications?topic=event-notifications-en-create-en-topic). Click **Create**.
 
-1. Navigate to **Destinations** and click Create. Name your destination and select destination type as **PagerDuty**. Provide the Routing key, then click Add. See here for process to generate the [Routing key](https://support.pagerduty.com/main/docs/services-and-integrations#generate-a-new-integration-key).
+1. Navigate to **Destinations** and click **Create**. Name your destination and select destination type as **PagerDuty**. Provide the routing key, then click **Add**. For the process to generate the routing key, see [Generate a new Integration Key](https://support.pagerduty.com/main/docs/services-and-integrations#generate-a-new-integration-key){: external}.
 
-1. Create a template for your PagerDuty alert by navigating to Templates > Create. Name your template, select the template type as PagerDuty Notification and provide your template.
+1. Create a template for your PagerDuty alert by navigating to **Templates** > **Create**. Name your template, select the template type as **PagerDuty Notification**, and provide your template.
 
 
     **Example Template:**
@@ -180,16 +180,16 @@ You need an {{site.data.keyword.cloud}} account. If you don't have an account, t
 
     ```
 
-    To learn more about the fields that can be used to construct the template block, see [here](https://developer.pagerduty.com/api-reference/368ae3d938c9e-send-an-event-to-pager-duty).
+    To learn more about the fields that can be used to construct the template block, see [Send an event to PagerDuty](https://docs.pagerduty.com/developer/api/reference/events-v2/send-event/create-v2-event){: external}.
 
-1. To create a Subscription, navigate to **Subscriptions > Create**. Name your subscription, select the topic ,the PagerDuty destination, and the template that were previously created. Click **Create**.
+1. To create a subscription, navigate to **Subscriptions** > **Create**. Name your subscription, select the topic, the PagerDuty destination, and the template that were previously created. Click **Create**.
 
 ## Creating an {{site.data.keyword.logs_full_notm}} alert
 {: #en-icl-alert}
 
-1. Navigate to your {{site.data.keyword.logs_full_notm}} instance and click on **Dashboard**.
+1. Navigate to your {{site.data.keyword.logs_full_notm}} instance and click **Dashboard**.
 
-1. Click on ![Hamburger icon](images/icon_hamburger.svg) > **Alerts** > **Alert Management**.
+1. Click ![Hamburger icon](images/icon_hamburger.svg) > **Alerts** > **Alert Management**.
 
 1. Create a New Alert.
 
@@ -197,12 +197,12 @@ You need an {{site.data.keyword.cloud}} account. If you don't have an account, t
 
 1. Set the time period and schedule for the alert notifications and specify the notification content.
 
-1. Verify the alert and click create.
+1. Verify the alert and click **Create**.
 
 ## Verifying that the connection was successfully established
 {: #en-verification}
 
-1. Navigate to your {{site.data.keyword.logs_full_notm}} **Dashboard** and click on Test. If the connection was successfully established, you will receive a PagerDuty alert.
+1. Navigate to your {{site.data.keyword.logs_full_notm}} **Dashboard** and click **Test**. If the connection was successfully established, you receive a PagerDuty alert.
 
 1. You can set the time period and frequency of the Alert Notifications in the next step and select alerts to attach to the webhook.
 

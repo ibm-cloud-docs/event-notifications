@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2026
-lastupdated: "2026-08-04"
+lastupdated: "2026-10-10"
 
 keywords: event-notifications, event notifications sources
 
@@ -35,7 +35,7 @@ The following IBM-provided sources are available:
 - [Secrets Manager](/docs/secrets-manager?topic=secrets-manager-event-notifications&interface=ui)
 - [Toolchain](/docs/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-cd&interface=ui)
 - [App Configuration](/docs/app-configuration?topic=app-configuration-ac-int-en)
-- [watsonx.data](/docs/watsonxdata?topic=watsonxdata-event-notifications-events)
+- [watsonx.data](https://www.ibm.com/docs/en/watsonx/data){: external}
 - [OpenPages](/docs/openpages?topic=openpages-event-notifications-events)
 - [IBM Cloud Backup for VPC](/docs/vpc?topic=vpc-event-notifications-events)
 - [Storage Ceph as a Service](/docs/cephaas?topic=cephaas-event-notifications-events)
