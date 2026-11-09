@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-11-05"
+lastupdated: "2026-11-09"
 
 keywords: sendgrid migration, email migration, smtp migration, event notifications migration
 
@@ -47,7 +47,7 @@ Before you start the migration, ensure that you have:
 
 - An {{site.data.keyword.cloud_notm}} account with appropriate permissions.
 - Your SendGrid configuration details (SMTP endpoint, port, credentials).
-- A custom domain for sending emails.
+- A verified custom domain in {{site.data.keyword.en_short}}. If you have not added or verified your domain, see [Managing email services](/docs/event-notifications?topic=event-notifications-en-email-domains).
 - Access to your DNS records for domain verification.
 
 ## Create an {{site.data.keyword.en_short}} instance
@@ -114,30 +114,24 @@ Follow these steps if you are migrating from SendGrid SMTP to {{site.data.keywor
 {: #sendgrid-migration-smtp-add}
 {: step}
 
-
-
-1. In your {{site.data.keyword.en_short}} instance, click **SMTP configurations** in the navigation.
+1. In your {{site.data.keyword.en_short}} instance, click **SMTP configurations** > **Configure email**, and select the **SMTP** tab.
 
 2. Click **Add**.
 
 3. Enter the following information:
    - **Name**: A descriptive name for your SMTP configuration
    - **Description**: Optional description
-   - **Domain**: Your custom domain (for example, `notifications.example.com`)
+   - **Domain**: Select an existing verified domain from the list, or enter a new domain name (for example, `notifications.example.com`)
 
 4. Click **Add**.
-
-Your domain appears in the SMTP configurations list with a **Not verified** status.
-
 
 #### Verify your domain
 {: #sendgrid-migration-smtp-verify}
 {: step}
 
+If you selected an existing verified domain when creating the SMTP configuration, domain verification is already complete and you can skip to [Request Event Notification authorization](#sendgrid-migration-smtp-auth). If you entered a new domain name, complete SPF and DKIM verification first.
 
-
-Domain verification requires three steps: Event Notification authorization, SPF verification, and DKIM verification.
-
+For SPF and DKIM verification steps, see [Verifying an email domain](/docs/event-notifications?topic=event-notifications-en-email-domains#en-email-domains-verify).
 
 ##### Request Event Notification authorization
 {: #sendgrid-migration-smtp-auth}
@@ -288,29 +282,25 @@ For detailed SDK documentation, see the [API documentation](/docs/apis/event-not
 {: #sendgrid-migration-api-destination}
 {: step}
 
+1. In your {{site.data.keyword.en_short}} instance, click **SMTP configurations** > **Configure email**, and select the **API** tab.
 
+2. Click **Create API**.
 
+3. Enter a **Name** and **Description** for the configuration. These are used as the subscription name and description.
 
+4. Under **Configuration type**, select **Production**.
 
-1. In your {{site.data.keyword.en_short}} instance, click **Destinations** in the navigation.
+5. Under **Verified domain**, select your verified domain from the **Domain** list. For more information on domain verification, see [Verifying an email domain](/docs/event-notifications?topic=event-notifications-en-email-domains#en-email-domains-verify).
 
-2. Click **Add**.
+6. Click **Next** to continue to the **Subscriptions** step.
 
-3. Select **Custom Email** as the destination type.
+7. Under **Sender details**, enter the **Sender name** and **Sender email**.
 
-4. Enter your custom domain name.
+8. Under **Receiver details**, add recipients individually or click **Bulk upload** to upload a CSV file.
 
-5. Click **Add**.
+9. Optionally, select an **Invitation template** and a **Notification template**.
 
-Your domain appears in the destinations list with a **Not verified** status.
-
-1. In the destinations list, click the actions menu (⋯) next to your domain.
-2. Click **Configure**.
-3. Copy the SPF and DKIM TXT values displayed.
-4. Add the TXT records through your DNS provider.
-5. After the DNS records are added and propagated, click **Verify**.
-
-Both SPF and DKIM statuses must show **Verified** before proceeding.
+10. Click **Create**. {{site.data.keyword.en_short}} automatically creates a default topic and API source, which you can manage later in **Topics** and **Sources**.
 
 
 
@@ -401,21 +391,21 @@ Follow these steps to request approval for the opt out feature.
 
 {{site.data.keyword.en_short}} provides metrics to track email delivery and bounce rates.
 
+1. Click **SMTP configurations** > **Metrics** in the navigation.
 
+2. In the **Dashboard settings** section, select a time interval. To view only one delivery method, click **View filters** and set **Delivery method** to **API** or **SMTP**.
 
+3. In the **Metrics overview** section, review the following tiles:
+   - **Sent**
+   - **Delivered**
+   - **Opened** (API email only)
+   - **Unique clicks** (if link tracking is set up)
+   - **Failed**
+   - **Bounced**
 
+4. Review the **Deliverability insights** table and the **Failure distribution by reason** and **Bounce distribution by reason** charts to identify the cause of failed and bounced emails.
 
-1. Click **Metrics** in the navigation.
-
-2. Select the metric type:
-   - **Custom email destination**: View metrics for API-based email delivery
-   - **SMTP configuration**: View metrics for SMTP-based email delivery
-
-3. Review the following metrics:
-   - Emails sent
-   - Emails delivered
-   - Bounce rate
-   - Open rate (if tracking is enabled)
+For more information, see [Monitoring metrics for email notifications](/docs/event-notifications?topic=event-notifications-en-manage-monitor-metrics).
 
 Use these metrics to monitor the health of your email delivery and identify issues.
 

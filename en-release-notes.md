@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-11-05"
+lastupdated: "2026-11-09"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -21,6 +21,12 @@ Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, sec
 {: note}
 
 
+## 06 November 2026
+{: #event-notifications-Nov062026}
+{: release-note}
+
+Unified email domain management and SMTP configurations
+:   You can now manage email domains centrally in the new **SMTP configurations** section of the {{site.data.keyword.en_short}} instance. Register a domain once, verify SPF and DKIM records one time, and reuse the domain across any number of custom email destinations and SMTP configurations. The **SMTP configurations** section also provides a unified **Configure email** experience with separate **API** and **SMTP** tabs, and a consolidated **Metrics** view. For more information, see [Managing email services](/docs/event-notifications?topic=event-notifications-en-email-domains).
 
 ## 25 September 2026
 {: #event-notifications-Sep232026}

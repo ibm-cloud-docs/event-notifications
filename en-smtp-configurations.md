@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-11-05"
+lastupdated: "2026-11-09"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, email, smtp
 
@@ -19,19 +19,21 @@ subcollection: event-notifications
 {: shortdesc}
 
 
+Context-based restrictions must be configured before creating an SMTP configuration. For more information, see [Enabling context-based restrictions](#en-smtp-configurations-cbr). 
+{: note}
 
 ## Creating an SMTP configuration
 {: #en-smtp-configuration-create}
 
-
-
+SMTP configurations are only available for Standard plan instances.
+{: note}
 
 1. Create an {{site.data.keyword.en_short}} instance. To learn the process of creating an instance, see [Getting Started](/docs/event-notifications?topic=event-notifications-getting-started).
-2. In your {{site.data.keyword.en_short}} instance, click **Email** > **SMTP Configurations**.
-3. Click **Create**.
-4. Enter a **Name**, an optional **Description**, and the **Domain name** in the **Create a new SMTP configuration** dialog.
-5. Click **Create**.
-
+2. In your {{site.data.keyword.en_short}} instance, click **SMTP configurations** > **Configure email**, and select the **SMTP** tab.
+3. Click **Create SMTP**.
+4. Enter a **Name** and an optional **Description** of the SMTP configuration. Select a verified domain from the **Domain** list. If you cannot find your domain in the list, the domain might not have been verified. To verify a domain, see [Verifying an email domain](/docs/event-notifications?topic=event-notifications-en-email-domains#en-email-domains-verify).
+5. Click **Next**, add user details, and generate SMTP credentials for your domain. You must save or download the one-time credentials that are generated.
+7. Click **Save**. The generated SMTP credentials are activated for authenticating client connections.
 
 ## Requesting a recipient limit increase
 {: #en-smtp-configurations-recipient-limit}
@@ -289,7 +291,4 @@ To track a link, add the `data-track="true"` attribute to the anchor tag in your
 You can add `data-track="true"` to any number of links in a single email. Links without this attribute are not tracked.
 
 
-
-
-
-To view the number of unique clicks on a link, click **Metrics** on your {{site.data.keyword.en_short}} instance page, and review the **Unique clicks** metric.
+To view the number of unique clicks on a link, click **SMTP configurations** > **Metrics** on your {{site.data.keyword.en_short}} instance page, and review the **Unique clicks** tile. To see only SMTP email, set **Delivery method** to **SMTP** in the filters. For more information, see [Monitoring metrics for email notifications](/docs/event-notifications?topic=event-notifications-en-manage-monitor-metrics).

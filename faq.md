@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2026
-lastupdated: "2026-11-05"
+lastupdated: "2026-11-09"
 
 
 keywords: event-notification, event notification, faqs, Frequently Asked Questions, question, billing, service, invalid devices, device deletion, database
@@ -183,7 +183,23 @@ The following table lists the blocked file extensions:
 
 If you attempt to send an attachment with a blocked extension, the request is rejected with a `400 Bad Request` error.
 
+## Can I reuse a domain across custom email destinations and SMTP configurations?
+{: #faq-en-domain-reuse}
+{: faq}
 
+Yes. In the **SMTP configurations** section of your instance, you register a domain once and reuse it across any number of custom email destinations and SMTP configurations. SPF and DKIM records are set up once at the domain level, so you do not need to verify the same domain again for each new configuration. For more information, see [Managing email services](/docs/event-notifications?topic=event-notifications-en-email-domains).
+
+## Why can't I delete my email domain?
+{: #faq-en-domain-delete-blocked}
+{: faq}
+
+You cannot delete a domain if one or more custom email destinations or SMTP configurations still reference it. Remove or reconfigure all linked resources first, and then delete the domain. To find the linked resources, check which custom email destinations and SMTP configurations use the domain.
+
+## Why can't I create a custom email destination or SMTP configuration?
+{: #faq-en-email-standard-plan}
+{: faq}
+
+Custom email destinations and SMTP configurations are only available for Standard plan instances. If you are on a Lite plan, upgrade to a Standard plan to use these features. For more information about available plans, see [Getting started with {{site.data.keyword.en_short}}](/docs/event-notifications?topic=event-notifications-getting-started).
 
 ## What is SPF verification?
 {: #faq-en-notifications-spf-verification}
