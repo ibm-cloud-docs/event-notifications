@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2026
-lastupdated: "2026-10-21"
+lastupdated: "2026-11-11"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, webhook
 
@@ -44,22 +44,7 @@ To identify that the incoming notification is coming from {{site.data.keyword.en
 ## Allowlisting IP addresses
 {: #en-allowlisting}
 
-You can allowlist the IP address ranges to restrict access to the servers that receive webhooks. Ensure that the following IP addresses are all allowlisted:
-
-### Existing webhook IP addresses
-{: #en-allowlisting-existing-ips}
-
-These [webhook IP addresses](/docs/support?topic=support-webhook-ips) are deprecated at the end of September 2026. After that date, webhooks are no longer delivered from these IP addresses. Ensure that you allowlist the [new IP addresses](#en-allowlisting-new-ips).
-{: note}
-
-### New IP addresses
-{: #en-allowlisting-new-ips}
-
-Effective starting August 29, 2026:
-
-- **Global common IP addresses**: See [Individual IP addresses for multi-zone regions](/docs/support?topic=support-webhook-ips#webhook-ips-individual).
-
-- **Region-specific IP addresses**: Allowlist the IP addresses for the region where your {{site.data.keyword.en_short}} service instance is deployed. If you use {{site.data.keyword.en_short}} service instances in multiple regions, allowlist the IP addresses for each applicable region.
+You can allowlist the IP address ranges to restrict access to the servers that receive webhooks. Ensure that you allowlist the IP addresses for the region where your {{site.data.keyword.en_short}} service instance is deployed. If you use {{site.data.keyword.en_short}} service instances in multiple regions, allowlist the IP addresses for each applicable region.
 
 #### Dallas (us-south)
 {: #dallas-us-south}
